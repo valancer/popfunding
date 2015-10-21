@@ -1,0 +1,93 @@
+@mixin inner-container() {
+	position: relative; margin: 0 auto; height: 100%; width: 1160px;
+}
+
+/* GNB HEADER */
+.header {
+	display: block; position: relative; height: 353px; min-width: 1160px; background: url(/assets/images/bg_header.jpg) center top no-repeat;
+	&:after { content: ''; display: block; position: absolute; bottom: 0; right: 0; left: 0; z-index: -1; height: 50px; width: 100%; background-color: #14378c; }
+
+	.inner { @include inner-container(); }
+
+	.utils-member {
+		display: block; position: absolute; top: 23px; left: 29px; z-index: 1;
+
+		> a {
+			@include btn-txt();
+			&:last-child {
+				&:before { content: '|'; display: inline-block; color: #c9cfd6; text-decoration: none; margin-right: 12px; margin-left: 10px; }
+			}
+			&.btn-main { text-indent: -9999px; 
+				@include sprite($sprite-popfunding);
+			}
+			&.btn-help { text-indent: -9999px; margin-right: 22px; margin-left: 16px;
+				@include sprite($sprite-btn-help01);
+			}
+		}
+	}
+
+	.utils-help {
+		display: block; position: absolute; top: 34px; right: 29px; z-index: 1;
+
+		> a { position: relative;
+			@include btn-txt();
+			> .badge { @include badge(-110%, -10px); }
+			+ a {
+				&:before { content: '|'; display: inline-block; color: #c9cfd6; text-decoration: none; margin-right: 12px; margin-left: 10px; }
+				> .badge { @include badge(-110%, 20px); }
+			}
+		}
+	}
+
+	.contents { text-align: center; }
+
+	nav { position: absolute; bottom: 0; right: 0; left: 0;
+		> ul {
+			position: relative; height: 50px; width: 100%;
+			> li { float: left; box-sizing: border-box; width: 50%; border-right: 1px solid #37559d;
+				&:first-child { border-left: 1px solid #37559d; }
+				> a {
+					display: block; font-size: 18px; color: #798cbb; font-weight: 700; text-align: center; line-height: 50px;
+					&:hover { color: #dee1e9; text-decoration: none; background-color: #142e6e; }
+					&.selected { color: #dee1e9; }
+				}
+			}
+		}
+	}
+}
+
+
+
+/* FOOTER */
+.footer {
+	$font-size: 0.750em;
+	$color: #868ea2;
+	$line-height: 20px;
+
+	padding: 48px 0 79px 0; border-top: 1px solid #e4e4e4; background-color: #fff;
+	.inner { @include inner-container(); }
+	.shortcut { text-align: center;
+		> a { margin: 0 11px;
+			@include btn-txt(0.750em, $color);
+		}
+	}
+	.company-info { position: relative; margin-top: 67px; margin-left: 198px; padding-left: 192px; font-size: $font-size; color: $color; line-height: $line-height;
+		&:before { content: ''; display: block; position: absolute; top: 50%; left: 0; margin-top: -($sprite-popfunding-height/2); @include sprite($sprite-popfunding); }
+		a { color: $color; text-decoration: underline; }
+	}
+}
+
+
+
+/* CONTENTS */
+article.contents { padding: 100px 0 110px 0; background-color: $contents-bg-color;
+	> h1 { display: none; }
+	> .inner { @include inner-container(); }
+
+}
+
+
+
+
+
+

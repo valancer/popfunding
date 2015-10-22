@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 @import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,700);
-
+@import url(animate.min.css);
 
 
 /* sprites css */
@@ -15,6 +15,7 @@
 $font-stack: 'Noto Sans', sans-serif;
 $contents-bg-color: #f7f7f7;
 $contents-container-width: 1160px;
+$product-height: 558px;
 $product-width: 338px;
 
 
@@ -25,10 +26,6 @@ $product-width: 338px;
 	display: inline-block; font-size: $font-size; color: $color; vertical-align: middle;
 }
 
-@mixin btn-round01() {
-
-}
-
 @mixin badge($top, $left) {
 	display: block; box-sizing: border-box; position: absolute; top: $top; left: $left; padding: 0 3px; height: 16px; min-width: 16px; color: #fff; text-align: center; line-height: 16px; border-radius: 16px; background-color: #ff4776;
 	&:before { content: ''; display: block; position: absolute; bottom: -3px; left: 40%;
@@ -37,8 +34,13 @@ $product-width: 338px;
 }
 
 .btn-more { display: block; font-size: 0.875em; color: #868ea2; text-align: center; line-height: 48px; border: 1px solid #d7dce6; background-color: #fff; }
+.btn-more:after { content: ''; display: inline-block; margin-left: 5px; vertical-align: middle; @include sprite($sprite-bg-arrow02); }
 .btn-rd { display: inline-block; padding: 0 28px; font-size: 13px; color: #142c66; text-align: center; line-height: 35px; border: 1px solid #d4dae4; border-radius: 35px; background-color: #fff; 
 	&:hover { text-decoration: none; background-color: #ff4776; }
+}
+.btn-tip { display: inline-block; text-indent: -9999px;
+	@include sprite($sprite-btn-tip01);
+	&:hover { @include sprite($sprite-btn-tip01-higilights); }
 }
 
 

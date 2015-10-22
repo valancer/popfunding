@@ -80,7 +80,7 @@
 
 
 /* CONTENTS */
-article.contents { padding: 100px 0 110px 0; background-color: $contents-bg-color;
+article.contents { min-width: $contents-container-width; padding: 100px 0 110px 0; background-color: $contents-bg-color;
 	> h1 { display: none; }
 	> .inner { @include inner-container(); }
 

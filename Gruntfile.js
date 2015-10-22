@@ -71,13 +71,13 @@ module.exports = function(grunt) {
 		},
 		autoprefixer: {
 			options: {
-
+				browsers: ['last 2 versions', 'ie 8', 'ie 9', '> 1%']
 			},
 			build: {
-				options: {
-					map: true
-				},
-				// src: 'sources/assets/styles/*.css'
+				expand: true,
+				flatten: true,
+				dest: 'sources/assets/styles/',
+				src: ['sources/assets/styles/*.css', '!sources/assets/styles/*.min.css']
 			}
 		},
 

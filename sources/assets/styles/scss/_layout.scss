@@ -1,10 +1,10 @@
 @mixin inner-container() {
-	position: relative; margin: 0 auto; height: 100%; width: 1160px;
+	position: relative; margin: 0 auto; height: 100%; width: $contents-container-width;
 }
 
 /* GNB HEADER */
 .header {
-	display: block; position: relative; height: 353px; min-width: 1160px; background: url(/assets/images/bg_header.jpg) center top no-repeat;
+	display: block; position: relative; height: 353px; min-width: $contents-container-width; background: url(/assets/images/bg_header.jpg) center top no-repeat;
 	&:after { content: ''; display: block; position: absolute; bottom: 0; right: 0; left: 0; z-index: -1; height: 50px; width: 100%; background-color: #14378c; }
 
 	.inner { @include inner-container(); }

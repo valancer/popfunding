@@ -1,0 +1,15 @@
+/* 투자 */
+
+.list-products {
+	position: relative; overflow: hidden; width: 100%;
+
+	> li {
+		display: block; float: left; margin: 0 0 40px 0; width: $product-width;
+		&:nth-child(3n+2) { padding: 0 73px; }
+	}
+}
+
+.product { border: 1px solid #d4dae4; border-radius: 18px; background-color: #fff;
+
+}
+

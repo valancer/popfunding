@@ -1,13 +1,23 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-	include "head.html"
+include "head.html"
 	<script>
 	$(window.document).ready(function(){
+		// $products = $('.product');
+		// $thumbs = $products.find('.thumb > img');
+
+		// console.log($thumbs.length);
+
+		// $thumbs.one('load', function() {
+		// }).each(function() {
+		// 	if( this.complete ) {
+		// 		var width = $(this).width();
+		// 		var left = (-width/2 + 336/2);
+		// 		$(this).css('left', left);
+		// 		$(this).show();
+		// 	}
+		// });
+
 	});
 	</script>
-</head>
-<body>
 
 	<!-- 상단 영역 -->
 	include "header.html"
@@ -24,7 +34,7 @@
 					<legend>투자종류선택</legend>
 
 					<input type="radio" id="invest01" name="invest-type"><label for="invest01">개인투자</label>
-					<input type="radio" id="invest02" name="invest-type" checked="checked"><label for="invest02">기업투자</label>
+					<input type="radio" id="invest02" name="invest-type" checked="checked" class="selected"><label for="invest02">기업투자</label>
 					<input type="radio" id="invest03" name="invest-type"><label for="invest03">채권마켓</label>
 				</fieldset>
 				
@@ -37,31 +47,38 @@
 			<ul class="list-products">
 				<li>
 					<a href="#" class="product">
-						<p class="badges">
+						<div class="options">
 							<em class="invest-type01">[담보형 기업투자]</em>
 							<em class="new">[새로운 투자상품]</em>
 							<em class="user-in">[회원님께서 참여하신 상품입니다.]</em>
 							<em class="status01">[상환중]</em>
-							<em class="favorite">[회원님께서 관심상품으로 설정하셨습니다.]</em>
-						</p>
+						</div>
 						<figure>
-							<img src="/assets/images/temp/product_list01.jpg" alt="폴로 랄프로렌 신발 대표 이미지">
-							<figcaption>
-								<strong class="title">[담보] 폴로 랄프로렌 신발</strong><br>
-								<time datetime="">2일 23시간 59분 남음</time>
-								<div>
-									<p>
-										신청금액
-										<em>320,000,000원</em>
-									</p>
-									<p>
-										연이자
-										<em>11%</em>
+							<div class="thumb"><img src="/assets/images/temp/product_list01.jpg" alt="폴로 랄프로렌 신발 대표 이미지"></div>
+							<figcaption class="info">
+								<div class="sub-info">
+									<strong class="title">[담보] 폴로 랄프로렌 신발</strong><br>
+									<time datetime="2016-01-01 00:00">2일 23시간 59분 남음</time>
+									<p class="desc">
+										담보물은 세계적인 스포츠 브랜드 PUMA의 의류와 용품으로 국내 오피셜 라이센스 제품으로 우수합니다.
 									</p>
 								</div>
-								<p class="progress">
-									<em>65%</em>진행 (10명)
-								</p>
+								<div class="status-info">
+									<div class="p-i">
+										<p class="price">
+											<span>신청금액</span>
+											<em>320,000,000원</em>
+										</p>
+										<p class="interest">
+											<span>연이자</span>
+											<em>11%</em>
+										</p>
+									</div>
+									<p class="progress ">
+										<span class="value animated fadeInLeft" style="width: 65%;"></span>
+										<em>65%</em>진행 (10명)
+									</p>
+								</div>
 							</figcaption>
 						</figure>
 						<p class="hover animated fadeIn">
@@ -70,33 +87,38 @@
 						</p>
 					</a>
 				</li>
-				<li>
+				<li class="middle">
 					<a href="#" class="product">
-						<p class="badges">
+						<div class="options">
 							<em class="invest-type02">[신용형 기업투자]</em>
 							<em class="new">[새로운 투자상품]</em>
 							<em>[참여중]</em>
-							<em>78% 마감임박</em>
 							<em class="status02">[연체중]</em>
-						</p>
+							<em class="imminent-deadline">78%<span>마감임박</span></em>
+						</div>
 						<figure>
-							<img src="/assets/images/temp/product_list01.jpg" alt="폴로 랄프로렌 신발 대표 이미지">
-							<figcaption>
-								<strong class="title">[담보] 폴로 랄프로렌 신발</strong><br>
-								<time datetime="">2일 23시간 59분 남음</time>
-								<div>
-									<p>
-										신청금액
-										<em>320,000,000원</em>
-									</p>
-									<p>
-										연이자
-										<em>11%</em>
+							<div class="thumb"><img src="/assets/images/temp/product_list02.jpg" alt="폴로 랄프로렌 신발 대표 이미지"></div>
+							<figcaption class="info">
+								<div class="sub-info">
+									<strong class="title">[담보] 폴로 랄프로렌 신발</strong><br>
+									<time datetime="2016-01-01 00:00">2일 23시간 59분 남음</time>
+								</div>
+								<div class="status-info">
+									<div class="p-i">
+										<p class="price">
+											<span>신청금액</span>
+											<em>320,000,000원</em>
+										</p>
+										<p class="interest">
+											<span>연이자</span>
+											<em>11%</em>
+										</p>
+									</div>
+									<p class="progress">
+										<span class="value animated fadeInLeft" style="width: 78%;"></span>
+										<em>78%</em>진행 (10명)
 									</p>
 								</div>
-								<p class="progress">
-									<em>78%</em>진행 (10명)
-								</p>
 							</figcaption>
 						</figure>
 						<p class="hover animated fadeIn">
@@ -107,29 +129,153 @@
 				</li>
 				<li>
 					<a href="#" class="product">
-						<p class="badges">
+						<div class="options">
 							<em class="invest-type01">[담보형 기업투자]</em>
 							<em>[참여중]</em>
 							<em class="status03">[상환완료]</em>
-						</p>
+							<em class="favorite">[회원님께서 관심상품으로 설정하셨습니다.]</em>
+						</div>
 						<figure>
-							<img src="/assets/images/temp/product_list01.jpg" alt="폴로 랄프로렌 신발 대표 이미지">
-							<figcaption>
-								<strong class="title">[담보] 폴로 랄프로렌 신발</strong><br>
-								<time datetime="">2일 23시간 59분 남음</time>
-								<div>
-									<p>
-										신청금액
-										<em>320,000,000원</em>
-									</p>
-									<p>
-										연이자
-										<em>11%</em>
+							<div class="thumb"><img src="/assets/images/temp/product_list03.jpg" alt="폴로 랄프로렌 신발 대표 이미지"></div>
+							<figcaption class="info">
+								<div class="sub-info">
+									<strong class="title">[담보] 폴로 랄프로렌 신발</strong><br>
+									<time datetime="2016-01-01 00:00">2일 23시간 59분 남음</time>
+								</div>
+								<div class="status-info">
+									<div class="p-i">
+										<p class="price">
+											<span>신청금액</span>
+											<em>320,000,000원</em>
+										</p>
+										<p class="interest">
+											<span>연이자</span>
+											<em>11%</em>
+										</p>
+									</div>
+									<p class="progress">
+										<span class="value animated fadeInLeft" style="width: 30%;"></span>
+										<em>30%</em>진행 (10명)
 									</p>
 								</div>
-								<p class="progress">
-									<em>30%</em>진행 (10명)
-								</p>
+							</figcaption>
+						</figure>
+						<p class="hover animated fadeIn">
+							<button>관심설정</button>
+							<span>투자 상세보기</span>
+						</p>
+					</a>
+				</li>
+				<li>
+					<a href="#" class="product">
+						<div class="options">
+							<em class="invest-type01">[담보형 기업투자]</em>
+							<em class="new">[새로운 투자상품]</em>
+							<em class="user-in">[회원님께서 참여하신 상품입니다.]</em>
+							<em class="status01">[상환중]</em>
+						</div>
+						<figure>
+							<div class="thumb"><img src="/assets/images/temp/product_list04.jpg" alt="폴로 랄프로렌 신발 대표 이미지"></div>
+							<figcaption class="info">
+								<div class="sub-info">
+									<strong class="title">[담보] 폴로 랄프로렌 신발</strong><br>
+									<time datetime="2016-01-01 00:00">2일 23시간 59분 남음</time>
+								</div>
+								<div class="status-info">
+									<div class="p-i">
+										<p class="price">
+											<span>신청금액</span>
+											<em>320,000,000원</em>
+										</p>
+										<p class="interest">
+											<span>연이자</span>
+											<em>11%</em>
+										</p>
+									</div>
+									<p class="progress">
+										<span class="value animated fadeInLeft" style="width: 65%;"></span>
+										<em>65%</em>진행 (10명)
+									</p>
+								</div>
+							</figcaption>
+						</figure>
+						<p class="hover animated fadeIn">
+							<button class="selected">관심설정</button>
+							<span>투자 상세보기</span>
+						</p>
+					</a>
+				</li>
+				<li class="middle">
+					<a href="#" class="product">
+						<div class="options">
+							<em class="invest-type02">[신용형 기업투자]</em>
+							<em class="new">[새로운 투자상품]</em>
+							<em>[참여중]</em>
+							<em>78% 마감임박</em>
+							<em class="status02">[연체중]</em>
+						</div>
+						<figure>
+							<div class="thumb"><img src="/assets/images/temp/product_list01.jpg" alt="폴로 랄프로렌 신발 대표 이미지"></div>
+							<figcaption class="info">
+								<div class="sub-info">
+									<strong class="title">[담보] 폴로 랄프로렌 신발</strong><br>
+									<time datetime="2016-01-01 00:00">2일 23시간 59분 남음</time>
+								</div>
+								<div class="status-info">
+									<div class="p-i">
+										<p class="price">
+											<span>신청금액</span>
+											<em>320,000,000원</em>
+										</p>
+										<p class="interest">
+											<span>연이자</span>
+											<em>11%</em>
+										</p>
+									</div>
+									<p class="progress">
+										<span class="value animated fadeInLeft" style="width: 78%;"></span>
+										<em>78%</em>진행 (10명)
+									</p>
+								</div>
+							</figcaption>
+						</figure>
+						<p class="hover animated fadeIn">
+							<button>관심설정</button>
+							<span>투자 상세보기</span>
+						</p>
+					</a>
+				</li>
+				<li>
+					<a href="#" class="product">
+						<div class="options">
+							<em class="invest-type01">[담보형 기업투자]</em>
+							<em>[참여중]</em>
+							<em class="status03">[상환완료]</em>
+							<em class="favorite">[회원님께서 관심상품으로 설정하셨습니다.]</em>
+						</div>
+						<figure>
+							<div class="thumb"><img src="/assets/images/temp/product_list05.jpg" alt="폴로 랄프로렌 신발 대표 이미지"></div>
+							<figcaption class="info">
+								<div class="sub-info">
+									<strong class="title">[담보] 폴로 랄프로렌 신발</strong><br>
+									<time datetime="2016-01-01 00:00">2일 23시간 59분 남음</time>
+								</div>
+								<div class="status-info">
+									<div class="p-i">
+										<p class="price">
+											<span>신청금액</span>
+											<em>320,000,000원</em>
+										</p>
+										<p class="interest">
+											<span>연이자</span>
+											<em>11%</em>
+										</p>
+									</div>
+									<p class="progress">
+										<span class="value animated fadeInLeft" style="width: 30%;"></span>
+										<em>30%</em>진행 (10명)
+									</p>
+								</div>
 							</figcaption>
 						</figure>
 						<p class="hover animated fadeIn">

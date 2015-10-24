@@ -108,6 +108,14 @@ module.exports = function(grunt) {
 					dest: 'build/assets/'
 				}]
 			},
+			scripts: {
+				files: [{
+					expand: true,
+					cwd: 'sources/assets/scripts/',
+					src: ['*.js'],
+					dest: 'build/assets/scripts/'
+				}]
+			},
 			styles: {
 				files: [{
 					expand: true,
@@ -163,7 +171,7 @@ module.exports = function(grunt) {
 
 			scripts: {
 				files: ['<%= jshint.files %>'],
-				tasks: ['newer:jshint'],
+				tasks: ['newer:jshint', 'copy:scripts'],
 				options: {
 					livereload: true
 				}

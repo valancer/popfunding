@@ -1,0 +1,94 @@
+include "head.html"
+	<script>
+	$(window.document).ready(function(){
+	});
+	</script>
+
+	<!-- 상단 영역 -->
+	include "header.html"
+
+
+	<!-- 본문 영역 -->
+	<article class="contents invest">
+		<h1>투자하기</h1>
+
+		<div class="inner">
+		
+			<div class="filter-container">
+				<fieldset class="filter">
+					<legend>투자종류선택</legend>
+
+					<input type="radio" id="invest01" name="invest-type"><label for="invest01">개인투자</label>
+					<input type="radio" id="invest02" name="invest-type" checked="checked" class="selected"><label for="invest02">기업투자</label>
+					<input type="radio" id="invest03" name="invest-type"><label for="invest03">채권마켓</label>
+				</fieldset>
+				
+				<div class="utils-guide">
+					<a href="#" class="btn-tip">꿀팁</a>
+					<a href="#" class="btn-rd">기업투자 소개</a>
+				</div>
+			</div>
+
+			<section class="product detail">
+				<div class="options">
+					<em class="invest-type01">[담보형 기업투자]</em>
+					<em class="new">[새로운 투자상품]</em>
+					<em class="user-in">[회원님께서 참여하신 상품입니다.]</em>
+					<em class="status01">[상환중]</em>
+					<em class="imminent-deadline">78%<span>마감임박</span></em>
+					<p class="share">
+						<a href="#" class="btn-fb" title="페이스북">페이스북</a>
+						<a href="#" class="btn-tw" title="트위터">트위터</a>
+						<a href="#" class="btn-ks" title="카카오스토리">카카오스토리</a>
+					</p>
+				</div>
+				<figure>
+					<div class="thumb"><img src="/assets/images/temp/product_list01.jpg" alt="폴로 랄프로렌 신발 대표 이미지"></div>
+					<figcaption class="info">
+						<div class="sub-info">
+							<strong class="title">[담보] 폴로 랄프로렌 신발</strong><br>
+							<time datetime="2016-01-01 00:00">2일 23시간 59분 남음</time>
+							<p class="desc">
+								담보물은 세계적인 스포츠 브랜드 PUMA의 의류와 용품으로 국내 오피셜 라이센스 제품으로 우수합니다.
+							</p>
+						</div>
+						<div class="status-info">
+							<div class="p-i">
+								<p class="price">
+									<span>신청금액</span>
+									<em>320,000,000원</em>
+								</p>
+								<p class="interest">
+									<span>연이자</span>
+									<em>11%</em>
+								</p>
+							</div>
+							<p class="progress">
+								<span class="value animated fadeInLeft" style="width: 65%;"></span>
+								<em>65%</em>진행 (10명) - 현재 45,000,000원
+							</p>
+						</div>
+					</figcaption>
+				</figure>
+				<p class="hover animated fadeIn">
+					<button class="selected">관심설정</button>
+					<span>투자 상세보기</span>
+				</p>
+
+
+				<div class="invest-product">
+					<a href="#" class="btn-invest">투자하기</a>
+					<a href="#" class="btn-calc">수익금 계산기</a>
+				</div>
+			</section>
+
+
+		</div>
+	</article>
+	
+
+	<!-- 하단 영역 -->
+	include "footer.html"
+
+</body>
+</html>

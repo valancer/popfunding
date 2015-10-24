@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-@import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,700);
+@import url(NotoSansKR.css);
 @import url(animate.min.css);
 
 
@@ -12,18 +12,23 @@
 /**
  * variable
  */
-$font-stack: 'Noto Sans', sans-serif;
-$contents-bg-color: #f7f7f7;
+$font-stack: 'Noto Sans Korean', sans-serif;
+$body-bg-color: #f7f7f7;
 $contents-container-width: 1160px;
 $product-height: 558px;
 $product-width: 338px;
+
+body { background-color: $body-bg-color; }
 
 
 /**
  * modules - buttons
  */
-@mixin btn-txt($font-size:0.750em, $color:#525e7b) {
-	display: inline-block; font-size: $font-size; color: $color; vertical-align: middle;
+@mixin btn-inline-txt($font-size:0.750em, $color:#525e7b) {
+	display: inline-block; position: relative; font-size: $font-size; color: $color; vertical-align: middle;
+}
+@mixin ie8-inline-block() { display: inline-block; 
+	.ie8 & { display: inline; zoom: 1; }
 }
 
 @mixin badge($top, $left) {
@@ -33,7 +38,10 @@ $product-width: 338px;
 	}
 }
 
-.btn-more { display: block; font-size: 0.875em; color: #868ea2; text-align: center; line-height: 48px; border: 1px solid #d7dce6; background-color: #fff; }
+.btn-inline { @include btn-inline-txt();
+	@include ie8-inline-block();
+}
+.btn-more { display: block; font-size: 14px; color: #868ea2; text-align: center; line-height: 48px; border: 1px solid #d7dce6; background-color: #fff; }
 .btn-more:after { content: ''; display: inline-block; margin-left: 5px; vertical-align: middle; @include sprite($sprite-bg-arrow02); }
 .btn-rd { display: inline-block; padding: 0 28px; font-size: 13px; color: #142c66; text-align: center; line-height: 35px; border: 1px solid #d4dae4; border-radius: 35px; background-color: #fff; 
 	&:hover { text-decoration: none; background-color: #ff4776; }
@@ -42,7 +50,16 @@ $product-width: 338px;
 	@include sprite($sprite-btn-tip01);
 	&:hover { @include sprite($sprite-btn-tip01-higilights); }
 }
-
+.btn-invest { display: block; margin: 0 auto; padding-left: 20px; height: 55px; width: 380px; font-size: 22px; color: #fff; font-weight: 500; line-height: 55px; text-align: center; border-radius: 55px; background-color: #14378c;
+	&:after { content: ''; display: inline-block; margin-top: -4px; margin-left: 9px; vertical-align: middle; @include sprite($sprite-bg-arrow03); }
+	&:hover { text-decoration: none; background-color: #0f2969; }
+	&.expired { padding-left: 0; width: 400px; background-color: #afb2b7;
+		&:after { content: ''; display: none; }
+	}
+}
+.btn-calc { display: inline-block; font-size: 14px; color: #142c66; vertical-align: middle;
+	&:before { content: ''; display: inline-block; margin-right: 7px; vertical-align: middle; @include sprite($sprite-icon-calc01); }
+}
 
 
 /**

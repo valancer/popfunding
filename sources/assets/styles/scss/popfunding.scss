@@ -2,6 +2,7 @@
 
 @import url(NotoSansKR.css);
 @import url(animate.min.css);
+@import url(slick.css);
 
 
 /* sprites css */
@@ -44,7 +45,10 @@ body { background-color: $body-bg-color; }
 .btn-more { display: block; font-size: 14px; color: #868ea2; text-align: center; line-height: 48px; border: 1px solid #d7dce6; background-color: #fff; }
 .btn-more:after { content: ''; display: inline-block; margin-left: 5px; vertical-align: middle; @include sprite($sprite-bg-arrow02); }
 .btn-rd { display: inline-block; padding: 0 28px; font-size: 13px; color: #142c66; text-align: center; line-height: 35px; border: 1px solid #d4dae4; border-radius: 35px; background-color: #fff; 
-	&:hover { text-decoration: none; background-color: #ff4776; }
+
+	.filter-container & {
+		&:hover { color: #fff; text-decoration: none; background-color: #ff4776; }
+	}
 }
 .btn-tip { display: inline-block; text-indent: -9999px;
 	@include sprite($sprite-btn-tip01);
@@ -60,7 +64,7 @@ body { background-color: $body-bg-color; }
 .btn-calc { display: inline-block; font-size: 14px; color: #142c66; vertical-align: middle;
 	&:before { content: ''; display: inline-block; margin-right: 7px; vertical-align: middle; @include sprite($sprite-icon-calc01); }
 }
-
+.btn-top { display: block; text-indent: -9999px; @include sprite($sprite-btn-top01); }
 
 /**
  * import

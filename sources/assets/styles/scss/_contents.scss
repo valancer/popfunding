@@ -1,5 +1,6 @@
 /* 투자 */
 
+/// 필터
 .filter-container { overflow: hidden;
 	.filter { position: relative; float: left;
 		input[type=radio] { position: absolute; top: -9999px; left: -9999px;
@@ -19,6 +20,8 @@
 	}
 }
 
+
+/// 상품 목록
 .list-products {
 	position: relative; overflow: hidden; margin-top: 40px; width: 100%;
 
@@ -35,6 +38,7 @@
 
 
 
+/// 상품
 .product {
 	$border-radius: 18px;
 	$thumb-height: 311px;
@@ -109,7 +113,7 @@
 	}
 
 
-	///	 상세 보기일 경우
+	///	 상품 상세 보기일 경우
 	&.detail { margin-top: 40px; padding-bottom: 44px;
 		$thumb-height: 340px;
 		$sub-info-width: 377px;
@@ -165,5 +169,124 @@
 			.btn-calc { position: absolute; bottom: 0; left: 69%; }
 		}
 	}
+}
 
+
+
+/// 상품 상세 - 탭
+$border-color: #d4dae4;
+$border-inner-color: #e6e9ee;
+.product-tab { margin-top: 60px;
+	table { table-layout: fixed; width: 100%; border-left: 1px solid $border-color;
+		> tbody > tr {
+			td { border-right: 1px solid $border-color;
+				a { display: block; font-size: 0.875em; color: #868ea2; text-align: center; text-decoration: none; line-height: 53px; border-top: 1px solid $border-color; border-bottom: 1px solid $border-color; background-color: #f8f9fb;
+					&:hover { color: #fff; background-color: #ff4776; }
+					&.selected { color: #142c66; border-bottom: 1px solid #fff; background-color: #fff; }
+				}
+			}
+		}
+	}
+}
+
+
+/// 상품 상세 컨테이너
+.product-detail-view { border: 1px solid $border-color; border-top: 0px; background-color: #fff;
+	> h1 { display: none; }
+	h2 { font-size: 1.125em; font-weight: normal; color: #252525;
+		.bar { display: inline-block; margin: -2px 9px 0 10px;; height: 17px; width: 1px; vertical-align: middle; background-color: #d7dde5; }
+	}
+	h2 + p { margin-top: 16px; font-size: 0.750em; color: #8a94a3; line-height: 20px; }
+	.pd-container { position: relative; padding: 80px 69px 60px 69px; }
+
+
+	/// 상품 특징
+	.product-feature { table-layout: fixed; width: 100%;
+		> tbody > tr {
+			td { padding: 98px 0 67px 0; text-align: center;
+				> span { display: inline-block; position: relative; height: 62px; font-size: 0.875em; color: #14378c; line-height: 62px;
+					&:before { content: ''; display: inline-block; margin-right: 10px; vertical-align: middle; }
+					&.feature01:before { @include sprite($sprite-icon-feature01); }
+					&.feature02:before { @include sprite($sprite-icon-feature02); }
+					&.feature03:before { content: attr(data-info); font-size: 2.500em; color: #14378c; text-align: center; @include sprite($sprite-icon-feature03); }
+					&.feature04 { font-size: 31px;
+						&:before { @include sprite($sprite-icon-feature04); }
+					}
+					&.feature04:after { content: attr(data-info); display: block; position: absolute; top: -24px; left: -31px; font-size: 0.750em; color: #868ea2; text-align: center; line-height: 27px; @include sprite($sprite-bg-tooltip01); }
+				}
+			}
+		}
+	}
+
+	/// 처분예상가
+	.goal { border-top: 1px solid $border-inner-color;
+		.chart { margin-top: 20px; background-color: #0f0; }
+	}
+
+
+	/// funding manager
+	.manager { overflow: hidden; padding: 80px 69px 60px 140px; border-top: 1px solid $border-inner-color;
+		&:before { content: ''; display: block; position: absolute; top: 80px; left: 0; @include sprite($sprite-badge-manager01); }
+		> figure { float: left; padding-right: 109px;
+			figcaption { display: block; margin-top: 10px; font-size: 0.750em; color: #8a94a3; text-align: right; }
+		}
+		> hgroup { display: block; padding-top: 40px;
+			> h1 { font-size: 1.125em; font-weight: normal; color: #252525; }
+			> h2 { margin-top: 30px; font-size: 1.000em; font-weight: normal; color: #2266b9; line-height: 24px; }
+			> p { margin-top: 20px; font-size: 0.875em; line-height: 22px; }
+		}
+	}
+
+
+	/// 예상 가격
+	.values { border-top: 1px solid $border-inner-color;
+		.value-price { overflow: hidden; margin: 36px -69px 0 -69px;
+			$width: 100%;
+			> p { display: block; float: left; padding-top: 24px; height: 82px; width: $width / 3; text-align: center;
+				> span { font-size: 0.875em; }
+				> em { display: block; font-size: 2.188em; color: #ffffff; line-height: 1.2em; }
+				&.bg01 { color: #ffcbd8; background-color: #ff507d; }
+				&.bg02 { color: #9aa5be; background-color: #14378c; }
+				&.bg03 { color: #e0f5d7; background-color: #81c845; }
+			}
+		}
+	}
+
+
+	/// 담보물
+	.pawn { padding: 0px 0px 45px 69px;
+		.list-pawn { overflow: hidden; margin-top: 28px;
+			> li { float: left; padding: 0 21px 31px 0;
+				figure {
+					> img { display: block; margin: 0 auto; max-height: 100%; max-width: 234px; }
+					figcaption { padding-top: 24px; font-size: 0.875em; color: #868ea2; line-height: 22px; text-align: center; }
+				}
+			}
+		}
+	}
+
+
+	/// 담보물 실사
+	.pawn-photos { border-top: 1px solid $border-inner-color;
+		> .inner { margin: 0 auto; width: 585px;
+			h2 { float: left; }
+			time { float: right; font-size: 0.750em; color: #868ea2; }
+			.slider { clear: both; padding-top: 30px;
+				.slick-dots { margin-top: 16px; text-align: center;
+					> li { display: inline-block; padding: 0 2px;
+						button { display: block; height: 3px; width: 39px; text-indent: -9999px; background-color: #bac3d0; }
+						&.slick-active > button { background-color: #1369ec; }
+
+					}
+				}
+			}
+		}
+	}
+
+}
+
+
+/// 상품 상세 하단 버튼 영역
+.product-btns { position: relative; padding-top: 40px; text-align: center;
+	.btn-top { position: absolute; top: 40px; right: 1px; }
 }

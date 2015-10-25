@@ -2,163 +2,8 @@
 @import url(NotoSansKR.css);
 @import url(animate.min.css);
 @import url(slick.css);
-/* sprites css */
-/*
-SCSS variables are information about icon's compiled state, stored under its original file name
-
-.icon-home {
-  width: $icon-home-width;
-}
-
-The large array-like variables contain all information about a single icon
-$icon-home: x y offset_x offset_y width height total_width total_height image_path;
-
-At the bottom of this section, we provide information about the spritesheet itself
-$spritesheet: width height image $spritesheet-sprites;
-*/
-/*
-The provided mixins are intended to be used with the array-like variables
-
-.icon-home {
-  @include sprite-width($icon-home);
-}
-
-.icon-email {
-  @include sprite($icon-email);
-}
-*/
-/*
-The `sprites` mixin generates identical output to the CSS template
-  but can be overridden inside of SCSS
-
-@include sprites($spritesheet-sprites);
-*/
 /**
  * variable
- */
-body {
-  background-color: #f7f7f7; }
-
-/**
- * modules - buttons
- */
-.btn-inline {
-  display: inline-block;
-  position: relative;
-  font-size: 0.75em;
-  color: #525e7b;
-  vertical-align: middle;
-  display: inline-block; }
-  .ie8 .btn-inline {
-    display: inline;
-    zoom: 1; }
-
-.btn-more {
-  display: block;
-  font-size: 14px;
-  color: #868ea2;
-  text-align: center;
-  line-height: 48px;
-  border: 1px solid #d7dce6;
-  background-color: #fff; }
-
-.btn-more:after {
-  content: '';
-  display: inline-block;
-  margin-left: 5px;
-  vertical-align: middle;
-  background-image: url(/assets/images/sprites.png);
-  background-position: -380px -190px;
-  width: 11px;
-  height: 8px; }
-
-.btn-rd {
-  display: inline-block;
-  padding: 0 28px;
-  font-size: 13px;
-  color: #142c66;
-  text-align: center;
-  line-height: 35px;
-  border: 1px solid #d4dae4;
-  border-radius: 35px;
-  background-color: #fff; }
-  .filter-container .btn-rd:hover {
-    color: #fff;
-    text-decoration: none;
-    background-color: #ff4776; }
-
-.btn-tip {
-  display: inline-block;
-  text-indent: -9999px;
-  background-image: url(/assets/images/sprites.png);
-  background-position: -169px -276px;
-  width: 66px;
-  height: 28px; }
-  .btn-tip:hover {
-    background-image: url(/assets/images/sprites.png);
-    background-position: -98px -276px;
-    width: 66px;
-    height: 28px; }
-
-.btn-invest {
-  display: block;
-  margin: 0 auto;
-  padding-left: 20px;
-  height: 55px;
-  width: 380px;
-  font-size: 22px;
-  color: #fff;
-  font-weight: 500;
-  line-height: 55px;
-  text-align: center;
-  border-radius: 55px;
-  background-color: #14378c; }
-  .btn-invest:after {
-    content: '';
-    display: inline-block;
-    margin-top: -4px;
-    margin-left: 9px;
-    vertical-align: middle;
-    background-image: url(/assets/images/sprites.png);
-    background-position: -380px -167px;
-    width: 11px;
-    height: 18px; }
-  .btn-invest:hover {
-    text-decoration: none;
-    background-color: #0f2969; }
-  .btn-invest.expired {
-    padding-left: 0;
-    width: 400px;
-    background-color: #afb2b7; }
-    .btn-invest.expired:after {
-      content: '';
-      display: none; }
-
-.btn-calc {
-  display: inline-block;
-  font-size: 14px;
-  color: #142c66;
-  vertical-align: middle; }
-  .btn-calc:before {
-    content: '';
-    display: inline-block;
-    margin-right: 7px;
-    vertical-align: middle;
-    background-image: url(/assets/images/sprites.png);
-    background-position: 0px -313px;
-    width: 21px;
-    height: 25px; }
-
-.btn-top {
-  display: block;
-  text-indent: -9999px;
-  background-image: url(/assets/images/sprites.png);
-  background-position: -339px -212px;
-  width: 37px;
-  height: 37px; }
-
-/**
- * import
  */
 /* Common Style */
 * {
@@ -248,6 +93,160 @@ a:hover {
 .hidden {
   display: none; }
 
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+body {
+  background-color: #f7f7f7; }
+
+/**
+ * modules - buttons
+ */
+.btn-inline {
+  display: inline-block;
+  position: relative;
+  font-size: 0.75em;
+  color: #525e7b;
+  vertical-align: middle;
+  display: inline-block; }
+  .ie8 .btn-inline {
+    display: inline;
+    zoom: 1; }
+
+.btn-more {
+  display: block;
+  font-size: 14px;
+  color: #868ea2;
+  text-align: center;
+  line-height: 48px;
+  border: 1px solid #d7dce6;
+  background-color: #fff; }
+
+.btn-more:after {
+  content: '';
+  display: inline-block;
+  margin-left: 5px;
+  vertical-align: middle;
+  background-image: url(/assets/images/sprites.png);
+  background-position: -209px -213px;
+  width: 11px;
+  height: 8px; }
+
+.btn-rd {
+  display: inline-block;
+  padding: 0 28px;
+  font-size: 13px;
+  color: #142c66;
+  text-align: center;
+  line-height: 35px;
+  border: 1px solid #d4dae4;
+  border-radius: 35px;
+  background-color: #fff; }
+  .filter-container .btn-rd:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: #ff4776; }
+
+.btn-tip {
+  display: inline-block;
+  text-indent: -9999px;
+  background-image: url(/assets/images/sprites.png);
+  background-position: -166px -349px;
+  width: 66px;
+  height: 28px; }
+  .btn-tip:hover {
+    background-image: url(/assets/images/sprites.png);
+    background-position: -237px -349px;
+    width: 66px;
+    height: 28px; }
+
+.btn-invest {
+  display: block;
+  margin: 0 auto;
+  padding-left: 20px;
+  height: 55px;
+  width: 380px;
+  font-size: 22px;
+  color: #fff;
+  font-weight: 500;
+  line-height: 55px;
+  text-align: center;
+  border-radius: 55px;
+  background-color: #14378c; }
+  .btn-invest:after {
+    content: '';
+    display: inline-block;
+    margin-top: -4px;
+    margin-left: 9px;
+    vertical-align: middle;
+    background-image: url(/assets/images/sprites.png);
+    background-position: -308px -349px;
+    width: 11px;
+    height: 18px; }
+  .btn-invest:hover {
+    text-decoration: none;
+    background-color: #0f2969; }
+  .btn-invest.expired {
+    padding-left: 0;
+    width: 400px;
+    background-color: #afb2b7; }
+    .btn-invest.expired:after {
+      content: '';
+      display: none; }
+
+.btn-calc {
+  display: inline-block;
+  font-size: 14px;
+  color: #142c66;
+  vertical-align: middle; }
+  .btn-calc:before {
+    content: '';
+    display: inline-block;
+    margin-right: 7px;
+    vertical-align: middle;
+    background-image: url(/assets/images/sprites.png);
+    background-position: -460px -359px;
+    width: 21px;
+    height: 25px; }
+
+.btn-top {
+  display: block;
+  text-indent: -9999px;
+  background-image: url(/assets/images/sprites.png);
+  background-position: -436px -80px;
+  width: 37px;
+  height: 37px; }
+
+/**
+ * import
+ */
 /* GNB HEADER */
 .header {
   display: block;
@@ -297,7 +296,7 @@ a:hover {
         vertical-align: middle;
         text-indent: -9999px;
         background-image: url(/assets/images/sprites.png);
-        background-position: 0px -231px;
+        background-position: 0px -253px;
         width: 151px;
         height: 40px; }
       .header .utils-member > li > a.btn-help {
@@ -310,7 +309,7 @@ a:hover {
         margin-right: 22px;
         margin-left: 16px;
         background-image: url(/assets/images/sprites.png);
-        background-position: -298px -276px;
+        background-position: -465px -295px;
         width: 23px;
         height: 23px; }
   .header .utils-help {
@@ -354,9 +353,236 @@ a:hover {
             bottom: -3px;
             left: 40%;
             background-image: url(/assets/images/sprites.png);
-            background-position: -380px -203px;
+            background-position: -477px -70px;
             width: 3px;
             height: 3px; }
+  .header .user {
+    display: none;
+    position: absolute;
+    bottom: 140px;
+    left: 28px;
+    padding: 60px 0 0 0;
+    min-width: 200px; }
+    .header .user > .credit-rating {
+      display: block;
+      position: absolute;
+      top: 40px;
+      left: 50%;
+      margin-left: 22px;
+      padding: 8px;
+      height: 30px;
+      min-width: 40px;
+      white-space: nowrap;
+      border: 1px solid #c4cad9;
+      border-radius: 10px;
+      background-color: #fff; }
+      .header .user > .credit-rating:before {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -14px;
+        left: 10px;
+        z-index: 1;
+        background-image: url(/assets/images/sprites.png);
+        background-position: -411px -272px;
+        width: 18px;
+        height: 14px; }
+      .header .user > .credit-rating > span {
+        display: inline-block;
+        height: 30px; }
+        .header .user > .credit-rating > span.invest {
+          text-indent: -9999px; }
+          .header .user > .credit-rating > span.invest.none {
+            background-image: url(/assets/images/sprites.png);
+            background-position: -253px -138px;
+            width: 17px;
+            height: 30px; }
+          .header .user > .credit-rating > span.invest.basic {
+            background-image: url(/assets/images/sprites.png);
+            background-position: -269px -298px;
+            width: 76px;
+            height: 30px; }
+          .header .user > .credit-rating > span.invest.silver {
+            background-image: url(/assets/images/sprites.png);
+            background-position: -176px -298px;
+            width: 88px;
+            height: 30px; }
+          .header .user > .credit-rating > span.invest.gold {
+            background-image: url(/assets/images/sprites.png);
+            background-position: -350px -298px;
+            width: 73px;
+            height: 30px; }
+          .header .user > .credit-rating > span.invest.vip {
+            background-image: url(/assets/images/sprites.png);
+            background-position: -436px -163px;
+            width: 40px;
+            height: 30px; }
+          .header .user > .credit-rating > span.invest.vvip {
+            background-image: url(/assets/images/sprites.png);
+            background-position: -436px 0px;
+            width: 58px;
+            height: 30px; }
+        .header .user > .credit-rating > span.invest + .loan {
+          position: relative;
+          margin-left: 4px;
+          padding-left: 8px; }
+          .header .user > .credit-rating > span.invest + .loan:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: -8px;
+            bottom: -8px;
+            left: 0;
+            width: 1px;
+            background-color: #c4cad9; }
+        .header .user > .credit-rating > span > em {
+          display: inline-block;
+          height: 30px;
+          text-indent: -9999px; }
+          .header .user > .credit-rating > span > em.bid0 {
+            margin-right: -2px;
+            background-image: url(/assets/images/sprites.png);
+            background-position: -301px -253px;
+            width: 16px;
+            height: 30px; }
+          .header .user > .credit-rating > span > em.bid1 {
+            margin-right: -2px;
+            background-image: url(/assets/images/sprites.png);
+            background-position: -481px -163px;
+            width: 9px;
+            height: 30px; }
+          .header .user > .credit-rating > span > em.bid2 {
+            margin-right: -2px;
+            background-image: url(/assets/images/sprites.png);
+            background-position: -478px -80px;
+            width: 16px;
+            height: 30px; }
+          .header .user > .credit-rating > span > em.bid3 {
+            margin-right: -2px;
+            background-image: url(/assets/images/sprites.png);
+            background-position: -407px -232px;
+            width: 17px;
+            height: 30px; }
+          .header .user > .credit-rating > span > em.bid4 {
+            margin-right: -2px;
+            background-image: url(/assets/images/sprites.png);
+            background-position: -407px -197px;
+            width: 17px;
+            height: 30px; }
+          .header .user > .credit-rating > span > em.bid5 {
+            margin-right: -2px;
+            background-image: url(/assets/images/sprites.png);
+            background-position: -478px -122px;
+            width: 16px;
+            height: 30px; }
+          .header .user > .credit-rating > span > em.bid6 {
+            margin-right: -2px;
+            background-image: url(/assets/images/sprites.png);
+            background-position: -253px -173px;
+            width: 16px;
+            height: 30px; }
+          .header .user > .credit-rating > span > em.bid7 {
+            margin-right: -2px;
+            background-image: url(/assets/images/sprites.png);
+            background-position: -343px -253px;
+            width: 15px;
+            height: 30px; }
+          .header .user > .credit-rating > span > em.bid8 {
+            margin-right: -2px;
+            background-image: url(/assets/images/sprites.png);
+            background-position: 0px -406px;
+            width: 16px;
+            height: 30px; }
+          .header .user > .credit-rating > span > em.bid9 {
+            margin-right: -2px;
+            background-image: url(/assets/images/sprites.png);
+            background-position: -322px -253px;
+            width: 16px;
+            height: 30px; }
+          .header .user > .credit-rating > span > em.overdue-none {
+            background-image: url(/assets/images/sprites.png);
+            background-position: -477px -35px;
+            width: 17px;
+            height: 30px; }
+          .header .user > .credit-rating > span > em.overdue-a {
+            background-image: url(/assets/images/sprites.png);
+            background-position: -436px -198px;
+            width: 24px;
+            height: 30px; }
+          .header .user > .credit-rating > span > em.overdue-b {
+            background-image: url(/assets/images/sprites.png);
+            background-position: -436px -359px;
+            width: 19px;
+            height: 30px; }
+          .header .user > .credit-rating > span > em.overdue-c {
+            background-image: url(/assets/images/sprites.png);
+            background-position: -436px -324px;
+            width: 19px;
+            height: 30px; }
+          .header .user > .credit-rating > span > em.overdue-d {
+            background-image: url(/assets/images/sprites.png);
+            background-position: -460px -324px;
+            width: 19px;
+            height: 30px; }
+    .header .user > figure .thumb {
+      display: block;
+      overflow: hidden;
+      margin: 0 auto;
+      height: 84px;
+      width: 84px;
+      border-radius: 84px;
+      background-color: #fff; }
+    .header .user > figure figcaption {
+      display: block;
+      margin-top: 12px;
+      font-size: 0.750em;
+      color: #525e7b;
+      text-align: center; }
+    .header .user > .message {
+      display: block;
+      position: absolute;
+      left: 0;
+      padding-right: 12px;
+      padding-left: 17px;
+      height: 34px;
+      font-size: 0.750em;
+      color: #868ea2;
+      line-height: 34px;
+      white-space: nowrap;
+      border-radius: 3px;
+      background-color: #fff; }
+      .header .user > .message:before {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -6px;
+        left: 68px;
+        background-image: url(/assets/images/sprites.png);
+        background-position: -484px -324px;
+        width: 6px;
+        height: 6px; }
+      .header .user > .message:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -6px;
+        left: 68px;
+        background-image: url(/assets/images/sprites.png);
+        background-position: -484px -335px;
+        width: 6px;
+        height: 6px; }
+      .header .user > .message.first {
+        top: 184px; }
+        .header .user > .message.first:before {
+          content: none; }
+      .header .user > .message.second {
+        top: 222px; }
+        .header .user > .message.second:before {
+          content: none; }
+      .header .user > .message.third {
+        top: 0px; }
+        .header .user > .message.third:after {
+          content: none; }
   .header .contents {
     text-align: center; }
   .header nav {
@@ -377,7 +603,7 @@ a:hover {
           border-left: 1px solid #37559d; }
         .header nav > ul > li > a {
           display: block;
-          font-size: 17px;
+          font-size: 1.125em;
           color: #798cbb;
           font-weight: 700;
           text-align: center;
@@ -388,6 +614,18 @@ a:hover {
             background-color: #142e6e; }
           .header nav > ul > li > a.selected {
             color: #dee1e9; }
+  .header.main {
+    height: 913px;
+    background: url(/assets/images/bg_header_main.jpg) center top no-repeat; }
+    .header.main:after {
+      height: 63px; }
+    .header.main .user {
+      display: block; }
+    .header.main nav > ul {
+      height: 63px; }
+      .header.main nav > ul > li > a {
+        font-size: 1.250em;
+        line-height: 63px; }
 
 /* FOOTER */
 .footer {
@@ -424,7 +662,7 @@ a:hover {
       left: 0;
       margin-top: -20px;
       background-image: url(/assets/images/sprites.png);
-      background-position: 0px -231px;
+      background-position: 0px -253px;
       width: 151px;
       height: 40px; }
     .footer .company-info a {
@@ -434,7 +672,8 @@ a:hover {
 /* CONTENTS */
 article.contents {
   min-width: 1160px;
-  padding: 100px 0 110px 0; }
+  padding: 100px 0 110px 0;
+  /* 메인 */ }
   article.contents > h1 {
     display: none; }
   article.contents > .inner {
@@ -442,6 +681,289 @@ article.contents {
     margin: 0 auto;
     height: 100%;
     width: 1160px; }
+  article.contents.main {
+    overflow: hidden; }
+    article.contents.main .btn-shortcut {
+      display: inline-block;
+      height: 37px;
+      min-width: 154px;
+      font-size: 0.875em;
+      font-weight: 500;
+      color: #fff;
+      text-align: center;
+      line-height: 37px;
+      border-radius: 37px;
+      background-color: #6cc800; }
+      article.contents.main .btn-shortcut:hover {
+        text-decoration: none;
+        background-color: #4eb500; }
+    article.contents.main .investment-type {
+      display: block;
+      float: left;
+      overflow: hidden;
+      margin-right: 30px;
+      height: 769px;
+      width: 760px;
+      /* 개인 투자 */
+      /* 기업투자 */
+      /* 채권마켓 */ }
+      article.contents.main .investment-type > h1 {
+        display: none; }
+      article.contents.main .investment-type .badge {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-indent: -9999px; }
+        article.contents.main .investment-type .badge.new {
+          background-image: url(/assets/images/sprites.png);
+          background-position: 0px 0px;
+          width: 134px;
+          height: 133px; }
+      article.contents.main .investment-type .slider {
+        position: relative;
+        height: 100%; }
+        article.contents.main .investment-type .slider .slick-list {
+          height: 100%; }
+          article.contents.main .investment-type .slider .slick-list .slick-track {
+            height: 100%; }
+        article.contents.main .investment-type .slider .slick-arrow {
+          display: block;
+          position: absolute;
+          top: 50%;
+          z-index: 1;
+          text-indent: -9999px; }
+          article.contents.main .investment-type .slider .slick-arrow.slick-prev {
+            left: 20px;
+            margin-top: -35px;
+            background-image: url(/assets/images/sprites.png);
+            background-position: -209px -138px;
+            width: 39px;
+            height: 70px; }
+          article.contents.main .investment-type .slider .slick-arrow.slick-next {
+            right: 20px;
+            margin-top: -35px;
+            background-image: url(/assets/images/sprites.png);
+            background-position: -363px -197px;
+            width: 39px;
+            height: 70px; }
+      article.contents.main .investment-type .investment-private {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        background-color: #d2dda9; }
+      article.contents.main .investment-type .investment {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        text-align: center; }
+        article.contents.main .investment-type .investment h1 {
+          padding-top: 63px;
+          font-size: 2.500em;
+          font-weight: 500;
+          color: #4b4b4b;
+          line-height: 1.2em; }
+          article.contents.main .investment-type .investment h1 > strong {
+            display: block;
+            font-size: 0.750em; }
+        article.contents.main .investment-type .investment p {
+          margin-top: 14px;
+          font-size: 0.875em;
+          color: #4b4b4b;
+          line-height: 20px; }
+        article.contents.main .investment-type .investment .btn-shortcut {
+          margin-top: 28px; }
+      article.contents.main .investment-type .bonds-market {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        background-color: #afc1de; }
+    article.contents.main .interview {
+      display: block;
+      float: left;
+      margin-bottom: 10px;
+      height: 251px;
+      width: 370px; }
+      article.contents.main .interview > h1 {
+        display: none; }
+      article.contents.main .interview .btn-play {
+        display: block;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        text-decoration: none; }
+        article.contents.main .interview .btn-play .before {
+          display: block;
+          position: relative;
+          z-index: 1;
+          top: 77px;
+          margin: 0 auto;
+          background-image: url(/assets/images/sprites.png);
+          background-position: -276px -174px;
+          width: 68px;
+          height: 66px; }
+        article.contents.main .interview .btn-play:after {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 0;
+          height: 100%;
+          width: 100%;
+          background: url("/assets/images/tp_interview01.png") left top repeat; }
+        article.contents.main .interview .btn-play:hover > .before {
+          background-image: url(/assets/images/sprites.png);
+          background-position: -363px 0px;
+          width: 68px;
+          height: 66px; }
+        article.contents.main .interview .btn-play p {
+          position: relative;
+          z-index: 1;
+          padding-top: 99px;
+          font-size: 0.875em;
+          color: #748bb9;
+          text-align: center;
+          line-height: 20px; }
+    article.contents.main .banners {
+      display: block;
+      float: left;
+      overflow: hidden;
+      height: 508px;
+      width: 370px;
+      background-color: #909; }
+      article.contents.main .banners > h1 {
+        display: none; }
+      article.contents.main .banners .slider {
+        position: relative;
+        height: 100%; }
+        article.contents.main .banners .slider .slick-list {
+          height: 100%; }
+          article.contents.main .banners .slider .slick-list .slick-track {
+            height: 100%; }
+        article.contents.main .banners .slider .slick-dots {
+          position: absolute;
+          right: 13px;
+          bottom: 20px; }
+          article.contents.main .banners .slider .slick-dots > li {
+            float: left;
+            padding-right: 7px;
+            padding-left: 6px; }
+            article.contents.main .banners .slider .slick-dots > li button {
+              display: block;
+              height: 11px;
+              width: 11px;
+              text-indent: -9999px;
+              border-radius: 11px;
+              background-color: #c8c8cb; }
+              .slick-active article.contents.main .banners .slider .slick-dots > li button {
+                background-color: #ff4a78; }
+            article.contents.main .banners .slider .slick-dots > li.slick-active button {
+              background-color: #ff4a78; }
+        article.contents.main .banners .slider a {
+          display: block;
+          height: 100%;
+          width: 100%; }
+    article.contents.main .service-shortcut {
+      clear: both;
+      overflow: hidden;
+      padding-top: 60px; }
+      article.contents.main .service-shortcut .box {
+        float: left;
+        position: relative;
+        padding-top: 53px;
+        height: 454px;
+        width: 573px;
+        text-align: center;
+        border: 1px solid #e4e4e4;
+        background-color: #fff; }
+        article.contents.main .service-shortcut .box > h1 {
+          font-size: 1.875em;
+          font-weight: bold;
+          color: #4b4b4b;
+          line-height: 1.2em; }
+        article.contents.main .service-shortcut .box p {
+          padding-top: 23px;
+          font-size: 0.875em;
+          color: #525e7b;
+          line-height: 20px; }
+        article.contents.main .service-shortcut .box .btns {
+          position: absolute;
+          bottom: 50px;
+          width: 100%; }
+      article.contents.main .service-shortcut .borrow {
+        margin-right: 10px;
+        background: url("/assets/images/bg_main_borrow01.jpg") center top no-repeat; }
+        article.contents.main .service-shortcut .borrow > h1 strong {
+          color: #65a10a; }
+      article.contents.main .service-shortcut .invest {
+        background: url("/assets/images/bg_main_invest01.jpg") center top no-repeat; }
+        article.contents.main .service-shortcut .invest > h1 strong {
+          color: #2e96d6; }
+        article.contents.main .service-shortcut .invest .btn-shortcut {
+          background-color: #2e96d6; }
+          article.contents.main .service-shortcut .invest .btn-shortcut:hover {
+            background-color: #2389cf; }
+    article.contents.main .sns-shortcut {
+      padding-top: 80px;
+      text-align: center; }
+      article.contents.main .sns-shortcut > h1 {
+        display: none; }
+      article.contents.main .sns-shortcut > p {
+        margin-top: 18px;
+        font-size: 0.750em;
+        color: #868ea2; }
+      article.contents.main .sns-shortcut > ul > li {
+        display: inline-block; }
+        .ie8 article.contents.main .sns-shortcut > ul > li {
+          display: inline;
+          zoom: 1; }
+        article.contents.main .sns-shortcut > ul > li + li:before {
+          content: '';
+          display: inline-block;
+          margin-right: 20px;
+          margin-left: 16px;
+          height: 30px;
+          width: 1px;
+          vertical-align: bottom;
+          background-color: #e4e5e8; }
+        article.contents.main .sns-shortcut > ul > li a {
+          display: inline-block;
+          text-align: left;
+          text-indent: -9999px; }
+          article.contents.main .sns-shortcut > ul > li a.btn-blog {
+            background-image: url(/assets/images/sprites.png);
+            background-position: -465px -233px;
+            width: 24px;
+            height: 28px; }
+          article.contents.main .sns-shortcut > ul > li a.btn-facebook {
+            background-image: url(/assets/images/sprites.png);
+            background-position: -465px -198px;
+            width: 24px;
+            height: 28px; }
+          article.contents.main .sns-shortcut > ul > li a.btn-kakao {
+            background-image: url(/assets/images/sprites.png);
+            background-position: -436px -233px;
+            width: 24px;
+            height: 28px; }
+  article.contents.filelist {
+    overflow: hidden; }
+    article.contents.filelist h1 {
+      margin-bottom: 20px;
+      font-size: 1em; }
+    article.contents.filelist .section {
+      float: left;
+      padding: 50px 50px 0 0; }
+      article.contents.filelist .section h2 {
+        margin-bottom: 20px;
+        padding-bottom: 5px;
+        font-size: 1em;
+        line-height: 1.2em;
+        border-bottom: 2px solid #000; }
+      article.contents.filelist .section a {
+        line-height: 1.5em; }
 
 /* 투자 */
 .filter-container {
@@ -518,25 +1040,25 @@ article.contents {
     .product > .options > .invest-type01 {
       border-radius: 18px 0px 0px 0px;
       background-image: url(/assets/images/sprites.png);
-      background-position: -252px 0px;
+      background-position: -276px -87px;
       width: 82px;
       height: 82px; }
     .product > .options > .invest-type02 {
       border-radius: 18px 0px 0px 0px;
       background-image: url(/assets/images/sprites.png);
-      background-position: -94px -137px;
+      background-position: -276px 0px;
       width: 82px;
       height: 82px; }
     .product > .options > .new {
       background-image: url(/assets/images/sprites.png);
-      background-position: 0px 0px;
+      background-position: -139px 0px;
       width: 132px;
       height: 132px; }
     .product > .options > .user-in {
       left: auto;
       right: 17px;
       background-image: url(/assets/images/sprites.png);
-      background-position: -252px -153px;
+      background-position: 0px -298px;
       width: 73px;
       height: 46px; }
     .product > .options > .status01 {
@@ -545,7 +1067,7 @@ article.contents {
       bottom: 0;
       left: auto;
       background-image: url(/assets/images/sprites.png);
-      background-position: -339px -57px;
+      background-position: 0px -349px;
       width: 52px;
       height: 52px; }
     .product > .options > .status02 {
@@ -554,7 +1076,7 @@ article.contents {
       bottom: 0;
       left: auto;
       background-image: url(/assets/images/sprites.png);
-      background-position: -339px 0px;
+      background-position: -57px -349px;
       width: 52px;
       height: 52px; }
     .product > .options > .status03 {
@@ -563,7 +1085,7 @@ article.contents {
       bottom: 0;
       left: auto;
       background-image: url(/assets/images/sprites.png);
-      background-position: -181px -137px;
+      background-position: -363px -137px;
       width: 55px;
       height: 55px; }
     .product > .options > .favorite {
@@ -571,7 +1093,7 @@ article.contents {
       right: 10px;
       left: auto;
       background-image: url(/assets/images/sprites.png);
-      background-position: -252px -204px;
+      background-position: -363px -272px;
       width: 19px;
       height: 18px; }
     .product > .options > .imminent-deadline {
@@ -586,7 +1108,7 @@ article.contents {
       text-indent: 0;
       text-align: center;
       background-image: url(/assets/images/sprites.png);
-      background-position: 0px -137px;
+      background-position: -115px -138px;
       width: 89px;
       height: 89px;
       height: 69px; }
@@ -607,11 +1129,11 @@ article.contents {
         text-indent: -9999px;
         background-image: url("/assets/images/sprites.png"); }
         .product > .options > .share a.btn-fb {
-          background-position: -240px -276px; }
+          background-position: -436px -266px; }
         .product > .options > .share a.btn-tw {
-          background-position: -269px -276px; }
+          background-position: -465px -266px; }
         .product > .options > .share a.btn-ks {
-          background-position: -301px -231px; }
+          background-position: -436px -295px; }
   .product > figure > .thumb {
     display: block;
     position: relative;
@@ -733,14 +1255,14 @@ article.contents {
         margin-right: 5px;
         vertical-align: middle;
         background-image: url(/assets/images/sprites.png);
-        background-position: -276px -204px;
+        background-position: -387px -272px;
         width: 19px;
         height: 18px; }
       .product > .hover > button:hover {
         text-decoration: underline; }
       .product > .hover > button.selected:before {
         background-image: url(/assets/images/sprites.png);
-        background-position: -252px -204px;
+        background-position: -363px -272px;
         width: 19px;
         height: 18px; }
     .product > .hover > span {
@@ -769,7 +1291,7 @@ article.contents {
         padding-top: 26px;
         font-size: 2.250em;
         background-image: url(/assets/images/sprites.png);
-        background-position: -137px 0px;
+        background-position: 0px -138px;
         width: 110px;
         height: 110px;
         height: 84px; }
@@ -855,7 +1377,7 @@ article.contents {
           display: block;
           margin: 0 auto 8px auto;
           background-image: url(/assets/images/sprites.png);
-          background-position: -276px -204px;
+          background-position: -387px -272px;
           width: 19px;
           height: 18px; }
       .product.detail > .hover > span {
@@ -942,12 +1464,12 @@ article.contents {
           vertical-align: middle; }
         .product-detail-view .product-feature > tbody > tr td > span.feature01:before {
           background-image: url(/assets/images/sprites.png);
-          background-position: -339px -254px;
+          background-position: -436px -122px;
           width: 37px;
           height: 36px; }
         .product-detail-view .product-feature > tbody > tr td > span.feature02:before {
           background-image: url(/assets/images/sprites.png);
-          background-position: -339px -114px;
+          background-position: -114px -349px;
           width: 47px;
           height: 48px; }
         .product-detail-view .product-feature > tbody > tr td > span.feature03:before {
@@ -956,14 +1478,14 @@ article.contents {
           color: #14378c;
           text-align: center;
           background-image: url(/assets/images/sprites.png);
-          background-position: -252px -87px;
+          background-position: -363px -71px;
           width: 62px;
           height: 61px; }
         .product-detail-view .product-feature > tbody > tr td > span.feature04 {
           font-size: 31px; }
           .product-detail-view .product-feature > tbody > tr td > span.feature04:before {
             background-image: url(/assets/images/sprites.png);
-            background-position: -339px -167px;
+            background-position: -436px -35px;
             width: 36px;
             height: 40px; }
         .product-detail-view .product-feature > tbody > tr td > span.feature04:after {
@@ -977,7 +1499,7 @@ article.contents {
           text-align: center;
           line-height: 27px;
           background-image: url(/assets/images/sprites.png);
-          background-position: 0px -276px;
+          background-position: -78px -298px;
           width: 93px;
           height: 32px; }
   .product-detail-view .goal {
@@ -996,7 +1518,7 @@ article.contents {
       top: 80px;
       left: 0;
       background-image: url(/assets/images/sprites.png);
-      background-position: -156px -231px;
+      background-position: -156px -253px;
       width: 140px;
       height: 34px; }
     .product-detail-view .manager > figure {

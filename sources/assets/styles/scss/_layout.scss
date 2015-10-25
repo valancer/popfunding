@@ -4,11 +4,13 @@
 
 /* GNB HEADER */
 .header {
+	$header-height: 353px;
+
 	@mixin li-bar() {
 		content: '|'; display: inline-block; padding-right: 12px; padding-left: 10px; font-size: 0.750em; color: #c9cfd6;
 	}
 
-	display: block; position: relative; height: 353px; min-width: $contents-container-width; background: url(/assets/images/bg_header.jpg) center top no-repeat;
+	display: block; position: relative; height: $header-height; min-width: $contents-container-width; background: url(/assets/images/bg_header.jpg) center top no-repeat;
 	&:after { content: ''; display: block; position: absolute; bottom: 0; right: 0; left: 0; z-index: -1; height: 50px; width: 100%; background-color: #14378c; }
 
 	.inner { @include inner-container(); }
@@ -40,6 +42,59 @@
 		}
 	}
 
+	.user { display: none; position: absolute; bottom: 140px; left: 28px; padding: 60px 0 0 0; min-width: 200px;
+		> .credit-rating { display: block; position: absolute; top: 40px; left: 50%; margin-left: 22px; padding: 8px; height: 30px; min-width: 40px; white-space: nowrap; border: 1px solid #c4cad9; border-radius: 10px; background-color: #fff;
+			&:before { content: ''; display: block; position: absolute; bottom: -$sprite-bg-arrow04-height; left: 10px; z-index: 1; @include sprite($sprite-bg-arrow04); }
+			
+			> span { display: inline-block; height: 30px;
+				&.invest { text-indent: -9999px;
+					&.none { @include sprite($sprite-bg-invest01); }
+					&.basic { @include sprite($sprite-bg-invest02); }
+					&.silver { @include sprite($sprite-bg-invest03); }
+					&.gold { @include sprite($sprite-bg-invest04); }
+					&.vip { @include sprite($sprite-bg-invest05); }
+					&.vvip { @include sprite($sprite-bg-invest06); }
+				}
+				&.invest + .loan { position: relative; margin-left: 4px; padding-left: 8px;
+					&:before { content: ''; display: block; position: absolute; top: -8px; bottom: -8px; left: 0; width: 1px; background-color: #c4cad9; }
+				}
+
+				> em { display: inline-block; height: 30px; text-indent: -9999px;
+					&.bid0 { margin-right: -2px; @include sprite($sprite-cnt-bid0); }
+					&.bid1 { margin-right: -2px; @include sprite($sprite-cnt-bid1); }
+					&.bid2 { margin-right: -2px; @include sprite($sprite-cnt-bid2); }
+					&.bid3 { margin-right: -2px; @include sprite($sprite-cnt-bid3); }
+					&.bid4 { margin-right: -2px; @include sprite($sprite-cnt-bid4); }
+					&.bid5 { margin-right: -2px; @include sprite($sprite-cnt-bid5); }
+					&.bid6 { margin-right: -2px; @include sprite($sprite-cnt-bid6); }
+					&.bid7 { margin-right: -2px; @include sprite($sprite-cnt-bid7); }
+					&.bid8 { margin-right: -2px; @include sprite($sprite-cnt-bid8); }
+					&.bid9 { margin-right: -2px; @include sprite($sprite-cnt-bid9); }
+
+					&.overdue-none { @include sprite($sprite-bg-overdue01); }
+					&.overdue-a { @include sprite($sprite-bg-overdue02); }
+					&.overdue-b { @include sprite($sprite-bg-overdue03); }
+					&.overdue-c { @include sprite($sprite-bg-overdue04); }
+					&.overdue-d { @include sprite($sprite-bg-overdue05); }
+				}
+			}
+			
+		}
+		> figure {
+			.thumb { display: block; overflow: hidden; margin: 0 auto; height: 84px; width: 84px; border-radius: 84px; background-color: #fff; }
+			figcaption { display: block; margin-top: 12px; font-size: 0.750em; color: #525e7b; text-align: center; }
+		}
+
+		> .message { display: block; position: absolute; left: 0; padding-right: 12px; padding-left: 17px; height: 34px; font-size: 0.750em; color: #868ea2; line-height: 34px; white-space: nowrap; border-radius: 3px; background-color: #fff;
+			&:before { content: ''; display: block; position: absolute; bottom: -$sprite-bg-arrow05-height; left: 68px; @include sprite($sprite-bg-arrow05); }
+			&:after { content: ''; display: block; position: absolute; top: -$sprite-bg-arrow06-height; left: 68px; @include sprite($sprite-bg-arrow06); }
+
+			&.first { top: 184px; &:before { content: none; } }
+			&.second { top: 222px; &:before { content: none; } }
+			&.third { top: 0px; &:after { content: none; } }
+		}
+	}
+
 	.contents { text-align: center; }
 
 	nav { position: absolute; bottom: 0; right: 0; left: 0;
@@ -48,9 +103,30 @@
 			> li { float: left; box-sizing: border-box; width: 50%; border-right: 1px solid #37559d;
 				&:first-child { border-left: 1px solid #37559d; }
 				> a {
-					display: block; font-size: 17px; color: #798cbb; font-weight: 700; text-align: center; line-height: 50px;
+					display: block; font-size: 1.125em; color: #798cbb; font-weight: 700; text-align: center; line-height: 50px;
 					&:hover { color: #dee1e9; text-decoration: none; background-color: #142e6e; }
 					&.selected { color: #dee1e9; }
+				}
+			}
+		}
+	}
+
+
+	&.main {
+		$header-height: 913px;
+
+		height: $header-height; background: url(/assets/images/bg_header_main.jpg) center top no-repeat;
+		&:after { height: 63px; }
+
+		.user { display: block; }
+
+		nav { 
+			> ul {
+				height: 63px;
+				> li {
+					> a {
+						font-size: 1.250em; line-height: 63px;
+					}
 				}
 			}
 		}
@@ -85,6 +161,134 @@ article.contents { min-width: $contents-container-width; padding: 100px 0 110px 
 	> h1 { display: none; }
 	> .inner { @include inner-container(); }
 
+
+	/* 메인 */
+	&.main { overflow: hidden;
+		.btn-shortcut { display: inline-block; height: 37px; min-width: 154px; font-size: 0.875em; font-weight: 500; color: #fff; text-align: center; line-height: 37px; border-radius: 37px; background-color: #6cc800;
+			&:hover { text-decoration: none; background-color: #4eb500; }
+		}
+
+		/// 투자유형
+		.investment-type { display: block; float: left; overflow: hidden; margin-right: 30px; height: 769px; width: 760px;
+			> h1 { display: none; }
+			.badge { display: block; position: absolute; top: 0; left: 0; text-indent: -9999px;
+				&.new { @include sprite($sprite-badge-new02); }
+			}
+
+			.slider { position: relative; height: 100%;
+				.slick-list { height: 100%;
+					.slick-track { height: 100%; }
+				}
+
+				.slick-arrow { display: block; position: absolute; top: 50%; z-index: 1; text-indent: -9999px;
+					&.slick-prev { left: 20px; margin-top: -$sprite-btn-prev01-height/2; @include sprite($sprite-btn-prev01); }
+					&.slick-next { right: 20px; margin-top: -$sprite-btn-next01-height/2; @include sprite($sprite-btn-next01); }
+				}
+			}
+
+			/* 개인 투자 */
+			.investment-private { position: relative; height: 100%; width: 100%; text-align: center; background-color: #d2dda9; }
+
+			/* 기업투자 */
+			.investment { position: relative; height: 100%; width: 100%; text-align: center;
+				h1 { padding-top: 63px; font-size: 2.500em; font-weight: 500; color: #4b4b4b; line-height: 1.2em;
+					> strong { display: block; font-size: 0.750em; }
+				}
+				p { margin-top: 14px; font-size: 0.875em; color: #4b4b4b; line-height: 20px; }
+				.btn-shortcut { margin-top: 28px; }
+			}
+
+			/* 채권마켓 */
+			.bonds-market { position: relative; height: 100%; width: 100%; text-align: center; background-color: #afc1de; }
+
+		}
+
+		/// 인터뷰
+		.interview { display: block; float: left; margin-bottom: 10px; height: 251px; width: 370px;
+			> h1 { display: none; }
+			.btn-play { display: block; position: relative; height: 100%; width: 100%; text-decoration: none;
+				.before { display: block; position: relative; z-index: 1; top: 77px; margin: 0 auto; @include sprite($sprite-btn-play01); }
+				&:after { content: ''; display: block; position: absolute; top: 0; left: 0; z-index: 0; height: 100%; width: 100%; background: url('/assets/images/tp_interview01.png') left top repeat; }
+				&:hover > .before { @include sprite($sprite-btn-play01-highlights); }
+				p { position: relative; z-index: 1; padding-top: 99px; font-size: 0.875em; color: #748bb9; text-align: center; line-height: 20px; }
+			}
+		}
+
+		/// 배너 영역
+		.banners { display: block; float: left; overflow: hidden; height: 508px; width: 370px; background-color: #909;
+			> h1 { display: none; }
+
+			.slider { position: relative; height: 100%;
+				.slick-list { height: 100%;
+					.slick-track { height: 100%; }
+				}
+				.slick-dots { position: absolute; right: 13px; bottom: 20px;
+					> li { float: left; padding-right: 7px; padding-left: 6px;
+						button { display: block; height: 11px; width: 11px; text-indent: -9999px; border-radius: 11px; background-color: #c8c8cb;
+							.slick-active & { background-color: #ff4a78; }
+						}
+
+						&.slick-active {
+							button { background-color: #ff4a78; }
+						}
+					}
+				}
+
+				a { display: block; height: 100%; width: 100%; }
+			}
+		}
+
+		/// 빍리기 / 투자하기
+		.service-shortcut { clear: both; overflow: hidden; padding-top: 60px;
+			.box { float: left; position: relative; padding-top: 53px; height: 454px; width: 573px; text-align: center; border: 1px solid #e4e4e4; background-color: #fff;
+				> h1 { font-size: 1.875em; font-weight: bold; color: #4b4b4b; line-height: 1.2em; }
+				p { padding-top: 23px; font-size: 0.875em; color: #525e7b; line-height: 20px; }
+				.btns { position: absolute; bottom: 50px; width: 100%; }
+			}
+			.borrow { margin-right: 10px; background: url('/assets/images/bg_main_borrow01.jpg') center top no-repeat;
+				> h1 { strong { color: #65a10a; } }
+			}
+			.invest { background: url('/assets/images/bg_main_invest01.jpg') center top no-repeat;
+				> h1 { strong { color: #2e96d6; } }
+				.btn-shortcut { background-color: #2e96d6;
+					&:hover { background-color: #2389cf; }
+				}
+			}
+		}
+
+		/// SNS 바로가기
+		.sns-shortcut { padding-top: 80px; text-align: center;
+			@mixin li-bar() {
+				content: ''; display: inline-block; margin-right: 20px; margin-left: 16px; height: 30px; width: 1px; vertical-align: bottom; background-color: #e4e5e8;
+			}
+
+			> h1 { display: none; }
+			> p { margin-top: 18px; font-size: 0.750em; color: #868ea2; }
+
+			> ul {
+				> li { @include ie8-inline-block();
+					+ li:before { @include li-bar(); }
+
+					a { display: inline-block; text-align: left; text-indent: -9999px;
+						&.btn-blog { @include sprite($sprite-btn-blog01); }
+						&.btn-facebook { @include sprite($sprite-btn-facebook01); }
+						&.btn-kakao { @include sprite($sprite-btn-kakao01); }
+					}
+				}
+			}
+		}
+	}
+
+
+	/// 파일리스트 추후 삭제
+	&.filelist { overflow: hidden;
+		h1 { margin-bottom: 20px; font-size: 1em; }
+
+		.section { float: left; padding: 50px 50px 0 0;
+			h2 { margin-bottom: 20px; padding-bottom: 5px; font-size: 1em; line-height: 1.2em; border-bottom: 2px solid #000; }
+			a { line-height: 1.5em; }
+		}
+	}
 }
 
 

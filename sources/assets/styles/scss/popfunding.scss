@@ -4,12 +4,6 @@
 @import url(animate.min.css);
 @import url(slick.css);
 
-
-/* sprites css */
-@import "sprites";
-
-
-
 /**
  * variable
  */
@@ -18,6 +12,11 @@ $body-bg-color: #f7f7f7;
 $contents-container-width: 1160px;
 $product-height: 558px;
 $product-width: 338px;
+
+
+@import "reset";
+@import "sprites";
+
 
 body { background-color: $body-bg-color; }
 
@@ -70,6 +69,5 @@ body { background-color: $body-bg-color; }
  * import
  */
 
-@import "reset";
 @import "layout";
 @import "contents";

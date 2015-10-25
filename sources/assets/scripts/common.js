@@ -14,11 +14,82 @@
 
 
 $(document).ready(function (e) {
+	Main.init();
 	Product.init();
 });
 
 
 
+/********************************************************************************************/
+/****************************************** 메인 ******************************************/
+/********************************************************************************************/
+var Main = (function ($) {
+	var scope,
+		$type,
+		$typeSlider,
+		$banner,
+		$bannerSlider,
+		init = function () {
+			$type = $('.main .investment-type');
+			$typeSlider = $type.find('.slider');
+			$banner = $('.main .banners');
+			$bannerSlider = $banner.find('.slider');
+
+			initLayout();
+			initEvent();
+		};//end init
+
+	function initLayout() {
+		
+	}
+
+	function initEvent() {
+
+		// 투자유형 슬라이더
+		if( $typeSlider.length > 0 ) {
+			$typeSlider.slick({
+				infinite: true,
+				autoplay: true,
+				pauseOnHover: true,
+				initialSlide: 1,
+				autoplaySpeed: 3000,
+				speed: 300,
+				dots: false,
+				arrows: true,
+				slidesToShow: 1,
+				slidesToScroll: 1
+			});
+		}
+
+		// 배너 슬라이더
+		if( $bannerSlider.length > 0 ) {
+			$bannerSlider.slick({
+				infinite: true,
+				autoplay: true,
+				pauseOnHover: true,
+				autoplaySpeed: 3300,
+				speed: 300,
+				dots: true,
+				arrows: false,
+				slide: 'a',
+				slidesToShow: 1,
+				slidesToScroll: 1
+			});
+		}
+	}
+
+	return {
+		init: function () {
+			scope = this;
+
+			init();
+		}
+	};
+}(jQuery));
+
+/********************************************************************************************/
+/****************************************** 상품 개별 ******************************************/
+/********************************************************************************************/
 var Product = (function ($) {
 	var scope,
 		_containerWidth = 0,

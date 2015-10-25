@@ -131,7 +131,7 @@ module.exports = function(grunt) {
 					src: ['**', '!**/sprites/**'],
 					dest: 'build/assets/images/'
 				}]
-			}
+			},
 			// html: {
 			// 	files: [{
 			// 		expand: true,
@@ -140,6 +140,14 @@ module.exports = function(grunt) {
 			// 		desc: 'build/'
 			// 	}]
 			// }
+			release: {
+				files: [{
+					expand: true,
+					cwd: 'build/',
+					src: ['**/**'],
+					dest: '../popfunding-dev/'
+				}]
+			}
 		},
 
 
@@ -212,5 +220,5 @@ module.exports = function(grunt) {
 	grunt.registerTask('scripts-build', ['bowercopy', 'newer:jshint']);
 	grunt.registerTask('html-build', ['includes']);
 	grunt.registerTask('build', ['clean', 'sass-build', 'scripts-build', 'html-build', 'copy', 'connect', 'watch']);
-
+	grunt.registerTask('release', ['clean', 'sass-build', 'scripts-build', 'html-build', 'copy']);
 };

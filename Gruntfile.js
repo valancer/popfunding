@@ -29,6 +29,35 @@ module.exports = function(grunt) {
 */
 		},
 
+		// charset
+		charset: {
+			dist: {
+				options: {
+					from: 'UTF-8',
+					to: 'EUC-KR',
+					fileTypes: {
+						html5: {
+							ext: ['.html'],
+							detect: /<meta\s+charset=["']?.+?["']?\s*\/?>/i,
+							replace: '<meta charset="{{charset}}">'
+						},
+							css: {
+							ext: ['.css'],
+							detect: /^@charset\s+(".+?"|'.+?')/,
+							replace: '@charset "{{charset}}"'
+						}
+					}
+				},
+				files: [{
+					expand: true,
+					cwd: 'build/',
+					dest: '../popfunding-dev/',
+					src: ['**/*.{html,css}']
+
+				}]
+			},
+		},
+
 		// html
 		includes: {
 			build: {
@@ -220,5 +249,5 @@ module.exports = function(grunt) {
 	grunt.registerTask('scripts-build', ['bowercopy', 'newer:jshint']);
 	grunt.registerTask('html-build', ['includes']);
 	grunt.registerTask('build', ['clean', 'sass-build', 'scripts-build', 'html-build', 'copy', 'connect', 'watch']);
-	grunt.registerTask('release', ['clean', 'sass-build', 'scripts-build', 'html-build', 'copy']);
+	grunt.registerTask('release', ['clean', 'sass-build', 'scripts-build', 'html-build', 'copy', 'charset']);
 };

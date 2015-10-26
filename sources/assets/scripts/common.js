@@ -14,9 +14,66 @@
 
 
 $(document).ready(function (e) {
+	Header.init();
 	Main.init();
 	Product.init();
 });
+
+
+
+
+/********************************************************************************************/
+/****************************************** 헤더 ******************************************/
+/********************************************************************************************/
+var Header = (function ($) {
+	var scope,
+		$headerContainer,
+		$user,
+		init = function () {
+			$headerContainer = $('header.header');
+			$user = $headerContainer.find('.user');
+			$convert = $user.find('.convert');
+
+			initLayout();
+			initEvent();
+		};//end init
+
+	function initLayout() {
+		if( $convert.length > 0 ) {
+			$convert.each(function () {
+				convertNumberToImage($(this));
+			});
+		}
+	}
+
+	function initEvent() {
+		
+	}
+
+	function convertNumberToImage($element) {
+		var value = $.trim($element.text().toLowerCase());
+		var convert = '';
+
+		if( $element.hasClass('invest') ) {
+			$element.addClass(value);
+		} else if( $element.hasClass('loan') ) {
+			console.log(value);
+			var array = value.split('');
+			convert += '<em class="bid' + array[0] + '">' + array[0] + '</em>\n';
+			convert += '<em class="overdue-' + array[1] + '">' + array[1] + '</em>';
+			$element.html(convert);
+		}
+	}
+
+	return {
+		init: function () {
+			scope = this;
+
+			init();
+		}
+	};
+}(jQuery));
+
 
 
 
@@ -87,6 +144,9 @@ var Main = (function ($) {
 	};
 }(jQuery));
 
+
+
+
 /********************************************************************************************/
 /****************************************** 상품 개별 ******************************************/
 /********************************************************************************************/
@@ -94,10 +154,14 @@ var Product = (function ($) {
 	var scope,
 		_containerWidth = 0,
 		$products,
+		_isDetail = false,
 		init = function () {
 			$products = $('.product');
 			$thumbs = $products.find('.thumb > img');
 			_containerWidth = $products.width();
+
+			_isDetail = $products.hasClass('detail');
+			$numbers = $('.convert.price');
 			
 	 		initLayout();
 			initEvent();
@@ -105,7 +169,11 @@ var Product = (function ($) {
 		};//end init
 
 	function initLayout() {
-		
+		if( $numbers.length > 0 ) {
+			$numbers.each(function () {
+				convertNumberToImage($(this));
+			});
+		}
 	}
 
 	function initEvent() {
@@ -118,6 +186,21 @@ var Product = (function ($) {
 			}
 		});
 	}
+
+	function convertNumberToImage($element) {
+		var array = $element.text().split('');
+		var convert = '';
+		for( var i=0; i<array.length-1; i++ ) {
+			if( array[i] == "," ) {
+				convert += '<span class="price-comma">' + array[i] + '</span>';
+			} else {
+				convert += '<span class="price' + array[i] + '">' + array[i] + '</span>';
+			}
+		}
+		convert += array[array.length-1];
+		$element.html(convert);
+	}
+
 	return {
 		init: function () {
 			scope = this;

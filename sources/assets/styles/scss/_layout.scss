@@ -85,7 +85,7 @@
 			figcaption { display: block; margin-top: 12px; font-size: 0.750em; color: #525e7b; text-align: center; }
 		}
 
-		> .message { display: block; position: absolute; left: 0; padding-right: 12px; padding-left: 17px; height: 34px; font-size: 0.750em; color: #868ea2; line-height: 34px; white-space: nowrap; border-radius: 3px; background-color: #fff;
+		> .message { display: block; position: absolute; left: 0; z-index: 1;; padding-right: 12px; padding-left: 17px; height: 34px; font-family: $font-stack; font-size: 0.750em; color: #868ea2; line-height: 34px; white-space: nowrap; border-radius: 3px; background-color: #fff;
 			&:before { content: ''; display: block; position: absolute; bottom: -$sprite-bg-arrow05-height; left: 68px; @include sprite($sprite-bg-arrow05); }
 			&:after { content: ''; display: block; position: absolute; top: -$sprite-bg-arrow06-height; left: 68px; @include sprite($sprite-bg-arrow06); }
 
@@ -125,7 +125,7 @@
 				height: 63px;
 				> li {
 					> a {
-						font-size: 1.250em; line-height: 63px;
+						font-size: 1.375em; color: #dee1e9; line-height: 63px;
 					}
 				}
 			}
@@ -191,7 +191,7 @@ article.contents { min-width: $contents-container-width; padding: 100px 0 110px 
 
 			/* 기업투자 */
 			.investment { position: relative; height: 100%; width: 100%; text-align: center;
-				h1 { padding-top: 63px; font-size: 2.500em; font-weight: 500; color: #4b4b4b; line-height: 1.2em;
+				h1 { padding-top: 63px; font-family: $font-stack; font-size: 2.500em; font-weight: 700; color: #4b4b4b; line-height: 1.2em;
 					> strong { display: block; font-size: 0.750em; }
 				}
 				p { margin-top: 14px; font-size: 0.875em; color: #4b4b4b; line-height: 20px; }
@@ -242,7 +242,7 @@ article.contents { min-width: $contents-container-width; padding: 100px 0 110px 
 		.service-shortcut { clear: both; overflow: hidden; padding-top: 60px;
 			.box { float: left; position: relative; padding-top: 53px; height: 454px; width: 573px; text-align: center; border: 1px solid #e4e4e4; background-color: #fff;
 				> h1 { font-size: 1.875em; font-weight: bold; color: #4b4b4b; line-height: 1.2em; }
-				p { padding-top: 23px; font-size: 0.875em; color: #525e7b; line-height: 20px; }
+				p { padding-top: 23px; font-family: $font-stack; font-size: 0.875em; color: #525e7b; line-height: 20px; }
 				.btns { position: absolute; bottom: 50px; width: 100%; }
 			}
 			.borrow { margin-right: 10px; background: url('/assets/images/bg_main_borrow01.jpg') center top no-repeat;

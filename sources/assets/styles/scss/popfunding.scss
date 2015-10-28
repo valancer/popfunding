@@ -36,7 +36,7 @@ body { background-color: $body-bg-color; }
 }
 
 @mixin badge($top, $left) {
-	display: block; box-sizing: border-box; position: absolute; top: $top; left: $left; padding: 0 3px; height: 16px; min-width: 16px; color: #fff; text-align: center; line-height: 16px; border-radius: 16px; background-color: #ff4776;
+	display: block; box-sizing: border-box; position: absolute; top: $top; left: $left; padding: 1px 3px 0 3px; height: 15px; min-width: 16px; color: #fff; text-align: center; line-height: 14px; border-radius: 16px; background-color: #ff4776;
 	&:before { content: ''; display: block; position: absolute; bottom: -3px; left: 40%;
 		@include sprite($sprite-bg-arrow01);
 	}
@@ -50,7 +50,7 @@ body { background-color: $body-bg-color; }
 .btn-rd { display: inline-block; padding: 0 28px; font-size: 13px; color: #142c66; text-align: center; line-height: 35px; border: 1px solid #d4dae4; border-radius: 35px; background-color: #fff; 
 
 	.filter-container & {
-		&:hover { color: #fff; text-decoration: none; background-color: #ff4776; }
+		&:hover { color: #ff4776; text-decoration: none; }
 	}
 }
 .btn-tip { display: inline-block; text-indent: -9999px;

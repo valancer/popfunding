@@ -164,7 +164,7 @@ article.contents { min-width: $contents-container-width; padding: 100px 0 110px 
 
 	/* 메인 */
 	&.main { overflow: hidden;
-		.btn-shortcut { display: inline-block; height: 37px; min-width: 154px; font-size: 0.875em; font-weight: 500; color: #fff; text-align: center; line-height: 37px; border-radius: 37px; background-color: #6cc800;
+		.btn-shortcut { display: inline-block; padding-top: 1px; height: 36px; min-width: 154px; font-size: 0.875em; font-weight: 500; color: #fff; text-align: center; line-height: 36px; border-radius: 37px; background-color: #6cc800;
 			&:hover { text-decoration: none; background-color: #4eb500; }
 		}
 
@@ -266,10 +266,11 @@ article.contents { min-width: $contents-container-width; padding: 100px 0 110px 
 			> p { margin-top: 18px; font-size: 0.750em; color: #868ea2; }
 
 			> ul {
-				> li { @include ie8-inline-block();
+				> li { display: inline-block;
+					&:before { content: ''; display: inline-block; height: 30px; vertical-align: bottom; }
 					+ li:before { @include li-bar(); }
 
-					a { display: inline-block; text-align: left; text-indent: -9999px;
+					a { display: inline-block; text-align: left; text-indent: -9999px; vertical-align: bottom;
 						&.btn-blog { @include sprite($sprite-btn-blog01); }
 						&.btn-facebook { @include sprite($sprite-btn-facebook01); }
 						&.btn-kakao { @include sprite($sprite-btn-kakao01); }

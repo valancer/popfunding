@@ -94,7 +94,7 @@ em.convert {
 		}
 		> .info { position: relative; padding: 38px 29px 0 29px; border-top: 1px solid #e6e9ee;
 			> .sub-info {
-				.title { font-size: 1.125em; line-height: 1em; }
+				.title { font-size: 1.125em; font-weight: normal; line-height: 1em; }
 				time { display: block; margin-top: 8px; font-size: 0.813em; color: #ff6000; }
 				.desc { display: none; font-size: 0.875em; color: #868ea2; line-height: 20px; }
 			}
@@ -219,7 +219,7 @@ $border-inner-color: #e6e9ee;
 		> tbody > tr {
 			td { border-right: 1px solid $border-color;
 				a { display: block; font-size: 0.875em; color: #868ea2; text-align: center; text-decoration: none; line-height: 53px; border-top: 1px solid $border-color; border-bottom: 1px solid $border-color; background-color: #f8f9fb;
-					&:hover { color: #fff; background-color: #ff4776; }
+					&:hover { color: #ff4776; }
 					&.selected { color: #142c66; border-bottom: 1px solid #fff; background-color: #fff; }
 				}
 			}
@@ -234,7 +234,7 @@ $border-inner-color: #e6e9ee;
 	h2 { font-size: 1.125em; font-weight: normal; color: #252525;
 		.bar { display: inline-block; margin: -2px 9px 0 10px;; height: 17px; width: 1px; vertical-align: middle; background-color: #d7dde5; }
 	}
-	h2 + p { margin-top: 16px; font-family: $font-stack; font-size: 0.750em; color: #8a94a3; line-height: 20px; }
+	h2 + p { margin-top: 16px; font-family: $font-stack; font-size: 0.875em; color: #8a94a3; line-height: 22px; }
 	.pd-container { position: relative; padding: 80px 69px 60px 69px; }
 
 

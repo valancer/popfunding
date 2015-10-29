@@ -90,9 +90,9 @@ module.exports = function(grunt) {
 			},
 			dist: {
 				expand: true,
-				cwd: 'sources/assets/styles/',
+				cwd: 'build/assets/styles/',
 				src: ['*.css', '!*.min.css'],
-				dest: 'sources/assets/styles/'
+				dest: 'build/assets/styles/'
 			}
 		},
 
@@ -107,7 +107,7 @@ module.exports = function(grunt) {
 
 		// files
 		clean: {
-			clear: {
+			build: {
 				files: [{
 					src: ['build/**']
 				}]
@@ -151,7 +151,7 @@ module.exports = function(grunt) {
 				files: [{
 					expand: true,
 					cwd: 'build/',
-					src: ['**/**'],
+					src: ['**', '**/**'],
 					dest: '../popfunding-dev/'
 				}]
 			}
@@ -224,9 +224,10 @@ module.exports = function(grunt) {
 	// grunt.loadTasks('tasks');
 
 	grunt.registerTask('sass-build', ['sprite', 'sass', 'autoprefixer']);
-	grunt.registerTask('sass-release', ['sprite', 'sass', 'autoprefixer', 'csscomb']);
+	grunt.registerTask('sass-release', ['sprite', 'sass', 'autoprefixer']);
 	grunt.registerTask('scripts-build', ['newer:jshint']);
 	grunt.registerTask('html-build', ['includes']);
 	grunt.registerTask('build', ['clean', 'sass-build', 'scripts-build', 'html-build', 'copy:assets', 'connect', 'watch']);
-	grunt.registerTask('release', ['clean', 'sass-release', 'scripts-build', 'html-build', 'copy:release', 'charset']);
+	grunt.registerTask('release', ['clean', 'sass-release', 'scripts-build', 'html-build', 'copy:assets', 'csscomb', 'copy:release', 'charset']);
+
 };

@@ -1908,6 +1908,59 @@ em.convert.price span {
             background-position: -443px -241px;
             width: 31px;
             height: 32px; }
+  .product-detail-view.repayment {
+    padding: 90px 69px 95px 69px; }
+    .product-detail-view.repayment .tb-repayment {
+      width: 100%;
+      margin-top: 30px;
+      border-right: 1px solid #d4e8f2;
+      border-left: 1px solid #d4e8f2; }
+      .product-detail-view.repayment .tb-repayment thead tr {
+        background-color: #2e91d8; }
+        .product-detail-view.repayment .tb-repayment thead tr th {
+          padding: 15px 0 14px 0;
+          min-width: 90px;
+          font-size: 0.875em;
+          font-weight: normal;
+          color: #fff;
+          text-align: center;
+          line-height: 18px;
+          border-left: 1px solid #2982c2; }
+          .product-detail-view.repayment .tb-repayment thead tr th:first-child {
+            border-left: 0px; }
+      .product-detail-view.repayment .tb-repayment tfoot tr {
+        background-color: #f3f8fd; }
+        .product-detail-view.repayment .tb-repayment tfoot tr td {
+          padding: 15px 0 14px 0;
+          font-size: 0.875em;
+          color: #868ea2;
+          text-align: center;
+          line-height: 18px;
+          border-bottom: 1px solid #d4e8f2; }
+          .product-detail-view.repayment .tb-repayment tfoot tr td.em {
+            color: #2266b9; }
+      .product-detail-view.repayment .tb-repayment tbody tr td {
+        padding: 15px 0 14px 0;
+        font-size: 0.875em;
+        color: #868ea2;
+        text-align: center;
+        line-height: 18px;
+        border-bottom: 1px solid #d4e8f2; }
+        .product-detail-view.repayment .tb-repayment tbody tr td.em {
+          color: #2266b9; }
+        .product-detail-view.repayment .tb-repayment tbody tr td > .idx {
+          font-family: "Montserrat", sans-serif;
+          font-size: 32px;
+          color: #ced1d9;
+          vertical-align: middle; }
+          .product-detail-view.repayment .tb-repayment tbody tr td > .idx.top {
+            color: #1d7dcf; }
+      .product-detail-view.repayment .tb-repayment + .tb-bottom-caption {
+        margin-top: 17px;
+        font-size: 0.875em;
+        color: #868ea2;
+        text-align: right;
+        line-height: 22px; }
 
 .product-btns {
   position: relative;

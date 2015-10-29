@@ -374,6 +374,38 @@ $border-inner-color: #e6e9ee;
 		}
 	}
 
+
+	/// 상환내역
+	&.repayment { padding: 90px 69px 95px 69px;
+		.tb-repayment { width: 100%; margin-top: 30px; border-right: 1px solid #d4e8f2; border-left: 1px solid #d4e8f2;
+			thead {
+				tr { background-color: #2e91d8;
+					th { padding: 15px 0 14px 0; min-width: 90px; font-size: 0.875em; font-weight: normal; color: #fff; text-align: center; line-height: 18px; border-left: 1px solid #2982c2;
+						&:first-child { border-left: 0px; }
+					}
+				}
+			}
+			tfoot {
+				tr { background-color: #f3f8fd;
+					td { padding: 15px 0 14px 0; font-size: 0.875em; color: #868ea2; text-align: center; line-height: 18px; border-bottom: 1px solid #d4e8f2;
+						&.em { color: #2266b9; }
+					}
+				}
+			}
+			tbody {
+				tr {
+					td { padding: 15px 0 14px 0; font-size: 0.875em; color: #868ea2; text-align: center; line-height: 18px; border-bottom: 1px solid #d4e8f2;
+						&.em { color: #2266b9; }
+						> .idx { font-family: $font-number-stack; font-size: 32px; color: #ced1d9; vertical-align: middle;
+							&.top { color: #1d7dcf; }
+						}
+					}
+				}
+			}
+			+ .tb-bottom-caption { margin-top: 17px; font-size: 0.875em; color: #868ea2; text-align: right; line-height: 22px; }
+		}
+	}
+
 }
 
 

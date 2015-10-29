@@ -1,0 +1,148 @@
+include "head.html"
+
+	<!-- 상단 영역 -->
+	include "header.html"
+
+
+	<!-- 본문 영역 -->
+	<article class="contents invest">
+		<h1>투자하기</h1>
+
+		<div class="inner">
+		
+
+			<!-- 필터 및 소개  -->
+			<div class="filter-container">
+				<fieldset class="filter">
+					<legend>투자종류선택</legend>
+
+					<input type="radio" id="invest01" name="invest-type"><label for="invest01">개인투자</label>
+					<input type="radio" id="invest02" name="invest-type" checked="checked" class="selected"><label for="invest02">기업투자</label>
+					<input type="radio" id="invest03" name="invest-type"><label for="invest03">채권마켓</label>
+				</fieldset>
+				
+				<div class="utils-guide">
+					<a href="#" class="btn-tip">꿀팁</a>
+					<a href="#" class="btn-rd">기업투자 소개</a>
+				</div>
+			</div>
+
+
+			<!-- 상품 정보 -->
+include "product_detail.html"
+
+			<div class="product-tab">
+				<table>
+					<caption>상품 상세 메뉴</caption>
+					<tbody>
+						<tr>
+							<td><a href="#">상세보기</a></td>
+							<td><a href="#" class="selected">Q &amp; A</a></td>
+							<td><a href="#">상환내역</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+
+
+			<!-- 상세보기 -->
+			<section class="product-detail-view">
+				<h1>Q&amp;A</h1>
+
+				<fieldset class="product-qna">
+					<legend>Question</legend>
+
+					<p>
+						Q&amp;A중에 회원 본인의 개인정보를 공개하거나 타 회원에게 공개할 것을 강요하는 경우,<br>
+						게시물을 삭제하고 회원자격을 영구히 박탈할 수 있습니다.<br>
+						<span>Q&amp;A란에 등록된 글은 <strong>수정 또는 삭제가 불가능합니다.</strong></span><br>
+					</p>
+
+					<div class="write-question">
+						<p>
+							<label for="" class="user">홍대장 <time datetime="">2015.6.23</time></label>
+							<input type="text" id="" name="" placeholder="질문의 제목을 입력하세요.">
+						</p>
+
+						<textarea name="" id="" cols="100" rows="20" placeholder="질문 내용을 입력하세요."></textarea>
+					</div>
+
+					<input type="submit" class="btn-question" value="질문 등록하기">
+				</fieldset>
+
+
+				<div class="qna-contents">
+					<h2>Q&amp;A 보기</h2>
+					<ul class="list-qna">
+						<li>
+							<div class="question">
+								<p class="title">
+									<span class="user">홍대장 <time datetime="">2015.6.23</time></span>
+									안녕하세요. 질문요~
+								</p>
+								<p>
+									안녕하세요. 팝펀딩 운영실입니다.<br>
+									이번 팝펀딩 동산담보 4호 펀드에 많은 관심을 보여주셔서 감사합니다. 이번 팝펀딩 동산담보 4호 펀드에 많은 관심을 보여 펀드 개설시 대출 희망 사업자와 금일까지 마감을 하기로 하고 진행을 하였지만, 목표했던 금액이 성사되지<br>
+								</p>
+							</div>
+							<div class="answer">
+								<p class="title">
+									<span class="user">팝펀딩 운영실 <time datetime="">2015.6.23</time></span>
+									홍대장님 질문에 답변드립니다.
+								</p>
+								<p>
+									안녕하세요. 팝펀딩 운영실입니다.<br>
+									이번 팝펀딩 동산담보 4호 펀드에 많은 관심을 보여주셔서 감사합니다.<br>
+									펀드 개설시 대출 희망 사업자와 금일까지 마감을 하기로 하고 진행을 하였지만, 목표했던 금액이 성사되지 펀딩 기간을 1주일간 연기하기로 대출 희망 사업자와 합의를 하였습니다.<br>
+								</p>
+							</div>
+						</li>
+						<li>
+							<div class="question">
+								<p class="title">
+									<span class="user">홍대장 <time datetime="">2015.6.23</time></span>
+									대출의뢰업체는 어떤 회사인가요?
+								</p>
+								<p>
+									"AGATHA paris의 국내 라이센스권자"라고 공지하셨는데요, 국내 라이선스 마스터권을 갖고 있는 "스타럭스"인가요? 서브라이선스를 가지고있는 "일에스티컴퍼니" 인가요? 어떤 이유에서 대출을 의뢰한 것인지도 알수 있으면 좋겠습니다. 정식 라이선스를 가지는 브랜드 의류를 담보로 처분할 경우에 어떤 형태로 시장에서 유통가능한지 궁금합니다. 담보물건 매입의 주체가 누가 되고, 어떤 경로로 유통 시키는지 알고 싶습니다. 브랜드의류가 담보 물건으로써 시장에서 손쉽게 유통될수 있는지 여부를 확인코자 문의드리오니 가능한 답변 부탁드립니다.
+								</p>
+							</div>
+							<div class="answer">
+								<p class="title">
+									<span class="user">팝펀딩 운영실 <time datetime="">2015.6.23</time></span>
+									고양이2 회원님의 질문에 대한 답변입니다.
+								</p>
+								<p>
+									안녕하세요. 팝펀딩 운영실입니다.<br>
+									<br>
+									우선 팝펀딩은, 대출자의 정확한 정보를 전부 미리 공개하지 않습니다. 이 점 양해 바랍니다.<br>
+									대출을 진행하는 것 자체가 상환 결과와 관계없이 업계에서 오해를 불러 대출 희망자에게 불이익을 줄 우려가 있기 때문입니다.<br>
+									대출을 의뢰하게 된 이유는 봄/여름 상품을 담보로, 가을/겨울 상품의 생산 자금중 미처 조달되지 못한 일부 부족분을 보충하기 위함입니다.<br>
+									<br>
+									팝펀딩이 라이센스 계약서를 확인한 결과, 만약 대출이 부실화 되어 우선 매입 대상업체가 매입의 권리를 가지게 된다면,<br>
+									일반적으로 알고 계시는 소셜커머스 업체를 제외하고는 다른 모든 경로로 판매가 가능하도록 되어 있습니다.<br>
+									브랜드를 가지고 있는 업체 입장에서는 브랜드 가치 하락을 막기 위해서라도 부실이 발생하도록 방치할 상황은 아닐 것 같습니다.<br>
+									<br>
+									충분한 답변이 되었기를 바랍니다. <br>
+									감사합니다.<br>
+								</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			
+include "product_bottom_btns.html"
+
+		</div>
+	</article>
+	<script src="/assets/scripts/libs/slick.min.js"></script>
+	
+
+	<!-- 하단 영역 -->
+	include "footer.html"
+
+</body>
+</html>

@@ -323,6 +323,57 @@ $border-inner-color: #e6e9ee;
 		}
 	}
 
+
+	/// qna
+	.product-qna { padding: 98px 69px 73px 69px; font-family: $font-stack; border-bottom: 1px solid #e6e9ee;
+		> p { position: relative; padding: 0 0 0 177px; font-size: 0.875em; color: #868ea2; line-height: 22px;
+			&:before { content: ''; position: absolute; top: 0; left: 0; @include sprite($sprite-qna-title); }
+			> span { line-height: 30px;
+				strong { font-weight: normal; color: #ff6000; }
+			}
+		}
+		> .write-question { position: relative; margin-top: 60px; padding: 7px 24px 20px 62px; background-color: #f8f9fb;
+			&:before { content: ''; position: absolute; top: 12px; left: 14px; @include sprite($sprite-bg-question01); }
+			> p { overflow: hidden; margin-right: 38px; line-height: 38px; border-bottom: 2px solid #99d7fe;
+				.user { float: right; font-size: 0.875em; color: #868ea2;
+					> time:before { content: '|'; display: inline-block; margin-right: 8px; margin-left: 6px; color: #d8e3ef; }
+				}
+				input[type=text] { display: block; height: 38px; width: 80%; font-size: 1.000em; color: #142c66; line-height: 38px; border: 0px; background-color: transparent; }
+			}
+			textarea { overflow: auto; margin-top: 13px; height: 80px; width: 100%; font-size: 0.875em; color: #868ea2; line-height: 22px; border: 0px; background-color: transparent; }
+		}
+		> .btn-question { display: block; margin: 20px auto 0 auto; padding-top: 1px; height: 36px; min-width: 154px; font-size: 0.875em; color: #fff; text-align: center; line-height: 36px; border-radius: 37px; background-color: #2e96d6;
+			&:hover { text-decoration: none; background-color: #2389cf; }
+		}
+	}
+
+
+	/// qna list
+	.qna-contents { padding: 50px 131px 43px 69px; font-family: $font-stack; 
+		.list-qna { margin-top: 50px;
+			> li { padding-bottom: 53px;
+				.title { font-size: 1.143em; color: #142c66; line-height: 40px; border-bottom: 2px solid #b7e3ff;
+					.user { float: right; font-size: 0.875em; color: #868ea2;
+						> time:before { content: '|'; display: inline-block; margin-right: 8px; margin-left: 6px; color: #d8e3ef; }
+					}
+				}
+
+				> div { position: relative; margin-top: 16px; padding: 0 0 0 60px; font-size: 0.875em; color: #868ea2; line-height: 22px;
+					&:before { content: ''; position: absolute; top: 8px; left: 12px; }
+					> p { margin-top: 5px; color: #868ea2; }
+				}
+
+				.question { 
+					&:before { @include sprite($sprite-bg-question01); }
+				}
+				.answer { color: #142c66;
+					.title { border-bottom: 2px solid #ffd3de; }
+					&:before { top: 10px; @include sprite($sprite-bg-answer01); }
+				}
+			}
+		}
+	}
+
 }
 
 

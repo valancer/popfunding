@@ -13,6 +13,9 @@
 
 
 
+
+
+
 $(document).ready(function (e) {
 	Header.init();
 	Main.init();
@@ -154,6 +157,7 @@ var Product = (function ($) {
 	var scope,
 		_containerWidth = 0,
 		$products,
+		$pawnSlider,
 		_isDetail = false,
 		init = function () {
 			$products = $('.product');
@@ -162,6 +166,8 @@ var Product = (function ($) {
 
 			_isDetail = $products.hasClass('detail');
 			$numbers = $('.convert.price');
+
+			$pawnSlider = $('.pawn-photos .slider');
 			
 	 		initLayout();
 			initEvent();
@@ -185,6 +191,18 @@ var Product = (function ($) {
 				$(this).show().css('left', left).addClass('animated fadeIn');
 			}
 		});
+
+		if( $pawnSlider.length > 0 ) {
+			$pawnSlider.slick({
+				infinite: true,
+				autoplay: true,
+				speed: 300,
+				dots: true,
+				arrows: false,
+				slidesToShow: 1,
+				slidesToScroll: 1
+			});
+		}
 	}
 
 	function convertNumberToImage($element) {

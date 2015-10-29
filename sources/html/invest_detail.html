@@ -29,58 +29,7 @@ include "head.html"
 
 
 			<!-- 상품 정보 -->
-			<section class="product detail">
-				<div class="options">
-					<em class="invest-type01">[담보형 기업투자]</em>
-					<em class="new">[새로운 투자상품]</em>
-					<em class="user-in">[회원님께서 참여하신 상품입니다.]</em>
-					<em class="status01">[상환중]</em>
-					<em class="imminent-deadline">78%<span>마감임박</span></em>
-					<p class="share">
-						<a href="#" class="btn-fb" title="페이스북">페이스북</a>
-						<a href="#" class="btn-tw" title="트위터">트위터</a>
-						<a href="#" class="btn-ks" title="카카오스토리">카카오스토리</a>
-					</p>
-				</div>
-				<figure>
-					<div class="thumb"><img src="/assets/images/temp/product_list01.jpg" alt="폴로 랄프로렌 신발 대표 이미지"></div>
-					<figcaption class="info">
-						<div class="sub-info">
-							<strong class="title">[담보] 폴로 랄프로렌 신발</strong><br>
-							<time datetime="2016-01-01 00:00">2일 23시간 59분 남음</time>
-							<p class="desc">
-								담보물은 세계적인 스포츠 브랜드 PUMA의 의류와 용품으로 국내 오피셜 라이센스 제품으로 우수합니다.
-							</p>
-						</div>
-						<div class="status-info">
-							<div class="p-i">
-								<p class="price">
-									<span>신청금액</span>
-									<em class="convert price">320,000,000원</em>
-								</p>
-								<p class="interest">
-									<span>연이자</span>
-									<em class="convert price">11%</em>
-								</p>
-							</div>
-							<p class="progress">
-								<span class="value animated fadeInLeft" style="width: 65%;"></span>
-								<em>65%</em>진행 (10명) - 현재 45,000,000원
-							</p>
-						</div>
-					</figcaption>
-				</figure>
-				<p class="hover animated fadeIn">
-					<button class="selected">관심설정</button>
-					<span>투자 상세보기</span>
-				</p>
-
-
-				<div class="invest-product">
-					<a href="#" class="btn-invest">투자하기</a>
-					<a href="#" class="btn-calc">수익금 계산기</a>
-				</div>
-			</section>
+include "product_detail.html"
 
 
 			<div class="product-tab">
@@ -266,26 +215,10 @@ include "head.html"
 						</div>
 					</div>
 				</div>
-				<script>
-				$(window.document).ready(function(){
-					$('.slider').slick({
-						infinite: true,
-						autoplay: true,
-						speed: 300,
-						dots: true,
-						arrows: false,
-						slidesToShow: 1,
-						slidesToScroll: 1
-					});
-				});
-				</script>
 			</section>
 
 			
-			<p class="product-btns">
-				<a href="#" class="btn-rd">기업투자 전체보기</a>
-				<a href="#top" class="btn-top">맨 위로</a>
-			</p>
+include "product_bottom_btns.html"
 
 		</div>
 	</article>

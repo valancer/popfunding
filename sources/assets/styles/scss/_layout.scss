@@ -141,7 +141,7 @@
 	$color: #868ea2;
 	$line-height: 20px;
 
-	padding: 48px 0 79px 0; border-top: 1px solid #e4e4e4; background-color: #fff;
+	padding: 48px 0 79px 0; min-width: $contents-container-width; border-top: 1px solid #e4e4e4; background-color: #fff;
 	.inner { @include inner-container(); }
 	.shortcut { text-align: center;
 		> a { margin: 0 11px;

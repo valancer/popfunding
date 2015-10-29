@@ -115,39 +115,37 @@ module.exports = function(grunt) {
 		},
 
 		copy: {
-			build: {
-				assets: {
-					files: [{
-						expand: true,
-						cwd: 'sources/assets',
-						src: ['**', '!**/scss/**', '!**/psd/**', '!**/sprites/**'],
-						dest: 'build/assets/'
-					}]
-				},
-				scripts: {
-					files: [{
-						expand: true,
-						cwd: 'sources/assets/scripts/',
-						src: ['*.js'],
-						dest: 'build/assets/scripts/'
-					}]
-				},
-				styles: {
-					files: [{
-						expand: true,
-						cwd: 'sources/assets/styles/',
-						src: ['*.css'],
-						dest: 'build/assets/styles/'
-					}]
-				},
-				images: {
-					files: [{
-						expand: true,
-						cwd: 'sources/assets/images/',
-						src: ['**', '!**/sprites/**'],
-						dest: 'build/assets/images/'
-					}]
-				}
+			assets: {
+				files: [{
+					expand: true,
+					cwd: 'sources/assets',
+					src: ['**', '!**/scss/**', '!**/psd/**', '!**/sprites/**'],
+					dest: 'build/assets/'
+				}]
+			},
+			scripts: {
+				files: [{
+					expand: true,
+					cwd: 'sources/assets/scripts/',
+					src: ['*.js'],
+					dest: 'build/assets/scripts/'
+				}]
+			},
+			styles: {
+				files: [{
+					expand: true,
+					cwd: 'sources/assets/styles/',
+					src: ['*.css'],
+					dest: 'build/assets/styles/'
+				}]
+			},
+			images: {
+				files: [{
+					expand: true,
+					cwd: 'sources/assets/images/',
+					src: ['**', '!**/sprites/**'],
+					dest: 'build/assets/images/'
+				}]
 			},
 			release: {
 				files: [{
@@ -172,7 +170,7 @@ module.exports = function(grunt) {
 
 			sass: {
 				files: ['sources/assets/styles/scss/**/*.scss'],
-				tasks: ['newer:sass', 'autoprefixer', 'copy:build:styles'],
+				tasks: ['sass', 'newer:autoprefixer', 'newer:copy:styles'],
 				options: {
 					livereload: true
 				}
@@ -180,7 +178,7 @@ module.exports = function(grunt) {
 
 			styles: {
 				files: ['sources/assets/styles/*.css'],
-				tasks: ['copy:build:styles'],
+				tasks: ['newer:copy:styles'],
 				options: {
 					livereload: true
 				}
@@ -188,7 +186,7 @@ module.exports = function(grunt) {
 
 			scripts: {
 				files: ['<%= jshint.files %>'],
-				tasks: ['newer:jshint', 'copy:build:scripts'],
+				tasks: ['newer:jshint', 'newer:copy:scripts'],
 				options: {
 					livereload: true
 				}
@@ -196,7 +194,7 @@ module.exports = function(grunt) {
 
  			images: {
  				files: ['sources/assets/images/**'],
- 				tasks: ['sprite', 'copy:build:images'],
+ 				tasks: ['sprite', 'copy:images'],
  				options: {
  					livereload: true
  				}
@@ -229,6 +227,6 @@ module.exports = function(grunt) {
 	grunt.registerTask('sass-release', ['sprite', 'sass', 'autoprefixer', 'csscomb']);
 	grunt.registerTask('scripts-build', ['newer:jshint']);
 	grunt.registerTask('html-build', ['includes']);
-	grunt.registerTask('build', ['clean', 'sass-build', 'scripts-build', 'html-build', 'copy:build', 'connect', 'watch']);
+	grunt.registerTask('build', ['clean', 'sass-build', 'scripts-build', 'html-build', 'copy:assets', 'connect', 'watch']);
 	grunt.registerTask('release', ['clean', 'sass-release', 'scripts-build', 'html-build', 'copy:release', 'charset']);
 };

@@ -4,31 +4,6 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 
-		// bower
-		bowercopy: {
-			options: {
-				clean: true
-			},
-			libs: {
-	            options: {
-	                destPrefix: 'sources/assets/scripts/libs/'
-	            },
-				files: {
-					'jquery-1.11.1.min.js': 'jquery-1.11.1/dist/jquery.min.js'
-				}
-			}
-/*
-			,
-			styles: {
-				options: {
-					destPrefix: 'sources/assets/styles/libs/'
-				},
-				files: {
-				}
-			}
-*/
-		},
-
 		// charset
 		charset: {
 			dist: {
@@ -100,13 +75,24 @@ module.exports = function(grunt) {
 		},
 		autoprefixer: {
 			options: {
-				browsers: ['last 2 versions', 'ie 8', 'ie 9', '> 1%']
+				browsers: ['last 2 versions', 'ie 8', 'ie 9']
 			},
 			build: {
 				expand: true,
 				flatten: true,
 				dest: 'sources/assets/styles/',
 				src: ['sources/assets/styles/*.css', '!sources/assets/styles/*.min.css']
+			}
+		},
+		csscomb: {
+			options: {
+				config: 'config/csscomb.json'
+			},
+			dist: {
+				expand: true,
+				cwd: 'sources/assets/styles/',
+				src: ['*.css', '!*.min.css'],
+				dest: 'sources/assets/styles/'
 			}
 		},
 
@@ -129,46 +115,40 @@ module.exports = function(grunt) {
 		},
 
 		copy: {
-			assets: {
-				files: [{
-					expand: true,
-					cwd: 'sources/assets',
-					src: ['**', '!**/scss/**', '!**/psd/**', '!**/sprites/**'],
-					dest: 'build/assets/'
-				}]
+			build: {
+				assets: {
+					files: [{
+						expand: true,
+						cwd: 'sources/assets',
+						src: ['**', '!**/scss/**', '!**/psd/**', '!**/sprites/**'],
+						dest: 'build/assets/'
+					}]
+				},
+				scripts: {
+					files: [{
+						expand: true,
+						cwd: 'sources/assets/scripts/',
+						src: ['*.js'],
+						dest: 'build/assets/scripts/'
+					}]
+				},
+				styles: {
+					files: [{
+						expand: true,
+						cwd: 'sources/assets/styles/',
+						src: ['*.css'],
+						dest: 'build/assets/styles/'
+					}]
+				},
+				images: {
+					files: [{
+						expand: true,
+						cwd: 'sources/assets/images/',
+						src: ['**', '!**/sprites/**'],
+						dest: 'build/assets/images/'
+					}]
+				}
 			},
-			scripts: {
-				files: [{
-					expand: true,
-					cwd: 'sources/assets/scripts/',
-					src: ['*.js'],
-					dest: 'build/assets/scripts/'
-				}]
-			},
-			styles: {
-				files: [{
-					expand: true,
-					cwd: 'sources/assets/styles/',
-					src: ['*.css'],
-					dest: 'build/assets/styles/'
-				}]
-			},
-			images: {
-				files: [{
-					expand: true,
-					cwd: 'sources/assets/images/',
-					src: ['**', '!**/sprites/**'],
-					dest: 'build/assets/images/'
-				}]
-			},
-			// html: {
-			// 	files: [{
-			// 		expand: true,
-			// 		cwd: 'sources/html',
-			// 		src: ['**', '!**/include/**'],
-			// 		desc: 'build/'
-			// 	}]
-			// }
 			release: {
 				files: [{
 					expand: true,
@@ -192,7 +172,7 @@ module.exports = function(grunt) {
 
 			sass: {
 				files: ['sources/assets/styles/scss/**/*.scss'],
-				tasks: ['sass', 'autoprefixer', 'copy:styles'],
+				tasks: ['newer:sass', 'autoprefixer', 'copy:build:styles'],
 				options: {
 					livereload: true
 				}
@@ -200,7 +180,7 @@ module.exports = function(grunt) {
 
 			styles: {
 				files: ['sources/assets/styles/*.css'],
-				tasks: ['copy:styles'],
+				tasks: ['copy:build:styles'],
 				options: {
 					livereload: true
 				}
@@ -208,7 +188,7 @@ module.exports = function(grunt) {
 
 			scripts: {
 				files: ['<%= jshint.files %>'],
-				tasks: ['newer:jshint', 'copy:scripts'],
+				tasks: ['newer:jshint', 'copy:build:scripts'],
 				options: {
 					livereload: true
 				}
@@ -216,7 +196,7 @@ module.exports = function(grunt) {
 
  			images: {
  				files: ['sources/assets/images/**'],
- 				tasks: ['sprite', 'copy:images'],
+ 				tasks: ['sprite', 'copy:build:images'],
  				options: {
  					livereload: true
  				}
@@ -246,8 +226,9 @@ module.exports = function(grunt) {
 	// grunt.loadTasks('tasks');
 
 	grunt.registerTask('sass-build', ['sprite', 'sass', 'autoprefixer']);
-	grunt.registerTask('scripts-build', ['bowercopy', 'newer:jshint']);
+	grunt.registerTask('sass-release', ['sprite', 'sass', 'autoprefixer', 'csscomb']);
+	grunt.registerTask('scripts-build', ['newer:jshint']);
 	grunt.registerTask('html-build', ['includes']);
-	grunt.registerTask('build', ['clean', 'sass-build', 'scripts-build', 'html-build', 'copy', 'connect', 'watch']);
-	grunt.registerTask('release', ['clean', 'sass-build', 'scripts-build', 'html-build', 'copy', 'charset']);
+	grunt.registerTask('build', ['clean', 'sass-build', 'scripts-build', 'html-build', 'copy:build', 'connect', 'watch']);
+	grunt.registerTask('release', ['clean', 'sass-release', 'scripts-build', 'html-build', 'copy:release', 'charset']);
 };

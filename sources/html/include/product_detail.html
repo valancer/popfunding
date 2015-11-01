@@ -45,8 +45,319 @@
 				</p>
 
 
-				<div class="invest-product">
-					<a href="#" class="btn-invest">투자하기</a>
-					<a href="#" class="btn-calc">수익금 계산기</a>
+				<div class="invest-product">	<!-- expired -->
+					<p class="utils">
+						<a href="#" class="btn calc">수익금 계산기</a>
+						<a href="#" class="btn update">참가금액 수정</a>
+						<a href="#" class="btn cancel">투자취소</a>
+					</p>
+
+					<a href="#" class="btn-invest">투자하기</a> <!-- disabled="disabled" -->
+					<p class="status-invest">
+						이쁜설현님은 현재 2,500,000원을 참가중입니다.
+					</p>
 				</div>
+				<script>
+				$(document).ready(function() {
+					// 메시지 확인용 임시 영역 = 투자 취소 -
+					var $btnCancel = $('.invest-product a.btn.cancel');
+					$btnCancel.on('click', function(e) {
+						e.preventDefault();
+
+						Invest.confirm({
+							title: '투자를 취소하겠습니까?',
+							msg: '투자취소 이후에 펀드가 마감되면 더 이상의 투자는 안됩니다.'
+						}, function(value) {
+							if( value == 'true' ) {
+								Invest.message({
+									title: '투자가 취소되었습니다.',
+									msg: ''
+								});
+							} else if( value == 'false') {
+								Invest.closeMessage();
+							}
+						});
+					});
+				});
+				</script>
+
+
+				<div class="invest-popup-container">
+
+					<!-- 투자하기 팝업 -->
+					<aside id="popup-invest" class="invest-popup invest" style="display: none;">
+						<fieldset class="inner">
+							<legend>투자금액 입력</legend>
+							<button class="btn-popup-close" data-target="#popup-invest">팝업닫기</button>
+
+							<p class="remain">
+								<em class="current">오천만원</em>
+								계좌잔액 <span class="balance">570,000,000</span>원
+							</p>
+
+							<div class="type">
+								<p class="input-price">
+									<label for="price">참가금액</label>
+									<input type="text" id="price" name="price" value="">
+								</p>
+								<p class="type-options">
+									<span class="btns">
+										<button>100만원</button>
+										<button>10만원</button>
+										<button>1만원</button>
+										<button>삭제</button>
+									</span>
+
+									투자단위 1만원
+									<!-- <span class="msg">현재 570,000,000원 참가중</span> -->
+								</p>
+							</div>
+
+							<div class="type">
+								<a href="#" class="btn-invest">투자하기</a>
+								<div class="type-options">
+									<span class="btns">
+										<button>쿠폰 투자하기</button>
+										<p class="message">회원님은 사용할 쿠폰이 없습니다.</p>
+									</span>
+
+									<a href="#" class="btn-shortcut">쿠폰 병합/분활 바로가기</a>
+								</div>
+							</div>
+
+
+							<div class="coupon-container" style="display: none;">
+								<ul class="list-coupon">
+									<li>
+										<a href="#">
+											<figure class="coupon">
+												<div class="thumb">
+													<img src="/assets/images/temp/coupon01.png" alt="">
+												</div>
+												<figcaption class="info">
+													<span class="title">쿠폰 0044896</span>
+													<p>
+														<time datetime="2015.09.01 00:00">2015.9.1</time>
+														~
+														<time datetime="2015.10.01 00:00">2015.10.1</time>
+													</p>
+													<strong class="price">1,000원</strong>
+												</figcaption>
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="coupon">
+												<div class="thumb">
+													<img src="/assets/images/temp/coupon01.png" alt="">
+												</div>
+												<figcaption class="info">
+													<span class="title">쿠폰 0044896</span>
+													<p>
+														<time datetime="2015.09.01 00:00">2015.9.1</time>
+														~
+														<time datetime="2015.10.01 00:00">2015.10.1</time>
+													</p>
+													<strong class="price">1,000원</strong>
+												</figcaption>
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="coupon in-use">
+												<div class="thumb">
+													<span class="badge">사용중인 쿠폰입니다.</span>
+													<img src="/assets/images/temp/coupon01.png" alt="">
+												</div>
+												<figcaption class="info">
+													<span class="title">쿠폰 0044896</span>
+													<p>
+														<time datetime="2015.09.01 00:00">2015.9.1</time>
+														~
+														<time datetime="2015.10.01 00:00">2015.10.1</time>
+													</p>
+													<strong class="price">1,000원</strong>
+												</figcaption>
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="coupon">
+												<div class="thumb">
+													<img src="/assets/images/temp/coupon01.png" alt="">
+												</div>
+												<figcaption class="info">
+													<span class="title">쿠폰 0044896</span>
+													<p>
+														<time datetime="2015.09.01 00:00">2015.9.1</time>
+														~
+														<time datetime="2015.10.01 00:00">2015.10.1</time>
+													</p>
+													<strong class="price">1,000원</strong>
+												</figcaption>
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="coupon">
+												<div class="thumb">
+													<img src="/assets/images/temp/coupon01.png" alt="">
+												</div>
+												<figcaption class="info">
+													<span class="title">쿠폰 0044896</span>
+													<p>
+														<time datetime="2015.09.01 00:00">2015.9.1</time>
+														~
+														<time datetime="2015.10.01 00:00">2015.10.1</time>
+													</p>
+													<strong class="price">1,000원</strong>
+												</figcaption>
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="coupon">
+												<div class="thumb">
+													<img src="/assets/images/temp/coupon01.png" alt="">
+												</div>
+												<figcaption class="info">
+													<span class="title">쿠폰 0044896</span>
+													<p>
+														<time datetime="2015.09.01 00:00">2015.9.1</time>
+														~
+														<time datetime="2015.10.01 00:00">2015.10.1</time>
+													</p>
+													<strong class="price">1,000원</strong>
+												</figcaption>
+											</figure>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</fieldset>
+						<script>
+						$(document).ready(function() {
+							// 메시지 확인용 임시 영역 - 투자하기
+							var $btnInvest = $('#popup-invest a.btn-invest');
+							$btnInvest.on('click', function(e) {
+								e.preventDefault();
+
+								Invest.message({
+									title: '투자가 완료되었습니다.',
+									msg: '회원님의 참가금액은 5,000,000원입니다.'
+								});
+							});
+						});
+						</script>
+					</aside>
+
+
+
+					<!-- 수익금 계산기 팝업 -->
+					<aside id="popup-calc" class="invest-popup calc" style="display: none;">
+						<fieldset class="inner">
+							<legend>수익금 계산 입력</legend>
+							<button class="btn-popup-close" data-target="#popup-calc">팝업닫기</button>
+
+							<p class="remain">
+								<em class="current">오천만원</em>
+								계좌잔액 <span class="balance">570,000,000</span>원
+							</p>
+
+							<div class="type">
+								<p class="input-price">
+									<label for="price-calc">참가금액</label>
+									<input type="text" id="price-calc" name="price-calc" value="">
+								</p>
+								<p class="type-options">
+									<span class="btns">
+										<button>100만원</button>
+										<button>10만원</button>
+										<button>1만원</button>
+										<button>삭제</button>
+									</span>
+
+									투자단위 1만원
+								</p>
+							</div>
+
+							<div class="type">
+								<a href="#" class="btn-invest">수익금 계산하기</a>
+								<div class="type-options">
+									<ul class="list-dot">
+										<li>이 펀드는 6개월만기 일시상환, 연11%로 계산됩니다.</li>
+										<li>수익금에서 세금 27.5%, 서비스 이용료 7.25%가 청구됩니다.</li>
+									</ul>
+								</div>	
+							</div>
+							<script>
+							$(document).ready(function() {
+								// 메시지 확인용 임시 영역 - 수익금 계산하기 버튼
+								var $btnInvestCalc = $('#popup-calc a.btn-invest');
+								$btnInvestCalc.on('click', function(e) {
+									e.preventDefault();
+
+									Invest.openCalcAfter();
+								});
+							});
+							</script>
+						</fieldset>
+					</aside>
+
+					
+					<!-- 수익금 계산 후 -->
+					<aside id="popup-calc-after" class="invest-popup calc-after" style="display: none;">
+						<fieldset class="inner">
+							<legend>수익금 계산 후 입력</legend>
+							<button class="btn-popup-close" data-target="#popup-calc-after">팝업닫기</button>
+
+							<div class="type">
+								<p class="input-price">
+									<label for="price-calc-after">예상 수익금</label>
+									<input type="text" id="price-calc-after" name="price-calc-after" readonly="readonly" value="285,500원">
+								</p>
+								<p class="type-options">
+									<span class="msg">회원님이 2,500,000원을 투자할때, 6개월 후 예상수익입니다.</span>
+								</p>
+							</div>
+
+							<div class="type">
+								<a href="#" class="btn-invest recalc">다시 계산하기</a>
+								<a href="#" class="btn-invest invest">투자하러 가기</a>
+
+								<div class="type-options">
+									<ul class="list-dot">
+										<li>이 펀드는 6개월만기 일시상환, 연11%로 계산됩니다.</li>
+										<li>수익금에서 세금 27.5%, 서비스 이용료 7.25%가 청구됩니다.</li>
+									</ul>
+								</div>	
+							</div>
+							<script>
+							$(document).ready(function() {
+								// 메시지 확인용 임시 영역 - 투자하기
+								var $btnReCalc = $('#popup-calc-after a.btn-invest.recalc');
+								var $btnInvest = $('#popup-calc-after a.btn-invest.invest');
+								$btnReCalc.on('click', function(e) {
+									e.preventDefault();
+									console.log('recalc');
+									Invest.openCalc();
+								});
+
+								$btnInvest.on('click', function(e) {
+									e.preventDefault();
+									console.log('invest');
+									Invest.openInvest();
+								});
+							});
+							</script>
+						</fieldset>
+					</aside>
+				</div>	<!-- class="invest-popup-container" -->
+
+
 			</section>

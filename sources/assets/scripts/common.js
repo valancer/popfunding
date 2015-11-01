@@ -20,6 +20,7 @@ $(document).ready(function (e) {
 	Header.init();
 	Main.init();
 	Product.init();
+	Invest.init();
 });
 
 
@@ -60,7 +61,6 @@ var Header = (function ($) {
 		if( $element.hasClass('invest') ) {
 			$element.addClass(value);
 		} else if( $element.hasClass('loan') ) {
-			console.log(value);
 			var array = value.split('');
 			convert += '<em class="bid' + array[0] + '">' + array[0] + '</em>\n';
 			convert += '<em class="overdue-' + array[1] + '">' + array[1] + '</em>';
@@ -158,10 +158,11 @@ var Product = (function ($) {
 		_containerWidth = 0,
 		$products,
 		$pawnSlider,
+
 		_isDetail = false,
 		init = function () {
 			$products = $('.product');
-			$thumbs = $products.find('.thumb > img');
+			$thumbs = $products.find('> figure .thumb > img');
 			_containerWidth = $products.width();
 
 			_isDetail = $products.hasClass('detail');
@@ -224,6 +225,216 @@ var Product = (function ($) {
 			scope = this;
 
 			init();
+		}
+	};
+}(jQuery));
+
+
+
+
+/********************************************************************************************/
+/****************************************** 투자하기 ******************************************/
+/********************************************************************************************/
+var Invest = (function ($) {
+	var scope,
+		$investPopupContainer,
+		$investBtnsContainer,
+
+		$investPopup,
+		$calcPopup,
+		$calcAfterPopup,
+		_isOpen = false,
+		init = function () {
+			$investPopupContainer = $('.invest-popup-container');
+			$investBtnsContainer = $('.invest-product');
+			
+			$investPopup = $('#popup-invest');
+			$calcPopup = $('#popup-calc');
+			$calcAfterPopup = $('#popup-calc-after');
+			
+	 		initLayout();
+			initEvent();
+
+		};//end init
+
+	function initLayout() {
+	}
+
+	function initEvent() {
+		// 상세에서 - 투자 하기 버튼 영역관련
+		$investBtnsContainer.on('click.Invest', '.btn-invest', function(e) {
+			e.preventDefault();
+
+			var attr = $(this).attr('disabled');
+			if( attr !== undefined && attr == 'disabled' ) return;
+			openInvestPopup();
+		});
+
+		// 참가금액 수정
+		$investBtnsContainer.on('click.Invest', '.utils .update', function(e) {
+			e.preventDefault();
+			openInvestPopup();
+		});
+
+		// 수익금 계산하기
+		$investBtnsContainer.on('click.Invest', '.utils .calc', function(e) {
+			e.preventDefault();
+			openCalcPopup();
+		});
+	}
+
+	function bindPopupBtns($element, isMessage, callback) {
+		var $btnCloase = $element.find('.btn-popup-close');
+		$btnCloase.on('click', function(e) {
+			var target = $(this).data('target');
+			if( isMessage ) {
+				closeMessage($element);
+			} else {
+				closeMainPopup($element);
+			}
+		});
+
+		$btnNormal = $element.find('.btn-normal');
+		$btnNormal.on('click', function(e) {
+			if (typeof callback === "function") {
+				callback($(this).val());
+			} else {
+				closeMessage($element);
+			}
+		});
+	}
+
+
+	function closeAllPopup($this) {
+		if( $investPopup.is(':visible') ) {
+			closeMainPopup($investPopup);
+		}
+
+		if( $calcPopup.is(':visible') )  {
+			closeMainPopup($calcPopup);
+		}
+
+		if( $calcAfterPopup.is(':visible') )  {
+			closeMainPopup($calcAfterPopup);
+		}
+
+		var $message = $('#popup-invest-message');
+		if( $message.is(':visible') ) {
+			closeMessage($message);
+		}
+	}
+
+	function openInvestPopup() {
+		if( _isOpen ) {
+			closeAllPopup($investPopup);
+		}
+
+		$investPopup.show().addClass('animated fadeIn').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+			$(this).removeClass('fadeIn');
+			$investPopup.find('#price').focus();
+			_isOpen = true;
+		});
+		bindPopupBtns($investPopup, false);
+	}
+
+	function openCalcPopup() {
+		if( _isOpen ) {
+			closeAllPopup($calcPopup);
+		}
+
+		$calcPopup.show().addClass('animated fadeIn').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+			$(this).removeClass('fadeIn');
+			$calcPopup.find('#price-calc').focus();
+			_isOpen = true;
+		});
+		bindPopupBtns($calcPopup, false);
+	}
+
+	function openCalcAfterPopup() {
+		if( _isOpen ) {
+			closeAllPopup($calcAfterPopup);
+		}
+
+		$calcAfterPopup.show().addClass('animated fadeIn').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+			$(this).removeClass('fadeIn');
+			$calcAfterPopup.find('#price-calc-after').focus();
+			_isOpen = true;
+		});
+		bindPopupBtns($calcAfterPopup, false);
+	}
+
+
+	function openMessage(options) {
+		closeAllPopup();
+
+		var $message = $('<aside id="popup-invest-message" class="invest-popup message animated fadeIn">' +
+					'<div class="inner">' +
+						'<button class="btn-popup-close" data-target="#popup-invest-message">팝업닫기</button>' +
+
+						'<h1>' + options.title + '</h1>' +
+						'<p>' + options.msg + '</p>' +
+						'<p class="btns"><button class="btn-normal">확인</button></p>' +
+					'</div>' +
+				'</aside>');
+
+		$investPopupContainer.append($message);
+		bindPopupBtns($message, true);
+	}
+
+	function openConfirmMessage(options, callback) {
+		var $message = $('<aside id="popup-invest-message" class="invest-popup message animated fadeIn">' +
+					'<div class="inner">' +
+						'<button class="btn-popup-close" data-target="#popup-invest-message">팝업닫기</button>' +
+
+						'<h1>' + options.title + '</h1>' +
+						'<p>' + options.msg + '</p>' +
+						'<p class="btns">' +
+							'<button class="btn-normal" value="true">예</button>\n' +
+							'<button class="btn-normal" value="false">아니오</button>' +
+						'</p>' +
+					'</div>' +
+				'</aside>');
+		$investPopupContainer.append($message);
+		bindPopupBtns($message, true, callback);
+	}
+
+	function closeMessage($element) {
+		$element.addClass('animated fadeOut').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+			$(this).removeClass('fadeOut').remove();
+			_isOpen = false;
+		});
+	}
+
+	function closeMainPopup($element) {
+		$element.addClass('animated fadeOut').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+			$(this).removeClass('fadeOut').hide();
+			_isOpen = false;
+		});
+	}
+
+	return {
+		init: function () {
+			scope = this;
+
+			init();
+		},
+		message: function(options) {
+			openMessage(options);
+		},
+		confirm: function(options, callback) {
+			openConfirmMessage(options, callback);
+		},
+		openInvest: function() {
+			openInvestPopup();
+		},
+		openCalc: function() {
+			openCalcPopup();
+		},
+		openCalcAfter: function() {
+			openCalcAfterPopup();
+		},
+		closeMessage: function() {
+			closeAllPopup();
 		}
 	};
 }(jQuery));

@@ -136,7 +136,7 @@ em.convert {
 
 
 	///	 상품 상세 보기일 경우
-	&.detail { margin-top: 40px; padding-bottom: 44px;
+	&.detail { margin-top: 40px;
 		$thumb-height: 340px;
 		$sub-info-width: 377px;
 
@@ -205,8 +205,29 @@ em.convert {
 			&:before { content: none; }
 		}
 
-		> .invest-product { display: block; position: relative; margin-top: 45px;
-			.btn-calc { position: absolute; bottom: 0; left: 69%; }
+		> .invest-product { display: block; position: relative; margin-top: 45px; height: 100px;
+			.utils { position: absolute; top: 28px; left: 69%;
+				.btn { display: inline-block; margin-right: 17px; font-size: 0.875em; color: #142c66; vertical-align: middle;
+					&:before { content: ''; display: inline-block; margin-right: 7px; vertical-align: middle; }
+					&.calc {
+						&:before { @include sprite($sprite-icon-calc01); }
+					}
+					&.update { display: none;
+						&:before { @include sprite($sprite-icon-update01); }
+					}
+					&.cancel { display: none;
+						&:before { @include sprite($sprite-icon-cancel01); }
+					}
+				}
+			}
+			.status-invest { display: none; margin-top: 9px; font-size: 0.750em; color: #ff6000; text-align: center; }
+
+			&.expired {
+				.btn.calc { display: none; }
+				.btn.update,
+				.btn.cancel { display: inline-block; }
+				.status-invest { display: block; }
+			}
 		}
 	}
 }

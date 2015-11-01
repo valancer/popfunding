@@ -16,8 +16,13 @@ module.exports = function(grunt) {
 							detect: /<meta\s+charset=["']?.+?["']?\s*\/?>/i,
 							replace: '<meta charset="{{charset}}">'
 						},
-							css: {
+						css: {
 							ext: ['.css'],
+							detect: /^@charset\s+(".+?"|'.+?')/,
+							replace: '@charset "{{charset}}"'
+						},
+						scripts: {
+							ext: ['.js'],
 							detect: /^@charset\s+(".+?"|'.+?')/,
 							replace: '@charset "{{charset}}"'
 						}
@@ -27,7 +32,7 @@ module.exports = function(grunt) {
 					expand: true,
 					cwd: 'build/',
 					dest: '../popfunding-dev/',
-					src: ['**/*.{html,css}']
+					src: ['**/*.{html,css,js}']
 
 				}]
 			},

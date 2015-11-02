@@ -4,10 +4,10 @@
 .filter-container { overflow: hidden;
 	.filter { position: relative; float: left;
 		input[type=radio] { position: absolute; top: -9999px; left: -9999px;
-			&.selected + label { color: #ff4776; }
+			&.selected + label { color: $color-menu1-hover; }
 		}
-		label { font-size: 1.063em; color: #142c66; cursor: pointer; line-height: 37px;
-			&:hover { color: #ff4776; }
+		label { font-size: 1.125em; color: $color-menu1; cursor: pointer; line-height: 37px;
+			&:hover { color: $color-menu1-hover; }
 			+ input[type=radio] + label {
 				&:before { content: '|'; display: inline-block; margin-right: 20px; margin-left: 16px; color: #dee1e7; text-decoration: none; }
 			}
@@ -65,7 +65,7 @@ em.convert {
 	$border-radius: 18px;
 	$thumb-height: 311px;
 
-	display: block; position: relative; overflow: hidden; min-height: $product-height; color: #252525; border: 1px solid #d4dae4; border-radius: $border-radius; background-color: #fff;
+	display: block; position: relative; overflow: hidden; min-height: $product-height; color: $color-title; border: 1px solid #d4dae4; border-radius: $border-radius; background-color: #fff;
 
 	> .options { overflow: hidden; position: absolute; top: 0; right: 0; left: 0; z-index: 1; height: $thumb-height;
 		> em { position: absolute; position: absolute; top: 0; left: 0; text-indent: -9999px; }
@@ -97,14 +97,14 @@ em.convert {
 		> .info { position: relative; padding: 38px 29px 0 29px; border-top: 1px solid #e6e9ee;
 			> .sub-info {
 				.title { font-size: 1.125em; font-weight: normal; line-height: 1em; }
-				time { display: block; margin-top: 8px; font-size: 0.813em; color: #ff6000; }
-				.desc { display: none; font-size: 0.875em; color: #868ea2; line-height: 20px; }
+				time { display: block; margin-top: 8px; font-size: 0.813em; color: $color-point1; }
+				.desc { display: none; font-size: 0.875em; color: $color-content; line-height: 20px; }
 			}
 			> .status-info {
 				.p-i { overflow: hidden;
 					> p { float: left; position: relative; margin-top: 16px; padding-right: 14px; text-align: left;
-						> span { display: block; padding-bottom: 2px; font-size: 0.750em; color: #c2c6d0; }
-						> em { display: block; font-size: 20px; color: #252525; line-height: 1.2em; }
+						> span { display: block; padding-bottom: 2px; font-size: 0.750em; color: $color-desc; }
+						> em { display: block; font-size: 20px; line-height: 1.2em; }
 
 						&.price { }
 						&.interest { padding-left: 14px; position: relative;
@@ -160,7 +160,7 @@ em.convert {
 					.p-i { overflow: hidden;
 						> p { margin-top: 0px; padding-right: 28px;
 							> span { padding-bottom: 15px; font-size: 0.875em; }
-							> em { font-size: 32px; color: #252525; }
+							> em { font-size: 32px; }
 
 							&.price {}
 							&.interest { padding-left: 29px; position: relative;
@@ -207,7 +207,7 @@ em.convert {
 
 		> .invest-product { display: block; position: relative; margin-top: 45px; height: 100px;
 			.utils { position: absolute; top: 28px; left: 69%;
-				.btn { display: inline-block; margin-right: 17px; font-size: 0.875em; color: #142c66; vertical-align: middle;
+				.btn { display: inline-block; margin-right: 17px; font-size: 0.875em; color: $color-menu1; vertical-align: middle;
 					&:before { content: ''; display: inline-block; margin-right: 7px; vertical-align: middle; }
 					&.calc {
 						&:before { @include sprite($sprite-icon-calc01); }
@@ -220,7 +220,7 @@ em.convert {
 					}
 				}
 			}
-			.status-invest { display: none; margin-top: 9px; font-size: 0.750em; color: #ff6000; text-align: center; }
+			.status-invest { display: none; margin-top: 9px; font-size: 0.750em; color: $color-point1; text-align: center; }
 
 			&.expired {
 				.btn.calc { display: none; }
@@ -241,9 +241,17 @@ $border-inner-color: #e6e9ee;
 	table { table-layout: fixed; width: 100%; border-left: 1px solid $border-color;
 		> tbody > tr {
 			td { border-right: 1px solid $border-color;
-				a { display: block; font-size: 0.875em; color: #868ea2; text-align: center; text-decoration: none; line-height: 53px; border-top: 1px solid $border-color; border-bottom: 1px solid $border-color; background-color: #f8f9fb;
-					&:hover { color: #ff4776; }
-					&.selected { color: #142c66; border-bottom: 1px solid #fff; background-color: #fff; }
+				a { display: block; position: relative; font-size: 0.875em; color: $color-content; text-align: center; text-decoration: none; line-height: 53px; border-top: 1px solid $border-color; border-bottom: 1px solid $border-color; background-color: #f8f9fb;
+					&:hover { color: $color-menu1-hover; }
+					&.selected { color: $color-menu1; border-bottom: 1px solid #fff; background-color: #fff; }
+
+					> .new { display: block; position: absolute; top: -21px; left: 50%;
+						.inner { display: block; position: relative; left: -50%; padding: 1px 15px 0 15px; font-size: 12px; color: $color-content; line-height: 28px; border: 1px solid #c3d0e1; border-radius: 5px; background-color: #fff;
+							&:before { content: ''; display: block; position: absolute; bottom: -$sprite-bg-arrow08-height; left: 50%; margin-left: -$sprite-bg-arrow08-width/2; @include sprite($sprite-bg-arrow08); }
+						}
+
+						em { color: $color-point1; }
+					}
 				}
 			}
 		}
@@ -254,10 +262,10 @@ $border-inner-color: #e6e9ee;
 /// 상품 상세 컨테이너
 .product-detail-view { border: 1px solid $border-color; border-top: 0px; background-color: #fff;
 	> h1 { display: none; }
-	h2 { font-size: 1.125em; font-weight: normal; color: #252525;
+	h2 { font-size: 1.125em; font-weight: normal; color: $color-title;
 		.bar { display: inline-block; margin: -2px 9px 0 10px;; height: 17px; width: 1px; vertical-align: middle; background-color: #d7dde5; }
 	}
-	h2 + p { margin-top: 16px; font-family: $font-stack; font-size: 0.875em; color: #8a94a3; line-height: 22px; }
+	h2 + p { margin-top: 16px; font-size: 0.875em; color: $color-content; line-height: 22px; }
 	.pd-container { position: relative; padding: 80px 69px 60px 69px; }
 
 
@@ -265,15 +273,15 @@ $border-inner-color: #e6e9ee;
 	.product-feature { table-layout: fixed; width: 100%;
 		> tbody > tr {
 			td { padding: 98px 0 67px 0; text-align: center;
-				> span { display: inline-block; position: relative; height: 62px; font-size: 0.875em; color: #14378c; line-height: 62px;
+				> span { display: inline-block; position: relative; height: 62px; font-size: 0.875em; color: $color-point2; line-height: 62px;
 					&:before { content: ''; display: inline-block; margin-right: 10px; vertical-align: middle; }
 					&.feature01:before { @include sprite($sprite-icon-feature01); }
 					&.feature02:before { @include sprite($sprite-icon-feature02); }
-					&.feature03:before { content: attr(data-info); font-family: $font-number-stack; font-size: 2.500em; color: #14378c; text-align: center; @include sprite($sprite-icon-feature03); }
+					&.feature03:before { content: attr(data-info); font-family: $font-number-stack; font-size: 2.500em; color: $color-point2; text-align: center; @include sprite($sprite-icon-feature03); }
 					&.feature04 { font-family: $font-number-stack; font-size: 31px;
 						&:before { @include sprite($sprite-icon-feature04); }
 					}
-					&.feature04:after { content: attr(data-info); display: block; position: absolute; top: -24px; left: -31px; font-size: 12px; color: #868ea2; text-align: center; line-height: 27px; @include sprite($sprite-bg-tooltip01); }
+					&.feature04:after { content: attr(data-info); display: block; position: absolute; top: -24px; left: -31px; font-size: 12px; color: $color-content; text-align: center; line-height: 27px; @include sprite($sprite-bg-tooltip01); }
 				}
 			}
 		}
@@ -287,13 +295,12 @@ $border-inner-color: #e6e9ee;
 
 	/// funding manager
 	.manager { overflow: hidden; padding: 80px 69px 60px 140px; border-top: 1px solid $border-inner-color;
-		&:before { content: ''; display: block; position: absolute; top: 80px; left: 0; @include sprite($sprite-badge-manager01); }
 		> figure { float: left; padding-right: 109px;
-			figcaption { display: block; margin-top: 10px; font-size: 0.750em; color: #8a94a3; text-align: right; }
+			figcaption { display: block; margin-top: 10px; font-size: 0.750em; color: $color-content; text-align: right; }
 		}
 		> hgroup { display: block; padding-top: 40px;
-			> h1 { font-size: 1.125em; font-weight: normal; color: #252525; }
-			> h2 { margin-top: 30px; font-family: $font-stack; font-size: 1.000em; font-weight: normal; color: #2266b9; line-height: 24px; }
+			> h1 { font-size: 1.125em; font-weight: normal; color: $color-title; }
+			> h2 { margin-top: 30px; font-size: 1.000em; font-weight: normal; color: $color-point3; line-height: 24px; }
 			> p { margin-top: 20px; font-size: 0.875em; line-height: 22px; }
 		}
 	}
@@ -320,7 +327,7 @@ $border-inner-color: #e6e9ee;
 			> li { float: left; padding: 0 21px 31px 0;
 				figure {
 					> img { display: block; margin: 0 auto; max-height: 100%; max-width: 234px; }
-					figcaption { padding-top: 24px; font-size: 0.875em; color: #868ea2; line-height: 22px; text-align: center; }
+					figcaption { padding-top: 24px; font-size: 0.875em; color: $color-content; line-height: 22px; text-align: center; }
 				}
 			}
 		}
@@ -331,7 +338,7 @@ $border-inner-color: #e6e9ee;
 	.pawn-photos { border-top: 1px solid $border-inner-color;
 		> .inner { margin: 0 auto; width: 585px;
 			h2 { float: left; }
-			time { float: right; font-size: 0.750em; color: #868ea2; }
+			time { float: right; font-size: 0.750em; color: $color-content; }
 			.slider { clear: both; padding-top: 30px;
 				.slick-dots { margin-top: 16px; text-align: center;
 					> li { display: inline-block; padding: 0 2px;
@@ -346,22 +353,22 @@ $border-inner-color: #e6e9ee;
 
 
 	/// qna
-	.product-qna { padding: 98px 69px 73px 69px; font-family: $font-stack; border-bottom: 1px solid #e6e9ee;
-		> p { position: relative; padding: 0 0 0 177px; font-size: 0.875em; color: #868ea2; line-height: 22px;
+	.product-qna { padding: 98px 69px 73px 69px; border-bottom: 1px solid #e6e9ee;
+		> p { position: relative; padding: 0 0 0 177px; font-size: 0.875em; color: $color-content; line-height: 22px;
 			&:before { content: ''; position: absolute; top: 0; left: 0; @include sprite($sprite-qna-title); }
 			> span { line-height: 30px;
-				strong { font-weight: normal; color: #ff6000; }
+				strong { font-weight: normal; color: $color-point1; }
 			}
 		}
 		> .write-question { position: relative; margin-top: 60px; padding: 7px 24px 20px 62px; background-color: #f8f9fb;
 			&:before { content: ''; position: absolute; top: 12px; left: 14px; @include sprite($sprite-bg-question01); }
 			> p { overflow: hidden; margin-right: 38px; line-height: 38px; border-bottom: 2px solid #99d7fe;
-				.user { float: right; font-size: 0.875em; color: #868ea2;
+				.user { float: right; font-size: 0.875em; color: $color-content;
 					> time:before { content: '|'; display: inline-block; margin-right: 8px; margin-left: 6px; color: #d8e3ef; }
 				}
-				input[type=text] { display: block; height: 38px; width: 80%; font-size: 1.000em; color: #142c66; line-height: 38px; border: 0px; background-color: transparent; }
+				input[type=text] { display: block; height: 38px; width: 80%; font-size: 1.000em; color: $color-menu1; line-height: 38px; border: 0px; background-color: transparent; }
 			}
-			textarea { overflow: auto; margin-top: 13px; height: 80px; width: 100%; font-size: 0.875em; color: #868ea2; line-height: 22px; border: 0px; background-color: transparent; }
+			textarea { overflow: auto; margin-top: 13px; height: 80px; width: 100%; font-size: 0.875em; color: $color-content; line-height: 22px; border: 0px; background-color: transparent; }
 		}
 		> .btn-question { display: block; margin: 20px auto 0 auto; padding-top: 1px; height: 36px; min-width: 154px; font-size: 0.875em; color: #fff; text-align: center; line-height: 36px; border-radius: 37px; background-color: #2e96d6;
 			&:hover { text-decoration: none; background-color: #2389cf; }
@@ -370,24 +377,24 @@ $border-inner-color: #e6e9ee;
 
 
 	/// qna list
-	.qna-contents { padding: 50px 131px 43px 69px; font-family: $font-stack; 
+	.qna-contents { padding: 50px 131px 43px 69px; 
 		.list-qna { margin-top: 50px;
 			> li { padding-bottom: 53px;
-				.title { font-size: 1.143em; color: #142c66; line-height: 40px; border-bottom: 2px solid #b7e3ff;
-					.user { float: right; font-size: 0.875em; color: #868ea2;
+				.title { font-size: 1.143em; color: $color-menu1; line-height: 40px; border-bottom: 2px solid #b7e3ff;
+					.user { float: right; font-size: 0.875em; color: $color-content;
 						> time:before { content: '|'; display: inline-block; margin-right: 8px; margin-left: 6px; color: #d8e3ef; }
 					}
 				}
 
-				> div { position: relative; margin-top: 16px; padding: 0 0 0 60px; font-size: 0.875em; color: #868ea2; line-height: 22px;
+				> div { position: relative; margin-top: 16px; padding: 0 0 0 60px; font-size: 0.875em; color: $color-content; line-height: 22px;
 					&:before { content: ''; position: absolute; top: 8px; left: 12px; }
-					> p { margin-top: 5px; color: #868ea2; }
+					> p { margin-top: 5px; color: $color-content; }
 				}
 
 				.question { 
 					&:before { @include sprite($sprite-bg-question01); }
 				}
-				.answer { color: #142c66;
+				.answer {
 					.title { border-bottom: 2px solid #ffd3de; }
 					&:before { top: 10px; @include sprite($sprite-bg-answer01); }
 				}
@@ -398,7 +405,7 @@ $border-inner-color: #e6e9ee;
 
 	/// 상환내역
 	&.repayment { padding: 90px 69px 95px 69px;
-		.tb-repayment { width: 100%; margin-top: 30px; border-right: 1px solid #d4e8f2; border-left: 1px solid #d4e8f2;
+		.tb-repayment { width: 100%; margin-top: 30px;
 			thead {
 				tr { background-color: #2e91d8;
 					th { padding: 15px 0 14px 0; min-width: 90px; font-size: 0.875em; font-weight: normal; color: #fff; text-align: center; line-height: 18px; border-left: 1px solid #2982c2;
@@ -408,22 +415,22 @@ $border-inner-color: #e6e9ee;
 			}
 			tfoot {
 				tr { background-color: #f3f8fd;
-					td { padding: 15px 0 14px 0; font-size: 0.875em; color: #868ea2; text-align: center; line-height: 18px; border-bottom: 1px solid #d4e8f2;
-						&.em { color: #2266b9; }
+					td { padding: 15px 0 14px 0; font-size: 0.875em; color: $color-content; text-align: center; line-height: 18px; border-bottom: 1px solid #d4e8f2;
+						&.em { color: $color-point3; }
 					}
 				}
 			}
 			tbody {
 				tr {
-					td { padding: 15px 0 14px 0; font-size: 0.875em; color: #868ea2; text-align: center; line-height: 18px; border-bottom: 1px solid #d4e8f2;
-						&.em { color: #2266b9; }
+					td { padding: 15px 0 14px 0; font-size: 0.875em; color: $color-content; text-align: center; line-height: 18px; border-bottom: 1px solid #d4e8f2;
+						&.em { color: $color-point3; }
 						> .idx { font-family: $font-number-stack; font-size: 32px; color: #ced1d9; vertical-align: middle;
 							&.top { color: #1d7dcf; }
 						}
 					}
 				}
 			}
-			+ .tb-bottom-caption { margin-top: 17px; font-size: 0.875em; color: #868ea2; text-align: right; line-height: 22px; }
+			+ .tb-bottom-caption { margin-top: 17px; font-size: 0.875em; color: $color-content; text-align: right; line-height: 22px; }
 		}
 	}
 

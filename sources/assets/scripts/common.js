@@ -156,11 +156,13 @@ var Main = (function ($) {
 var Product = (function ($) {
 	var scope,
 		_containerWidth = 0,
+		$listProducts,
 		$products,
 		$pawnSlider,
 
 		_isDetail = false,
 		init = function () {
+			$listProducts = $('.list-products');
 			$products = $('.product');
 			$thumbs = $products.find('> figure .thumb > img');
 			_containerWidth = $products.width();
@@ -184,6 +186,7 @@ var Product = (function ($) {
 	}
 
 	function initEvent() {
+
 		$thumbs.one('load', function() {
 		}).each(function() {
 			if( this.complete ) {
@@ -206,6 +209,27 @@ var Product = (function ($) {
 		}
 	}
 
+	function addProducts($elements) {
+		$listProducts.append($elements);
+
+		var $_numbers = $elements.find('.convert.price');
+		if( $_numbers.length > 0 ) {
+			$_numbers.each(function () {
+				convertNumberToImage($(this));
+			});
+		}
+
+		var $_thumbs = $elements.find('.product > figure .thumb > img');
+		$_thumbs.one('load', function() {
+		}).each(function() {
+			if( this.complete ) {
+				var width = $(this).width();
+				var left = (-width/2 + _containerWidth/2);
+				$(this).show().css('left', left).addClass('animated fadeIn');
+			}
+		});
+	}
+
 	function convertNumberToImage($element) {
 		var array = $element.text().split('');
 		var convert = '';
@@ -225,6 +249,11 @@ var Product = (function ($) {
 			scope = this;
 
 			init();
+		},
+		addProducts: function ($elements) {
+			scope = this;
+			
+			addProducts($elements);
 		}
 	};
 }(jQuery));

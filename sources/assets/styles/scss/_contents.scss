@@ -22,215 +22,222 @@
 
 
 
+/* 기업 투자 */
+.contents.invest {
 
-/// 상품 목록
-.list-products {
-	position: relative; overflow: hidden; margin-top: 40px; width: 100%;
-
-	> li {
-		display: block; float: left; margin: 0 0 40px 0; width: $product-width;
-		&:nth-child(3n+2) { padding: 0 73px; }
-		&.middle { padding: 0 73px; }
-
-		> a {
-			&:hover { text-decoration: none; }
-		}
-	}
-}
-
-
-
-
-em.convert {
-	&.price {
-		span { display: inline-block; margin-right: 1px; height: 21px; text-indent: -9999px; vertical-align: middle;
-			&.price0 { @include sprite($sprite-price0-s); }
-			&.price1 { @include sprite($sprite-price1-s); }
-			&.price2 { @include sprite($sprite-price2-s); }
-			&.price3 { @include sprite($sprite-price3-s); }
-			&.price4 { @include sprite($sprite-price4-s); }
-			&.price5 { @include sprite($sprite-price5-s); }
-			&.price6 { @include sprite($sprite-price6-s); }
-			&.price7 { @include sprite($sprite-price7-s); }
-			&.price8 { @include sprite($sprite-price8-s); }
-			&.price9 { @include sprite($sprite-price9-s); }
-			&.price-comma { @include sprite($sprite-price-comma-s); }
-		}
-	}
-}
-
-
-/// 상품
-.product {
-	$border-radius: 18px;
-	$thumb-height: 311px;
-
-	display: block; position: relative; overflow: hidden; min-height: $product-height; color: $color-title; border: 1px solid #d4dae4; border-radius: $border-radius; background-color: #fff;
-
-	> .options { overflow: hidden; position: absolute; top: 0; right: 0; left: 0; z-index: 1; height: $thumb-height;
-		> em { position: absolute; position: absolute; top: 0; left: 0; text-indent: -9999px; }
-		> .invest-type01 { border-radius: $border-radius 0px 0px 0px; @include sprite($sprite-badge-invest01); }
-		> .invest-type02 { border-radius: $border-radius 0px 0px 0px; @include sprite($sprite-badge-invest02); }
-		> .new { @include sprite($sprite-badge-new01); }
-		> .user-in { left: auto; right: 17px; @include sprite($sprite-badge-done01); }
-		> .status01 { top: auto; right: 0; bottom: 0; left: auto; @include sprite($sprite-badge-status01); }
-		> .status02 { top: auto; right: 0; bottom: 0; left: auto; @include sprite($sprite-badge-status02); }
-		> .status03 { top: auto; right: 0; bottom: 0; left: auto; @include sprite($sprite-badge-status03); }
-		> .favorite { top: 12px; right: 10px; left: auto; @include sprite($sprite-bg-star01-selected); }
-		> .imminent-deadline { display: block; top: 50%; left: 50%; margin: -45px 0 0 -45px; padding-top: 25px; font-size: 1.750em; color: #fff; line-height: 1em; text-indent: 0; text-align: center;
-			@include sprite($sprite-bg-circle01); height: 64px;
-			> span { display: block; font-size: 12px; }
-		}
-		> .share { display: none; position: absolute; bottom: 16px; left: 39px;
-			a { display: block; float: left; margin-right: 10px; height: 24px; width: 24px; text-indent: -9999px; background-image: url($spritesheet-image);
-				&.btn-fb { @include sprite-position($sprite-icon-fb01); }
-				&.btn-tw { @include sprite-position($sprite-icon-tw01); }
-				&.btn-ks { @include sprite-position($sprite-icon-ks01); }
+	/// 기업 투자 - 숫자 to 이미지
+	em.convert {
+		&.price {
+			span { display: inline-block; margin-right: 1px; height: 21px; text-indent: -9999px; vertical-align: middle;
+				&.price0 { @include sprite($sprite-price0-s); }
+				&.price1 { @include sprite($sprite-price1-s); }
+				&.price2 { @include sprite($sprite-price2-s); }
+				&.price3 { @include sprite($sprite-price3-s); }
+				&.price4 { @include sprite($sprite-price4-s); }
+				&.price5 { @include sprite($sprite-price5-s); }
+				&.price6 { @include sprite($sprite-price6-s); }
+				&.price7 { @include sprite($sprite-price7-s); }
+				&.price8 { @include sprite($sprite-price8-s); }
+				&.price9 { @include sprite($sprite-price9-s); }
+				&.price-comma { @include sprite($sprite-price-comma-s); }
 			}
 		}
 	}
 
-	> figure {
-		> .thumb { display: block; position: relative; z-index: 0; overflow: hidden; height: $thumb-height; width: 100%; border-radius: $border-radius $border-radius 0px 0px;
-			> img { display: none; position: absolute; left: 0; max-height: 100%; }
-		}
-		> .info { position: relative; padding: 38px 29px 0 29px; border-top: 1px solid #e6e9ee;
-			> .sub-info {
-				.title { font-size: 1.125em; font-weight: normal; line-height: 1em; }
-				time { display: block; margin-top: 8px; font-size: 0.813em; color: $color-point1; }
-				.desc { display: none; font-size: 0.875em; color: $color-content; line-height: 20px; }
-			}
-			> .status-info {
-				.p-i { overflow: hidden;
-					> p { float: left; position: relative; margin-top: 16px; padding-right: 14px; text-align: left;
-						> span { display: block; padding-bottom: 2px; font-size: 0.750em; color: $color-desc; }
-						> em { display: block; font-size: 20px; line-height: 1.2em; }
+	/// 기업 투자 상품 목록
+	.list-products {
+		position: relative; overflow: hidden; margin-top: 40px; width: 100%;
 
-						&.price { }
-						&.interest { padding-left: 14px; position: relative;
-							> span { padding-left: 2px; }
-							> em:before { content: ''; display: block; position: absolute; bottom: 0; left: 0px; height: 20px; width: 1px; background-color: #d5dae1; }
-						}
-					}
-				}
-				
-				.progress { display: block; position: relative; overflow: hidden; margin-top: 22px; padding: 15px 0 0 0; font-size: 0.875em;
-					&:before { content: ''; display: block; position: absolute; top: 0; right: 0; left: 0; height: 5px; width: 100%; background-color: #d5d9e1; }
-					> .value { display: block; position: absolute; top: 0; left: 0; height: 5px; width: 0%; background-color: #00bb00; }
+		> li {
+			display: block; float: left; margin: 0 0 40px 0; width: $product-width;
+			&:nth-child(3n+2),
+			&.middle { padding: 0 73px; }
+
+			> a {
+				&:hover { text-decoration: none; }
+			}
+		}
+	}
+
+
+	/// 기업 투자 - 상품
+	.product {
+		$border-radius: 18px;
+		$thumb-height: 311px;
+
+		display: block; position: relative; overflow: hidden; min-height: $product-height; color: $color-title; border: 1px solid #d4dae4; border-radius: $border-radius; background-color: #fff;
+
+		> .options { overflow: hidden; position: absolute; top: 0; right: 0; left: 0; z-index: 1; height: $thumb-height;
+			> em { position: absolute; position: absolute; top: 0; left: 0; text-indent: -9999px; }
+			> .invest-type01 { border-radius: $border-radius 0px 0px 0px; @include sprite($sprite-badge-invest01); }
+			> .invest-type02 { border-radius: $border-radius 0px 0px 0px; @include sprite($sprite-badge-invest02); }
+			> .new { @include sprite($sprite-badge-new01); }
+			> .user-in { left: auto; right: 17px; @include sprite($sprite-badge-done01); }
+			> .status01 { top: auto; right: 0; bottom: 0; left: auto; @include sprite($sprite-badge-status01); }
+			> .status02 { top: auto; right: 0; bottom: 0; left: auto; @include sprite($sprite-badge-status02); }
+			> .status03 { top: auto; right: 0; bottom: 0; left: auto; @include sprite($sprite-badge-status03); }
+			> .favorite { top: 12px; right: 10px; left: auto; @include sprite($sprite-bg-star01-selected); }
+			> .imminent-deadline { display: block; top: 50%; left: 50%; margin: -45px 0 0 -45px; padding-top: 25px; font-size: 1.750em; color: #fff; line-height: 1em; text-indent: 0; text-align: center;
+				@include sprite($sprite-bg-circle01); height: 64px;
+				> span { display: block; font-size: 12px; }
+			}
+			> .share { display: none; position: absolute; bottom: 16px; left: 39px;
+				a { display: block; float: left; margin-right: 10px; height: 24px; width: 24px; text-indent: -9999px; background-image: url($spritesheet-image);
+					&.btn-fb { @include sprite-position($sprite-icon-fb01); }
+					&.btn-tw { @include sprite-position($sprite-icon-tw01); }
+					&.btn-ks { @include sprite-position($sprite-icon-ks01); }
 				}
 			}
 		}
-	}
-	&:hover > .hover { display: block; animation-duration: 0.3s; }
-	> .hover {
-		display: none; overflow: hidden; position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 1; height: 100%; width: 100%; text-align: center; border-radius: $border-radius;
-		> button { display: block; position: absolute; top: 20px; right: 20px; z-index: 2; font-size: 12px; color: #c2c6d0; vertical-align: middle; line-height: 18px; 
-			&:before { content: ''; display: inline-block; margin-top: -4px; margin-right: 5px; vertical-align: middle; @include sprite($sprite-bg-star01); }
-			&:hover { text-decoration: underline; }
-			&.selected:before { @include sprite($sprite-bg-star01-selected); }
-		}
-		> span { font-size: 24px; color: #fff; line-height: $product-height; }
 
-		&:before { content: ''; display: block; position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: -1; height: 100%; width: 100%; background: url(/assets/images/bg_product_highlights.png) left top repeat; }
-	}
-
-
-	///	 상품 상세 보기일 경우
-	&.detail { margin-top: 40px;
-		$thumb-height: 340px;
-		$sub-info-width: 377px;
-
-		> .options { height: $thumb-height;
-			> .imminent-deadline { margin: -55px 0 0 -55px; padding-top: 26px; font-size: 2.250em;
-				@include sprite($sprite-bg-circle01-big); height: 84px;
-				> span { font-size: 14px; }
-			}
-			> .share { display: block; }
-		}
 		> figure {
-			> .thumb { height: $thumb-height; }
-			> .info { overflow: hidden; padding: 46px 39px 0 39px;
-				> .sub-info { display: block; float: left; padding-right: 25px; width: 352px;
-					.title { font-size: 1.500em; }
-					time { margin-top: 12px; font-size: 0.875em; }
-					.desc { display: block; margin-top: 23px; }
+			> .thumb { display: block; position: relative; z-index: 0; overflow: hidden; height: $thumb-height; width: 100%; border-radius: $border-radius $border-radius 0px 0px;
+				> img { display: none; position: absolute; left: 0; max-height: 100%; }
+			}
+			> .info { position: relative; padding: 38px 29px 0 29px; border-top: 1px solid #e6e9ee;
+				> .sub-info {
+					.title { font-size: 1.125em; font-weight: normal; line-height: 1em; }
+					time { display: block; margin-top: 8px; font-size: 0.813em; color: $color-point1; }
+					.desc { display: none; font-size: 0.875em; color: $color-content; line-height: 20px; }
 				}
-
-				> .status-info { float: left; padding-bottom: 10px; padding-left: 38px; width: 664px; border-left: 1px solid #e2e4e8;
+				> .status-info {
 					.p-i { overflow: hidden;
-						> p { margin-top: 0px; padding-right: 28px;
-							> span { padding-bottom: 15px; font-size: 0.875em; }
-							> em { font-size: 32px; }
+						> p { float: left; position: relative; margin-top: 16px; padding-right: 14px; text-align: left;
+							> span { display: block; padding-bottom: 2px; font-size: 0.750em; color: $color-desc; }
+							> em { display: block; font-size: 20px; line-height: 1.2em; }
 
-							&.price {}
-							&.interest { padding-left: 29px; position: relative;
+							&.price { }
+							&.interest { padding-left: 14px; position: relative;
 								> span { padding-left: 2px; }
-								> em:before { height: 32px; bottom: 4px; }
-							}
-
-							em.convert {
-								&.price {
-									span { display: inline-block; margin-right: 1px; height: 32px; text-indent: -9999px; vertical-align: middle;
-										&.price0 { @include sprite($sprite-price0-b); }
-										&.price1 { @include sprite($sprite-price1-b); }
-										&.price2 { @include sprite($sprite-price2-b); }
-										&.price3 { @include sprite($sprite-price3-b); }
-										&.price4 { @include sprite($sprite-price4-b); }
-										&.price5 { @include sprite($sprite-price5-b); }
-										&.price6 { @include sprite($sprite-price6-b); }
-										&.price7 { @include sprite($sprite-price7-b); }
-										&.price8 { @include sprite($sprite-price8-b); }
-										&.price9 { @include sprite($sprite-price9-b); }
-										&.price-comma { @include sprite($sprite-price-comma-b); }
-									}
-								}
+								> em:before { content: ''; display: block; position: absolute; bottom: 0; left: 0px; height: 20px; width: 1px; background-color: #d5dae1; }
 							}
 						}
 					}
 					
-					.progress { margin-top: 33px; padding: 19px 0 0 0; font-size: 1.000em;
-						&:before { height: 6px; }
-						> .value { height: 6px; }
+					.progress { display: block; position: relative; overflow: hidden; margin-top: 22px; padding: 15px 0 0 0; font-size: 0.875em;
+						&:before { content: ''; display: block; position: absolute; top: 0; right: 0; left: 0; height: 5px; width: 100%; background-color: #d5d9e1; }
+						> .value { display: block; position: absolute; top: 0; left: 0; height: 5px; width: 0%; background-color: #00bb00; animation-delay: 1s; }
 					}
 				}
 			}
 		}
-
+		&:hover > .hover { display: block; animation-duration: 0.3s; }
 		> .hover {
-			display: block; overflow: hidden; position: absolute; top: 0; right: 0; bottom: auto; left: auto; z-index: 2; height: 92px; width: 51px;
-			> button { display: block; position: absolute; top: 16px; right: 9px; z-index: 2; width: 30px; font-size: 12px; color: #c2c6d0; vertical-align: middle; line-height: 16px;
-				&:before { content: ''; display: block; margin: 0 auto 8px auto; @include sprite($sprite-bg-star01); }
+			display: none; overflow: hidden; position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 1; height: 100%; width: 100%; text-align: center; border-radius: $border-radius;
+			> button { display: block; position: absolute; top: 20px; right: 20px; z-index: 2; font-size: 12px; color: #c2c6d0; vertical-align: middle; line-height: 18px; 
+				&:before { content: ''; display: inline-block; margin-top: -4px; margin-right: 5px; vertical-align: middle; @include sprite($sprite-bg-star01); }
+				&:hover { text-decoration: underline; }
+				&.selected:before { @include sprite($sprite-bg-star01-selected); }
 			}
-			> span { display: none; }
-			&:before { content: none; }
+			> span { font-size: 24px; color: #fff; line-height: $product-height; }
+
+			&:before { content: ''; display: block; position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: -1; height: 100%; width: 100%; background: url(/assets/images/bg_product_highlights.png) left top repeat; }
 		}
 
-		> .invest-product { display: block; position: relative; margin-top: 45px; height: 100px;
-			.utils { position: absolute; top: 28px; left: 69%;
-				.btn { display: inline-block; margin-right: 17px; font-size: 0.875em; color: $color-menu1; vertical-align: middle;
-					&:before { content: ''; display: inline-block; margin-right: 7px; vertical-align: middle; }
-					&.calc {
-						&:before { @include sprite($sprite-icon-calc01); }
+
+		///	 상품 상세 보기일 경우
+		&.detail { margin-top: 40px;
+			$thumb-height: 340px;
+			$sub-info-width: 377px;
+
+			> .options { height: $thumb-height;
+				> .imminent-deadline { margin: -55px 0 0 -55px; padding-top: 26px; font-size: 2.250em;
+					@include sprite($sprite-bg-circle01-big); height: 84px;
+					> span { font-size: 14px; }
+				}
+				> .share { display: block; }
+			}
+			> figure {
+				> .thumb { height: $thumb-height; }
+				> .info { overflow: hidden; padding: 46px 39px 0 39px;
+					> .sub-info { display: block; float: left; padding-right: 25px; width: 352px;
+						.title { font-size: 1.500em; }
+						time { margin-top: 12px; font-size: 0.875em; }
+						.desc { display: block; margin-top: 23px; }
 					}
-					&.update { display: none;
-						&:before { @include sprite($sprite-icon-update01); }
-					}
-					&.cancel { display: none;
-						&:before { @include sprite($sprite-icon-cancel01); }
+
+					> .status-info { float: left; padding-bottom: 10px; padding-left: 38px; width: 664px; border-left: 1px solid #e2e4e8;
+						.p-i { overflow: hidden;
+							> p { margin-top: 0px; padding-right: 28px;
+								> span { padding-bottom: 15px; font-size: 0.875em; }
+								> em { font-size: 32px; }
+
+								&.price {}
+								&.interest { padding-left: 29px; position: relative;
+									> span { padding-left: 2px; }
+									> em:before { height: 32px; bottom: 4px; }
+								}
+
+								em.convert {
+									&.price {
+										span { display: inline-block; margin-right: 1px; height: 32px; text-indent: -9999px; vertical-align: middle;
+											&.price0 { @include sprite($sprite-price0-b); }
+											&.price1 { @include sprite($sprite-price1-b); }
+											&.price2 { @include sprite($sprite-price2-b); }
+											&.price3 { @include sprite($sprite-price3-b); }
+											&.price4 { @include sprite($sprite-price4-b); }
+											&.price5 { @include sprite($sprite-price5-b); }
+											&.price6 { @include sprite($sprite-price6-b); }
+											&.price7 { @include sprite($sprite-price7-b); }
+											&.price8 { @include sprite($sprite-price8-b); }
+											&.price9 { @include sprite($sprite-price9-b); }
+											&.price-comma { @include sprite($sprite-price-comma-b); }
+										}
+									}
+								}
+							}
+						}
+						
+						.progress { margin-top: 33px; padding: 19px 0 0 0; font-size: 1.000em;
+							&:before { height: 6px; }
+							> .value { height: 6px; }
+						}
 					}
 				}
 			}
-			.status-invest { display: none; margin-top: 9px; font-size: 0.750em; color: $color-point1; text-align: center; }
 
-			&.expired {
-				.btn.calc { display: none; }
-				.btn.update,
-				.btn.cancel { display: inline-block; }
-				.status-invest { display: block; }
+			> .hover {
+				display: block; overflow: hidden; position: absolute; top: 0; right: 0; bottom: auto; left: auto; z-index: 2; height: 92px; width: 51px;
+				> button { display: block; position: absolute; top: 16px; right: 9px; z-index: 2; width: 30px; font-size: 12px; color: #c2c6d0; vertical-align: middle; line-height: 16px;
+					&:before { content: ''; display: block; margin: 0 auto 8px auto; @include sprite($sprite-bg-star01); }
+				}
+				> span { display: none; }
+				&:before { content: none; }
+			}
+
+			> .invest-product { display: block; position: relative; margin-top: 45px; height: 100px;
+				.utils { position: absolute; top: 28px; left: 69%;
+					.btn { display: inline-block; margin-right: 17px; font-size: 0.875em; color: $color-menu1; vertical-align: middle;
+						&:before { content: ''; display: inline-block; margin-right: 7px; vertical-align: middle; }
+						&.calc {
+							&:before { @include sprite($sprite-icon-calc01); }
+						}
+						&.update { display: none;
+							&:before { @include sprite($sprite-icon-update01); }
+						}
+						&.cancel { display: none;
+							&:before { @include sprite($sprite-icon-cancel01); }
+						}
+					}
+				}
+				.status-invest { display: none; margin-top: 9px; font-size: 0.750em; color: $color-point1; text-align: center; }
+
+				&.expired {
+					.btn.calc { display: none; }
+					.btn.update,
+					.btn.cancel { display: inline-block; }
+					.status-invest { display: block; }
+				}
 			}
 		}
 	}
-}
+
+
+}	/// 기업 투자
+
+
+
+
 
 
 

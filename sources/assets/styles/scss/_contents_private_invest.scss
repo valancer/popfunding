@@ -1,0 +1,131 @@
+/* 개인 투자 */
+.contents.private-invest {
+	/// 개인 투자 상품 목록 - 페이징
+	.paging { position: relative; margin-top: 43px; text-align: center;
+		> a { display: inline-block; margin-right: 3px; margin-left: 2px; height: 37px; width: 37px; font-size: 1.125em; color: $color-menu1; text-align: center; line-height: 36px; border: 1px solid #d4dae4; border-radius: 37px; background-color: #fff;
+			&:hover,
+			&.selected { font-weight: 700; color: #fff; text-decoration: none; background-color: $color-menu1-hover; }
+		}
+
+		> .paging-left { position: absolute; top: 0; left: 0; }
+		> .sorting {
+			.btn-select { float: left; position: relative; z-index: 1; margin-right: 20px; text-align: left;
+				> a { display: block; padding: 0 33px; font-size: 0.813em; color: $color-menu1; line-height: 35px; border: 1px solid #d4dae4; border-radius: 35px; background-color: #fff;
+					&:after { content: ''; display: inline-block; margin: -2px 0 0 9px; vertical-align: middle; @include sprite($sprite-bg-arrow09); }
+					&:hover { text-decoration: none; }
+				}
+				.list-sorting { display: none; position: absolute; top: 18px; right: 0; left: 0; overflow: hidden; padding-top: 20px; border: 1px solid #d4dae4; border-top: 0px; border-radius: 0px 0px 18px 18px; background-color: #fff;
+					> li > a { display: inline-block; padding-left: 34px; font-size: 0.813em; color: $color-menu1; line-height: 34px;
+						&:hover { color: $color-menu1-hover; text-decoration: none; }
+					}
+				}
+
+				&.hover {
+					> a { position: relative; z-index: 1; border-bottom: 0px; border-radius: 18px 18px 0px 0px; }
+					.list-sorting { display: block; }
+				}
+			}
+
+			.btn-help { display: inline-block; font-size: 0.750em; color: $color-content; text-decoration: underline; line-height: 37px; white-space: nowrap;
+				&:before { content: ''; display: inline-block; margin-top: -1px; margin-right: 4px; vertical-align: middle; @include sprite($sprite-icon-help01); }
+				&:hover:before { @include sprite($sprite-icon-help01-highlights); }
+			}
+		}
+	}
+
+	/// 개인 투자 상품 목록
+	.list-products {
+		$product-width: 549px;
+		position: relative; overflow: hidden; margin-top: 40px; width: 100%;
+
+		> li {
+			display: block; float: left; margin: 0 31px 25px 0; width: $product-width;
+			&:nth-child(even),
+			&.lb { margin-right: 0; margin-left: 31px; }
+			> a {
+				&:hover { text-decoration: none; }
+			}
+		}
+	}
+
+	/// 개인 투자 - 상품
+	.product {
+		$border-radius: 18px;
+		$product-height: 213px;
+
+		display: block; position: relative; overflow: hidden; height: $product-height; color: $color-title; border: 1px solid #d4dae4; border-radius: $border-radius; background-color: #fff;
+
+		> .options { overflow: hidden; position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 1; border-radius: $border-radius 0 0 0;
+			> em { position: absolute; position: absolute; top: 0; left: 0; text-indent: -9999px; }
+			> .invest-type01 { border-radius: $border-radius 0px 0px 0px; @include sprite($sprite-badge-invest03); }
+			> .new { @include sprite($sprite-badge-new03); }
+			> .user-in { top: 10px; left: auto; right: 16px; font-size: 0.750em; color: $color-content; text-indent: 0px; }
+			> .favorate { top: 14px; right: 14px; left: auto; @include sprite($sprite-icon-favorate01-selected); }
+		}
+
+		> .trust-ratings { display: block; float: left; position: relative; padding: 28px 0 0 0; height: $product-height - 28px; width: 254px; border-right: 1px solid #e6e9ee; border-radius: $border-radius 0 0 0;
+			> p { float: left; }
+			.borrowing-purposes { height: 84px; width: 104px;
+				> .tooltip { left: 19px; }
+			}
+			.borrowing-count { padding-top: 28px;
+				> .convert {
+
+				}
+			}
+			.credit-rating { padding-top: 28px;
+				> .convert {
+					
+				}
+			}
+			.tooltip { display: block; position: absolute; top: 18px; z-index: 5; padding: 0 8px; font-size: 0.750em; color: $color-content; text-align: center; line-height: 25px; border: 1px solid #c3d0e1; border-radius: 5px; background-color: #fff;
+				&:before { content: ''; display: block; position: absolute; bottom: -$sprite-bg-arrow08-height; left: 50%; margin-left: -$sprite-bg-arrow08-width/2; @include sprite($sprite-bg-arrow08); }
+			}
+
+			.p-i { clear: both; padding: 11px 0 0 26px;
+				> p { float: left; font-size: 1.750em; color: $color-title;
+					> em { }
+					> span { display: block; margin-top: 7px; font-size: 0.429em; color: $color-desc; }
+				}
+				> .price { }
+				> .duration { padding: 0 10px; text-align: center; }
+				> .interest { }
+			}
+		}
+
+		> .info { display: block; float: left; padding: 46px 25px 0 25px; width: 242px; font-size: 0.750em; 
+			.idx { font-size: 1.167em; color: $color-title;
+				&:after { content: '/'; margin: 0 4px 0 7px; color: $color-desc; }
+			}
+			.user { font-size: 1.167em; color: $color-title; }
+			.desc { margin-top: 5px; color: $color-content; }
+			.has-information { position: relative; overflow: hidden; margin-top: 14px;
+				input[type=checkbox] { position: absolute; top: -100%; left: -100%; }
+				input[type=checkbox]:checked + label { color: $color-point1; }
+				label { margin-right: 6px; color: $color-desc; }
+			}
+
+			.progress { display: block; position: relative; overflow: hidden; margin-top: 19px; padding: 17px 0 0 0;
+				&:before { content: ''; display: block; position: absolute; top: 0; right: 0; left: 0; height: 5px; width: 100%; background-color: #d5d9e1; }
+				> .value { display: block; position: absolute; top: 0; left: 0; height: 5px; width: 0%; background-color: #00bb00; animation-delay: 1s; }
+				> time { color: $color-point1;
+					&:before { content: '/'; display: inline-block; margin: 0 6px 0 3px; color: $color-desc; }
+				}
+			}
+		}
+
+
+		&:hover > .hover { display: block; animation-duration: 0.3s; }
+		> .hover {
+			display: none; overflow: hidden; position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 10; height: 100%; width: 100%; text-align: center; border-radius: $border-radius;
+			> button { display: block; position: absolute; top: 13px; right: 17px; z-index: 2; font-size: 12px; color: #c2c6d0; vertical-align: middle; line-height: 18px; 
+				&:before { content: ''; display: inline-block; margin-top: -4px; margin-right: 5px; vertical-align: middle; @include sprite($sprite-icon-favorate01); }
+				&:hover { text-decoration: underline; }
+				&.selected:before { @include sprite($sprite-icon-favorate01-selected); }
+			}
+			> span { font-size: 1.375em; font-weight: bold; color: #fff; line-height: $product-height; }
+
+			&:before { content: ''; display: block; position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: -1; height: 100%; width: 100%; background: url(/assets/images/bg_product_highlights.png) left top repeat; }
+		}
+	}
+}

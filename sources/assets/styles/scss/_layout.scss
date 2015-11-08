@@ -156,7 +156,7 @@
 
 
 /* CONTENTS */
-article.contents { min-width: $contents-container-width; padding: 100px 0 110px 0;
+article.contents { min-width: $contents-container-width; padding: 100px 0 80px 0;
 	> h1 { display: none; }
 	> .inner { @include inner-container(); }
 

@@ -274,6 +274,7 @@ var PrivateProduct = (function ($) {
 		$products,
 		$countAndRatings,
 		$numbers,
+		$tooltips,
 
 		_isDetail = false,
 		init = function () {
@@ -282,6 +283,9 @@ var PrivateProduct = (function ($) {
 			$products = $container.find('.product');
 
 			_isDetail = $products.hasClass('detail');
+			if( _isDetail ) {
+				$tooltips = $products.find('.trust-ratings > p');
+			}
 
 			$countAndRatings = $container.find('.convert.cr');
 			$numbers = $container.find('.convert.price');
@@ -305,6 +309,17 @@ var PrivateProduct = (function ($) {
 	}
 
 	function initEvent() {
+		if( _isDetail ) {
+			if( $tooltips.length > 0 ) {
+				$tooltips.on('mouseover', function(e) {
+					var $target = $(this).find('.tooltip');
+					$target.show();
+				}).on('mouseout', function(e) {
+					var $target = $(this).find('.tooltip');
+					$target.hide();
+				});
+			}
+		}
 	}
 
 

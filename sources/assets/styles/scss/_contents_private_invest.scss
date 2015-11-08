@@ -118,7 +118,7 @@
 					}
 				}
 			}
-			.tooltip { display: none; position: absolute; top: 18px; z-index: z("tooltip"); padding: 0 8px; font-size: 0.750em; color: $color-content; text-align: center; line-height: 25px; border: 1px solid #c3d0e1; border-radius: 5px; background-color: #fff;
+			.tooltip { display: none; position: absolute; top: 18px; z-index: z("tooltip"); padding: 0 8px; font-size: 0.750em; color: $color-content; text-align: center; line-height: 25px; white-space: nowrap; border: 1px solid #c3d0e1; border-radius: 5px; background-color: #fff;
 				&:before { content: ''; display: block; position: absolute; bottom: -$sprite-bg-arrow08-height; left: 50%; margin-left: -$sprite-bg-arrow08-width/2; @include sprite($sprite-bg-arrow08); }
 			}
 
@@ -127,6 +127,7 @@
 					> em { }
 					> span { display: block; margin-top: 7px; font-size: 0.429em; color: $color-desc; vertical-align: baseline; }
 				}
+
 				> .price { }
 				> .duration { padding: 0 10px; text-align: center;
 					> em {
@@ -147,6 +148,7 @@
 			.has-information { position: relative; overflow: hidden; margin-top: 14px;
 				input[type=checkbox] { position: absolute; top: -100%; left: -100%; }
 				input[type=checkbox]:checked + label { color: $color-point1; }
+				input[type=checkbox].checked + label { color: $color-point1; }
 				label { margin-right: 6px; color: $color-desc; }
 			}
 
@@ -160,11 +162,13 @@
 		}
 
 
+
+
 		&:hover > .hover { display: block; animation-duration: 0.3s; }
 		> .hover {
 			display: none; overflow: hidden; position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: z("hover"); height: 100%; width: 100%; text-align: center; border-radius: $border-radius;
-			> button { display: block; position: absolute; top: 13px; right: 17px; z-index: z("default") + 1; font-size: 12px; color: #c2c6d0; vertical-align: middle; line-height: 18px; 
-				&:before { content: ''; display: inline-block; margin-top: -4px; margin-right: 5px; vertical-align: middle; @include sprite($sprite-icon-favorate01); }
+			> button { display: block; position: absolute; top: 13px; right: 17px; z-index: z("default") + 1; font-size: 12px; color: $color-desc; vertical-align: middle; line-height: 18px; 
+				&:before { content: ''; display: inline-block; margin-top: -2px; margin-right: 5px; vertical-align: middle; @include sprite($sprite-icon-favorate01); }
 				&:hover { text-decoration: underline; }
 				&.selected:before { @include sprite($sprite-icon-favorate01-selected); }
 			}
@@ -172,5 +176,141 @@
 
 			&:before { content: ''; display: block; position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: -1; height: 100%; width: 100%; background: url(/assets/images/bg_product_highlights.png) left top repeat; }
 		}
+
+
+
+
+		/// 개인 상품 상세
+		&.detail {
+			$product-height: 320px;
+
+			margin-top: 40px; height: auto;
+
+			> .options { height: $product-height;
+				> em { }
+				> .invest-type01 { @include sprite($sprite-badge-invest03-detail); }
+				> .new { @include sprite($sprite-badge-new03-detail); }
+				> .user-in { top: 15px; left: auto; right: 19px; font-size: 0.875em; color: $color-content; text-indent: 0px; }
+				> .favorate { top: 17px; right: 19px; left: auto; @include sprite($sprite-icon-favorate01-selected); }
+			}
+
+			> .profile { position: relative; z-index: z("hover"); margin: 0 auto; width: 251px; text-align: center; border-bottom: 1px solid #d4dae4; }
+
+			> .user-info { display: block; position: absolute; top: 86px; left: 189px; z-index: z("tooltip"); padding: 14px 20px 19px 20px; width: 208px; border: 2px solid #d4dae4; border-radius: $border-radius; background-color: #fff;
+				&:before { content: ''; display: block; position: absolute; top: 93px; right: -100px; height: 2px; width: 100px; background-color: #d4dae4; }
+				.list-info {
+					> li { display: block; float: left; font-size: 0.875em; color: $color-title; line-height: 35px;
+						&:nth-child(odd) { clear: both;
+							&:after { content: '/'; margin-right: 7px; margin-left: 8px; color: $color-desc; }
+						}
+					}
+				}
+			}
+
+			> .trust-ratings { display: block; float: none; position: absolute; top: 66px; right: 84px; z-index: z("tooltip"); padding: 0 0 24px 0; height: auto; width: 355px; border: 2px solid #d4dae4; border-radius: $border-radius; background-color: #fff;
+				&:before { content: ''; display: block; position: absolute; top: 113px; left: -100px; height: 2px; width: 100px; background-color: #d4dae4; }
+
+				> .idx { padding-left: 29px; font-size: 0.875em; color: $color-title; line-height: 42px; border-bottom: 1px solid #e6e9ee; }
+				> p { float: left; }
+
+				em.convert {
+					&.price {
+						span { display: inline-block; margin-right: 1px; height: 28px; text-indent: -9999px; vertical-align: middle;
+							&.price0 { @include sprite($sprite-private-price0-b); }
+							&.price1 { @include sprite($sprite-private-price1-b); }
+							&.price2 { @include sprite($sprite-private-price2-b); }
+							&.price3 { @include sprite($sprite-private-price3-b); }
+							&.price4 { @include sprite($sprite-private-price4-b); }
+							&.price5 { @include sprite($sprite-private-price5-b); }
+							&.price6 { @include sprite($sprite-private-price6-b); }
+							&.price7 { @include sprite($sprite-private-price7-b); }
+							&.price8 { @include sprite($sprite-private-price8-b); }
+							&.price9 { @include sprite($sprite-private-price9-b); }
+							&.price-percent { @include sprite($sprite-private-percent-b); }
+						}
+					}
+				}
+
+				.tooltip { display: none; top: 32px; }
+				.borrowing-purposes { }
+				.borrowing-count { position: relative;
+					.tooltip { top: -11px; left: -20px; }
+				}
+				.credit-rating { position: relative;
+					.tooltip { top: -11px; left: -17px; }
+				}
+
+				.p-i { clear: both; padding: 13px 0 0 26px;
+					> p { float: left; font-size: 2.500em; color: $color-title;
+						> em { }
+						> span { display: block; margin-top: 9px; font-size: 0.350em; color: $color-title; vertical-align: baseline; }
+					}
+					> .price { }
+					> .duration { padding: 0 10px; text-align: center;
+						> em {
+							&:before { content: '-'; display: inline-block; margin-right: 10px; vertical-align: middle; }
+							&:after { content: '-'; display: inline-block; margin-left: 9px; vertical-align: middle; }
+						}
+					}
+					> .interest { }
+				}
+			}
+
+			> .inner { margin: 0 auto; width: 780px;
+				.stroy-summary { margin-top: 48px; text-align: center;
+					h2 { font-size: 1.500em; font-weight: normal; color: $color-title; text-align: left; line-height: 1.2em; }
+					.desc { overflow: hidden; margin-top: 23px; height: 88px; font-size: 0.875em; color: $color-content; text-align: left; line-height: 22px; }
+					.btn-inline-box { margin-top: 16px; }
+				}
+
+
+				.progress { display: block; position: relative; overflow: hidden; margin-top: 35px; padding: 21px 0 0 0; font-size: 1.000em; color: $color-title;
+					&:before { content: ''; display: block; position: absolute; top: 0; right: 0; left: 0; height: 6px; width: 100%; background-color: #d5d9e1; }
+					> .value { display: block; position: absolute; top: 0; left: 0; height: 6px; width: 0%; background-color: #00bb00; animation-delay: 1s; }
+					> time { float: right; font-size: 0.875em; color: $color-point1; }
+				}
+
+			}
+
+			> .hover {
+				display: block; overflow: hidden; position: absolute; top: 0; right: 0; bottom: auto; left: auto; z-index: z("hover"); height: 92px; width: 51px; text-align: center; border-radius: 0px;
+				> button { display: block; position: absolute; top: 17px; right: 10px; z-index: z("default") + 1; width: 30px; font-size: 14px; color: $color-desc; vertical-align: middle; line-height: 16px; 
+					&:before { content: ''; display: block; margin: 0px auto 6px; @include sprite($sprite-icon-favorate01-detail); }
+					&:hover { text-decoration: underline; }
+					&.selected:before { @include sprite($sprite-icon-favorate01-detail-selected); }
+				}
+				> span { display: none; }
+				&:before { content: none; }
+			}
+
+
+			> .invest-product { display: block; position: relative; margin-top: 45px; height: 105px;
+				.utils { position: absolute; top: 28px; left: 69%;
+					.btn { display: inline-block; margin-right: 17px; font-size: 0.875em; color: $color-menu1; vertical-align: middle;
+						&:before { content: ''; display: inline-block; margin-right: 7px; vertical-align: middle; }
+						&.calc {
+							&:before { @include sprite($sprite-icon-calc01); }
+						}
+						&.update { display: none;
+							&:before { @include sprite($sprite-icon-update01); }
+						}
+						&.cancel { display: none;
+							&:before { @include sprite($sprite-icon-cancel01); }
+						}
+					}
+				}
+				.status-invest { display: none; margin-top: 9px; font-size: 0.750em; color: $color-point1; text-align: center; }
+
+				&.expired {
+					.btn.calc { display: none; }
+					.btn.update,
+					.btn.cancel { display: inline-block; }
+					.status-invest { display: block; }
+				}
+			}
+		}
 	}
+
+
+	.product-detail-view { padding-bottom: 100px; }
 }

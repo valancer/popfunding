@@ -11,7 +11,7 @@ body { position: relative; /*min-height: 800px;*/ min-width: 480px; margin: 0 au
 }
 header, h1 { font-size: 100%; }
 html, body { height: 100%; }
-caption,legend { position: absolute; width:0; height: 0; font-size: 0; overflow: hidden; visibility: hidden; }
+caption,legend { display: none; position: absolute; width:0; height: 0; font-size: 0; overflow: hidden; visibility: hidden; }
 img { border: none; vertical-align: top; /*width: 100%;*/ }
 select, input { vertical-align: top; }
 hr { display: none; border: 0 none; }
@@ -22,6 +22,7 @@ address { display: inline; font-style: normal; }
 button { appearance: none; cursor: pointer; border: 0px; background-color: transparent; }
 table {border-collapse:collapse;border-spacing:0;}
 input, textarea, keygen, select, button { font-family: $font-base-stack; }
+strong { font-weight: normal; }
 
 /* link Style */
 a:link, a:visited, a:active, a:focus { text-decoration: none; }
@@ -32,3 +33,20 @@ a:hover { text-decoration: underline; }
 
 /* forms */
 input[type=submit] { appearance: none; cursor: pointer; border: 0px; }
+
+
+::-webkit-input-placeholder {
+   color: #ccd0d7;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #ccd0d7;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #ccd0d7;  
+}
+
+:-ms-input-placeholder {  
+   color: #ccd0d7;  
+}

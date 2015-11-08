@@ -24,7 +24,7 @@ $color-menu2: #525e7b;
 $color-point1: #ff6000;
 $color-point2: #14378c;
 $color-point3: #0e52a5;
-
+$color-point4: #30ba30;
 
 
 
@@ -82,7 +82,7 @@ $z-layers: (
 }
 .btn-more { display: block; font-size: 14px; color: $color-content; text-align: center; line-height: 48px; border: 1px solid #d7dce6; background-color: #fff; }
 .btn-more:after { content: ''; display: inline-block; margin-left: 5px; vertical-align: middle; @include sprite($sprite-bg-arrow02); }
-.btn-rd { display: inline-block; padding: 2px 28px 0 28px; font-size: 13px; color: $color-menu1; text-align: center; line-height: 33px; border: 1px solid #d4dae4; border-radius: 35px; background-color: #fff; 
+.btn-rd { display: inline-block; padding: 1px 28px 0 28px; font-size: 13px; color: $color-menu1; text-align: center; line-height: 34px; border: 1px solid #d4dae4; border-radius: 35px; background-color: #fff; 
 
 	.filter-container & {
 		&:hover { color: $color-menu1-hover; text-decoration: none; }
@@ -101,12 +101,13 @@ $z-layers: (
 }
 .btn-top { display: block; text-indent: -9999px; @include sprite($sprite-btn-top01); }
 .btn-popup-close { display: block; text-indent: -9999px; @include sprite($sprite-btn-close01); }
-.btn-help { display: inline-block; font-size: 0.750em; color: $color-content; text-decoration: underline; line-height: 37px; white-space: nowrap;
+.btn-help { display: inline-block; font-size: 12px; color: $color-content; text-decoration: underline !important; line-height: 37px; white-space: nowrap;
 	&:before { content: ''; display: inline-block; margin-top: -1px; margin-right: 4px; vertical-align: middle; @include sprite($sprite-icon-help01); }
 	&:hover { color: $color-menu1-hover;
 		&:before { @include sprite($sprite-icon-help01-highlights); }
 	}
 }
+.btn-inline-box { display: inline-block; padding: 0 11px; font-size: 0.750em; color: $color-content; line-height: 24px; border: 1px solid #c3d0e1; border-radius: 5px; }
 
 
 /**

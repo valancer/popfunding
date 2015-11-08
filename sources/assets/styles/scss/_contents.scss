@@ -22,6 +22,32 @@
 
 
 
+
+/// 상품 상세 - 탭
+$border-color: #d4dae4;
+$border-inner-color: #e6e9ee;
+.product-tab { margin-top: 60px;
+	table { table-layout: fixed; width: 100%; border-left: 1px solid $border-color;
+		> tbody > tr {
+			td { border-right: 1px solid $border-color;
+				a { display: block; position: relative; font-size: 0.875em; color: $color-content; text-align: center; text-decoration: none; line-height: 53px; border-top: 1px solid $border-color; border-bottom: 1px solid $border-color; background-color: #f8f9fb;
+					&:hover { color: $color-menu1-hover; }
+					&.selected { color: $color-menu1; border-bottom: 1px solid #fff; background-color: #fff; }
+
+					> .new { display: block; position: absolute; top: -21px; left: 50%;
+						.inner { display: block; position: relative; left: -50%; padding: 1px 15px 0 15px; font-size: 12px; color: $color-content; line-height: 28px; border: 1px solid #c3d0e1; border-radius: 5px; background-color: #fff;
+							&:before { content: ''; display: block; position: absolute; bottom: -$sprite-bg-arrow08-height; left: 50%; margin-left: -$sprite-bg-arrow08-width/2; @include sprite($sprite-bg-arrow08); }
+						}
+
+						em { color: $color-point1; }
+					}
+				}
+			}
+		}
+	}
+}
+
+
 /* 기업 투자 */
 .contents.invest {
 
@@ -200,6 +226,7 @@
 				display: block; overflow: hidden; position: absolute; top: 0; right: 0; bottom: auto; left: auto; z-index: z("default") + 1; height: 92px; width: 51px;
 				> button { display: block; position: absolute; top: 16px; right: 9px; z-index: z("default") + 1; width: 30px; font-size: 12px; color: #c2c6d0; vertical-align: middle; line-height: 16px;
 					&:before { content: ''; display: block; margin: 0 auto 8px auto; @include sprite($sprite-bg-star01); }
+					&.selected:before { @include sprite($sprite-bg-star01-selected); }
 				}
 				> span { display: none; }
 				&:before { content: none; }
@@ -241,33 +268,9 @@
 
 
 
-/// 상품 상세 - 탭
-$border-color: #d4dae4;
-$border-inner-color: #e6e9ee;
-.product-tab { margin-top: 60px;
-	table { table-layout: fixed; width: 100%; border-left: 1px solid $border-color;
-		> tbody > tr {
-			td { border-right: 1px solid $border-color;
-				a { display: block; position: relative; font-size: 0.875em; color: $color-content; text-align: center; text-decoration: none; line-height: 53px; border-top: 1px solid $border-color; border-bottom: 1px solid $border-color; background-color: #f8f9fb;
-					&:hover { color: $color-menu1-hover; }
-					&.selected { color: $color-menu1; border-bottom: 1px solid #fff; background-color: #fff; }
-
-					> .new { display: block; position: absolute; top: -21px; left: 50%;
-						.inner { display: block; position: relative; left: -50%; padding: 1px 15px 0 15px; font-size: 12px; color: $color-content; line-height: 28px; border: 1px solid #c3d0e1; border-radius: 5px; background-color: #fff;
-							&:before { content: ''; display: block; position: absolute; bottom: -$sprite-bg-arrow08-height; left: 50%; margin-left: -$sprite-bg-arrow08-width/2; @include sprite($sprite-bg-arrow08); }
-						}
-
-						em { color: $color-point1; }
-					}
-				}
-			}
-		}
-	}
-}
-
 
 /// 상품 상세 컨테이너
-.product-detail-view { border: 1px solid $border-color; border-top: 0px; background-color: #fff;
+.product-detail-view { padding-bottom: 100px; border: 1px solid $border-color; border-top: 0px; background-color: #fff;
 	> h1 { display: none; }
 	h2 { font-size: 1.125em; font-weight: normal; color: $color-title;
 		.bar { display: inline-block; margin: -2px 9px 0 10px;; height: 17px; width: 1px; vertical-align: middle; background-color: #d7dde5; }
@@ -280,7 +283,8 @@ $border-inner-color: #e6e9ee;
 	.product-feature { table-layout: fixed; width: 100%;
 		> tbody > tr {
 			td { padding: 98px 0 67px 0; text-align: center;
-				> span { display: inline-block; position: relative; height: 62px; font-size: 0.875em; color: $color-point2; line-height: 62px;
+				> span,
+				> a { display: inline-block; position: relative; height: 62px; font-size: 0.875em; color: $color-point2; line-height: 62px;
 					&:before { content: ''; display: inline-block; margin-right: 10px; vertical-align: middle; }
 					&.feature01:before { @include sprite($sprite-icon-feature01); }
 					&.feature02:before { @include sprite($sprite-icon-feature02); }
@@ -289,18 +293,37 @@ $border-inner-color: #e6e9ee;
 						&:before { @include sprite($sprite-icon-feature04); }
 					}
 					&.feature04:after { content: attr(data-info); display: block; position: absolute; top: -24px; left: -31px; font-size: 12px; color: $color-content; text-align: center; line-height: 27px; @include sprite($sprite-bg-tooltip01); }
+					&.feature05:before { @include sprite($sprite-icon-feature05); }
+					&.feature06 { text-decoration: underline;
+						&:before { @include sprite($sprite-icon-feature06); }
+						&.expired { color: $color-point4; text-decoration: none;
+							&:before { @include sprite($sprite-icon-feature06-expired); }
+						}
+						&.disabled { color: $color-desc; text-decoration: none;
+							&:before { @include sprite($sprite-icon-feature06-disabled); }
+						}
+					}
+					&.feature07 { text-decoration: underline;
+						&:before { @include sprite($sprite-icon-feature07); }
+						&.expired { color: $color-point4; text-decoration: none;
+							&:before { @include sprite($sprite-icon-feature07-expired); }
+						}
+						&.disabled { color: $color-desc; text-decoration: none;
+							&:before { @include sprite($sprite-icon-feature07-disabled); }
+						}
+					}
 				}
 			}
 		}
 	}
 
-	/// 처분예상가
+	/// 기업투자 - 처분예상가
 	.goal { border-top: 1px solid $border-inner-color;
 		.chart { margin-top: 20px; background-color: #0f0; }
 	}
 
 
-	/// funding manager
+	/// 기업투자 - funding manager
 	.manager { overflow: hidden; padding: 80px 69px 60px 140px; border-top: 1px solid $border-inner-color;
 		> figure { float: left; padding-right: 109px;
 			figcaption { display: block; margin-top: 10px; font-size: 0.750em; color: $color-content; text-align: right; }
@@ -313,7 +336,7 @@ $border-inner-color: #e6e9ee;
 	}
 
 
-	/// 예상 가격
+	/// 기업투자 - 예상 가격
 	.values { border-top: 1px solid $border-inner-color;
 		.value-price { overflow: hidden; margin: 36px -69px 0 -69px;
 			$width: 100%;
@@ -328,7 +351,7 @@ $border-inner-color: #e6e9ee;
 	}
 
 
-	/// 담보물
+	/// 기업투자 - 담보물
 	.pawn { padding: 0px 0px 45px 69px;
 		.list-pawn { overflow: hidden; margin-top: 28px;
 			> li { float: left; padding: 0 21px 31px 0;
@@ -341,7 +364,7 @@ $border-inner-color: #e6e9ee;
 	}
 
 
-	/// 담보물 실사
+	/// 기업투자 - 담보물 실사
 	.pawn-photos { border-top: 1px solid $border-inner-color;
 		> .inner { margin: 0 auto; width: 585px;
 			h2 { float: left; }
@@ -355,6 +378,122 @@ $border-inner-color: #e6e9ee;
 					}
 				}
 			}
+		}
+	}
+
+
+	$privateInnerWidth: 780px;
+	/// 개인투자 - 보관중인 정보
+	.has-information { border-top: 1px solid $border-inner-color;
+		> .inner { margin: -5px auto 0 auto; width: $privateInnerWidth;
+			> fieldset { position: relative; text-align: center;
+				input[type=checkbox] { position: absolute; top: -100%; left: -100%; }
+				label { display: block; float: left; width: $privateInnerWidth/6; font-size: 0.875em; color: $color-title; text-align: center;
+					&:after { content: ''; display: block; margin: 13px auto 0 auto; @include sprite($sprite-icon-check03); }
+				}
+				input[type=checkbox]:checked + label,
+				input[type=checkbox].checked + label { &:after { @include sprite($sprite-icon-check03-selected); } }
+			}
+			.bad-debt { margin-top: 17px; font-size: 0.813em; color: $color-content; text-align: center;
+				&:before { content: ''; display: inline-block; margin-top: 2px; vertical-align: top; @include sprite($sprite-icon-check04); }
+				.btn-help { margin-left: 10px; }
+			}
+		}
+
+		.bad-debt-popup { position: absolute; top: -1px; right: -1px; left: -1px; z-index: z("modaless"); padding: 50px 187px; border: 2px solid $border-color; background-color: #fff;
+			.btn-popup-close { position: absolute; top: 12px; right: 12px; }
+			h1 { font-size: 1.125em; font-weight: normal; color: $color-title;
+				> em { color: $color-menu1-hover; }
+			}
+			time { float: right; font-size: 0.750em; color: $color-desc; }
+		}
+	}
+
+	/// 개인투자 - 빌리는 사연
+	.story { border-top: 1px solid $border-inner-color;
+		> .inner { position: relative; margin: -5px auto 0 auto; width: $privateInnerWidth;
+			h2 { padding: 0 0 0 90px; font-size: 1.500em; font-weight: normal; color: $color-title; line-height: 1.2em;
+				&:before { content: attr(title); display: block; margin-bottom: 11px; font-size: 18px; }
+				&:after { content: ''; display: block; position: absolute; top: -9px; left: 6px; @include sprite($sprite-icon-story01); }
+			}
+			h3 { font-size: 1.000em; font-weight: normal; color: $color-point1; }
+			.desc { margin-top: 13px; font-size: 0.875em; color: $color-content; line-height: 22px; }
+
+			.add-story { margin-top: 36px; padding-top: 40px; border-top: 1px solid $border-inner-color;
+				.desc { margin-top: 25px; }
+				.update { float: right; font-size: 0.750em; color: $color-desc; }
+			}
+		}
+	}
+
+	/// 개인투자 - 상환 계획
+	.tbl { width: 100%; margin-top: 36px; border-top: 2px solid #252525;
+		th { position: relative; padding: 9px 0 12px 0; font-size: 0.875em; font-weight: normal; color: $color-title; line-height: 30px; text-align: left; vertical-align: top; }
+		td { position: relative; padding: 9px 0 12px 0; font-size: 0.875em; color: $color-content; line-height: 30px; text-align: left; vertical-align: top; }
+		em { color: $color-menu1-hover; }
+		strong { color: $color-point1; }
+
+		tfoot {
+			th { }
+		}
+
+		tbody {
+			th, td { border-bottom: 1px solid #d4dae4; }
+		}
+
+		.r { text-align: right; }
+		.c { text-align: center; }
+		.dot { &:before { content: ''; display: inline-block; margin-top: -2px; margin-right: 5px; height: 2px; width: 2px; vertical-align: middle; background-color: #667386; } }
+
+		.replayment-item {
+			li { float: left; width: 270px;
+				&:before { content: ''; display: inline-block; margin-top: -2px; margin-right: 5px; height: 2px; width: 2px; vertical-align: middle; background-color: #667386; }
+				&.strong { color: $color-point1;
+					&:before { background-color: $color-point1; }
+				}
+			}
+		}
+	}
+
+	.repayment-plan { border-top: 1px solid $border-inner-color;
+		> .inner { position: relative; margin: -5px auto 0 auto; width: $privateInnerWidth;
+			h2 { padding: 0 0 0 90px; font-size: 1.500em; font-weight: normal; color: $color-title; line-height: 1.2em;
+				&:before { content: attr(title); display: block; margin-bottom: 11px; font-size: 18px; }
+				&:after { content: ''; display: block; position: absolute; top: -36px; left: -12px; @include sprite($sprite-icon-repayment01); }
+			}
+			.desc { margin-top: 13px; font-size: 0.875em; color: $color-content; line-height: 22px; }
+
+			.add-story { margin-top: 36px; padding-top: 40px; border-top: 1px solid $border-inner-color;
+				.desc { margin-top: 25px; }
+			}
+		}
+	}
+
+
+	/// 개인투자 - 과거내역
+	.past-history { padding: 0;
+		> .inner { position: relative; margin: -5px auto 0 auto; width: $privateInnerWidth;
+			.tbl { margin-top: 30px;
+				td + td { &:before { content: '/'; position: absolute; top: 50%; left: 0; margin-top: -17px; color: $color-desc; } }
+			}
+		}
+	}
+
+
+	/// 개인투자 - 서류정보
+	.documents { padding: 86px 0 0 0;
+		> .inner { position: relative; margin: -5px auto 0 auto; width: $privateInnerWidth;
+			.list-documents { overflow: hidden; margin-top: 30px; padding: 15px 10px; border: 1px solid #d4dae4;
+				> li { float: left; padding: 0 5px; }
+			}
+		}
+	}
+
+
+	/// 개인투자 - 기타정보
+	.etc { padding: 86px 0 0 0;
+		> .inner { position: relative; margin: -5px auto 0 auto; width: $privateInnerWidth;
+
 		}
 	}
 
@@ -373,21 +512,21 @@ $border-inner-color: #e6e9ee;
 				.user { float: right; font-size: 0.875em; color: $color-content;
 					> time:before { content: '|'; display: inline-block; margin-right: 8px; margin-left: 6px; color: #d8e3ef; }
 				}
-				input[type=text] { display: block; height: 38px; width: 80%; font-size: 1.000em; color: $color-menu1; line-height: 38px; border: 0px; background-color: transparent; }
+				input[type=text] { display: block; height: 38px; width: 80%; font-size: 1.000em; color: $color-title; line-height: 38px; border: 0px; background-color: transparent; }
 			}
 			textarea { overflow: auto; margin-top: 13px; height: 80px; width: 100%; font-size: 0.875em; color: $color-content; line-height: 22px; border: 0px; background-color: transparent; }
 		}
-		> .btn-question { display: block; margin: 20px auto 0 auto; padding-top: 1px; height: 36px; min-width: 154px; font-size: 0.875em; color: #fff; text-align: center; line-height: 36px; border-radius: 37px; background-color: #2e96d6;
+		> .btn-question { display: block; margin: 20px auto 0 auto; height: 37px; min-width: 154px; font-size: 0.875em; color: #fff; text-align: center; line-height: 37px; border-radius: 37px; background-color: #2e96d6;
 			&:hover { text-decoration: none; background-color: #2389cf; }
 		}
 	}
 
 
 	/// qna list
-	.qna-contents { padding: 50px 131px 43px 69px; 
-		.list-qna { margin-top: 50px;
-			> li { padding-bottom: 53px;
-				.title { font-size: 1.143em; color: $color-menu1; line-height: 40px; border-bottom: 2px solid #b7e3ff;
+	.qna-contents { padding: 50px 131px 0px 69px; 
+		.list-qna { 
+			> li { padding-top: 50px;
+				.title { font-size: 1.143em; color: $color-title; line-height: 40px; border-bottom: 2px solid #b7e3ff;
 					.user { float: right; font-size: 0.875em; color: $color-content;
 						> time:before { content: '|'; display: inline-block; margin-right: 8px; margin-left: 6px; color: #d8e3ef; }
 					}
@@ -404,6 +543,23 @@ $border-inner-color: #e6e9ee;
 				.answer {
 					.title { border-bottom: 2px solid #ffd3de; }
 					&:before { top: 10px; @include sprite($sprite-bg-answer01); }
+				}
+
+				/// 답글 작성
+				.question-answer { margin-right: -37px;
+					> .write-answer { position: relative; margin-top: 32px; padding: 7px 0px 23px 62px; background-color: #f8f9fb;
+						&:before { content: ''; position: absolute; top: 12px; left: 14px; @include sprite($sprite-bg-answer01); }
+						> p { overflow: hidden; margin-right: 38px; line-height: 38px; border-bottom: 2px solid #ffc8d6;
+							.user { float: right; font-size: 0.875em; color: $color-content;
+								> time:before { content: '|'; display: inline-block; margin-right: 8px; margin-left: 6px; color: #d8e3ef; }
+							}
+							input[type=text] { display: block; height: 38px; width: 80%; font-size: 1.000em; color: $color-title; line-height: 38px; border: 0px; background-color: transparent; }
+						}
+						textarea { overflow: auto; margin-top: 13px; height: 80px; width: 100%; font-size: 0.875em; color: $color-content; line-height: 22px; border: 0px; background-color: transparent; }
+					}
+					> .btn-answer { display: block; margin: 20px auto 0 auto; height: 37px; min-width: 154px; font-size: 0.875em; color: #fff; text-align: center; line-height: 37px; border-radius: 37px; background-color: #6cc800;
+						&:hover { text-decoration: none; background-color: #4eb500; }
+					}
 				}
 			}
 		}

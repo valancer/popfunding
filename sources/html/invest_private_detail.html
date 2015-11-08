@@ -1,0 +1,326 @@
+include "head.html"
+
+	<!-- 상단 영역 -->
+	include "header.html"
+
+
+	<!-- 본문 영역 -->
+	<article class="contents private-invest">
+		<h1>투자하기</h1>
+
+		<div class="inner">
+		
+
+			<!-- 필터 및 소개  -->
+			<div class="filter-container">
+				<fieldset class="filter">
+					<legend>투자종류선택</legend>
+
+					<input type="radio" id="invest01" name="invest-type" checked="checked" class="selected"><label for="invest01">개인투자</label>
+					<input type="radio" id="invest02" name="invest-type"><label for="invest02">기업투자</label>
+					<input type="radio" id="invest03" name="invest-type"><label for="invest03">채권마켓</label>
+				</fieldset>
+				
+				<div class="utils-guide">
+					<a href="#" class="btn-tip">꿀팁</a>
+					<a href="#" class="btn-rd">기업투자 소개</a>
+				</div>
+			</div>
+
+
+			<!-- 상품 정보 -->
+include "private_product_detail.html"
+
+
+			<div class="product-tab">
+				<table>
+					<caption>상품 상세 메뉴</caption>
+					<tbody>
+						<tr>
+							<td>
+								<a href="#" class="selected">
+									<span class="new"><span class="inner">추가글 <em>3</em>건</span></span>
+									상세보기
+								</a>
+							</td>
+							<td>
+								<a href="#">
+									<span class="new"><span class="inner">새로운 글 <em>0</em>건</span></span>
+									Q &amp; A
+								</a>
+							</td>
+							<td><a href="#">상환내역</a></td>
+							<td><a href="#">대손</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+
+
+			<!-- 상세보기 -->
+			<section class="product-detail-view">
+				<h1>상세보기</h1>
+
+				<!-- 상품 특징 -->
+				<table class="product-feature">
+					<caption>상품 특징</caption>
+					<tbody>
+						<tr>
+							<td><span class="feature05">신용형 개인대출</span></td>
+							<td><span class="feature02">선착순 경매방식</span></td>
+							<td>
+								<a href="#" class="feature06">신용보고서 확인가능</a>
+								<span class="feature06 expired">신용보고서 확인가능</span>
+								<span class="feature06 disabled">신용보고서 확인가능</span>
+							</td>
+							<td>
+								<a href="#" class="feature07">소득보고서 유효기간 경과</a>
+								<span class="feature07 expired">소득보고서 유효기간 경과</span>
+								<span class="feature07 disabled">소득보고서 유효기간 경과</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				
+				<!--  팝펀딩에서 보관하고 있는 정보 -->
+				<div class="pd-container has-information">
+					<div class="inner">
+
+						<fieldset>
+							<legend>팝펀딩에서 보관하고 있는 정보</legend>
+
+							<input type="checkbox" id="info01" name="information" checked="checked" disabled="disabled"><label for="info01">신용보고서</label>
+							<input type="checkbox" id="info02" name="information" checked="checked" disabled="disabled"><label for="info02">소득보고서</label>
+							<input type="checkbox" id="info03" name="information" disabled="disabled"><label for="info03">핸드폰 번호</label>
+							<input type="checkbox" id="info04" name="information" disabled="disabled"><label for="info04">집전화 번호</label>
+							<input type="checkbox" id="info05" name="information" checked="checked" disabled="disabled"><label for="info05">회사전화번호</label>
+							<input type="checkbox" id="info06" name="information" disabled="disabled"><label for="info06">개인정보 서류</label>
+						</fieldset>
+
+						<p class="bad-debt">
+							정보들은 팝펀딩에서 보관하고 있습니다. 대손이 발생할 경우 투자자들에게 일부 공개됩니다.
+							<a href="#popup-bad-debt" class="btn-help">정보공개</a>
+						</p>	
+					</div>
+
+
+					<aside id="popup-bad-debt" class="bad-debt-popup">
+						<button class="btn-popup-close" data-target="#popup-bad-debt">팝업닫기</button>
+
+						<time datetime="">2015.11.18 / 11:30</time>
+						<h1>대손<em>(연체17일)</em>으로 개인정보를 공개합니다.</h1>
+						<table class="tbl">
+							<caption></caption>
+							<tbody>
+								<tr>
+									<td><span class="dot">이름 : 홍길동</span></td>
+									<td><span class="dot">핸드폰 : 010-5566-4422</span></td>
+									<td><span class="dot">집 전화 : 02- 5566-7799</span></td>
+									<td><span class="dot">직장 전화 : 031- 5566-7799</span></td>
+								</tr>
+								<tr>
+									<td colspan="4"><span class="dot">주민등록주소 :  서울특별시 용산구 한남대로 98 일신빌딩</span></td>
+								</tr>
+								<tr>
+									<td colspan="4"><span class="dot">실거주지주소 :  서울특별시 용산구 한남대로 98 일신빌딩 505호 606호</span></td>
+								</tr>
+							</tbody>
+						</table>
+					</aside>
+				</div>
+				<script>
+				$(window.document).ready(function(){
+					// 정보공개
+					var $btnHelp = $('.has-information .btn-help');
+					$btnHelp.on('click', function(e) {
+						e.preventDefault();
+						var target = $btnHelp.attr('href');
+						$(target).toggle();
+					});
+				});
+				</script>
+
+
+				<!-- 빌리는 사연 -->
+				<div id="story" class="pd-container story">
+					<div class="inner">
+						<h2 title="빌리는 사연">32살 아직 더 배워야 겠습니다.</h2>
+						
+						<p class="desc">
+							제가 월평균 210만원을 법니다.<br>
+							요번달부터 갑자기 회사일이 엄청 바빠져 토요일 일요일도 다 출근하고있구요. 이럴경우 한달에 250만원이상 들어옵니다.<br>
+							아파트보증금담보및 차량할부 75만원 / 신용대출 50만원 / 임대아파트 월임대료 15만원 개인회생 월납입금 48만원 / 차량은 회사차량 이용해 출퇴근중입니다.<br>
+							대출관련 상환은 다제월급으로 하고있고 남는돈+ 와이프가 알바해서 60만원정도 벌어서 생활비및 약간씩 대출 원금상환중입니다.<br>
+							<br>
+							제가 월평균 210만원을 법니다.<br>
+							요번달부터 갑자기 회사일이 엄청 바빠져 토요일 일요일도 다 출근하고있구요. 이럴경우 한달에 250만원이상 들어옵니다.<br>
+							아파트보증금담보및 차량할부 75만원 / 신용대출 50만원 / 임대아파트 월임대료 15만원 개인회생 월납입금 48만원 / 차량은 회사차량 이용해 출퇴근중입니다. 대출관련 상환은 다제월급으로 하고있고 남는돈+와이프가 알바해서 60만원정도 벌어서 생활비및 약간씩 대출 원금상환중입니다.<br>
+						</p>
+
+
+						<div class="add-story">
+							<time datetime="" class="update">2015.11.18 / 11:30</time>
+							<h3>추가글</h3>
+							<p class="desc">
+								제가 월평균 210만원을 법니다.<br>
+								요번달부터 갑자기 회사일이 엄청 바빠져 토요일 일요일도 다 출근하고있구요. 이럴경우 한달에 250만원이상 들어옵니다.<br>
+								아파트보증금담보및 차량할부 75만원 / 신용대출 50만원 / 임대아파트 월임대료 15만원 개인회생 월납입금 48만원 / 차량은 회사차량 이용해 출퇴근중입니다.<br>
+								대출관련 상환은 다제월급으로 하고있고 남는돈+ 와이프가 알바해서 60만원정도 벌어서 생활비및 약간씩 대출 원금상환중입니다.<br>
+								<br>
+								제가 월평균 210만원을 법니다.<br>
+								요번달부터 갑자기 회사일이 엄청 바빠져 토요일 일요일도 다 출근하고있구요. 이럴경우 한달에 250만원이상 들어옵니다.<br>
+							</p>
+						</div>
+					</div>
+				</div>
+
+
+				<!-- 상환계획 -->
+				<div class="pd-container repayment-plan">
+					<div class="inner">
+						<h2 title="상환 계획">성실히 상환하겠습니다.</h2>
+						
+						<p class="desc">
+							제가 월평균 210만원을 법니다.<br>
+							요번달부터 갑자기 회사일이 엄청 바빠져 토요일 일요일도 다 출근하고있구요. 이럴경우 한달에 250만원이상 들어옵니다.<br>
+							아파트보증금담보및 차량할부 75만원 / 신용대출 50만원 / 임대아파트 월임대료 15만원 개인회생 월납입금 48만원 / 차량은 회사차량 이용해 출퇴근중입니다.<br>
+							대출관련 상환은 다제월급으로 하고있고 남는돈+ 와이프가 알바해서 60만원정도 벌어서 생활비및 약간씩 대출 원금상환중입니다.<br>
+						</p>
+
+						<table class="tbl repayment-plan-detail">
+							<caption>상환 계획</caption>
+							<colgroup>
+								<col>
+								<col style="width: 163px;">
+								<col style="width: 70px;">
+							</colgroup>
+							<tfoot>
+								<tr>
+									<th colspan="2" class="r">팝펀딩 상환후 여유자금</th>	
+									<td class="r"><em>43만원</em></td>
+								</tr>
+							</tfoot>
+							<tbody>
+								<tr>
+									<td>
+										<ul class="replayment-item">
+											<li>직장급여 : 210만원</li>
+											<li>작업특근 : 40만원</li>
+										</ul>
+									</td>
+									<th class="r">월 소득</th>
+									<td class="r"><em>250만원</em></td>
+								</tr>
+								<tr>
+									<td>
+										<ul class="replayment-item">
+											<li class="strong"><strong>팝펀딩 월 상환액 : 19만원</strong></li>
+											<li>신용대출상환/이자 : 50만원</li>
+											<li>담보대출상환/이자 : 75만원</li>
+											<li>통신비(휴대폰/집전화/인터넷) : 15만원</li>
+											<li>차량유지비 : 40만원</li>
+										</ul>
+									</td>
+									<th class="r">월 지출</th>
+									<td class="r"><em>107만원</em></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+
+				<!-- 과거내역 -->
+				<div class="pd-container past-history">
+					<div class="inner">
+						<h2>과거내역</h2>	
+
+						<table class="tbl">
+							<caption>과거내역 목록</caption>
+							<colgroup>
+								<col>
+								<col style="width: 90px;">
+								<col style="width: 280px;">
+								<col style="width: 130px;">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>500만원 - 18개월 - 연 25%</th>
+									<td>B150721-1</td>
+									<td class="c"><time datetime="">2013.12.18</time> (빌림) - <time datetime="">2013.12.18</time> <em>(상환)</em></td>
+									<td class="r">월평균 연체 <em>5일</em></td>
+								</tr>
+								<tr>
+									<th>1000만원 - 18개월 - 연 25%</th>
+									<td>B150721-1</td>
+									<td class="c"><time datetime="">2013.12.18</time> (빌림) - <time datetime="">2013.12.18</time> <em>(상환)</em></td>
+									<td class="r">월평균 연체 <em>0.5일</em></td>
+								</tr>
+								<tr>
+									<th>500만원 - 18개월 - 연 25%</th>
+									<td>B150721-1</td>
+									<td class="c"><time datetime="">2013.12.18</time> (빌림) - <time datetime="">2013.12.18</time> <em>(상환)</em></td>
+									<td class="r">월평균 연체 <em>11일</em></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+
+				<!-- 서류정보 -->
+				<div class="pd-container documents">
+					<div class="inner">
+						<h2>서류정보</h2>
+
+						<ul class="list-documents">
+							<li><img src="http://placehold.it/92x116" alt=""></li>
+							<li><img src="http://placehold.it/92x116" alt=""></li>
+							<li><img src="http://placehold.it/92x116" alt=""></li>
+						</ul>
+
+					</div>
+				</div>
+
+
+				<!-- 기타정보 -->
+				<div class="pd-container etc">
+					<div class="inner">
+						<h2>기타정보</h2>
+
+						<table class="tbl">
+							<caption></caption>
+							<colgroup>
+								<col style="width: 25%">
+								<col style="width: 25%">
+								<col style="width: 25%">
+								<col style="width: 25%">
+							</colgroup>
+							<tbody>
+								<tr>
+									<td class="c">주거지명의 본인</td>
+									<td class="c">동거인 4명</td>
+									<td class="c">차량 소유</td>
+									<td class="c">개인회생중</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+			</section>
+
+			
+include "private_product_bottom_btns.html"
+
+		</div>
+	</article>
+	
+
+	<!-- 하단 영역 -->
+	include "footer.html"
+
+</body>
+</html>

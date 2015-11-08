@@ -37,6 +37,30 @@ body { background-color: $body-bg-color; }
 
 
 /**
+ * z-index
+**/
+$z-layers: (
+	'modal':            1000,
+	'modaless':          900,
+	'dropdown':          500,
+	'hover':             200,
+	'tooltip':           100,
+	'default':             1,
+	'bottomless-pit': -10000
+);
+
+@function z($layer) {
+	@if not map-has-key($z-layers, $layer) {
+		@warn "No layer found for `#{$layer}` in $z-layers map. Property omitted.";
+	}
+
+	@return map-get($z-layers, $layer);
+}
+
+
+
+
+/**
  * modules - buttons
  */
 @mixin btn-inline-txt($font-size:0.750em, $color:$color-menu2) {
@@ -77,6 +101,12 @@ body { background-color: $body-bg-color; }
 }
 .btn-top { display: block; text-indent: -9999px; @include sprite($sprite-btn-top01); }
 .btn-popup-close { display: block; text-indent: -9999px; @include sprite($sprite-btn-close01); }
+.btn-help { display: inline-block; font-size: 0.750em; color: $color-content; text-decoration: underline; line-height: 37px; white-space: nowrap;
+	&:before { content: ''; display: inline-block; margin-top: -1px; margin-right: 4px; vertical-align: middle; @include sprite($sprite-icon-help01); }
+	&:hover { color: $color-menu1-hover;
+		&:before { @include sprite($sprite-icon-help01-highlights); }
+	}
+}
 
 
 /**

@@ -9,7 +9,6 @@ body { position: relative; /*min-height: 800px;*/ min-width: 480px; margin: 0 au
 	text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 }
-input { font-family: $font-base-stack; }
 header, h1 { font-size: 100%; }
 html, body { height: 100%; }
 caption,legend { position: absolute; width:0; height: 0; font-size: 0; overflow: hidden; visibility: hidden; }
@@ -22,7 +21,7 @@ menu li { list-style: none; }
 address { display: inline; font-style: normal; }
 button { appearance: none; cursor: pointer; border: 0px; background-color: transparent; }
 table {border-collapse:collapse;border-spacing:0;}
-
+input, textarea, keygen, select, button { font-family: $font-base-stack; }
 
 /* link Style */
 a:link, a:visited, a:active, a:focus { text-decoration: none; }

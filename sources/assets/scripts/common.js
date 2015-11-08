@@ -20,7 +20,9 @@ $(document).ready(function (e) {
 	Header.init();
 	Main.init();
 	Product.init();
+	PrivateProduct.init();
 	Invest.init();
+	Popup.init();
 });
 
 
@@ -151,24 +153,25 @@ var Main = (function ($) {
 
 
 /********************************************************************************************/
-/****************************************** 상품 개별 ******************************************/
+/*********************************** 기업 투자 상품 목록 및 상품 ***********************************/
 /********************************************************************************************/
 var Product = (function ($) {
-	var scope,
-		_containerWidth = 0,
+	var _containerWidth = 0,
+		$container,
 		$listProducts,
 		$products,
 		$pawnSlider,
 
 		_isDetail = false,
 		init = function () {
-			$listProducts = $('.list-products');
-			$products = $('.product');
+			$container = $('.contents.invest');
+			$listProducts = $container.find('.list-products');
+			$products = $container.find('.product');
 			$thumbs = $products.find('> figure .thumb > img');
 			_containerWidth = $products.width();
 
 			_isDetail = $products.hasClass('detail');
-			$numbers = $('.convert.price');
+			$numbers = $container.find('.convert.price');
 
 			$pawnSlider = $('.pawn-photos .slider');
 			
@@ -261,6 +264,122 @@ var Product = (function ($) {
 
 
 
+
+/********************************************************************************************/
+/*********************************** 개인 투자 상품 목록 및 상품 ***********************************/
+/********************************************************************************************/
+var PrivateProduct = (function ($) {
+	var $container,
+		$listProducts,
+		$products,
+		$countAndRatings,
+		$numbers,
+
+		_isDetail = false,
+		init = function () {
+			$container = $('.contents.private-invest');
+			$listProducts = $container.find('.list-products');
+			$products = $container.find('.product');
+
+			_isDetail = $products.hasClass('detail');
+
+			$countAndRatings = $container.find('.convert.cr');
+			$numbers = $container.find('.convert.price');
+
+	 		initLayout();
+			initEvent();
+
+		};//end init
+
+	function initLayout() {
+		if( $numbers.length > 0 ) {
+			$numbers.each(function () {
+				convertNumberToImage($(this));
+			});
+		}
+		if( $countAndRatings.length > 0 ) {
+			$countAndRatings.each(function () {
+				convertCRToImage($(this));
+			});
+		}
+	}
+
+	function initEvent() {
+	}
+
+
+	function convertCRToImage($element) {
+		var value = $.trim($element.text().toLowerCase());
+		var convert = '';
+
+		var array = value.split('');
+
+		if( $element.closest('.borrowing-count').length > 0 ) {
+			convert += '<em class="bid' + array[0] + '">' + array[0] + '</em>\n';
+		} else if( $element.closest('.credit-rating').length > 0 ) {
+			convert += '<em class="overdue-' + array[0] + '">' + array[0] + '</em>';
+		}
+		$element.html(convert);
+	}
+
+	function convertNumberToImage($element) {
+		var array = $element.text().split('');
+		var convert = '';
+		for( var i=0; i<array.length; i++ ) {
+			if( array[i] == '%' ) {
+				convert += '<span class="price-percent">' + array[i] + '</span>';
+			} else {
+				convert += '<span class="price' + array[i] + '">' + array[i] + '</span>';
+			}
+		}
+		$element.html(convert);
+	}
+
+	return {
+		init: function () {
+			init();
+		}
+	};
+}(jQuery));
+
+
+
+
+/********************************************************************************************/
+/******************************************* 팝업 ********************************************/
+/********************************************************************************************/
+var Popup = (function ($) {
+	var $btnClose,
+		init = function () {
+			$btnClose = $('button.btn-popup-close');
+
+			initLayout();
+			initEvent();
+		};//end init
+
+	function initLayout() {
+
+	}
+
+	function initEvent() {
+		if( $btnClose.length > 0 ) {
+			$btnClose.on('click', function(e) {
+				var target = $(this).data('target');
+				$(target).hide();
+			});
+		}
+	}
+
+	return {
+		init: function() {
+			init();
+		}
+	};
+}(jQuery));
+
+
+
+
 /********************************************************************************************/
 /****************************************** 투자하기 ******************************************/
 /********************************************************************************************/
@@ -313,8 +432,8 @@ var Invest = (function ($) {
 	}
 
 	function bindPopupBtns($element, isMessage, callback) {
-		var $btnCloase = $element.find('.btn-popup-close');
-		$btnCloase.on('click', function(e) {
+		var $btnClose = $element.find('.btn-popup-close');
+		$btnClose.on('click', function(e) {
 			var target = $(this).data('target');
 			if( isMessage ) {
 				closeMessage($element);

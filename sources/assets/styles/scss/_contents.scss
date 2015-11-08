@@ -67,7 +67,7 @@
 
 		display: block; position: relative; overflow: hidden; min-height: $product-height; color: $color-title; border: 1px solid #d4dae4; border-radius: $border-radius; background-color: #fff;
 
-		> .options { overflow: hidden; position: absolute; top: 0; right: 0; left: 0; z-index: 1; height: $thumb-height;
+		> .options { overflow: hidden; position: absolute; top: 0; right: 0; left: 0; z-index: z("default"); height: $thumb-height;
 			> em { position: absolute; position: absolute; top: 0; left: 0; text-indent: -9999px; }
 			> .invest-type01 { border-radius: $border-radius 0px 0px 0px; @include sprite($sprite-badge-invest01); }
 			> .invest-type02 { border-radius: $border-radius 0px 0px 0px; @include sprite($sprite-badge-invest02); }
@@ -91,7 +91,7 @@
 		}
 
 		> figure {
-			> .thumb { display: block; position: relative; z-index: 0; overflow: hidden; height: $thumb-height; width: 100%; border-radius: $border-radius $border-radius 0px 0px;
+			> .thumb { display: block; position: relative; z-index: z("default") - 1; overflow: hidden; height: $thumb-height; width: 100%; border-radius: $border-radius $border-radius 0px 0px;
 				> img { display: none; position: absolute; left: 0; max-height: 100%; }
 			}
 			> .info { position: relative; padding: 38px 29px 0 29px; border-top: 1px solid #e6e9ee;
@@ -123,15 +123,15 @@
 		}
 		&:hover > .hover { display: block; animation-duration: 0.3s; }
 		> .hover {
-			display: none; overflow: hidden; position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 1; height: 100%; width: 100%; text-align: center; border-radius: $border-radius;
-			> button { display: block; position: absolute; top: 20px; right: 20px; z-index: 2; font-size: 12px; color: #c2c6d0; vertical-align: middle; line-height: 18px; 
+			display: none; overflow: hidden; position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: z("default"); height: 100%; width: 100%; text-align: center; border-radius: $border-radius;
+			> button { display: block; position: absolute; top: 20px; right: 20px; z-index: z("default") + 1; font-size: 12px; color: #c2c6d0; vertical-align: middle; line-height: 18px; 
 				&:before { content: ''; display: inline-block; margin-top: -4px; margin-right: 5px; vertical-align: middle; @include sprite($sprite-bg-star01); }
 				&:hover { text-decoration: underline; }
 				&.selected:before { @include sprite($sprite-bg-star01-selected); }
 			}
 			> span { font-size: 24px; color: #fff; line-height: $product-height; }
 
-			&:before { content: ''; display: block; position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: -1; height: 100%; width: 100%; background: url(/assets/images/bg_product_highlights.png) left top repeat; }
+			&:before { content: ''; display: block; position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: z("default") - 2; height: 100%; width: 100%; background: url(/assets/images/bg_product_highlights.png) left top repeat; }
 		}
 
 
@@ -197,8 +197,8 @@
 			}
 
 			> .hover {
-				display: block; overflow: hidden; position: absolute; top: 0; right: 0; bottom: auto; left: auto; z-index: 2; height: 92px; width: 51px;
-				> button { display: block; position: absolute; top: 16px; right: 9px; z-index: 2; width: 30px; font-size: 12px; color: #c2c6d0; vertical-align: middle; line-height: 16px;
+				display: block; overflow: hidden; position: absolute; top: 0; right: 0; bottom: auto; left: auto; z-index: z("default") + 1; height: 92px; width: 51px;
+				> button { display: block; position: absolute; top: 16px; right: 9px; z-index: z("default") + 1; width: 30px; font-size: 12px; color: #c2c6d0; vertical-align: middle; line-height: 16px;
 					&:before { content: ''; display: block; margin: 0 auto 8px auto; @include sprite($sprite-bg-star01); }
 				}
 				> span { display: none; }

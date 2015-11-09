@@ -293,12 +293,14 @@ article.contents { min-width: $contents-container-width; padding: 100px 0 80px 0
 
 
 
-/* POPUP */
+/* INVEST POPUP */
 .invest-popup { position: absolute; bottom: 0; left: 50%; z-index: z("modal"); animation-duration: 0.3s;
 	> .inner { position: relative; left: -50%; padding: 54px 193px 27px 193px;; width: 504px; border: 1px solid #d4dae4; background-color: #d6ebf6;
 		> .btn-popup-close { position: absolute; top: 14px; right: 14px; }
 		> h1 { font-size: 22px; line-height: 1.2em; }
-		> p { margin-top: 14px; font-size: 14px; line-height: 1.2em; }
+		> p { margin-top: 14px; font-size: 16px; line-height: 24px;
+			> em { color: $color-point1; }
+		}
 
 
 		> .remain { overflow: hidden; padding: 0 23px 0 27px; font-size: 0.875em; color: $color-point3;
@@ -343,11 +345,31 @@ article.contents { min-width: $contents-container-width; padding: 100px 0 80px 0
 			}
 		}
 
-		> .btns { margin-top: 39px;
-			.btn-normal { display: inline-block; padding: 0px 22px 0 22px; height: 35px; font-size: 15px; color: #142c66; line-height: 34px; border: 1px solid #d4dae4; border-radius: 35px; background-color: #fff; }
+		> .btns { margin-top: 36px;
+			.btn-normal { display: inline-block; padding: 0px 22px 0 22px; font-size: 16px; color: #142c66; line-height: 35px; border: 1px solid #d4dae4; border-radius: 35px; background-color: #fff; }
 		}
 
-		.coupon-container { overflow: auto; position: absolute; bottom: 0px; max-height: 224px; width: 523px; border-top: 1px solid #d4dae4; border-right: 2px solid #d4dae4; border-bottom: 1px solid #d4dae4; border-left: 1px solid #d4dae4; background-color: #fff;
+		.coupon-container { overflow: auto; position: absolute; bottom: 0px; padding: 0 20px; width: 533px; border: 2px solid #d4dae4; background-color: #fff;
+			&:before { content: ''; display: block; position: absolute; top: 0; left: 0; @include sprite($sprite-badge-coupon01); }
+			.tbl-list-coupon { width: 100%;
+				> tbody > tr { background-color: #fff;
+					td {
+						height: 56px; font-size: 0.875em; color: $color-content; border-bottom: 1px solid #e9ecf1;
+
+						.btn-coupon { display: inline-block; width: 70px; font-size: 12px; color: $color-content; text-align: center; line-height: 24px; border: 1px solid #c3d0e1; border-radius: 5px; background-color: #fff; }
+					}
+
+					&.selected {
+						td {
+							color: $color-menu1-hover;
+						}	
+					}
+
+					&:hover { background-color: #f4f5f8; }
+				}
+			}
+
+
 			.list-coupon { overflow: hidden; margin-right: 14px;
 				> li { float: left; width: 50%; border-top: 1px solid #d4dae4; border-bottom: 1px solid #d4dae4;
 					> a { display: block; height: 111px;
@@ -389,7 +411,15 @@ article.contents { min-width: $contents-container-width; padding: 100px 0 80px 0
 	}
 
 	&.message { color: $color-menu1; text-align: center;
-		> .inner { padding: 110px 0 0 0; height: 227px; width: 558px; }
+		> .inner { padding: 73px 0 55px 0; width: 478px; }
+
+		&.confirm {
+			> .inner {
+				p { margin-top: 18px; }
+
+				> .btns { margin-top: 36px; }
+			}
+		}
 	}
 
 }

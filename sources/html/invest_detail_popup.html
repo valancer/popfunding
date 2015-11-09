@@ -1,0 +1,310 @@
+include "head.html"
+
+
+	<!-- 본문 영역 -->
+	<article class="contents invest">
+		<h1>투자하기</h1>
+
+		<div class="inner" style="position: absolute; top: 0; right: 0; bottom: 0; left: 35%;">
+
+
+				<div class="invest-popup-container">
+
+					<!-- 투자하기 팝업 -->
+					<aside id="popup-invest" class="invest-popup invest" style="top: 0; bottom: auto; left: 0;">
+						<fieldset class="inner">
+							<legend>투자금액 입력</legend>
+							<button class="btn-popup-close" data-target="#popup-invest">팝업닫기</button>
+
+							<p class="remain">
+								<em class="current">오천만원</em>
+								계좌잔액 <span class="balance">570,000,000</span>원
+							</p>
+
+							<div class="type">
+								<p class="input-price">
+									<label for="price">참가금액</label>
+									<input type="text" id="price" name="price" value="">
+								</p>
+								<p class="type-options">
+									<span class="btns">
+										<button>100만원</button>
+										<button>10만원</button>
+										<button>1만원</button>
+										<button>삭제</button>
+									</span>
+
+									투자단위 1만원
+									<!-- <span class="msg">현재 570,000,000원 참가중</span> -->
+								</p>
+							</div>
+
+							<div class="type">
+								<a href="#" class="btn-invest">투자하기</a>
+								<div class="type-options">
+									<span class="btns">
+										<button>쿠폰 투자하기</button>
+										<p class="message">회원님은 사용할 쿠폰이 없습니다.</p>
+									</span>
+
+									<a href="#" class="btn-shortcut">쿠폰 병합/분활 바로가기</a>
+								</div>
+							</div>
+
+						</fieldset>
+					</aside>
+
+
+					<!-- 완료 메시지 -->
+					<aside id="popup-invest-message" class="invest-popup message animated fadeIn" style="top: 0; right: 0px; bottom: auto; left: auto;">
+						<div class="inner">
+							<button class="btn-popup-close" data-target="#popup-invest-message">팝업닫기</button>
+
+							<h1>투자가 완료되었습니다.</h1>
+							<p>회원님의 참가금액은 5,000,000원입니다.</p>
+
+							<p class="btns">
+								<button class="btn-normal">확인</button>
+							</p>
+						</div>
+					</aside>
+
+
+					<!-- 금액 수정하기 팝업 -->
+					<aside id="popup-invest" class="invest-popup invest" style="top: 400px; bottom: auto; left: 0;">
+						<fieldset class="inner">
+							<legend>투자금액 입력</legend>
+							<button class="btn-popup-close" data-target="#popup-invest">팝업닫기</button>
+
+							<p class="remain">
+								<em class="current">오천만원</em>
+								계좌잔액 <span class="balance">570,000,000</span>원
+							</p>
+
+							<div class="type">
+								<p class="input-price">
+									<label for="price">참가금액</label>
+									<input type="text" id="price" name="price" class="small" value="500,000원 + 쿠폰 10,000원">
+									<!-- 쿠폰 포함일 경우 class="small" 추가 -->
+								</p>
+								<p class="type-options">
+									<span class="btns">
+										<button>100만원</button>
+										<button>10만원</button>
+										<button>1만원</button>
+										<button>삭제</button>
+									</span>
+
+									투자단위 1만원
+									<!-- <span class="msg">현재 570,000,000원 참가중</span> -->
+								</p>
+							</div>
+
+							<div class="type">
+								<a href="#" class="btn-invest">투자하기</a>
+								<div class="type-options">
+									<span class="btns">
+										<button>쿠폰 투자하기</button>
+									</span>
+
+									<a href="#" class="btn-shortcut">쿠폰 병합/분활 바로가기</a>
+								</div>
+							</div>
+
+							<div class="coupon-container">
+								<table class="tbl-list-coupon">
+									<caption>쿠폰목록</caption>
+									<tbody>
+										<tr>
+											<td>
+												<span class="title">쿠폰 0044896</span>
+											</td>
+											<td>
+												<p>
+													<time datetime="2015.09.01 00:00">2015.9.1</time>
+													~
+													<time datetime="2015.10.01 00:00">2015.10.1</time>
+												</p>
+											</td>
+											<td>
+												<strong>100,000원</strong>
+											</td>
+											<td class="c">
+												<a href="#" class="btn-coupon">사용하기</a>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<span class="title">쿠폰 0044896</span>
+											</td>
+											<td>
+												<p>
+													<time datetime="2015.09.01 00:00">2015.9.1</time>
+													~
+													<time datetime="2015.10.01 00:00">2015.10.1</time>
+												</p>
+											</td>
+											<td>
+												<strong>100,000원</strong>
+											</td>
+											<td class="c">
+												<a href="#" class="btn-coupon">사용하기</a>
+											</td>
+										</tr>
+										<tr class="selected">
+											<td>
+												<span class="title">쿠폰 0044896</span>
+											</td>
+											<td>
+												<p>
+													<time datetime="2015.09.01 00:00">2015.9.1</time>
+													~
+													<time datetime="2015.10.01 00:00">2015.10.1</time>
+												</p>
+											</td>
+											<td>
+												<strong>100,000원</strong>
+											</td>
+											<td class="c">
+												<a href="#" class="btn-coupon">사용하기</a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>	<!-- class="coupon-container" -->
+
+						</fieldset>
+					</aside>
+
+
+					<!-- 완료 메시지 -->
+					<aside id="popup-invest-message" class="invest-popup message animated fadeIn" style="top: 400px; right: 0px; bottom: auto; left: auto;">
+						<div class="inner">
+							<button class="btn-popup-close" data-target="#popup-invest-message">팝업닫기</button>
+
+							<h1>금액이 수정되었습니다.</h1>
+							<p>회원님의 참가금액은 5,000,000원입니다.</p>
+
+							<p class="btns">
+								<button class="btn-normal">확인</button>
+							</p>
+						</div>
+					</aside>
+
+
+
+					<!-- 취소하기 팝업(컨펌 형태) -->
+					<aside id="popup-invest-message" class="invest-popup message confirm animated fadeIn" style="top: 800px; right: auto; bottom: auto; left: 0;">
+						<div class="inner">
+							<button class="btn-popup-close" data-target="#popup-invest-message">팝업닫기</button>
+
+							<h1>투자를 취소하겠습니까?</h1>
+							<p>투자취소 이후에 펀드가 마감되면<br><em>더 이상의 투자는 안됩니다.</em></p>
+
+							<p class="btns">
+								<button class="btn-normal" value="true">예</button>
+								<button class="btn-normal" value="false">아니오</button>
+							</p>
+						</div>
+					</aside>
+
+
+
+					<!-- 수익금 계산기 팝업 -->
+					<aside id="popup-calc" class="invest-popup calc" style="top: 1100px; right: auto; bottom: auto; left: 0;">
+						<fieldset class="inner">
+							<legend>수익금 계산 입력</legend>
+							<button class="btn-popup-close" data-target="#popup-calc">팝업닫기</button>
+
+							<p class="remain">
+								<em class="current">오천만원</em>
+								계좌잔액 <span class="balance">570,000,000</span>원
+							</p>
+
+							<div class="type">
+								<p class="input-price">
+									<label for="price-calc">참가금액</label>
+									<input type="text" id="price-calc" name="price-calc" value="">
+								</p>
+								<p class="type-options">
+									<span class="btns">
+										<button>100만원</button>
+										<button>10만원</button>
+										<button>1만원</button>
+										<button>삭제</button>
+									</span>
+
+									투자단위 1만원
+								</p>
+							</div>
+
+							<div class="type">
+								<a href="#" class="btn-invest">수익금 계산하기</a>
+								<div class="type-options">
+									<ul class="list-dot">
+										<li>이 펀드는 6개월만기 일시상환, 연11%로 계산됩니다.</li>
+										<li>수익금에서 세금 27.5%, 서비스 이용료 7.25%가 청구됩니다.</li>
+									</ul>
+								</div>	
+							</div>
+						</fieldset>
+					</aside>
+
+					
+
+					<!-- 수익금 계산 후 -->
+					<aside id="popup-calc-after" class="invest-popup calc-after" style="top: 1500px; right: auto; bottom: auto; left: 0;">
+						<fieldset class="inner">
+							<legend>수익금 계산 후 입력</legend>
+							<button class="btn-popup-close" data-target="#popup-calc-after">팝업닫기</button>
+
+							<div class="type">
+								<p class="input-price">
+									<label for="price-calc-after">예상 수익금</label>
+									<input type="text" id="price-calc-after" name="price-calc-after" readonly="readonly" value="285,500원">
+								</p>
+								<p class="type-options">
+									<span class="msg">회원님이 2,500,000원을 투자할때, 6개월 후 예상수익입니다.</span>
+								</p>
+							</div>
+
+							<div class="type">
+								<a href="#" class="btn-invest recalc">다시 계산하기</a>
+								<a href="#" class="btn-invest invest">투자하러 가기</a>
+
+								<div class="type-options">
+									<ul class="list-dot">
+										<li>이 펀드는 6개월만기 일시상환, 연11%로 계산됩니다.</li>
+										<li>수익금에서 세금 27.5%, 서비스 이용료 7.25%가 청구됩니다.</li>
+									</ul>
+								</div>	
+							</div>
+							<script>
+							$(document).ready(function() {
+								// 메시지 확인용 임시 영역 - 투자하기
+								var $btnReCalc = $('#popup-calc-after a.btn-invest.recalc');
+								var $btnInvest = $('#popup-calc-after a.btn-invest.invest');
+								$btnReCalc.on('click', function(e) {
+									e.preventDefault();
+									console.log('recalc');
+									Invest.openCalc();
+								});
+
+								$btnInvest.on('click', function(e) {
+									e.preventDefault();
+									console.log('invest');
+									Invest.openInvest();
+								});
+							});
+							</script>
+						</fieldset>
+					</aside>
+				</div>	<!-- class="invest-popup-container" -->
+
+
+		</div>
+	</article>
+
+
+</body>
+</html>

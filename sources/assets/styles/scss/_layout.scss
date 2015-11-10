@@ -349,19 +349,36 @@ article.contents { min-width: $contents-container-width; padding: 100px 0 80px 0
 			.btn-normal { display: inline-block; padding: 0px 22px 0 22px; font-size: 16px; color: #142c66; line-height: 35px; border: 1px solid #d4dae4; border-radius: 35px; background-color: #fff; }
 		}
 
-		.coupon-container { overflow: auto; position: absolute; bottom: 0px; padding: 0 20px; width: 533px; border: 2px solid #d4dae4; background-color: #fff;
-			&:before { content: ''; display: block; position: absolute; top: 0; left: 0; @include sprite($sprite-badge-coupon01); }
+		.coupon-container { overflow: auto; position: absolute; top: 50%; margin-top: -142px; padding: 0 20px; height: 284px; width: 533px; border: 2px solid #d4dae4; background-color: #fff;
+			&:before { content: ''; display: block; position: absolute; top: 0; left: 0; z-index: z("default"); @include sprite($sprite-badge-coupon01); }
 			.tbl-list-coupon { width: 100%;
 				> tbody > tr { background-color: #fff;
-					td {
-						height: 56px; font-size: 0.875em; color: $color-content; border-bottom: 1px solid #e9ecf1;
+					td { position: relative; height: 56px; font-size: 0.875em; color: $color-content; border-bottom: 1px solid #e9ecf1;
 
-						.btn-coupon { display: inline-block; width: 70px; font-size: 12px; color: $color-content; text-align: center; line-height: 24px; border: 1px solid #c3d0e1; border-radius: 5px; background-color: #fff; }
+						&.c { padding: 0 10px; text-align: center; }
+						&.r { padding-right: 5px; text-align: right; }
+						
+						.title { line-height: 27px;
+							&:before { content: ''; display: inline-block; margin: 0px 10px 0 0; vertical-align: middle; @include sprite($sprite-icon-coupon01); }
+						}
+						.duration { position: relative; float: left; line-height: 27px;
+							&:before { content: '/'; position: absolute; top: 50%; left: -15px; margin-top: -13px; color: $color-desc; }
+							&:after { content: '/'; position: absolute; top: 50%; right: -15px; margin-top: -13px; color: $color-desc; }
+						}
+						strong { color: $color-point2; line-height: 27px; }
+						.btn-coupon { display: inline-block; width: 70px; font-size: 12px; color: $color-content; text-align: center; line-height: 24px; border: 1px solid #c3d0e1; border-radius: 5px; background-color: #fff;
+							&:hover { text-decoration: none; }
+						}
 					}
 
 					&.selected {
 						td {
 							color: $color-menu1-hover;
+							.title {
+								&:before { @include sprite($sprite-icon-coupon01-selected); }
+							}
+							strong { color: $color-menu1-hover; }
+							.btn-coupon { color: $color-menu1-hover; border: 1px solid #f0d4db; }
 						}	
 					}
 

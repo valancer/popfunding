@@ -45,7 +45,7 @@
 				</p>
 
 
-				<div class="invest-product expired">	<!-- expired -->
+				<div class="invest-product">	<!-- expired -->
 					<p class="utils">
 						<a href="#" class="btn calc">수익금 계산기</a>
 						<a href="#" class="btn update">참가금액 수정</a>
@@ -66,7 +66,7 @@
 
 						Invest.confirm({
 							title: '투자를 취소하겠습니까?',
-							msg: '투자취소 이후에 펀드가 마감되면 더 이상의 투자는 안됩니다.'
+							msg: '투자취소 이후에 펀드가 마감되면<br><em>더 이상의 투자는 안됩니다.</em>'
 						}, function(value) {
 							if( value == 'true' ) {
 								Invest.message({

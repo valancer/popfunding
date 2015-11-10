@@ -191,7 +191,7 @@
 
 			margin-top: 40px; height: auto;
 
-			> .options { height: $product-height;
+			> .options { height: $product-height; border-bottom: 1px solid #d4dae4; 
 				> em { }
 				> .invest-type01 { @include sprite($sprite-badge-invest03-detail); }
 				> .new { @include sprite($sprite-badge-new03-detail); }
@@ -199,7 +199,7 @@
 				> .favorate { top: 17px; right: 19px; left: auto; @include sprite($sprite-icon-favorate01-selected); }
 			}
 
-			> .profile { position: relative; z-index: z("hover"); margin: 0 auto; width: 251px; text-align: center; border-bottom: 1px solid #d4dae4; }
+			> .profile { position: relative; z-index: z("hover"); margin: 0 auto; width: 251px; text-align: center; }
 
 			> .user-info { display: block; position: absolute; top: 86px; left: 189px; z-index: z("tooltip"); padding: 14px 20px 19px 20px; width: 208px; border: 2px solid #d4dae4; border-radius: $border-radius; background-color: #fff;
 				&:before { content: ''; display: block; position: absolute; top: 93px; right: -100px; height: 2px; width: 100px; background-color: #d4dae4; }

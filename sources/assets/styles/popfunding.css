@@ -1207,6 +1207,38 @@ article.contents {
         border: 1px solid #d4dae4;
         border-radius: 35px;
         background-color: #fff; }
+    .invest-popup > .inner > .private-guide {
+      overflow: hidden;
+      margin: 44px -140px 0 -100px; }
+      .invest-popup > .inner > .private-guide li {
+        display: block;
+        position: relative;
+        float: left;
+        padding: 0 60px 0 8px;
+        font-size: 0.750em;
+        color: #6b7581;
+        line-height: 18px; }
+        .invest-popup > .inner > .private-guide li:before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 8px;
+          left: 0;
+          height: 2px;
+          width: 2px;
+          background-color: #6b7581; }
+        .invest-popup > .inner > .private-guide li em {
+          color: #ff6000; }
+        .invest-popup > .inner > .private-guide li + li:after {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: -30px;
+          height: 100%;
+          width: 1px;
+          background-color: #c1d3df; }
     .invest-popup > .inner .coupon-container {
       overflow: auto;
       position: absolute;
@@ -3332,7 +3364,8 @@ article.contents {
     margin-top: 40px;
     height: auto; }
     .contents.private-invest .product.detail > .options {
-      height: 320px; }
+      height: 320px;
+      border-bottom: 1px solid #d4dae4; }
       .contents.private-invest .product.detail > .options > .invest-type01 {
         background-image: url(/assets/images/sprites.png);
         background-position: -424px -192px;
@@ -3363,8 +3396,7 @@ article.contents {
       z-index: 200;
       margin: 0 auto;
       width: 251px;
-      text-align: center;
-      border-bottom: 1px solid #d4dae4; }
+      text-align: center; }
     .contents.private-invest .product.detail > .user-info {
       display: block;
       position: absolute;

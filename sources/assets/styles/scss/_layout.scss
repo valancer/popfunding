@@ -349,6 +349,18 @@ article.contents { min-width: $contents-container-width; padding: 100px 0 80px 0
 			.btn-normal { display: inline-block; padding: 0px 22px 0 22px; font-size: 16px; color: #142c66; line-height: 35px; border: 1px solid #d4dae4; border-radius: 35px; background-color: #fff; }
 		}
 
+		/// 개인 투자 하단 설명
+		> .private-guide { overflow: hidden; margin: 44px -140px 0 -100px;;
+			li { display: block; position: relative; float: left; padding: 0 60px 0 8px; font-size: 0.750em; color: $color-content; line-height: 18px;
+				&:before { content: ''; display: block; position: absolute; top: 8px; left: 0; height: 2px; width: 2px; background-color: $color-content; }
+				em { color: $color-point1; }
+
+				& + li {
+					&:after { content: ''; display: block; position: absolute; top: 0; bottom: 0; left: -30px; height: 100%; width: 1px; background-color: #c1d3df; }
+				}
+			}
+		}
+
 		.coupon-container { overflow: auto; position: absolute; top: 50%; margin-top: -142px; padding: 0 20px; height: 284px; width: 533px; border: 2px solid #d4dae4; background-color: #fff;
 			&:before { content: ''; display: block; position: absolute; top: 0; left: 0; z-index: z("default"); @include sprite($sprite-badge-coupon01); }
 			.tbl-list-coupon { width: 100%;

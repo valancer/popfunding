@@ -566,6 +566,7 @@ var Invest = (function ($) {
 			$(this).removeClass('fadeOut').remove();
 			_isOpen = false;
 		});
+
 	}
 
 	function closeMainPopup($element) {

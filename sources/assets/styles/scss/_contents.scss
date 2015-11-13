@@ -6,7 +6,7 @@
 		input[type=radio] { position: absolute; top: -9999px; left: -9999px;
 			&.selected + label { color: $color-menu1-hover; }
 		}
-		label { font-size: 1.125em; color: $color-menu1; cursor: pointer; line-height: 37px;
+		label { font-size: 1.063em; font-weight: bold; color: $color-menu1; cursor: pointer; line-height: 37px;
 			&:hover { color: $color-menu1-hover; }
 			+ input[type=radio] + label {
 				&:before { content: '|'; display: inline-block; margin-right: 20px; margin-left: 16px; color: #dee1e7; text-decoration: none; }
@@ -35,7 +35,7 @@ $border-inner-color: #e6e9ee;
 					&.selected { color: $color-menu1; border-bottom: 1px solid #fff; background-color: #fff; }
 
 					> .new { display: block; position: absolute; top: -21px; left: 50%;
-						.inner { display: block; position: relative; left: -50%; padding: 1px 15px 0 15px; font-size: 12px; color: $color-content; line-height: 28px; border: 1px solid #c3d0e1; border-radius: 5px; background-color: #fff;
+						.inner { display: block; position: relative; left: -50%; padding: 0 15px; font-size: 12px; color: $color-content; line-height: 29px; border: 1px solid #c3d0e1; border-radius: 5px; background-color: #fff;
 							&:before { content: ''; display: block; position: absolute; bottom: -$sprite-bg-arrow08-height; left: 50%; margin-left: -$sprite-bg-arrow08-width/2; @include sprite($sprite-bg-arrow08); }
 						}
 
@@ -66,6 +66,8 @@ $border-inner-color: #e6e9ee;
 				&.price8 { @include sprite($sprite-price8-s); }
 				&.price9 { @include sprite($sprite-price9-s); }
 				&.price-comma { @include sprite($sprite-price-comma-s); }
+				&.price-percent { @include sprite($sprite-price-percent-s); }
+				&.price-won { @include sprite($sprite-price-won-s); }
 			}
 		}
 	}
@@ -122,7 +124,7 @@ $border-inner-color: #e6e9ee;
 			}
 			> .info { position: relative; padding: 38px 29px 0 29px; border-top: 1px solid #e6e9ee;
 				> .sub-info {
-					.title { font-size: 1.125em; font-weight: normal; line-height: 1em; }
+					.title { margin-left: -2px; font-size: 1.125em; font-weight: normal; line-height: 1em; }
 					time { display: block; margin-top: 8px; font-size: 0.813em; color: $color-point1; }
 					.desc { display: none; font-size: 0.875em; color: $color-content; line-height: 20px; }
 				}
@@ -130,7 +132,7 @@ $border-inner-color: #e6e9ee;
 					.p-i { overflow: hidden;
 						> p { float: left; position: relative; margin-top: 16px; padding-right: 14px; text-align: left;
 							> span { display: block; padding-bottom: 2px; font-size: 0.750em; color: $color-desc; }
-							> em { display: block; font-size: 20px; line-height: 1.2em; }
+							> em { display: block; margin-top: 2px; font-size: 20px; line-height: 1.2em; }
 
 							&.price { }
 							&.interest { padding-left: 14px; position: relative;
@@ -155,7 +157,7 @@ $border-inner-color: #e6e9ee;
 				&:hover { text-decoration: underline; }
 				&.selected:before { @include sprite($sprite-bg-star01-selected); }
 			}
-			> span { font-size: 24px; color: #fff; line-height: $product-height; }
+			> span { font-size: 22px; font-weight: bold; color: #fff; line-height: $product-height; }
 
 			&:before { content: ''; display: block; position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: z("default") - 2; height: 100%; width: 100%; background: url(/assets/images/bg_product_highlights.png) left top repeat; }
 		}
@@ -177,7 +179,7 @@ $border-inner-color: #e6e9ee;
 				> .thumb { height: $thumb-height; }
 				> .info { overflow: hidden; padding: 46px 39px 0 39px;
 					> .sub-info { display: block; float: left; padding-right: 25px; width: 352px;
-						.title { font-size: 1.500em; }
+						.title { font-size: 1.375em; font-weight: bold; }
 						time { margin-top: 12px; font-size: 0.875em; }
 						.desc { display: block; margin-top: 23px; }
 					}
@@ -191,7 +193,7 @@ $border-inner-color: #e6e9ee;
 								&.price {}
 								&.interest { padding-left: 29px; position: relative;
 									> span { padding-left: 2px; }
-									> em:before { height: 32px; bottom: 4px; }
+									> em:before { height: 32px; bottom: 0px; }
 								}
 
 								em.convert {
@@ -208,6 +210,8 @@ $border-inner-color: #e6e9ee;
 											&.price8 { @include sprite($sprite-price8-b); }
 											&.price9 { @include sprite($sprite-price9-b); }
 											&.price-comma { @include sprite($sprite-price-comma-b); }
+											&.price-percent { @include sprite($sprite-price-percent-b); }
+											&.price-won { @include sprite($sprite-price-won-b); }
 										}
 									}
 								}
@@ -271,7 +275,7 @@ $border-inner-color: #e6e9ee;
 
 
 /// 상품 상세 컨테이너
-.product-detail-view { padding-bottom: 100px; border: 1px solid $border-color; border-top: 0px; background-color: #fff;
+.product-detail-view { padding-bottom: 90px; border: 1px solid $border-color; border-top: 0px; background-color: #fff;
 	> h1 { display: none; }
 	h2 { font-size: 1.125em; font-weight: normal; color: $color-title;
 		.bar { display: inline-block; margin: -2px 9px 0 10px;; height: 17px; width: 1px; vertical-align: middle; background-color: #d7dde5; }
@@ -366,12 +370,12 @@ $border-inner-color: #e6e9ee;
 
 
 	/// 기업투자 - 담보물 실사
-	.pawn-photos { border-top: 1px solid $border-inner-color;
+	.pawn-photos { padding-bottom: 0px; border-top: 1px solid $border-inner-color;
 		> .inner { margin: 0 auto; width: 585px;
 			h2 { float: left; }
 			time { float: right; font-size: 0.750em; color: $color-content; }
 			.slider { clear: both; padding-top: 30px;
-				.slick-dots { margin-top: 16px; text-align: center;
+				.slick-dots { margin-top: 16px; height: 6px; text-align: center;
 					> li { display: inline-block; padding: 0 2px;
 						button { display: block; height: 3px; width: 39px; text-indent: -9999px; background-color: #bac3d0; }
 						&.slick-active > button { background-color: #1369ec; }
@@ -418,7 +422,7 @@ $border-inner-color: #e6e9ee;
 				&:after { content: ''; display: block; position: absolute; top: -9px; left: 6px; @include sprite($sprite-icon-story01); }
 			}
 			h3 { font-size: 1.000em; font-weight: normal; color: $color-point1; }
-			.desc { margin-top: 13px; font-size: 0.875em; color: $color-content; line-height: 22px; }
+			.desc { margin-top: 28px; font-size: 0.875em; color: $color-content; line-height: 22px; }
 
 			.add-story { margin-top: 36px; padding-top: 40px; border-top: 1px solid $border-inner-color;
 				.desc { margin-top: 25px; }
@@ -462,7 +466,7 @@ $border-inner-color: #e6e9ee;
 				&:before { content: attr(title); display: block; margin-bottom: 11px; font-size: 18px; }
 				&:after { content: ''; display: block; position: absolute; top: -36px; left: -12px; @include sprite($sprite-icon-repayment01); }
 			}
-			.desc { margin-top: 13px; font-size: 0.875em; color: $color-content; line-height: 22px; }
+			.desc { margin-top: 28px; font-size: 0.875em; color: $color-content; line-height: 22px; }
 
 			.add-story { margin-top: 36px; padding-top: 40px; border-top: 1px solid $border-inner-color;
 				.desc { margin-top: 25px; }
@@ -507,17 +511,17 @@ $border-inner-color: #e6e9ee;
 				strong { font-weight: normal; color: $color-point1; }
 			}
 		}
-		> .write-question { position: relative; margin-top: 60px; padding: 7px 24px 20px 62px; background-color: #f8f9fb;
+		> .write-question { position: relative; margin-top: 60px; padding: 7px 0 0px 62px; background-color: #f8f9fb;
 			&:before { content: ''; position: absolute; top: 12px; left: 14px; @include sprite($sprite-bg-question01); }
-			> p { overflow: hidden; margin-right: 38px; line-height: 38px; border-bottom: 2px solid #99d7fe;
+			> p { overflow: hidden; margin-right: 62px; line-height: 40px; border-bottom: 2px solid #99d7fe;
 				.user { float: right; font-size: 0.875em; color: $color-content;
 					> time:before { content: '|'; display: inline-block; margin-right: 8px; margin-left: 6px; color: #d8e3ef; }
 				}
 				input[type=text] { display: block; height: 38px; width: 80%; font-size: 1.000em; color: $color-title; line-height: 38px; border: 0px; background-color: transparent; }
 			}
-			textarea { overflow: auto; margin-top: 13px; height: 80px; width: 100%; font-size: 0.875em; color: $color-content; line-height: 22px; border: 0px; background-color: transparent; }
+			textarea { overflow: auto; padding-top: 9px; height: 87px; width: 100%; font-size: 0.875em; color: $color-content; line-height: 22px; border: 0px; background-color: transparent; }
 		}
-		> .btn-question { display: block; margin: 20px auto 0 auto; height: 37px; min-width: 154px; font-size: 0.875em; color: #fff; text-align: center; line-height: 37px; border-radius: 37px; background-color: #2e96d6;
+		> .btn-question { display: block; margin: 20px auto 0 auto; height: 37px; min-width: 154px; font-size: 0.875em; font-weight: bold; color: #fff; text-align: center; line-height: 37px; border-radius: 37px; background-color: #2e96d6;
 			&:hover { text-decoration: none; background-color: #2389cf; }
 		}
 	}
@@ -526,8 +530,8 @@ $border-inner-color: #e6e9ee;
 	/// qna list
 	.qna-contents { padding: 50px 131px 0px 69px; 
 		.list-qna { 
-			> li { padding-top: 50px;
-				.title { font-size: 1.143em; color: $color-title; line-height: 40px; border-bottom: 2px solid #b7e3ff;
+			> li { padding-top: 37px; padding-bottom: 13px;
+				.title { padding-bottom: 1px; font-size: 1.143em; color: $color-title; line-height: 40px; border-bottom: 2px solid #b7e3ff;
 					.user { float: right; font-size: 0.875em; color: $color-content;
 						> time:before { content: '|'; display: inline-block; margin-right: 8px; margin-left: 6px; color: #d8e3ef; }
 					}
@@ -535,13 +539,13 @@ $border-inner-color: #e6e9ee;
 
 				> div { position: relative; margin-top: 16px; padding: 0 0 0 60px; font-size: 0.875em; color: $color-content; line-height: 22px;
 					&:before { content: ''; position: absolute; top: 8px; left: 12px; }
-					> p { margin-top: 5px; color: $color-content; }
+					> p { margin-top: 10px; color: $color-content; }
 				}
 
 				.question { 
 					&:before { @include sprite($sprite-bg-question01); }
 				}
-				.answer {
+				.answer { margin-top: 22px;
 					.title { border-bottom: 2px solid #ffd3de; }
 					&:before { top: 10px; @include sprite($sprite-bg-answer01); }
 				}
@@ -569,6 +573,13 @@ $border-inner-color: #e6e9ee;
 
 	/// 상환내역
 	&.repayment { padding: 90px 69px 95px 69px;
+		/// 필터
+		.filter-container {
+			.filter {
+				label { font-size: 1.000em; }
+			}
+		}
+
 		.tb-repayment { width: 100%; margin-top: 30px;
 			thead {
 				tr { background-color: #2e91d8;

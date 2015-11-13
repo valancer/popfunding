@@ -103,7 +103,7 @@
 			> li { float: left; box-sizing: border-box; width: 50%; border-right: 1px solid #37559d;
 				&:first-child { border-left: 1px solid #37559d; }
 				> a {
-					display: block; font-size: 1.125em; color: #798cbb; font-weight: 700; text-align: center; line-height: 50px;
+					display: block; font-size: 1.250em; font-weight: bold; color: #798cbb; text-align: center; line-height: 50px;
 					&:hover { color: #dee1e9; text-decoration: none; background-color: #142e6e; }
 					&.selected { color: #dee1e9; }
 				}
@@ -156,7 +156,7 @@
 
 
 /* CONTENTS */
-article.contents { min-width: $contents-container-width; padding: 100px 0 80px 0;
+article.contents { min-width: $contents-container-width; padding: 100px 0 110px 0;
 	> h1 { display: none; }
 	> .inner { @include inner-container(); }
 
@@ -311,7 +311,7 @@ article.contents { min-width: $contents-container-width; padding: 100px 0 80px 0
 		}
 
 		> .type { padding-bottom: 25px;
-			.input-price { display: block; overflow: hidden; margin-top: 14px; padding: 12px 0 10px 0; border: 1px solid #d4d8e1; border-radius: 53px; box-shadow: inset 1px 1px 4px 0 #e7ebf3; background-color: #fff;
+			.input-price { display: block; overflow: hidden; margin-top: 10px; padding: 11px 0 11px 0; border: 1px solid #d4d8e1; border-radius: 53px; box-shadow: inset 1px 1px 4px 0 #e7ebf3; background-color: #fff;
 				> label { float: left; display: block; padding: 0 25px; font-size: 1.000em; color: $color-title; line-height: 31px; }
 				> input[type=text] { display: block; width: 340px; font-size: 24px; color: #000; line-height: 31px; text-align: center; border: 0px; border-left: 1px solid #d4d8e1;
 					&.small { font-size: 20px; }
@@ -320,16 +320,16 @@ article.contents { min-width: $contents-container-width; padding: 100px 0 80px 0
 
 			.btn-invest { box-sizing: border-box; margin-bottom: 5px; width: 100%; }
 
-			.type-options { padding: 5px 23px 0 27px; font-size: 0.875em; color: $color-content; line-height: 31px;
+			.type-options { padding: 2px 23px 0 27px; font-size: 0.875em; color: $color-content; line-height: 31px;
 				.msg { color: $color-point1;
 					&:before { content: ''; display: inline-block; margin-right: 4px; @include sprite($sprite-icon-check01); }
 				}
 
-				.btns { float: right; position: relative;
+				.btns { float: right; position: relative; margin-top: 3px;
 					button { display: inline-block; margin-left: 2px; padding: 0 10px; font-size: 0.929em; color: $color-menu2; line-height: 29px; border: 1px solid #c3d0e1; border-radius: 5px; box-shadow: 1px 1px 3px 0 #c2d8eb; background-color: #fff;
 						&:active { transform: translate(1px,1px); background-color: #e7f3fa; }
 					}
-					> .message { display: block; position: absolute; left: -55px; z-index: z("default"); padding-right: 12px; padding-left: 17px; height: 34px; font-size: 0.750em; color: $color-content; line-height: 34px; white-space: nowrap; border: 1px solid #c3d0e1; border-radius: 3px; background-color: #fff;
+					> .message { display: block; position: absolute; left: -55px; z-index: z("default"); padding-right: 12px; padding-left: 17px; height: 34px; font-size: 0.857em; color: $color-content; line-height: 34px; white-space: nowrap; border: 1px solid #c3d0e1; border-radius: 3px; background-color: #fff;
 						&:after { content: ''; display: block; position: absolute; top: -$sprite-bg-arrow07-height; left: 79px; @include sprite($sprite-bg-arrow07); }
 					}
 				}
@@ -346,7 +346,9 @@ article.contents { min-width: $contents-container-width; padding: 100px 0 80px 0
 		}
 
 		> .btns { margin-top: 36px;
-			.btn-normal { display: inline-block; padding: 0px 22px 0 22px; font-size: 16px; color: #142c66; line-height: 35px; border: 1px solid #d4dae4; border-radius: 35px; background-color: #fff; }
+			.btn-normal { display: inline-block; padding: 0px 22px 0 22px; font-size: 16px; color: #142c66; line-height: 35px; border: 1px solid #d4dae4; border-radius: 35px; background-color: #fff;
+				&:hover { text-decoration: none; }
+			}
 		}
 
 		/// 개인 투자 하단 설명
@@ -370,7 +372,7 @@ article.contents { min-width: $contents-container-width; padding: 100px 0 80px 0
 						&.c { padding: 0 10px; text-align: center; }
 						&.r { padding-right: 5px; text-align: right; }
 						
-						.title { line-height: 27px;
+						.title { padding-left: 15px; line-height: 27px;
 							&:before { content: ''; display: inline-block; margin: 0px 10px 0 0; vertical-align: middle; @include sprite($sprite-icon-coupon01); }
 						}
 						.duration { position: relative; float: left; line-height: 27px;

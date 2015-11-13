@@ -236,14 +236,18 @@ var Product = (function ($) {
 	function convertNumberToImage($element) {
 		var array = $element.text().split('');
 		var convert = '';
-		for( var i=0; i<array.length-1; i++ ) {
+		for( var i=0; i<array.length; i++ ) {
 			if( array[i] == "," ) {
 				convert += '<span class="price-comma">' + array[i] + '</span>';
+			} else if( array[i] == '%' ) {
+				convert += '<span class="price-percent">' + array[i] + '</span>';
+			} else if( array[i] == '원' ) {
+				convert += '<span class="price-won">' + array[i] + '</span>';
 			} else {
 				convert += '<span class="price' + array[i] + '">' + array[i] + '</span>';
 			}
 		}
-		convert += array[array.length-1];
+		// convert += array[array.length-1];
 		$element.html(convert);
 	}
 
@@ -366,7 +370,7 @@ var PrivateProduct = (function ($) {
 var Popup = (function ($) {
 	var $btnClose,
 		init = function () {
-			$btnClose = $('button.btn-popup-close');
+			$btnClose = $('.popup button.btn-popup-close');
 
 			initLayout();
 			initEvent();

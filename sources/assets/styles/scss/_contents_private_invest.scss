@@ -84,7 +84,7 @@
 
 		display: block; position: relative; overflow: hidden; height: $product-height; color: $color-title; border: 1px solid #d4dae4; border-radius: $border-radius; background-color: #fff;
 
-		> .options { overflow: hidden; position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: z("tooltip") + 1; border-radius: $border-radius 0 0 0;
+		> .options { overflow: hidden; position: absolute; top: 0; right: 0; bottom: 0; left: 0; border-radius: $border-radius 0 0 0;
 			> em { position: absolute; position: absolute; top: 0; left: 0; text-indent: -9999px; }
 			> .invest-type01 { border-radius: $border-radius 0px 0px 0px; @include sprite($sprite-badge-invest03); }
 			> .new { @include sprite($sprite-badge-new03); }
@@ -92,7 +92,7 @@
 			> .favorate { top: 14px; right: 14px; left: auto; @include sprite($sprite-icon-favorate01-selected); }
 		}
 
-		> .trust-ratings { display: block; float: left; position: relative; padding: 28px 0 0 0; height: $product-height - 28px; width: 254px; border-right: 1px solid #e6e9ee; border-radius: $border-radius 0 0 0;
+		> .trust-ratings { display: block; float: left; position: relative; z-index: z("default"); padding: 28px 0 0 0; height: $product-height - 28px; width: 254px; border-right: 1px solid #e6e9ee; border-radius: $border-radius 0 0 0;
 			> p { float: left; }
 			.borrowing-purposes { margin-right: 6px; height: 84px; width: 104px;
 				> .tooltip { left: 19px; }

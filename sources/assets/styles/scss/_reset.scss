@@ -29,7 +29,7 @@ a:link, a:visited, a:active, a:focus { text-decoration: none; }
 a:hover { text-decoration: underline; }
 
 .hidden { display: none; }
-
+.clear { clear: both; }
 
 /* forms */
 input[type=submit] { appearance: none; cursor: pointer; border: 0px; }

@@ -324,7 +324,55 @@ $border-inner-color: #e6e9ee;
 
 	/// 기업투자 - 처분예상가
 	.goal { border-top: 1px solid $border-inner-color;
-		.chart { margin-top: 20px; background-color: #0f0; }
+		.chart { overflow: hidden; padding-top: 20px; padding-bottom: 0px;
+			.bar { float: left; position: relative; padding: 42px 0 0 58px; height: 258px; width: 452px;
+				.container { position: relative; padding-top: 20px; height: 192px; width: 320px; border-left: 2px solid #cdd4de; border-bottom: 2px solid #cdd4de;
+					.item { display: block; float: left; position: relative; height: 100%; width: 25%;
+						&:after { content: attr(title); display: block; position: absolute; bottom: -26px; width: 100%; font-size: 14px; color: $color-content; text-align: center; white-space: nowrap; }
+						.stick { display: block; position: absolute; bottom: 0; left: 50%; margin-left: -13px; height: auto; width: 25px; background-color: #4cbaff;
+							&.first { background-color: $color-menu1-hover; }
+							em { display: block; margin-top: -18px; font-size: 14px; color: $color-title; letter-spacing: -0.1em; }
+						}
+					}
+				}
+
+			}
+
+			.circle { position: relative; float: right; height: 300px; width: 510px; background: url('/assets/images/bg_chart_circle.png') left top no-repeat;
+				&:after { content: ''; display: block; position: absolute; height: 100%; width: 100%; background: url('/assets/images/bg_chart_circle_point.png') left top no-repeat; }
+				#chart-circle { display: block; position: absolute; top: 30px; left: 127px; height: 240px; width: 240px; }
+
+				.amount { font-size: 0.750em; color: $color-content;
+					em { display: block; margin-top: 6px; font-size: 16px; color: $color-point3; }
+					&.expected { position: absolute; top: -3px; left: 0; }
+					&.application { position: absolute; top: 30px; left: 402px; 
+						em { color: $color-point1; }
+					}
+				}
+				.rate { display: block; position: absolute; top: 120px; right: 193px; left: 183px; font-size: 0.750em; color: $color-content; line-height: 16px; text-align: center;
+					p { margin-top: 10px; }
+					em.convert {
+						&.price {
+							span { display: inline-block; margin-right: 1px; height: 32px; text-indent: -9999px; vertical-align: middle;
+								&.price0 { @include sprite($sprite-price0-b); }
+								&.price1 { @include sprite($sprite-price1-b); }
+								&.price2 { @include sprite($sprite-price2-b); }
+								&.price3 { @include sprite($sprite-price3-b); }
+								&.price4 { @include sprite($sprite-price4-b); }
+								&.price5 { @include sprite($sprite-price5-b); }
+								&.price6 { @include sprite($sprite-price6-b); }
+								&.price7 { @include sprite($sprite-price7-b); }
+								&.price8 { @include sprite($sprite-price8-b); }
+								&.price9 { @include sprite($sprite-price9-b); }
+								&.price-comma { @include sprite($sprite-price-comma-b); }
+								&.price-percent { @include sprite($sprite-price-percent-b); }
+								&.price-won { @include sprite($sprite-price-won-b); }
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 
 

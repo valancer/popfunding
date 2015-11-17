@@ -53,6 +53,7 @@ include "product_detail.html"
 
 
 			<!-- 상세보기 -->
+			<script src="/assets/scripts/libs/raphael.2.1.4.min.js"></script>
 			<section class="product-detail-view">
 				<h1>상세보기</h1>
 
@@ -75,10 +76,95 @@ include "product_detail.html"
 						처분 예상가란, 팝펀딩이 담보물을 직접 매도할때의 가격입니다.<br>
 						창고 실사와 쇼핑몰 확인 등의 과정을 통해, 안전한 투자가 되도록 설정합니다.<br>
 					</p>
+
 					<div class="chart">
-						차트영역
+						<!-- bar -->
+						<div class="bar">
+							
+							<div class="container">
+								<div class="item" title="현재">
+									<span class="stick first" style="height: 100%;">
+										<em>320,000,000</em>	
+									</span>
+								</div>
+								<div class="item" title="3개월 후">
+									<span class="stick" style="height: 93.75%;">
+										<em>300,000,000</em>
+									</span>
+								</div>
+								<div class="item" title="6개월 후">
+									<span class="stick" style="height: 87.5%;">
+										<em>280,000,000</em>
+									</span>
+								</div>
+								<div class="item" title="9개월 후">
+									<span class="stick" style="height: 68.75%;">
+										<em>220,000,000</em>
+									</span>
+								</div>
+							</div>
+
+						</div>
+
+						<!-- circle -->
+						<div class="circle">
+							<div id="chart-circle"></div>
+
+							<div class="amount expected">
+								처분 예상가
+								<em>166,000,000</em>
+							</div>
+
+							<div class="amount application">
+								신청금액
+								<em>120,000,000</em>
+							</div>
+
+							<div class="rate">
+								<em class="convert price">72,3%</em>
+								<p>처분예상가 대비<br>신청금액 비율</p>
+							</div>
+						</div>
 					</div>
 				</div>
+				<script>
+				$(window.document).ready(function(){
+					var archtype = Raphael("chart-circle", 240, 240);
+
+					archtype.customAttributes.arc = function (xloc, yloc, value, total, R) {
+						var alpha = 360 / total * value,
+							a = (90 - alpha) * Math.PI / 180,
+							x = xloc + R * Math.cos(a),
+							y = yloc - R * Math.sin(a),
+							path;
+
+						if( total == value ) {
+							path = [
+								["M", xloc, yloc - R],
+								["A", R, R, 0, 1, 1, xloc - 0.01, yloc - R]
+							];
+						} else {
+							path = [
+								["M", xloc, yloc - R],
+								["A", R, R, 0, +(alpha > 180), 1, x, y]
+							];
+						}
+						return {
+							path: path
+						};
+					};
+
+					var chart_circle = archtype.path().attr({
+						"stroke": "#ff507d",
+						"stroke-width": 34,
+						arc: [120, 120, 72.3, 100, 103]
+					});
+					chart_circle.rotate(80, 120, 120)
+					// chart_circle.animate({
+					// 	arc: [120, 120, 72.3, 100, 103]
+					// }, 1500, "bounce");
+				});
+				</script>
 
 
 				<aside class="pd-container manager">

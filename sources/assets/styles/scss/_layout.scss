@@ -457,3 +457,144 @@ article.contents { min-width: $contents-container-width; padding: 100px 0 110px 
 
 
 
+
+/* MEMBERSHIP POPUP */
+.popup.membership { position: relative; overflow: hidden; margin: 130px auto 0 auto; padding: 0 119px; width: 920px; text-align: center; border: 1px solid #d4dae4; border-radius: 18px; background-color: #fff;
+	> .left { float: left; padding-top: 53px; padding-right: 99px; width: 360px; }
+	> .right { float: left; padding-top: 53px; padding-left: 100px; width: 360px; border-left: 1px solid #d4dae4; }
+
+	.mfp-close { top: 19px; right: 19px; text-indent: -9999px; @include sprite($sprite-btn-close01); }
+
+	h1 { font-size: 1.375em; font-weight: bold; color: $color-title; line-height: 1.2em; }
+
+
+	/// 로그인
+	&.login {
+		.left {
+			.btn-submit { margin-top: 155px; }
+		}
+		.membership-form { padding: 48px 0 77px 0; }
+	}
+
+	/// 회원가입
+	&.signup {
+		.left {
+			.membership-form { margin-top: 165px; }
+		}
+		.right {
+			.membership-form { padding: 69px 0 126px 0;
+				.btn-submit { margin-top: 31px; }
+			}
+		}
+	}
+
+	/// 회원가입 완료
+	&.signup-complete { padding-top: 52px;
+		> .left { 
+			&:before { content: ''; display: block; margin: 0 auto 20px auto; height: 183px; width: 181px; background: url('/assets/images/membership01.png') left top no-repeat; }
+		}
+		> .right { border-left: 0px;
+			&:before { content: ''; display: block; margin: 0 auto 20px auto; height: 183px; width: 177px; background: url('/assets/images/membership02.png') left top no-repeat; }
+			.needs { &:before { background-color: #52b924; } }
+			.btn-submit { background-color: #52b924; }
+		}
+
+		.message { margin-top: 36px; margin-bottom: 6px; font-size: 0.875em; color: $color-content; line-height: 22px;
+			> strong { display: block; margin-bottom: 5px; color: $color-menu1-hover; }
+		}
+
+		.needs { position: relative; margin-top: 20px; padding: 0 0 0 10px; font-size: 0.750em; color: $color-content; line-height: 18px; text-align: left;
+			&:before { content: ''; display: block; position: absolute; top: 6px; left: 0; height: 6px; width: 6px; border-radius: 6px; background-color: $color-menu1-hover; }
+			> a { color: $color-content; text-decoration: underline; }
+		}
+
+		.addon { clear: both; margin-top: 52px; padding-top: 49px; padding-bottom: 54px;
+			.warning { margin-top: 13px; }
+		}
+	}
+	
+	.btn-submit { display: block; width: 100%; font-size: 14px; font-weight: bold; color: #fff; line-height: 40px; text-decoration: none; border-radius: 2px; background-color: $color-menu1-hover;
+		&.fb { text-align: center; background-color: #3a99e8;
+			&:before { content: ''; display: inline-block; margin-right: 11px; vertical-align: bottom; @include sprite($sprite-icon-fb02); }
+		}
+		+ .warning { margin-top: 30px; }
+	}
+	.warning { position: relative; padding-left: 32px; font-size: 0.750em; color: $color-content; text-align: left; line-height: 18px;
+		&:before { content: ''; display: block; position: absolute; top: -1px; left: 0; @include sprite($sprite-icon-iks01); }
+
+		&.inline { display: inline-block; vertical-align: middle;
+			&:before { top: 50%; margin-top: -$sprite-icon-iks01-height/2; }
+		}
+	}
+
+	.notice {
+		> li { font-size: 0.750em; color: $color-content; line-height: 28px;
+			a { color: $color-content; text-decoration: underline; }
+		}
+	}
+
+	.tooltip { display: block; position: absolute; bottom: -27px; z-index: z("tooltip"); padding: 7px 13px 6px 13px; font-size: 0.750em; color: $color-menu1-hover; text-align: left; line-height: 16px; white-space: nowrap; border: 1px solid #d9bac2; border-radius: 4px; background-color: #fff;
+		&:before { content: ''; display: block; position: absolute; top: -$sprite-bg-arrow12-height; left: 43px; @include sprite($sprite-bg-arrow12); }
+	}
+
+
+	.argreement-form { margin-top: 24px; }
+	.membership-form { text-align: left;
+		.column {
+			.item-form { clear: none; float: left; width: 50%;
+				&:first-child { box-sizing: border-box; padding-right: 10px; }
+			}
+		}
+
+		/// 입력 폼
+		.item-form { position: relative; clear: both;
+			label { display: block; margin-top: 12px; font-size: 0.750em; color: $color-content; line-height: 28px; }
+			input[type=text],
+			input[type=password] { display: block; box-sizing: border-box; padding: 0 0 0 16px; height: 38px; width: 100%; font-size: 1.000em; color: $color-title; line-height: 38px; border: 1px solid #bec3cd; border-radius: 2px; background-color: #fff; }
+
+			+ .warning { margin-top: 8px; }
+		}
+
+		/// checkbox, radio button
+		.cr-box { position: relative; margin-top: 10px; margin-bottom: 3px;
+			input[type=checkbox],
+			input[type=radio] { position: absolute; left: -9999px; }
+
+			input[type=checkbox] {
+				+ label {
+					&:before { content: ''; display: block; position: absolute; top: 0; left: 0; @include sprite($sprite-icon-check05); }
+				}
+
+				&.checked + label,
+				&:checked + label {
+					&:before { @include sprite($sprite-icon-check05-selected); }
+				}
+			}
+			label { display: inline-block; position: relative; cursor: pointer; padding-left: 22px; font-size: 12px; color: $color-content;
+				> a { color: $color-content; text-decoration: underline; }
+			}
+
+			.tooltip { top: -38px; bottom: auto; 
+				&:before { top: auto; bottom: -$sprite-bg-arrow13-height; @include sprite($sprite-bg-arrow13); }
+			}
+		}
+
+		/// submit button
+		.btn-submit { margin-top: 40px; }
+
+		.find-info { float: right; margin-top: 10px;
+			a { font-size: 0.750em; color: $color-content; text-decoration: underline;
+				&:after { content: ''; display: inline-block; margin-left: 4px; @include sprite($sprite-bg-arrow11); }
+				&.none { &:after { content: none; } }
+			}
+		}
+	}
+
+	.addon { clear: both; overflow: hidden; margin: 0 -119px; padding: 34px 0 43px 0; border-top: 1px solid #d4dae4;
+		> .left { float: left; width: 50%; }
+		> .right { float: left; width: 50%; text-align: center; }
+	}
+
+}
+
+

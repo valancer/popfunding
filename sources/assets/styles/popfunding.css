@@ -3,6 +3,7 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 @import url(animate.min.css);
 @import url(slick.css);
+@import url(magnific-popup.css);
 /**
  * variable
  */
@@ -98,6 +99,9 @@ a:hover {
 .hidden {
   display: none; }
 
+.clear {
+  clear: both; }
+
 /* forms */
 input[type=submit] {
   -webkit-appearance: none;
@@ -185,7 +189,7 @@ body {
   margin-left: 5px;
   vertical-align: middle;
   background-image: url(/assets/images/sprites.png);
-  background-position: -296px -237px;
+  background-position: -613px -493px;
   width: 11px;
   height: 8px; }
 
@@ -202,6 +206,18 @@ body {
   .filter-container .btn-rd:hover {
     color: #ff4776;
     text-decoration: none; }
+
+.btn-rd-small {
+  display: inline-block;
+  padding: 0 18px 0 18px;
+  font-size: 12px;
+  color: #6b7581;
+  text-align: center;
+  vertical-align: center;
+  line-height: 28px;
+  border: 1px solid #d4dae4;
+  border-radius: 30px;
+  background-color: #fff; }
 
 .btn-tip {
   display: inline-block;
@@ -237,7 +253,7 @@ body {
     margin-left: 9px;
     vertical-align: middle;
     background-image: url(/assets/images/sprites.png);
-    background-position: -293px -540px;
+    background-position: -613px -361px;
     width: 11px;
     height: 18px; }
   .btn-invest:hover {
@@ -281,14 +297,14 @@ body {
     margin-right: 4px;
     vertical-align: middle;
     background-image: url(/assets/images/sprites.png);
-    background-position: -514px -473px;
+    background-position: -533px -473px;
     width: 14px;
     height: 13px; }
   .btn-help:hover {
     color: #ff4776; }
     .btn-help:hover:before {
       background-image: url(/assets/images/sprites.png);
-      background-position: -533px -473px;
+      background-position: -514px -473px;
       width: 14px;
       height: 13px; }
 
@@ -410,7 +426,7 @@ body {
             bottom: -3px;
             left: 40%;
             background-image: url(/assets/images/sprites.png);
-            background-position: -613px -289px;
+            background-position: -623px -324px;
             width: 3px;
             height: 3px; }
   .header .user {
@@ -441,7 +457,7 @@ body {
         left: 10px;
         z-index: 1;
         background-image: url(/assets/images/sprites.png);
-        background-position: -469px -382px;
+        background-position: -293px -540px;
         width: 18px;
         height: 14px; }
       .header .user > .credit-rating > span {
@@ -499,19 +515,19 @@ body {
           .header .user > .credit-rating > span > em.bid0 {
             margin-right: -2px;
             background-image: url(/assets/images/sprites.png);
-            background-position: -179px -573px;
+            background-position: -242px -573px;
             width: 16px;
             height: 30px; }
           .header .user > .credit-rating > span > em.bid1 {
             margin-right: -2px;
             background-image: url(/assets/images/sprites.png);
-            background-position: -613px -70px;
+            background-position: -613px -107px;
             width: 9px;
             height: 30px; }
           .header .user > .credit-rating > span > em.bid2 {
             margin-right: -2px;
             background-image: url(/assets/images/sprites.png);
-            background-position: -158px -573px;
+            background-position: -179px -573px;
             width: 16px;
             height: 30px; }
           .header .user > .credit-rating > span > em.bid3 {
@@ -523,19 +539,19 @@ body {
           .header .user > .credit-rating > span > em.bid4 {
             margin-right: -2px;
             background-image: url(/assets/images/sprites.png);
-            background-position: -492px -270px;
+            background-position: -93px -573px;
             width: 17px;
             height: 30px; }
           .header .user > .credit-rating > span > em.bid5 {
             margin-right: -2px;
             background-image: url(/assets/images/sprites.png);
-            background-position: -221px -573px;
+            background-position: -158px -573px;
             width: 16px;
             height: 30px; }
           .header .user > .credit-rating > span > em.bid6 {
             margin-right: -2px;
             background-image: url(/assets/images/sprites.png);
-            background-position: -242px -573px;
+            background-position: -200px -573px;
             width: 16px;
             height: 30px; }
           .header .user > .credit-rating > span > em.bid7 {
@@ -547,18 +563,18 @@ body {
           .header .user > .credit-rating > span > em.bid8 {
             margin-right: -2px;
             background-image: url(/assets/images/sprites.png);
-            background-position: -137px -573px;
+            background-position: -221px -573px;
             width: 16px;
             height: 30px; }
           .header .user > .credit-rating > span > em.bid9 {
             margin-right: -2px;
             background-image: url(/assets/images/sprites.png);
-            background-position: -200px -573px;
+            background-position: -137px -573px;
             width: 16px;
             height: 30px; }
           .header .user > .credit-rating > span > em.overdue-none {
             background-image: url(/assets/images/sprites.png);
-            background-position: -93px -573px;
+            background-position: -492px -270px;
             width: 17px;
             height: 30px; }
           .header .user > .credit-rating > span > em.overdue-a {
@@ -616,7 +632,7 @@ body {
         bottom: -6px;
         left: 68px;
         background-image: url(/assets/images/sprites.png);
-        background-position: -613px -267px;
+        background-position: -570px -242px;
         width: 6px;
         height: 6px; }
       .header .user > .message:after {
@@ -626,7 +642,7 @@ body {
         top: -6px;
         left: 68px;
         background-image: url(/assets/images/sprites.png);
-        background-position: -613px -278px;
+        background-position: -613px -587px;
         width: 6px;
         height: 6px; }
       .header .user > .message.first {
@@ -999,17 +1015,17 @@ article.contents {
           vertical-align: bottom; }
           article.contents.main .sns-shortcut > ul > li a.btn-blog {
             background-image: url(/assets/images/sprites.png);
-            background-position: -556px -348px;
+            background-position: -344px -491px;
             width: 24px;
             height: 28px; }
           article.contents.main .sns-shortcut > ul > li a.btn-facebook {
             background-image: url(/assets/images/sprites.png);
-            background-position: -344px -491px;
+            background-position: -286px -491px;
             width: 24px;
             height: 28px; }
           article.contents.main .sns-shortcut > ul > li a.btn-kakao {
             background-image: url(/assets/images/sprites.png);
-            background-position: -286px -491px;
+            background-position: -556px -348px;
             width: 24px;
             height: 28px; }
   article.contents.filelist {
@@ -1161,7 +1177,7 @@ article.contents {
               top: -7px;
               left: 79px;
               background-image: url(/assets/images/sprites.png);
-              background-position: -613px -219px;
+              background-position: -613px -506px;
               width: 10px;
               height: 7px; }
         .invest-popup > .inner > .type .type-options .btn-shortcut {
@@ -1288,7 +1304,7 @@ article.contents {
                 margin: 0px 10px 0 0;
                 vertical-align: middle;
                 background-image: url(/assets/images/sprites.png);
-                background-position: -514px -274px;
+                background-position: -514px -242px;
                 width: 51px;
                 height: 27px; }
             .invest-popup > .inner .coupon-container .tbl-list-coupon > tbody > tr td .duration {
@@ -1328,7 +1344,7 @@ article.contents {
             color: #ff4776; }
             .invest-popup > .inner .coupon-container .tbl-list-coupon > tbody > tr.selected td .title:before {
               background-image: url(/assets/images/sprites.png);
-              background-position: -514px -242px;
+              background-position: -514px -274px;
               width: 51px;
               height: 27px; }
             .invest-popup > .inner .coupon-container .tbl-list-coupon > tbody > tr.selected td strong {
@@ -1418,6 +1434,300 @@ article.contents {
     .invest-popup.message.confirm > .inner > .btns {
       margin-top: 36px; }
 
+/* MEMBERSHIP POPUP */
+.popup.membership {
+  position: relative;
+  overflow: hidden;
+  margin: 130px auto 0 auto;
+  padding: 0 119px;
+  width: 920px;
+  text-align: center;
+  border: 1px solid #d4dae4;
+  border-radius: 18px;
+  background-color: #fff; }
+  .popup.membership > .left {
+    float: left;
+    padding-top: 53px;
+    padding-right: 99px;
+    width: 360px; }
+  .popup.membership > .right {
+    float: left;
+    padding-top: 53px;
+    padding-left: 100px;
+    width: 360px;
+    border-left: 1px solid #d4dae4; }
+  .popup.membership .mfp-close {
+    top: 19px;
+    right: 19px;
+    text-indent: -9999px;
+    background-image: url(/assets/images/sprites.png);
+    background-position: -223px -491px;
+    width: 28px;
+    height: 28px; }
+  .popup.membership h1 {
+    font-size: 1.375em;
+    font-weight: bold;
+    color: #252525;
+    line-height: 1.2em; }
+  .popup.membership.login .left .btn-submit {
+    margin-top: 155px; }
+  .popup.membership.login .membership-form {
+    padding: 48px 0 77px 0; }
+  .popup.membership.signup .left .membership-form {
+    margin-top: 165px; }
+  .popup.membership.signup .right .membership-form {
+    padding: 69px 0 126px 0; }
+    .popup.membership.signup .right .membership-form .btn-submit {
+      margin-top: 31px; }
+  .popup.membership.signup-complete {
+    padding-top: 52px; }
+    .popup.membership.signup-complete > .left:before {
+      content: '';
+      display: block;
+      margin: 0 auto 20px auto;
+      height: 183px;
+      width: 181px;
+      background: url("/assets/images/membership01.png") left top no-repeat; }
+    .popup.membership.signup-complete > .right {
+      border-left: 0px; }
+      .popup.membership.signup-complete > .right:before {
+        content: '';
+        display: block;
+        margin: 0 auto 20px auto;
+        height: 183px;
+        width: 177px;
+        background: url("/assets/images/membership02.png") left top no-repeat; }
+      .popup.membership.signup-complete > .right .needs:before {
+        background-color: #52b924; }
+      .popup.membership.signup-complete > .right .btn-submit {
+        background-color: #52b924; }
+    .popup.membership.signup-complete .message {
+      margin-top: 36px;
+      margin-bottom: 6px;
+      font-size: 0.875em;
+      color: #6b7581;
+      line-height: 22px; }
+      .popup.membership.signup-complete .message > strong {
+        display: block;
+        margin-bottom: 5px;
+        color: #ff4776; }
+    .popup.membership.signup-complete .needs {
+      position: relative;
+      margin-top: 20px;
+      padding: 0 0 0 10px;
+      font-size: 0.750em;
+      color: #6b7581;
+      line-height: 18px;
+      text-align: left; }
+      .popup.membership.signup-complete .needs:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 6px;
+        left: 0;
+        height: 6px;
+        width: 6px;
+        border-radius: 6px;
+        background-color: #ff4776; }
+      .popup.membership.signup-complete .needs > a {
+        color: #6b7581;
+        text-decoration: underline; }
+    .popup.membership.signup-complete .addon {
+      clear: both;
+      margin-top: 52px;
+      padding-top: 49px;
+      padding-bottom: 54px; }
+      .popup.membership.signup-complete .addon .warning {
+        margin-top: 13px; }
+  .popup.membership .btn-submit {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 40px;
+    text-decoration: none;
+    border-radius: 2px;
+    background-color: #ff4776; }
+    .popup.membership .btn-submit.fb {
+      text-align: center;
+      background-color: #3a99e8; }
+      .popup.membership .btn-submit.fb:before {
+        content: '';
+        display: inline-block;
+        margin-right: 11px;
+        vertical-align: bottom;
+        background-image: url(/assets/images/sprites.png);
+        background-position: -613px 0px;
+        width: 13px;
+        height: 32px; }
+    .popup.membership .btn-submit + .warning {
+      margin-top: 30px; }
+  .popup.membership .warning {
+    position: relative;
+    padding-left: 32px;
+    font-size: 0.750em;
+    color: #6b7581;
+    text-align: left;
+    line-height: 18px; }
+    .popup.membership .warning:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: -1px;
+      left: 0;
+      background-image: url(/assets/images/sprites.png);
+      background-position: -371px -382px;
+      width: 23px;
+      height: 20px; }
+    .popup.membership .warning.inline {
+      display: inline-block;
+      vertical-align: middle; }
+      .popup.membership .warning.inline:before {
+        top: 50%;
+        margin-top: -10px; }
+  .popup.membership .notice > li {
+    font-size: 0.750em;
+    color: #6b7581;
+    line-height: 28px; }
+    .popup.membership .notice > li a {
+      color: #6b7581;
+      text-decoration: underline; }
+  .popup.membership .tooltip {
+    display: block;
+    position: absolute;
+    bottom: -27px;
+    z-index: 100;
+    padding: 7px 13px 6px 13px;
+    font-size: 0.750em;
+    color: #ff4776;
+    text-align: left;
+    line-height: 16px;
+    white-space: nowrap;
+    border: 1px solid #d9bac2;
+    border-radius: 4px;
+    background-color: #fff; }
+    .popup.membership .tooltip:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: -6px;
+      left: 43px;
+      background-image: url(/assets/images/sprites.png);
+      background-position: -613px -540px;
+      width: 11px;
+      height: 6px; }
+  .popup.membership .argreement-form {
+    margin-top: 24px; }
+  .popup.membership .membership-form {
+    text-align: left; }
+    .popup.membership .membership-form .column .item-form {
+      clear: none;
+      float: left;
+      width: 50%; }
+      .popup.membership .membership-form .column .item-form:first-child {
+        box-sizing: border-box;
+        padding-right: 10px; }
+    .popup.membership .membership-form .item-form {
+      position: relative;
+      clear: both; }
+      .popup.membership .membership-form .item-form label {
+        display: block;
+        margin-top: 12px;
+        font-size: 0.750em;
+        color: #6b7581;
+        line-height: 28px; }
+      .popup.membership .membership-form .item-form input[type=text],
+      .popup.membership .membership-form .item-form input[type=password] {
+        display: block;
+        box-sizing: border-box;
+        padding: 0 0 0 16px;
+        height: 38px;
+        width: 100%;
+        font-size: 1.000em;
+        color: #252525;
+        line-height: 38px;
+        border: 1px solid #bec3cd;
+        border-radius: 2px;
+        background-color: #fff; }
+      .popup.membership .membership-form .item-form + .warning {
+        margin-top: 8px; }
+    .popup.membership .membership-form .cr-box {
+      position: relative;
+      margin-top: 10px;
+      margin-bottom: 3px; }
+      .popup.membership .membership-form .cr-box input[type=checkbox],
+      .popup.membership .membership-form .cr-box input[type=radio] {
+        position: absolute;
+        left: -9999px; }
+      .popup.membership .membership-form .cr-box input[type=checkbox] + label:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url(/assets/images/sprites.png);
+        background-position: -303px -573px;
+        width: 15px;
+        height: 15px; }
+      .popup.membership .membership-form .cr-box input[type=checkbox].checked + label:before, .popup.membership .membership-form .cr-box input[type=checkbox]:checked + label:before {
+        background-image: url(/assets/images/sprites.png);
+        background-position: -323px -573px;
+        width: 15px;
+        height: 15px; }
+      .popup.membership .membership-form .cr-box label {
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        padding-left: 22px;
+        font-size: 12px;
+        color: #6b7581; }
+        .popup.membership .membership-form .cr-box label > a {
+          color: #6b7581;
+          text-decoration: underline; }
+      .popup.membership .membership-form .cr-box .tooltip {
+        top: -38px;
+        bottom: auto; }
+        .popup.membership .membership-form .cr-box .tooltip:before {
+          top: auto;
+          bottom: -6px;
+          background-image: url(/assets/images/sprites.png);
+          background-position: -613px -518px;
+          width: 11px;
+          height: 6px; }
+    .popup.membership .membership-form .btn-submit {
+      margin-top: 40px; }
+    .popup.membership .membership-form .find-info {
+      float: right;
+      margin-top: 10px; }
+      .popup.membership .membership-form .find-info a {
+        font-size: 0.750em;
+        color: #6b7581;
+        text-decoration: underline; }
+        .popup.membership .membership-form .find-info a:after {
+          content: '';
+          display: inline-block;
+          margin-left: 4px;
+          background-image: url(/assets/images/sprites.png);
+          background-position: -570px -253px;
+          width: 5px;
+          height: 7px; }
+        .popup.membership .membership-form .find-info a.none:after {
+          content: none; }
+  .popup.membership .addon {
+    clear: both;
+    overflow: hidden;
+    margin: 0 -119px;
+    padding: 34px 0 43px 0;
+    border-top: 1px solid #d4dae4; }
+    .popup.membership .addon > .left {
+      float: left;
+      width: 50%; }
+    .popup.membership .addon > .right {
+      float: left;
+      width: 50%;
+      text-align: center; }
+
 /* 투자 */
 .filter-container {
   overflow: hidden; }
@@ -1500,7 +1810,7 @@ article.contents {
               left: 50%;
               margin-left: -5.5px;
               background-image: url(/assets/images/sprites.png);
-              background-position: -358px -336px;
+              background-position: -613px -529px;
               width: 11px;
               height: 6px; }
           .product-tab table > tbody > tr td a > .new em {
@@ -1520,17 +1830,17 @@ article.contents {
     height: 21px; }
   .contents.invest em.convert.price span.price1 {
     background-image: url(/assets/images/sprites.png);
-    background-position: -613px -142px;
+    background-position: -613px -384px;
     width: 7px;
     height: 21px; }
   .contents.invest em.convert.price span.price2 {
     background-image: url(/assets/images/sprites.png);
-    background-position: -303px -573px;
+    background-position: -613px -246px;
     width: 13px;
     height: 21px; }
   .contents.invest em.convert.price span.price3 {
     background-image: url(/assets/images/sprites.png);
-    background-position: -357px -573px;
+    background-position: -613px -168px;
     width: 13px;
     height: 21px; }
   .contents.invest em.convert.price span.price4 {
@@ -1540,32 +1850,32 @@ article.contents {
     height: 21px; }
   .contents.invest em.convert.price span.price5 {
     background-image: url(/assets/images/sprites.png);
-    background-position: -375px -573px;
+    background-position: -613px -220px;
     width: 13px;
     height: 21px; }
   .contents.invest em.convert.price span.price6 {
     background-image: url(/assets/images/sprites.png);
-    background-position: -393px -573px;
+    background-position: -613px -272px;
     width: 13px;
     height: 21px; }
   .contents.invest em.convert.price span.price7 {
     background-image: url(/assets/images/sprites.png);
-    background-position: -411px -573px;
+    background-position: -613px -298px;
     width: 12px;
     height: 21px; }
   .contents.invest em.convert.price span.price8 {
     background-image: url(/assets/images/sprites.png);
-    background-position: -339px -573px;
+    background-position: -613px -142px;
     width: 13px;
     height: 21px; }
   .contents.invest em.convert.price span.price9 {
     background-image: url(/assets/images/sprites.png);
-    background-position: -321px -573px;
+    background-position: -613px -194px;
     width: 13px;
     height: 21px; }
   .contents.invest em.convert.price span.price-comma {
     background-image: url(/assets/images/sprites.png);
-    background-position: -613px -193px;
+    background-position: -613px -467px;
     width: 4px;
     height: 21px; }
   .contents.invest em.convert.price span.price-percent {
@@ -1671,7 +1981,7 @@ article.contents {
       right: 10px;
       left: auto;
       background-image: url(/assets/images/sprites.png);
-      background-position: -445px -382px;
+      background-position: -473px -382px;
       width: 19px;
       height: 18px; }
     .contents.invest .product > .options > .imminent-deadline {
@@ -1707,11 +2017,11 @@ article.contents {
         text-indent: -9999px;
         background-image: url("/assets/images/sprites.png"); }
         .contents.invest .product > .options > .share a.btn-fb {
-          background-position: -458px -491px; }
+          background-position: -516px -491px; }
         .contents.invest .product > .options > .share a.btn-tw {
           background-position: -487px -491px; }
         .contents.invest .product > .options > .share a.btn-ks {
-          background-position: -516px -491px; }
+          background-position: -458px -491px; }
   .contents.invest .product > figure > .thumb {
     display: block;
     position: relative;
@@ -1837,14 +2147,14 @@ article.contents {
         margin-right: 5px;
         vertical-align: middle;
         background-image: url(/assets/images/sprites.png);
-        background-position: -421px -382px;
+        background-position: -449px -382px;
         width: 19px;
         height: 18px; }
       .contents.invest .product > .hover > button:hover {
         text-decoration: underline; }
       .contents.invest .product > .hover > button.selected:before {
         background-image: url(/assets/images/sprites.png);
-        background-position: -445px -382px;
+        background-position: -473px -382px;
         width: 19px;
         height: 18px; }
     .contents.invest .product > .hover > span {
@@ -1932,32 +2242,32 @@ article.contents {
               vertical-align: middle; }
               .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price0 {
                 background-image: url(/assets/images/sprites.png);
-                background-position: -585px -245px;
+                background-position: -585px -282px;
                 width: 23px;
                 height: 32px; }
               .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price1 {
                 background-image: url(/assets/images/sprites.png);
-                background-position: -613px 0px;
+                background-position: -613px -37px;
                 width: 10px;
                 height: 32px; }
               .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price2 {
                 background-image: url(/assets/images/sprites.png);
-                background-position: -585px -467px;
+                background-position: -331px -168px;
                 width: 20px;
                 height: 32px; }
               .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price3 {
                 background-image: url(/assets/images/sprites.png);
-                background-position: -331px -168px;
+                background-position: -585px -430px;
                 width: 20px;
                 height: 32px; }
               .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price4 {
                 background-image: url(/assets/images/sprites.png);
-                background-position: -585px -282px;
+                background-position: -585px -245px;
                 width: 23px;
                 height: 32px; }
               .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price5 {
                 background-image: url(/assets/images/sprites.png);
-                background-position: -585px -430px;
+                background-position: -585px -467px;
                 width: 20px;
                 height: 32px; }
               .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price6 {
@@ -1982,7 +2292,7 @@ article.contents {
                 height: 32px; }
               .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price-comma {
                 background-image: url(/assets/images/sprites.png);
-                background-position: -613px -105px;
+                background-position: -613px -324px;
                 width: 5px;
                 height: 32px; }
               .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price-percent {
@@ -2030,12 +2340,12 @@ article.contents {
           display: block;
           margin: 0 auto 8px auto;
           background-image: url(/assets/images/sprites.png);
-          background-position: -421px -382px;
+          background-position: -449px -382px;
           width: 19px;
           height: 18px; }
         .contents.invest .product.detail > .hover > button.selected:before {
           background-image: url(/assets/images/sprites.png);
-          background-position: -445px -382px;
+          background-position: -473px -382px;
           width: 19px;
           height: 18px; }
       .contents.invest .product.detail > .hover > span {
@@ -2071,14 +2381,14 @@ article.contents {
             display: none; }
             .contents.invest .product.detail > .invest-product .utils .btn.update:before {
               background-image: url(/assets/images/sprites.png);
-              background-position: -400px -491px;
+              background-position: -429px -491px;
               width: 24px;
               height: 25px; }
           .contents.invest .product.detail > .invest-product .utils .btn.cancel {
             display: none; }
             .contents.invest .product.detail > .invest-product .utils .btn.cancel:before {
               background-image: url(/assets/images/sprites.png);
-              background-position: -429px -491px;
+              background-position: -400px -491px;
               width: 24px;
               height: 25px; }
       .contents.invest .product.detail > .invest-product .status-invest {
@@ -2256,8 +2566,176 @@ article.contents {
   .product-detail-view .goal {
     border-top: 1px solid #e6e9ee; }
     .product-detail-view .goal .chart {
-      margin-top: 20px;
-      background-color: #0f0; }
+      overflow: hidden;
+      padding-top: 20px;
+      padding-bottom: 0px; }
+      .product-detail-view .goal .chart .bar {
+        float: left;
+        position: relative;
+        padding: 42px 0 0 58px;
+        height: 258px;
+        width: 452px; }
+        .product-detail-view .goal .chart .bar .container {
+          position: relative;
+          padding-top: 20px;
+          height: 192px;
+          width: 320px;
+          border-left: 2px solid #cdd4de;
+          border-bottom: 2px solid #cdd4de; }
+          .product-detail-view .goal .chart .bar .container .item {
+            display: block;
+            float: left;
+            position: relative;
+            height: 100%;
+            width: 25%; }
+            .product-detail-view .goal .chart .bar .container .item:after {
+              content: attr(title);
+              display: block;
+              position: absolute;
+              bottom: -26px;
+              width: 100%;
+              font-size: 14px;
+              color: #6b7581;
+              text-align: center;
+              white-space: nowrap; }
+            .product-detail-view .goal .chart .bar .container .item .stick {
+              display: block;
+              position: absolute;
+              bottom: 0;
+              left: 50%;
+              margin-left: -13px;
+              height: auto;
+              width: 25px;
+              background-color: #4cbaff; }
+              .product-detail-view .goal .chart .bar .container .item .stick.first {
+                background-color: #ff4776; }
+              .product-detail-view .goal .chart .bar .container .item .stick em {
+                display: block;
+                margin-top: -18px;
+                font-size: 14px;
+                color: #252525;
+                letter-spacing: -0.1em; }
+      .product-detail-view .goal .chart .circle {
+        position: relative;
+        float: right;
+        height: 300px;
+        width: 510px;
+        background: url("/assets/images/bg_chart_circle.png") left top no-repeat; }
+        .product-detail-view .goal .chart .circle:after {
+          content: '';
+          display: block;
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          background: url("/assets/images/bg_chart_circle_point.png") left top no-repeat; }
+        .product-detail-view .goal .chart .circle #chart-circle {
+          display: block;
+          position: absolute;
+          top: 30px;
+          left: 127px;
+          height: 240px;
+          width: 240px; }
+        .product-detail-view .goal .chart .circle .amount {
+          font-size: 0.750em;
+          color: #6b7581; }
+          .product-detail-view .goal .chart .circle .amount em {
+            display: block;
+            margin-top: 6px;
+            font-size: 16px;
+            color: #0e52a5; }
+          .product-detail-view .goal .chart .circle .amount.expected {
+            position: absolute;
+            top: -3px;
+            left: 0; }
+          .product-detail-view .goal .chart .circle .amount.application {
+            position: absolute;
+            top: 30px;
+            left: 402px; }
+            .product-detail-view .goal .chart .circle .amount.application em {
+              color: #ff6000; }
+        .product-detail-view .goal .chart .circle .rate {
+          display: block;
+          position: absolute;
+          top: 120px;
+          right: 193px;
+          left: 183px;
+          font-size: 0.750em;
+          color: #6b7581;
+          line-height: 16px;
+          text-align: center; }
+          .product-detail-view .goal .chart .circle .rate p {
+            margin-top: 10px; }
+          .product-detail-view .goal .chart .circle .rate em.convert.price span {
+            display: inline-block;
+            margin-right: 1px;
+            height: 32px;
+            text-indent: -9999px;
+            vertical-align: middle; }
+            .product-detail-view .goal .chart .circle .rate em.convert.price span.price0 {
+              background-image: url(/assets/images/sprites.png);
+              background-position: -585px -282px;
+              width: 23px;
+              height: 32px; }
+            .product-detail-view .goal .chart .circle .rate em.convert.price span.price1 {
+              background-image: url(/assets/images/sprites.png);
+              background-position: -613px -37px;
+              width: 10px;
+              height: 32px; }
+            .product-detail-view .goal .chart .circle .rate em.convert.price span.price2 {
+              background-image: url(/assets/images/sprites.png);
+              background-position: -331px -168px;
+              width: 20px;
+              height: 32px; }
+            .product-detail-view .goal .chart .circle .rate em.convert.price span.price3 {
+              background-image: url(/assets/images/sprites.png);
+              background-position: -585px -430px;
+              width: 20px;
+              height: 32px; }
+            .product-detail-view .goal .chart .circle .rate em.convert.price span.price4 {
+              background-image: url(/assets/images/sprites.png);
+              background-position: -585px -245px;
+              width: 23px;
+              height: 32px; }
+            .product-detail-view .goal .chart .circle .rate em.convert.price span.price5 {
+              background-image: url(/assets/images/sprites.png);
+              background-position: -585px -467px;
+              width: 20px;
+              height: 32px; }
+            .product-detail-view .goal .chart .circle .rate em.convert.price span.price6 {
+              background-image: url(/assets/images/sprites.png);
+              background-position: -585px -319px;
+              width: 21px;
+              height: 32px; }
+            .product-detail-view .goal .chart .circle .rate em.convert.price span.price7 {
+              background-image: url(/assets/images/sprites.png);
+              background-position: -561px -66px;
+              width: 19px;
+              height: 32px; }
+            .product-detail-view .goal .chart .circle .rate em.convert.price span.price8 {
+              background-image: url(/assets/images/sprites.png);
+              background-position: -585px -356px;
+              width: 21px;
+              height: 32px; }
+            .product-detail-view .goal .chart .circle .rate em.convert.price span.price9 {
+              background-image: url(/assets/images/sprites.png);
+              background-position: -585px -393px;
+              width: 21px;
+              height: 32px; }
+            .product-detail-view .goal .chart .circle .rate em.convert.price span.price-comma {
+              background-image: url(/assets/images/sprites.png);
+              background-position: -613px -324px;
+              width: 5px;
+              height: 32px; }
+            .product-detail-view .goal .chart .circle .rate em.convert.price span.price-percent {
+              background-image: url(/assets/images/sprites.png);
+              background-position: -154px -491px;
+              width: 29px;
+              height: 32px; }
+            .product-detail-view .goal .chart .circle .rate em.convert.price span.price-won {
+              background-image: url(/assets/images/sprites.png);
+              background-position: -555px -197px;
+              width: 25px;
+              height: 32px; }
   .product-detail-view .manager {
     overflow: hidden;
     padding: 80px 69px 60px 140px;
@@ -2927,7 +3405,7 @@ article.contents {
         margin: -2px 0 0 9px;
         vertical-align: middle;
         background-image: url(/assets/images/sprites.png);
-        background-position: -613px -257px;
+        background-position: -613px -577px;
         width: 9px;
         height: 5px; }
       .contents.private-invest .paging > .sorting .btn-select > a:hover {
@@ -3017,12 +3495,12 @@ article.contents {
   vertical-align: middle; }
   .contents.private-invest em.convert.price span.price0 {
     background-image: url(/assets/images/sprites.png);
-    background-position: -398px -382px;
+    background-position: -426px -382px;
     width: 18px;
     height: 20px; }
   .contents.private-invest em.convert.price span.price1 {
     background-image: url(/assets/images/sprites.png);
-    background-position: -613px -168px;
+    background-position: -613px -410px;
     width: 7px;
     height: 20px; }
   .contents.private-invest em.convert.price span.price2 {
@@ -3047,7 +3525,7 @@ article.contents {
     height: 20px; }
   .contents.private-invest em.convert.price span.price6 {
     background-image: url(/assets/images/sprites.png);
-    background-position: -152px -540px;
+    background-position: -194px -540px;
     width: 16px;
     height: 20px; }
   .contents.private-invest em.convert.price span.price7 {
@@ -3062,12 +3540,12 @@ article.contents {
     height: 20px; }
   .contents.private-invest em.convert.price span.price9 {
     background-image: url(/assets/images/sprites.png);
-    background-position: -194px -540px;
+    background-position: -152px -540px;
     width: 16px;
     height: 20px; }
   .contents.private-invest em.convert.price span.price-percent {
     background-image: url(/assets/images/sprites.png);
-    background-position: -371px -382px;
+    background-position: -399px -382px;
     width: 22px;
     height: 20px; }
 .contents.private-invest .product {
@@ -3096,12 +3574,12 @@ article.contents {
     .contents.private-invest .product > .options > .invest-type01 {
       border-radius: 18px 0px 0px 0px;
       background-image: url(/assets/images/sprites.png);
-      background-position: -311px -416px;
+      background-position: -257px -416px;
       width: 49px;
       height: 49px; }
     .contents.private-invest .product > .options > .new {
       background-image: url(/assets/images/sprites.png);
-      background-position: -257px -416px;
+      background-position: -311px -416px;
       width: 49px;
       height: 49px; }
     .contents.private-invest .product > .options > .user-in {
@@ -3116,7 +3594,7 @@ article.contents {
       right: 14px;
       left: auto;
       background-image: url(/assets/images/sprites.png);
-      background-position: -613px -231px;
+      background-position: -613px -564px;
       width: 8px;
       height: 8px; }
   .contents.private-invest .product > .trust-ratings {
@@ -3155,12 +3633,12 @@ article.contents {
           height: 44px; }
         .contents.private-invest .product > .trust-ratings .borrowing-count > .convert > em.bid2 {
           background-image: url(/assets/images/sprites.png);
-          background-position: -585px -49px;
+          background-position: -585px -147px;
           width: 23px;
           height: 44px; }
         .contents.private-invest .product > .trust-ratings .borrowing-count > .convert > em.bid3 {
           background-image: url(/assets/images/sprites.png);
-          background-position: -59px -491px;
+          background-position: -30px -491px;
           width: 24px;
           height: 44px; }
         .contents.private-invest .product > .trust-ratings .borrowing-count > .convert > em.bid4 {
@@ -3180,17 +3658,17 @@ article.contents {
           height: 44px; }
         .contents.private-invest .product > .trust-ratings .borrowing-count > .convert > em.bid7 {
           background-image: url(/assets/images/sprites.png);
-          background-position: -585px -147px;
+          background-position: -585px -49px;
           width: 23px;
           height: 44px; }
         .contents.private-invest .product > .trust-ratings .borrowing-count > .convert > em.bid8 {
           background-image: url(/assets/images/sprites.png);
-          background-position: -30px -491px;
+          background-position: -88px -491px;
           width: 24px;
           height: 44px; }
         .contents.private-invest .product > .trust-ratings .borrowing-count > .convert > em.bid9 {
           background-image: url(/assets/images/sprites.png);
-          background-position: -88px -491px;
+          background-position: -59px -491px;
           width: 24px;
           height: 44px; }
     .contents.private-invest .product > .trust-ratings .credit-rating {
@@ -3206,7 +3684,7 @@ article.contents {
           height: 44px; }
         .contents.private-invest .product > .trust-ratings .credit-rating > .convert > em.overdue-b {
           background-image: url(/assets/images/sprites.png);
-          background-position: -547px -389px;
+          background-position: -514px -389px;
           width: 28px;
           height: 44px; }
         .contents.private-invest .product > .trust-ratings .credit-rating > .convert > em.overdue-c {
@@ -3216,7 +3694,7 @@ article.contents {
           height: 44px; }
         .contents.private-invest .product > .trust-ratings .credit-rating > .convert > em.overdue-d {
           background-image: url(/assets/images/sprites.png);
-          background-position: -514px -389px;
+          background-position: -547px -389px;
           width: 28px;
           height: 44px; }
     .contents.private-invest .product > .trust-ratings .tooltip {
@@ -3241,7 +3719,7 @@ article.contents {
         left: 50%;
         margin-left: -5.5px;
         background-image: url(/assets/images/sprites.png);
-        background-position: -358px -336px;
+        background-position: -613px -529px;
         width: 11px;
         height: 6px; }
     .contents.private-invest .product > .trust-ratings .p-i {
@@ -3371,14 +3849,14 @@ article.contents {
         margin-right: 5px;
         vertical-align: middle;
         background-image: url(/assets/images/sprites.png);
-        background-position: -613px -244px;
+        background-position: -613px -551px;
         width: 8px;
         height: 8px; }
       .contents.private-invest .product > .hover > button:hover {
         text-decoration: underline; }
       .contents.private-invest .product > .hover > button.selected:before {
         background-image: url(/assets/images/sprites.png);
-        background-position: -613px -231px;
+        background-position: -613px -564px;
         width: 8px;
         height: 8px; }
     .contents.private-invest .product > .hover > span {
@@ -3426,7 +3904,7 @@ article.contents {
         right: 19px;
         left: auto;
         background-image: url(/assets/images/sprites.png);
-        background-position: -613px -231px;
+        background-position: -613px -564px;
         width: 8px;
         height: 8px; }
     .contents.private-invest .product.detail > .profile {
@@ -3511,12 +3989,12 @@ article.contents {
           height: 28px; }
         .contents.private-invest .product.detail > .trust-ratings em.convert.price span.price1 {
           background-image: url(/assets/images/sprites.png);
-          background-position: -613px -37px;
+          background-position: -613px -74px;
           width: 10px;
           height: 28px; }
         .contents.private-invest .product.detail > .trust-ratings em.convert.price span.price2 {
           background-image: url(/assets/images/sprites.png);
-          background-position: -559px -438px;
+          background-position: 0px -540px;
           width: 21px;
           height: 28px; }
         .contents.private-invest .product.detail > .trust-ratings em.convert.price span.price3 {
@@ -3531,7 +4009,7 @@ article.contents {
           height: 28px; }
         .contents.private-invest .product.detail > .trust-ratings em.convert.price span.price5 {
           background-image: url(/assets/images/sprites.png);
-          background-position: 0px -540px;
+          background-position: -559px -438px;
           width: 21px;
           height: 28px; }
         .contents.private-invest .product.detail > .trust-ratings em.convert.price span.price6 {
@@ -3681,14 +4159,14 @@ article.contents {
           display: block;
           margin: 0px auto 6px;
           background-image: url(/assets/images/sprites.png);
-          background-position: -492px -382px;
+          background-position: -613px -435px;
           width: 11px;
           height: 11px; }
         .contents.private-invest .product.detail > .hover > button:hover {
           text-decoration: underline; }
         .contents.private-invest .product.detail > .hover > button.selected:before {
           background-image: url(/assets/images/sprites.png);
-          background-position: -495px -241px;
+          background-position: -613px -451px;
           width: 11px;
           height: 11px; }
       .contents.private-invest .product.detail > .hover > span {
@@ -3724,14 +4202,14 @@ article.contents {
             display: none; }
             .contents.private-invest .product.detail > .invest-product .utils .btn.update:before {
               background-image: url(/assets/images/sprites.png);
-              background-position: -400px -491px;
+              background-position: -429px -491px;
               width: 24px;
               height: 25px; }
           .contents.private-invest .product.detail > .invest-product .utils .btn.cancel {
             display: none; }
             .contents.private-invest .product.detail > .invest-product .utils .btn.cancel:before {
               background-image: url(/assets/images/sprites.png);
-              background-position: -429px -491px;
+              background-position: -400px -491px;
               width: 24px;
               height: 25px; }
       .contents.private-invest .product.detail > .invest-product .status-invest {

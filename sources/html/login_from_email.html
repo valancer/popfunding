@@ -1,0 +1,53 @@
+include "head.html"
+	<script>
+	$(window.document).ready(function(){
+	});
+	</script>
+
+	<!-- 본문 영역 -->
+	<div class="from-email">
+		<a href="#" class="btn-main">popfunding 메인으로</a>
+
+		<aside class="popup membership find info-pwd">
+
+			<h1>Log-in</h1>
+
+			<p class="message">
+				새로운 비밀번호로 재설정 되었습니다.
+				<strong>지금 로그인하세요.</strong>
+			</p>
+
+
+			<div class="vertical-middle">
+				<fieldset class="membership-form">
+					<legend>로그인 입력 양식</legend>
+
+					<p class="item-form">
+						<label for="uid">아이디</label>
+						<input type="text" id="uid" name="uid">
+						<span class="tooltip">존재하지 않는 아이디입니다.</span>
+					</p>
+					<p class="item-form">
+						<label for="pwd">비밀번호</label>
+						<input type="password" id="pwd" name="pwd">
+						<span class="tooltip">아이디와 비밀번호가 일치하지 않습니다.</span>
+					</p>
+					
+					<input type="submit" value="로그인" class="btn-submit">
+					<p class="cr-box">
+						<input type="checkbox" id="save-id" name="save-id"><label for="save-id">이이디 저장</label>
+					</p>
+				</fieldset>
+			</div>
+
+
+			<div class="addon">
+				<p class="warning none inline">
+					Copyright ©2008 POPFUNDING All Rights Reserved
+				</p>
+			</div>
+		</aside>
+	</div>
+
+</body>
+</html>

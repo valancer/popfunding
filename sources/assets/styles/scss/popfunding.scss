@@ -27,6 +27,7 @@ $color-point2: #14378c;
 $color-point3: #0e52a5;
 $color-point4: #30ba30;
 
+$color-borrowing: #52b924;
 
 
 
@@ -78,6 +79,10 @@ $z-layers: (
 	}
 }
 
+.btn-main { @include btn-inline-txt(); text-indent: -9999px; 
+	@include sprite($sprite-popfunding);
+}
+
 .btn-inline { @include btn-inline-txt();
 	@include ie8-inline-block();
 }
@@ -112,6 +117,8 @@ $z-layers: (
 }
 .btn-inline-box { display: inline-block; padding: 0 11px; font-size: 0.750em; color: $color-content; line-height: 24px; border: 1px solid #c3d0e1; border-radius: 5px; }
 
+
+.btn-submit-auth { display: block; margin: 0 auto; width: 360px; font-size: 0.875em; font-weight: bold; color: #fff; line-height: 40px; border-radius: 2px; background-color: $color-menu1-hover; }
 
 /**
  * import

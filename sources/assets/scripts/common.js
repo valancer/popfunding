@@ -188,9 +188,8 @@ var Product = (function ($) {
 		}
 	}
 
-	function initEvent() {
-
-		$thumbs.one('load', function() {
+	function imageload($elements) {
+		$elements.one('load', function() {
 		}).each(function() {
 			if( this.complete ) {
 				var width = $(this).width();
@@ -198,6 +197,10 @@ var Product = (function ($) {
 				$(this).show().css('left', left).addClass('animated fadeIn');
 			}
 		});
+	}
+
+	function initEvent() {
+		imageload($thumbs);
 
 		if( $pawnSlider.length > 0 ) {
 			$pawnSlider.slick({
@@ -223,14 +226,7 @@ var Product = (function ($) {
 		}
 
 		var $_thumbs = $elements.find('.product > figure .thumb > img');
-		$_thumbs.one('load', function() {
-		}).each(function() {
-			if( this.complete ) {
-				var width = $(this).width();
-				var left = (-width/2 + _containerWidth/2);
-				$(this).show().css('left', left).addClass('animated fadeIn');
-			}
-		});
+		imageload($_thumbs);
 	}
 
 	function convertNumberToImage($element) {
@@ -336,6 +332,8 @@ var PrivateProduct = (function ($) {
 		if( $element.closest('.borrowing-count').length > 0 ) {
 			convert += '<em class="bid' + array[0] + '">' + array[0] + '</em>\n';
 		} else if( $element.closest('.credit-rating').length > 0 ) {
+			convert += '<em class="overdue-' + array[0] + '">' + array[0] + '</em>';
+		} else {
 			convert += '<em class="overdue-' + array[0] + '">' + array[0] + '</em>';
 		}
 		$element.html(convert);

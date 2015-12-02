@@ -50,16 +50,65 @@ include "head.html"
 
 					<div id="popup-rating" class="popup guide-popup rating-popup">
 						<button class="btn-popup-close" data-target="#popup-rating">팝업닫기</button>
-						<figure>
-							<img src="/assets/images/content_rating.jpg" alt="">
-							<figcaption>
-								<p>
-									대출용도<br>
-									갱매횟수 : 경매에서 상환까지 대손없이 완료한 횟수<br>
-									상환등급 : 월 평균 연체일 기준의 상환등급<br>
-								</p>
-							</figcaption>
-						</figure>
+
+						<ul class="list-example">
+							<li>
+								<figure class="type">
+									<img src="/assets/images/icon_feature07_example.png" alt="">
+									<figcaption>
+										<strong>대출용도</strong>
+										<p class="box">
+											실제 투자에서 마우스를<br>올리면 확인 가능합니다.
+										</p>
+									</figcaption>
+								</figure>
+							</li>
+							<li>
+								<figure class="cnt">
+									<img src="/assets/images/cnt_bid2_example.png" alt="">
+									<figcaption>
+										<strong>경매횟수</strong>
+										<p class="box">
+											경매에서 상환까지<br>대손없이 완료한 횟수
+										</p>
+									</figcaption>
+								</figure>
+							</li>
+							<li>
+								<figure class="overdue">
+									<img src="/assets/images/bg_overdue02_example.png" alt="">
+									<figcaption>
+										<strong>상환등급</strong>
+										<table>
+											<caption>상환등급 설명</caption>
+											<tbody>
+												<tr class="top">
+													<th><span class="convert cr">a</span></th>
+													<td>0일 ~ 0.9일</td>
+												</tr>
+												<tr>
+													<th><span class="convert cr">b</span></th>
+													<td>1일 ~ 2.9일</td>
+												</tr>
+												<tr>
+													<th><span class="convert cr">c</span></th>
+													<td>3일 ~ 10일</td>
+												</tr>
+												<tr>
+													<th><span class="convert cr">d</span></th>
+													<td>11일 이상</td>
+												</tr>
+												<tr>
+													<th><span class="convert cr">none</span></th>
+													<td>기록 없음</td>
+												</tr>
+											</tbody>
+										</table>
+										<p class="tb-bottom">월 평균 연체일 기준</p>
+									</figcaption>
+								</figure>
+							</li>
+						</ul>						
 					</div>
 				</fieldset>
 				<script>

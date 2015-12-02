@@ -554,6 +554,8 @@ article.contents { min-width: $contents-container-width; padding: 100px 0 110px 
 			&:hover { color: $color-menu1-hover; }
 			&.selected { color: $color-menu1-hover; border: 1px solid #bec3cd; border-bottom: 1px solid #fff; }
 		}
+
+		+ .membership-form { height: 109px; }
 	}
 
 	.argreement-form { margin-top: 24px; }
@@ -622,7 +624,7 @@ article.contents { min-width: $contents-container-width; padding: 100px 0 110px 
 			}
 
 			// inner button
-			.btn-inner-form { display: inline-block; position: relative; padding: 0 15px; min-width: 38px; font-size: 0.875em; font-weight: bold; color: #fff; line-height: 40px; text-align: center; vertical-align: middle; border-radius: 2px; background-color: #6e80a9;
+			.btn-inner-form { display: inline-block; position: relative; padding: 0 15px; min-width: 38px; font-size: 0.875em; font-weight: bold; color: #fff; line-height: 40px; text-align: center; text-decoration: none; vertical-align: middle; border-radius: 2px; background-color: #6e80a9;
 				@include tooltip-center();
 			}
 
@@ -722,14 +724,16 @@ article.contents { min-width: $contents-container-width; padding: 100px 0 110px 
 		}
 	}
 
-	&.borrowers {
-		.btn-submit-auth { background-color: $color-borrowing; }
+	&.borrowers { padding-bottom: 135px;
+		> h1 { margin-bottom: 88px; }
+		table.agreements { margin-top: 70px; }
+		.btn-submit-auth { margin-top: 77px; background-color: $color-borrowing; }
 	}
 
-	.investor-guide { display: none; top: 87px; right: 185px; left: 185px;
-		&:before { left: 455px; }
+	.investor-guide { display: none; top: 87px; right: 180px; left: 180px;
+		&:before { left: 460px; }
 	}
-	.bad-debt-guide { display: none; top: 248px; right: 43px; width: 650px;
+	.bad-debt-guide { display: none; top: 248px; right: 43px; width: 700px;
 		&:before { right: 167px; }
 	}
 	.borrower-guide { display: none; top: 87px; right: 185px; left: 185px;
@@ -737,7 +741,7 @@ article.contents { min-width: $contents-container-width; padding: 100px 0 110px 
 	}
 
 	/* 완료 메시지 */
-	.complete { box-sizing: border-box; text-align: left; padding: 85px 0 0 140px; height: 520px;
+	.complete { box-sizing: border-box; text-align: left; padding: 85px 0 0 140px; height: 547px;
 		h2 { display: block; position: relative; margin-top: 62px; padding: 0 0 0 38px; font-size: 1.000em; font-weight: normal; color: $color-menu1-hover;
 			&:before { content: ''; display: block; position: absolute; bottom: 0; left: 0; @include sprite($sprite-icon-check06); }
 		}
@@ -747,11 +751,11 @@ article.contents { min-width: $contents-container-width; padding: 100px 0 110px 
 		}
 
 		&.borrower { padding-top: 65px; padding-left: 190px;
-			h2 { color: $color-borrowing;
+			h2 { color: #129a00;
 				&:before { @include sprite($sprite-icon-check07); }
 			}
 
-			.btn-borrowing { display: block; margin-top: 12px; width: 278px; font-size: 0.875em; font-weight: bold; color: #fff; text-align: center; text-decoration: none; line-height: 40px; border-radius: 2px; background-color: $color-borrowing; }
+			.btn-borrowing { display: block; margin-top: 12px; width: 278px; font-size: 14px; font-weight: bold; color: #fff; text-align: center; text-decoration: none; line-height: 40px; border-radius: 2px; background-color: $color-borrowing; }
 		}
 	}
 }

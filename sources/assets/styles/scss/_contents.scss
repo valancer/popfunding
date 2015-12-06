@@ -475,6 +475,16 @@ $border-inner-color: #e6e9ee;
 			.add-story { margin-top: 36px; padding-top: 40px; border-top: 1px solid $border-inner-color;
 				.desc { margin-top: 25px; }
 				.update { float: right; font-size: 0.750em; color: $color-desc; }
+
+				/// 추가글 등록
+				.write-add-story { position: relative; right: -20px; left: -20px; padding: 45px 0 20px 0;
+					label { display: block; padding: 0 20px; font-size: 0.875em; color: $color-menu1-hover; }
+					textarea { display: block; margin-top: 9px; padding: 20px; height: 278px; width: 100%; font-size: 0.875em; color: $color-content; line-height: 22px; border: 1px solid #bec3cd; border-radius: 3px; }
+
+					.btns { padding-top: 20px; text-align: center;
+						.btn-write { display: inline-block; padding: 0 26px; font-size: 0.875em; color: #fff; line-height: 37px; border-radius: 37px; background-color: #6cc800; }
+					}
+				}
 			}
 		}
 	}

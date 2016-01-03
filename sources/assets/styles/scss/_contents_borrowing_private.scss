@@ -1,7 +1,7 @@
 /* 개인이 빌리기 */
 .contents.borrowing-private {
 
-
+	/* 소개 */
 	.borrowing-intro { position: relative; margin-top: 42px; padding-top: 75px; height: 462px; background: url('/assets/images/bowwroing_private_visual01.png') 470px 64px no-repeat;;
 		> .message { float: left;
 			.title { margin-bottom: 39px; height: 150px; width: 378px; background: url('/assets/images/txt/borrowing_private_message01.png') left top no-repeat; }
@@ -53,7 +53,9 @@
 
 	}
 
-	/// 빌리기 신청
+
+
+	/* 빌리기 신청 */
 	.application {
 		h1 { font-size: 1.375em; color: $color-title; line-height: 1.3em; }
 
@@ -106,6 +108,150 @@
 				a { color: $color-content; text-decoration: underline; }
 			}
 		}
+	}
+
+
+
+	/* 신청 진행 */
+	.borrowing-application { position: relative; margin-top: 42px; border: 1px solid #d4dae4; border-radius: 18px; background-color: #fff;
+		.btn-back { display: block; position: absolute; top: 19px; right: 19px; text-indent: -9999px; @include sprite($sprite-btn-close01); }
+
+		/* 진행 절차 표시 */
+		.proceedings { overflow: hidden; position: relative; margin: 0 auto; padding: 48px 0 41px 0; width: 100%; text-align: center; border-bottom: 1px solid #d4dae4;
+			&:before { content: ''; display: block; position: absolute; top: 83px; right: 25%; left: 25%; z-index: z("default")-1; height: 1px; background-color: #798dbd; }
+
+			> li { display: inline-block; position: relative; margin: 0 110px; height: 70px; width: 71px; vertical-align: top;
+				&:before { content: ''; display: block; position: relative; z-index: z("default"); margin-bottom: 17px; background-color: #fff; }
+
+				.title { display: none; }
+				.tooltip { display: block; position: absolute; z-index: z("tooltip"); padding: 5px 13px 6px 13px; font-size: 12px; color: $color-content; line-height: 18px; border: 1px solid #c3d0e1; border-radius: 4px; background-color: #fff;
+					&:before { content: ''; display: block; position: absolute; top: -$sprite-bg-arrow15-height; left: 50%; margin-left: -$sprite-bg-arrow15-width/2; @include sprite($sprite-bg-arrow15); }
+
+					&.down {
+						&:before { top: auto; bottom: -$sprite-bg-arrow16-height; margin-left: -$sprite-bg-arrow16-width/2; @include sprite($sprite-bg-arrow16); }
+					}
+				}
+
+				&.step01 { 
+					&:before { @include sprite($sprite-bg-procedding01-s); }
+					.tooltip { top: -23px; left: -32px; width: 105px; }
+
+					&.selected:before { @include sprite($sprite-bg-procedding01-s-selected); }
+				}
+				&.step02 {
+					&:before { @include sprite($sprite-bg-procedding02-s); }
+					.btn-update { display: block; position: absolute; top: 46px; left: 73px; z-index: z("tooltip"); padding: 5px 13px 6px 13px; width: 72px; font-size: 12px; color: $color-menu1; line-height: 18px; border: 1px solid #c3d0e1; border-radius: 4px; background-color: #fff; }
+
+					&.selected:before { @include sprite($sprite-bg-procedding02-s-selected); }
+				}
+				&.step03 {
+					&:before { @include sprite($sprite-bg-procedding03-s); }
+					.tooltip { top: -23px; left: -2px; width: 46px; color: $color-menu1-hover; }
+
+					&.selected:before { @include sprite($sprite-bg-procedding03-s-selected); }
+				}
+			}
+		}
+
+
+		/* 빌리기 준비 */
+		.proceedings-step01 { padding: 46px 0 80px 0;
+			> h2 { font-size: 1.375em; font-weight: bold; color: $color-title; text-align: center; line-height: 1.3em; }
+
+			@mixin tooltip-center() {
+				.tooltip { left: 50%; transform: translateX(-50%);
+					.ie8 & { left: 0%; }
+					&:before { left: 50%; margin-left: -$sprite-bg-arrow12-width/2; }
+					&.down {
+						&:before { left: 50%; margin-left: -$sprite-bg-arrow13-width/2; }
+					}
+				}
+			}
+
+			.tooltip { display: block; position: absolute; bottom: -27px; z-index: z("tooltip"); padding: 7px 13px 6px 13px; font-size: 12px; font-weight: normal; color: $color-menu1-hover; text-align: left; line-height: 16px; white-space: nowrap; border: 1px solid #d9bac2; border-radius: 4px; background-color: #fff;
+				&:before { content: ''; display: block; position: absolute; top: -$sprite-bg-arrow12-height; left: 43px; @include sprite($sprite-bg-arrow12); }
+
+				&.down { top: -27px; bottom: auto;
+					&:before { top: auto; bottom: -$sprite-bg-arrow13-height; left: 43px; @include sprite($sprite-bg-arrow13); }					
+				}
+			}
+
+			/* 빌리기 준비 과정 */
+			.prepare-step01 { margin: 40px auto 0 auto; width: 920px;
+				> li { position: relative; padding: 27px 90px 32px 110px; border-top: 1px solid #d4dae4;
+					&:first-child { border-top: 0px; }
+					&:before { content: ''; display: block; position: absolute; top: 19px; left: 50px; }
+
+					> .title { font-size: 0.875em; color: $color-title; line-height: 1.3em; }
+					> p { margin-top: 7px; font-size: 0.875em; color: $color-content; line-height: 22px; }
+					> .btn-auth { display: block; position: absolute; top: 33px; right: 90px; padding-top: 13px; padding-bottom: 7px; height: 47px; width: 155px; font-size: 0.875em; font-weight: bold; color: #fff; line-height: 18px; text-align: center; border-radius: 2px; box-shadow: inset 0 -7px 0 0 #0070c0, 10px 10px 0 0 #e9ecf1; background-color: #008df0;
+						&:hover { top: 40px; padding-bottom: 0px; text-decoration: none; box-shadow: none; }
+
+						@include tooltip-center();
+					}
+					> .warning { display: block; position: absolute; top: 55px; left: 408px; margin: 0px; padding-left: 30px; font-size: 0.875em; color: $color-content;
+						&:before { content: ''; display: block; position: absolute; top: 0; left: 0; @include sprite($sprite-icon-iks01); }
+						em { display: block; font-size: 0.857em; line-height: 18px; }
+					}
+					> a.warning { text-decoration: underline; }
+
+					&.done {
+						> .btn-auth { padding-bottom: 0px; box-shadow: none; background-color: #cad2de;
+							&:hover { top: 33px; }
+						}
+					}
+
+					&.seq01:before { @include sprite($sprite-prepare01); }
+					&.seq02:before { @include sprite($sprite-prepare02); }
+					&.seq03:before { @include sprite($sprite-prepare03); }
+					&.seq04:before { @include sprite($sprite-prepare04); }
+					&.seq01.done:before { @include sprite($sprite-prepare01-done); }
+					&.seq02.done:before { @include sprite($sprite-prepare02-done); }
+					&.seq03.done:before { @include sprite($sprite-prepare03-done); }
+					&.seq04.done:before { @include sprite($sprite-prepare04-done); }
+
+					/* 대출자 인증 후 */
+					.box-auth { position: relative; margin-top: 23px; padding: 14px 0 14px 86px; font-size: 0.875em; line-height: 24px; border: 1px solid #d4dae4;
+						&:before { content: ''; display: block; position: absolute; top: 20px; left: 25px; @include sprite($sprite-icon-check06); }
+
+						.title { display: block; color: $color-menu1-hover; }
+						.message { color: $color-content; }
+						.info { margin-top: 10px; color: $color-title;
+							em { margin-left: 23px; margin-right: 23px; }
+						}
+					}
+
+					/* 가입비 팝업 */
+					.mfee-popup { display: none; position: absolute; top: 90px; right: 230px; z-index: z("modaless"); padding: 34px 0 38px 38px; width: 486px; font-size: 0.875em; color: $color-content; line-height: 22px;
+						&:before { right: 124px; left: auto; }
+
+						> h1 { display: block; padding: 0; font-size: 1.143em; color: $color-title;
+							&:before { content: none; }
+						}
+						.description { margin-top: 10px;
+							em { color: $color-menu1-hover; }
+						}
+						.refund { margin-top: 24px;
+							> li { position: relative; padding: 0 0 10px 42px;
+								&:before { content: attr(data-title); display: block; position: absolute; top: 0; left: 0; color: $color-menu1-hover; }
+							}
+						}
+						.warning { position: relative; margin-top: 10px; padding: 0 0 0 30px;
+							&:before { content: ''; display: block; position: absolute; top: 0; left: 0; @include sprite($sprite-icon-iks01); }
+						}
+					}
+				}
+			}
+
+			.list-dot { margin-top: 10px;
+				> li { position: relative; padding-left: 8px; font-size: 0.750em; color: $color-content; line-height: 21px;
+					&:before { content: ''; display: block; position: absolute; top: 7px; left: 1px; height: 3px; width: 3px; background-color: $color-menu1-hover; }
+				}
+			}
+
+			.btn-ready { display: block; margin: 33px auto 0 auto; width: 264px; font-size: 0.875em; font-weight: bold; color: #fff; line-height: 40px; text-align: center; border-radius: 2px; background-color: $color-borrowing; }
+		}
+
 
 	}
 

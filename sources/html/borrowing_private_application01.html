@@ -1,0 +1,172 @@
+include "head.html"
+	<script>
+	$(window.document).ready(function(){
+	});
+	</script>
+
+	<!-- 상단 영역 -->
+	include "header.html"
+
+
+	<!-- 본문 영역 -->
+	<article class="contents borrowing-private">
+		<h1>빌리기</h1>
+
+		<div class="inner">
+		
+
+			<!-- 필터 및 소개  -->
+			<div class="filter-container">
+				<fieldset class="filter">
+					<legend>투자종류선택</legend>
+
+					<input type="radio" id="borrowing01" name="borrowing-type" checked="checked" class="selected"><label for="borrowing01">개인이 빌리기</label>
+					<input type="radio" id="borrowing02" name="borrowing-type"><label for="borrowing02">기업이 빌리기</label>
+				</fieldset>
+				
+				<div class="utils-guide">
+					<a href="#" class="btn-tip">꿀팁</a>
+				</div>
+			</div>
+
+
+			<!-- 개인이 빌리기 -->
+			<section class="borrowing-application step01">
+				<a href="#" class="btn-back">소개 화면으로 돌아가기</a>
+
+				<ul class="proceedings">
+					<li class="step01 selected">
+						<span class="tooltip down">신용보고서 기간만료</span>
+						<h1 class="title">빌리기 신청</h1>
+					</li>
+					<li class="step02">
+						<span class="title">개인정보 입력</span>
+						<a href="#" class="btn-update">개인정보 수정</a>
+					</li>
+					<li class="step03">
+						<span class="tooltip down">임시저장</span>
+						<span class="title">빌리기 신청</span>
+					</li>
+				</ul>
+
+				<div class="proceedings-step01 prepare">
+					<h2>빌리기 준비</h2>
+
+					<ol class="prepare-step01">
+						<li class="seq01 done">
+							<span class="title">대출자 인증</span>
+							<p>
+								대출 신청시 정보확인을 위해 실명인증과 휴대폰인증을 진행합니다.<br>
+								인증 이후, 회원님의 전용 가상계좌가 만들어 집니다.<br>
+							</p>
+							<a href="#" class="btn-auth">
+								대출자<br>인증하기
+								<span class="tooltip down">인증이 필요합니다.</span>
+							</a>
+
+							<!-- 인증 후 -->
+							<div class="box-auth">
+								<strong class="title">인증이 완료 되어, 가상계좌가 부여 되었습니다.</strong>
+								<p class="message">
+									가상계좌 이용료 200원 포함하여 2만원을 입금하시고, 2단계의 대출회원 가입비를 결제해주세요.
+								</p>
+								<p class="info">
+									우리은행 <em>245612-14-123654</em>
+									제영순 <em>0원</em>
+								</p>
+							</div>
+						</li>
+						<li class="seq02">
+							<span class="title">대출회원 가입비 결제</span>
+							<p>
+								신용/소득 보고서 조회, SMS 발송,<br>
+								증빙서류스캔등의 비용이 발생합니다.<br>
+							</p>
+							<a href="#popup-m-fee" class="warning">가입비 결제 전에 꼭 확인하세요!</a>
+							<script>
+							$(window.document).ready(function(){
+								// 가입비
+								var $btnMFee = $('a.warning');
+								$btnMFee.on('click', function(e) {
+									e.preventDefault();
+									var target = $btnMFee.attr('href');
+									$(target).toggle();
+								});
+							});
+							</script>
+							
+							<!-- 팝업 -->
+							<aside id="popup-m-fee" class="popup guide-popup mfee-popup">
+								<button class="btn-popup-close" data-target="#popup-m-fee">팝업닫기</button>
+
+								<h1>대출회원 가입비 19,800원</h1>
+								<p class="description">
+									신용보고서, 소득보고서, 스캔서비스, 예약상담서비스 등에 대한 비용으로<br>
+									<em>대출 확정에 대한 사항은 보장하지 않습니다.</em>
+								</p>
+
+								<ul class="refund">
+									<li data-title="환불1.">결제하신 금액은 빌리기 달성 시 지불하신 전액 (1회 결제분)을<br>회원님의 전용 가상계좌로 되돌려 드립니다.</li>
+									<li data-title="환불2.">빌리기를 진행하지 않는 경우, 환불은 신용보고서 조회하지 않은<br>건에 대해서만 환불이 가능합니다.</li>
+								</ul>
+
+								<p class="warning">
+									한성저축은행에 대출 상환 중이거나 대손건이 있으면 대출이 불가능하니<br>대출회원 가입비를 결제하지 마세요.
+								</p>
+							</aside>
+
+							<a href="#" class="btn-auth">
+								대출회원 가입비<br>19800원 결제
+								<span class="tooltip down">결제가 필요합니다.</span>
+							</a>
+						</li>
+						<li class="seq03">
+							<span class="title">신용보고서 조회</span>
+							<p>
+								조회한 내용은 빌리기 신청 페이지에<br>공개되며, 30일간 유효 합니다.
+							</p>
+							<ul class="list-dot">
+								<li>신용보고서 조회는 신용조회기록이 남지 않습니다.</li>
+								<li>조회 후, 올크레딧 사이트를 탈퇴하면 조회가 불가능합니다.</li>
+							</ul>
+							<p class="warning">
+								익스플로러 호환성 설정
+								<em>인터넷 익스플로러 &gt; 도구 &gt; <br>호환성 보기 설정 &gt; allcredit.co.kr (추가)</em>
+							</p>
+
+							<a href="#" class="btn-auth">
+								신용보고서<br>조회
+								<span class="tooltip down">조회가 필요합니다.</span>
+								<span class="tooltip">만료일 2015.12.12</span>
+							</a>
+						</li>
+						<li class="seq04">
+							<span class="title">소득보고서 조회 (선택)</span>
+							<p>
+								국민연금 납부내역을 조회하여 소득금액에 대한 증명으로 사용됩니다.<br>
+								조회한 내용은 빌리기 신청 페이지에 공개되며, 30일간 유효 합니다.<br>
+							</p>
+							<ul class="list-dot">
+								<li>조회 이후, 올크레딧 사이트를 탈퇴하면 조회가 불가능합니다.</li>
+							</ul>
+							<a href="#" class="btn-auth">
+								소득보고서<br>조회
+								<span class="tooltip">만료일 2015.12.12</span>
+							</a>
+						</li>
+					</ol>
+
+					<a href="#" class="btn-ready">준비 완료</a>	
+				</div>
+			</section>
+
+
+		</div>
+	</article>
+
+
+	<!-- 하단 영역 -->
+	include "footer.html"
+
+</body>
+</html>

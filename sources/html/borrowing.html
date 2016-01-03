@@ -1,0 +1,68 @@
+include "head.html"
+	<script>
+	$(window.document).ready(function(){
+	});
+	</script>
+
+	<!-- 상단 영역 -->
+	include "header.html"
+
+
+	<!-- 본문 영역 -->
+	<article class="contents borrowing">
+		<h1>빌리기</h1>
+
+		<div class="inner">
+		
+
+			<!-- 필터 및 소개  -->
+			<div class="filter-container">
+				<fieldset class="filter">
+					<legend>투자종류선택</legend>
+
+					<input type="radio" id="borrowing01" name="borrowing-type"><label for="borrowing01">개인이 빌리기</label>
+					<input type="radio" id="borrowing02" name="borrowing-type" checked="checked" class="selected"><label for="borrowing02">기업이 빌리기</label>
+				</fieldset>
+				
+				<div class="utils-guide">
+					<a href="#" class="btn-tip">꿀팁</a>
+				</div>
+			</div>
+
+
+			<!-- 기업이 빌리기 소개 -->
+			<div class="borrowing-intro">
+				<div class="message">
+					<h1 class="txt title">사회 경제에 활력을~ 기업 대출 서비스!</h1>
+					<p>
+						팝펀딩의 기업 대출 서비스는 법인(일반영리기업, 문화공연단체,<br>
+						비영리법인, 사회적 기업 등)이 사업을 영위함에 있어 필요한<br>
+						<em>사업자금을 대중들로부터 투자 받을 수 있는 크라우드 펀딩</em><br>
+						서비스입니다.<br>
+						<br>
+						필요한 시기에 필요한 규모에 맞게 공급 받을 수 있는<br>
+						팝펀딩의 기업 대출과 지금 함께하세요!!<br>
+					</p>
+				</div>
+
+				<div class="application">
+					<h2>기업 빌리기 신청안내</h2>
+					<p class="desc">
+						소셜펀드를 통해 대출 혹은 후원을<br>신청할 기업은 아래 메일로 문의 해주세요
+					</p>	
+					<a href="#" class="btn-borrowing">service@popfunding.com</a>
+					<p class="faq">
+						문의 사항이 있으시다구요? <a href="#">팝펀딩 FAQ</a>를 이용하세요! 
+					</p>
+				</div>
+			</div>
+
+		</div>
+	</article>
+
+
+	<!-- 하단 영역 -->
+	include "footer.html"
+
+</body>
+</html>

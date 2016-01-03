@@ -1,0 +1,211 @@
+include "head.html"
+	<script>
+	$(window.document).ready(function(){
+	});
+	</script>
+
+	<!-- 상단 영역 -->
+	include "header.html"
+
+
+	<!-- 본문 영역 -->
+	<article class="contents borrowing-private">
+		<h1>빌리기</h1>
+
+		<div class="inner">
+		
+
+			<!-- 필터 및 소개  -->
+			<div class="filter-container">
+				<fieldset class="filter">
+					<legend>투자종류선택</legend>
+
+					<input type="radio" id="borrowing01" name="borrowing-type" checked="checked" class="selected"><label for="borrowing01">개인이 빌리기</label>
+					<input type="radio" id="borrowing02" name="borrowing-type"><label for="borrowing02">기업이 빌리기</label>
+				</fieldset>
+				
+				<div class="utils-guide">
+					<a href="#" class="btn-tip">꿀팁</a>
+				</div>
+			</div>
+
+
+			<!-- 개인이 빌리기 소개 -->
+			<div class="borrowing-intro">
+				<div class="message">
+					<h1 class="txt title">누구에게나 열려있는 소액 품앗이 대출 popfunding</h1>
+					<p>
+						팝펀딩은 다수의 투자회원으로부터 투자를 받아<br>
+						<em>투자 금액이 신청한 금액의 100% 달성</em>되면, 빌릴 수 있는<br>
+						소액 품앗이 대출 서비스입니다.<br>
+					</p>
+				</div>
+
+				<ul class="list-description">
+					<li>
+						<span class="txt title01">신청자격</span>
+						<p>
+							만 19세 이상이라면 신용 제한 없이 누구나 가능합니다.
+						</p>
+					</li>
+					<li>
+						<span class="txt title02">기간</span>
+						<p>
+							6,9,12개월 (100~250만원)과<br>15,18,21,24개월 (300만원)로 나눠어 집니다.
+						</p>
+					</li>
+					<li>
+						<a href="#" class="btn-benefit">대출회원 혜택</a>
+						<span class="txt title03">빌리기 금액</span>
+						<p>
+							100만원, 150만원, 200만원, 250만원, 300만원이며<br>우수대출회원은 1000만원까지 가능합니다.
+						</p>
+					</li>
+					<li>
+						<span class="txt title04">이자와 상환방법</span>
+						<p>
+							연 0~25% (자율설정)이고, <a href="#popup-epr" class="btn-epr">원금 균등상환</a>입니다.
+						</p>
+						<script>
+						$(window.document).ready(function(){
+							// 원금 균등상환
+							var $btnEPR = $('.btn-epr');
+							$btnEPR.on('click', function(e) {
+								e.preventDefault();
+								var target = $btnEPR.attr('href');
+								$(target).toggle();
+							});
+						});
+						</script>
+
+						<aside id="popup-epr" class="popup guide-popup epr-popup">
+							<button class="btn-popup-close" data-target="#popup-epr">팝업닫기</button>
+
+							<h1>원금 균등상환 예시 ( 100만원 / 6개월 / 25% )</h1>
+
+							<table>
+								<caption>원금 균등상환 예시 ( 100만원 / 6개월 / 25% )</caption>
+								<thead>
+									<tr>
+										<th>월</th>
+										<th>원금</th>
+										<th>이자</th>
+										<th>상환합계</th>
+										<th>원대출 잔액</th>
+									</tr>
+								</thead>
+								<tfoot>
+									<tr>
+										<th>합계</th>
+										<th>1,000,000</th>
+										<th>72,916</th>
+										<th>1,072,916</th>
+										<th>0</th>
+									</tr>
+								</tfoot>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>166,667</td>
+										<td>20,833</td>
+										<td>187,500</td>
+										<td>833,333</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>166,667</td>
+										<td>17,361</td>
+										<td>184,028</td>
+										<td>666,666</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>166,667</td>
+										<td>13,889</td>
+										<td>180,556</td>
+										<td>499,999</td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td>166,667</td>
+										<td>10,417</td>
+										<td>177,084</td>
+										<td>333,332</td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td>166,667</td>
+										<td>6,944</td>
+										<td>173,611</td>
+										<td>166,665</td>
+									</tr>
+									<tr>
+										<td>6</td>
+										<td>166,665</td>
+										<td>3,472</td>
+										<td>170,137</td>
+										<td>0</td>
+									</tr>
+								</tbody>
+							</table>
+							<p>
+								<a href="#">FAQ에서 자세히 보기</a>	
+							</p>
+						</aside>
+
+					</li>
+				</ul>
+			</div>
+
+
+			<section class="application">
+				<h1>빌리기 신청</h1>
+
+				<div class="box">
+					<h2 class="hidden">빌리기 신청 절차</h2>
+					<ol class="proceedings">
+						<li class="step01">
+							<span class="tooltip down">신용보고서 기간만료</span>
+							<strong class="title">빌리기 신청</strong>
+							<p>
+								대출자 인증<br>
+								대출회원 가입비 결제 <a href="#">(19,800원)</a><br>
+								신용보고서 조회<br>
+								소득보고서 조회(선택)<br>
+							</p>
+							<p class="tooltip">신용/소득보고서 확인 비용<br>경매진행 관련 SMS 발송 비용<br>증빙서류 스캔 서비스 비용</p>
+						</li>
+						<li class="step02">
+							<strong class="title">개인정보 입력 <a href="#" class="btn-update">수정하기</a></strong>
+							<p class="warning">
+								사실과 다를경우, 신청 금액을<br>받을 수 없습니다.
+							</p>
+						</li>
+						<li class="step03">
+							<span class="tooltip down">임시저장</span>
+
+							<strong class="title">빌리기 신청</strong>
+							<p>
+								사용처, 사연, 상환계획과<br>기타사항을 입력합니다.
+							</p>
+						</li>
+					</ol>
+
+					<div class="clear"></div>
+					<a href="#" class="btn-borrowing">빌리기 신청하기</a>
+					<p class="faq">
+						더 궁금하신 사항이 있으시다구요? <a href="#">팝펀딩 FAQ</a>를 이용하세요! 
+					</p>
+				</div>
+			</section>
+
+
+		</div>
+	</article>
+
+
+	<!-- 하단 영역 -->
+	include "footer.html"
+
+</body>
+</html>

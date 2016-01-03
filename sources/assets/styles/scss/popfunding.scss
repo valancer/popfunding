@@ -126,4 +126,7 @@ $z-layers: (
 
 @import "layout";
 @import "contents";
-@import "contents_private_invest";
+@import "contents_invest";
+@import "contents_invest_private";
+@import "contents_borrowing";
+@import "contents_borrowing_private";

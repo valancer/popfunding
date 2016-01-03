@@ -1,0 +1,112 @@
+/* 개인이 빌리기 */
+.contents.borrowing-private {
+
+
+	.borrowing-intro { position: relative; margin-top: 42px; padding-top: 75px; height: 462px; background: url('/assets/images/bowwroing_private_visual01.png') 470px 64px no-repeat;;
+		> .message { float: left;
+			.title { margin-bottom: 39px; height: 150px; width: 378px; background: url('/assets/images/txt/borrowing_private_message01.png') left top no-repeat; }
+		}
+
+		p { font-size: 0.875em; color: $color-content; line-height: 22px;
+			em { color: $color-menu1-hover; }
+		}
+
+		.list-description { float: right; width: 340px;
+			> li { position: relative;
+				.title01 { height: 30px; width: 109px; background: url('/assets/images/txt/borrowing_private_title01.png') left top no-repeat; }
+				.title02 { height: 30px; width: 55px; background: url('/assets/images/txt/borrowing_private_title02.png') left top no-repeat; }
+				.title03 { height: 30px; width: 146px; background: url('/assets/images/txt/borrowing_private_title03.png') left top no-repeat; }
+				.title04 { height: 30px; width: 202px; background: url('/assets/images/txt/borrowing_private_title04.png') left top no-repeat; }
+				p { margin-top: 12px; margin-bottom: 37px; }
+				a { color: $color-content; text-decoration: underline; }
+				.btn-benefit { display: inline-block; float: right; margin-top: 14px; font-size: 0.875em; }
+			}
+		}
+
+		/// 원금 균등상환 팝업
+		.epr-popup { display: none; position: absolute; top: 90px; right: 0; z-index: z("modaless"); padding: 56px 60px 46px 60px; width: 543px;
+			&:before { right: 109px; }
+
+			h1 { padding: 0; font-size: 0.875em; color: $color-title;
+				&:before { content: none; }
+			}
+			table { margin-top: 13px; width: 100%; 
+				caption { display: block; }
+				th { font-size: 0.875em; font-weight: normal; color: $color-title; line-height: 44px; text-align: center; background-color: #fbfbfb;
+					&:first-child { border-left: 0px; }
+				}
+				td { font-size: 0.875em; color: $color-content; line-height: 44px; text-align: center;
+					&:first-child { border-left: 0px; }
+				}
+				thead {
+					th { border-top: 2px solid #252525; border-bottom: 1px solid #7c7f84; border-left: 1px solid #d4dae4; }
+				}
+				tfoot {
+					th { border-top: 1px solid #7c7f84; border-bottom: 2px solid #252525; border-left: 1px solid #d4dae4; }
+				}
+				tbody {
+					td { border-top: 1px solid #d4dae4; border-left: 1px solid #d4dae4; }
+				}
+			}
+			> p { margin: 12px 0 0 0 !important; text-align: right; }
+		}
+
+	}
+
+	/// 빌리기 신청
+	.application {
+		h1 { font-size: 1.375em; color: $color-title; line-height: 1.3em; }
+
+		.box { margin-top: 18px; padding: 70px 140px 55px 140px; border: 1px solid #d4dae4; background-color: #fff;
+
+			.proceedings { overflow: visible; position: relative; margin: 0 auto; width: auto;
+				&:before { content: ''; display: block; position: absolute; top: 68px; right: 100px; left: 50px; z-index: z("default")-1; height: 2px; background-color: #254694; }
+
+				> li { display: block; position: relative; float: left; padding-left: 20px; vertical-align: top;
+					&:before { content: ''; display: block; position: relative; z-index: z("default"); margin-bottom: 17px; background-color: #fff; }
+
+					.tooltip { display: block; position: absolute; z-index: z("tooltip"); padding: 5px 13px 6px 13px; font-size: 12px; color: $color-content; line-height: 18px; border: 1px solid #c3d0e1; border-radius: 4px; background-color: #fff;
+						&:before { content: ''; display: block; position: absolute; top: -$sprite-bg-arrow15-height; left: 50%; margin-left: -$sprite-bg-arrow15-width/2; @include sprite($sprite-bg-arrow15); }
+
+						&.down {
+							&:before { top: auto; bottom: -$sprite-bg-arrow16-height; margin-left: -$sprite-bg-arrow16-width/2; @include sprite($sprite-bg-arrow16); }
+						}
+					}
+
+					.title { display: block; margin-bottom: 13px; font-size: 1.250em; font-wei: normal; color: $color-title; line-height: 1.3em; }
+					p { font-size: 0.875em; color: $color-content; line-height: 22px;
+						a { color: $color-menu1-hover; text-decoration: underline; }
+					}
+
+				
+					&.step01 { width: 325px;
+						&:before { margin-left: -20px; @include sprite($sprite-bg-procedding01); }
+						span.tooltip { top: -23px; left: 2px; }
+						p.tooltip { top: 240px; left: 100px; }
+					}
+					&.step02 { width: 333px;
+						&:before { margin-left: -10px; @include sprite($sprite-bg-procedding02); }
+
+						.btn-update { display: inline-block; margin-top: -3px; padding: 5px 13px 6px 13px; font-size: 12px; color: $color-content; line-height: 18px; vertical-align: middle; border: 1px solid #c3d0e1; border-radius: 4px; background-color: #fff; }
+						.warning { position: relative; padding-left: 28px; font-size: 12px; color: $color-menu1-hover; line-height: 18px;
+							&:before { content: ''; display: block; position: absolute; top: 0; left: 0; @include sprite($sprite-icon-iks01); }
+						}
+					}
+					&.step03 { width: 160px;
+						&:before { margin-left: -20px; @include sprite($sprite-bg-procedding03); }
+						.tooltip { top: -23px; left: 35px; color: $color-menu1-hover; }
+					}
+				}
+			}
+
+			.btn-borrowing { display: block; margin: 30px auto 0 auto; width: 400px; font-size: 1.000em; font-weight: bold; color: #fff; line-height: 55px; text-align: center; text-decoration: none; border-radius: 55px; background-color: $color-borrowing;
+				&:after { content: ''; display: inline-block; margin: -2px 0 0 22px; vertical-align: middle; @include sprite($sprite-bg-arrow17); }
+			}
+			.faq { margin-top: 12px; font-size: 0.750em; color: $color-content; line-height: 18px; text-align: center; 
+				a { color: $color-content; text-decoration: underline; }
+			}
+		}
+
+	}
+
+}

@@ -60,8 +60,6 @@ $z-layers: (
 }
 
 
-
-
 /**
  * modules - buttons
  */
@@ -120,12 +118,13 @@ $z-layers: (
 
 .btn-submit-auth { display: block; margin: 0 auto; width: 360px; font-size: 0.875em; font-weight: bold; color: #fff; line-height: 40px; border-radius: 2px; background-color: $color-menu1-hover; }
 
+
+
 /**
  * import
  */
-
-@import "layout";
 @import "contents";
+@import "layout";
 @import "contents_invest";
 @import "contents_invest_private";
 @import "contents_borrowing";

@@ -1,0 +1,237 @@
+include "head.html"
+	<script>
+	$(window.document).ready(function(){
+	});
+	</script>
+
+	<!-- 상단 영역 -->
+	include "header.html"
+
+
+	<!-- 본문 영역 -->
+	<article class="contents borrowing-private">
+		<h1>빌리기</h1>
+
+		<div class="inner">
+		
+
+			<!-- 필터 및 소개  -->
+			<div class="filter-container">
+				<fieldset class="filter">
+					<legend>투자종류선택</legend>
+
+					<input type="radio" id="borrowing01" name="borrowing-type" checked="checked" class="selected"><label for="borrowing01">개인이 빌리기</label>
+					<input type="radio" id="borrowing02" name="borrowing-type"><label for="borrowing02">기업이 빌리기</label>
+				</fieldset>
+				
+				<div class="utils-guide">
+					<a href="#" class="btn-tip">꿀팁</a>
+				</div>
+			</div>
+
+
+			<!-- 개인이 빌리기 -->
+			<section class="borrowing-application step01">
+				<a href="#" class="btn-back">소개 화면으로 돌아가기</a>
+
+				<ul class="proceedings">
+					<li class="step01">
+						<span class="tooltip down">신용보고서 기간만료</span>
+						<h1 class="title">빌리기 신청</h1>
+					</li>
+					<li class="step02 selected">
+						<span class="title">개인정보 입력</span>
+						<a href="#" class="btn-update">개인정보 수정</a>
+					</li>
+					<li class="step03">
+						<span class="tooltip down">임시저장</span>
+						<span class="title">빌리기 신청</span>
+					</li>
+				</ul>
+
+				<div class="proceedings-step01 basic-info">
+					<h2>개인정보 입력</h2>
+
+
+					<fieldset class="basic-info-form">
+						<legend>개인정보 입력 폼</legend>
+
+						<fieldset class="basic">
+							<legend>기본 정보</legend>
+
+							<div class="item-form" style="margin-right: 20px; width: 345px;">
+								<label for="email">이메일</label>
+								<input type="text" id="email" name="email">
+							</div>
+							<div class="item-form">
+								<label for="">휴대전화 (본인명의)</label>
+								<span class="center">
+									<input type="text" id="" name="">
+									-
+									<input type="text" id="" name="">
+									-
+									<input type="text" id="" name="">
+								</span>
+							</div>
+							<p class="warning">이미 등록된 이메일 주소와 휴대전화이며 수정을 할 수 없습니다.<br>수신이 불가능할 경우 대출이 취소됩니다.</p>
+						</fieldset>
+
+
+						<fieldset class="contacts">
+							<legend>연락처</legend>
+
+							<div class="item-form">
+								<label for="">집전화</label>
+								<span class="center">
+									<input type="text" id="" name="">
+									-
+									<input type="text" id="" name="">
+									-
+									<input type="text" id="" name="">
+									<span class="tooltip">집전화를 입력하세요. 없으면 [집전화 없음]을 체크하세요.</span>
+								</span>
+								<p class="cr-box">
+									<input type="checkbox" id="tel-none" name="tel-none"><label for="tel-none">집전화 없음</label>
+								</p>
+							</div>
+							<div class="item-form">
+								<label for="">회사전화</label>
+								<span class="center">
+									<input type="text" id="" name="">
+									-
+									<input type="text" id="" name="">
+									-
+									<input type="text" id="" name="">
+									<span class="tooltip">회사전화를 입력하세요. 없으면 [회사전화 없음]을 체크하세요.</span>
+								</span>
+								<p class="cr-box">
+									<input type="checkbox" id="co-tel-none" name="co-tel-none"><label for="co-tel-none">회사전화 없음</label>
+								</p>
+							</div>
+							<div class="item-form">
+								<label for="co-name">회사명 (비공개)</label>
+								<input type="text" id="co-name" name="co-name" class="co-name">
+								<span class="tooltip">회사명을 입력하세요. 없으면 [현재 직장없음]을 체크하세요.</span>
+								<p class="cr-box">
+									<input type="checkbox" id="co-none" name="co-none"><label for="co-none">현재 직장 없음</label>
+								</p>
+							</div>
+
+							<div class="contacts-description">
+								<p style="margin-bottom: 25px;">
+									반드시 연락이 가능한 회원님의 연락처, 주소, 정보 등을 입력해야 합니다.<br>
+									<strong>아래의 경우 신청 및 대출이 취소됩니다.</strong>
+								</p>
+								<p class="warning">
+									본인명의 휴대폰으로 입력한 번호가 본인명의가 아닌 경우.									
+								</p>
+								<p class="warning">
+									이메일/핸드폰/회사전화/집전화/실거주지/직장/계좌번호가<br>불일치 및 미확인.
+								</p>
+							</div>
+						</fieldset>
+
+
+						<fieldset class="address">
+							<legend>주소 정보</legend>
+
+							<!-- 주민등록 주소 -->
+							<div class="item-form">
+								<label for="">주민등록 주소</label>
+								<span class="center">
+									<input type="text" id="" name="" style="width: 86px;">
+								</span>
+								<a href="#" class="btn-inner-form">
+									검색
+									<span class="tooltip">주소를 검색하세요.</span>
+								</a>
+							</div>
+							<div class="item-form" style="width: 407px;">
+								<label for="" class="visible-hidden">주소</label>
+								<input type="text" id="" name="">
+								<p class="warning">
+									주민등본과 다를 시 신청 및 대출이 취소됩니다.
+								</p>
+							</div>
+							<div class="item-form" style="width: 318px; margin-right: 0px;">
+								<label for="">상세주소</label>
+								<input type="text" id="" name="">
+								<span class="tooltip">상세주소를 검색하세요.</span>
+							</div>
+							<div class="clear"></div>
+
+							<!-- 실거주지 주소 -->
+							<div class="item-form">
+								<label for="">실거주지 주소</label>
+								<span class="center">
+									<input type="text" id="" name="" style="width: 86px;">
+								</span>
+								<a href="#" class="btn-inner-form">
+									검색
+									<span class="tooltip">주소를 검색하세요.</span>
+								</a>
+							</div>
+							<div class="item-form" style="width: 407px;">
+								<label for="" class="visible-hidden">주소</label>
+								<input type="text" id="" name="">
+								<p class="cr-box">
+									<input type="checkbox" id="equal-ssn" name="equal-ssn"><label for="equal-ssn">주민등록 주소와 동일합니다.</label>
+								</p>
+							</div>
+							<div class="item-form" style="width: 318px; margin-right: 0px;">
+								<label for="">상세주소</label>
+								<input type="text" id="" name="">
+								<span class="tooltip">상세주소를 검색하세요.</span>
+							</div>
+
+						</fieldset>
+
+
+						<fieldset class="account">
+							<legend>계좌 정보</legend>
+
+							<div class="item-form" style="width: 173px;">
+								<label for="">은행명</label>
+
+								<div class="select">
+									<button value="">우리은행</button>
+									<ul class="list-selecting" style="display: none;">
+										<li><button value="">은행명</button></li>
+										<li><button value="">은행명</button></li>
+										<li><button value="">은행명</button></li>
+									</ul>
+								</div>
+							</div>
+							<div class="item-form" style="width: 407px;">
+								<label for="">계좌번호</label>
+								<input type="text" id="" name="">
+								<span class="tooltip">계좌번호를 입력하세요.</span>
+							</div>
+							<p class="desc">
+								<em>대출금을 송금 받을 계좌이며,</em><br>
+								반드시 본인 명의의 계좌를 입력하세요.
+							</p>
+
+						</fieldset>
+					</fieldset>
+
+
+					<a href="#" class="btn-sumbit">저장하기</a>
+					<p class="submit-desc">실수가 없도록 신중히 작성해 주세요.</p>
+
+					<!-- 수정하기 -->
+					<a href="#" class="btn-sumbit update">수정하기</a>
+					<p class="submit-desc">수정하기 클릭 &gt; 수정 &gt; 저장하기 클릭</p>
+				</div>
+			</section>
+
+
+		</div>
+	</article>
+
+
+	<!-- 하단 영역 -->
+	include "footer.html"
+
+</body>
+</html>

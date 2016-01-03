@@ -97,7 +97,10 @@ a:hover {
   text-decoration: underline; }
 
 .hidden {
-  display: none; }
+  display: none !important; }
+
+.visible-hidden {
+  visibility: hidden !important; }
 
 .clear {
   clear: both; }
@@ -351,6 +354,301 @@ body {
 /**
  * import
  */
+/* 공통 */
+/* 이미지 텍스트 */
+.txt {
+  display: block;
+  text-indent: -9999px; }
+
+/* 페이지 상단 필터 */
+.filter-container {
+  overflow: hidden; }
+  .filter-container .filter {
+    position: relative;
+    float: left; }
+    .filter-container .filter input[type=radio] {
+      position: absolute;
+      top: -9999px;
+      left: -9999px; }
+      .filter-container .filter input[type=radio].selected + label {
+        color: #ff4776; }
+    .filter-container .filter label {
+      font-size: 1.063em;
+      font-weight: bold;
+      color: #142c66;
+      cursor: pointer;
+      line-height: 37px; }
+      .filter-container .filter label:hover {
+        color: #ff4776; }
+      .filter-container .filter label + input[type=radio] + label:before {
+        content: '|';
+        display: inline-block;
+        margin-right: 20px;
+        margin-left: 16px;
+        color: #dee1e7;
+        text-decoration: none; }
+  .filter-container .utils-guide {
+    float: right; }
+    .filter-container .utils-guide > a {
+      margin-left: 16px;
+      vertical-align: middle; }
+
+/* 툴팁 중앙 정렬 */
+.tooltip {
+  display: block;
+  position: absolute;
+  bottom: -27px;
+  z-index: 100;
+  padding: 7px 13px 6px 13px;
+  font-size: 12px;
+  font-weight: normal;
+  color: #ff4776;
+  text-align: left;
+  line-height: 16px;
+  white-space: nowrap;
+  border: 1px solid #d9bac2;
+  border-radius: 4px;
+  background-color: #fff; }
+  .tooltip:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -6px;
+    left: 43px;
+    background-image: url(/assets/images/sprites.png);
+    background-position: -557px -446px;
+    width: 11px;
+    height: 6px; }
+  .tooltip.multiple {
+    bottom: -43px; }
+
+/* 개별 입력 폼 */
+.item-form {
+  position: relative;
+  clear: both; }
+  .item-form .time {
+    float: right;
+    font-size: 0.750em;
+    color: #ff4776;
+    line-height: 28px; }
+  .item-form label {
+    display: block;
+    margin-top: 12px;
+    font-size: 0.750em;
+    color: #6b7581;
+    line-height: 28px; }
+    .item-form label .btn-detail {
+      float: right;
+      color: #ff4776;
+      line-height: 28px;
+      text-decoration: underline; }
+  .item-form input[type=text],
+  .item-form input[type=password] {
+    display: block;
+    box-sizing: border-box;
+    padding: 0 0 0 16px;
+    height: 40px;
+    width: 100%;
+    font-size: 1.000em;
+    color: #252525;
+    line-height: 40px;
+    border: 1px solid #bec3cd;
+    border-radius: 2px;
+    background-color: #fff; }
+  .item-form input[readonly=readonly] {
+    color: #ff4776; }
+  .item-form .select {
+    display: block;
+    position: relative;
+    padding: 0 15px;
+    border: 1px solid #bec3cd;
+    border-radius: 2px;
+    background-color: #fff; }
+    .item-form .select.inline {
+      display: inline-block;
+      min-width: 78px;
+      vertical-align: middle; }
+    .item-form .select > button {
+      display: block;
+      width: 100%;
+      font-size: 1.000em;
+      color: #252525;
+      line-height: 38px;
+      text-align: left; }
+      .item-form .select > button:after {
+        content: '';
+        display: inline-block;
+        margin-top: -3px;
+        margin-left: 10px;
+        vertical-align: middle;
+        background-image: url(/assets/images/sprites.png);
+        background-position: -681px -487px;
+        width: 9px;
+        height: 5px; }
+    .item-form .select .list-selecting {
+      position: absolute;
+      top: 33px;
+      right: -1px;
+      left: -1px;
+      z-index: 500;
+      padding: 0 15px;
+      border-right: 1px solid #bec3cd;
+      border-bottom: 1px solid #bec3cd;
+      border-left: 1px solid #bec3cd;
+      background-color: #fff; }
+      .item-form .select .list-selecting > li button {
+        display: block;
+        width: 100%;
+        font-size: 1.000em;
+        color: #252525;
+        line-height: 28px;
+        text-align: left; }
+        .item-form .select .list-selecting > li button:hover {
+          color: #ff4776; }
+    .item-form .select .cr-box {
+      position: absolute;
+      top: 0px;
+      right: 15px; }
+      .item-form .select .cr-box label {
+        margin-top: 0;
+        line-height: 16px; }
+  .item-form + .warning {
+    margin-top: 8px; }
+  .item-form .center {
+    position: relative; }
+    .item-form .center input[type=text],
+    .item-form .center input[type=password] {
+      padding: 0 16px;
+      text-align: center; }
+    .item-form .center .tooltip {
+      left: 50% !important;
+      -webkit-transform: translateX(-50%) !important;
+          -ms-transform: translateX(-50%) !important;
+              transform: translateX(-50%) !important; }
+      .ie8 .item-form .center .tooltip {
+        left: 0%; }
+      .item-form .center .tooltip:before {
+        left: 50%;
+        margin-left: -5.5px; }
+      .item-form .center .tooltip.down:before {
+        left: 50%;
+        margin-left: -5.5px; }
+  .item-form span.center {
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle; }
+    .item-form span.center input[type=text],
+    .item-form span.center input[type=password] {
+      display: inline-block;
+      width: 110px;
+      vertical-align: middle; }
+  .item-form .input-column {
+    display: inline-block;
+    width: 172px; }
+  .item-form .box {
+    display: block;
+    overflow: hidden;
+    padding: 0 15px;
+    line-height: 38px;
+    border: 1px solid #bec3cd;
+    border-radius: 2px;
+    background-color: #fff; }
+    .item-form .box .cr-box {
+      display: block;
+      float: left;
+      margin: 0;
+      width: 50%; }
+  .item-form .btn-inner-form {
+    display: inline-block;
+    position: relative;
+    padding: 0 15px;
+    min-width: 38px;
+    font-size: 0.875em;
+    font-weight: bold;
+    color: #fff;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    border-radius: 2px;
+    background-color: #6e80a9; }
+    .item-form .btn-inner-form .tooltip {
+      left: 50% !important;
+      -webkit-transform: translateX(-50%) !important;
+          -ms-transform: translateX(-50%) !important;
+              transform: translateX(-50%) !important; }
+      .ie8 .item-form .btn-inner-form .tooltip {
+        left: 0%; }
+      .item-form .btn-inner-form .tooltip:before {
+        left: 50%;
+        margin-left: -5.5px; }
+      .item-form .btn-inner-form .tooltip.down:before {
+        left: 50%;
+        margin-left: -5.5px; }
+
+/* 체크박스 & 라디오 버튼 */
+.cr-box {
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 3px; }
+  .cr-box input[type=checkbox],
+  .cr-box input[type=radio] {
+    position: absolute;
+    left: -9999px; }
+  .cr-box input[type=checkbox] + label:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(/assets/images/sprites.png);
+    background-position: -427px -344px;
+    width: 15px;
+    height: 15px; }
+  .cr-box input[type=checkbox].checked + label:before, .cr-box input[type=checkbox]:checked + label:before {
+    background-image: url(/assets/images/sprites.png);
+    background-position: -447px -344px;
+    width: 15px;
+    height: 15px; }
+  .cr-box input[type=radio] + label:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 0;
+    background-image: url(/assets/images/sprites.png);
+    background-position: -670px -572px;
+    width: 14px;
+    height: 14px; }
+  .cr-box input[type=radio].checked + label, .cr-box input[type=radio]:checked + label {
+    color: #252525; }
+    .cr-box input[type=radio].checked + label:before, .cr-box input[type=radio]:checked + label:before {
+      background-image: url(/assets/images/sprites.png);
+      background-position: -651px -572px;
+      width: 14px;
+      height: 14px; }
+  .cr-box label {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    padding-left: 22px;
+    font-size: 12px;
+    color: #6b7581;
+    line-height: 16px; }
+    .cr-box label > a {
+      color: #6b7581;
+      text-decoration: underline; }
+  .cr-box .tooltip {
+    top: -38px;
+    bottom: auto; }
+    .cr-box .tooltip:before {
+      top: auto;
+      bottom: -6px;
+      background-image: url(/assets/images/sprites.png);
+      background-position: -525px -446px;
+      width: 11px;
+      height: 6px; }
+
 /* GNB HEADER */
 .header {
   display: block;
@@ -1624,33 +1922,6 @@ article.contents {
     .popup.membership .notice > li a {
       color: #6b7581;
       text-decoration: underline; }
-  .popup.membership .tooltip {
-    display: block;
-    position: absolute;
-    bottom: -27px;
-    z-index: 100;
-    padding: 7px 13px 6px 13px;
-    font-size: 12px;
-    font-weight: normal;
-    color: #ff4776;
-    text-align: left;
-    line-height: 16px;
-    white-space: nowrap;
-    border: 1px solid #d9bac2;
-    border-radius: 4px;
-    background-color: #fff; }
-    .popup.membership .tooltip:before {
-      content: '';
-      display: block;
-      position: absolute;
-      top: -6px;
-      left: 43px;
-      background-image: url(/assets/images/sprites.png);
-      background-position: -557px -446px;
-      width: 11px;
-      height: 6px; }
-    .popup.membership .tooltip.multiple {
-      bottom: -43px; }
   .popup.membership .auth-tab {
     position: relative;
     overflow: hidden;
@@ -1698,223 +1969,6 @@ article.contents {
       .popup.membership .membership-form .column .item-form + .item-form {
         box-sizing: border-box;
         padding-left: 5px; }
-    .popup.membership .membership-form .item-form {
-      position: relative;
-      clear: both; }
-      .popup.membership .membership-form .item-form .time {
-        float: right;
-        font-size: 0.750em;
-        color: #ff4776;
-        line-height: 28px; }
-      .popup.membership .membership-form .item-form label {
-        display: block;
-        margin-top: 12px;
-        font-size: 0.750em;
-        color: #6b7581;
-        line-height: 28px; }
-        .popup.membership .membership-form .item-form label .btn-detail {
-          float: right;
-          color: #ff4776;
-          line-height: 28px;
-          text-decoration: underline; }
-      .popup.membership .membership-form .item-form input[type=text],
-      .popup.membership .membership-form .item-form input[type=password] {
-        display: block;
-        box-sizing: border-box;
-        padding: 0 0 0 16px;
-        height: 40px;
-        width: 100%;
-        font-size: 1.000em;
-        color: #252525;
-        line-height: 40px;
-        border: 1px solid #bec3cd;
-        border-radius: 2px;
-        background-color: #fff; }
-      .popup.membership .membership-form .item-form input[readonly=readonly] {
-        color: #ff4776; }
-      .popup.membership .membership-form .item-form .select {
-        display: block;
-        position: relative;
-        padding: 0 15px;
-        border: 1px solid #bec3cd;
-        border-radius: 2px;
-        background-color: #fff; }
-        .popup.membership .membership-form .item-form .select.inline {
-          display: inline-block;
-          min-width: 78px;
-          vertical-align: middle; }
-        .popup.membership .membership-form .item-form .select > button {
-          display: block;
-          width: 100%;
-          font-size: 1.000em;
-          color: #252525;
-          line-height: 38px;
-          text-align: left; }
-          .popup.membership .membership-form .item-form .select > button:after {
-            content: '';
-            display: inline-block;
-            margin-top: -3px;
-            margin-left: 10px;
-            vertical-align: middle;
-            background-image: url(/assets/images/sprites.png);
-            background-position: -681px -487px;
-            width: 9px;
-            height: 5px; }
-        .popup.membership .membership-form .item-form .select .list-selecting {
-          position: absolute;
-          top: 33px;
-          right: -1px;
-          left: -1px;
-          z-index: 500;
-          padding: 0 15px;
-          border-right: 1px solid #bec3cd;
-          border-bottom: 1px solid #bec3cd;
-          border-left: 1px solid #bec3cd;
-          background-color: #fff; }
-          .popup.membership .membership-form .item-form .select .list-selecting > li button {
-            display: block;
-            width: 100%;
-            font-size: 1.000em;
-            color: #252525;
-            line-height: 28px;
-            text-align: left; }
-            .popup.membership .membership-form .item-form .select .list-selecting > li button:hover {
-              color: #ff4776; }
-        .popup.membership .membership-form .item-form .select .cr-box {
-          position: absolute;
-          top: 0px;
-          right: 15px; }
-          .popup.membership .membership-form .item-form .select .cr-box label {
-            margin-top: 0;
-            line-height: 16px; }
-      .popup.membership .membership-form .item-form + .warning {
-        margin-top: 8px; }
-      .popup.membership .membership-form .item-form .center {
-        position: relative; }
-        .popup.membership .membership-form .item-form .center input[type=text],
-        .popup.membership .membership-form .item-form .center input[type=password] {
-          padding: 0 16px;
-          text-align: center; }
-        .popup.membership .membership-form .item-form .center .tooltip {
-          left: 50%;
-          -webkit-transform: translateX(-50%);
-              -ms-transform: translateX(-50%);
-                  transform: translateX(-50%); }
-          .ie8 .popup.membership .membership-form .item-form .center .tooltip {
-            left: 0%; }
-          .popup.membership .membership-form .item-form .center .tooltip:before {
-            left: 50%;
-            margin-left: -5.5px; }
-      .popup.membership .membership-form .item-form span.center {
-        display: inline-block;
-        margin-right: 10px;
-        vertical-align: middle; }
-        .popup.membership .membership-form .item-form span.center input[type=text],
-        .popup.membership .membership-form .item-form span.center input[type=password] {
-          display: inline-block;
-          width: 110px;
-          vertical-align: middle; }
-      .popup.membership .membership-form .item-form .input-column {
-        display: inline-block;
-        width: 172px; }
-      .popup.membership .membership-form .item-form .box {
-        display: block;
-        overflow: hidden;
-        padding: 0 15px;
-        line-height: 38px;
-        border: 1px solid #bec3cd;
-        border-radius: 2px;
-        background-color: #fff; }
-        .popup.membership .membership-form .item-form .box .cr-box {
-          display: block;
-          float: left;
-          margin: 0;
-          width: 50%; }
-      .popup.membership .membership-form .item-form .btn-inner-form {
-        display: inline-block;
-        position: relative;
-        padding: 0 15px;
-        min-width: 38px;
-        font-size: 0.875em;
-        font-weight: bold;
-        color: #fff;
-        line-height: 40px;
-        text-align: center;
-        text-decoration: none;
-        vertical-align: middle;
-        border-radius: 2px;
-        background-color: #6e80a9; }
-        .popup.membership .membership-form .item-form .btn-inner-form .tooltip {
-          left: 50%;
-          -webkit-transform: translateX(-50%);
-              -ms-transform: translateX(-50%);
-                  transform: translateX(-50%); }
-          .ie8 .popup.membership .membership-form .item-form .btn-inner-form .tooltip {
-            left: 0%; }
-          .popup.membership .membership-form .item-form .btn-inner-form .tooltip:before {
-            left: 50%;
-            margin-left: -5.5px; }
-    .popup.membership .membership-form .cr-box {
-      position: relative;
-      margin-top: 10px;
-      margin-bottom: 3px; }
-      .popup.membership .membership-form .cr-box input[type=checkbox],
-      .popup.membership .membership-form .cr-box input[type=radio] {
-        position: absolute;
-        left: -9999px; }
-      .popup.membership .membership-form .cr-box input[type=checkbox] + label:before {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-image: url(/assets/images/sprites.png);
-        background-position: -427px -344px;
-        width: 15px;
-        height: 15px; }
-      .popup.membership .membership-form .cr-box input[type=checkbox].checked + label:before, .popup.membership .membership-form .cr-box input[type=checkbox]:checked + label:before {
-        background-image: url(/assets/images/sprites.png);
-        background-position: -447px -344px;
-        width: 15px;
-        height: 15px; }
-      .popup.membership .membership-form .cr-box input[type=radio] + label:before {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 1px;
-        left: 0;
-        background-image: url(/assets/images/sprites.png);
-        background-position: -670px -572px;
-        width: 14px;
-        height: 14px; }
-      .popup.membership .membership-form .cr-box input[type=radio].checked + label, .popup.membership .membership-form .cr-box input[type=radio]:checked + label {
-        color: #252525; }
-        .popup.membership .membership-form .cr-box input[type=radio].checked + label:before, .popup.membership .membership-form .cr-box input[type=radio]:checked + label:before {
-          background-image: url(/assets/images/sprites.png);
-          background-position: -651px -572px;
-          width: 14px;
-          height: 14px; }
-      .popup.membership .membership-form .cr-box label {
-        display: inline-block;
-        position: relative;
-        cursor: pointer;
-        padding-left: 22px;
-        font-size: 12px;
-        color: #6b7581;
-        line-height: 16px; }
-        .popup.membership .membership-form .cr-box label > a {
-          color: #6b7581;
-          text-decoration: underline; }
-      .popup.membership .membership-form .cr-box .tooltip {
-        top: -38px;
-        bottom: auto; }
-        .popup.membership .membership-form .cr-box .tooltip:before {
-          top: auto;
-          bottom: -6px;
-          background-image: url(/assets/images/sprites.png);
-          background-position: -525px -446px;
-          width: 11px;
-          height: 6px; }
     .popup.membership .membership-form .btn-submit {
       margin-top: 40px; }
     .popup.membership .membership-form .find-info {
@@ -1946,13 +2000,16 @@ article.contents {
         text-align: center;
         border-right: 1px solid #d4dae4; }
         .popup.membership .membership-form table.agreements tbody th .tooltip {
-          left: 50%;
-          -webkit-transform: translateX(-50%);
-              -ms-transform: translateX(-50%);
-                  transform: translateX(-50%); }
+          left: 50% !important;
+          -webkit-transform: translateX(-50%) !important;
+              -ms-transform: translateX(-50%) !important;
+                  transform: translateX(-50%) !important; }
           .ie8 .popup.membership .membership-form table.agreements tbody th .tooltip {
             left: 0%; }
           .popup.membership .membership-form table.agreements tbody th .tooltip:before {
+            left: 50%;
+            margin-left: -5.5px; }
+          .popup.membership .membership-form table.agreements tbody th .tooltip.down:before {
             left: 50%;
             margin-left: -5.5px; }
       .popup.membership .membership-form table.agreements tbody td .cr-box {
@@ -2377,43 +2434,6 @@ article.contents {
     display: block !important;
     padding-top: 65px;
     min-height: 370px !important; }
-
-/* 공통 */
-.txt {
-  display: block;
-  text-indent: -9999px; }
-
-.filter-container {
-  overflow: hidden; }
-  .filter-container .filter {
-    position: relative;
-    float: left; }
-    .filter-container .filter input[type=radio] {
-      position: absolute;
-      top: -9999px;
-      left: -9999px; }
-      .filter-container .filter input[type=radio].selected + label {
-        color: #ff4776; }
-    .filter-container .filter label {
-      font-size: 1.063em;
-      font-weight: bold;
-      color: #142c66;
-      cursor: pointer;
-      line-height: 37px; }
-      .filter-container .filter label:hover {
-        color: #ff4776; }
-      .filter-container .filter label + input[type=radio] + label:before {
-        content: '|';
-        display: inline-block;
-        margin-right: 20px;
-        margin-left: 16px;
-        color: #dee1e7;
-        text-decoration: none; }
-  .filter-container .utils-guide {
-    float: right; }
-    .filter-container .utils-guide > a {
-      margin-left: 16px;
-      vertical-align: middle; }
 
 /* 투자 */
 .product-tab {
@@ -5293,20 +5313,10 @@ article.contents {
           margin-bottom: 17px;
           background-color: #fff; }
         .contents.borrowing-private .application .box .proceedings > li .tooltip {
-          display: block;
-          position: absolute;
-          z-index: 100;
-          padding: 5px 13px 6px 13px;
-          font-size: 12px;
+          bottom: auto;
           color: #6b7581;
-          line-height: 18px;
-          border: 1px solid #c3d0e1;
-          border-radius: 4px;
-          background-color: #fff; }
+          border: 1px solid #c3d0e1; }
           .contents.borrowing-private .application .box .proceedings > li .tooltip:before {
-            content: '';
-            display: block;
-            position: absolute;
             top: -6px;
             left: 50%;
             margin-left: -5.5px;
@@ -5434,7 +5444,8 @@ article.contents {
     border-radius: 18px;
     background-color: #fff;
     /* 진행 절차 표시 */
-    /* 빌리기 준비 */ }
+    /* 빌리기 준비 */
+    /* 입력 폼 */ }
     .contents.borrowing-private .borrowing-application .btn-back {
       display: block;
       position: absolute;
@@ -5480,20 +5491,10 @@ article.contents {
         .contents.borrowing-private .borrowing-application .proceedings > li .title {
           display: none; }
         .contents.borrowing-private .borrowing-application .proceedings > li .tooltip {
-          display: block;
-          position: absolute;
-          z-index: 100;
-          padding: 5px 13px 6px 13px;
-          font-size: 12px;
+          bottom: auto;
           color: #6b7581;
-          line-height: 18px;
-          border: 1px solid #c3d0e1;
-          border-radius: 4px;
-          background-color: #fff; }
+          border: 1px solid #c3d0e1; }
           .contents.borrowing-private .borrowing-application .proceedings > li .tooltip:before {
-            content: '';
-            display: block;
-            position: absolute;
             top: -6px;
             left: 50%;
             margin-left: -5.5px;
@@ -5571,42 +5572,17 @@ article.contents {
         color: #252525;
         text-align: center;
         line-height: 1.3em; }
-      .contents.borrowing-private .borrowing-application .proceedings-step01 .tooltip {
-        display: block;
-        position: absolute;
-        bottom: -27px;
-        z-index: 100;
-        padding: 7px 13px 6px 13px;
-        font-size: 12px;
-        font-weight: normal;
-        color: #ff4776;
-        text-align: left;
-        line-height: 16px;
-        white-space: nowrap;
-        border: 1px solid #d9bac2;
-        border-radius: 4px;
-        background-color: #fff; }
-        .contents.borrowing-private .borrowing-application .proceedings-step01 .tooltip:before {
-          content: '';
-          display: block;
-          position: absolute;
-          top: -6px;
+      .contents.borrowing-private .borrowing-application .proceedings-step01 .tooltip.down {
+        top: -27px;
+        bottom: auto; }
+        .contents.borrowing-private .borrowing-application .proceedings-step01 .tooltip.down:before {
+          top: auto;
+          bottom: -6px;
           left: 43px;
           background-image: url(/assets/images/sprites.png);
-          background-position: -557px -446px;
+          background-position: -525px -446px;
           width: 11px;
           height: 6px; }
-        .contents.borrowing-private .borrowing-application .proceedings-step01 .tooltip.down {
-          top: -27px;
-          bottom: auto; }
-          .contents.borrowing-private .borrowing-application .proceedings-step01 .tooltip.down:before {
-            top: auto;
-            bottom: -6px;
-            left: 43px;
-            background-image: url(/assets/images/sprites.png);
-            background-position: -525px -446px;
-            width: 11px;
-            height: 6px; }
       .contents.borrowing-private .borrowing-application .proceedings-step01 .prepare-step01 {
         margin: 40px auto 0 auto;
         width: 920px; }
@@ -5656,10 +5632,10 @@ article.contents {
               text-decoration: none;
               box-shadow: none; }
             .contents.borrowing-private .borrowing-application .proceedings-step01 .prepare-step01 > li > .btn-auth .tooltip {
-              left: 50%;
-              -webkit-transform: translateX(-50%);
-                  -ms-transform: translateX(-50%);
-                      transform: translateX(-50%); }
+              left: 50% !important;
+              -webkit-transform: translateX(-50%) !important;
+                  -ms-transform: translateX(-50%) !important;
+                      transform: translateX(-50%) !important; }
               .ie8 .contents.borrowing-private .borrowing-application .proceedings-step01 .prepare-step01 > li > .btn-auth .tooltip {
                 left: 0%; }
               .contents.borrowing-private .borrowing-application .proceedings-step01 .prepare-step01 > li > .btn-auth .tooltip:before {
@@ -5835,7 +5811,7 @@ article.contents {
             height: 3px;
             width: 3px;
             background-color: #ff4776; }
-      .contents.borrowing-private .borrowing-application .proceedings-step01 .btn-ready {
+      .contents.borrowing-private .borrowing-application .proceedings-step01 .btn-sumbit {
         display: block;
         margin: 33px auto 0 auto;
         width: 264px;
@@ -5846,3 +5822,91 @@ article.contents {
         text-align: center;
         border-radius: 2px;
         background-color: #52b924; }
+        .contents.borrowing-private .borrowing-application .proceedings-step01 .btn-sumbit.update {
+          background-color: #3a99e8; }
+      .contents.borrowing-private .borrowing-application .proceedings-step01 .submit-desc {
+        margin-top: 10px;
+        font-size: 0.750em;
+        color: #6b7581;
+        text-align: center; }
+    .contents.borrowing-private .borrowing-application .basic-info-form {
+      margin: 0 auto;
+      padding-bottom: 37px;
+      width: 920px; }
+      .contents.borrowing-private .borrowing-application .basic-info-form span.center input[type=text],
+      .contents.borrowing-private .borrowing-application .basic-info-form span.center input[type=password] {
+        width: 90px; }
+      .contents.borrowing-private .borrowing-application .basic-info-form .warning {
+        position: relative;
+        padding-left: 30px;
+        font-size: 12px;
+        color: #6b7581;
+        line-height: 18px; }
+        .contents.borrowing-private .borrowing-application .basic-info-form .warning:before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-image: url(/assets/images/sprites.png);
+          background-position: -405px -591px;
+          width: 23px;
+          height: 20px; }
+      .contents.borrowing-private .borrowing-application .basic-info-form .basic {
+        margin-top: 45px; }
+        .contents.borrowing-private .borrowing-application .basic-info-form .basic .item-form {
+          clear: none;
+          float: left; }
+        .contents.borrowing-private .borrowing-application .basic-info-form .basic .warning {
+          float: left;
+          margin-top: 40px;
+          width: 215px; }
+      .contents.borrowing-private .borrowing-application .basic-info-form .contacts {
+        position: relative;
+        margin-top: 11px; }
+        .contents.borrowing-private .borrowing-application .basic-info-form .contacts .co-name {
+          display: inline-block;
+          margin-right: 10px;
+          width: 300px;
+          vertical-align: middle; }
+        .contents.borrowing-private .borrowing-application .basic-info-form .contacts .cr-box {
+          display: inline-block;
+          margin: 0; }
+        .contents.borrowing-private .borrowing-application .basic-info-form .contacts .contacts-description {
+          position: absolute;
+          top: 40px;
+          right: 0;
+          bottom: 0;
+          padding: 36px 0 0 34px;
+          width: 400px;
+          background-color: #fff6f8; }
+          .contents.borrowing-private .borrowing-application .basic-info-form .contacts .contacts-description p {
+            font-size: 12px;
+            color: #6b7581;
+            line-height: 18px; }
+            .contents.borrowing-private .borrowing-application .basic-info-form .contacts .contacts-description p strong {
+              color: #ff4776; }
+          .contents.borrowing-private .borrowing-application .basic-info-form .contacts .contacts-description .warning {
+            margin-top: 14px; }
+      .contents.borrowing-private .borrowing-application .basic-info-form .address {
+        margin-top: 26px; }
+        .contents.borrowing-private .borrowing-application .basic-info-form .address .item-form {
+          clear: none;
+          float: left;
+          margin-right: 10px; }
+        .contents.borrowing-private .borrowing-application .basic-info-form .address .warning {
+          margin-top: 11px; }
+        .contents.borrowing-private .borrowing-application .basic-info-form .address .cr-box {
+          margin-top: 0px; }
+      .contents.borrowing-private .borrowing-application .basic-info-form .account .item-form {
+        clear: none;
+        float: left;
+        margin-right: 10px; }
+      .contents.borrowing-private .borrowing-application .basic-info-form .account .desc {
+        display: inline-block;
+        margin-top: 40px;
+        font-size: 12px;
+        color: #6b7581;
+        line-height: 18px; }
+        .contents.borrowing-private .borrowing-application .basic-info-form .account .desc em {
+          color: #ff4776; }

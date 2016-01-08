@@ -1,0 +1,99 @@
+<!-- 회원가입 팝업 -->
+<aside id="popup-signup" class="popup membership signup">
+	<button class="popup-close mfp-close">팝업 닫기</button>
+
+	<div class="left">
+		<h1>페이스북 회원가입</h1>
+		
+		<fieldset class="membership-form">
+			<legend>페이스북 회원가입 입력 양식</legend>
+
+			<p class="cr-box">
+				<input type="checkbox" id="agreement-fb01" name="agreement-fb"><label for="agreement-fb01">팝펀딩의 유용한 소식을 받아보겠습니다.</label>
+				<span class="tooltip">약관에 동의해 주세요.</span>
+			</p>
+			<p class="cr-box">
+				<input type="checkbox" id="agreement-fb02" name="agreement-fb"><label for="agreement-fb02"><a href="#">이용약관</a>(채권매매중개, 양도약관 포함) 및 <a href="#">개인보호정책</a>에 동의합니다.</label>
+				<!-- <span class="tooltip">약관에 동의해 주세요.</span> -->
+			</p>
+			<p class="cr-box">
+				<input type="checkbox" id="agreement-fb03" name="agreement-fb"><label for="agreement-fb03"><a href="#">개인정보제공</a>에 동의합니다. (선택사항)</label>
+				<!-- <span class="tooltip">약관에 동의해 주세요.</span> -->
+			</p>
+			<a href="#" class="btn-submit fb">페이스북 회원가입</a>
+			<p class="warning">
+				일반 회원이 페이스북 회원가입을 하는 경우에는 다른 계정으로 인식됩니다.
+			</p>
+		</fieldset>
+	</div>
+
+
+	<div class="right">
+		<h1>일반 회원가입</h1>
+		
+		<fieldset class="membership-form">
+			<legend>일반 회원가입 입력 양식</legend>
+
+			<div class="column">
+				<p class="item-form">
+					<label for="uid">아이디</label>
+					<input type="text" id="uid" name="uid">
+					<span class="tooltip">이미 사용중인 아이디 입니다.</span>
+				</p>
+
+				<p class="item-form">
+					<label for="nickname">필명</label>
+					<input type="text" id="nickname" name="nickname">
+					<span class="tooltip">이미 사용중인 필명 입니다.</span>
+				</p>
+			</div>
+			<div class="column">
+				<p class="item-form">
+					<label for="pwd">비밀번호</label>
+					<input type="password" id="pwd" name="pwd">
+					<span class="tooltip">
+						수자, 영문, 특수문자 조합 6~15자리로 사용하세요.<br>
+						(4자리의 동일한 문자/숫자 사용불가)<br>
+					</span>
+				</p>
+
+				<p class="item-form">
+					<label for="pwd-confirm">비밀번호 확인</label>
+					<input type="password" id="pwd-confirm" name="pwd-confirm">
+					<span class="tooltip">비밀번호가 일치하지 않습니다.</span>
+				</p>
+			</div>
+			<div class="clear"></div>
+
+			<p class="item-form">
+				<label for="email">이메일</label>
+				<input type="text" id="email" name="email">
+				<span class="tooltip">이메일 형식이 아닙니다.</span>
+			</p>
+			<p class="warning">사용하는 이메일이 아닌 경우, 투자와 대출이 불가합니다.</p>
+
+
+			<fieldset class="argreement-form">
+				<legend>회원가입 동의 항목</legend>
+				
+				<p class="cr-box">
+					<input type="checkbox" id="agreement01" name="agreement"><label for="agreement01">팝펀딩의 유용한 소식을 받아보겠습니다.</label>
+					<span class="tooltip">약관에 동의해 주세요.</span>
+				</p>
+				<p class="cr-box">
+					<input type="checkbox" id="agreement02" name="agreement"><label for="agreement02"><a href="#">이용약관</a>(채권매매중개, 양도약관 포함) 및 <a href="#">개인보호정책</a>에 동의합니다.</label>
+					<!-- <span class="tooltip">약관에 동의해 주세요.</span> -->
+				</p>
+				<p class="cr-box">
+					<input type="checkbox" id="agreement03" name="agreement"><label for="agreement03"><a href="#">개인정보제공</a>에 동의합니다. (선택사항)</label>
+					<!-- <span class="tooltip">약관에 동의해 주세요.</span> -->
+				</p>
+			</fieldset>
+			<input type="submit" value="회원가입" class="btn-submit">
+
+			<p class="find-info">
+				<a href="#" class="none">대부회원 가입안내</a>
+			</p>
+		</fieldset>
+	</div>
+</aside>

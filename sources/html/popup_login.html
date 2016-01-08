@@ -1,0 +1,57 @@
+<!-- 로그인 팝업 -->
+<aside id="popup-login" class="popup membership login">
+	<button class="popup-close mfp-close">팝업 닫기</button>
+
+	<div class="left">
+		<h1>페이스북 Log-in</h1>
+		
+		<a href="#" class="btn-submit fb">페이스북 로그인</a>
+		<p class="warning">
+			일반 회원이 페이스북 로그인을 하는 경우에는 다른 계정으로 인식됩니다.
+		</p>
+	</div>
+
+
+	<div class="right">
+		<h1>일반 Log-in</h1>
+		
+		<fieldset class="membership-form">
+			<legend>로그인 입력 양식</legend>
+
+			<p class="item-form">
+				<label for="uid">아이디</label>
+				<input type="text" id="uid" name="uid">
+				<span class="tooltip">존재하지 않는 아이디입니다.</span>
+			</p>
+			<p class="item-form">
+				<label for="pwd">비밀번호</label>
+				<input type="password" id="pwd" name="pwd">
+				<span class="tooltip">아이디와 비밀번호가 일치하지 않습니다.</span>
+			</p>
+			
+			<input type="submit" value="로그인" class="btn-submit">
+			<p class="find-info">
+				<a href="#">이이디 찾기</a>
+				<a href="#">비밀번호 찾기</a>
+			</p>
+			<p class="cr-box">
+				<input type="checkbox" id="save-id" name="save-id"><label for="save-id">이이디 저장</label>
+			</p>
+		</fieldset>
+	</div>
+
+	<div class="addon">
+		<div class="left">
+			<ul class="notice">
+				<li>로그인에 문제가 있는 경우, 이메일 <a href="mailto:service@popfunding.com">service@popfunding.com</a> 으로 문의해주세요.</li>
+			</ul>
+		</div>
+
+		<div class="right">
+			<p class="warning inline">
+				아직 팝펀딩의 회원이 아니세요? 지금 가입하세요
+				<a href="#" class="btn-rd-small">회원가입</a>
+			</p>
+		</div>
+	</div>
+</aside>

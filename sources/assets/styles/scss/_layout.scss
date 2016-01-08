@@ -7,7 +7,7 @@
 	$header-height: 353px;
 
 	@mixin li-bar() {
-		content: '|'; display: inline-block; padding-right: 12px; padding-left: 10px; font-size: 0.750em; color: #c9cfd6;
+		content: '|'; display: inline-block; padding-right: 13px; padding-left: 8px; font-size: 0.750em; color: #c9cfd6;
 	}
 
 	display: block; position: relative; height: $header-height; min-width: $contents-container-width; background: url(/assets/images/bg_header.jpg) center top no-repeat;
@@ -15,7 +15,7 @@
 
 	.inner { @include inner-container(); }
 
-	.utils-member { display: block; position: absolute; top: 23px; left: 29px; z-index: z("default");
+	.utils-member { display: block; position: absolute; top: 23px; left: 30px; z-index: z("default");
 		> li { @include ie8-inline-block();
 			&.last-child:before { @include li-bar(); }
 
@@ -28,18 +28,18 @@
 	}
 
 	.utils-help {
-		display: block; position: absolute; top: 34px; right: 29px; z-index: z("default");
+		display: block; position: absolute; top: 30px; right: 29px; z-index: z("default");
 
 		> li { @include ie8-inline-block();
 			+ li:before { @include li-bar(); }
 
 			> a { position: relative;
-				> .badge { @include badge(-110%, -10px); }
+				> .badge { display: inline-block; box-sizing: border-box; margin-right: 5px; padding: 0 5px; height: 20px; min-width: 20px; font-size: 14px; font-weight: bold; color: #fff; line-height: 20px; text-align: center; border-radius: 20px; background-color: $color-menu1-hover; }
 			}
 		}
 	}
 
-	.user { display: none; position: absolute; bottom: 140px; left: 28px; padding: 60px 0 0 0; min-width: 200px;
+	.user { display: none; position: absolute; bottom: 140px; left: 30px; padding: 60px 0 0 0; min-width: 200px;
 		> .credit-rating { display: block; position: absolute; top: 40px; left: 50%; margin-left: 22px; padding: 8px; height: 30px; min-width: 40px; white-space: nowrap; border: 1px solid #c4cad9; border-radius: 10px; background-color: #fff;
 			&:before { content: ''; display: block; position: absolute; bottom: -$sprite-bg-arrow04-height; left: 10px; z-index: z("default"); @include sprite($sprite-bg-arrow04); }
 			
@@ -86,9 +86,10 @@
 			&:before { content: ''; display: block; position: absolute; bottom: -$sprite-bg-arrow05-height; left: 68px; @include sprite($sprite-bg-arrow05); }
 			&:after { content: ''; display: block; position: absolute; top: -$sprite-bg-arrow06-height; left: 68px; @include sprite($sprite-bg-arrow06); }
 
-			&.first { top: 184px; &:before { content: none; } }
-			&.second { top: 222px; &:before { content: none; } }
-			&.third { top: 0px; &:after { content: none; } }
+			&.first { top: 0px; &:after { content: none; } }
+			&.second { top: -42px; &:after { content: none; } }
+			&.third { top: -84px; &:after { content: none; } }
+			&.fourth { top: -126px; &:after { content: none; } }
 		}
 	}
 

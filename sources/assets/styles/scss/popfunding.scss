@@ -63,7 +63,7 @@ $z-layers: (
 /**
  * modules - buttons
  */
-@mixin btn-inline-txt($font-size:0.750em, $color:$color-menu2) {
+@mixin btn-inline-txt($font-size:13px, $color:$color-menu2) {
 	display: inline-block; position: relative; font-size: $font-size; color: $color; vertical-align: middle;
 }
 @mixin ie8-inline-block() { display: inline-block; 

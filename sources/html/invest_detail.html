@@ -71,67 +71,79 @@ include "product_detail.html"
 
 
 				<div class="pd-container goal">
-					<h2>처분예상가 <em class="convert price">320,000,000원</em></h2>
-					<p>
-						처분 예상가란, 팝펀딩이 담보물을 직접 매도할때의 가격입니다.<br>
-						창고 실사와 쇼핑몰 확인 등의 과정을 통해, 안전한 투자가 되도록 설정합니다.<br>
-					</p>
+					<h2>대출 담보물의 가격 정보</h2>
+
+					<ul class="info-price">
+						<li class="normal">
+							<span>정상판매</span>
+							<em class="convert price">1,320,000,000원</em>
+							<p>
+								최초 소비자가격으로 할인되지 않은 정상가격입니다.
+							</p>
+						</li>
+						<li class="expected">
+							<span>처분예상</span>
+							<em class="convert price">1,320,000,000원</em>
+							<p>
+								현 가치를 판단하고 처분할 수 있는 예상가격입니다.
+							</p>
+						</li>
+						<li class="application">
+							<span>신청금액</span>
+							<em class="convert price">1,320,000,000원</em>
+							<p>
+								대출자가 담보를 잡고 신청한 금액입니다.
+							</p>
+						</li>
+					</ul>
 
 					<div class="chart">
-						<!-- bar -->
-						<div class="bar">
+						<!-- 처분예상가 -->
+						<div class="circle expected">
+							<div id="chart-circle-expected" class="bg-circle"></div>
+
+							<div class="rate">
+								<em class="convert price">25.0%</em>
+								<p>정상판매가 대비<br>처분예상가 비율</p>
+							</div>
 							
-							<div class="container">
-								<div class="item" title="현재">
-									<span class="stick first" style="height: 100%;">
-										<em>320,000,000</em>	
-									</span>
-								</div>
-								<div class="item" title="3개월 후">
-									<span class="stick" style="height: 93.75%;">
-										<em>300,000,000</em>
-									</span>
-								</div>
-								<div class="item" title="6개월 후">
-									<span class="stick" style="height: 87.5%;">
-										<em>280,000,000</em>
-									</span>
-								</div>
-								<div class="item" title="9개월 후">
-									<span class="stick" style="height: 68.75%;">
-										<em>220,000,000</em>
-									</span>
-								</div>
+							<div class="amount normal">
+								정상 예상가
+								<em>1,166,000,000</em>
 							</div>
 
+							<div class="amount expected">
+								처분예상가
+								<em>120,000,000</em>
+							</div>
 						</div>
 
-						<!-- circle -->
-						<div class="circle">
-							<div id="chart-circle"></div>
+						<!-- 신청 금액 -->
+						<div class="circle application">
+							<div id="chart-circle-application" class="bg-circle"></div>
 
-							<div class="amount expected">
-								처분 예상가
-								<em>166,000,000</em>
+							<div class="rate">
+								<em class="convert price">15.0%</em>
+								<p>정상판매가 대비<br>신청금액 비율</p>
 							</div>
 
 							<div class="amount application">
 								신청금액
-								<em>120,000,000</em>
+								<em>90,000,000</em>
 							</div>
+						</div>
 
-							<div class="rate">
-								<em class="convert price">72,3%</em>
-								<p>처분예상가 대비<br>신청금액 비율</p>
-							</div>
+						<div class="graph">
+							<img src="/assets/images/temp/graph01.jpg" alt="">
 						</div>
 					</div>
 				</div>
 				<script>
 				$(window.document).ready(function(){
-					var archtype = Raphael("chart-circle", 240, 240);
+					var expected = Raphael("chart-circle-expected", 240, 240);
+					var application = Raphael("chart-circle-application", 240, 240);
 
-					archtype.customAttributes.arc = function (xloc, yloc, value, total, R) {
+					function arc(xloc, yloc, value, total, R) {
 						var alpha = 360 / total * value,
 							a = (90 - alpha) * Math.PI / 180,
 							x = xloc + R * Math.cos(a),
@@ -152,17 +164,33 @@ include "product_detail.html"
 						return {
 							path: path
 						};
+					}
+
+					expected.customAttributes.arc = function(xloc, yloc, value, total, R) {
+						return arc(xloc, yloc, value, total, R);
+					};
+					application.customAttributes.arc = function(xloc, yloc, value, total, R) {
+						return arc(xloc, yloc, value, total, R);
 					};
 
-					var chart_circle = archtype.path().attr({
-						"stroke": "#ff507d",
-						"stroke-width": 34,
-						arc: [120, 120, 72.3, 100, 103]
+					var expected_circle = expected.path().attr({
+						"stroke": "#14378c",
+						"stroke-width": 35,
+						arc: [120, 120, 25.0, 100, 103]
 					});
-					chart_circle.rotate(80, 120, 120)
+					expected_circle.rotate(90, 120, 120);
+
+					var application_circle = application.path().attr({
+						"stroke": "#81c845",
+						"stroke-width": 35,
+						arc: [120, 120, 15.0, 100, 103]
+					});
+					application_circle.rotate(90, 120, 120);
+
 					// chart_circle.animate({
 					// 	arc: [120, 120, 72.3, 100, 103]
 					// }, 1500, "bounce");
+
 				});
 				</script>
 

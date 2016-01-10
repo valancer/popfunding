@@ -235,6 +235,8 @@ var Product = (function ($) {
 		for( var i=0; i<array.length; i++ ) {
 			if( array[i] == "," ) {
 				convert += '<span class="price-comma">' + array[i] + '</span>';
+			} else if( array[i] == '.' ) {
+				convert += '<span class="price-dot">' + array[i] + '</span>';
 			} else if( array[i] == '%' ) {
 				convert += '<span class="price-percent">' + array[i] + '</span>';
 			} else if( array[i] == '원' ) {

@@ -60,7 +60,7 @@
 	.application {
 		h1 { font-size: 1.375em; color: $color-title; line-height: 1.3em; }
 
-		.box { margin-top: 18px; padding: 70px 140px 55px 140px; border: 1px solid #d4dae4; background-color: #fff;
+		> .box { margin-top: 18px; padding: 70px 140px 55px 140px; border: 1px solid #d4dae4; background-color: #fff;
 
 			.proceedings { overflow: visible; position: relative; margin: 0 auto; width: auto;
 				&:before { content: ''; display: block; position: absolute; top: 68px; right: 100px; left: 50px; z-index: z("default")-1; height: 2px; background-color: #254694; }
@@ -156,15 +156,10 @@
 		}
 
 
-		/* 빌리기 준비 */
-		.proceedings-step01 { padding: 46px 0 80px 0;
+		/* 빌리기 과정 */
+		.proceedings-step { padding: 46px 0 80px 0;
 			> h2 { font-size: 1.375em; font-weight: bold; color: $color-title; text-align: center; line-height: 1.3em; }
-
-			.tooltip {
-				&.down { top: -27px; bottom: auto;
-					&:before { top: auto; bottom: -$sprite-bg-arrow13-height; left: 43px; @include sprite($sprite-bg-arrow13); }					
-				}
-			}
+			.description { margin-top: 13px; font-size: 0.750em; color: $color-content; line-height: 18px; text-align: center; }
 
 			/* 빌리기 준비 과정 */
 			.prepare-step01 { margin: 40px auto 0 auto; width: 920px;
@@ -243,52 +238,111 @@
 				&.update { background-color: #3a99e8; }
 			}
 			.submit-desc { margin-top: 10px; font-size: 0.750em; color: $color-content; text-align: center; }
-		}
 
 
-		/* 입력 폼 */
-		.basic-info-form { margin: 0 auto; padding-bottom: 37px; width: 920px;
-			span.center {
-				input[type=text],
-				input[type=password] { width: 90px; }
-			}
-
-			.warning { position: relative; padding-left: 30px; font-size: 12px; color: $color-content; line-height: 18px;
-				&:before { content: ''; display: block; position: absolute; top: 0; left: 0; @include sprite($sprite-icon-iks01); }
-			}
-
-			/// 기본 정보
-			.basic { margin-top: 45px;
-				.item-form { clear: none; float: left; }
-				.warning { float: left; margin-top: 40px; width: 215px; }
-			}
-
-			/// 연락처
-			.contacts { position: relative; margin-top: 11px;
-				.co-name { display: inline-block; margin-right: 10px; width: 300px; vertical-align: middle; }
-				.cr-box { display: inline-block; margin: 0; }
-				.contacts-description { position: absolute; top: 40px; right: 0; bottom: 0; padding: 36px 0 0 34px; width: 400px; background-color: #fff6f8;
-					p { font-size: 12px; color: $color-content; line-height: 18px;
-						strong { color: $color-menu1-hover; }
-					}
-					.warning { margin-top: 14px; }
+			/* 입력 폼 */
+			.basic-info-form { margin: 0 auto; padding-bottom: 37px; width: 920px;
+				span.center {
+					input[type=text],
+					input[type=password] { width: 90px; }
 				}
-			}
 
-			/// 주소
-			.address { margin-top: 26px;
-				.item-form { clear: none; float: left; margin-right: 10px; }
-				.warning { margin-top: 11px; }
-				.cr-box { margin-top: 0px; }
-			}
+				.tooltip { left: 20px; }
 
-			/// 계좌정보
-			.account {
-				.item-form { clear: none; float: left; margin-right: 10px; }
-				.desc { display: inline-block; margin-top: 40px; font-size: 12px; color: $color-content; line-height: 18px;
+				.warning { position: relative; padding-left: 30px; font-size: 12px; color: $color-content; line-height: 18px;
+					&:before { content: ''; display: block; position: absolute; top: 0; left: 0; @include sprite($sprite-icon-iks01); }
 					em { color: $color-menu1-hover; }
+
+					&.no-icon { padding-left: 0;
+						&:before { content: none; }
+					}
+				}
+
+				/// 기본 정보
+				.basic { margin-top: 45px;
+					.item-form { clear: none; float: left; }
+					.warning { float: left; margin-top: 40px; width: 215px; }
+				}
+
+				/// 연락처
+				.contacts { position: relative; margin-top: 11px;
+					.co-name { display: inline-block; margin-right: 10px; width: 300px; vertical-align: middle; }
+					.cr-box { display: inline-block; margin: 0; }
+					.contacts-description { position: absolute; top: 40px; right: 0; bottom: 0; padding: 36px 0 0 34px; width: 400px; background-color: #fff6f8;
+						p { font-size: 12px; color: $color-content; line-height: 18px;
+							strong { color: $color-menu1-hover; }
+						}
+						.warning { margin-top: 14px; }
+					}
+				}
+
+				/// 주소
+				.address { margin-top: 26px;
+					.item-form { clear: none; float: left; margin-right: 10px; }
+					.warning { margin-top: 11px; }
+					.cr-box { margin-top: 0px; }
+				}
+
+				/// 계좌정보
+				.account {
+					.item-form { clear: none; float: left; margin-right: 10px; }
+					.desc { display: inline-block; margin-top: 40px; font-size: 12px; color: $color-content; line-height: 18px;
+						em { color: $color-menu1-hover; }
+					}
 				}
 			}
+
+			/* 빌리기 신청 */
+			&.application {
+				.basic-info-form { padding-bottom: 20px;
+					.basic {
+						.item-form {
+							.item-form { clear: none; float: left; margin-right: 10px; }	
+						}
+						.warning { margin-top: 8px; }
+					}
+
+					.story {
+						.item-form { clear: none; float: left; }
+						.warning { float: right; margin-top: 10px; margin-right: 82px; }
+					}
+
+					.repayment-plan { margin-top: 4px; }
+
+					.income { margin-top: 50px;
+						.item-form { clear: none; float: left; width: 425px; }
+						
+						.price {
+							.item-form { margin-top: -2px; vertical-align: middle; }
+						}
+						
+						.final { clear: both; padding-top: 20px; font-size: 1.000em; color: $color-title; text-align: right;
+							strong { display: inline-block; padding-right: 10px; width: 94px; color: $color-menu1-hover; }
+						}
+					}
+
+					.etc {
+						.item-form { clear: none; float: left;
+							.select { float: left; box-sizing: border-box; }
+						}
+					}
+
+					.box-disclosure { margin-top: 20px; padding: 25px 0px; text-align: center; border: 1px solid #d4dae4; border-radius: 2px; background-color: #fff;
+						p { font-size: 0.750em; color: $color-content; line-height: 18px;
+							em { color: $color-menu1-hover; }
+						}
+
+						.tooltip { bottom: -37px; }
+					}
+				}
+
+				.btns { margin-top: 10px;
+					.btn-tip-txt { float: right; margin-top: 3px; }
+					.btn-options { display: inline-block; width: 105px; font-size: 0.875em; font-weight: bold; color: #fff; line-height: 40px; text-align: center; border-radius: 2px; background-color: #3a99e8; }
+				}
+				.btn-sumbit { margin-top: 0px; background-color: #ff507d; }
+			}
+
 		}
 
 	}

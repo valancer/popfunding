@@ -1,0 +1,476 @@
+include "head.html"
+	<script>
+	$(window.document).ready(function(){
+	});
+	</script>
+
+	<!-- 상단 영역 -->
+	include "header.html"
+
+
+	<!-- 본문 영역 -->
+	<article class="contents borrowing-private">
+		<h1>빌리기</h1>
+
+		<div class="inner">
+		
+
+			<!-- 필터 및 소개  -->
+			<div class="filter-container">
+				<fieldset class="filter">
+					<legend>투자종류선택</legend>
+
+					<input type="radio" id="borrowing01" name="borrowing-type" checked="checked" class="selected"><label for="borrowing01">개인이 빌리기</label>
+					<input type="radio" id="borrowing02" name="borrowing-type"><label for="borrowing02">기업이 빌리기</label>
+				</fieldset>
+				
+				<div class="utils-guide">
+					<a href="#" class="btn-tip">꿀팁</a>
+				</div>
+			</div>
+
+
+			<!-- 개인이 빌리기 -->
+			<section class="borrowing-application">
+				<a href="#" class="btn-back">소개 화면으로 돌아가기</a>
+
+				<ul class="proceedings">
+					<li class="step01">
+						<span class="tooltip down">신용보고서 기간만료</span>
+						<h1 class="title">빌리기 신청</h1>
+					</li>
+					<li class="step02">
+						<span class="title">개인정보 입력</span>
+						<a href="#" class="btn-update">개인정보 수정</a>
+					</li>
+					<li class="step03 selected">
+						<span class="tooltip down">임시저장</span>
+						<span class="title">빌리기 신청</span>
+					</li>
+				</ul>
+
+				<div class="proceedings-step application">
+					<h2>빌리기 신청</h2>
+					<p class="description">
+						20분 이상 페이지 이동이 없으면 자동으로 로그아웃 됩니다.<br>
+						1분마다 자동저장이 되며, 필요시 임시 저장을 눌러주세요.<br>
+					</p>
+
+					<fieldset class="basic-info-form">
+						<legend>빌리기 신청 내용</legend>
+
+						<fieldset class="basic">
+							<legend>신청 기본 정보 입력</legend>
+							
+							<div class="item-form" style="width: 749px;">
+								<div class="item-form" style="width: 171px;">
+									<label for="">신청금액</label>
+
+									<div class="select center">
+										<button value="">미정</button>
+										<ul class="list-selecting" style="display: none;">
+											<li><button value="">미정</button></li>
+											<li><button value="">미정</button></li>
+											<li><button value="">미정</button></li>
+										</ul>
+										<span class="tooltip">금액을 선택하세요.</span>
+									</div>
+								</div>
+
+								<div class="item-form" style="width: 171px;">
+									<label for="">신청기간</label>
+
+									<div class="select center">
+										<button value="">미정</button>
+										<ul class="list-selecting" style="display: none;">
+											<li><button value="">미정</button></li>
+											<li><button value="">미정</button></li>
+											<li><button value="">미정</button></li>
+										</ul>
+										<span class="tooltip">기간을 선택하세요.</span>
+									</div>
+								</div>
+
+								<div class="item-form" style="width: 171px;">
+									<label for="">연이자</label>
+
+									<div class="select center">
+										<button value="">미정</button>
+										<ul class="list-selecting" style="display: none;">
+											<li><button value="">미정</button></li>
+											<li><button value="">미정</button></li>
+											<li><button value="">미정</button></li>
+										</ul>
+										<span class="tooltip">이자를 선택하세요.</span>
+									</div>
+								</div>
+
+								<a href="#" class="btn-inner-form only-buttons">
+									상환내역 미리보기
+								</a>
+							</div>
+
+							<div class="item-form" style="width: 171px;">
+								<label for="">
+									마감일
+									<time datetime="" class="time">2015.12.12</time>
+								</label>
+
+								<div class="select center">
+									<button value="">미정</button>
+									<ul class="list-selecting" style="display: none;">
+										<li><button value="">미정</button></li>
+										<li><button value="">미정</button></li>
+										<li><button value="">미정</button></li>
+									</ul>
+									<span class="tooltip">마감일을 선택하세요.</span>
+								</div>
+								<p class="warning no-icon">투자금 100% 도달 시 자동 마감</p>
+							</div>
+						</fieldset>		<!-- class="basic" -->
+
+
+
+						<fieldset class="story">
+							<legend>신청 사연 정보 입력</legend>
+							
+							<div class="item-form" style="width: 682px;">
+								<label for="story">사연 제목</label>
+
+								<input type="text" id="story" name="story" class="title">
+								<span class="tooltip">사연 제목을 입력하세요.</span>
+							</div>
+
+							<div class="item-form" style="float: right; margin-top: 12px; width: 171px;">
+								<label for="">자금용도</label>
+
+								<div class="select center">
+									<button value="">미정</button>
+									<ul class="list-selecting" style="display: none;">
+										<li><button value="">미정</button></li>
+										<li><button value="">미정</button></li>
+										<li><button value="">미정</button></li>
+									</ul>
+									<span class="tooltip">용도를 선택하세요.</span>
+								</div>
+							</div>
+
+							<div class="item-form" style="margin-top: 25px; width: 838px;">
+								<label for="story-content">사연 내용</label>
+
+								<textarea name="story-content" id="story-content" cols="100" rows="30">
+								</textarea>
+								<span class="tooltip">사연 내용을 입력하세요.</span>
+							</div>
+							<p class="warning">
+								<em>가족 중 빌리기 경력이 있거나 신청 중이면 내용을 입력해 주세요.</em><br>
+								미리 밝히지 않을 경우에는 신청 및 대출이 취소될 수 있습니다.
+							</p>
+						</fieldset>		<!-- class="story" -->
+
+
+						<fieldset class="repayment-plan">
+							<legend>상환 계획 입력</legend>
+
+							<div class="item-form" style="width: 682px;">
+								<label for="repayment-plan">상환계획 제목</label>
+
+								<input type="text" id="repayment-plan" name="repayment-plan" class="title">
+								<span class="tooltip">상환계획 제목을 입력하세요.</span>
+							</div>
+							
+							<div class="item-form" style="margin-top: 25px; width: 838px;">
+								<label for="repayment-plan-content">상환계획 내용</label>
+
+								<textarea name="repayment-plan-content" id="repayment-plan-content" cols="100" rows="30">
+								</textarea>
+								<span class="tooltip">상환계획 내용을 입력하세요.</span>
+							</div>
+						</fieldset>
+
+
+						<fieldset class="income">
+							<legend>소득 정보 입력</legend>
+							
+							<div class="item-form">
+								<label for="">월소득 정보 (실수령액 기준)</label>
+
+								<table class="income-table">
+									<caption>월소득 정보</caption>
+									<tfoot>
+										<tr>
+											<td><button class="btn-add">항목 추가</button></td>
+											<th>소득 합계</th>
+											<td class="price">320만원</td>
+										</tr>
+									</tfoot>
+									<tbody>
+										<tr>
+											<td><button class="btn-delete">항목삭제</button></td>
+											<th>
+												<div class="select">
+													<button value="">직장급여</button>
+													<ul class="list-selecting" style="display: none;">
+														<li><button value="">미정</button></li>
+														<li><button value="">미정</button></li>
+														<li><button value="">미정</button></li>
+													</ul>
+												</div>
+											</th>
+											<td class="price">
+												<span class="item-form center" style="width: 53px;">
+													<input type="text" id="" name="">
+													<span class="tooltip down">월소득 정보를 입력하세요.</span>
+												</span>
+												만원
+											</td>
+										</tr>
+										<tr>
+											<td><button class="btn-delete">항목삭제</button></td>
+											<th>
+												<div class="select">
+													<button value="">선택</button>
+													<ul class="list-selecting" style="display: none;">
+														<li><button value="">미정</button></li>
+														<li><button value="">미정</button></li>
+														<li><button value="">미정</button></li>
+													</ul>
+												</div>
+											</th>
+											<td class="price">
+												<span class="item-form center" style="width: 53px;">
+													<input type="text" id="" name="">
+													<span class="tooltip down">월소득 정보를 입력하세요.</span>
+												</span>
+												만원
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<div class="item-form" style="float: right;">
+								<label for="">월지출 정보</label>
+
+								<table class="income-table">
+									<caption>월지출 정보</caption>
+									<tfoot>
+										<tr>
+											<td><button class="btn-add">항목 추가</button></td>
+											<th>지출 합계</th>
+											<td class="price">320만원</td>
+										</tr>
+									</tfoot>
+									<tbody>
+										<tr>
+											<td><button class="btn-delete">항목삭제</button></td>
+											<th>
+												<div class="select">
+													<button value="">팝펀딩 월평균 상환액</button>
+													<ul class="list-selecting" style="display: none;">
+														<li><button value="">미정</button></li>
+														<li><button value="">미정</button></li>
+														<li><button value="">미정</button></li>
+													</ul>
+												</div>
+											</th>
+											<td class="price">
+												<span class="item-form center" style="width: 53px;">
+													<input type="text" id="" name="">
+													<span class="tooltip down">월지출 정보를 입력하세요.</span>
+												</span>
+												만원
+											</td>
+										</tr>
+										<tr>
+											<td><button class="btn-delete">항목삭제</button></td>
+											<th>
+												<input type="text" id="" name="">
+											</th>
+											<td class="price">
+												<span class="item-form center" style="width: 53px;">
+													<input type="text" id="" name="">
+													<span class="tooltip down">월지출 정보를 입력하세요.</span>
+												</span>
+												만원
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<p class="final">
+								팝펀딩 상환후 여유 자금
+								<strong>76만원</strong>
+							</p>
+						</fieldset>
+
+
+
+						<fieldset class="etc">
+							<legend>기타 정보 입력</legend>
+							
+							<div class="item-form">
+								<div class="item-form" style="width: 410px;">
+									<label for="">직군</label>
+
+									<div class="select center" style="margin-right: 10px; width: 195px;">
+										<button value="">선택</button>
+										<ul class="list-selecting" style="display: none;">
+											<li><button value="">선택</button></li>
+											<li><button value="">선택</button></li>
+											<li><button value="">선택</button></li>
+										</ul>
+										<span class="tooltip">직군을 선택하세요.</span>
+									</div>
+
+									<div class="select center" style="width: 195px;">
+										<button value="">선택</button>
+										<ul class="list-selecting" style="display: none;">
+											<li><button value="">선택</button></li>
+											<li><button value="">선택</button></li>
+											<li><button value="">선택</button></li>
+										</ul>
+										<span class="tooltip">직군을 선택하세요.</span>
+									</div>
+								</div>
+								<div class="item-form" style="width: 170px;">
+									<label for="">직군 상세 (선택)</label>
+									<input type="text" id="" name="">
+								</div>
+							</div>
+
+							<div class="item-form center" style="float: right; width: 259px;">
+								<label for="exist-car01">차량소유</label>
+
+								<div class="box center">
+									<span class="cr-box">
+										<input type="radio" id="exist-car01" name="exist-car"><label for="exist-car01">있음</label>
+									</span>
+									<span class="cr-box">
+										<input type="radio" id="exist-car02" name="exist-car"><label for="exist-car02">없음</label>
+									</span>
+								</div>
+								<span class="tooltip">차량소유를 선택하세요.</span>
+							</div>
+
+
+							<div class="item-form">
+								<div class="item-form center" style="margin-right: 10px; width: 189px;">
+									<label for="married01">결혼여부</label>
+
+									<div class="box center">
+										<span class="cr-box">
+											<input type="radio" id="married01" name="married" checked="checked" class="checked"><label for="married01">기혼</label>
+										</span>
+										<span class="cr-box">
+											<input type="radio" id="married02" name="married"><label for="married02">미혼</label>
+										</span>
+									</div>
+									<span class="tooltip">결혼여부를 선택하세요.</span>
+								</div>
+
+								<div class="item-form" style="margin-right: 10px; width: 102px;">
+									<label for="">동거인수(명)</label>
+
+									<div class="select center" style="width: 100%;">
+										<button value="">선택</button>
+										<ul class="list-selecting" style="display: none;">
+											<li><button value="">선택</button></li>
+											<li><button value="">선택</button></li>
+											<li><button value="">선택</button></li>
+										</ul>
+										<span class="tooltip">동거인수를 선택하세요.</span>
+									</div>
+								</div>
+
+								<div class="item-form" style="margin-right: 10px; width: 129px;">
+									<label for="">주거지 명의</label>
+
+									<div class="select center" style="width: 100%;">
+										<button value="">선택</button>
+										<ul class="list-selecting" style="display: none;">
+											<li><button value="">선택</button></li>
+											<li><button value="">선택</button></li>
+											<li><button value="">선택</button></li>
+										</ul>
+										<span class="tooltip">주거지 명의를 선택하세요.</span>
+									</div>
+								</div>
+
+								<div class="item-form" style="width: 130px;">
+									<label for="">주거 형태</label>
+
+									<div class="select center" style="width: 100%;">
+										<button value="">선택</button>
+										<ul class="list-selecting" style="display: none;">
+											<li><button value="">선택</button></li>
+											<li><button value="">선택</button></li>
+											<li><button value="">선택</button></li>
+										</ul>
+										<span class="tooltip">주거 형태를 선택하세요.</span>
+									</div>
+								</div>
+								
+							</div>
+
+							<div class="item-form" style="float: right; width: 259px;">
+								<label for="">특수기록</label>
+
+								<div class="select center" style="width: 100%;">
+									<button value="">선택</button>
+									<ul class="list-selecting" style="display: none;">
+										<li><button value="">선택</button></li>
+										<li><button value="">선택</button></li>
+										<li><button value="">선택</button></li>
+									</ul>
+									<span class="tooltip">특수기록을 선택하세요.</span>
+								</div>
+
+								<div class="item-form center" style="margin-top: 10px; width: 100%;">
+									<input type="text" id="" name="">
+									<span class="tooltip">직접입력을 해주세요.</span>
+								</div>
+							</div>
+						</fieldset>
+
+
+						<div class="box-disclosure">
+							<p>
+								<em>10일 이상 연체 -</em> 채권자들에게 회원님의 성함, 핸드폰, 집, 전화번호, 이메일 주소가 공개 됩니다.<br>
+								<em>20일 이상 연체 -</em> 모든 개인 정보가 추가로 공개되니, 매월 성실한 상환을 부탁드립니다.<br>
+							</p>
+							
+							<div class="item-form center">
+								<span class="cr-box">
+									<input type="checkbox" id="disclosure01" name="disclosure"><label for="disclosure01">연체시 개인정보 공개에 동의합니다.</label>
+								</span>
+								<span class="tooltip">정보 공개에 동의하세요.</span>
+							</div>
+						</div>
+
+						<p class="btns">
+							<a href="#" class="btn-tip-txt">추가 증빙서류는 100% 달성에 도움이 됩니다.</a>
+
+							<a href="#" class="btn-options">임시저장</a>
+							<a href="#" class="btn-options">미리보기</a>
+						</p>
+					</fieldset>		<!-- class="basic-info-form" -->
+					
+
+					<a href="#" class="btn-sumbit">빌리기 신청하기</a>
+					<p class="submit-desc">&lt;신청하기&gt; 이후에는 개인정보 및 신청내용을 수정할 수 없습니다.</p>
+
+				</div>
+			</section>
+
+
+		</div>
+	</article>
+
+
+	<!-- 하단 영역 -->
+	include "footer.html"
+
+</body>
+</html>

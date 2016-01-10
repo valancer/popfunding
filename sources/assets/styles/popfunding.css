@@ -255,6 +255,25 @@ body {
     width: 66px;
     height: 28px; }
 
+.btn-tip-txt {
+  display: inline-block;
+  position: relative;
+  padding-left: 32px;
+  font-size: 0.750em;
+  color: #6b7581;
+  line-height: 29px;
+  text-decoration: underline !important; }
+  .btn-tip-txt:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(/assets/images/sprites.png);
+    background-position: -482px -606px;
+    width: 29px;
+    height: 23px; }
+
 .btn-invest {
   display: block;
   margin: 0 auto;
@@ -276,7 +295,7 @@ body {
     margin-left: 9px;
     vertical-align: middle;
     background-image: url(/assets/images/sprites.png);
-    background-position: -588px -460px;
+    background-position: -409px -290px;
     width: 11px;
     height: 18px; }
   .btn-invest:hover {
@@ -320,7 +339,7 @@ body {
     margin-right: 4px;
     vertical-align: middle;
     background-image: url(/assets/images/sprites.png);
-    background-position: -107px -588px;
+    background-position: -763px -727px;
     width: 14px;
     height: 13px; }
   .btn-help:hover {
@@ -421,6 +440,47 @@ body {
     height: 6px; }
   .tooltip.multiple {
     bottom: -43px; }
+  .tooltip.down {
+    top: -27px;
+    bottom: auto; }
+    .tooltip.down:before {
+      top: auto;
+      bottom: -6px;
+      left: 43px;
+      background-image: url(/assets/images/sprites.png);
+      background-position: -522px -448px;
+      width: 11px;
+      height: 6px; }
+
+.center {
+  position: relative; }
+  .center input[type=text],
+  .center input[type=password] {
+    padding: 0 16px;
+    text-align: center; }
+  .center .tooltip {
+    left: 50% !important;
+    -webkit-transform: translateX(-50%) !important;
+        -ms-transform: translateX(-50%) !important;
+            transform: translateX(-50%) !important; }
+    .ie8 .center .tooltip {
+      left: 0%; }
+    .center .tooltip:before {
+      left: 50%;
+      margin-left: -5.5px; }
+    .center .tooltip.down:before {
+      left: 50%;
+      margin-left: -5.5px; }
+
+span.center {
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle; }
+  span.center input[type=text],
+  span.center input[type=password] {
+    display: inline-block;
+    width: 110px;
+    vertical-align: middle; }
 
 /* 개별 입력 폼 */
 .item-form {
@@ -428,7 +488,7 @@ body {
   clear: both; }
   .item-form .time {
     float: right;
-    font-size: 0.750em;
+    font-size: 12px;
     color: #ff4776;
     line-height: 28px; }
   .item-form label {
@@ -457,6 +517,23 @@ body {
     background-color: #fff; }
   .item-form input[readonly=readonly] {
     color: #ff4776; }
+  .item-form input[type=text].title {
+    padding-left: 19px;
+    height: 52px;
+    font-size: 1.500em;
+    line-height: 50px; }
+  .item-form textarea {
+    display: block;
+    box-sizing: border-box;
+    padding: 16px 19px;
+    height: 320px;
+    width: 100%;
+    font-size: 0.875em;
+    color: #6b7581;
+    line-height: 22px;
+    border: 1px solid #bec3cd;
+    border-radius: 2px;
+    background-color: #fff; }
   .item-form .select {
     display: block;
     position: relative;
@@ -482,7 +559,7 @@ body {
         margin-left: 10px;
         vertical-align: middle;
         background-image: url(/assets/images/sprites.png);
-        background-position: -749px -523px;
+        background-position: -749px -499px;
         width: 9px;
         height: 5px; }
     .item-form .select .list-selecting {
@@ -514,34 +591,6 @@ body {
         line-height: 16px; }
   .item-form + .warning {
     margin-top: 8px; }
-  .item-form .center {
-    position: relative; }
-    .item-form .center input[type=text],
-    .item-form .center input[type=password] {
-      padding: 0 16px;
-      text-align: center; }
-    .item-form .center .tooltip {
-      left: 50% !important;
-      -webkit-transform: translateX(-50%) !important;
-          -ms-transform: translateX(-50%) !important;
-              transform: translateX(-50%) !important; }
-      .ie8 .item-form .center .tooltip {
-        left: 0%; }
-      .item-form .center .tooltip:before {
-        left: 50%;
-        margin-left: -5.5px; }
-      .item-form .center .tooltip.down:before {
-        left: 50%;
-        margin-left: -5.5px; }
-  .item-form span.center {
-    display: inline-block;
-    margin-right: 10px;
-    vertical-align: middle; }
-    .item-form span.center input[type=text],
-    .item-form span.center input[type=password] {
-      display: inline-block;
-      width: 110px;
-      vertical-align: middle; }
   .item-form .input-column {
     display: inline-block;
     width: 172px; }
@@ -558,6 +607,10 @@ body {
       float: left;
       margin: 0;
       width: 50%; }
+    .item-form .box.center {
+      text-align: center; }
+      .item-form .box.center .cr-box {
+        display: inline-block; }
   .item-form .btn-inner-form {
     display: inline-block;
     position: relative;
@@ -585,6 +638,76 @@ body {
       .item-form .btn-inner-form .tooltip.down:before {
         left: 50%;
         margin-left: -5.5px; }
+    .item-form .btn-inner-form.only-buttons {
+      margin-top: 40px; }
+  .item-form .income-table {
+    width: 100%;
+    border-top: 2px solid #252525;
+    border-bottom: 2px solid #252525; }
+    .item-form .income-table .btn-delete {
+      display: inline-block;
+      text-indent: -9999px;
+      background-image: url(/assets/images/sprites.png);
+      background-position: -583px -425px;
+      width: 16px;
+      height: 16px; }
+    .item-form .income-table .btn-add {
+      display: inline-block;
+      text-indent: -9999px;
+      background-image: url(/assets/images/sprites.png);
+      background-position: -583px -349px;
+      width: 16px;
+      height: 16px; }
+    .item-form .income-table .select {
+      padding: 0;
+      border: 0px; }
+      .item-form .income-table .select .list-selecting {
+        border: 0px; }
+    .item-form .income-table td {
+      height: 44px;
+      width: 36px;
+      vertical-align: middle;
+      text-align: center; }
+      .item-form .income-table td.price {
+        position: relative;
+        padding-right: 10px;
+        width: 90px;
+        font-size: 0.875em;
+        color: #ff4776;
+        text-align: right;
+        line-height: 40px; }
+        .item-form .income-table td.price input[type=text] {
+          display: inline-block;
+          padding: 0 8px 0 0;
+          height: 32px;
+          width: 100% !important;
+          font-size: 1.000em;
+          color: #ff4776;
+          line-height: 30px;
+          text-align: right;
+          vertical-align: middle; }
+    .item-form .income-table th {
+      font-weight: normal; }
+      .item-form .income-table th input[type=text] {
+        display: inline-block;
+        padding: 0 0 0 8px;
+        height: 32px;
+        width: 100%;
+        font-size: 0.875em;
+        color: #252525;
+        line-height: 30px;
+        text-align: left;
+        vertical-align: middle; }
+    .item-form .income-table > tbody > tr {
+      border-bottom: 1px solid #d4dae4; }
+    .item-form .income-table > tbody th {
+      padding-right: 30px;
+      text-align: left; }
+    .item-form .income-table > tfoot th {
+      padding-right: 10px;
+      font-size: 1.000em;
+      color: #252525;
+      text-align: right; }
 
 /* 체크박스 & 라디오 버튼 */
 .cr-box {
@@ -602,12 +725,12 @@ body {
     top: 0;
     left: 0;
     background-image: url(/assets/images/sprites.png);
-    background-position: -680px -651px;
+    background-position: -532px -651px;
     width: 15px;
     height: 15px; }
   .cr-box input[type=checkbox].checked + label:before, .cr-box input[type=checkbox]:checked + label:before {
     background-image: url(/assets/images/sprites.png);
-    background-position: -700px -651px;
+    background-position: -648px -606px;
     width: 15px;
     height: 15px; }
   .cr-box input[type=radio] + label:before {
@@ -617,14 +740,14 @@ body {
     top: 1px;
     left: 0;
     background-image: url(/assets/images/sprites.png);
-    background-position: -674px -696px;
+    background-position: -552px -651px;
     width: 14px;
     height: 14px; }
   .cr-box input[type=radio].checked + label, .cr-box input[type=radio]:checked + label {
     color: #252525; }
     .cr-box input[type=radio].checked + label:before, .cr-box input[type=radio]:checked + label:before {
       background-image: url(/assets/images/sprites.png);
-      background-position: -693px -696px;
+      background-position: -571px -651px;
       width: 14px;
       height: 14px; }
   .cr-box label {
@@ -645,7 +768,7 @@ body {
       top: auto;
       bottom: -6px;
       background-image: url(/assets/images/sprites.png);
-      background-position: -554px -448px;
+      background-position: -522px -448px;
       width: 11px;
       height: 6px; }
 
@@ -700,7 +823,7 @@ body {
         margin-right: 22px;
         margin-left: 16px;
         background-image: url(/assets/images/sprites.png);
-        background-position: -627px -606px;
+        background-position: -516px -606px;
         width: 23px;
         height: 23px; }
   .header .utils-help {
@@ -776,7 +899,7 @@ body {
           text-indent: -9999px; }
           .header .user > .credit-rating > span.invest.none {
             background-image: url(/assets/images/sprites.png);
-            background-position: -415px -696px;
+            background-position: -763px -210px;
             width: 17px;
             height: 30px; }
           .header .user > .credit-rating > span.invest.basic {
@@ -824,7 +947,7 @@ body {
           .header .user > .credit-rating > span > em.bid0 {
             margin-right: -2px;
             background-image: url(/assets/images/sprites.png);
-            background-position: -583px -223px;
+            background-position: -763px -420px;
             width: 16px;
             height: 30px; }
           .header .user > .credit-rating > span > em.bid1 {
@@ -836,54 +959,54 @@ body {
           .header .user > .credit-rating > span > em.bid2 {
             margin-right: -2px;
             background-image: url(/assets/images/sprites.png);
-            background-position: -583px -258px;
+            background-position: -763px -245px;
             width: 16px;
             height: 30px; }
           .header .user > .credit-rating > span > em.bid3 {
             margin-right: -2px;
             background-image: url(/assets/images/sprites.png);
-            background-position: -393px -696px;
+            background-position: -763px -140px;
             width: 17px;
             height: 30px; }
           .header .user > .credit-rating > span > em.bid4 {
             margin-right: -2px;
             background-image: url(/assets/images/sprites.png);
-            background-position: -371px -696px;
+            background-position: -763px -175px;
             width: 17px;
             height: 30px; }
           .header .user > .credit-rating > span > em.bid5 {
             margin-right: -2px;
             background-image: url(/assets/images/sprites.png);
-            background-position: -583px -182px;
+            background-position: -763px -350px;
             width: 16px;
             height: 30px; }
           .header .user > .credit-rating > span > em.bid6 {
             margin-right: -2px;
             background-image: url(/assets/images/sprites.png);
-            background-position: -583px -333px;
+            background-position: -763px -385px;
             width: 16px;
             height: 30px; }
           .header .user > .credit-rating > span > em.bid7 {
             margin-right: -2px;
             background-image: url(/assets/images/sprites.png);
-            background-position: -583px -373px;
+            background-position: -763px -455px;
             width: 15px;
             height: 30px; }
           .header .user > .credit-rating > span > em.bid8 {
             margin-right: -2px;
             background-image: url(/assets/images/sprites.png);
-            background-position: -583px -298px;
+            background-position: -763px -280px;
             width: 16px;
             height: 30px; }
           .header .user > .credit-rating > span > em.bid9 {
             margin-right: -2px;
             background-image: url(/assets/images/sprites.png);
-            background-position: -583px -147px;
+            background-position: -763px -315px;
             width: 16px;
             height: 30px; }
           .header .user > .credit-rating > span > em.overdue-none {
             background-image: url(/assets/images/sprites.png);
-            background-position: -437px -696px;
+            background-position: -763px -105px;
             width: 17px;
             height: 30px; }
           .header .user > .credit-rating > span > em.overdue-a {
@@ -893,17 +1016,17 @@ body {
             height: 30px; }
           .header .user > .credit-rating > span > em.overdue-b {
             background-image: url(/assets/images/sprites.png);
-            background-position: -324px -696px;
+            background-position: -763px -35px;
             width: 19px;
             height: 30px; }
           .header .user > .credit-rating > span > em.overdue-c {
             background-image: url(/assets/images/sprites.png);
-            background-position: -348px -696px;
+            background-position: -763px -70px;
             width: 18px;
             height: 30px; }
           .header .user > .credit-rating > span > em.overdue-d {
             background-image: url(/assets/images/sprites.png);
-            background-position: -300px -696px;
+            background-position: -763px 0px;
             width: 19px;
             height: 30px; }
     .header .user > figure .thumb {
@@ -1001,7 +1124,7 @@ body {
           left: 27px;
           text-indent: -9999px;
           background-image: url(/assets/images/sprites.png);
-          background-position: -459px -696px;
+          background-position: -490px -651px;
           width: 20px;
           height: 24px; }
   .header nav {
@@ -1644,7 +1767,7 @@ article.contents {
                 margin: 0px 10px 0 0;
                 vertical-align: middle;
                 background-image: url(/assets/images/sprites.png);
-                background-position: -426px -606px;
+                background-position: -370px -606px;
                 width: 51px;
                 height: 27px; }
             .invest-popup > .inner .coupon-container .tbl-list-coupon > tbody > tr td .duration {
@@ -1684,7 +1807,7 @@ article.contents {
             color: #ff4776; }
             .invest-popup > .inner .coupon-container .tbl-list-coupon > tbody > tr.selected td .title:before {
               background-image: url(/assets/images/sprites.png);
-              background-position: -370px -606px;
+              background-position: -426px -606px;
               width: 51px;
               height: 27px; }
             .invest-popup > .inner .coupon-container .tbl-list-coupon > tbody > tr.selected td strong {
@@ -1760,7 +1883,7 @@ article.contents {
         color: #14378c; }
         .invest-popup.calc-after > .inner > .type .type-options .msg:before {
           background-image: url(/assets/images/sprites.png);
-          background-position: -126px -588px;
+          background-position: -107px -588px;
           width: 15px;
           height: 11px; }
   .invest-popup.message {
@@ -1904,7 +2027,7 @@ article.contents {
         margin-right: 11px;
         vertical-align: bottom;
         background-image: url(/assets/images/sprites.png);
-        background-position: -583px -408px;
+        background-position: -763px -490px;
         width: 13px;
         height: 32px; }
     .popup.membership .btn-submit + .warning {
@@ -2005,7 +2128,7 @@ article.contents {
           display: inline-block;
           margin-left: 4px;
           background-image: url(/assets/images/sprites.png);
-          background-position: -749px -533px;
+          background-position: -752px -192px;
           width: 5px;
           height: 7px; }
         .popup.membership .membership-form .find-info a.none:after {
@@ -2098,7 +2221,7 @@ article.contents {
       vertical-align: middle;
       text-indent: -9999px;
       background-image: url(/assets/images/sprites.png);
-      background-position: -530px -651px;
+      background-position: -601px -606px;
       width: 20px;
       height: 20px; }
   .popup.auth .membership-form {
@@ -2311,12 +2434,12 @@ article.contents {
         border: 2px solid #3a99e8; }
       .popup.find .find-type-tab > a.find01:before {
         background-image: url(/assets/images/sprites.png);
-        background-position: -171px -606px;
+        background-position: -474px -531px;
         width: 52px;
         height: 40px; }
       .popup.find .find-type-tab > a.find01.selected:before {
         background-image: url(/assets/images/sprites.png);
-        background-position: 0px -606px;
+        background-position: -114px -606px;
         width: 52px;
         height: 40px; }
       .popup.find .find-type-tab > a.find02:before {
@@ -2326,7 +2449,7 @@ article.contents {
         height: 40px; }
       .popup.find .find-type-tab > a.find02.selected:before {
         background-image: url(/assets/images/sprites.png);
-        background-position: -114px -606px;
+        background-position: 0px -606px;
         width: 52px;
         height: 40px; }
       .popup.find .find-type-tab > a.find03:before {
@@ -2336,7 +2459,7 @@ article.contents {
         height: 40px; }
       .popup.find .find-type-tab > a.find03.selected:before {
         background-image: url(/assets/images/sprites.png);
-        background-position: -474px -531px;
+        background-position: -171px -606px;
         width: 52px;
         height: 40px; }
       .popup.find .find-type-tab > a.find04:before {
@@ -2507,7 +2630,7 @@ article.contents {
               left: 50%;
               margin-left: -5.5px;
               background-image: url(/assets/images/sprites.png);
-              background-position: -570px -448px;
+              background-position: -554px -448px;
               width: 11px;
               height: 6px; }
           .product-tab table > tbody > tr td a > .new em {
@@ -2522,7 +2645,7 @@ article.contents {
   vertical-align: middle; }
   .contents.invest em.convert.price span.price0 {
     background-image: url(/assets/images/sprites.png);
-    background-position: -405px -172px;
+    background-position: -583px -197px;
     width: 15px;
     height: 21px; }
   .contents.invest em.convert.price span.price1 {
@@ -2532,57 +2655,57 @@ article.contents {
     height: 21px; }
   .contents.invest em.convert.price span.price2 {
     background-image: url(/assets/images/sprites.png);
-    background-position: -639px -696px;
+    background-position: -583px -373px;
     width: 13px;
     height: 21px; }
   .contents.invest em.convert.price span.price3 {
     background-image: url(/assets/images/sprites.png);
-    background-position: -549px -696px;
+    background-position: -405px -161px;
     width: 13px;
     height: 21px; }
   .contents.invest em.convert.price span.price4 {
     background-image: url(/assets/images/sprites.png);
-    background-position: -530px -696px;
+    background-position: -583px -298px;
     width: 14px;
     height: 21px; }
   .contents.invest em.convert.price span.price5 {
     background-image: url(/assets/images/sprites.png);
-    background-position: -603px -696px;
+    background-position: -583px -399px;
     width: 13px;
     height: 21px; }
   .contents.invest em.convert.price span.price6 {
     background-image: url(/assets/images/sprites.png);
-    background-position: -621px -696px;
+    background-position: -405px -135px;
     width: 13px;
     height: 21px; }
   .contents.invest em.convert.price span.price7 {
     background-image: url(/assets/images/sprites.png);
-    background-position: -657px -696px;
+    background-position: -515px -651px;
     width: 12px;
     height: 21px; }
   .contents.invest em.convert.price span.price8 {
     background-image: url(/assets/images/sprites.png);
-    background-position: -585px -696px;
+    background-position: -405px -213px;
     width: 13px;
     height: 21px; }
   .contents.invest em.convert.price span.price9 {
     background-image: url(/assets/images/sprites.png);
-    background-position: -567px -696px;
+    background-position: -405px -187px;
     width: 13px;
     height: 21px; }
   .contents.invest em.convert.price span.price-comma {
     background-image: url(/assets/images/sprites.png);
-    background-position: -754px -132px;
+    background-position: -778px -690px;
     width: 4px;
     height: 21px; }
   .contents.invest em.convert.price span.price-percent {
     background-image: url(/assets/images/sprites.png);
-    background-position: -484px -696px;
+    background-position: -763px -527px;
     width: 19px;
     height: 21px; }
   .contents.invest em.convert.price span.price-won {
     background-image: url(/assets/images/sprites.png);
-    background-position: -508px -696px;
+    background-position: -763px -578px;
     width: 17px;
     height: 21px; }
 .contents.invest .list-products {
@@ -2678,7 +2801,7 @@ article.contents {
       right: 10px;
       left: auto;
       background-image: url(/assets/images/sprites.png);
-      background-position: -425px -342px;
+      background-position: -449px -342px;
       width: 19px;
       height: 18px; }
     .contents.invest .product > .options > .imminent-deadline {
@@ -2714,11 +2837,11 @@ article.contents {
         text-indent: -9999px;
         background-image: url("/assets/images/sprites.png"); }
         .contents.invest .product > .options > .share a.btn-fb {
-          background-position: -569px -606px; }
+          background-position: -403px -651px; }
         .contents.invest .product > .options > .share a.btn-tw {
-          background-position: -540px -606px; }
+          background-position: -432px -651px; }
         .contents.invest .product > .options > .share a.btn-ks {
-          background-position: -598px -606px; }
+          background-position: -461px -651px; }
   .contents.invest .product > figure > .thumb {
     display: block;
     position: relative;
@@ -2844,14 +2967,14 @@ article.contents {
         margin-right: 5px;
         vertical-align: middle;
         background-image: url(/assets/images/sprites.png);
-        background-position: -449px -342px;
+        background-position: -425px -342px;
         width: 19px;
         height: 18px; }
       .contents.invest .product > .hover > button:hover {
         text-decoration: underline; }
       .contents.invest .product > .hover > button.selected:before {
         background-image: url(/assets/images/sprites.png);
-        background-position: -425px -342px;
+        background-position: -449px -342px;
         width: 19px;
         height: 18px; }
     .contents.invest .product > .hover > span {
@@ -2939,12 +3062,12 @@ article.contents {
               vertical-align: middle; }
               .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price0 {
                 background-image: url(/assets/images/sprites.png);
-                background-position: -92px -696px;
+                background-position: -120px -696px;
                 width: 23px;
                 height: 32px; }
               .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price1 {
                 background-image: url(/assets/images/sprites.png);
-                background-position: -405px -135px;
+                background-position: -763px -690px;
                 width: 10px;
                 height: 32px; }
               .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price2 {
@@ -2954,22 +3077,22 @@ article.contents {
                 height: 32px; }
               .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price3 {
                 background-image: url(/assets/images/sprites.png);
-                background-position: -226px -696px;
+                background-position: -645px -531px;
                 width: 20px;
                 height: 32px; }
               .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price4 {
                 background-image: url(/assets/images/sprites.png);
-                background-position: -120px -696px;
+                background-position: -92px -696px;
                 width: 23px;
                 height: 32px; }
               .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price5 {
                 background-image: url(/assets/images/sprites.png);
-                background-position: -645px -531px;
+                background-position: -226px -696px;
                 width: 20px;
                 height: 32px; }
               .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price6 {
                 background-image: url(/assets/images/sprites.png);
-                background-position: -200px -696px;
+                background-position: -148px -696px;
                 width: 21px;
                 height: 32px; }
               .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price7 {
@@ -2979,17 +3102,17 @@ article.contents {
                 height: 32px; }
               .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price8 {
                 background-image: url(/assets/images/sprites.png);
-                background-position: -174px -696px;
+                background-position: -200px -696px;
                 width: 21px;
                 height: 32px; }
               .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price9 {
                 background-image: url(/assets/images/sprites.png);
-                background-position: -148px -696px;
+                background-position: -174px -696px;
                 width: 21px;
                 height: 32px; }
               .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price-comma {
                 background-image: url(/assets/images/sprites.png);
-                background-position: -752px -181px;
+                background-position: -776px -604px;
                 width: 5px;
                 height: 32px; }
               .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price-percent {
@@ -3037,12 +3160,12 @@ article.contents {
           display: block;
           margin: 0 auto 8px auto;
           background-image: url(/assets/images/sprites.png);
-          background-position: -449px -342px;
+          background-position: -425px -342px;
           width: 19px;
           height: 18px; }
         .contents.invest .product.detail > .hover > button.selected:before {
           background-image: url(/assets/images/sprites.png);
-          background-position: -425px -342px;
+          background-position: -449px -342px;
           width: 19px;
           height: 18px; }
       .contents.invest .product.detail > .hover > span {
@@ -3071,21 +3194,21 @@ article.contents {
             vertical-align: middle; }
           .contents.invest .product.detail > .invest-product .utils .btn.calc:before {
             background-image: url(/assets/images/sprites.png);
-            background-position: -447px -651px;
+            background-position: -402px -696px;
             width: 21px;
             height: 25px; }
           .contents.invest .product.detail > .invest-product .utils .btn.update {
             display: none; }
             .contents.invest .product.detail > .invest-product .utils .btn.update:before {
               background-image: url(/assets/images/sprites.png);
-              background-position: -511px -606px;
+              background-position: -374px -651px;
               width: 24px;
               height: 25px; }
           .contents.invest .product.detail > .invest-product .utils .btn.cancel {
             display: none; }
             .contents.invest .product.detail > .invest-product .utils .btn.cancel:before {
               background-image: url(/assets/images/sprites.png);
-              background-position: -482px -606px;
+              background-position: -345px -651px;
               width: 24px;
               height: 25px; }
       .contents.invest .product.detail > .invest-product .status-invest {
@@ -3395,12 +3518,12 @@ article.contents {
             vertical-align: middle; }
             .product-detail-view .goal .chart .circle .rate em.convert.price span.price0 {
               background-image: url(/assets/images/sprites.png);
-              background-position: -92px -696px;
+              background-position: -120px -696px;
               width: 23px;
               height: 32px; }
             .product-detail-view .goal .chart .circle .rate em.convert.price span.price1 {
               background-image: url(/assets/images/sprites.png);
-              background-position: -405px -135px;
+              background-position: -763px -690px;
               width: 10px;
               height: 32px; }
             .product-detail-view .goal .chart .circle .rate em.convert.price span.price2 {
@@ -3410,22 +3533,22 @@ article.contents {
               height: 32px; }
             .product-detail-view .goal .chart .circle .rate em.convert.price span.price3 {
               background-image: url(/assets/images/sprites.png);
-              background-position: -226px -696px;
+              background-position: -645px -531px;
               width: 20px;
               height: 32px; }
             .product-detail-view .goal .chart .circle .rate em.convert.price span.price4 {
               background-image: url(/assets/images/sprites.png);
-              background-position: -120px -696px;
+              background-position: -92px -696px;
               width: 23px;
               height: 32px; }
             .product-detail-view .goal .chart .circle .rate em.convert.price span.price5 {
               background-image: url(/assets/images/sprites.png);
-              background-position: -645px -531px;
+              background-position: -226px -696px;
               width: 20px;
               height: 32px; }
             .product-detail-view .goal .chart .circle .rate em.convert.price span.price6 {
               background-image: url(/assets/images/sprites.png);
-              background-position: -200px -696px;
+              background-position: -148px -696px;
               width: 21px;
               height: 32px; }
             .product-detail-view .goal .chart .circle .rate em.convert.price span.price7 {
@@ -3435,17 +3558,17 @@ article.contents {
               height: 32px; }
             .product-detail-view .goal .chart .circle .rate em.convert.price span.price8 {
               background-image: url(/assets/images/sprites.png);
-              background-position: -174px -696px;
+              background-position: -200px -696px;
               width: 21px;
               height: 32px; }
             .product-detail-view .goal .chart .circle .rate em.convert.price span.price9 {
               background-image: url(/assets/images/sprites.png);
-              background-position: -148px -696px;
+              background-position: -174px -696px;
               width: 21px;
               height: 32px; }
             .product-detail-view .goal .chart .circle .rate em.convert.price span.price-dot {
               background-image: url(/assets/images/sprites.png);
-              background-position: -754px -83px;
+              background-position: -776px -647px;
               width: 4px;
               height: 32px; }
             .product-detail-view .goal .chart .circle .rate em.convert.price span.price-percent {
@@ -3612,7 +3735,7 @@ article.contents {
           margin-top: 2px;
           vertical-align: top;
           background-image: url(/assets/images/sprites.png);
-          background-position: -473px -651px;
+          background-position: -544px -606px;
           width: 25px;
           height: 21px; }
         .product-detail-view .has-information > .inner .bad-debt .btn-help {
@@ -4251,7 +4374,7 @@ article.contents {
             .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.type figcaption:before {
               margin: 0 auto;
               background-image: url(/assets/images/sprites.png);
-              background-position: -750px -279px;
+              background-position: -763px -604px;
               width: 8px;
               height: 38px; }
             .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.type figcaption .box {
@@ -4264,7 +4387,7 @@ article.contents {
                 top: 14px;
                 left: 13px;
                 background-image: url(/assets/images/sprites.png);
-                background-position: -754px -158px;
+                background-position: -754px -83px;
                 width: 2px;
                 height: 8px; }
         .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.cnt {
@@ -4282,7 +4405,7 @@ article.contents {
               left: 50%;
               margin-left: -4px;
               background-image: url(/assets/images/sprites.png);
-              background-position: -750px -328px;
+              background-position: -763px -647px;
               width: 8px;
               height: 38px; }
             .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.cnt figcaption .box {
@@ -4325,7 +4448,7 @@ article.contents {
                 text-indent: -9999px; }
                 .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.overdue figcaption table tbody th > .convert > em.overdue-n {
                   background-image: url(/assets/images/sprites.png);
-                  background-position: -437px -696px;
+                  background-position: -763px -105px;
                   width: 17px;
                   height: 30px; }
                 .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.overdue figcaption table tbody th > .convert > em.overdue-a {
@@ -4335,18 +4458,18 @@ article.contents {
                   height: 30px; }
                 .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.overdue figcaption table tbody th > .convert > em.overdue-b {
                   background-image: url(/assets/images/sprites.png);
-                  background-position: -324px -696px;
+                  background-position: -763px -35px;
                   width: 19px;
                   height: 30px; }
                 .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.overdue figcaption table tbody th > .convert > em.overdue-c {
                   margin-left: -2px;
                   background-image: url(/assets/images/sprites.png);
-                  background-position: -348px -696px;
+                  background-position: -763px -70px;
                   width: 18px;
                   height: 30px; }
                 .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.overdue figcaption table tbody th > .convert > em.overdue-d {
                   background-image: url(/assets/images/sprites.png);
-                  background-position: -300px -696px;
+                  background-position: -763px 0px;
                   width: 19px;
                   height: 30px; }
             .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.overdue figcaption table tbody td {
@@ -4403,57 +4526,57 @@ article.contents {
   vertical-align: middle; }
   .contents.private-invest em.convert.price span.price0 {
     background-image: url(/assets/images/sprites.png);
-    background-position: -555px -651px;
+    background-position: -763px -553px;
     width: 18px;
     height: 20px; }
   .contents.private-invest em.convert.price span.price1 {
     background-image: url(/assets/images/sprites.png);
-    background-position: -750px -377px;
+    background-position: -750px -279px;
     width: 7px;
     height: 20px; }
   .contents.private-invest em.convert.price span.price2 {
     background-image: url(/assets/images/sprites.png);
-    background-position: -405px -223px;
+    background-position: -583px -248px;
     width: 15px;
     height: 20px; }
   .contents.private-invest em.convert.price span.price3 {
     background-image: url(/assets/images/sprites.png);
-    background-position: -405px -198px;
+    background-position: -583px -223px;
     width: 15px;
     height: 20px; }
   .contents.private-invest em.convert.price span.price4 {
     background-image: url(/assets/images/sprites.png);
-    background-position: -578px -651px;
+    background-position: -626px -606px;
     width: 17px;
     height: 20px; }
   .contents.private-invest em.convert.price span.price5 {
     background-image: url(/assets/images/sprites.png);
-    background-position: -642px -651px;
+    background-position: -583px -273px;
     width: 14px;
     height: 20px; }
   .contents.private-invest em.convert.price span.price6 {
     background-image: url(/assets/images/sprites.png);
-    background-position: -600px -651px;
+    background-position: -583px -172px;
     width: 16px;
     height: 20px; }
   .contents.private-invest em.convert.price span.price7 {
     background-image: url(/assets/images/sprites.png);
-    background-position: -661px -651px;
+    background-position: -583px -324px;
     width: 14px;
     height: 20px; }
   .contents.private-invest em.convert.price span.price8 {
     background-image: url(/assets/images/sprites.png);
-    background-position: -583px -120px;
+    background-position: -583px -147px;
     width: 16px;
     height: 20px; }
   .contents.private-invest em.convert.price span.price9 {
     background-image: url(/assets/images/sprites.png);
-    background-position: -621px -651px;
+    background-position: -583px -120px;
     width: 16px;
     height: 20px; }
   .contents.private-invest em.convert.price span.price-percent {
     background-image: url(/assets/images/sprites.png);
-    background-position: -503px -651px;
+    background-position: -574px -606px;
     width: 22px;
     height: 20px; }
 .contents.private-invest .product {
@@ -4503,7 +4626,7 @@ article.contents {
       right: 14px;
       left: auto;
       background-image: url(/assets/images/sprites.png);
-      background-position: -750px -402px;
+      background-position: -750px -328px;
       width: 8px;
       height: 8px; }
   .contents.private-invest .product > .trust-ratings {
@@ -4532,7 +4655,7 @@ article.contents {
         text-indent: -9999px; }
         .contents.private-invest .product > .trust-ratings .borrowing-count > .convert > em.bid0 {
           background-image: url(/assets/images/sprites.png);
-          background-position: -721px -611px;
+          background-position: -721px -464px;
           width: 23px;
           height: 44px; }
         .contents.private-invest .product > .trust-ratings .borrowing-count > .convert > em.bid1 {
@@ -4557,17 +4680,17 @@ article.contents {
           height: 44px; }
         .contents.private-invest .product > .trust-ratings .borrowing-count > .convert > em.bid5 {
           background-image: url(/assets/images/sprites.png);
-          background-position: -721px -464px;
+          background-position: -721px -562px;
           width: 23px;
           height: 44px; }
         .contents.private-invest .product > .trust-ratings .borrowing-count > .convert > em.bid6 {
           background-image: url(/assets/images/sprites.png);
-          background-position: 0px -696px;
+          background-position: -721px -611px;
           width: 23px;
           height: 44px; }
         .contents.private-invest .product > .trust-ratings .borrowing-count > .convert > em.bid7 {
           background-image: url(/assets/images/sprites.png);
-          background-position: -721px -562px;
+          background-position: 0px -696px;
           width: 23px;
           height: 44px; }
         .contents.private-invest .product > .trust-ratings .borrowing-count > .convert > em.bid8 {
@@ -4593,7 +4716,7 @@ article.contents {
           height: 44px; }
         .contents.private-invest .product > .trust-ratings .credit-rating > .convert > em.overdue-b {
           background-image: url(/assets/images/sprites.png);
-          background-position: -721px -83px;
+          background-position: -721px -132px;
           width: 28px;
           height: 44px; }
         .contents.private-invest .product > .trust-ratings .credit-rating > .convert > em.overdue-c {
@@ -4603,7 +4726,7 @@ article.contents {
           height: 44px; }
         .contents.private-invest .product > .trust-ratings .credit-rating > .convert > em.overdue-d {
           background-image: url(/assets/images/sprites.png);
-          background-position: -721px -132px;
+          background-position: -721px -83px;
           width: 28px;
           height: 44px; }
     .contents.private-invest .product > .trust-ratings .tooltip {
@@ -4628,7 +4751,7 @@ article.contents {
         left: 50%;
         margin-left: -5.5px;
         background-image: url(/assets/images/sprites.png);
-        background-position: -570px -448px;
+        background-position: -554px -448px;
         width: 11px;
         height: 6px; }
     .contents.private-invest .product > .trust-ratings .p-i {
@@ -4758,14 +4881,14 @@ article.contents {
         margin-right: 5px;
         vertical-align: middle;
         background-image: url(/assets/images/sprites.png);
-        background-position: -749px -499px;
+        background-position: -750px -304px;
         width: 8px;
         height: 8px; }
       .contents.private-invest .product > .hover > button:hover {
         text-decoration: underline; }
       .contents.private-invest .product > .hover > button.selected:before {
         background-image: url(/assets/images/sprites.png);
-        background-position: -750px -402px;
+        background-position: -750px -328px;
         width: 8px;
         height: 8px; }
     .contents.private-invest .product > .hover > span {
@@ -4813,7 +4936,7 @@ article.contents {
         right: 19px;
         left: auto;
         background-image: url(/assets/images/sprites.png);
-        background-position: -750px -402px;
+        background-position: -750px -328px;
         width: 8px;
         height: 8px; }
     .contents.private-invest .product.detail > .profile {
@@ -4903,12 +5026,12 @@ article.contents {
           height: 28px; }
         .contents.private-invest .product.detail > .trust-ratings em.convert.price span.price2 {
           background-image: url(/assets/images/sprites.png);
-          background-position: -371px -651px;
+          background-position: -326px -696px;
           width: 21px;
           height: 28px; }
         .contents.private-invest .product.detail > .trust-ratings em.convert.price span.price3 {
           background-image: url(/assets/images/sprites.png);
-          background-position: -422px -651px;
+          background-position: -377px -696px;
           width: 20px;
           height: 28px; }
         .contents.private-invest .product.detail > .trust-ratings em.convert.price span.price4 {
@@ -4918,17 +5041,17 @@ article.contents {
           height: 28px; }
         .contents.private-invest .product.detail > .trust-ratings em.convert.price span.price5 {
           background-image: url(/assets/images/sprites.png);
-          background-position: -345px -651px;
+          background-position: -300px -696px;
           width: 21px;
           height: 28px; }
         .contents.private-invest .product.detail > .trust-ratings em.convert.price span.price6 {
           background-image: url(/assets/images/sprites.png);
-          background-position: -291px -651px;
+          background-position: -318px -651px;
           width: 22px;
           height: 28px; }
         .contents.private-invest .product.detail > .trust-ratings em.convert.price span.price7 {
           background-image: url(/assets/images/sprites.png);
-          background-position: -397px -651px;
+          background-position: -352px -696px;
           width: 20px;
           height: 28px; }
         .contents.private-invest .product.detail > .trust-ratings em.convert.price span.price8 {
@@ -4938,7 +5061,7 @@ article.contents {
           height: 28px; }
         .contents.private-invest .product.detail > .trust-ratings em.convert.price span.price9 {
           background-image: url(/assets/images/sprites.png);
-          background-position: -318px -651px;
+          background-position: -291px -651px;
           width: 22px;
           height: 28px; }
         .contents.private-invest .product.detail > .trust-ratings em.convert.price span.price-percent {
@@ -5068,14 +5191,14 @@ article.contents {
           display: block;
           margin: 0px auto 6px;
           background-image: url(/assets/images/sprites.png);
-          background-position: -162px -588px;
+          background-position: -143px -588px;
           width: 11px;
           height: 11px; }
         .contents.private-invest .product.detail > .hover > button:hover {
           text-decoration: underline; }
         .contents.private-invest .product.detail > .hover > button.selected:before {
           background-image: url(/assets/images/sprites.png);
-          background-position: -146px -588px;
+          background-position: -127px -588px;
           width: 11px;
           height: 11px; }
       .contents.private-invest .product.detail > .hover > span {
@@ -5104,21 +5227,21 @@ article.contents {
             vertical-align: middle; }
           .contents.private-invest .product.detail > .invest-product .utils .btn.calc:before {
             background-image: url(/assets/images/sprites.png);
-            background-position: -447px -651px;
+            background-position: -402px -696px;
             width: 21px;
             height: 25px; }
           .contents.private-invest .product.detail > .invest-product .utils .btn.update {
             display: none; }
             .contents.private-invest .product.detail > .invest-product .utils .btn.update:before {
               background-image: url(/assets/images/sprites.png);
-              background-position: -511px -606px;
+              background-position: -374px -651px;
               width: 24px;
               height: 25px; }
           .contents.private-invest .product.detail > .invest-product .utils .btn.cancel {
             display: none; }
             .contents.private-invest .product.detail > .invest-product .utils .btn.cancel:before {
               background-image: url(/assets/images/sprites.png);
-              background-position: -482px -606px;
+              background-position: -345px -651px;
               width: 24px;
               height: 25px; }
       .contents.private-invest .product.detail > .invest-product .status-invest {
@@ -5204,7 +5327,7 @@ article.contents {
       margin: -2px 0 0 22px;
       vertical-align: middle;
       background-image: url(/assets/images/sprites.png);
-      background-position: -409px -290px;
+      background-position: -588px -460px;
       width: 11px;
       height: 18px; }
   .contents.borrowing .application .faq {
@@ -5328,17 +5451,17 @@ article.contents {
     font-size: 1.375em;
     color: #252525;
     line-height: 1.3em; }
-  .contents.borrowing-private .application .box {
+  .contents.borrowing-private .application > .box {
     margin-top: 18px;
     padding: 70px 140px 55px 140px;
     border: 1px solid #d4dae4;
     background-color: #fff; }
-    .contents.borrowing-private .application .box .proceedings {
+    .contents.borrowing-private .application > .box .proceedings {
       overflow: visible;
       position: relative;
       margin: 0 auto;
       width: auto; }
-      .contents.borrowing-private .application .box .proceedings:before {
+      .contents.borrowing-private .application > .box .proceedings:before {
         content: '';
         display: block;
         position: absolute;
@@ -5348,24 +5471,24 @@ article.contents {
         z-index: 0;
         height: 2px;
         background-color: #254694; }
-      .contents.borrowing-private .application .box .proceedings > li {
+      .contents.borrowing-private .application > .box .proceedings > li {
         display: block;
         position: relative;
         float: left;
         padding-left: 20px;
         vertical-align: top; }
-        .contents.borrowing-private .application .box .proceedings > li:before {
+        .contents.borrowing-private .application > .box .proceedings > li:before {
           content: '';
           display: block;
           position: relative;
           z-index: 1;
           margin-bottom: 17px;
           background-color: #fff; }
-        .contents.borrowing-private .application .box .proceedings > li .tooltip {
+        .contents.borrowing-private .application > .box .proceedings > li .tooltip {
           bottom: auto;
           color: #6b7581;
           border: 1px solid #c3d0e1; }
-          .contents.borrowing-private .application .box .proceedings > li .tooltip:before {
+          .contents.borrowing-private .application > .box .proceedings > li .tooltip:before {
             top: -6px;
             left: 50%;
             margin-left: -5.5px;
@@ -5373,51 +5496,51 @@ article.contents {
             background-position: -538px -448px;
             width: 11px;
             height: 6px; }
-          .contents.borrowing-private .application .box .proceedings > li .tooltip.down:before {
+          .contents.borrowing-private .application > .box .proceedings > li .tooltip.down:before {
             top: auto;
             bottom: -6px;
             margin-left: -5.5px;
             background-image: url(/assets/images/sprites.png);
-            background-position: -522px -448px;
+            background-position: -570px -448px;
             width: 11px;
             height: 6px; }
-        .contents.borrowing-private .application .box .proceedings > li .title {
+        .contents.borrowing-private .application > .box .proceedings > li .title {
           display: block;
           margin-bottom: 13px;
           font-size: 1.250em;
           font-wei: normal;
           color: #252525;
           line-height: 1.3em; }
-        .contents.borrowing-private .application .box .proceedings > li p {
+        .contents.borrowing-private .application > .box .proceedings > li p {
           font-size: 0.875em;
           color: #6b7581;
           line-height: 22px; }
-          .contents.borrowing-private .application .box .proceedings > li p a {
+          .contents.borrowing-private .application > .box .proceedings > li p a {
             color: #ff4776;
             text-decoration: underline; }
-        .contents.borrowing-private .application .box .proceedings > li.step01 {
+        .contents.borrowing-private .application > .box .proceedings > li.step01 {
           width: 325px; }
-          .contents.borrowing-private .application .box .proceedings > li.step01:before {
+          .contents.borrowing-private .application > .box .proceedings > li.step01:before {
             margin-left: -20px;
             background-image: url(/assets/images/sprites.png);
             background-position: 0px 0px;
             width: 140px;
             height: 140px; }
-          .contents.borrowing-private .application .box .proceedings > li.step01 span.tooltip {
+          .contents.borrowing-private .application > .box .proceedings > li.step01 span.tooltip {
             top: -23px;
             left: 2px; }
-          .contents.borrowing-private .application .box .proceedings > li.step01 p.tooltip {
+          .contents.borrowing-private .application > .box .proceedings > li.step01 p.tooltip {
             top: 240px;
             left: 100px; }
-        .contents.borrowing-private .application .box .proceedings > li.step02 {
+        .contents.borrowing-private .application > .box .proceedings > li.step02 {
           width: 333px; }
-          .contents.borrowing-private .application .box .proceedings > li.step02:before {
+          .contents.borrowing-private .application > .box .proceedings > li.step02:before {
             margin-left: -10px;
             background-image: url(/assets/images/sprites.png);
             background-position: -145px 0px;
             width: 140px;
             height: 140px; }
-          .contents.borrowing-private .application .box .proceedings > li.step02 .btn-update {
+          .contents.borrowing-private .application > .box .proceedings > li.step02 .btn-update {
             display: inline-block;
             margin-top: -3px;
             padding: 5px 13px 6px 13px;
@@ -5428,13 +5551,13 @@ article.contents {
             border: 1px solid #c3d0e1;
             border-radius: 4px;
             background-color: #fff; }
-          .contents.borrowing-private .application .box .proceedings > li.step02 .warning {
+          .contents.borrowing-private .application > .box .proceedings > li.step02 .warning {
             position: relative;
             padding-left: 28px;
             font-size: 12px;
             color: #ff4776;
             line-height: 18px; }
-            .contents.borrowing-private .application .box .proceedings > li.step02 .warning:before {
+            .contents.borrowing-private .application > .box .proceedings > li.step02 .warning:before {
               content: '';
               display: block;
               position: absolute;
@@ -5444,19 +5567,19 @@ article.contents {
               background-position: -479px -426px;
               width: 23px;
               height: 20px; }
-        .contents.borrowing-private .application .box .proceedings > li.step03 {
+        .contents.borrowing-private .application > .box .proceedings > li.step03 {
           width: 160px; }
-          .contents.borrowing-private .application .box .proceedings > li.step03:before {
+          .contents.borrowing-private .application > .box .proceedings > li.step03:before {
             margin-left: -20px;
             background-image: url(/assets/images/sprites.png);
             background-position: 0px -145px;
             width: 140px;
             height: 140px; }
-          .contents.borrowing-private .application .box .proceedings > li.step03 .tooltip {
+          .contents.borrowing-private .application > .box .proceedings > li.step03 .tooltip {
             top: -23px;
             left: 35px;
             color: #ff4776; }
-    .contents.borrowing-private .application .box .btn-borrowing {
+    .contents.borrowing-private .application > .box .btn-borrowing {
       display: block;
       margin: 30px auto 0 auto;
       width: 400px;
@@ -5468,22 +5591,22 @@ article.contents {
       text-decoration: none;
       border-radius: 55px;
       background-color: #52b924; }
-      .contents.borrowing-private .application .box .btn-borrowing:after {
+      .contents.borrowing-private .application > .box .btn-borrowing:after {
         content: '';
         display: inline-block;
         margin: -2px 0 0 22px;
         vertical-align: middle;
         background-image: url(/assets/images/sprites.png);
-        background-position: -409px -290px;
+        background-position: -588px -460px;
         width: 11px;
         height: 18px; }
-    .contents.borrowing-private .application .box .faq {
+    .contents.borrowing-private .application > .box .faq {
       margin-top: 12px;
       font-size: 0.750em;
       color: #6b7581;
       line-height: 18px;
       text-align: center; }
-      .contents.borrowing-private .application .box .faq a {
+      .contents.borrowing-private .application > .box .faq a {
         color: #6b7581;
         text-decoration: underline; }
   .contents.borrowing-private .borrowing-application {
@@ -5493,8 +5616,7 @@ article.contents {
     border-radius: 18px;
     background-color: #fff;
     /* 진행 절차 표시 */
-    /* 빌리기 준비 */
-    /* 입력 폼 */ }
+    /* 빌리기 과정 */ }
     .contents.borrowing-private .borrowing-application .btn-back {
       display: block;
       position: absolute;
@@ -5556,7 +5678,7 @@ article.contents {
             bottom: -6px;
             margin-left: -5.5px;
             background-image: url(/assets/images/sprites.png);
-            background-position: -522px -448px;
+            background-position: -570px -448px;
             width: 11px;
             height: 6px; }
         .contents.borrowing-private .borrowing-application .proceedings > li.step01:before {
@@ -5612,53 +5734,50 @@ article.contents {
           background-position: -425px -267px;
           width: 71px;
           height: 70px; }
-    .contents.borrowing-private .borrowing-application .proceedings-step01 {
+    .contents.borrowing-private .borrowing-application .proceedings-step {
       padding: 46px 0 80px 0;
-      /* 빌리기 준비 과정 */ }
-      .contents.borrowing-private .borrowing-application .proceedings-step01 > h2 {
+      /* 빌리기 준비 과정 */
+      /* 입력 폼 */
+      /* 빌리기 신청 */ }
+      .contents.borrowing-private .borrowing-application .proceedings-step > h2 {
         font-size: 1.375em;
         font-weight: bold;
         color: #252525;
         text-align: center;
         line-height: 1.3em; }
-      .contents.borrowing-private .borrowing-application .proceedings-step01 .tooltip.down {
-        top: -27px;
-        bottom: auto; }
-        .contents.borrowing-private .borrowing-application .proceedings-step01 .tooltip.down:before {
-          top: auto;
-          bottom: -6px;
-          left: 43px;
-          background-image: url(/assets/images/sprites.png);
-          background-position: -554px -448px;
-          width: 11px;
-          height: 6px; }
-      .contents.borrowing-private .borrowing-application .proceedings-step01 .prepare-step01 {
+      .contents.borrowing-private .borrowing-application .proceedings-step .description {
+        margin-top: 13px;
+        font-size: 0.750em;
+        color: #6b7581;
+        line-height: 18px;
+        text-align: center; }
+      .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 {
         margin: 40px auto 0 auto;
         width: 920px; }
-        .contents.borrowing-private .borrowing-application .proceedings-step01 .prepare-step01 > li {
+        .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li {
           position: relative;
           padding: 27px 90px 32px 110px;
           border-top: 1px solid #d4dae4;
           /* 대출자 인증 후 */
           /* 가입비 팝업 */ }
-          .contents.borrowing-private .borrowing-application .proceedings-step01 .prepare-step01 > li:first-child {
+          .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li:first-child {
             border-top: 0px; }
-          .contents.borrowing-private .borrowing-application .proceedings-step01 .prepare-step01 > li:before {
+          .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li:before {
             content: '';
             display: block;
             position: absolute;
             top: 19px;
             left: 50px; }
-          .contents.borrowing-private .borrowing-application .proceedings-step01 .prepare-step01 > li > .title {
+          .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li > .title {
             font-size: 0.875em;
             color: #252525;
             line-height: 1.3em; }
-          .contents.borrowing-private .borrowing-application .proceedings-step01 .prepare-step01 > li > p {
+          .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li > p {
             margin-top: 7px;
             font-size: 0.875em;
             color: #6b7581;
             line-height: 22px; }
-          .contents.borrowing-private .borrowing-application .proceedings-step01 .prepare-step01 > li > .btn-auth {
+          .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li > .btn-auth {
             display: block;
             position: absolute;
             top: 33px;
@@ -5675,25 +5794,25 @@ article.contents {
             border-radius: 2px;
             box-shadow: inset 0 -7px 0 0 #0070c0, 10px 10px 0 0 #e9ecf1;
             background-color: #008df0; }
-            .contents.borrowing-private .borrowing-application .proceedings-step01 .prepare-step01 > li > .btn-auth:hover {
+            .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li > .btn-auth:hover {
               top: 40px;
               padding-bottom: 0px;
               text-decoration: none;
               box-shadow: none; }
-            .contents.borrowing-private .borrowing-application .proceedings-step01 .prepare-step01 > li > .btn-auth .tooltip {
+            .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li > .btn-auth .tooltip {
               left: 50% !important;
               -webkit-transform: translateX(-50%) !important;
                   -ms-transform: translateX(-50%) !important;
                       transform: translateX(-50%) !important; }
-              .ie8 .contents.borrowing-private .borrowing-application .proceedings-step01 .prepare-step01 > li > .btn-auth .tooltip {
+              .ie8 .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li > .btn-auth .tooltip {
                 left: 0%; }
-              .contents.borrowing-private .borrowing-application .proceedings-step01 .prepare-step01 > li > .btn-auth .tooltip:before {
+              .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li > .btn-auth .tooltip:before {
                 left: 50%;
                 margin-left: -5.5px; }
-              .contents.borrowing-private .borrowing-application .proceedings-step01 .prepare-step01 > li > .btn-auth .tooltip.down:before {
+              .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li > .btn-auth .tooltip.down:before {
                 left: 50%;
                 margin-left: -5.5px; }
-          .contents.borrowing-private .borrowing-application .proceedings-step01 .prepare-step01 > li > .warning {
+          .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li > .warning {
             display: block;
             position: absolute;
             top: 55px;
@@ -5702,7 +5821,7 @@ article.contents {
             padding-left: 30px;
             font-size: 0.875em;
             color: #6b7581; }
-            .contents.borrowing-private .borrowing-application .proceedings-step01 .prepare-step01 > li > .warning:before {
+            .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li > .warning:before {
               content: '';
               display: block;
               position: absolute;
@@ -5712,66 +5831,66 @@ article.contents {
               background-position: -479px -426px;
               width: 23px;
               height: 20px; }
-            .contents.borrowing-private .borrowing-application .proceedings-step01 .prepare-step01 > li > .warning em {
+            .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li > .warning em {
               display: block;
               font-size: 0.857em;
               line-height: 18px; }
-          .contents.borrowing-private .borrowing-application .proceedings-step01 .prepare-step01 > li > a.warning {
+          .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li > a.warning {
             text-decoration: underline; }
-          .contents.borrowing-private .borrowing-application .proceedings-step01 .prepare-step01 > li.done > .btn-auth {
+          .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li.done > .btn-auth {
             padding-bottom: 0px;
             box-shadow: none;
             background-color: #cad2de; }
-            .contents.borrowing-private .borrowing-application .proceedings-step01 .prepare-step01 > li.done > .btn-auth:hover {
+            .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li.done > .btn-auth:hover {
               top: 33px; }
-          .contents.borrowing-private .borrowing-application .proceedings-step01 .prepare-step01 > li.seq01:before {
+          .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li.seq01:before {
             background-image: url(/assets/images/sprites.png);
             background-position: -670px -98px;
             width: 46px;
             height: 44px; }
-          .contents.borrowing-private .borrowing-application .proceedings-step01 .prepare-step01 > li.seq02:before {
+          .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li.seq02:before {
             background-image: url(/assets/images/sprites.png);
             background-position: -670px -196px;
             width: 46px;
             height: 44px; }
-          .contents.borrowing-private .borrowing-application .proceedings-step01 .prepare-step01 > li.seq03:before {
+          .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li.seq03:before {
             background-image: url(/assets/images/sprites.png);
             background-position: -670px -294px;
             width: 46px;
             height: 44px; }
-          .contents.borrowing-private .borrowing-application .proceedings-step01 .prepare-step01 > li.seq04:before {
-            background-image: url(/assets/images/sprites.png);
-            background-position: -670px 0px;
-            width: 46px;
-            height: 44px; }
-          .contents.borrowing-private .borrowing-application .proceedings-step01 .prepare-step01 > li.seq01.done:before {
-            background-image: url(/assets/images/sprites.png);
-            background-position: -670px -147px;
-            width: 46px;
-            height: 44px; }
-          .contents.borrowing-private .borrowing-application .proceedings-step01 .prepare-step01 > li.seq02.done:before {
-            background-image: url(/assets/images/sprites.png);
-            background-position: -670px -245px;
-            width: 46px;
-            height: 44px; }
-          .contents.borrowing-private .borrowing-application .proceedings-step01 .prepare-step01 > li.seq03.done:before {
-            background-image: url(/assets/images/sprites.png);
-            background-position: -670px -343px;
-            width: 46px;
-            height: 44px; }
-          .contents.borrowing-private .borrowing-application .proceedings-step01 .prepare-step01 > li.seq04.done:before {
+          .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li.seq04:before {
             background-image: url(/assets/images/sprites.png);
             background-position: -670px -49px;
             width: 46px;
             height: 44px; }
-          .contents.borrowing-private .borrowing-application .proceedings-step01 .prepare-step01 > li .box-auth {
+          .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li.seq01.done:before {
+            background-image: url(/assets/images/sprites.png);
+            background-position: -670px -147px;
+            width: 46px;
+            height: 44px; }
+          .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li.seq02.done:before {
+            background-image: url(/assets/images/sprites.png);
+            background-position: -670px -245px;
+            width: 46px;
+            height: 44px; }
+          .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li.seq03.done:before {
+            background-image: url(/assets/images/sprites.png);
+            background-position: -670px -343px;
+            width: 46px;
+            height: 44px; }
+          .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li.seq04.done:before {
+            background-image: url(/assets/images/sprites.png);
+            background-position: -670px 0px;
+            width: 46px;
+            height: 44px; }
+          .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li .box-auth {
             position: relative;
             margin-top: 23px;
             padding: 14px 0 14px 86px;
             font-size: 0.875em;
             line-height: 24px;
             border: 1px solid #d4dae4; }
-            .contents.borrowing-private .borrowing-application .proceedings-step01 .prepare-step01 > li .box-auth:before {
+            .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li .box-auth:before {
               content: '';
               display: block;
               position: absolute;
@@ -5781,18 +5900,18 @@ article.contents {
               background-position: -86px -651px;
               width: 40px;
               height: 35px; }
-            .contents.borrowing-private .borrowing-application .proceedings-step01 .prepare-step01 > li .box-auth .title {
+            .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li .box-auth .title {
               display: block;
               color: #ff4776; }
-            .contents.borrowing-private .borrowing-application .proceedings-step01 .prepare-step01 > li .box-auth .message {
+            .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li .box-auth .message {
               color: #6b7581; }
-            .contents.borrowing-private .borrowing-application .proceedings-step01 .prepare-step01 > li .box-auth .info {
+            .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li .box-auth .info {
               margin-top: 10px;
               color: #252525; }
-              .contents.borrowing-private .borrowing-application .proceedings-step01 .prepare-step01 > li .box-auth .info em {
+              .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li .box-auth .info em {
                 margin-left: 23px;
                 margin-right: 23px; }
-          .contents.borrowing-private .borrowing-application .proceedings-step01 .prepare-step01 > li .mfee-popup {
+          .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li .mfee-popup {
             display: none;
             position: absolute;
             top: 90px;
@@ -5803,37 +5922,37 @@ article.contents {
             font-size: 0.875em;
             color: #6b7581;
             line-height: 22px; }
-            .contents.borrowing-private .borrowing-application .proceedings-step01 .prepare-step01 > li .mfee-popup:before {
+            .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li .mfee-popup:before {
               right: 124px;
               left: auto; }
-            .contents.borrowing-private .borrowing-application .proceedings-step01 .prepare-step01 > li .mfee-popup > h1 {
+            .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li .mfee-popup > h1 {
               display: block;
               padding: 0;
               font-size: 1.143em;
               color: #252525; }
-              .contents.borrowing-private .borrowing-application .proceedings-step01 .prepare-step01 > li .mfee-popup > h1:before {
+              .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li .mfee-popup > h1:before {
                 content: none; }
-            .contents.borrowing-private .borrowing-application .proceedings-step01 .prepare-step01 > li .mfee-popup .description {
+            .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li .mfee-popup .description {
               margin-top: 10px; }
-              .contents.borrowing-private .borrowing-application .proceedings-step01 .prepare-step01 > li .mfee-popup .description em {
+              .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li .mfee-popup .description em {
                 color: #ff4776; }
-            .contents.borrowing-private .borrowing-application .proceedings-step01 .prepare-step01 > li .mfee-popup .refund {
+            .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li .mfee-popup .refund {
               margin-top: 24px; }
-              .contents.borrowing-private .borrowing-application .proceedings-step01 .prepare-step01 > li .mfee-popup .refund > li {
+              .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li .mfee-popup .refund > li {
                 position: relative;
                 padding: 0 0 10px 42px; }
-                .contents.borrowing-private .borrowing-application .proceedings-step01 .prepare-step01 > li .mfee-popup .refund > li:before {
+                .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li .mfee-popup .refund > li:before {
                   content: attr(data-title);
                   display: block;
                   position: absolute;
                   top: 0;
                   left: 0;
                   color: #ff4776; }
-            .contents.borrowing-private .borrowing-application .proceedings-step01 .prepare-step01 > li .mfee-popup .warning {
+            .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li .mfee-popup .warning {
               position: relative;
               margin-top: 10px;
               padding: 0 0 0 30px; }
-              .contents.borrowing-private .borrowing-application .proceedings-step01 .prepare-step01 > li .mfee-popup .warning:before {
+              .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li .mfee-popup .warning:before {
                 content: '';
                 display: block;
                 position: absolute;
@@ -5843,15 +5962,15 @@ article.contents {
                 background-position: -479px -426px;
                 width: 23px;
                 height: 20px; }
-      .contents.borrowing-private .borrowing-application .proceedings-step01 .list-dot {
+      .contents.borrowing-private .borrowing-application .proceedings-step .list-dot {
         margin-top: 10px; }
-        .contents.borrowing-private .borrowing-application .proceedings-step01 .list-dot > li {
+        .contents.borrowing-private .borrowing-application .proceedings-step .list-dot > li {
           position: relative;
           padding-left: 8px;
           font-size: 0.750em;
           color: #6b7581;
           line-height: 21px; }
-          .contents.borrowing-private .borrowing-application .proceedings-step01 .list-dot > li:before {
+          .contents.borrowing-private .borrowing-application .proceedings-step .list-dot > li:before {
             content: '';
             display: block;
             position: absolute;
@@ -5860,7 +5979,7 @@ article.contents {
             height: 3px;
             width: 3px;
             background-color: #ff4776; }
-      .contents.borrowing-private .borrowing-application .proceedings-step01 .btn-sumbit {
+      .contents.borrowing-private .borrowing-application .proceedings-step .btn-sumbit {
         display: block;
         margin: 33px auto 0 auto;
         width: 264px;
@@ -5871,91 +5990,175 @@ article.contents {
         text-align: center;
         border-radius: 2px;
         background-color: #52b924; }
-        .contents.borrowing-private .borrowing-application .proceedings-step01 .btn-sumbit.update {
+        .contents.borrowing-private .borrowing-application .proceedings-step .btn-sumbit.update {
           background-color: #3a99e8; }
-      .contents.borrowing-private .borrowing-application .proceedings-step01 .submit-desc {
+      .contents.borrowing-private .borrowing-application .proceedings-step .submit-desc {
         margin-top: 10px;
         font-size: 0.750em;
         color: #6b7581;
         text-align: center; }
-    .contents.borrowing-private .borrowing-application .basic-info-form {
-      margin: 0 auto;
-      padding-bottom: 37px;
-      width: 920px; }
-      .contents.borrowing-private .borrowing-application .basic-info-form span.center input[type=text],
-      .contents.borrowing-private .borrowing-application .basic-info-form span.center input[type=password] {
-        width: 90px; }
-      .contents.borrowing-private .borrowing-application .basic-info-form .warning {
-        position: relative;
-        padding-left: 30px;
-        font-size: 12px;
-        color: #6b7581;
-        line-height: 18px; }
-        .contents.borrowing-private .borrowing-application .basic-info-form .warning:before {
-          content: '';
-          display: block;
-          position: absolute;
-          top: 0;
-          left: 0;
-          background-image: url(/assets/images/sprites.png);
-          background-position: -479px -426px;
-          width: 23px;
-          height: 20px; }
-      .contents.borrowing-private .borrowing-application .basic-info-form .basic {
-        margin-top: 45px; }
-        .contents.borrowing-private .borrowing-application .basic-info-form .basic .item-form {
-          clear: none;
-          float: left; }
-        .contents.borrowing-private .borrowing-application .basic-info-form .basic .warning {
-          float: left;
-          margin-top: 40px;
-          width: 215px; }
-      .contents.borrowing-private .borrowing-application .basic-info-form .contacts {
-        position: relative;
-        margin-top: 11px; }
-        .contents.borrowing-private .borrowing-application .basic-info-form .contacts .co-name {
-          display: inline-block;
-          margin-right: 10px;
-          width: 300px;
-          vertical-align: middle; }
-        .contents.borrowing-private .borrowing-application .basic-info-form .contacts .cr-box {
-          display: inline-block;
-          margin: 0; }
-        .contents.borrowing-private .borrowing-application .basic-info-form .contacts .contacts-description {
-          position: absolute;
-          top: 40px;
-          right: 0;
-          bottom: 0;
-          padding: 36px 0 0 34px;
-          width: 400px;
-          background-color: #fff6f8; }
-          .contents.borrowing-private .borrowing-application .basic-info-form .contacts .contacts-description p {
-            font-size: 12px;
-            color: #6b7581;
-            line-height: 18px; }
-            .contents.borrowing-private .borrowing-application .basic-info-form .contacts .contacts-description p strong {
-              color: #ff4776; }
-          .contents.borrowing-private .borrowing-application .basic-info-form .contacts .contacts-description .warning {
-            margin-top: 14px; }
-      .contents.borrowing-private .borrowing-application .basic-info-form .address {
-        margin-top: 26px; }
-        .contents.borrowing-private .borrowing-application .basic-info-form .address .item-form {
+      .contents.borrowing-private .borrowing-application .proceedings-step .basic-info-form {
+        margin: 0 auto;
+        padding-bottom: 37px;
+        width: 920px; }
+        .contents.borrowing-private .borrowing-application .proceedings-step .basic-info-form span.center input[type=text],
+        .contents.borrowing-private .borrowing-application .proceedings-step .basic-info-form span.center input[type=password] {
+          width: 90px; }
+        .contents.borrowing-private .borrowing-application .proceedings-step .basic-info-form .tooltip {
+          left: 20px; }
+        .contents.borrowing-private .borrowing-application .proceedings-step .basic-info-form .warning {
+          position: relative;
+          padding-left: 30px;
+          font-size: 12px;
+          color: #6b7581;
+          line-height: 18px; }
+          .contents.borrowing-private .borrowing-application .proceedings-step .basic-info-form .warning:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: url(/assets/images/sprites.png);
+            background-position: -479px -426px;
+            width: 23px;
+            height: 20px; }
+          .contents.borrowing-private .borrowing-application .proceedings-step .basic-info-form .warning em {
+            color: #ff4776; }
+          .contents.borrowing-private .borrowing-application .proceedings-step .basic-info-form .warning.no-icon {
+            padding-left: 0; }
+            .contents.borrowing-private .borrowing-application .proceedings-step .basic-info-form .warning.no-icon:before {
+              content: none; }
+        .contents.borrowing-private .borrowing-application .proceedings-step .basic-info-form .basic {
+          margin-top: 45px; }
+          .contents.borrowing-private .borrowing-application .proceedings-step .basic-info-form .basic .item-form {
+            clear: none;
+            float: left; }
+          .contents.borrowing-private .borrowing-application .proceedings-step .basic-info-form .basic .warning {
+            float: left;
+            margin-top: 40px;
+            width: 215px; }
+        .contents.borrowing-private .borrowing-application .proceedings-step .basic-info-form .contacts {
+          position: relative;
+          margin-top: 11px; }
+          .contents.borrowing-private .borrowing-application .proceedings-step .basic-info-form .contacts .co-name {
+            display: inline-block;
+            margin-right: 10px;
+            width: 300px;
+            vertical-align: middle; }
+          .contents.borrowing-private .borrowing-application .proceedings-step .basic-info-form .contacts .cr-box {
+            display: inline-block;
+            margin: 0; }
+          .contents.borrowing-private .borrowing-application .proceedings-step .basic-info-form .contacts .contacts-description {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            bottom: 0;
+            padding: 36px 0 0 34px;
+            width: 400px;
+            background-color: #fff6f8; }
+            .contents.borrowing-private .borrowing-application .proceedings-step .basic-info-form .contacts .contacts-description p {
+              font-size: 12px;
+              color: #6b7581;
+              line-height: 18px; }
+              .contents.borrowing-private .borrowing-application .proceedings-step .basic-info-form .contacts .contacts-description p strong {
+                color: #ff4776; }
+            .contents.borrowing-private .borrowing-application .proceedings-step .basic-info-form .contacts .contacts-description .warning {
+              margin-top: 14px; }
+        .contents.borrowing-private .borrowing-application .proceedings-step .basic-info-form .address {
+          margin-top: 26px; }
+          .contents.borrowing-private .borrowing-application .proceedings-step .basic-info-form .address .item-form {
+            clear: none;
+            float: left;
+            margin-right: 10px; }
+          .contents.borrowing-private .borrowing-application .proceedings-step .basic-info-form .address .warning {
+            margin-top: 11px; }
+          .contents.borrowing-private .borrowing-application .proceedings-step .basic-info-form .address .cr-box {
+            margin-top: 0px; }
+        .contents.borrowing-private .borrowing-application .proceedings-step .basic-info-form .account .item-form {
           clear: none;
           float: left;
           margin-right: 10px; }
-        .contents.borrowing-private .borrowing-application .basic-info-form .address .warning {
-          margin-top: 11px; }
-        .contents.borrowing-private .borrowing-application .basic-info-form .address .cr-box {
-          margin-top: 0px; }
-      .contents.borrowing-private .borrowing-application .basic-info-form .account .item-form {
-        clear: none;
-        float: left;
-        margin-right: 10px; }
-      .contents.borrowing-private .borrowing-application .basic-info-form .account .desc {
-        display: inline-block;
-        margin-top: 40px;
-        font-size: 12px;
-        color: #6b7581;
-        line-height: 18px; }
-        .contents.borrowing-private .borrowing-application .basic-info-form .account .desc em {
-          color: #ff4776; }
+        .contents.borrowing-private .borrowing-application .proceedings-step .basic-info-form .account .desc {
+          display: inline-block;
+          margin-top: 40px;
+          font-size: 12px;
+          color: #6b7581;
+          line-height: 18px; }
+          .contents.borrowing-private .borrowing-application .proceedings-step .basic-info-form .account .desc em {
+            color: #ff4776; }
+      .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form {
+        padding-bottom: 20px; }
+        .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .basic .item-form .item-form {
+          clear: none;
+          float: left;
+          margin-right: 10px; }
+        .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .basic .warning {
+          margin-top: 8px; }
+        .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .story .item-form {
+          clear: none;
+          float: left; }
+        .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .story .warning {
+          float: right;
+          margin-top: 10px;
+          margin-right: 82px; }
+        .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .repayment-plan {
+          margin-top: 4px; }
+        .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .income {
+          margin-top: 50px; }
+          .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .income .item-form {
+            clear: none;
+            float: left;
+            width: 425px; }
+          .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .income .price .item-form {
+            margin-top: -2px;
+            vertical-align: middle; }
+          .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .income .final {
+            clear: both;
+            padding-top: 20px;
+            font-size: 1.000em;
+            color: #252525;
+            text-align: right; }
+            .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .income .final strong {
+              display: inline-block;
+              padding-right: 10px;
+              width: 94px;
+              color: #ff4776; }
+        .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .etc .item-form {
+          clear: none;
+          float: left; }
+          .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .etc .item-form .select {
+            float: left;
+            box-sizing: border-box; }
+        .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .box-disclosure {
+          margin-top: 20px;
+          padding: 25px 0px;
+          text-align: center;
+          border: 1px solid #d4dae4;
+          border-radius: 2px;
+          background-color: #fff; }
+          .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .box-disclosure p {
+            font-size: 0.750em;
+            color: #6b7581;
+            line-height: 18px; }
+            .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .box-disclosure p em {
+              color: #ff4776; }
+          .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .box-disclosure .tooltip {
+            bottom: -37px; }
+      .contents.borrowing-private .borrowing-application .proceedings-step.application .btns {
+        margin-top: 10px; }
+        .contents.borrowing-private .borrowing-application .proceedings-step.application .btns .btn-tip-txt {
+          float: right;
+          margin-top: 3px; }
+        .contents.borrowing-private .borrowing-application .proceedings-step.application .btns .btn-options {
+          display: inline-block;
+          width: 105px;
+          font-size: 0.875em;
+          font-weight: bold;
+          color: #fff;
+          line-height: 40px;
+          text-align: center;
+          border-radius: 2px;
+          background-color: #3a99e8; }
+      .contents.borrowing-private .borrowing-application .proceedings-step.application .btn-sumbit {
+        margin-top: 0px;
+        background-color: #ff507d; }

@@ -117,7 +117,7 @@ var Main = (function ($) {
 				autoplaySpeed: 3000,
 				speed: 300,
 				dots: false,
-				arrows: true,
+				arrows: false,
 				slidesToShow: 1,
 				slidesToScroll: 1
 			});

@@ -6235,3 +6235,73 @@ article.contents {
             font-size: 0.857em;
             color: #6b7581;
             text-decoration: underline; }
+
+body.popup-window {
+  min-width: auto;
+  background-color: #eaf5fa; }
+
+.popup-window-contents {
+  padding: 50px 0 34px 0;
+  color: #142c66;
+  text-align: center; }
+  .popup-window-contents > .title {
+    font-size: 1.375em;
+    font-weight: bold;
+    line-height: 1.3em; }
+    .popup-window-contents > .title + .message {
+      margin-top: 32px; }
+  .popup-window-contents p em, .popup-window-contents p strong {
+    color: #ff4776; }
+  .popup-window-contents > .message {
+    font-size: 0.875em;
+    line-height: 22px; }
+  .popup-window-contents > .btns {
+    margin-top: 35px; }
+    .popup-window-contents > .btns a {
+      display: inline-block;
+      padding: 0 25px;
+      font-size: 0.875em;
+      color: #142c66;
+      line-height: 35px;
+      border: 1px solid #d4dae4;
+      border-radius: 37px;
+      background-color: #fff; }
+      .popup-window-contents > .btns a.btn-normal {
+        color: #6b7581; }
+      .popup-window-contents > .btns a.btn-strong {
+        color: #142c66; }
+      .popup-window-contents > .btns a.btn-email {
+        position: relative;
+        color: #ff4776;
+        text-decoration: underline; }
+        .popup-window-contents > .btns a.btn-email:before {
+          content: attr(data-txt);
+          display: block;
+          position: absolute;
+          bottom: -22px;
+          left: 0;
+          right: 0;
+          font-size: 12px;
+          color: #6b7581;
+          text-align: center;
+          line-height: 18px; }
+  .popup-window-contents .tip {
+    display: block;
+    position: relative;
+    margin: 53px auto 0 auto;
+    padding-left: 33px;
+    width: 330px;
+    font-size: 0.750em;
+    color: #6b7581;
+    line-height: 18px;
+    text-align: left; }
+    .popup-window-contents .tip:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image: url(/assets/images/sprites.png);
+      background-position: -482px -606px;
+      width: 29px;
+      height: 23px; }

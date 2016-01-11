@@ -180,3 +180,23 @@
 	}
 }
 
+/* 기본 테이블 데이터 타입 */
+.table-data { margin-top: 12px; width: 100%; border-top: 2px solid #252525; border-bottom: 2px solid #252525;
+	th { height: 44px; font-size: 0.875em; font-weight: normal; color: $color-title; text-align: center; border-left: 1px solid #d4dae4; background-color: #fbfbfb; }
+	td { height: 44px; font-size: 0.875em; color: $color-content; text-align: center; border-left: 1px solid #d4dae4; background-color: #fff; }
+
+	tr {
+		th:first-child { border-left: 0px; }
+		td:first-child { border-left: 0px; }
+	}
+	thead {
+		tr { border-bottom: 1px solid #7c7f84; }
+	}
+	tfoot {
+		tr { border-top: 1px solid #7c7f84; }
+		td { color: $color-title; background-color: #fbfbfb; }
+	}
+	tbody {
+		tr { border-top: 1px solid #d4dae4; }
+	}
+}

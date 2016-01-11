@@ -772,6 +772,41 @@ span.center {
       width: 11px;
       height: 6px; }
 
+/* 기본 테이블 데이터 타입 */
+.table-data {
+  margin-top: 12px;
+  width: 100%;
+  border-top: 2px solid #252525;
+  border-bottom: 2px solid #252525; }
+  .table-data th {
+    height: 44px;
+    font-size: 0.875em;
+    font-weight: normal;
+    color: #252525;
+    text-align: center;
+    border-left: 1px solid #d4dae4;
+    background-color: #fbfbfb; }
+  .table-data td {
+    height: 44px;
+    font-size: 0.875em;
+    color: #6b7581;
+    text-align: center;
+    border-left: 1px solid #d4dae4;
+    background-color: #fff; }
+  .table-data tr th:first-child {
+    border-left: 0px; }
+  .table-data tr td:first-child {
+    border-left: 0px; }
+  .table-data thead tr {
+    border-bottom: 1px solid #7c7f84; }
+  .table-data tfoot tr {
+    border-top: 1px solid #7c7f84; }
+  .table-data tfoot td {
+    color: #252525;
+    background-color: #fbfbfb; }
+  .table-data tbody tr {
+    border-top: 1px solid #d4dae4; }
+
 /* GNB HEADER */
 .header {
   display: block;
@@ -5412,38 +5447,6 @@ article.contents {
         color: #252525; }
         .contents.borrowing-private .borrowing-intro .epr-popup h1:before {
           content: none; }
-      .contents.borrowing-private .borrowing-intro .epr-popup table {
-        margin-top: 13px;
-        width: 100%; }
-        .contents.borrowing-private .borrowing-intro .epr-popup table caption {
-          display: block; }
-        .contents.borrowing-private .borrowing-intro .epr-popup table th {
-          font-size: 0.875em;
-          font-weight: normal;
-          color: #252525;
-          line-height: 44px;
-          text-align: center;
-          background-color: #fbfbfb; }
-          .contents.borrowing-private .borrowing-intro .epr-popup table th:first-child {
-            border-left: 0px; }
-        .contents.borrowing-private .borrowing-intro .epr-popup table td {
-          font-size: 0.875em;
-          color: #6b7581;
-          line-height: 44px;
-          text-align: center; }
-          .contents.borrowing-private .borrowing-intro .epr-popup table td:first-child {
-            border-left: 0px; }
-        .contents.borrowing-private .borrowing-intro .epr-popup table thead th {
-          border-top: 2px solid #252525;
-          border-bottom: 1px solid #7c7f84;
-          border-left: 1px solid #d4dae4; }
-        .contents.borrowing-private .borrowing-intro .epr-popup table tfoot th {
-          border-top: 1px solid #7c7f84;
-          border-bottom: 2px solid #252525;
-          border-left: 1px solid #d4dae4; }
-        .contents.borrowing-private .borrowing-intro .epr-popup table tbody td {
-          border-top: 1px solid #d4dae4;
-          border-left: 1px solid #d4dae4; }
       .contents.borrowing-private .borrowing-intro .epr-popup > p {
         margin: 12px 0 0 0 !important;
         text-align: right; }
@@ -6086,79 +6089,149 @@ article.contents {
           line-height: 18px; }
           .contents.borrowing-private .borrowing-application .proceedings-step .basic-info-form .account .desc em {
             color: #ff4776; }
-      .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form {
-        padding-bottom: 20px; }
-        .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .basic .item-form .item-form {
-          clear: none;
-          float: left;
-          margin-right: 10px; }
-        .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .basic .warning {
-          margin-top: 8px; }
-        .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .story .item-form {
-          clear: none;
-          float: left; }
-        .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .story .warning {
-          float: right;
-          margin-top: 10px;
-          margin-right: 82px; }
-        .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .repayment-plan {
-          margin-top: 4px; }
-        .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .income {
-          margin-top: 50px; }
-          .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .income .item-form {
+      .contents.borrowing-private .borrowing-application .proceedings-step.application {
+        /* 상환내역 미리보기 */
+        /* 증빙서류 관련 팁 텍스트 */ }
+        .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form {
+          padding-bottom: 20px; }
+          .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .basic .item-form .item-form {
             clear: none;
             float: left;
-            width: 425px; }
-          .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .income .price .item-form {
-            margin-top: -2px;
-            vertical-align: middle; }
-          .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .income .final {
-            clear: both;
-            padding-top: 20px;
+            margin-right: 10px; }
+          .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .basic .warning {
+            margin-top: 8px; }
+          .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .story .item-form {
+            clear: none;
+            float: left; }
+          .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .story .warning {
+            float: right;
+            margin-top: 10px;
+            margin-right: 82px; }
+          .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .repayment-plan {
+            margin-top: 4px; }
+          .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .income {
+            margin-top: 50px; }
+            .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .income .item-form {
+              clear: none;
+              float: left;
+              width: 425px; }
+            .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .income .price .item-form {
+              margin-top: -2px;
+              vertical-align: middle; }
+            .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .income .final {
+              clear: both;
+              padding-top: 20px;
+              font-size: 1.000em;
+              color: #252525;
+              text-align: right; }
+              .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .income .final strong {
+                display: inline-block;
+                padding-right: 10px;
+                width: 94px;
+                color: #ff4776; }
+          .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .etc .item-form {
+            clear: none;
+            float: left; }
+            .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .etc .item-form .select {
+              float: left;
+              box-sizing: border-box; }
+          .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .box-disclosure {
+            margin-top: 20px;
+            padding: 25px 0px;
+            text-align: center;
+            border: 1px solid #d4dae4;
+            border-radius: 2px;
+            background-color: #fff; }
+            .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .box-disclosure p {
+              font-size: 0.750em;
+              color: #6b7581;
+              line-height: 18px; }
+              .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .box-disclosure p em {
+                color: #ff4776; }
+            .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .box-disclosure .tooltip {
+              bottom: -37px; }
+        .contents.borrowing-private .borrowing-application .proceedings-step.application .btns {
+          position: relative;
+          margin-top: 10px; }
+          .contents.borrowing-private .borrowing-application .proceedings-step.application .btns .btn-tip-txt {
+            float: right;
+            margin-top: 3px; }
+          .contents.borrowing-private .borrowing-application .proceedings-step.application .btns .btn-options {
+            display: inline-block;
+            width: 105px;
+            font-size: 0.875em;
+            font-weight: bold;
+            color: #fff;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 2px;
+            background-color: #3a99e8; }
+        .contents.borrowing-private .borrowing-application .proceedings-step.application .btn-sumbit {
+          margin-top: 0px;
+          background-color: #ff507d; }
+        .contents.borrowing-private .borrowing-application .proceedings-step.application .preview-popup {
+          display: none;
+          position: absolute;
+          top: 90px;
+          right: 18px;
+          z-index: 900;
+          padding: 34px 0 0px 60px;
+          width: 545px;
+          font-size: 0.875em;
+          color: #6b7581;
+          line-height: 22px; }
+          .contents.borrowing-private .borrowing-application .proceedings-step.application .preview-popup:before {
+            right: 97px;
+            left: auto; }
+          .contents.borrowing-private .borrowing-application .proceedings-step.application .preview-popup > h1 {
+            display: block;
+            padding: 0;
             font-size: 1.000em;
-            color: #252525;
-            text-align: right; }
-            .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .income .final strong {
-              display: inline-block;
-              padding-right: 10px;
-              width: 94px;
-              color: #ff4776; }
-        .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .etc .item-form {
-          clear: none;
-          float: left; }
-          .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .etc .item-form .select {
-            float: left;
-            box-sizing: border-box; }
-        .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .box-disclosure {
-          margin-top: 20px;
-          padding: 25px 0px;
-          text-align: center;
-          border: 1px solid #d4dae4;
-          border-radius: 2px;
+            color: #252525; }
+            .contents.borrowing-private .borrowing-application .proceedings-step.application .preview-popup > h1:before {
+              content: none; }
+          .contents.borrowing-private .borrowing-application .proceedings-step.application .preview-popup > .scroll {
+            overflow: scroll;
+            padding-right: 60px;
+            height: 423px; }
+        .contents.borrowing-private .borrowing-application .proceedings-step.application .tip-txt-popup {
+          position: absolute;
+          top: 26px;
+          right: -120px;
+          z-index: 900;
+          padding: 13px 16px;
+          width: 340px;
+          font-size: 0.875em;
+          color: #6b7581;
+          line-height: 22px;
+          border: 1px solid #c3d0e1;
+          border-radius: 4px;
           background-color: #fff; }
-          .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .box-disclosure p {
-            font-size: 0.750em;
+          .contents.borrowing-private .borrowing-application .proceedings-step.application .tip-txt-popup:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: -6px;
+            left: 106px;
+            background-image: url(/assets/images/sprites.png);
+            background-position: -538px -448px;
+            width: 11px;
+            height: 6px; }
+          .contents.borrowing-private .borrowing-application .proceedings-step.application .tip-txt-popup > h1 {
+            display: block;
+            padding: 0;
+            font-size: 0.857em;
+            color: #252525; }
+            .contents.borrowing-private .borrowing-application .proceedings-step.application .tip-txt-popup > h1:before {
+              content: none; }
+          .contents.borrowing-private .borrowing-application .proceedings-step.application .tip-txt-popup p {
+            margin-top: 6px;
+            font-size: 0.857em;
             color: #6b7581;
             line-height: 18px; }
-            .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .box-disclosure p em {
-              color: #ff4776; }
-          .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .box-disclosure .tooltip {
-            bottom: -37px; }
-      .contents.borrowing-private .borrowing-application .proceedings-step.application .btns {
-        margin-top: 10px; }
-        .contents.borrowing-private .borrowing-application .proceedings-step.application .btns .btn-tip-txt {
-          float: right;
-          margin-top: 3px; }
-        .contents.borrowing-private .borrowing-application .proceedings-step.application .btns .btn-options {
-          display: inline-block;
-          width: 105px;
-          font-size: 0.875em;
-          font-weight: bold;
-          color: #fff;
-          line-height: 40px;
-          text-align: center;
-          border-radius: 2px;
-          background-color: #3a99e8; }
-      .contents.borrowing-private .borrowing-application .proceedings-step.application .btn-sumbit {
-        margin-top: 0px;
-        background-color: #ff507d; }
+          .contents.borrowing-private .borrowing-application .proceedings-step.application .tip-txt-popup a {
+            float: right;
+            margin-top: 10px;
+            font-size: 0.857em;
+            color: #6b7581;
+            text-decoration: underline; }

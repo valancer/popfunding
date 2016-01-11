@@ -105,9 +105,94 @@ include "head.html"
 									</div>
 								</div>
 
-								<a href="#" class="btn-inner-form only-buttons">
+								<a href="#preview-repayment" class="btn-inner-form only-buttons">
 									상환내역 미리보기
 								</a>
+								<script>
+								$(window.document).ready(function(){
+									// 상환내역 미리보기
+									var $btnPreview = $('a.btn-inner-form');
+									$btnPreview.on('click', function(e) {
+										e.preventDefault();
+										var target = $btnPreview.attr('href');
+										$(target).toggle();
+									});
+								});
+								</script>
+
+								<!-- 팝업 -->
+								<aside id="preview-repayment" class="popup guide-popup preview-popup">
+									<button class="btn-popup-close" data-target="#preview-repayment">팝업닫기</button>
+
+									<h1>상환내역 미리보기</h1>
+									<div class="scroll">
+										<table class="table-data">
+											<caption>상환내역 미리보기</caption>
+											<thead>
+												<tr>
+													<th>월</th>
+													<th>원금</th>
+													<th>이자</th>
+													<th>상환합계</th>
+													<th>원대출 잔액</th>
+												</tr>
+											</thead>
+											<tfoot>
+												<tr>
+													<th>합계</th>
+													<td>1,000,000</td>
+													<td>72,916</td>
+													<td>1,072,916</td>
+													<td>0</td>
+												</tr>
+											</tfoot>
+											<tbody>
+												<tr>
+													<td>1</td>
+													<td>166,667</td>
+													<td>20,833</td>
+													<td>187,500</td>
+													<td>83,333</td>
+												</tr>
+												<tr>
+													<td>2</td>
+													<td>166,667</td>
+													<td>17,361</td>
+													<td>184,028</td>
+													<td>666,666</td>
+												</tr>
+												<tr>
+													<td>3</td>
+													<td>166,667</td>
+													<td>13,889</td>
+													<td>180,556</td>
+													<td>499,999</td>
+												</tr>
+												<tr>
+													<td>4</td>
+													<td>166,667</td>
+													<td>10,417</td>
+													<td>177,084</td>
+													<td>33,333</td>
+												</tr>
+												<tr>
+													<td>5</td>
+													<td>166,667</td>
+													<td>6,944</td>
+													<td>173,611</td>
+													<td>166,665</td>
+												</tr>
+												<tr>
+													<td>6</td>
+													<td>166,667</td>
+													<td>3,472</td>
+													<td>170,137</td>
+													<td>0</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</aside>
 							</div>
 
 							<div class="item-form" style="width: 171px;">
@@ -449,12 +534,34 @@ include "head.html"
 							</div>
 						</div>
 
-						<p class="btns">
-							<a href="#" class="btn-tip-txt">추가 증빙서류는 100% 달성에 도움이 됩니다.</a>
+						<div class="btns">
+							<a href="#tip-txt" class="btn-tip-txt">추가 증빙서류는 100% 달성에 도움이 됩니다.</a>
+							<script>
+							$(window.document).ready(function(){
+								// 
+								var $btnTipTxt = $('a.btn-tip-txt');
+								$btnTipTxt.on('click', function(e) {
+									e.preventDefault();
+									var target = $btnTipTxt.attr('href');
+									$(target).toggle();
+								});
+							});
+							</script>
+							
+							<aside id="tip-txt" class="popup tip-txt-popup">
+								<h1>추가 증빙서류 스캔 서비스</h1>
+								<p>
+									&lt;빌리기 신청&gt; 이후, 직업, 소득, 납세, 주소를 증빙하는 서류를 팝펀딩 운영실로 보내주시면 스캔을 받아 &lt;빌리기 상세보기&gt;에 올려 드립니다.
+								</p>
+								<p>
+									증빙서류는 신뢰도를 높여, 투자자들을 모으는데 큰 도움이 됩니다.
+								</p>
+								<a href="#">FAQ 자세히 보기</a>
+							</aside>
 
 							<a href="#" class="btn-options">임시저장</a>
 							<a href="#" class="btn-options">미리보기</a>
-						</p>
+						</div>
 					</fieldset>		<!-- class="basic-info-form" -->
 					
 

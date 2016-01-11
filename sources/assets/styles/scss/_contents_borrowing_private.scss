@@ -30,24 +30,6 @@
 			h1 { padding: 0; font-size: 0.875em; color: $color-title;
 				&:before { content: none; }
 			}
-			table { margin-top: 13px; width: 100%; 
-				caption { display: block; }
-				th { font-size: 0.875em; font-weight: normal; color: $color-title; line-height: 44px; text-align: center; background-color: #fbfbfb;
-					&:first-child { border-left: 0px; }
-				}
-				td { font-size: 0.875em; color: $color-content; line-height: 44px; text-align: center;
-					&:first-child { border-left: 0px; }
-				}
-				thead {
-					th { border-top: 2px solid #252525; border-bottom: 1px solid #7c7f84; border-left: 1px solid #d4dae4; }
-				}
-				tfoot {
-					th { border-top: 1px solid #7c7f84; border-bottom: 2px solid #252525; border-left: 1px solid #d4dae4; }
-				}
-				tbody {
-					td { border-top: 1px solid #d4dae4; border-left: 1px solid #d4dae4; }
-				}
-			}
 			> p { margin: 12px 0 0 0 !important; text-align: right; }
 		}
 
@@ -336,11 +318,34 @@
 					}
 				}
 
-				.btns { margin-top: 10px;
+				.btns { position: relative; margin-top: 10px;
 					.btn-tip-txt { float: right; margin-top: 3px; }
 					.btn-options { display: inline-block; width: 105px; font-size: 0.875em; font-weight: bold; color: #fff; line-height: 40px; text-align: center; border-radius: 2px; background-color: #3a99e8; }
 				}
 				.btn-sumbit { margin-top: 0px; background-color: #ff507d; }
+
+
+				/* 상환내역 미리보기 */
+				.preview-popup { display: none; position: absolute; top: 90px; right: 18px; z-index: z("modaless"); padding: 34px 0 0px 60px; width: 545px; font-size: 0.875em; color: $color-content; line-height: 22px;
+					&:before { right: 97px; left: auto; }
+
+					> h1 { display: block; padding: 0; font-size: 1.000em; color: $color-title;
+						&:before { content: none; }
+					}
+
+					> .scroll { overflow: scroll; padding-right: 60px; height: 423px; }
+				}
+
+				/* 증빙서류 관련 팁 텍스트 */
+				.tip-txt-popup { position: absolute; top: 26px; right: -120px; z-index: z("modaless"); padding: 13px 16px; width: 340px; font-size: 0.875em; color: $color-content; line-height: 22px; border: 1px solid #c3d0e1; border-radius: 4px; background-color: #fff;
+					&:before { content: ''; display: block; position: absolute; top: -$sprite-bg-arrow15-height; left: 106px; @include sprite($sprite-bg-arrow15); }
+
+					> h1 { display: block; padding: 0; font-size: 0.857em; color: $color-title;
+						&:before { content: none; }
+					}
+					p { margin-top: 6px; font-size: 0.857em; color: $color-content; line-height: 18px; }
+					a { float: right; margin-top: 10px; font-size: 0.857em; color: $color-content; text-decoration: underline; }
+				}
 			}
 
 		}

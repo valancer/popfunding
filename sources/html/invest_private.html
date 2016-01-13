@@ -1,0 +1,141 @@
+include "head.html"
+	<script>
+	$(window.document).ready(function(){
+	});
+	</script>
+
+	<!-- 상단 영역 -->
+	include "header.html"
+
+
+	<!-- 본문 영역 -->
+	<article class="contents private-invest">
+		<h1>투자하기</h1>
+
+		<div class="inner">
+		
+
+			<!-- 필터 및 소개  -->
+			<div class="filter-container">
+				<fieldset class="filter">
+					<legend>투자종류선택</legend>
+
+					<input type="radio" id="invest01" name="invest-type"><label for="invest01">개인투자</label>
+					<input type="radio" id="invest02" name="invest-type"><label for="invest02">기업투자</label>
+					<input type="radio" id="invest03" name="invest-type"><label for="invest03">채권마켓</label>
+				</fieldset>
+				
+				<div class="utils-guide">
+					<a href="#" class="btn-tip">꿀팁</a>
+					<a href="#" class="btn-rd selected">개인투자 소개</a>
+				</div>
+			</div>
+
+
+			<section class="intro">
+				<h1 class="title">돕는 뿌듯함, 수익을 얻는 기쁨</h1>
+				<p style="margin-top: 40px;">
+					팝펀딩의 개인 투자는 팝펀딩의 여러 투자회원들로부터 투자를 받아<br>
+					신청한 금액이 달성이 되면 대출이 가능한 크라우드 펀딩 서비스입니다.
+				</p>
+
+				<dl class="private-investment">
+					<dt class="title">팝펀딩의 <strong>개인투자</strong>는 무엇인가요?</dt>
+					<dd>
+						<ul class="list-intro">
+							<li class="seq01">
+								<strong>누구나 소액으로 안전하게 투자를 할 수 있습니다.</strong>
+								<p>
+									팝펀딩의 대출은 팝펀딩의 여러 투자 회원들로부터 투자를 받아 신청한 금액이 달성이 되면 이루어지게 됩니다.<br>
+									최소 1천원으로도 누구나 투자를 할 수 있도록 함으로써 많은 개인들이 투자에 참여하고, 이는 대출과정에 있어<br>
+									다수의 심사를 거치는 것을 의미하기도 합니다.<br>
+									따라서 대출자의 연체나 대손 등의 미상환 문제 발생시에도 투자자의 피해를 최소화할 수 있습니다.<br>
+								</p>
+							</li>
+							<li class="seq02">
+								<strong>투자자가 직접 대출자의 상환능력을 판단합니다.</strong>
+								<p>
+									대출신청자가 직접 작성한 빌리는 사연, 상환계획, 소득/지출 정보와 전문신용기관을 통해 확인된 신용/소득보고서를<br>
+									열람할 수 있으므로 이를 바탕으로 대출자의 상환능력을 판단할 수 있습니다.
+								</p>
+							</li>
+							<li class="seq03">
+								<strong>금융 소외계층을 돕는 금융의 혁신</strong>
+								<p>
+									상환능력은 있지만 여러 가지 문제로 신용이 낮아 금융 서비스를 이용할 수 없는 금융소외계층이 많이 있습니다.<br>
+									팝펀딩에서 여러분의 투자는 금융소외계층에게도 대출의 기회를 제공할 수 있고 투자자들이 은행금리보다 만족스러운<br>
+									투자수익을 기대할 수 있도록 하는 금융의 혁신이 될 수 있습니다.<br>
+								</p>
+							</li>
+						</ul>
+					</dd>
+				</dl>
+			</section>
+
+
+			<section class="procedding-investment">
+				<h1 class="title">투자 순서</h1>
+
+				<div class="box">
+					<ol class="proceedings">
+						<li class="step01">
+							<strong class="title">투자자 인증</strong>
+							<p class="desc">
+								실명인증 및 휴대폰, 아이핀을<br>통한 본인인증이 진행됩니다.
+							</p>
+
+							<a href="#" class="btn-subimt">투자자 인증받기</a>
+							<span class="certifed not">회원님은 미인증 상태입니다.</span>
+
+							<!-- 인증 후
+							<a href="#" class="btn-square color-gray">투자자 인증완료</a>
+							<span class="certifed">회원님은 인증 상태입니다. (자동연장 선택)</span>
+							-->
+						</li>
+						<li class="step02">
+							<strong class="title">투자자 입금</strong>
+
+							<div class="account">
+								<span class="title">가상계좌</span>
+								<p class="info-account">
+									<span>우리은행</span>
+									<em>245612-14-123654</em>
+									<span>제영순</span>
+									<em>10,000,000원</em>
+								</p>
+							</div>
+							<p class="warning">가상계좌 이체시 마다 200원의 가상계좌이용수수료가<br>발생하므로 <em>[투자금+200원]을 입금해 주세요!</em></p>
+						</li>
+						<li class="step03">
+							<strong class="title">투자하기</strong>
+							<p class="desc">
+								신청자가 충분한 상환능력이 있다고 판단<br>되신 빌리기를 선택하여 투자를 하세요.
+							</p>
+							<ul class="list-dot">
+								<li class="em">
+									목표 금액이 100%에 달성된 경우에만<br>최종적으로 투자가 완료됩니다.
+								</li>
+								<li>
+									투자는 1천원 단위로, 1천원부터 시작합니다.<br><a href="#">투자자등급별 혜택</a>
+								</li>
+							</ul>
+						</li>
+					</ol>
+				</div>
+
+				<p class="btns">
+					<a href="#">지금 개인에게 투자하기</a>
+					<p>
+						더 궁금하신 사항이 있으시다구요? <a href="#">팝펀딩 FAQ</a>를 이용하세요!
+					</p>
+				</p>
+			</section>
+			
+		</div>
+	</article>
+	
+	<!-- 하단 영역 -->
+	include "footer.html"
+
+</body>
+</html>

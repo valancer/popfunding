@@ -179,8 +179,8 @@
 					}
 				}
 			}
-			.tooltip { display: block; position: absolute; top: 18px; z-index: z("tooltip"); padding: 0 8px; font-size: 0.750em; color: $color-content; text-align: center; line-height: 25px; white-space: nowrap; border: 1px solid #c3d0e1; border-radius: 5px; background-color: #fff;
-				&:before { content: ''; display: block; position: absolute; bottom: -$sprite-bg-arrow08-height; left: 50%; margin-left: -$sprite-bg-arrow08-width/2; @include sprite($sprite-bg-arrow08); }
+			.tooltip { display: block; position: absolute; top: 18px; bottom: auto; z-index: z("tooltip"); padding: 0 8px; font-size: 0.750em; color: $color-content; text-align: center; line-height: 25px; white-space: nowrap; border: 1px solid #c3d0e1; border-radius: 5px; background-color: #fff;
+				&:before { content: ''; display: block; position: absolute; top: auto; bottom: -$sprite-bg-arrow08-height; left: 50%; margin-left: -$sprite-bg-arrow08-width/2; @include sprite($sprite-bg-arrow08); }
 			}
 
 			.p-i { clear: both; padding: 11px 0 0 26px;
@@ -374,4 +374,28 @@
 
 
 	.product-detail-view { padding-bottom: 100px; }
+
+	/// 개인 투자 소개
+	.intro { position: relative; margin-top: 40px; padding: 72px 0 35px 0;
+		&:before { content: ''; display: block; position: absolute; top: 41px; right: 44px; height: 735px; width: 288px; background: url('/assets/images/bg_invest_private_visual01.png') left top no-repeat; }
+
+		> .title { display: block; height: 46px; width: 515px; text-indent: -9999px; background: url('/assets/images/txt/title_invest_private01.png') left top no-repeat; }
+		p { font-size: 0.875em; color: $color-content; line-height: 22px; }
+
+		.private-investment { margin-top: 76px;
+			> .title { display: block; height: 36px; width: 519px; text-indent: -9999px; background: url('/assets/images/txt/title_invest_private02.png') left top no-repeat; }
+			dd { padding-top: 16px;
+				.list-intro { 
+					> li { position: relative; margin-top: 20px; padding: 0 0 0 56px; 
+						&:before { content: ''; display: block; position: absolute; top: 0; left: 0; }
+						&.seq01:before { @include sprite($sprite-prepare01); }
+						&.seq02:before { @include sprite($sprite-prepare02); }
+						&.seq03:before { @include sprite($sprite-prepare03); }
+					}
+					strong { display: block; font-size: 1.125em; color: $color-point2; line-height: 44px; }
+					p { margin-top: 7px; }
+				}
+			}
+		}
+	}
 }

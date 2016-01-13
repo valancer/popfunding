@@ -200,3 +200,64 @@
 		tr { border-top: 1px solid #d4dae4; }
 	}
 }
+
+
+/* 개인/기업 투자 소개 - 투자 소개 */
+.procedding-investment {
+	> .title { font-size: 1.375em; font-weight: bold; color: $color-title; line-height: 1.3em; }
+	.box { margin-top: 17px; padding: 71px 0 87px 0; border: 1px solid #d4dae4; background-color: #fff; }
+	.proceedings { overflow: hidden;
+		> li { display: block; box-sizing: border-box; float: left; text-align: center;
+			> .title { display: inline-block; font-size: 1.250em; color: $color-title; line-height: 1.3em; 
+				&:before { content: ''; display: block; margin-bottom: 15px; }
+			}
+
+			.desc { margin-top: 13px; font-size: 0.875em; color: $color-content; line-height: 22px; }
+			.btn-square { margin-top: 15px; width: auto; }
+			.certifed { display: inline-block; margin-top: 10px; font-size: 0.750em; color: $color-content;
+				&.not { color: $color-menu1-hover; }
+			}
+
+			.account { margin-top: 15px; text-align: left;
+				.title { font-size: 0.875em; color: $color-content; }
+				.info-account { margin-top: 6px; font-size: 0.875em; color: $color-title; line-height: 45px; text-align: center; border: 1px solid #d4dae4; background-color: #fff;
+					> span { margin-left: 15px;
+						&:first-child { margin-left: 0px; }
+					}
+					> em { margin-left: 15px; }
+				}
+			}
+			.warning { position: relative; margin: 20px 0 0 50px; padding-left: 30px; font-size: 0.750em; color: $color-content; line-height: 20px; text-align: left;
+				&:before { content: ''; display: block; position: absolute; top: 0; left: 0; @include sprite($sprite-icon-iks01); }
+				em, strong { color: $color-menu1-hover; }
+			}
+			.list-dot { margin-top: 11px; border-top: 1px solid #d4dae4;
+				> li { position: relative; margin-top: 9px; padding: 0 0 0 9px; font-size: 0.750em; color: $color-content; line-height: 18px; text-align: left;
+					&:before { content: ''; display: block; position: absolute; top: 7px; left: 1px; height: 2px; width: 2px; background-color: $color-content; }
+					&.em { color: $color-menu1-hover;
+						&:before { background-color: $color-menu1-hover; }
+					}
+
+					a { color: $color-content; text-decoration: underline; }
+				}
+			}
+
+			&.step01 { margin-right: 15px; padding: 0 48px; width: 360px;
+				> .title:before { @include sprite($sprite-bg-procedding01); }
+			}
+			&.step02 { width: 410px;
+				> .title:before { @include sprite($sprite-bg-procedding04); }
+			}
+			&.step03 { padding: 0 30px 0 50px; width: 327px;
+				> .title:before { @include sprite($sprite-bg-procedding05); }
+				.desc { text-align: left; }
+			}
+		}
+	}
+}
+
+
+
+
+
+

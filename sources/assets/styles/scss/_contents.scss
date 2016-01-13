@@ -203,17 +203,19 @@
 
 
 /* 개인/기업 투자 소개 - 투자 소개 */
-.procedding-investment {
+.procedding-investment { margin-top: 70px;
 	> .title { font-size: 1.375em; font-weight: bold; color: $color-title; line-height: 1.3em; }
 	.box { margin-top: 17px; padding: 71px 0 87px 0; border: 1px solid #d4dae4; background-color: #fff; }
-	.proceedings { overflow: hidden;
-		> li { display: block; box-sizing: border-box; float: left; text-align: center;
+	.proceedings { overflow: hidden; position: relative;
+		&:before { content: ''; display: block; position: absolute; top: 68px; right: 200px; left: 180px; height: 2px; background-color: #254694; }
+
+		> li { display: block; box-sizing: border-box; float: left; position: relative; z-index: z("default"); text-align: center;
 			> .title { display: inline-block; font-size: 1.250em; color: $color-title; line-height: 1.3em; 
-				&:before { content: ''; display: block; margin-bottom: 15px; }
+				&:before { content: ''; display: block; margin-bottom: 15px; background-color: #fff; }
 			}
 
 			.desc { margin-top: 13px; font-size: 0.875em; color: $color-content; line-height: 22px; }
-			.btn-square { margin-top: 15px; width: auto; }
+			.btn-submit { margin-top: 15px; width: auto; }
 			.certifed { display: inline-block; margin-top: 10px; font-size: 0.750em; color: $color-content;
 				&.not { color: $color-menu1-hover; }
 			}
@@ -254,8 +256,50 @@
 			}
 		}
 	}
+
+	.btns { margin-top: 50px; text-align: center;
+		p { margin-top: 12px; font-size: 0.750em; color: $color-content;
+			a { color: $color-content; text-decoration: underline; }
+		}
+	}
 }
 
+/* 개인/기업 투자 소개 - 수익금 출금 */
+.withdraw { margin-top: 56px;
+	> .title { font-size: 1.375em; font-weight: bold; color: $color-title; line-height: 1.3em; }
+	> .box { position: relative; margin-top: 17px; border: 1px solid #d4dae4; }
+
+	.withdraw-contents { overflow: hidden; padding: 59px 0 60px 15px;
+		> li { float: left; padding-left: 57px; border-left: 1px solid #e4e4e4;
+			&:first-child { width: 610px; border-left: 0px; }
+
+			.title { font-size: 0.875em; color: $color-title; }
+			p { margin-top: 13px; font-size: 0.875em; color: $color-content; line-height: 22px;
+				em, strong { color: $color-menu1-hover; }
+			}
+			.dot { position: relative; margin-top: 10px; margin-bottom: 18px; padding-left: 8px; font-size: 0.750em; color: $color-content; line-height: 18px;
+				&:before { content: ''; display: block; position: absolute; top: 8px; left: 0; height: 2px; width: 2px; background-color: $color-content; }
+			}
+
+			.btn-inline { margin-top: 13px; @include btn-inline-txt(14px, $color-content, underline); }
+		}
+	}
+
+	/* 연체 가이드 팝업 */
+	.popup.overdue-popup { display: none; position: absolute; top: -1px; right: -1px; padding: 33px 70px 39px 60px;
+		&:before { content: none !important; }
+
+		> h1 { display: none !important; }
+		ul {
+			> li { padding: 24px 0 17px 0; border-top: 1px solid #d4dae4;
+				&:first-child { border-top: 0px;  }
+
+				.title { font-size: 0.875em; color: $color-title; }
+				p { margin-top: 15px; font-size: 0.750em; color: $color-content; line-height: 18px; }
+			}
+		}
+	}
+}
 
 
 

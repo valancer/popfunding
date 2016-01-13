@@ -375,7 +375,9 @@
 
 	.product-detail-view { padding-bottom: 100px; }
 
-	/// 개인 투자 소개
+
+
+	/* 개인 투자 소개 */
 	.intro { position: relative; margin-top: 40px; padding: 72px 0 35px 0;
 		&:before { content: ''; display: block; position: absolute; top: 41px; right: 44px; height: 735px; width: 288px; background: url('/assets/images/bg_invest_private_visual01.png') left top no-repeat; }
 
@@ -398,4 +400,5 @@
 			}
 		}
 	}
+
 }

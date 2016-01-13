@@ -63,8 +63,8 @@ $z-layers: (
 /**
  * modules - buttons
  */
-@mixin btn-inline-txt($font-size:13px, $color:$color-menu2) {
-	display: inline-block; position: relative; font-size: $font-size; color: $color; vertical-align: middle;
+@mixin btn-inline-txt($font-size:13px, $color:$color-menu2, $underline:none) {
+	display: inline-block; position: relative; font-size: $font-size; color: $color; vertical-align: middle; text-decoration: $underline;
 }
 @mixin ie8-inline-block() { display: inline-block; 
 	.ie8 & { display: inline; zoom: 1; }
@@ -103,13 +103,15 @@ $z-layers: (
 	&:before { content: ''; display: block; position: absolute; top: 0; left: 0; @include sprite($sprite-btn-tip02); }
 }
 
-.btn-invest { display: block; margin: 0 auto; padding-top: 1px; padding-left: 20px; height: 54px; width: 380px; font-size: 22px; color: #fff; font-weight: bold; line-height: 54px; text-align: center; border-radius: 55px; background-color: #14378c;
+/* 투자하기 큰 버튼 */
+.btn-invest { display: block; margin: 0 auto; padding-left: 20px; height: 55px; width: 380px; font-size: 18px; color: #fff; font-weight: bold; line-height: 55px; text-align: center; border-radius: 55px; background-color: #14378c;
 	&:after { content: ''; display: inline-block; margin-top: -2px; margin-left: 9px; vertical-align: middle; @include sprite($sprite-bg-arrow03); }
 	&:hover { text-decoration: none; background-color: #0f2969; }
 	.expired & { padding-left: 0; width: 400px; background-color: #afb2b7;
 		&:after { content: ''; display: none; }
 	}
 }
+
 .btn-top { display: block; text-indent: -9999px; @include sprite($sprite-btn-top01); }
 .btn-popup-close { display: block; text-indent: -9999px; @include sprite($sprite-btn-close01); }
 .btn-help { display: inline-block; font-size: 12px; color: $color-content; text-decoration: underline !important; line-height: 37px; white-space: nowrap;
@@ -121,10 +123,16 @@ $z-layers: (
 .btn-inline-box { display: inline-block; padding: 0 11px; font-size: 0.750em; color: $color-content; line-height: 24px; border: 1px solid #c3d0e1; border-radius: 5px; }
 
 
-.btn-submit-auth { display: block; margin: 0 auto; width: 360px; font-size: 0.875em; font-weight: bold; color: #fff; line-height: 40px; border-radius: 2px; background-color: $color-menu1-hover; }
+.btn-submit { display: block; margin: 0 auto; width: 360px; font-size: 14px; font-weight: bold; color: #fff !important; line-height: 40px; text-align: center !important; text-decoration: none !important; border-radius: 2px; background-color: $color-menu1-hover;
+	&:hover { text-decoration: none; }
 
-.btn-submit { display: block; margin: 0 auto; width: 360px; font-size: 0.875em; font-weight: bold; color: #fff; line-height: 40px; border-radius: 2px; background-color: $color-menu1-hover;
-	&.color-gray { background-color: #cad2de; }
+	&.color-done { background-color: #cad2de; }
+	&.color-blue { background-color: #3a99e8; }
+	&.color-borrowing { background-color: $color-borrowing; }
+
+	&.fb { text-align: center; text-decoration: none; background-color: #3a99e8;
+		&:before { content: ''; display: inline-block; margin-right: 11px; vertical-align: bottom; @include sprite($sprite-icon-fb02); }
+	}
 }
 
 

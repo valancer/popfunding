@@ -84,13 +84,8 @@ include "head.html"
 								실명인증 및 휴대폰, 아이핀을<br>통한 본인인증이 진행됩니다.
 							</p>
 
-							<a href="#" class="btn-subimt">투자자 인증받기</a>
+							<a href="#" class="btn-submit">투자자 인증받기</a>
 							<span class="certifed not">회원님은 미인증 상태입니다.</span>
-
-							<!-- 인증 후
-							<a href="#" class="btn-square color-gray">투자자 인증완료</a>
-							<span class="certifed">회원님은 인증 상태입니다. (자동연장 선택)</span>
-							-->
 						</li>
 						<li class="step02">
 							<strong class="title">투자자 입금</strong>
@@ -98,10 +93,7 @@ include "head.html"
 							<div class="account">
 								<span class="title">가상계좌</span>
 								<p class="info-account">
-									<span>우리은행</span>
-									<em>245612-14-123654</em>
-									<span>제영순</span>
-									<em>10,000,000원</em>
+									투자자 인증이 필요합니다.
 								</p>
 							</div>
 							<p class="warning">가상계좌 이체시 마다 200원의 가상계좌이용수수료가<br>발생하므로 <em>[투자금+200원]을 입금해 주세요!</em></p>
@@ -123,12 +115,78 @@ include "head.html"
 					</ol>
 				</div>
 
-				<p class="btns">
-					<a href="#">지금 개인에게 투자하기</a>
+				<div class="btns">
+					<a href="#" class="btn-invest">지금 개인에게 투자하기</a>
 					<p>
 						더 궁금하신 사항이 있으시다구요? <a href="#">팝펀딩 FAQ</a>를 이용하세요!
 					</p>
-				</p>
+				</div>
+			</section>
+
+
+			<section class="withdraw">
+				<h1 class="title">수익금 출금</h1>
+
+				<div class="box">
+					<ul class="withdraw-contents">
+						<li>
+							<strong class="title">수익금은 가상계좌로 입금</strong>
+							<p>
+								원금균등분할방식으로 매월 상환이 이루어지고 회원님의 가상계좌로 입금되고,<br>
+								이 금액은 언제든지 개인 계좌로 출금하시거나 재투자하실 수 있습니다.<br>
+							</p>
+							<p class="dot">투자 수익의 <strong>세전 7.25%</strong>는 팝펀딩에 수수료로 납부됩니다.</p>
+
+							<a href="#" class="btn-rd">마이존에서 출금신청</a>
+						</li>
+						<li style="height: 156px;">
+							<strong class="title">연체 시 처리 방법</strong>
+							<p>
+								연체 11일부터 빌려간 사람의 개인정보가 공개되고,<br>
+								연체 1일~30일까지 대손채권처리 선택을 할 수 있습니다.<br>
+							</p>
+							<a href="#popup-overdue-guide" class="btn-inline overdue">연체에 대한 절차 안내</a>
+							<script>
+							$(window.document).ready(function(){
+								// 연체에 대한 절차
+								var $btnGuide = $('.btn-inline.overdue');
+								$btnGuide.on('click', function(e) {
+									e.preventDefault();
+									var target = $btnGuide.attr('href');
+									$(target).toggle();
+								});
+							});
+							</script>
+						</li>
+					</ul>
+
+					<!-- 팝업 -->
+					<aside id="popup-overdue-guide" class="popup guide-popup overdue-popup">
+						<button class="btn-popup-close" data-target="#popup-overdue-guide">팝업닫기</button>
+
+						<h1>연체에 대한 절차 안내</h1>
+						<ul>
+							<li>
+								<strong class="title">개인정보공개</strong>
+								<p>
+									1. 연체시 우선 약정이자율의 <em>120%</em>에 해당하는 연체이자율이 계산된 지연배상료가 대출자에게 부과.<br>
+									2. <em>연체 11일 부터</em> 대출 신청자의 이름, 필명, 주소, 집전화, 휴대폰, 이메일, 직장명, 직장전화가 공개.<br>
+								</p>
+							</li>
+							<li>
+								<strong class="title">대손처리 선택</strong>
+								<p>
+									채무자가 상환예정일이 지나도록 변제하지 아니한 경우 팝펀딩의 경매규정 따라 대손처리를 하게 되며,<br>
+									투자자들은 <em>연체 1일~30일 사이에 아래의 2가지 방법중</em> 미리 대손처리 선택을 합니다.<br>
+									(연체 30일까지 변경가능) (투자자인증에서 기본 선택후, 투자별로 변경가능)<br>
+									<br>
+									<em>1. 팝펀딩에 채권매각</em> : 투자자의 투자금 및 수수료 지급청구권을 팝펀딩에게 15%로 매각.(개인투자만 가능)<br>
+									<em>2. 본인이 직접추심</em> : 투자자가 채무자에 대하여 직접 자신의 권리를 청구하여 지급을 받을 수 있는 방법.<br>
+								</p>
+							</li>
+						</ul>
+					</aside>
+				</div>
 			</section>
 			
 		</div>

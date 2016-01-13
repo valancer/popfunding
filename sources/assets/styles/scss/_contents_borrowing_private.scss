@@ -216,9 +216,7 @@
 				}
 			}
 
-			.btn-sumbit { display: block; margin: 33px auto 0 auto; width: 264px; font-size: 0.875em; font-weight: bold; color: #fff; line-height: 40px; text-align: center; border-radius: 2px; background-color: $color-borrowing;
-				&.update { background-color: #3a99e8; }
-			}
+			.btn-submit { margin-top: 33px; width: 264px; }
 			.submit-desc { margin-top: 10px; font-size: 0.750em; color: $color-content; text-align: center; }
 
 
@@ -320,9 +318,8 @@
 
 				.btns { position: relative; margin-top: 10px;
 					.btn-tip-txt { float: right; margin-top: 3px; }
-					.btn-options { display: inline-block; width: 105px; font-size: 0.875em; font-weight: bold; color: #fff; line-height: 40px; text-align: center; border-radius: 2px; background-color: #3a99e8; }
+					.btn-submit { display: inline-block; margin-top: 0px; width: 105px; }
 				}
-				.btn-sumbit { margin-top: 0px; background-color: #ff507d; }
 
 
 				/* 상환내역 미리보기 */

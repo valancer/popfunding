@@ -243,6 +243,42 @@ $border-inner-color: #e6e9ee;
 	}
 
 
+	/* 기업 투자 소개 */
+	.intro { position: relative; margin-top: 40px; padding: 72px 0 0px 0;
+		&:before { content: ''; display: block; position: absolute; top: 356px; lefty: 0px; height: 566px; width: 500px; background: url('/assets/images/bg_invest_visual01.png') left top no-repeat; }
+
+		> .title { display: block; height: 42px; width: 958px; text-indent: -9999px; background: url('/assets/images/txt/title_invest01.png') left top no-repeat; }
+		p { font-size: 0.875em; color: $color-content; line-height: 22px; }
+
+		.investment { margin-top: 74px; margin-left: 580px;
+			> .title { display: block; height: 36px; width: 519px; text-indent: -9999px; background: url('/assets/images/txt/title_invest02.png') left top no-repeat; }
+			dd { padding-top: 47px;
+				table { margin-top: 19px;
+					tr { border-top: 1px solid #d4dae4;
+						&:first-child { border-top: 0px; }
+					}
+					th { padding: 11px 0; width: 68px; font-size: 0.875em; font-weight: normal; color: $color-title; line-height: 22px; text-align: left; vertical-align: top; }
+					td { padding: 11px 0; font-size: 0.875em; color: $color-content; line-height: 22px; }
+				}
+				.dot { position: relative; padding-left: 8px; font-size: 0.750em; color: $color-content; line-height: 18px;
+					&:before { content: ''; display: block; position: absolute; top: 8px; left: 0; height: 2px; width: 2px; background-color: $color-content; }
+				}
+
+				.list-intro { margin-top: 66px;
+					> li { position: relative; margin-top: 33px; padding: 0 0 0 56px; 
+						&:before { content: ''; display: block; position: absolute; top: 0; left: 0; }
+						&.seq01:before { @include sprite($sprite-prepare01); }
+						&.seq02:before { @include sprite($sprite-prepare02); }
+					}
+					strong { display: block; font-size: 1.125em; color: $color-point2; line-height: 44px; }
+					p { margin-top: 7px;
+						em { color: $color-menu1-hover; }
+					}
+				}
+			}
+		}
+	}
+
 }	/// 기업 투자
 
 

@@ -180,6 +180,7 @@ body {
   font-size: 13px;
   color: #525e7b;
   vertical-align: middle;
+  text-decoration: none;
   text-indent: -9999px;
   background-image: url(/assets/images/sprites.png);
   background-position: -85px -425px;
@@ -192,6 +193,7 @@ body {
   font-size: 13px;
   color: #525e7b;
   vertical-align: middle;
+  text-decoration: none;
   display: inline-block; }
   .ie8 .btn-inline {
     display: inline;
@@ -212,7 +214,7 @@ body {
   margin-left: 5px;
   vertical-align: middle;
   background-image: url(/assets/images/sprites.png);
-  background-position: -782px -428px;
+  background-position: -782px -424px;
   width: 11px;
   height: 8px; }
 
@@ -276,17 +278,17 @@ body {
     width: 29px;
     height: 23px; }
 
+/* 투자하기 큰 버튼 */
 .btn-invest {
   display: block;
   margin: 0 auto;
-  padding-top: 1px;
   padding-left: 20px;
-  height: 54px;
+  height: 55px;
   width: 380px;
-  font-size: 22px;
+  font-size: 18px;
   color: #fff;
   font-weight: bold;
-  line-height: 54px;
+  line-height: 55px;
   text-align: center;
   border-radius: 55px;
   background-color: #14378c; }
@@ -297,9 +299,9 @@ body {
     margin-left: 9px;
     vertical-align: middle;
     background-image: url(/assets/images/sprites.png);
-    background-position: -782px -322px;
-    width: 11px;
-    height: 18px; }
+    background-position: -782px -373px;
+    width: 9px;
+    height: 14px; }
   .btn-invest:hover {
     text-decoration: none;
     background-color: #0f2969; }
@@ -361,29 +363,39 @@ body {
   border: 1px solid #c3d0e1;
   border-radius: 5px; }
 
-.btn-submit-auth {
-  display: block;
-  margin: 0 auto;
-  width: 360px;
-  font-size: 0.875em;
-  font-weight: bold;
-  color: #fff;
-  line-height: 40px;
-  border-radius: 2px;
-  background-color: #ff4776; }
-
 .btn-submit {
   display: block;
   margin: 0 auto;
   width: 360px;
-  font-size: 0.875em;
+  font-size: 14px;
   font-weight: bold;
-  color: #fff;
+  color: #fff !important;
   line-height: 40px;
+  text-align: center !important;
+  text-decoration: none !important;
   border-radius: 2px;
   background-color: #ff4776; }
-  .btn-submit.color-gray {
+  .btn-submit:hover {
+    text-decoration: none; }
+  .btn-submit.color-done {
     background-color: #cad2de; }
+  .btn-submit.color-blue {
+    background-color: #3a99e8; }
+  .btn-submit.color-borrowing {
+    background-color: #52b924; }
+  .btn-submit.fb {
+    text-align: center;
+    text-decoration: none;
+    background-color: #3a99e8; }
+    .btn-submit.fb:before {
+      content: '';
+      display: inline-block;
+      margin-right: 11px;
+      vertical-align: bottom;
+      background-image: url(/assets/images/sprites.png);
+      background-position: -800px -490px;
+      width: 13px;
+      height: 32px; }
 
 /**
  * import
@@ -450,7 +462,7 @@ body {
     top: -6px;
     left: 43px;
     background-image: url(/assets/images/sprites.png);
-    background-position: -782px -464px;
+    background-position: -782px -460px;
     width: 11px;
     height: 6px; }
   .tooltip.multiple {
@@ -463,7 +475,7 @@ body {
       bottom: -6px;
       left: 43px;
       background-image: url(/assets/images/sprites.png);
-      background-position: -782px -486px;
+      background-position: -782px -482px;
       width: 11px;
       height: 6px; }
 
@@ -574,7 +586,7 @@ span.center {
         margin-left: 10px;
         vertical-align: middle;
         background-image: url(/assets/images/sprites.png);
-        background-position: -782px -556px;
+        background-position: -782px -552px;
         width: 9px;
         height: 5px; }
     .item-form .select .list-selecting {
@@ -783,7 +795,7 @@ span.center {
       top: auto;
       bottom: -6px;
       background-image: url(/assets/images/sprites.png);
-      background-position: -782px -486px;
+      background-position: -782px -482px;
       width: 11px;
       height: 6px; }
 
@@ -823,140 +835,247 @@ span.center {
     border-top: 1px solid #d4dae4; }
 
 /* 개인/기업 투자 소개 - 투자 소개 */
-.procedding-investment > .title {
-  font-size: 1.375em;
-  font-weight: bold;
-  color: #252525;
-  line-height: 1.3em; }
-.procedding-investment .box {
-  margin-top: 17px;
-  padding: 71px 0 87px 0;
-  border: 1px solid #d4dae4;
-  background-color: #fff; }
-.procedding-investment .proceedings {
-  overflow: hidden; }
-  .procedding-investment .proceedings > li {
-    display: block;
-    box-sizing: border-box;
-    float: left;
-    text-align: center; }
-    .procedding-investment .proceedings > li > .title {
-      display: inline-block;
-      font-size: 1.250em;
-      color: #252525;
-      line-height: 1.3em; }
-      .procedding-investment .proceedings > li > .title:before {
-        content: '';
-        display: block;
-        margin-bottom: 15px; }
-    .procedding-investment .proceedings > li .desc {
-      margin-top: 13px;
-      font-size: 0.875em;
-      color: #6b7581;
-      line-height: 22px; }
-    .procedding-investment .proceedings > li .btn-square {
-      margin-top: 15px;
-      width: auto; }
-    .procedding-investment .proceedings > li .certifed {
-      display: inline-block;
-      margin-top: 10px;
-      font-size: 0.750em;
-      color: #6b7581; }
-      .procedding-investment .proceedings > li .certifed.not {
-        color: #ff4776; }
-    .procedding-investment .proceedings > li .account {
-      margin-top: 15px;
-      text-align: left; }
-      .procedding-investment .proceedings > li .account .title {
-        font-size: 0.875em;
-        color: #6b7581; }
-      .procedding-investment .proceedings > li .account .info-account {
-        margin-top: 6px;
-        font-size: 0.875em;
-        color: #252525;
-        line-height: 45px;
-        text-align: center;
-        border: 1px solid #d4dae4;
-        background-color: #fff; }
-        .procedding-investment .proceedings > li .account .info-account > span {
-          margin-left: 15px; }
-          .procedding-investment .proceedings > li .account .info-account > span:first-child {
-            margin-left: 0px; }
-        .procedding-investment .proceedings > li .account .info-account > em {
-          margin-left: 15px; }
-    .procedding-investment .proceedings > li .warning {
+.procedding-investment {
+  margin-top: 70px; }
+  .procedding-investment > .title {
+    font-size: 1.375em;
+    font-weight: bold;
+    color: #252525;
+    line-height: 1.3em; }
+  .procedding-investment .box {
+    margin-top: 17px;
+    padding: 71px 0 87px 0;
+    border: 1px solid #d4dae4;
+    background-color: #fff; }
+  .procedding-investment .proceedings {
+    overflow: hidden;
+    position: relative; }
+    .procedding-investment .proceedings:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 68px;
+      right: 200px;
+      left: 180px;
+      height: 2px;
+      background-color: #254694; }
+    .procedding-investment .proceedings > li {
+      display: block;
+      box-sizing: border-box;
+      float: left;
       position: relative;
-      margin: 20px 0 0 50px;
-      padding-left: 30px;
-      font-size: 0.750em;
-      color: #6b7581;
-      line-height: 20px;
-      text-align: left; }
-      .procedding-investment .proceedings > li .warning:before {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-image: url(/assets/images/sprites.png);
-        background-position: -464px -650px;
-        width: 23px;
-        height: 20px; }
-      .procedding-investment .proceedings > li .warning em, .procedding-investment .proceedings > li .warning strong {
-        color: #ff4776; }
-    .procedding-investment .proceedings > li .list-dot {
-      margin-top: 11px;
-      border-top: 1px solid #d4dae4; }
-      .procedding-investment .proceedings > li .list-dot > li {
+      z-index: 1;
+      text-align: center; }
+      .procedding-investment .proceedings > li > .title {
+        display: inline-block;
+        font-size: 1.250em;
+        color: #252525;
+        line-height: 1.3em; }
+        .procedding-investment .proceedings > li > .title:before {
+          content: '';
+          display: block;
+          margin-bottom: 15px;
+          background-color: #fff; }
+      .procedding-investment .proceedings > li .desc {
+        margin-top: 13px;
+        font-size: 0.875em;
+        color: #6b7581;
+        line-height: 22px; }
+      .procedding-investment .proceedings > li .btn-submit {
+        margin-top: 15px;
+        width: auto; }
+      .procedding-investment .proceedings > li .certifed {
+        display: inline-block;
+        margin-top: 10px;
+        font-size: 0.750em;
+        color: #6b7581; }
+        .procedding-investment .proceedings > li .certifed.not {
+          color: #ff4776; }
+      .procedding-investment .proceedings > li .account {
+        margin-top: 15px;
+        text-align: left; }
+        .procedding-investment .proceedings > li .account .title {
+          font-size: 0.875em;
+          color: #6b7581; }
+        .procedding-investment .proceedings > li .account .info-account {
+          margin-top: 6px;
+          font-size: 0.875em;
+          color: #252525;
+          line-height: 45px;
+          text-align: center;
+          border: 1px solid #d4dae4;
+          background-color: #fff; }
+          .procedding-investment .proceedings > li .account .info-account > span {
+            margin-left: 15px; }
+            .procedding-investment .proceedings > li .account .info-account > span:first-child {
+              margin-left: 0px; }
+          .procedding-investment .proceedings > li .account .info-account > em {
+            margin-left: 15px; }
+      .procedding-investment .proceedings > li .warning {
         position: relative;
-        margin-top: 9px;
-        padding: 0 0 0 9px;
+        margin: 20px 0 0 50px;
+        padding-left: 30px;
         font-size: 0.750em;
         color: #6b7581;
-        line-height: 18px;
+        line-height: 20px;
         text-align: left; }
-        .procedding-investment .proceedings > li .list-dot > li:before {
+        .procedding-investment .proceedings > li .warning:before {
           content: '';
           display: block;
           position: absolute;
-          top: 7px;
-          left: 1px;
+          top: 0;
+          left: 0;
+          background-image: url(/assets/images/sprites.png);
+          background-position: -464px -650px;
+          width: 23px;
+          height: 20px; }
+        .procedding-investment .proceedings > li .warning em, .procedding-investment .proceedings > li .warning strong {
+          color: #ff4776; }
+      .procedding-investment .proceedings > li .list-dot {
+        margin-top: 11px;
+        border-top: 1px solid #d4dae4; }
+        .procedding-investment .proceedings > li .list-dot > li {
+          position: relative;
+          margin-top: 9px;
+          padding: 0 0 0 9px;
+          font-size: 0.750em;
+          color: #6b7581;
+          line-height: 18px;
+          text-align: left; }
+          .procedding-investment .proceedings > li .list-dot > li:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 7px;
+            left: 1px;
+            height: 2px;
+            width: 2px;
+            background-color: #6b7581; }
+          .procedding-investment .proceedings > li .list-dot > li.em {
+            color: #ff4776; }
+            .procedding-investment .proceedings > li .list-dot > li.em:before {
+              background-color: #ff4776; }
+          .procedding-investment .proceedings > li .list-dot > li a {
+            color: #6b7581;
+            text-decoration: underline; }
+      .procedding-investment .proceedings > li.step01 {
+        margin-right: 15px;
+        padding: 0 48px;
+        width: 360px; }
+        .procedding-investment .proceedings > li.step01 > .title:before {
+          background-image: url(/assets/images/sprites.png);
+          background-position: 0px 0px;
+          width: 140px;
+          height: 140px; }
+      .procedding-investment .proceedings > li.step02 {
+        width: 410px; }
+        .procedding-investment .proceedings > li.step02 > .title:before {
+          background-image: url(/assets/images/sprites.png);
+          background-position: -145px -145px;
+          width: 140px;
+          height: 140px; }
+      .procedding-investment .proceedings > li.step03 {
+        padding: 0 30px 0 50px;
+        width: 327px; }
+        .procedding-investment .proceedings > li.step03 > .title:before {
+          background-image: url(/assets/images/sprites.png);
+          background-position: -290px 0px;
+          width: 140px;
+          height: 140px; }
+        .procedding-investment .proceedings > li.step03 .desc {
+          text-align: left; }
+  .procedding-investment .btns {
+    margin-top: 50px;
+    text-align: center; }
+    .procedding-investment .btns p {
+      margin-top: 12px;
+      font-size: 0.750em;
+      color: #6b7581; }
+      .procedding-investment .btns p a {
+        color: #6b7581;
+        text-decoration: underline; }
+
+/* 개인/기업 투자 소개 - 수익금 출금 */
+.withdraw {
+  margin-top: 56px;
+  /* 연체 가이드 팝업 */ }
+  .withdraw > .title {
+    font-size: 1.375em;
+    font-weight: bold;
+    color: #252525;
+    line-height: 1.3em; }
+  .withdraw > .box {
+    position: relative;
+    margin-top: 17px;
+    border: 1px solid #d4dae4; }
+  .withdraw .withdraw-contents {
+    overflow: hidden;
+    padding: 59px 0 60px 15px; }
+    .withdraw .withdraw-contents > li {
+      float: left;
+      padding-left: 57px;
+      border-left: 1px solid #e4e4e4; }
+      .withdraw .withdraw-contents > li:first-child {
+        width: 610px;
+        border-left: 0px; }
+      .withdraw .withdraw-contents > li .title {
+        font-size: 0.875em;
+        color: #252525; }
+      .withdraw .withdraw-contents > li p {
+        margin-top: 13px;
+        font-size: 0.875em;
+        color: #6b7581;
+        line-height: 22px; }
+        .withdraw .withdraw-contents > li p em, .withdraw .withdraw-contents > li p strong {
+          color: #ff4776; }
+      .withdraw .withdraw-contents > li .dot {
+        position: relative;
+        margin-top: 10px;
+        margin-bottom: 18px;
+        padding-left: 8px;
+        font-size: 0.750em;
+        color: #6b7581;
+        line-height: 18px; }
+        .withdraw .withdraw-contents > li .dot:before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 8px;
+          left: 0;
           height: 2px;
           width: 2px;
           background-color: #6b7581; }
-        .procedding-investment .proceedings > li .list-dot > li.em {
-          color: #ff4776; }
-          .procedding-investment .proceedings > li .list-dot > li.em:before {
-            background-color: #ff4776; }
-        .procedding-investment .proceedings > li .list-dot > li a {
-          color: #6b7581;
-          text-decoration: underline; }
-    .procedding-investment .proceedings > li.step01 {
-      margin-right: 15px;
-      padding: 0 48px;
-      width: 360px; }
-      .procedding-investment .proceedings > li.step01 > .title:before {
-        background-image: url(/assets/images/sprites.png);
-        background-position: 0px 0px;
-        width: 140px;
-        height: 140px; }
-    .procedding-investment .proceedings > li.step02 {
-      width: 410px; }
-      .procedding-investment .proceedings > li.step02 > .title:before {
-        background-image: url(/assets/images/sprites.png);
-        background-position: -145px -145px;
-        width: 140px;
-        height: 140px; }
-    .procedding-investment .proceedings > li.step03 {
-      padding: 0 30px 0 50px;
-      width: 327px; }
-      .procedding-investment .proceedings > li.step03 > .title:before {
-        background-image: url(/assets/images/sprites.png);
-        background-position: -290px 0px;
-        width: 140px;
-        height: 140px; }
-      .procedding-investment .proceedings > li.step03 .desc {
-        text-align: left; }
+      .withdraw .withdraw-contents > li .btn-inline {
+        margin-top: 13px;
+        display: inline-block;
+        position: relative;
+        font-size: 14px;
+        color: #6b7581;
+        vertical-align: middle;
+        text-decoration: underline; }
+  .withdraw .popup.overdue-popup {
+    display: none;
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    padding: 33px 70px 39px 60px; }
+    .withdraw .popup.overdue-popup:before {
+      content: none !important; }
+    .withdraw .popup.overdue-popup > h1 {
+      display: none !important; }
+    .withdraw .popup.overdue-popup ul > li {
+      padding: 24px 0 17px 0;
+      border-top: 1px solid #d4dae4; }
+      .withdraw .popup.overdue-popup ul > li:first-child {
+        border-top: 0px; }
+      .withdraw .popup.overdue-popup ul > li .title {
+        font-size: 0.875em;
+        color: #252525; }
+      .withdraw .popup.overdue-popup ul > li p {
+        margin-top: 15px;
+        font-size: 0.750em;
+        color: #6b7581;
+        line-height: 18px; }
 
 /* GNB HEADER */
 .header {
@@ -1005,6 +1124,7 @@ span.center {
         font-size: 13px;
         color: #525e7b;
         vertical-align: middle;
+        text-decoration: none;
         text-indent: -9999px;
         margin-right: 22px;
         margin-left: 16px;
@@ -1251,7 +1371,7 @@ span.center {
         bottom: -7px;
         left: 68px;
         background-image: url(/assets/images/sprites.png);
-        background-position: -782px -534px;
+        background-position: -782px -530px;
         width: 7px;
         height: 7px; }
       .header .user > .message em {
@@ -1377,7 +1497,8 @@ span.center {
       position: relative;
       font-size: 0.75em;
       color: #6b7581;
-      vertical-align: middle; }
+      vertical-align: middle;
+      text-decoration: none; }
   .footer .company-info {
     position: relative;
     margin-top: 67px;
@@ -1826,7 +1947,7 @@ article.contents {
               top: -7px;
               left: 79px;
               background-image: url(/assets/images/sprites.png);
-              background-position: -782px -441px;
+              background-position: -782px -437px;
               width: 10px;
               height: 7px; }
         .invest-popup > .inner > .type .type-options .btn-shortcut {
@@ -2164,8 +2285,6 @@ article.contents {
         background: url("/assets/images/membership02.png") left top no-repeat; }
       .popup.membership.signup-complete > .right .needs:before {
         background-color: #52b924; }
-      .popup.membership.signup-complete > .right .btn-submit {
-        background-color: #52b924; }
     .popup.membership.signup-complete .needs {
       position: relative;
       margin-top: 20px;
@@ -2195,27 +2314,7 @@ article.contents {
       .popup.membership.signup-complete .addon .warning {
         margin-top: 13px; }
   .popup.membership .btn-submit {
-    display: block;
-    width: 100%;
-    font-size: 14px;
-    font-weight: bold;
-    color: #fff;
-    line-height: 40px;
-    text-decoration: none;
-    border-radius: 2px;
-    background-color: #ff4776; }
-    .popup.membership .btn-submit.fb {
-      text-align: center;
-      background-color: #3a99e8; }
-      .popup.membership .btn-submit.fb:before {
-        content: '';
-        display: inline-block;
-        margin-right: 11px;
-        vertical-align: bottom;
-        background-image: url(/assets/images/sprites.png);
-        background-position: -800px -490px;
-        width: 13px;
-        height: 32px; }
+    width: 100%; }
     .popup.membership .btn-submit + .warning {
       margin-top: 30px; }
   .popup.membership .warning {
@@ -2314,7 +2413,7 @@ article.contents {
           display: inline-block;
           margin-left: 4px;
           background-image: url(/assets/images/sprites.png);
-          background-position: -782px -577px;
+          background-position: -782px -573px;
           width: 5px;
           height: 7px; }
         .popup.membership .membership-form .find-info a.none:after {
@@ -2358,7 +2457,7 @@ article.contents {
       float: left;
       width: 50%;
       text-align: center; }
-  .popup.membership .btn-submit-auth {
+  .popup.membership .btn-submit {
     margin-top: 60px; }
   .popup.membership .list-notice {
     margin-top: 22px; }
@@ -2428,9 +2527,9 @@ article.contents {
       margin-bottom: 88px; }
     .popup.auth.borrowers table.agreements {
       margin-top: 70px; }
-    .popup.auth.borrowers .btn-submit-auth {
+    .popup.auth.borrowers .btn-submit {
       margin-top: 77px;
-      background-color: #52b924; }
+      width: 360px; }
   .popup.auth .investor-guide {
     display: none;
     top: 87px;
@@ -2494,6 +2593,9 @@ article.contents {
           background-position: -171px -650px;
           width: 40px;
           height: 35px; }
+      .popup.auth .complete.borrower .btn-submit {
+        margin: 12px 0 0 0;
+        width: 278px; }
       .popup.auth .complete.borrower .btn-borrowing {
         display: block;
         margin-top: 12px;
@@ -2690,20 +2792,12 @@ article.contents {
       margin-top: 19px; }
   .popup.find .btns {
     margin-top: 40px; }
-    .popup.find .btns a {
-      display: block;
+    .popup.find .btns .btn-submit {
       float: right;
-      width: 176px;
-      font-size: 0.875em;
-      font-weight: bold;
-      color: #fff;
-      line-height: 40px;
-      text-align: center;
-      border-radius: 2px;
-      background-color: #ff4776; }
-      .popup.find .btns a:first-child {
-        float: left;
-        background-color: #3a99e8; }
+      margin-top: 0px;
+      width: 176px; }
+      .popup.find .btns .btn-submit:first-child {
+        float: left; }
   .popup.find .complete-message .message {
     display: inline-block;
     position: relative;
@@ -2721,16 +2815,8 @@ article.contents {
       background-position: -216px -650px;
       width: 40px;
       height: 35px; }
-  .popup.find .btn-submit-find {
-    display: block;
-    margin: 40px auto 0 auto;
-    width: 100%;
-    font-size: 0.875em;
-    font-weight: bold;
-    color: #fff;
-    line-height: 40px;
-    border-radius: 2px;
-    background-color: #3a99e8; }
+  .popup.find .btn-submit {
+    margin-top: 40px; }
   .popup.find .list-notice {
     margin: 9px 0 0 0;
     text-align: center; }
@@ -2816,600 +2902,702 @@ article.contents {
               left: 50%;
               margin-left: -5.5px;
               background-image: url(/assets/images/sprites.png);
-              background-position: -782px -453px;
+              background-position: -782px -449px;
               width: 11px;
               height: 6px; }
           .product-tab table > tbody > tr td a > .new em {
             color: #ff6000; }
 
 /* 기업 투자 */
-.contents.invest em.convert.price span {
-  display: inline-block;
-  margin-right: 1px;
-  height: 21px;
-  text-indent: -9999px;
-  vertical-align: middle; }
-  .contents.invest em.convert.price span.price0 {
-    background-image: url(/assets/images/sprites.png);
-    background-position: -629px -695px;
-    width: 15px;
-    height: 21px; }
-  .contents.invest em.convert.price span.price1 {
-    background-image: url(/assets/images/sprites.png);
-    background-position: -782px -345px;
-    width: 7px;
-    height: 21px; }
-  .contents.invest em.convert.price span.price2 {
-    background-image: url(/assets/images/sprites.png);
-    background-position: -782px -143px;
-    width: 13px;
-    height: 21px; }
-  .contents.invest em.convert.price span.price3 {
-    background-image: url(/assets/images/sprites.png);
-    background-position: -782px -195px;
-    width: 13px;
-    height: 21px; }
-  .contents.invest em.convert.price span.price4 {
-    background-image: url(/assets/images/sprites.png);
-    background-position: -649px -695px;
-    width: 14px;
-    height: 21px; }
-  .contents.invest em.convert.price span.price5 {
-    background-image: url(/assets/images/sprites.png);
-    background-position: -782px -169px;
-    width: 13px;
-    height: 21px; }
-  .contents.invest em.convert.price span.price6 {
-    background-image: url(/assets/images/sprites.png);
-    background-position: -782px -117px;
-    width: 13px;
-    height: 21px; }
-  .contents.invest em.convert.price span.price7 {
-    background-image: url(/assets/images/sprites.png);
-    background-position: -782px -273px;
-    width: 12px;
-    height: 21px; }
-  .contents.invest em.convert.price span.price8 {
-    background-image: url(/assets/images/sprites.png);
-    background-position: -782px -221px;
-    width: 13px;
-    height: 21px; }
-  .contents.invest em.convert.price span.price9 {
-    background-image: url(/assets/images/sprites.png);
-    background-position: -782px -247px;
-    width: 13px;
-    height: 21px; }
-  .contents.invest em.convert.price span.price-comma {
-    background-image: url(/assets/images/sprites.png);
-    background-position: -815px -690px;
-    width: 4px;
-    height: 21px; }
-  .contents.invest em.convert.price span.price-percent {
-    background-image: url(/assets/images/sprites.png);
-    background-position: -800px -527px;
-    width: 19px;
-    height: 21px; }
-  .contents.invest em.convert.price span.price-won {
-    background-image: url(/assets/images/sprites.png);
-    background-position: -800px -578px;
-    width: 17px;
-    height: 21px; }
-.contents.invest .list-products {
-  position: relative;
-  overflow: hidden;
-  margin-top: 40px;
-  width: 100%; }
-  .contents.invest .list-products > li {
-    display: block;
-    float: left;
-    margin: 0 0 40px 0;
-    width: 338px; }
-    .contents.invest .list-products > li:nth-child(3n+2), .contents.invest .list-products > li.middle {
-      padding: 0 73px; }
-    .contents.invest .list-products > li > a:hover {
-      text-decoration: none; }
-.contents.invest .product {
-  display: block;
-  position: relative;
-  overflow: hidden;
-  min-height: 558px;
-  color: #252525;
-  border: 1px solid #d4dae4;
-  border-radius: 18px;
-  background-color: #fff; }
-  .contents.invest .product > .options {
+.contents.invest {
+  /* 기업 투자 소개 */ }
+  .contents.invest em.convert.price span {
+    display: inline-block;
+    margin-right: 1px;
+    height: 21px;
+    text-indent: -9999px;
+    vertical-align: middle; }
+    .contents.invest em.convert.price span.price0 {
+      background-image: url(/assets/images/sprites.png);
+      background-position: -629px -695px;
+      width: 15px;
+      height: 21px; }
+    .contents.invest em.convert.price span.price1 {
+      background-image: url(/assets/images/sprites.png);
+      background-position: -782px -322px;
+      width: 7px;
+      height: 21px; }
+    .contents.invest em.convert.price span.price2 {
+      background-image: url(/assets/images/sprites.png);
+      background-position: -782px -143px;
+      width: 13px;
+      height: 21px; }
+    .contents.invest em.convert.price span.price3 {
+      background-image: url(/assets/images/sprites.png);
+      background-position: -782px -195px;
+      width: 13px;
+      height: 21px; }
+    .contents.invest em.convert.price span.price4 {
+      background-image: url(/assets/images/sprites.png);
+      background-position: -649px -695px;
+      width: 14px;
+      height: 21px; }
+    .contents.invest em.convert.price span.price5 {
+      background-image: url(/assets/images/sprites.png);
+      background-position: -782px -169px;
+      width: 13px;
+      height: 21px; }
+    .contents.invest em.convert.price span.price6 {
+      background-image: url(/assets/images/sprites.png);
+      background-position: -782px -117px;
+      width: 13px;
+      height: 21px; }
+    .contents.invest em.convert.price span.price7 {
+      background-image: url(/assets/images/sprites.png);
+      background-position: -782px -273px;
+      width: 12px;
+      height: 21px; }
+    .contents.invest em.convert.price span.price8 {
+      background-image: url(/assets/images/sprites.png);
+      background-position: -782px -221px;
+      width: 13px;
+      height: 21px; }
+    .contents.invest em.convert.price span.price9 {
+      background-image: url(/assets/images/sprites.png);
+      background-position: -782px -247px;
+      width: 13px;
+      height: 21px; }
+    .contents.invest em.convert.price span.price-comma {
+      background-image: url(/assets/images/sprites.png);
+      background-position: -815px -690px;
+      width: 4px;
+      height: 21px; }
+    .contents.invest em.convert.price span.price-percent {
+      background-image: url(/assets/images/sprites.png);
+      background-position: -800px -527px;
+      width: 19px;
+      height: 21px; }
+    .contents.invest em.convert.price span.price-won {
+      background-image: url(/assets/images/sprites.png);
+      background-position: -800px -578px;
+      width: 17px;
+      height: 21px; }
+  .contents.invest .list-products {
+    position: relative;
     overflow: hidden;
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1;
-    height: 311px; }
-    .contents.invest .product > .options > em {
-      position: absolute;
+    margin-top: 40px;
+    width: 100%; }
+    .contents.invest .list-products > li {
+      display: block;
+      float: left;
+      margin: 0 0 40px 0;
+      width: 338px; }
+      .contents.invest .list-products > li:nth-child(3n+2), .contents.invest .list-products > li.middle {
+        padding: 0 73px; }
+      .contents.invest .list-products > li > a:hover {
+        text-decoration: none; }
+  .contents.invest .product {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    min-height: 558px;
+    color: #252525;
+    border: 1px solid #d4dae4;
+    border-radius: 18px;
+    background-color: #fff; }
+    .contents.invest .product > .options {
+      overflow: hidden;
       position: absolute;
       top: 0;
+      right: 0;
       left: 0;
-      text-indent: -9999px; }
-    .contents.invest .product > .options > .invest-type01 {
-      border-radius: 18px 0px 0px 0px;
-      background-image: url(/assets/images/sprites.png);
-      background-position: -517px -271px;
-      width: 82px;
-      height: 82px; }
-    .contents.invest .product > .options > .invest-type02 {
-      border-radius: 18px 0px 0px 0px;
-      background-image: url(/assets/images/sprites.png);
-      background-position: -517px -184px;
-      width: 82px;
-      height: 82px; }
-    .contents.invest .product > .options > .new {
-      background-image: url(/assets/images/sprites.png);
-      background-position: -290px -145px;
-      width: 132px;
-      height: 132px; }
-    .contents.invest .product > .options > .user-in {
-      left: auto;
-      right: 17px;
-      background-image: url(/assets/images/sprites.png);
-      background-position: -235px -510px;
-      width: 73px;
-      height: 46px; }
-    .contents.invest .product > .options > .status01 {
-      top: auto;
-      right: 0;
-      bottom: 0;
-      left: auto;
-      background-image: url(/assets/images/sprites.png);
-      background-position: -387px -581px;
-      width: 52px;
-      height: 52px; }
-    .contents.invest .product > .options > .status02 {
-      top: auto;
-      right: 0;
-      bottom: 0;
-      left: auto;
-      background-image: url(/assets/images/sprites.png);
-      background-position: -330px -581px;
-      width: 52px;
-      height: 52px; }
-    .contents.invest .product > .options > .status03 {
-      top: auto;
-      right: 0;
-      bottom: 0;
-      left: auto;
-      background-image: url(/assets/images/sprites.png);
-      background-position: -611px -520px;
-      width: 55px;
-      height: 55px; }
-    .contents.invest .product > .options > .favorite {
-      top: 12px;
-      right: 10px;
-      left: auto;
-      background-image: url(/assets/images/sprites.png);
-      background-position: -800px -727px;
-      width: 19px;
-      height: 18px; }
-    .contents.invest .product > .options > .imminent-deadline {
-      display: block;
-      top: 50%;
-      left: 50%;
-      margin: -45px 0 0 -45px;
-      padding-top: 25px;
-      font-size: 1.750em;
-      color: #fff;
-      line-height: 1em;
-      text-indent: 0;
-      text-align: center;
-      background-image: url(/assets/images/sprites.png);
-      background-position: -517px 0px;
-      width: 89px;
-      height: 89px;
-      height: 64px; }
-      .contents.invest .product > .options > .imminent-deadline > span {
+      z-index: 1;
+      height: 311px; }
+      .contents.invest .product > .options > em {
+        position: absolute;
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-indent: -9999px; }
+      .contents.invest .product > .options > .invest-type01 {
+        border-radius: 18px 0px 0px 0px;
+        background-image: url(/assets/images/sprites.png);
+        background-position: -517px -271px;
+        width: 82px;
+        height: 82px; }
+      .contents.invest .product > .options > .invest-type02 {
+        border-radius: 18px 0px 0px 0px;
+        background-image: url(/assets/images/sprites.png);
+        background-position: -517px -184px;
+        width: 82px;
+        height: 82px; }
+      .contents.invest .product > .options > .new {
+        background-image: url(/assets/images/sprites.png);
+        background-position: -290px -145px;
+        width: 132px;
+        height: 132px; }
+      .contents.invest .product > .options > .user-in {
+        left: auto;
+        right: 17px;
+        background-image: url(/assets/images/sprites.png);
+        background-position: -235px -510px;
+        width: 73px;
+        height: 46px; }
+      .contents.invest .product > .options > .status01 {
+        top: auto;
+        right: 0;
+        bottom: 0;
+        left: auto;
+        background-image: url(/assets/images/sprites.png);
+        background-position: -387px -581px;
+        width: 52px;
+        height: 52px; }
+      .contents.invest .product > .options > .status02 {
+        top: auto;
+        right: 0;
+        bottom: 0;
+        left: auto;
+        background-image: url(/assets/images/sprites.png);
+        background-position: -330px -581px;
+        width: 52px;
+        height: 52px; }
+      .contents.invest .product > .options > .status03 {
+        top: auto;
+        right: 0;
+        bottom: 0;
+        left: auto;
+        background-image: url(/assets/images/sprites.png);
+        background-position: -611px -520px;
+        width: 55px;
+        height: 55px; }
+      .contents.invest .product > .options > .favorite {
+        top: 12px;
+        right: 10px;
+        left: auto;
+        background-image: url(/assets/images/sprites.png);
+        background-position: -800px -727px;
+        width: 19px;
+        height: 18px; }
+      .contents.invest .product > .options > .imminent-deadline {
         display: block;
-        font-size: 12px; }
-    .contents.invest .product > .options > .share {
-      display: none;
-      position: absolute;
-      bottom: 16px;
-      left: 39px; }
-      .contents.invest .product > .options > .share a {
-        display: block;
-        float: left;
-        margin-right: 10px;
-        height: 24px;
-        width: 24px;
-        text-indent: -9999px;
-        background-image: url("/assets/images/sprites.png"); }
-        .contents.invest .product > .options > .share a.btn-fb {
-          background-position: -542px -695px; }
-        .contents.invest .product > .options > .share a.btn-tw {
-          background-position: -513px -695px; }
-        .contents.invest .product > .options > .share a.btn-ks {
-          background-position: -484px -695px; }
-  .contents.invest .product > figure > .thumb {
-    display: block;
-    position: relative;
-    z-index: 0;
-    overflow: hidden;
-    height: 311px;
-    width: 100%;
-    border-radius: 18px 18px 0px 0px; }
-    .contents.invest .product > figure > .thumb > img {
-      display: none;
-      position: absolute;
-      left: 0;
-      max-height: 100%; }
-  .contents.invest .product > figure > .info {
-    position: relative;
-    padding: 38px 29px 0 29px;
-    border-top: 1px solid #e6e9ee; }
-    .contents.invest .product > figure > .info > .sub-info .title {
-      margin-left: -2px;
-      font-size: 1.125em;
-      font-weight: normal;
-      line-height: 1em; }
-    .contents.invest .product > figure > .info > .sub-info time {
-      display: block;
-      margin-top: 8px;
-      font-size: 0.813em;
-      color: #ff6000; }
-    .contents.invest .product > figure > .info > .sub-info .desc {
-      display: none;
-      font-size: 0.875em;
-      color: #6b7581;
-      line-height: 20px; }
-    .contents.invest .product > figure > .info > .status-info .p-i {
-      overflow: hidden; }
-      .contents.invest .product > figure > .info > .status-info .p-i > p {
-        float: left;
-        position: relative;
-        margin-top: 16px;
-        padding-right: 14px;
-        text-align: left; }
-        .contents.invest .product > figure > .info > .status-info .p-i > p > span {
+        top: 50%;
+        left: 50%;
+        margin: -45px 0 0 -45px;
+        padding-top: 25px;
+        font-size: 1.750em;
+        color: #fff;
+        line-height: 1em;
+        text-indent: 0;
+        text-align: center;
+        background-image: url(/assets/images/sprites.png);
+        background-position: -517px 0px;
+        width: 89px;
+        height: 89px;
+        height: 64px; }
+        .contents.invest .product > .options > .imminent-deadline > span {
           display: block;
-          padding-bottom: 2px;
-          font-size: 0.750em;
-          color: #c4c9d1; }
-        .contents.invest .product > figure > .info > .status-info .p-i > p > em {
+          font-size: 12px; }
+      .contents.invest .product > .options > .share {
+        display: none;
+        position: absolute;
+        bottom: 16px;
+        left: 39px; }
+        .contents.invest .product > .options > .share a {
           display: block;
-          margin-top: 2px;
-          font-size: 20px;
-          line-height: 1.2em; }
-        .contents.invest .product > figure > .info > .status-info .p-i > p.interest {
-          padding-left: 14px;
-          position: relative; }
-          .contents.invest .product > figure > .info > .status-info .p-i > p.interest > span {
-            padding-left: 2px; }
-          .contents.invest .product > figure > .info > .status-info .p-i > p.interest > em:before {
-            content: '';
-            display: block;
-            position: absolute;
-            bottom: 0;
-            left: 0px;
-            height: 20px;
-            width: 1px;
-            background-color: #d5dae1; }
-    .contents.invest .product > figure > .info > .status-info .progress {
+          float: left;
+          margin-right: 10px;
+          height: 24px;
+          width: 24px;
+          text-indent: -9999px;
+          background-image: url("/assets/images/sprites.png"); }
+          .contents.invest .product > .options > .share a.btn-fb {
+            background-position: -542px -695px; }
+          .contents.invest .product > .options > .share a.btn-tw {
+            background-position: -513px -695px; }
+          .contents.invest .product > .options > .share a.btn-ks {
+            background-position: -484px -695px; }
+    .contents.invest .product > figure > .thumb {
       display: block;
       position: relative;
+      z-index: 0;
       overflow: hidden;
-      margin-top: 22px;
-      padding: 15px 0 0 0;
-      font-size: 0.875em; }
-      .contents.invest .product > figure > .info > .status-info .progress:before {
+      height: 311px;
+      width: 100%;
+      border-radius: 18px 18px 0px 0px; }
+      .contents.invest .product > figure > .thumb > img {
+        display: none;
+        position: absolute;
+        left: 0;
+        max-height: 100%; }
+    .contents.invest .product > figure > .info {
+      position: relative;
+      padding: 38px 29px 0 29px;
+      border-top: 1px solid #e6e9ee; }
+      .contents.invest .product > figure > .info > .sub-info .title {
+        margin-left: -2px;
+        font-size: 1.125em;
+        font-weight: normal;
+        line-height: 1em; }
+      .contents.invest .product > figure > .info > .sub-info time {
+        display: block;
+        margin-top: 8px;
+        font-size: 0.813em;
+        color: #ff6000; }
+      .contents.invest .product > figure > .info > .sub-info .desc {
+        display: none;
+        font-size: 0.875em;
+        color: #6b7581;
+        line-height: 20px; }
+      .contents.invest .product > figure > .info > .status-info .p-i {
+        overflow: hidden; }
+        .contents.invest .product > figure > .info > .status-info .p-i > p {
+          float: left;
+          position: relative;
+          margin-top: 16px;
+          padding-right: 14px;
+          text-align: left; }
+          .contents.invest .product > figure > .info > .status-info .p-i > p > span {
+            display: block;
+            padding-bottom: 2px;
+            font-size: 0.750em;
+            color: #c4c9d1; }
+          .contents.invest .product > figure > .info > .status-info .p-i > p > em {
+            display: block;
+            margin-top: 2px;
+            font-size: 20px;
+            line-height: 1.2em; }
+          .contents.invest .product > figure > .info > .status-info .p-i > p.interest {
+            padding-left: 14px;
+            position: relative; }
+            .contents.invest .product > figure > .info > .status-info .p-i > p.interest > span {
+              padding-left: 2px; }
+            .contents.invest .product > figure > .info > .status-info .p-i > p.interest > em:before {
+              content: '';
+              display: block;
+              position: absolute;
+              bottom: 0;
+              left: 0px;
+              height: 20px;
+              width: 1px;
+              background-color: #d5dae1; }
+      .contents.invest .product > figure > .info > .status-info .progress {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        margin-top: 22px;
+        padding: 15px 0 0 0;
+        font-size: 0.875em; }
+        .contents.invest .product > figure > .info > .status-info .progress:before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          right: 0;
+          left: 0;
+          height: 5px;
+          width: 100%;
+          background-color: #d5d9e1; }
+        .contents.invest .product > figure > .info > .status-info .progress > .value {
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 5px;
+          width: 0%;
+          background-color: #00bb00;
+          -webkit-animation-delay: 1s;
+                  animation-delay: 1s; }
+    .contents.invest .product:hover > .hover {
+      display: block;
+      -webkit-animation-duration: 0.3s;
+              animation-duration: 0.3s; }
+    .contents.invest .product > .hover {
+      display: none;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      border-radius: 18px; }
+      .contents.invest .product > .hover > button {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 2;
+        font-size: 12px;
+        color: #c2c6d0;
+        vertical-align: middle;
+        line-height: 18px; }
+        .contents.invest .product > .hover > button:before {
+          content: '';
+          display: inline-block;
+          margin-top: -4px;
+          margin-right: 5px;
+          vertical-align: middle;
+          background-image: url(/assets/images/sprites.png);
+          background-position: -800px -750px;
+          width: 19px;
+          height: 18px; }
+        .contents.invest .product > .hover > button:hover {
+          text-decoration: underline; }
+        .contents.invest .product > .hover > button.selected:before {
+          background-image: url(/assets/images/sprites.png);
+          background-position: -800px -727px;
+          width: 19px;
+          height: 18px; }
+      .contents.invest .product > .hover > span {
+        font-size: 22px;
+        font-weight: bold;
+        color: #fff;
+        line-height: 558px; }
+      .contents.invest .product > .hover:before {
         content: '';
         display: block;
         position: absolute;
         top: 0;
         right: 0;
+        bottom: 0;
         left: 0;
-        height: 5px;
+        z-index: -1;
+        height: 100%;
         width: 100%;
-        background-color: #d5d9e1; }
-      .contents.invest .product > figure > .info > .status-info .progress > .value {
+        background: url(/assets/images/bg_product_highlights.png) left top repeat; }
+    .contents.invest .product.detail {
+      margin-top: 40px; }
+      .contents.invest .product.detail > .options {
+        height: 340px; }
+        .contents.invest .product.detail > .options > .imminent-deadline {
+          margin: -55px 0 0 -55px;
+          padding-top: 26px;
+          font-size: 2.250em;
+          background-image: url(/assets/images/sprites.png);
+          background-position: -135px -290px;
+          width: 110px;
+          height: 110px;
+          height: 84px; }
+          .contents.invest .product.detail > .options > .imminent-deadline > span {
+            font-size: 14px; }
+        .contents.invest .product.detail > .options > .share {
+          display: block; }
+      .contents.invest .product.detail > figure > .thumb {
+        height: 340px; }
+      .contents.invest .product.detail > figure > .info {
+        overflow: hidden;
+        padding: 46px 39px 0 39px; }
+        .contents.invest .product.detail > figure > .info > .sub-info {
+          display: block;
+          float: left;
+          padding-right: 25px;
+          width: 352px; }
+          .contents.invest .product.detail > figure > .info > .sub-info .title {
+            font-size: 1.375em;
+            font-weight: bold; }
+          .contents.invest .product.detail > figure > .info > .sub-info time {
+            margin-top: 12px;
+            font-size: 0.875em; }
+          .contents.invest .product.detail > figure > .info > .sub-info .desc {
+            display: block;
+            margin-top: 23px; }
+        .contents.invest .product.detail > figure > .info > .status-info {
+          float: left;
+          padding-bottom: 10px;
+          padding-left: 38px;
+          width: 664px;
+          border-left: 1px solid #e2e4e8; }
+          .contents.invest .product.detail > figure > .info > .status-info .p-i {
+            overflow: hidden; }
+            .contents.invest .product.detail > figure > .info > .status-info .p-i > p {
+              margin-top: 0px;
+              padding-right: 28px; }
+              .contents.invest .product.detail > figure > .info > .status-info .p-i > p > span {
+                padding-bottom: 15px;
+                font-size: 0.875em; }
+              .contents.invest .product.detail > figure > .info > .status-info .p-i > p > em {
+                font-size: 32px; }
+              .contents.invest .product.detail > figure > .info > .status-info .p-i > p.interest {
+                padding-left: 29px;
+                position: relative; }
+                .contents.invest .product.detail > figure > .info > .status-info .p-i > p.interest > span {
+                  padding-left: 2px; }
+                .contents.invest .product.detail > figure > .info > .status-info .p-i > p.interest > em:before {
+                  height: 32px;
+                  bottom: 0px; }
+              .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span {
+                display: inline-block;
+                margin-right: 1px;
+                height: 32px;
+                text-indent: -9999px;
+                vertical-align: middle; }
+                .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price0 {
+                  background-image: url(/assets/images/sprites.png);
+                  background-position: -212px -695px;
+                  width: 23px;
+                  height: 32px; }
+                .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price1 {
+                  background-image: url(/assets/images/sprites.png);
+                  background-position: -800px -690px;
+                  width: 10px;
+                  height: 32px; }
+                .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price2 {
+                  background-image: url(/assets/images/sprites.png);
+                  background-position: -320px -695px;
+                  width: 20px;
+                  height: 32px; }
+                .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price3 {
+                  background-image: url(/assets/images/sprites.png);
+                  background-position: -410px -290px;
+                  width: 20px;
+                  height: 32px; }
+                .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price4 {
+                  background-image: url(/assets/images/sprites.png);
+                  background-position: -240px -695px;
+                  width: 23px;
+                  height: 32px; }
+                .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price5 {
+                  background-image: url(/assets/images/sprites.png);
+                  background-position: -410px -327px;
+                  width: 20px;
+                  height: 32px; }
+                .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price6 {
+                  background-image: url(/assets/images/sprites.png);
+                  background-position: -584px -358px;
+                  width: 21px;
+                  height: 32px; }
+                .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price7 {
+                  background-image: url(/assets/images/sprites.png);
+                  background-position: 0px -744px;
+                  width: 19px;
+                  height: 32px; }
+                .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price8 {
+                  background-image: url(/assets/images/sprites.png);
+                  background-position: -268px -695px;
+                  width: 21px;
+                  height: 32px; }
+                .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price9 {
+                  background-image: url(/assets/images/sprites.png);
+                  background-position: -294px -695px;
+                  width: 21px;
+                  height: 32px; }
+                .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price-comma {
+                  background-image: url(/assets/images/sprites.png);
+                  background-position: -813px -604px;
+                  width: 5px;
+                  height: 32px; }
+                .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price-percent {
+                  background-image: url(/assets/images/sprites.png);
+                  background-position: -148px -695px;
+                  width: 29px;
+                  height: 32px; }
+                .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price-won {
+                  background-image: url(/assets/images/sprites.png);
+                  background-position: -182px -695px;
+                  width: 25px;
+                  height: 32px; }
+          .contents.invest .product.detail > figure > .info > .status-info .progress {
+            margin-top: 33px;
+            padding: 19px 0 0 0;
+            font-size: 1.000em; }
+            .contents.invest .product.detail > figure > .info > .status-info .progress:before {
+              height: 6px; }
+            .contents.invest .product.detail > figure > .info > .status-info .progress > .value {
+              height: 6px; }
+      .contents.invest .product.detail > .hover {
         display: block;
+        overflow: hidden;
         position: absolute;
         top: 0;
-        left: 0;
-        height: 5px;
-        width: 0%;
-        background-color: #00bb00;
-        -webkit-animation-delay: 1s;
-                animation-delay: 1s; }
-  .contents.invest .product:hover > .hover {
-    display: block;
-    -webkit-animation-duration: 0.3s;
-            animation-duration: 0.3s; }
-  .contents.invest .product > .hover {
-    display: none;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-    height: 100%;
-    width: 100%;
-    text-align: center;
-    border-radius: 18px; }
-    .contents.invest .product > .hover > button {
-      display: block;
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      z-index: 2;
-      font-size: 12px;
-      color: #c2c6d0;
-      vertical-align: middle;
-      line-height: 18px; }
-      .contents.invest .product > .hover > button:before {
-        content: '';
-        display: inline-block;
-        margin-top: -4px;
-        margin-right: 5px;
-        vertical-align: middle;
-        background-image: url(/assets/images/sprites.png);
-        background-position: -800px -750px;
-        width: 19px;
-        height: 18px; }
-      .contents.invest .product > .hover > button:hover {
-        text-decoration: underline; }
-      .contents.invest .product > .hover > button.selected:before {
-        background-image: url(/assets/images/sprites.png);
-        background-position: -800px -727px;
-        width: 19px;
-        height: 18px; }
-    .contents.invest .product > .hover > span {
-      font-size: 22px;
-      font-weight: bold;
-      color: #fff;
-      line-height: 558px; }
-    .contents.invest .product > .hover:before {
+        right: 0;
+        bottom: auto;
+        left: auto;
+        z-index: 2;
+        height: 92px;
+        width: 51px; }
+        .contents.invest .product.detail > .hover > button {
+          display: block;
+          position: absolute;
+          top: 16px;
+          right: 9px;
+          z-index: 2;
+          width: 30px;
+          font-size: 12px;
+          color: #c2c6d0;
+          vertical-align: middle;
+          line-height: 16px; }
+          .contents.invest .product.detail > .hover > button:before {
+            content: '';
+            display: block;
+            margin: 0 auto 8px auto;
+            background-image: url(/assets/images/sprites.png);
+            background-position: -800px -750px;
+            width: 19px;
+            height: 18px; }
+          .contents.invest .product.detail > .hover > button.selected:before {
+            background-image: url(/assets/images/sprites.png);
+            background-position: -800px -727px;
+            width: 19px;
+            height: 18px; }
+        .contents.invest .product.detail > .hover > span {
+          display: none; }
+        .contents.invest .product.detail > .hover:before {
+          content: none; }
+      .contents.invest .product.detail > .invest-product {
+        display: block;
+        position: relative;
+        margin-top: 45px;
+        height: 100px; }
+        .contents.invest .product.detail > .invest-product .utils {
+          position: absolute;
+          top: 28px;
+          left: 69%; }
+          .contents.invest .product.detail > .invest-product .utils .btn {
+            display: inline-block;
+            margin-right: 17px;
+            font-size: 0.875em;
+            color: #142c66;
+            vertical-align: middle; }
+            .contents.invest .product.detail > .invest-product .utils .btn:before {
+              content: '';
+              display: inline-block;
+              margin-right: 7px;
+              vertical-align: middle; }
+            .contents.invest .product.detail > .invest-product .utils .btn.calc:before {
+              background-image: url(/assets/images/sprites.png);
+              background-position: -126px -744px;
+              width: 21px;
+              height: 25px; }
+            .contents.invest .product.detail > .invest-product .utils .btn.update {
+              display: none; }
+              .contents.invest .product.detail > .invest-product .utils .btn.update:before {
+                background-image: url(/assets/images/sprites.png);
+                background-position: -455px -695px;
+                width: 24px;
+                height: 25px; }
+            .contents.invest .product.detail > .invest-product .utils .btn.cancel {
+              display: none; }
+              .contents.invest .product.detail > .invest-product .utils .btn.cancel:before {
+                background-image: url(/assets/images/sprites.png);
+                background-position: -426px -695px;
+                width: 24px;
+                height: 25px; }
+        .contents.invest .product.detail > .invest-product .status-invest {
+          display: none;
+          margin-top: 9px;
+          font-size: 0.750em;
+          color: #ff6000;
+          text-align: center; }
+        .contents.invest .product.detail > .invest-product.expired .btn.calc {
+          display: none; }
+        .contents.invest .product.detail > .invest-product.expired .btn.update,
+        .contents.invest .product.detail > .invest-product.expired .btn.cancel {
+          display: inline-block; }
+        .contents.invest .product.detail > .invest-product.expired .status-invest {
+          display: block; }
+  .contents.invest .intro {
+    position: relative;
+    margin-top: 40px;
+    padding: 72px 0 0px 0; }
+    .contents.invest .intro:before {
       content: '';
       display: block;
       position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: -1;
-      height: 100%;
-      width: 100%;
-      background: url(/assets/images/bg_product_highlights.png) left top repeat; }
-  .contents.invest .product.detail {
-    margin-top: 40px; }
-    .contents.invest .product.detail > .options {
-      height: 340px; }
-      .contents.invest .product.detail > .options > .imminent-deadline {
-        margin: -55px 0 0 -55px;
-        padding-top: 26px;
-        font-size: 2.250em;
-        background-image: url(/assets/images/sprites.png);
-        background-position: -135px -290px;
-        width: 110px;
-        height: 110px;
-        height: 84px; }
-        .contents.invest .product.detail > .options > .imminent-deadline > span {
-          font-size: 14px; }
-      .contents.invest .product.detail > .options > .share {
-        display: block; }
-    .contents.invest .product.detail > figure > .thumb {
-      height: 340px; }
-    .contents.invest .product.detail > figure > .info {
-      overflow: hidden;
-      padding: 46px 39px 0 39px; }
-      .contents.invest .product.detail > figure > .info > .sub-info {
-        display: block;
-        float: left;
-        padding-right: 25px;
-        width: 352px; }
-        .contents.invest .product.detail > figure > .info > .sub-info .title {
-          font-size: 1.375em;
-          font-weight: bold; }
-        .contents.invest .product.detail > figure > .info > .sub-info time {
-          margin-top: 12px;
-          font-size: 0.875em; }
-        .contents.invest .product.detail > figure > .info > .sub-info .desc {
-          display: block;
-          margin-top: 23px; }
-      .contents.invest .product.detail > figure > .info > .status-info {
-        float: left;
-        padding-bottom: 10px;
-        padding-left: 38px;
-        width: 664px;
-        border-left: 1px solid #e2e4e8; }
-        .contents.invest .product.detail > figure > .info > .status-info .p-i {
-          overflow: hidden; }
-          .contents.invest .product.detail > figure > .info > .status-info .p-i > p {
-            margin-top: 0px;
-            padding-right: 28px; }
-            .contents.invest .product.detail > figure > .info > .status-info .p-i > p > span {
-              padding-bottom: 15px;
-              font-size: 0.875em; }
-            .contents.invest .product.detail > figure > .info > .status-info .p-i > p > em {
-              font-size: 32px; }
-            .contents.invest .product.detail > figure > .info > .status-info .p-i > p.interest {
-              padding-left: 29px;
-              position: relative; }
-              .contents.invest .product.detail > figure > .info > .status-info .p-i > p.interest > span {
-                padding-left: 2px; }
-              .contents.invest .product.detail > figure > .info > .status-info .p-i > p.interest > em:before {
-                height: 32px;
-                bottom: 0px; }
-            .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span {
-              display: inline-block;
-              margin-right: 1px;
-              height: 32px;
-              text-indent: -9999px;
-              vertical-align: middle; }
-              .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price0 {
-                background-image: url(/assets/images/sprites.png);
-                background-position: -212px -695px;
-                width: 23px;
-                height: 32px; }
-              .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price1 {
-                background-image: url(/assets/images/sprites.png);
-                background-position: -800px -690px;
-                width: 10px;
-                height: 32px; }
-              .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price2 {
-                background-image: url(/assets/images/sprites.png);
-                background-position: -320px -695px;
-                width: 20px;
-                height: 32px; }
-              .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price3 {
-                background-image: url(/assets/images/sprites.png);
-                background-position: -410px -290px;
-                width: 20px;
-                height: 32px; }
-              .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price4 {
-                background-image: url(/assets/images/sprites.png);
-                background-position: -240px -695px;
-                width: 23px;
-                height: 32px; }
-              .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price5 {
-                background-image: url(/assets/images/sprites.png);
-                background-position: -410px -327px;
-                width: 20px;
-                height: 32px; }
-              .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price6 {
-                background-image: url(/assets/images/sprites.png);
-                background-position: -584px -358px;
-                width: 21px;
-                height: 32px; }
-              .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price7 {
-                background-image: url(/assets/images/sprites.png);
-                background-position: 0px -744px;
-                width: 19px;
-                height: 32px; }
-              .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price8 {
-                background-image: url(/assets/images/sprites.png);
-                background-position: -268px -695px;
-                width: 21px;
-                height: 32px; }
-              .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price9 {
-                background-image: url(/assets/images/sprites.png);
-                background-position: -294px -695px;
-                width: 21px;
-                height: 32px; }
-              .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price-comma {
-                background-image: url(/assets/images/sprites.png);
-                background-position: -813px -604px;
-                width: 5px;
-                height: 32px; }
-              .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price-percent {
-                background-image: url(/assets/images/sprites.png);
-                background-position: -148px -695px;
-                width: 29px;
-                height: 32px; }
-              .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price-won {
-                background-image: url(/assets/images/sprites.png);
-                background-position: -182px -695px;
-                width: 25px;
-                height: 32px; }
-        .contents.invest .product.detail > figure > .info > .status-info .progress {
-          margin-top: 33px;
-          padding: 19px 0 0 0;
-          font-size: 1.000em; }
-          .contents.invest .product.detail > figure > .info > .status-info .progress:before {
-            height: 6px; }
-          .contents.invest .product.detail > figure > .info > .status-info .progress > .value {
-            height: 6px; }
-    .contents.invest .product.detail > .hover {
+      top: 356px;
+      lefty: 0px;
+      height: 566px;
+      width: 500px;
+      background: url("/assets/images/bg_invest_visual01.png") left top no-repeat; }
+    .contents.invest .intro > .title {
       display: block;
-      overflow: hidden;
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: auto;
-      left: auto;
-      z-index: 2;
-      height: 92px;
-      width: 51px; }
-      .contents.invest .product.detail > .hover > button {
+      height: 42px;
+      width: 958px;
+      text-indent: -9999px;
+      background: url("/assets/images/txt/title_invest01.png") left top no-repeat; }
+    .contents.invest .intro p {
+      font-size: 0.875em;
+      color: #6b7581;
+      line-height: 22px; }
+    .contents.invest .intro .investment {
+      margin-top: 74px;
+      margin-left: 580px; }
+      .contents.invest .intro .investment > .title {
         display: block;
-        position: absolute;
-        top: 16px;
-        right: 9px;
-        z-index: 2;
-        width: 30px;
-        font-size: 12px;
-        color: #c2c6d0;
-        vertical-align: middle;
-        line-height: 16px; }
-        .contents.invest .product.detail > .hover > button:before {
-          content: '';
-          display: block;
-          margin: 0 auto 8px auto;
-          background-image: url(/assets/images/sprites.png);
-          background-position: -800px -750px;
-          width: 19px;
-          height: 18px; }
-        .contents.invest .product.detail > .hover > button.selected:before {
-          background-image: url(/assets/images/sprites.png);
-          background-position: -800px -727px;
-          width: 19px;
-          height: 18px; }
-      .contents.invest .product.detail > .hover > span {
-        display: none; }
-      .contents.invest .product.detail > .hover:before {
-        content: none; }
-    .contents.invest .product.detail > .invest-product {
-      display: block;
-      position: relative;
-      margin-top: 45px;
-      height: 100px; }
-      .contents.invest .product.detail > .invest-product .utils {
-        position: absolute;
-        top: 28px;
-        left: 69%; }
-        .contents.invest .product.detail > .invest-product .utils .btn {
-          display: inline-block;
-          margin-right: 17px;
-          font-size: 0.875em;
-          color: #142c66;
-          vertical-align: middle; }
-          .contents.invest .product.detail > .invest-product .utils .btn:before {
+        height: 36px;
+        width: 519px;
+        text-indent: -9999px;
+        background: url("/assets/images/txt/title_invest02.png") left top no-repeat; }
+      .contents.invest .intro .investment dd {
+        padding-top: 47px; }
+        .contents.invest .intro .investment dd table {
+          margin-top: 19px; }
+          .contents.invest .intro .investment dd table tr {
+            border-top: 1px solid #d4dae4; }
+            .contents.invest .intro .investment dd table tr:first-child {
+              border-top: 0px; }
+          .contents.invest .intro .investment dd table th {
+            padding: 11px 0;
+            width: 68px;
+            font-size: 0.875em;
+            font-weight: normal;
+            color: #252525;
+            line-height: 22px;
+            text-align: left;
+            vertical-align: top; }
+          .contents.invest .intro .investment dd table td {
+            padding: 11px 0;
+            font-size: 0.875em;
+            color: #6b7581;
+            line-height: 22px; }
+        .contents.invest .intro .investment dd .dot {
+          position: relative;
+          padding-left: 8px;
+          font-size: 0.750em;
+          color: #6b7581;
+          line-height: 18px; }
+          .contents.invest .intro .investment dd .dot:before {
             content: '';
-            display: inline-block;
-            margin-right: 7px;
-            vertical-align: middle; }
-          .contents.invest .product.detail > .invest-product .utils .btn.calc:before {
-            background-image: url(/assets/images/sprites.png);
-            background-position: -126px -744px;
-            width: 21px;
-            height: 25px; }
-          .contents.invest .product.detail > .invest-product .utils .btn.update {
-            display: none; }
-            .contents.invest .product.detail > .invest-product .utils .btn.update:before {
+            display: block;
+            position: absolute;
+            top: 8px;
+            left: 0;
+            height: 2px;
+            width: 2px;
+            background-color: #6b7581; }
+        .contents.invest .intro .investment dd .list-intro {
+          margin-top: 66px; }
+          .contents.invest .intro .investment dd .list-intro > li {
+            position: relative;
+            margin-top: 33px;
+            padding: 0 0 0 56px; }
+            .contents.invest .intro .investment dd .list-intro > li:before {
+              content: '';
+              display: block;
+              position: absolute;
+              top: 0;
+              left: 0; }
+            .contents.invest .intro .investment dd .list-intro > li.seq01:before {
               background-image: url(/assets/images/sprites.png);
-              background-position: -455px -695px;
-              width: 24px;
-              height: 25px; }
-          .contents.invest .product.detail > .invest-product .utils .btn.cancel {
-            display: none; }
-            .contents.invest .product.detail > .invest-product .utils .btn.cancel:before {
+              background-position: -731px -98px;
+              width: 46px;
+              height: 44px; }
+            .contents.invest .intro .investment dd .list-intro > li.seq02:before {
               background-image: url(/assets/images/sprites.png);
-              background-position: -426px -695px;
-              width: 24px;
-              height: 25px; }
-      .contents.invest .product.detail > .invest-product .status-invest {
-        display: none;
-        margin-top: 9px;
-        font-size: 0.750em;
-        color: #ff6000;
-        text-align: center; }
-      .contents.invest .product.detail > .invest-product.expired .btn.calc {
-        display: none; }
-      .contents.invest .product.detail > .invest-product.expired .btn.update,
-      .contents.invest .product.detail > .invest-product.expired .btn.cancel {
-        display: inline-block; }
-      .contents.invest .product.detail > .invest-product.expired .status-invest {
-        display: block; }
+              background-position: -731px -343px;
+              width: 46px;
+              height: 44px; }
+          .contents.invest .intro .investment dd .list-intro strong {
+            display: block;
+            font-size: 1.125em;
+            color: #14378c;
+            line-height: 44px; }
+          .contents.invest .intro .investment dd .list-intro p {
+            margin-top: 7px; }
+            .contents.invest .intro .investment dd .list-intro p em {
+              color: #ff4776; }
 
 .product-detail-view {
   padding-bottom: 90px;
@@ -4421,1097 +4609,1099 @@ article.contents {
     right: 1px; }
 
 /* 개인 투자 */
-.contents.private-invest .paging {
-  position: relative;
-  margin-top: 43px;
-  text-align: center; }
-  .contents.private-invest .paging > a {
-    display: inline-block;
-    margin-right: 3px;
-    margin-left: 2px;
-    height: 37px;
-    width: 37px;
-    font-size: 1.125em;
-    color: #142c66;
-    text-align: center;
-    line-height: 36px;
-    border: 1px solid #d4dae4;
-    border-radius: 37px;
-    background-color: #fff;
-    transition: background-color 0.2s linear, color 0.2s; }
-    .contents.private-invest .paging > a:hover, .contents.private-invest .paging > a.selected {
-      font-weight: 700;
-      color: #fff;
-      text-decoration: none;
-      background-color: #ff4776;
-      transition: background-color 0.2s linear, color 0.2s; }
-  .contents.private-invest .paging > .paging-left {
-    position: absolute;
-    top: 0;
-    left: 0; }
-  .contents.private-invest .paging > .sorting .btn-select {
-    float: left;
+.contents.private-invest {
+  /* 개인 투자 소개 */ }
+  .contents.private-invest .paging {
     position: relative;
-    z-index: 500;
-    margin-right: 20px;
-    text-align: left; }
-    .contents.private-invest .paging > .sorting .btn-select > a {
-      display: block;
-      padding: 0 33px;
-      font-size: 0.813em;
+    margin-top: 43px;
+    text-align: center; }
+    .contents.private-invest .paging > a {
+      display: inline-block;
+      margin-right: 3px;
+      margin-left: 2px;
+      height: 37px;
+      width: 37px;
+      font-size: 1.125em;
       color: #142c66;
-      line-height: 35px;
+      text-align: center;
+      line-height: 36px;
       border: 1px solid #d4dae4;
-      border-radius: 35px;
-      background-color: #fff; }
-      .contents.private-invest .paging > .sorting .btn-select > a:after {
-        content: '';
-        display: inline-block;
-        margin: -2px 0 0 9px;
-        vertical-align: middle;
-        background-image: url(/assets/images/sprites.png);
-        background-position: -782px -546px;
-        width: 9px;
-        height: 5px; }
-      .contents.private-invest .paging > .sorting .btn-select > a:hover {
-        text-decoration: none; }
-    .contents.private-invest .paging > .sorting .btn-select .list-sorting {
-      display: none;
-      position: absolute;
-      top: 18px;
-      right: 0;
-      left: 0;
-      overflow: hidden;
-      padding-top: 20px;
-      border: 1px solid #d4dae4;
-      border-top: 0px;
-      border-radius: 0px 0px 18px 18px;
-      background-color: #fff; }
-      .contents.private-invest .paging > .sorting .btn-select .list-sorting > li > a {
-        display: inline-block;
-        padding-left: 34px;
-        font-size: 0.813em;
-        color: #142c66;
-        line-height: 34px; }
-        .contents.private-invest .paging > .sorting .btn-select .list-sorting > li > a:hover {
-          color: #ff4776;
-          text-decoration: none; }
-    .contents.private-invest .paging > .sorting .btn-select.hover > a {
-      position: relative;
-      z-index: 1;
-      border-bottom: 0px;
-      border-radius: 18px 18px 0px 0px; }
-    .contents.private-invest .paging > .sorting .btn-select.hover .list-sorting {
-      display: block; }
-  .contents.private-invest .paging > .sorting .rating-popup {
-    display: none;
-    position: absolute;
-    top: 54px;
-    z-index: 900;
-    padding: 0;
-    border: 1px solid #d4dae4;
-    background-color: #fff; }
-    .contents.private-invest .paging > .sorting .rating-popup:before {
-      content: '';
-      position: absolute;
-      top: -20px;
-      left: 220px;
-      background-image: url(/assets/images/sprites.png);
-      background-position: -428px -650px;
-      width: 31px;
-      height: 20px; }
-    .contents.private-invest .paging > .sorting .rating-popup .btn-popup-close {
-      position: absolute;
-      top: 13px;
-      right: 13px; }
-    .contents.private-invest .paging > .sorting .rating-popup .list-example {
-      padding: 174px 409px 188px 186px;
-      height: 83px;
-      width: 193px; }
-      .contents.private-invest .paging > .sorting .rating-popup .list-example > li {
-        display: block;
-        float: left;
-        height: 83px; }
-        .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure figcaption {
-          position: absolute; }
-          .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure figcaption:before {
-            content: '';
-            display: block; }
-          .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure figcaption strong {
-            margin-top: 6px;
-            font-size: 0.875em;
-            color: #6b7581; }
-          .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure figcaption .box {
-            box-sizing: border-box;
-            padding: 10px 0 10px 20px;
-            width: 100%;
-            font-size: 0.750em;
-            color: #6b7581;
-            line-height: 16px;
-            text-align: left;
-            border: 1px solid #cdd4de; }
-        .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.type {
-          margin-right: 24px; }
-          .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.type figcaption {
-            bottom: 54px;
-            left: 137px;
-            width: 160px;
-            text-align: center; }
-            .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.type figcaption:before {
-              margin: 0 auto;
-              background-image: url(/assets/images/sprites.png);
-              background-position: -800px -604px;
-              width: 8px;
-              height: 38px; }
-            .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.type figcaption .box {
-              position: relative;
-              margin-top: 9px; }
-              .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.type figcaption .box:before {
-                content: '';
-                display: block;
-                position: absolute;
-                top: 14px;
-                left: 13px;
-                background-image: url(/assets/images/sprites.png);
-                background-position: -782px -589px;
-                width: 2px;
-                height: 8px; }
-        .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.cnt {
-          margin-right: 8px; }
-          .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.cnt figcaption {
-            top: 51px;
-            left: 218px;
-            padding-top: 63px;
-            padding-bottom: 43px;
-            width: 150px;
-            text-align: center; }
-            .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.cnt figcaption:before {
-              position: absolute;
-              bottom: 0;
-              left: 50%;
-              margin-left: -4px;
-              background-image: url(/assets/images/sprites.png);
-              background-position: -800px -647px;
-              width: 8px;
-              height: 38px; }
-            .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.cnt figcaption .box {
-              position: absolute;
-              top: 0; }
-        .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.overdue figcaption {
-          top: 84px;
-          left: 380px;
-          width: 282px; }
-          .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.overdue figcaption:before {
-            position: absolute;
-            top: 50%;
-            left: 0;
-            margin-top: -4px;
-            background-image: url(/assets/images/sprites.png);
-            background-position: -204px -470px;
-            width: 102px;
-            height: 8px; }
-          .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.overdue figcaption strong {
-            display: block;
-            position: absolute;
-            top: 50%;
-            left: 0px;
-            margin-top: -20px;
-            width: 102px;
-            text-align: center; }
-          .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.overdue figcaption table {
-            float: right;
-            width: 180px;
-            border: 1px solid #cdd4de; }
-            .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.overdue figcaption table tbody tr.top th, .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.overdue figcaption table tbody tr.top td {
-              border-top: 0; }
-            .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.overdue figcaption table tbody th {
-              width: 52px;
-              text-align: center;
-              border-top: 1px solid #cdd4de; }
-              .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.overdue figcaption table tbody th > .convert > em {
-                display: inline-block;
-                height: 30px;
-                text-indent: -9999px; }
-                .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.overdue figcaption table tbody th > .convert > em.overdue-n {
-                  background-image: url(/assets/images/sprites.png);
-                  background-position: -800px -175px;
-                  width: 17px;
-                  height: 30px; }
-                .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.overdue figcaption table tbody th > .convert > em.overdue-a {
-                  background-image: url(/assets/images/sprites.png);
-                  background-position: -306px -650px;
-                  width: 24px;
-                  height: 30px; }
-                .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.overdue figcaption table tbody th > .convert > em.overdue-b {
-                  background-image: url(/assets/images/sprites.png);
-                  background-position: -800px -35px;
-                  width: 19px;
-                  height: 30px; }
-                .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.overdue figcaption table tbody th > .convert > em.overdue-c {
-                  margin-left: -2px;
-                  background-image: url(/assets/images/sprites.png);
-                  background-position: -800px -70px;
-                  width: 18px;
-                  height: 30px; }
-                .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.overdue figcaption table tbody th > .convert > em.overdue-d {
-                  background-image: url(/assets/images/sprites.png);
-                  background-position: -800px 0px;
-                  width: 19px;
-                  height: 30px; }
-            .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.overdue figcaption table tbody td {
-              padding-left: 5px;
-              font-size: 0.875em;
-              color: #6b7581;
-              line-height: 53px;
-              border-top: 1px solid #cdd4de; }
-          .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.overdue figcaption .tb-bottom {
-            clear: both;
-            padding-top: 7px;
-            font-size: 0.750em;
-            color: #6b7581;
-            text-align: right; }
-            .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.overdue figcaption .tb-bottom:before {
-              content: '';
-              display: inline-block;
-              margin-right: 4px;
-              height: 2px;
-              width: 2px;
-              vertical-align: middle;
-              background-color: #ff6000; }
-.contents.private-invest .list-products {
-  position: relative;
-  margin-top: 40px;
-  width: 100%; }
-  .contents.private-invest .list-products > li {
-    display: block;
-    float: left;
-    margin: 0 31px 25px 0;
-    width: 549px; }
-    .contents.private-invest .list-products > li:nth-child(even), .contents.private-invest .list-products > li.lb {
-      margin-right: 0;
-      margin-left: 31px; }
-    .contents.private-invest .list-products > li:nth-child(6n+7), .contents.private-invest .list-products > li:nth-child(6n+8), .contents.private-invest .list-products > li.sextuple {
-      position: relative;
-      padding-top: 25px; }
-      .contents.private-invest .list-products > li:nth-child(6n+7):before, .contents.private-invest .list-products > li:nth-child(6n+8):before, .contents.private-invest .list-products > li.sextuple:before {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 0;
-        right: -100%;
-        left: -100%;
-        height: 1px;
-        background-color: #e2e6ec; }
-    .contents.private-invest .list-products > li > a:hover {
-      text-decoration: none; }
-.contents.private-invest em.convert.price span {
-  display: inline-block;
-  margin-right: 1px;
-  height: 20px;
-  text-indent: -9999px;
-  vertical-align: middle; }
-  .contents.private-invest em.convert.price span.price0 {
-    background-image: url(/assets/images/sprites.png);
-    background-position: -800px -553px;
-    width: 18px;
-    height: 20px; }
-  .contents.private-invest em.convert.price span.price1 {
-    background-image: url(/assets/images/sprites.png);
-    background-position: -782px -371px;
-    width: 7px;
-    height: 20px; }
-  .contents.private-invest em.convert.price span.price2 {
-    background-image: url(/assets/images/sprites.png);
-    background-position: -629px -650px;
-    width: 15px;
-    height: 20px; }
-  .contents.private-invest em.convert.price span.price3 {
-    background-image: url(/assets/images/sprites.png);
-    background-position: -649px -650px;
-    width: 15px;
-    height: 20px; }
-  .contents.private-invest em.convert.price span.price4 {
-    background-image: url(/assets/images/sprites.png);
-    background-position: -544px -650px;
-    width: 17px;
-    height: 20px; }
-  .contents.private-invest em.convert.price span.price5 {
-    background-image: url(/assets/images/sprites.png);
-    background-position: -669px -650px;
-    width: 14px;
-    height: 20px; }
-  .contents.private-invest em.convert.price span.price6 {
-    background-image: url(/assets/images/sprites.png);
-    background-position: -587px -650px;
-    width: 16px;
-    height: 20px; }
-  .contents.private-invest em.convert.price span.price7 {
-    background-image: url(/assets/images/sprites.png);
-    background-position: -688px -650px;
-    width: 14px;
-    height: 20px; }
-  .contents.private-invest em.convert.price span.price8 {
-    background-image: url(/assets/images/sprites.png);
-    background-position: -608px -650px;
-    width: 16px;
-    height: 20px; }
-  .contents.private-invest em.convert.price span.price9 {
-    background-image: url(/assets/images/sprites.png);
-    background-position: -566px -650px;
-    width: 16px;
-    height: 20px; }
-  .contents.private-invest em.convert.price span.price-percent {
-    background-image: url(/assets/images/sprites.png);
-    background-position: -492px -650px;
-    width: 22px;
-    height: 20px; }
-.contents.private-invest .product {
-  display: block;
-  position: relative;
-  overflow: hidden;
-  height: 213px;
-  color: #252525;
-  border: 1px solid #d4dae4;
-  border-radius: 18px;
-  background-color: #fff; }
-  .contents.private-invest .product > .options {
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 2;
-    border-radius: 18px 0 0 0; }
-    .contents.private-invest .product > .options > em {
-      position: absolute;
+      border-radius: 37px;
+      background-color: #fff;
+      transition: background-color 0.2s linear, color 0.2s; }
+      .contents.private-invest .paging > a:hover, .contents.private-invest .paging > a.selected {
+        font-weight: 700;
+        color: #fff;
+        text-decoration: none;
+        background-color: #ff4776;
+        transition: background-color 0.2s linear, color 0.2s; }
+    .contents.private-invest .paging > .paging-left {
       position: absolute;
       top: 0;
-      left: 0;
-      text-indent: -9999px; }
-    .contents.private-invest .product > .options > .invest-type01 {
-      border-radius: 18px 0px 0px 0px;
-      background-image: url(/assets/images/sprites.png);
-      background-position: -553px -581px;
-      width: 49px;
-      height: 49px; }
-    .contents.private-invest .product > .options > .new {
-      background-image: url(/assets/images/sprites.png);
-      background-position: -499px -581px;
-      width: 49px;
-      height: 49px; }
-    .contents.private-invest .product > .options > .user-in {
-      top: 10px;
-      left: auto;
-      right: 16px;
-      font-size: 0.750em;
-      color: #6b7581;
-      text-indent: 0px; }
-    .contents.private-invest .product > .options > .favorate {
-      top: 14px;
-      right: 14px;
-      left: auto;
-      background-image: url(/assets/images/sprites.png);
-      background-position: -782px -521px;
-      width: 8px;
-      height: 8px; }
-  .contents.private-invest .product > .trust-ratings {
-    display: block;
-    float: left;
-    position: relative;
-    z-index: 1;
-    padding: 28px 0 0 0;
-    height: 185px;
-    width: 254px;
-    border-right: 1px solid #e6e9ee;
-    border-radius: 18px 0 0 0; }
-    .contents.private-invest .product > .trust-ratings > p {
-      float: left; }
-    .contents.private-invest .product > .trust-ratings .borrowing-purposes {
-      margin-right: 6px;
-      height: 84px;
-      width: 104px; }
-      .contents.private-invest .product > .trust-ratings .borrowing-purposes > .tooltip {
-        left: 19px; }
-    .contents.private-invest .product > .trust-ratings .borrowing-count {
-      padding-top: 28px; }
-      .contents.private-invest .product > .trust-ratings .borrowing-count > .convert > em {
-        display: inline-block;
-        height: 44px;
-        text-indent: -9999px; }
-        .contents.private-invest .product > .trust-ratings .borrowing-count > .convert > em.bid0 {
-          background-image: url(/assets/images/sprites.png);
-          background-position: -659px -581px;
-          width: 23px;
-          height: 44px; }
-        .contents.private-invest .product > .trust-ratings .borrowing-count > .convert > em.bid1 {
-          background-image: url(/assets/images/sprites.png);
-          background-position: -782px 0px;
-          width: 13px;
-          height: 44px; }
-        .contents.private-invest .product > .trust-ratings .borrowing-count > .convert > em.bid2 {
-          background-image: url(/assets/images/sprites.png);
-          background-position: -56px -695px;
-          width: 23px;
-          height: 44px; }
-        .contents.private-invest .product > .trust-ratings .borrowing-count > .convert > em.bid3 {
-          background-image: url(/assets/images/sprites.png);
-          background-position: -687px -429px;
-          width: 24px;
-          height: 44px; }
-        .contents.private-invest .product > .trust-ratings .borrowing-count > .convert > em.bid4 {
-          background-image: url(/assets/images/sprites.png);
-          background-position: -687px -380px;
-          width: 25px;
-          height: 44px; }
-        .contents.private-invest .product > .trust-ratings .borrowing-count > .convert > em.bid5 {
-          background-image: url(/assets/images/sprites.png);
-          background-position: -28px -695px;
-          width: 23px;
-          height: 44px; }
-        .contents.private-invest .product > .trust-ratings .borrowing-count > .convert > em.bid6 {
-          background-image: url(/assets/images/sprites.png);
-          background-position: -84px -695px;
-          width: 23px;
-          height: 44px; }
-        .contents.private-invest .product > .trust-ratings .borrowing-count > .convert > em.bid7 {
-          background-image: url(/assets/images/sprites.png);
-          background-position: 0px -695px;
-          width: 23px;
-          height: 44px; }
-        .contents.private-invest .product > .trust-ratings .borrowing-count > .convert > em.bid8 {
-          background-image: url(/assets/images/sprites.png);
-          background-position: -687px -478px;
-          width: 24px;
-          height: 44px; }
-        .contents.private-invest .product > .trust-ratings .borrowing-count > .convert > em.bid9 {
-          background-image: url(/assets/images/sprites.png);
-          background-position: -687px -527px;
-          width: 24px;
-          height: 44px; }
-    .contents.private-invest .product > .trust-ratings .credit-rating {
-      padding-top: 28px; }
-      .contents.private-invest .product > .trust-ratings .credit-rating > .convert > em {
-        display: inline-block;
-        height: 44px;
-        text-indent: -9999px; }
-        .contents.private-invest .product > .trust-ratings .credit-rating > .convert > em.overdue-a {
-          background-image: url(/assets/images/sprites.png);
-          background-position: -731px -439px;
-          width: 35px;
-          height: 44px; }
-        .contents.private-invest .product > .trust-ratings .credit-rating > .convert > em.overdue-b {
-          background-image: url(/assets/images/sprites.png);
-          background-position: -687px -233px;
-          width: 28px;
-          height: 44px; }
-        .contents.private-invest .product > .trust-ratings .credit-rating > .convert > em.overdue-c {
-          background-image: url(/assets/images/sprites.png);
-          background-position: -687px -331px;
-          width: 26px;
-          height: 44px; }
-        .contents.private-invest .product > .trust-ratings .credit-rating > .convert > em.overdue-d {
-          background-image: url(/assets/images/sprites.png);
-          background-position: -687px -282px;
-          width: 28px;
-          height: 44px; }
-    .contents.private-invest .product > .trust-ratings .tooltip {
-      display: block;
-      position: absolute;
-      top: 18px;
-      bottom: auto;
-      z-index: 100;
-      padding: 0 8px;
-      font-size: 0.750em;
-      color: #6b7581;
-      text-align: center;
-      line-height: 25px;
-      white-space: nowrap;
-      border: 1px solid #c3d0e1;
-      border-radius: 5px;
-      background-color: #fff; }
-      .contents.private-invest .product > .trust-ratings .tooltip:before {
-        content: '';
-        display: block;
-        position: absolute;
-        top: auto;
-        bottom: -6px;
-        left: 50%;
-        margin-left: -5.5px;
-        background-image: url(/assets/images/sprites.png);
-        background-position: -782px -453px;
-        width: 11px;
-        height: 6px; }
-    .contents.private-invest .product > .trust-ratings .p-i {
-      clear: both;
-      padding: 11px 0 0 26px; }
-      .contents.private-invest .product > .trust-ratings .p-i > p {
-        float: left;
-        font-size: 1.750em;
-        color: #252525; }
-        .contents.private-invest .product > .trust-ratings .p-i > p > span {
-          display: block;
-          margin-top: 7px;
-          font-size: 0.429em;
-          color: #c4c9d1;
-          vertical-align: baseline; }
-      .contents.private-invest .product > .trust-ratings .p-i > .duration {
-        padding: 0 10px;
-        text-align: center; }
-        .contents.private-invest .product > .trust-ratings .p-i > .duration > em:before {
-          content: '-';
-          display: inline-block;
-          margin-right: 10px;
-          vertical-align: middle; }
-        .contents.private-invest .product > .trust-ratings .p-i > .duration > em:after {
-          content: '-';
-          display: inline-block;
-          margin-left: 9px;
-          vertical-align: middle; }
-  .contents.private-invest .product > .info {
-    display: block;
-    float: left;
-    padding: 46px 25px 0 25px;
-    width: 242px;
-    font-size: 0.750em; }
-    .contents.private-invest .product > .info .idx {
-      font-size: 1.167em;
-      color: #252525; }
-      .contents.private-invest .product > .info .idx:after {
-        content: '/';
-        margin: 0 4px 0 7px;
-        color: #c4c9d1; }
-    .contents.private-invest .product > .info .user {
-      font-size: 1.167em;
-      color: #252525; }
-    .contents.private-invest .product > .info .desc {
-      margin-top: 5px;
-      color: #6b7581; }
-    .contents.private-invest .product > .info .has-information {
+      left: 0; }
+    .contents.private-invest .paging > .sorting .btn-select {
+      float: left;
       position: relative;
-      overflow: hidden;
-      margin-top: 14px; }
-      .contents.private-invest .product > .info .has-information input[type=checkbox] {
-        position: absolute;
-        top: -100%;
-        left: -100%; }
-      .contents.private-invest .product > .info .has-information input[type=checkbox]:checked + label {
-        color: #ff6000; }
-      .contents.private-invest .product > .info .has-information input[type=checkbox].checked + label {
-        color: #ff6000; }
-      .contents.private-invest .product > .info .has-information label {
-        margin-right: 6px;
-        color: #c4c9d1; }
-    .contents.private-invest .product > .info .progress {
-      display: block;
-      position: relative;
-      overflow: hidden;
-      margin-top: 19px;
-      padding: 17px 0 0 0; }
-      .contents.private-invest .product > .info .progress:before {
-        content: '';
+      z-index: 500;
+      margin-right: 20px;
+      text-align: left; }
+      .contents.private-invest .paging > .sorting .btn-select > a {
         display: block;
+        padding: 0 33px;
+        font-size: 0.813em;
+        color: #142c66;
+        line-height: 35px;
+        border: 1px solid #d4dae4;
+        border-radius: 35px;
+        background-color: #fff; }
+        .contents.private-invest .paging > .sorting .btn-select > a:after {
+          content: '';
+          display: inline-block;
+          margin: -2px 0 0 9px;
+          vertical-align: middle;
+          background-image: url(/assets/images/sprites.png);
+          background-position: -782px -542px;
+          width: 9px;
+          height: 5px; }
+        .contents.private-invest .paging > .sorting .btn-select > a:hover {
+          text-decoration: none; }
+      .contents.private-invest .paging > .sorting .btn-select .list-sorting {
+        display: none;
         position: absolute;
-        top: 0;
+        top: 18px;
         right: 0;
         left: 0;
-        height: 5px;
-        width: 100%;
-        background-color: #d5d9e1; }
-      .contents.private-invest .product > .info .progress > .value {
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 5px;
-        width: 0%;
-        background-color: #00bb00;
-        -webkit-animation-delay: 1s;
-                animation-delay: 1s; }
-      .contents.private-invest .product > .info .progress > time {
-        color: #ff6000; }
-        .contents.private-invest .product > .info .progress > time:before {
-          content: '/';
+        overflow: hidden;
+        padding-top: 20px;
+        border: 1px solid #d4dae4;
+        border-top: 0px;
+        border-radius: 0px 0px 18px 18px;
+        background-color: #fff; }
+        .contents.private-invest .paging > .sorting .btn-select .list-sorting > li > a {
           display: inline-block;
-          margin: 0 6px 0 3px;
-          color: #c4c9d1; }
-  .contents.private-invest .product:hover > .hover {
-    display: block;
-    -webkit-animation-duration: 0.3s;
-            animation-duration: 0.3s; }
-  .contents.private-invest .product > .hover {
-    display: none;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 200;
-    height: 100%;
-    width: 100%;
-    text-align: center;
-    border-radius: 18px; }
-    .contents.private-invest .product > .hover > button {
-      display: block;
+          padding-left: 34px;
+          font-size: 0.813em;
+          color: #142c66;
+          line-height: 34px; }
+          .contents.private-invest .paging > .sorting .btn-select .list-sorting > li > a:hover {
+            color: #ff4776;
+            text-decoration: none; }
+      .contents.private-invest .paging > .sorting .btn-select.hover > a {
+        position: relative;
+        z-index: 1;
+        border-bottom: 0px;
+        border-radius: 18px 18px 0px 0px; }
+      .contents.private-invest .paging > .sorting .btn-select.hover .list-sorting {
+        display: block; }
+    .contents.private-invest .paging > .sorting .rating-popup {
+      display: none;
       position: absolute;
-      top: 13px;
-      right: 17px;
-      z-index: 2;
-      font-size: 12px;
-      color: #c4c9d1;
-      vertical-align: middle;
-      line-height: 18px; }
-      .contents.private-invest .product > .hover > button:before {
+      top: 54px;
+      z-index: 900;
+      padding: 0;
+      border: 1px solid #d4dae4;
+      background-color: #fff; }
+      .contents.private-invest .paging > .sorting .rating-popup:before {
         content: '';
-        display: inline-block;
-        margin-top: -2px;
-        margin-right: 5px;
-        vertical-align: middle;
+        position: absolute;
+        top: -20px;
+        left: 220px;
         background-image: url(/assets/images/sprites.png);
-        background-position: -782px -508px;
-        width: 8px;
-        height: 8px; }
-      .contents.private-invest .product > .hover > button:hover {
-        text-decoration: underline; }
-      .contents.private-invest .product > .hover > button.selected:before {
-        background-image: url(/assets/images/sprites.png);
-        background-position: -782px -521px;
-        width: 8px;
-        height: 8px; }
-    .contents.private-invest .product > .hover > span {
-      font-size: 1.375em;
-      font-weight: bold;
-      color: #fff;
-      line-height: 213px; }
-    .contents.private-invest .product > .hover:before {
-      content: '';
+        background-position: -428px -650px;
+        width: 31px;
+        height: 20px; }
+      .contents.private-invest .paging > .sorting .rating-popup .btn-popup-close {
+        position: absolute;
+        top: 13px;
+        right: 13px; }
+      .contents.private-invest .paging > .sorting .rating-popup .list-example {
+        padding: 174px 409px 188px 186px;
+        height: 83px;
+        width: 193px; }
+        .contents.private-invest .paging > .sorting .rating-popup .list-example > li {
+          display: block;
+          float: left;
+          height: 83px; }
+          .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure figcaption {
+            position: absolute; }
+            .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure figcaption:before {
+              content: '';
+              display: block; }
+            .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure figcaption strong {
+              margin-top: 6px;
+              font-size: 0.875em;
+              color: #6b7581; }
+            .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure figcaption .box {
+              box-sizing: border-box;
+              padding: 10px 0 10px 20px;
+              width: 100%;
+              font-size: 0.750em;
+              color: #6b7581;
+              line-height: 16px;
+              text-align: left;
+              border: 1px solid #cdd4de; }
+          .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.type {
+            margin-right: 24px; }
+            .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.type figcaption {
+              bottom: 54px;
+              left: 137px;
+              width: 160px;
+              text-align: center; }
+              .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.type figcaption:before {
+                margin: 0 auto;
+                background-image: url(/assets/images/sprites.png);
+                background-position: -800px -604px;
+                width: 8px;
+                height: 38px; }
+              .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.type figcaption .box {
+                position: relative;
+                margin-top: 9px; }
+                .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.type figcaption .box:before {
+                  content: '';
+                  display: block;
+                  position: absolute;
+                  top: 14px;
+                  left: 13px;
+                  background-image: url(/assets/images/sprites.png);
+                  background-position: -782px -585px;
+                  width: 2px;
+                  height: 8px; }
+          .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.cnt {
+            margin-right: 8px; }
+            .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.cnt figcaption {
+              top: 51px;
+              left: 218px;
+              padding-top: 63px;
+              padding-bottom: 43px;
+              width: 150px;
+              text-align: center; }
+              .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.cnt figcaption:before {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                margin-left: -4px;
+                background-image: url(/assets/images/sprites.png);
+                background-position: -800px -647px;
+                width: 8px;
+                height: 38px; }
+              .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.cnt figcaption .box {
+                position: absolute;
+                top: 0; }
+          .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.overdue figcaption {
+            top: 84px;
+            left: 380px;
+            width: 282px; }
+            .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.overdue figcaption:before {
+              position: absolute;
+              top: 50%;
+              left: 0;
+              margin-top: -4px;
+              background-image: url(/assets/images/sprites.png);
+              background-position: -204px -470px;
+              width: 102px;
+              height: 8px; }
+            .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.overdue figcaption strong {
+              display: block;
+              position: absolute;
+              top: 50%;
+              left: 0px;
+              margin-top: -20px;
+              width: 102px;
+              text-align: center; }
+            .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.overdue figcaption table {
+              float: right;
+              width: 180px;
+              border: 1px solid #cdd4de; }
+              .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.overdue figcaption table tbody tr.top th, .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.overdue figcaption table tbody tr.top td {
+                border-top: 0; }
+              .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.overdue figcaption table tbody th {
+                width: 52px;
+                text-align: center;
+                border-top: 1px solid #cdd4de; }
+                .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.overdue figcaption table tbody th > .convert > em {
+                  display: inline-block;
+                  height: 30px;
+                  text-indent: -9999px; }
+                  .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.overdue figcaption table tbody th > .convert > em.overdue-n {
+                    background-image: url(/assets/images/sprites.png);
+                    background-position: -800px -175px;
+                    width: 17px;
+                    height: 30px; }
+                  .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.overdue figcaption table tbody th > .convert > em.overdue-a {
+                    background-image: url(/assets/images/sprites.png);
+                    background-position: -306px -650px;
+                    width: 24px;
+                    height: 30px; }
+                  .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.overdue figcaption table tbody th > .convert > em.overdue-b {
+                    background-image: url(/assets/images/sprites.png);
+                    background-position: -800px -35px;
+                    width: 19px;
+                    height: 30px; }
+                  .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.overdue figcaption table tbody th > .convert > em.overdue-c {
+                    margin-left: -2px;
+                    background-image: url(/assets/images/sprites.png);
+                    background-position: -800px -70px;
+                    width: 18px;
+                    height: 30px; }
+                  .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.overdue figcaption table tbody th > .convert > em.overdue-d {
+                    background-image: url(/assets/images/sprites.png);
+                    background-position: -800px 0px;
+                    width: 19px;
+                    height: 30px; }
+              .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.overdue figcaption table tbody td {
+                padding-left: 5px;
+                font-size: 0.875em;
+                color: #6b7581;
+                line-height: 53px;
+                border-top: 1px solid #cdd4de; }
+            .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.overdue figcaption .tb-bottom {
+              clear: both;
+              padding-top: 7px;
+              font-size: 0.750em;
+              color: #6b7581;
+              text-align: right; }
+              .contents.private-invest .paging > .sorting .rating-popup .list-example > li figure.overdue figcaption .tb-bottom:before {
+                content: '';
+                display: inline-block;
+                margin-right: 4px;
+                height: 2px;
+                width: 2px;
+                vertical-align: middle;
+                background-color: #ff6000; }
+  .contents.private-invest .list-products {
+    position: relative;
+    margin-top: 40px;
+    width: 100%; }
+    .contents.private-invest .list-products > li {
       display: block;
+      float: left;
+      margin: 0 31px 25px 0;
+      width: 549px; }
+      .contents.private-invest .list-products > li:nth-child(even), .contents.private-invest .list-products > li.lb {
+        margin-right: 0;
+        margin-left: 31px; }
+      .contents.private-invest .list-products > li:nth-child(6n+7), .contents.private-invest .list-products > li:nth-child(6n+8), .contents.private-invest .list-products > li.sextuple {
+        position: relative;
+        padding-top: 25px; }
+        .contents.private-invest .list-products > li:nth-child(6n+7):before, .contents.private-invest .list-products > li:nth-child(6n+8):before, .contents.private-invest .list-products > li.sextuple:before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          right: -100%;
+          left: -100%;
+          height: 1px;
+          background-color: #e2e6ec; }
+      .contents.private-invest .list-products > li > a:hover {
+        text-decoration: none; }
+  .contents.private-invest em.convert.price span {
+    display: inline-block;
+    margin-right: 1px;
+    height: 20px;
+    text-indent: -9999px;
+    vertical-align: middle; }
+    .contents.private-invest em.convert.price span.price0 {
+      background-image: url(/assets/images/sprites.png);
+      background-position: -800px -553px;
+      width: 18px;
+      height: 20px; }
+    .contents.private-invest em.convert.price span.price1 {
+      background-image: url(/assets/images/sprites.png);
+      background-position: -782px -348px;
+      width: 7px;
+      height: 20px; }
+    .contents.private-invest em.convert.price span.price2 {
+      background-image: url(/assets/images/sprites.png);
+      background-position: -629px -650px;
+      width: 15px;
+      height: 20px; }
+    .contents.private-invest em.convert.price span.price3 {
+      background-image: url(/assets/images/sprites.png);
+      background-position: -649px -650px;
+      width: 15px;
+      height: 20px; }
+    .contents.private-invest em.convert.price span.price4 {
+      background-image: url(/assets/images/sprites.png);
+      background-position: -544px -650px;
+      width: 17px;
+      height: 20px; }
+    .contents.private-invest em.convert.price span.price5 {
+      background-image: url(/assets/images/sprites.png);
+      background-position: -669px -650px;
+      width: 14px;
+      height: 20px; }
+    .contents.private-invest em.convert.price span.price6 {
+      background-image: url(/assets/images/sprites.png);
+      background-position: -587px -650px;
+      width: 16px;
+      height: 20px; }
+    .contents.private-invest em.convert.price span.price7 {
+      background-image: url(/assets/images/sprites.png);
+      background-position: -688px -650px;
+      width: 14px;
+      height: 20px; }
+    .contents.private-invest em.convert.price span.price8 {
+      background-image: url(/assets/images/sprites.png);
+      background-position: -608px -650px;
+      width: 16px;
+      height: 20px; }
+    .contents.private-invest em.convert.price span.price9 {
+      background-image: url(/assets/images/sprites.png);
+      background-position: -566px -650px;
+      width: 16px;
+      height: 20px; }
+    .contents.private-invest em.convert.price span.price-percent {
+      background-image: url(/assets/images/sprites.png);
+      background-position: -492px -650px;
+      width: 22px;
+      height: 20px; }
+  .contents.private-invest .product {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    height: 213px;
+    color: #252525;
+    border: 1px solid #d4dae4;
+    border-radius: 18px;
+    background-color: #fff; }
+    .contents.private-invest .product > .options {
+      overflow: hidden;
       position: absolute;
       top: 0;
       right: 0;
       bottom: 0;
       left: 0;
-      z-index: -1;
-      height: 100%;
-      width: 100%;
-      background: url(/assets/images/bg_product_highlights.png) left top repeat; }
-  .contents.private-invest .product.detail {
-    margin-top: 40px;
-    height: auto; }
-    .contents.private-invest .product.detail > .options {
-      height: 320px;
-      border-bottom: 1px solid #d4dae4; }
-      .contents.private-invest .product.detail > .options > .invest-type01 {
+      z-index: 2;
+      border-radius: 18px 0 0 0; }
+      .contents.private-invest .product > .options > em {
+        position: absolute;
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-indent: -9999px; }
+      .contents.private-invest .product > .options > .invest-type01 {
+        border-radius: 18px 0px 0px 0px;
         background-image: url(/assets/images/sprites.png);
-        background-position: -97px -510px;
-        width: 66px;
-        height: 66px; }
-      .contents.private-invest .product.detail > .options > .new {
+        background-position: -553px -581px;
+        width: 49px;
+        height: 49px; }
+      .contents.private-invest .product > .options > .new {
         background-image: url(/assets/images/sprites.png);
-        background-position: -517px -94px;
-        width: 85px;
-        height: 85px; }
-      .contents.private-invest .product.detail > .options > .user-in {
-        top: 15px;
+        background-position: -499px -581px;
+        width: 49px;
+        height: 49px; }
+      .contents.private-invest .product > .options > .user-in {
+        top: 10px;
         left: auto;
-        right: 19px;
-        font-size: 0.875em;
+        right: 16px;
+        font-size: 0.750em;
         color: #6b7581;
         text-indent: 0px; }
-      .contents.private-invest .product.detail > .options > .favorate {
-        top: 17px;
-        right: 19px;
+      .contents.private-invest .product > .options > .favorate {
+        top: 14px;
+        right: 14px;
         left: auto;
         background-image: url(/assets/images/sprites.png);
-        background-position: -782px -521px;
+        background-position: -782px -517px;
         width: 8px;
         height: 8px; }
-    .contents.private-invest .product.detail > .profile {
+    .contents.private-invest .product > .trust-ratings {
+      display: block;
+      float: left;
       position: relative;
-      z-index: 200;
-      margin: 0 auto;
-      width: 251px;
-      text-align: center; }
-    .contents.private-invest .product.detail > .user-info {
-      display: block;
-      position: absolute;
-      top: 86px;
-      left: 189px;
-      z-index: 100;
-      padding: 14px 20px 19px 20px;
-      width: 208px;
-      border: 2px solid #d4dae4;
-      border-radius: 18px;
-      background-color: #fff; }
-      .contents.private-invest .product.detail > .user-info:before {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 93px;
-        right: -100px;
-        height: 2px;
-        width: 100px;
-        background-color: #d4dae4; }
-      .contents.private-invest .product.detail > .user-info .list-info > li {
-        display: block;
-        float: left;
-        font-size: 0.875em;
-        color: #252525;
-        line-height: 35px; }
-        .contents.private-invest .product.detail > .user-info .list-info > li:nth-child(odd) {
-          clear: both; }
-          .contents.private-invest .product.detail > .user-info .list-info > li:nth-child(odd):after {
-            content: '/';
-            margin-right: 7px;
-            margin-left: 8px;
-            color: #c4c9d1; }
-    .contents.private-invest .product.detail > .trust-ratings {
-      display: block;
-      float: none;
-      position: absolute;
-      top: 66px;
-      right: 84px;
-      z-index: 100;
-      padding: 0 0 24px 0;
-      height: auto;
-      width: 355px;
-      border: 2px solid #d4dae4;
-      border-radius: 18px;
-      background-color: #fff; }
-      .contents.private-invest .product.detail > .trust-ratings:before {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 113px;
-        left: -100px;
-        height: 2px;
-        width: 100px;
-        background-color: #d4dae4; }
-      .contents.private-invest .product.detail > .trust-ratings > .idx {
-        padding-left: 29px;
-        font-size: 0.875em;
-        color: #252525;
-        line-height: 42px;
-        border-bottom: 1px solid #e6e9ee; }
-      .contents.private-invest .product.detail > .trust-ratings > p {
+      z-index: 1;
+      padding: 28px 0 0 0;
+      height: 185px;
+      width: 254px;
+      border-right: 1px solid #e6e9ee;
+      border-radius: 18px 0 0 0; }
+      .contents.private-invest .product > .trust-ratings > p {
         float: left; }
-      .contents.private-invest .product.detail > .trust-ratings em.convert.price span {
-        display: inline-block;
-        margin-right: 1px;
-        height: 28px;
-        text-indent: -9999px;
-        vertical-align: middle; }
-        .contents.private-invest .product.detail > .trust-ratings em.convert.price span.price0 {
+      .contents.private-invest .product > .trust-ratings .borrowing-purposes {
+        margin-right: 6px;
+        height: 84px;
+        width: 104px; }
+        .contents.private-invest .product > .trust-ratings .borrowing-purposes > .tooltip {
+          left: 19px; }
+      .contents.private-invest .product > .trust-ratings .borrowing-count {
+        padding-top: 28px; }
+        .contents.private-invest .product > .trust-ratings .borrowing-count > .convert > em {
+          display: inline-block;
+          height: 44px;
+          text-indent: -9999px; }
+          .contents.private-invest .product > .trust-ratings .borrowing-count > .convert > em.bid0 {
+            background-image: url(/assets/images/sprites.png);
+            background-position: -659px -581px;
+            width: 23px;
+            height: 44px; }
+          .contents.private-invest .product > .trust-ratings .borrowing-count > .convert > em.bid1 {
+            background-image: url(/assets/images/sprites.png);
+            background-position: -782px 0px;
+            width: 13px;
+            height: 44px; }
+          .contents.private-invest .product > .trust-ratings .borrowing-count > .convert > em.bid2 {
+            background-image: url(/assets/images/sprites.png);
+            background-position: -56px -695px;
+            width: 23px;
+            height: 44px; }
+          .contents.private-invest .product > .trust-ratings .borrowing-count > .convert > em.bid3 {
+            background-image: url(/assets/images/sprites.png);
+            background-position: -687px -429px;
+            width: 24px;
+            height: 44px; }
+          .contents.private-invest .product > .trust-ratings .borrowing-count > .convert > em.bid4 {
+            background-image: url(/assets/images/sprites.png);
+            background-position: -687px -380px;
+            width: 25px;
+            height: 44px; }
+          .contents.private-invest .product > .trust-ratings .borrowing-count > .convert > em.bid5 {
+            background-image: url(/assets/images/sprites.png);
+            background-position: -28px -695px;
+            width: 23px;
+            height: 44px; }
+          .contents.private-invest .product > .trust-ratings .borrowing-count > .convert > em.bid6 {
+            background-image: url(/assets/images/sprites.png);
+            background-position: -84px -695px;
+            width: 23px;
+            height: 44px; }
+          .contents.private-invest .product > .trust-ratings .borrowing-count > .convert > em.bid7 {
+            background-image: url(/assets/images/sprites.png);
+            background-position: 0px -695px;
+            width: 23px;
+            height: 44px; }
+          .contents.private-invest .product > .trust-ratings .borrowing-count > .convert > em.bid8 {
+            background-image: url(/assets/images/sprites.png);
+            background-position: -687px -478px;
+            width: 24px;
+            height: 44px; }
+          .contents.private-invest .product > .trust-ratings .borrowing-count > .convert > em.bid9 {
+            background-image: url(/assets/images/sprites.png);
+            background-position: -687px -527px;
+            width: 24px;
+            height: 44px; }
+      .contents.private-invest .product > .trust-ratings .credit-rating {
+        padding-top: 28px; }
+        .contents.private-invest .product > .trust-ratings .credit-rating > .convert > em {
+          display: inline-block;
+          height: 44px;
+          text-indent: -9999px; }
+          .contents.private-invest .product > .trust-ratings .credit-rating > .convert > em.overdue-a {
+            background-image: url(/assets/images/sprites.png);
+            background-position: -731px -439px;
+            width: 35px;
+            height: 44px; }
+          .contents.private-invest .product > .trust-ratings .credit-rating > .convert > em.overdue-b {
+            background-image: url(/assets/images/sprites.png);
+            background-position: -687px -233px;
+            width: 28px;
+            height: 44px; }
+          .contents.private-invest .product > .trust-ratings .credit-rating > .convert > em.overdue-c {
+            background-image: url(/assets/images/sprites.png);
+            background-position: -687px -331px;
+            width: 26px;
+            height: 44px; }
+          .contents.private-invest .product > .trust-ratings .credit-rating > .convert > em.overdue-d {
+            background-image: url(/assets/images/sprites.png);
+            background-position: -687px -282px;
+            width: 28px;
+            height: 44px; }
+      .contents.private-invest .product > .trust-ratings .tooltip {
+        display: block;
+        position: absolute;
+        top: 18px;
+        bottom: auto;
+        z-index: 100;
+        padding: 0 8px;
+        font-size: 0.750em;
+        color: #6b7581;
+        text-align: center;
+        line-height: 25px;
+        white-space: nowrap;
+        border: 1px solid #c3d0e1;
+        border-radius: 5px;
+        background-color: #fff; }
+        .contents.private-invest .product > .trust-ratings .tooltip:before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: auto;
+          bottom: -6px;
+          left: 50%;
+          margin-left: -5.5px;
           background-image: url(/assets/images/sprites.png);
-          background-position: -335px -650px;
-          width: 25px;
-          height: 28px; }
-        .contents.private-invest .product.detail > .trust-ratings em.convert.price span.price1 {
-          background-image: url(/assets/images/sprites.png);
-          background-position: -782px -49px;
-          width: 10px;
-          height: 28px; }
-        .contents.private-invest .product.detail > .trust-ratings em.convert.price span.price2 {
-          background-image: url(/assets/images/sprites.png);
-          background-position: -50px -744px;
-          width: 21px;
-          height: 28px; }
-        .contents.private-invest .product.detail > .trust-ratings em.convert.price span.price3 {
-          background-image: url(/assets/images/sprites.png);
-          background-position: -101px -744px;
-          width: 20px;
-          height: 28px; }
-        .contents.private-invest .product.detail > .trust-ratings em.convert.price span.price4 {
-          background-image: url(/assets/images/sprites.png);
-          background-position: -365px -650px;
-          width: 24px;
-          height: 28px; }
-        .contents.private-invest .product.detail > .trust-ratings em.convert.price span.price5 {
-          background-image: url(/assets/images/sprites.png);
-          background-position: -24px -744px;
-          width: 21px;
-          height: 28px; }
-        .contents.private-invest .product.detail > .trust-ratings em.convert.price span.price6 {
-          background-image: url(/assets/images/sprites.png);
-          background-position: -372px -695px;
-          width: 22px;
-          height: 28px; }
-        .contents.private-invest .product.detail > .trust-ratings em.convert.price span.price7 {
-          background-image: url(/assets/images/sprites.png);
-          background-position: -76px -744px;
-          width: 20px;
-          height: 28px; }
-        .contents.private-invest .product.detail > .trust-ratings em.convert.price span.price8 {
-          background-image: url(/assets/images/sprites.png);
-          background-position: -399px -695px;
-          width: 22px;
-          height: 28px; }
-        .contents.private-invest .product.detail > .trust-ratings em.convert.price span.price9 {
-          background-image: url(/assets/images/sprites.png);
-          background-position: -345px -695px;
-          width: 22px;
-          height: 28px; }
-        .contents.private-invest .product.detail > .trust-ratings em.convert.price span.price-percent {
-          background-image: url(/assets/images/sprites.png);
-          background-position: -731px -662px;
-          width: 30px;
-          height: 28px; }
-      .contents.private-invest .product.detail > .trust-ratings .tooltip {
-        display: none;
-        top: 32px; }
-      .contents.private-invest .product.detail > .trust-ratings .borrowing-count {
-        position: relative; }
-        .contents.private-invest .product.detail > .trust-ratings .borrowing-count .tooltip {
-          top: -11px;
-          left: -20px; }
-      .contents.private-invest .product.detail > .trust-ratings .credit-rating {
-        position: relative; }
-        .contents.private-invest .product.detail > .trust-ratings .credit-rating .tooltip {
-          top: -11px;
-          left: -17px; }
-      .contents.private-invest .product.detail > .trust-ratings .p-i {
+          background-position: -782px -449px;
+          width: 11px;
+          height: 6px; }
+      .contents.private-invest .product > .trust-ratings .p-i {
         clear: both;
-        padding: 13px 0 0 26px; }
-        .contents.private-invest .product.detail > .trust-ratings .p-i > p {
+        padding: 11px 0 0 26px; }
+        .contents.private-invest .product > .trust-ratings .p-i > p {
           float: left;
-          font-size: 2.500em;
+          font-size: 1.750em;
           color: #252525; }
-          .contents.private-invest .product.detail > .trust-ratings .p-i > p > span {
+          .contents.private-invest .product > .trust-ratings .p-i > p > span {
             display: block;
-            margin-top: 9px;
-            font-size: 0.350em;
-            color: #252525;
+            margin-top: 7px;
+            font-size: 0.429em;
+            color: #c4c9d1;
             vertical-align: baseline; }
-        .contents.private-invest .product.detail > .trust-ratings .p-i > .duration {
+        .contents.private-invest .product > .trust-ratings .p-i > .duration {
           padding: 0 10px;
           text-align: center; }
-          .contents.private-invest .product.detail > .trust-ratings .p-i > .duration > em:before {
+          .contents.private-invest .product > .trust-ratings .p-i > .duration > em:before {
             content: '-';
             display: inline-block;
             margin-right: 10px;
             vertical-align: middle; }
-          .contents.private-invest .product.detail > .trust-ratings .p-i > .duration > em:after {
+          .contents.private-invest .product > .trust-ratings .p-i > .duration > em:after {
             content: '-';
             display: inline-block;
             margin-left: 9px;
             vertical-align: middle; }
-    .contents.private-invest .product.detail > .inner {
-      margin: 0 auto;
-      width: 780px; }
-      .contents.private-invest .product.detail > .inner .stroy-summary {
-        margin-top: 48px;
-        text-align: center; }
-        .contents.private-invest .product.detail > .inner .stroy-summary h2 {
-          font-size: 1.500em;
-          font-weight: normal;
-          color: #252525;
-          text-align: left;
-          line-height: 1.2em; }
-        .contents.private-invest .product.detail > .inner .stroy-summary .desc {
-          overflow: hidden;
-          margin-top: 23px;
-          height: 88px;
-          font-size: 0.875em;
-          color: #6b7581;
-          text-align: left;
-          line-height: 22px; }
-        .contents.private-invest .product.detail > .inner .stroy-summary .btn-inline-box {
-          margin-top: 16px; }
-      .contents.private-invest .product.detail > .inner .progress {
+    .contents.private-invest .product > .info {
+      display: block;
+      float: left;
+      padding: 46px 25px 0 25px;
+      width: 242px;
+      font-size: 0.750em; }
+      .contents.private-invest .product > .info .idx {
+        font-size: 1.167em;
+        color: #252525; }
+        .contents.private-invest .product > .info .idx:after {
+          content: '/';
+          margin: 0 4px 0 7px;
+          color: #c4c9d1; }
+      .contents.private-invest .product > .info .user {
+        font-size: 1.167em;
+        color: #252525; }
+      .contents.private-invest .product > .info .desc {
+        margin-top: 5px;
+        color: #6b7581; }
+      .contents.private-invest .product > .info .has-information {
+        position: relative;
+        overflow: hidden;
+        margin-top: 14px; }
+        .contents.private-invest .product > .info .has-information input[type=checkbox] {
+          position: absolute;
+          top: -100%;
+          left: -100%; }
+        .contents.private-invest .product > .info .has-information input[type=checkbox]:checked + label {
+          color: #ff6000; }
+        .contents.private-invest .product > .info .has-information input[type=checkbox].checked + label {
+          color: #ff6000; }
+        .contents.private-invest .product > .info .has-information label {
+          margin-right: 6px;
+          color: #c4c9d1; }
+      .contents.private-invest .product > .info .progress {
         display: block;
         position: relative;
         overflow: hidden;
-        margin-top: 35px;
-        padding: 21px 0 0 0;
-        font-size: 1.000em;
-        color: #252525; }
-        .contents.private-invest .product.detail > .inner .progress:before {
+        margin-top: 19px;
+        padding: 17px 0 0 0; }
+        .contents.private-invest .product > .info .progress:before {
           content: '';
           display: block;
           position: absolute;
           top: 0;
           right: 0;
           left: 0;
-          height: 6px;
+          height: 5px;
           width: 100%;
           background-color: #d5d9e1; }
-        .contents.private-invest .product.detail > .inner .progress > .value {
+        .contents.private-invest .product > .info .progress > .value {
           display: block;
           position: absolute;
           top: 0;
           left: 0;
-          height: 6px;
+          height: 5px;
           width: 0%;
           background-color: #00bb00;
           -webkit-animation-delay: 1s;
                   animation-delay: 1s; }
-        .contents.private-invest .product.detail > .inner .progress > time {
-          float: right;
-          font-size: 0.875em;
+        .contents.private-invest .product > .info .progress > time {
           color: #ff6000; }
-    .contents.private-invest .product.detail > .hover {
+          .contents.private-invest .product > .info .progress > time:before {
+            content: '/';
+            display: inline-block;
+            margin: 0 6px 0 3px;
+            color: #c4c9d1; }
+    .contents.private-invest .product:hover > .hover {
       display: block;
+      -webkit-animation-duration: 0.3s;
+              animation-duration: 0.3s; }
+    .contents.private-invest .product > .hover {
+      display: none;
       overflow: hidden;
       position: absolute;
       top: 0;
       right: 0;
-      bottom: auto;
-      left: auto;
+      bottom: 0;
+      left: 0;
       z-index: 200;
-      height: 92px;
-      width: 51px;
+      height: 100%;
+      width: 100%;
       text-align: center;
-      border-radius: 0px; }
-      .contents.private-invest .product.detail > .hover > button {
+      border-radius: 18px; }
+      .contents.private-invest .product > .hover > button {
         display: block;
         position: absolute;
-        top: 17px;
-        right: 10px;
+        top: 13px;
+        right: 17px;
         z-index: 2;
-        width: 30px;
-        font-size: 14px;
+        font-size: 12px;
         color: #c4c9d1;
         vertical-align: middle;
-        line-height: 16px; }
-        .contents.private-invest .product.detail > .hover > button:before {
+        line-height: 18px; }
+        .contents.private-invest .product > .hover > button:before {
           content: '';
-          display: block;
-          margin: 0px auto 6px;
-          background-image: url(/assets/images/sprites.png);
-          background-position: -782px -412px;
-          width: 11px;
-          height: 11px; }
-        .contents.private-invest .product.detail > .hover > button:hover {
-          text-decoration: underline; }
-        .contents.private-invest .product.detail > .hover > button.selected:before {
-          background-image: url(/assets/images/sprites.png);
-          background-position: -782px -396px;
-          width: 11px;
-          height: 11px; }
-      .contents.private-invest .product.detail > .hover > span {
-        display: none; }
-      .contents.private-invest .product.detail > .hover:before {
-        content: none; }
-    .contents.private-invest .product.detail > .invest-product {
-      display: block;
-      position: relative;
-      margin-top: 45px;
-      height: 105px; }
-      .contents.private-invest .product.detail > .invest-product .utils {
-        position: absolute;
-        top: 28px;
-        left: 69%; }
-        .contents.private-invest .product.detail > .invest-product .utils .btn {
           display: inline-block;
-          margin-right: 17px;
+          margin-top: -2px;
+          margin-right: 5px;
+          vertical-align: middle;
+          background-image: url(/assets/images/sprites.png);
+          background-position: -782px -504px;
+          width: 8px;
+          height: 8px; }
+        .contents.private-invest .product > .hover > button:hover {
+          text-decoration: underline; }
+        .contents.private-invest .product > .hover > button.selected:before {
+          background-image: url(/assets/images/sprites.png);
+          background-position: -782px -517px;
+          width: 8px;
+          height: 8px; }
+      .contents.private-invest .product > .hover > span {
+        font-size: 1.375em;
+        font-weight: bold;
+        color: #fff;
+        line-height: 213px; }
+      .contents.private-invest .product > .hover:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+        background: url(/assets/images/bg_product_highlights.png) left top repeat; }
+    .contents.private-invest .product.detail {
+      margin-top: 40px;
+      height: auto; }
+      .contents.private-invest .product.detail > .options {
+        height: 320px;
+        border-bottom: 1px solid #d4dae4; }
+        .contents.private-invest .product.detail > .options > .invest-type01 {
+          background-image: url(/assets/images/sprites.png);
+          background-position: -97px -510px;
+          width: 66px;
+          height: 66px; }
+        .contents.private-invest .product.detail > .options > .new {
+          background-image: url(/assets/images/sprites.png);
+          background-position: -517px -94px;
+          width: 85px;
+          height: 85px; }
+        .contents.private-invest .product.detail > .options > .user-in {
+          top: 15px;
+          left: auto;
+          right: 19px;
           font-size: 0.875em;
-          color: #142c66;
-          vertical-align: middle; }
-          .contents.private-invest .product.detail > .invest-product .utils .btn:before {
-            content: '';
-            display: inline-block;
-            margin-right: 7px;
-            vertical-align: middle; }
-          .contents.private-invest .product.detail > .invest-product .utils .btn.calc:before {
-            background-image: url(/assets/images/sprites.png);
-            background-position: -126px -744px;
-            width: 21px;
-            height: 25px; }
-          .contents.private-invest .product.detail > .invest-product .utils .btn.update {
-            display: none; }
-            .contents.private-invest .product.detail > .invest-product .utils .btn.update:before {
-              background-image: url(/assets/images/sprites.png);
-              background-position: -455px -695px;
-              width: 24px;
-              height: 25px; }
-          .contents.private-invest .product.detail > .invest-product .utils .btn.cancel {
-            display: none; }
-            .contents.private-invest .product.detail > .invest-product .utils .btn.cancel:before {
-              background-image: url(/assets/images/sprites.png);
-              background-position: -426px -695px;
-              width: 24px;
-              height: 25px; }
-      .contents.private-invest .product.detail > .invest-product .status-invest {
-        display: none;
-        margin-top: 9px;
-        font-size: 0.750em;
-        color: #ff6000;
-        text-align: center; }
-      .contents.private-invest .product.detail > .invest-product.expired .btn.calc {
-        display: none; }
-      .contents.private-invest .product.detail > .invest-product.expired .btn.update,
-      .contents.private-invest .product.detail > .invest-product.expired .btn.cancel {
-        display: inline-block; }
-      .contents.private-invest .product.detail > .invest-product.expired .status-invest {
-        display: block; }
-.contents.private-invest .product-detail-view {
-  padding-bottom: 100px; }
-.contents.private-invest .intro {
-  position: relative;
-  margin-top: 40px;
-  padding: 72px 0 35px 0; }
-  .contents.private-invest .intro:before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 41px;
-    right: 44px;
-    height: 735px;
-    width: 288px;
-    background: url("/assets/images/bg_invest_private_visual01.png") left top no-repeat; }
-  .contents.private-invest .intro > .title {
-    display: block;
-    height: 46px;
-    width: 515px;
-    text-indent: -9999px;
-    background: url("/assets/images/txt/title_invest_private01.png") left top no-repeat; }
-  .contents.private-invest .intro p {
-    font-size: 0.875em;
-    color: #6b7581;
-    line-height: 22px; }
-  .contents.private-invest .intro .private-investment {
-    margin-top: 76px; }
-    .contents.private-invest .intro .private-investment > .title {
-      display: block;
-      height: 36px;
-      width: 519px;
-      text-indent: -9999px;
-      background: url("/assets/images/txt/title_invest_private02.png") left top no-repeat; }
-    .contents.private-invest .intro .private-investment dd {
-      padding-top: 16px; }
-      .contents.private-invest .intro .private-investment dd .list-intro > li {
+          color: #6b7581;
+          text-indent: 0px; }
+        .contents.private-invest .product.detail > .options > .favorate {
+          top: 17px;
+          right: 19px;
+          left: auto;
+          background-image: url(/assets/images/sprites.png);
+          background-position: -782px -517px;
+          width: 8px;
+          height: 8px; }
+      .contents.private-invest .product.detail > .profile {
         position: relative;
-        margin-top: 20px;
-        padding: 0 0 0 56px; }
-        .contents.private-invest .intro .private-investment dd .list-intro > li:before {
+        z-index: 200;
+        margin: 0 auto;
+        width: 251px;
+        text-align: center; }
+      .contents.private-invest .product.detail > .user-info {
+        display: block;
+        position: absolute;
+        top: 86px;
+        left: 189px;
+        z-index: 100;
+        padding: 14px 20px 19px 20px;
+        width: 208px;
+        border: 2px solid #d4dae4;
+        border-radius: 18px;
+        background-color: #fff; }
+        .contents.private-invest .product.detail > .user-info:before {
           content: '';
           display: block;
           position: absolute;
-          top: 0;
-          left: 0; }
-        .contents.private-invest .intro .private-investment dd .list-intro > li.seq01:before {
-          background-image: url(/assets/images/sprites.png);
-          background-position: -731px -98px;
-          width: 46px;
-          height: 44px; }
-        .contents.private-invest .intro .private-investment dd .list-intro > li.seq02:before {
-          background-image: url(/assets/images/sprites.png);
-          background-position: -731px -343px;
-          width: 46px;
-          height: 44px; }
-        .contents.private-invest .intro .private-investment dd .list-intro > li.seq03:before {
-          background-image: url(/assets/images/sprites.png);
-          background-position: -731px 0px;
-          width: 46px;
-          height: 44px; }
-      .contents.private-invest .intro .private-investment dd .list-intro strong {
+          top: 93px;
+          right: -100px;
+          height: 2px;
+          width: 100px;
+          background-color: #d4dae4; }
+        .contents.private-invest .product.detail > .user-info .list-info > li {
+          display: block;
+          float: left;
+          font-size: 0.875em;
+          color: #252525;
+          line-height: 35px; }
+          .contents.private-invest .product.detail > .user-info .list-info > li:nth-child(odd) {
+            clear: both; }
+            .contents.private-invest .product.detail > .user-info .list-info > li:nth-child(odd):after {
+              content: '/';
+              margin-right: 7px;
+              margin-left: 8px;
+              color: #c4c9d1; }
+      .contents.private-invest .product.detail > .trust-ratings {
         display: block;
-        font-size: 1.125em;
-        color: #14378c;
-        line-height: 44px; }
-      .contents.private-invest .intro .private-investment dd .list-intro p {
-        margin-top: 7px; }
+        float: none;
+        position: absolute;
+        top: 66px;
+        right: 84px;
+        z-index: 100;
+        padding: 0 0 24px 0;
+        height: auto;
+        width: 355px;
+        border: 2px solid #d4dae4;
+        border-radius: 18px;
+        background-color: #fff; }
+        .contents.private-invest .product.detail > .trust-ratings:before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 113px;
+          left: -100px;
+          height: 2px;
+          width: 100px;
+          background-color: #d4dae4; }
+        .contents.private-invest .product.detail > .trust-ratings > .idx {
+          padding-left: 29px;
+          font-size: 0.875em;
+          color: #252525;
+          line-height: 42px;
+          border-bottom: 1px solid #e6e9ee; }
+        .contents.private-invest .product.detail > .trust-ratings > p {
+          float: left; }
+        .contents.private-invest .product.detail > .trust-ratings em.convert.price span {
+          display: inline-block;
+          margin-right: 1px;
+          height: 28px;
+          text-indent: -9999px;
+          vertical-align: middle; }
+          .contents.private-invest .product.detail > .trust-ratings em.convert.price span.price0 {
+            background-image: url(/assets/images/sprites.png);
+            background-position: -335px -650px;
+            width: 25px;
+            height: 28px; }
+          .contents.private-invest .product.detail > .trust-ratings em.convert.price span.price1 {
+            background-image: url(/assets/images/sprites.png);
+            background-position: -782px -49px;
+            width: 10px;
+            height: 28px; }
+          .contents.private-invest .product.detail > .trust-ratings em.convert.price span.price2 {
+            background-image: url(/assets/images/sprites.png);
+            background-position: -50px -744px;
+            width: 21px;
+            height: 28px; }
+          .contents.private-invest .product.detail > .trust-ratings em.convert.price span.price3 {
+            background-image: url(/assets/images/sprites.png);
+            background-position: -101px -744px;
+            width: 20px;
+            height: 28px; }
+          .contents.private-invest .product.detail > .trust-ratings em.convert.price span.price4 {
+            background-image: url(/assets/images/sprites.png);
+            background-position: -365px -650px;
+            width: 24px;
+            height: 28px; }
+          .contents.private-invest .product.detail > .trust-ratings em.convert.price span.price5 {
+            background-image: url(/assets/images/sprites.png);
+            background-position: -24px -744px;
+            width: 21px;
+            height: 28px; }
+          .contents.private-invest .product.detail > .trust-ratings em.convert.price span.price6 {
+            background-image: url(/assets/images/sprites.png);
+            background-position: -372px -695px;
+            width: 22px;
+            height: 28px; }
+          .contents.private-invest .product.detail > .trust-ratings em.convert.price span.price7 {
+            background-image: url(/assets/images/sprites.png);
+            background-position: -76px -744px;
+            width: 20px;
+            height: 28px; }
+          .contents.private-invest .product.detail > .trust-ratings em.convert.price span.price8 {
+            background-image: url(/assets/images/sprites.png);
+            background-position: -399px -695px;
+            width: 22px;
+            height: 28px; }
+          .contents.private-invest .product.detail > .trust-ratings em.convert.price span.price9 {
+            background-image: url(/assets/images/sprites.png);
+            background-position: -345px -695px;
+            width: 22px;
+            height: 28px; }
+          .contents.private-invest .product.detail > .trust-ratings em.convert.price span.price-percent {
+            background-image: url(/assets/images/sprites.png);
+            background-position: -731px -662px;
+            width: 30px;
+            height: 28px; }
+        .contents.private-invest .product.detail > .trust-ratings .tooltip {
+          display: none;
+          top: 32px; }
+        .contents.private-invest .product.detail > .trust-ratings .borrowing-count {
+          position: relative; }
+          .contents.private-invest .product.detail > .trust-ratings .borrowing-count .tooltip {
+            top: -11px;
+            left: -20px; }
+        .contents.private-invest .product.detail > .trust-ratings .credit-rating {
+          position: relative; }
+          .contents.private-invest .product.detail > .trust-ratings .credit-rating .tooltip {
+            top: -11px;
+            left: -17px; }
+        .contents.private-invest .product.detail > .trust-ratings .p-i {
+          clear: both;
+          padding: 13px 0 0 26px; }
+          .contents.private-invest .product.detail > .trust-ratings .p-i > p {
+            float: left;
+            font-size: 2.500em;
+            color: #252525; }
+            .contents.private-invest .product.detail > .trust-ratings .p-i > p > span {
+              display: block;
+              margin-top: 9px;
+              font-size: 0.350em;
+              color: #252525;
+              vertical-align: baseline; }
+          .contents.private-invest .product.detail > .trust-ratings .p-i > .duration {
+            padding: 0 10px;
+            text-align: center; }
+            .contents.private-invest .product.detail > .trust-ratings .p-i > .duration > em:before {
+              content: '-';
+              display: inline-block;
+              margin-right: 10px;
+              vertical-align: middle; }
+            .contents.private-invest .product.detail > .trust-ratings .p-i > .duration > em:after {
+              content: '-';
+              display: inline-block;
+              margin-left: 9px;
+              vertical-align: middle; }
+      .contents.private-invest .product.detail > .inner {
+        margin: 0 auto;
+        width: 780px; }
+        .contents.private-invest .product.detail > .inner .stroy-summary {
+          margin-top: 48px;
+          text-align: center; }
+          .contents.private-invest .product.detail > .inner .stroy-summary h2 {
+            font-size: 1.500em;
+            font-weight: normal;
+            color: #252525;
+            text-align: left;
+            line-height: 1.2em; }
+          .contents.private-invest .product.detail > .inner .stroy-summary .desc {
+            overflow: hidden;
+            margin-top: 23px;
+            height: 88px;
+            font-size: 0.875em;
+            color: #6b7581;
+            text-align: left;
+            line-height: 22px; }
+          .contents.private-invest .product.detail > .inner .stroy-summary .btn-inline-box {
+            margin-top: 16px; }
+        .contents.private-invest .product.detail > .inner .progress {
+          display: block;
+          position: relative;
+          overflow: hidden;
+          margin-top: 35px;
+          padding: 21px 0 0 0;
+          font-size: 1.000em;
+          color: #252525; }
+          .contents.private-invest .product.detail > .inner .progress:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            height: 6px;
+            width: 100%;
+            background-color: #d5d9e1; }
+          .contents.private-invest .product.detail > .inner .progress > .value {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 6px;
+            width: 0%;
+            background-color: #00bb00;
+            -webkit-animation-delay: 1s;
+                    animation-delay: 1s; }
+          .contents.private-invest .product.detail > .inner .progress > time {
+            float: right;
+            font-size: 0.875em;
+            color: #ff6000; }
+      .contents.private-invest .product.detail > .hover {
+        display: block;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: auto;
+        left: auto;
+        z-index: 200;
+        height: 92px;
+        width: 51px;
+        text-align: center;
+        border-radius: 0px; }
+        .contents.private-invest .product.detail > .hover > button {
+          display: block;
+          position: absolute;
+          top: 17px;
+          right: 10px;
+          z-index: 2;
+          width: 30px;
+          font-size: 14px;
+          color: #c4c9d1;
+          vertical-align: middle;
+          line-height: 16px; }
+          .contents.private-invest .product.detail > .hover > button:before {
+            content: '';
+            display: block;
+            margin: 0px auto 6px;
+            background-image: url(/assets/images/sprites.png);
+            background-position: -782px -408px;
+            width: 11px;
+            height: 11px; }
+          .contents.private-invest .product.detail > .hover > button:hover {
+            text-decoration: underline; }
+          .contents.private-invest .product.detail > .hover > button.selected:before {
+            background-image: url(/assets/images/sprites.png);
+            background-position: -782px -392px;
+            width: 11px;
+            height: 11px; }
+        .contents.private-invest .product.detail > .hover > span {
+          display: none; }
+        .contents.private-invest .product.detail > .hover:before {
+          content: none; }
+      .contents.private-invest .product.detail > .invest-product {
+        display: block;
+        position: relative;
+        margin-top: 45px;
+        height: 105px; }
+        .contents.private-invest .product.detail > .invest-product .utils {
+          position: absolute;
+          top: 28px;
+          left: 69%; }
+          .contents.private-invest .product.detail > .invest-product .utils .btn {
+            display: inline-block;
+            margin-right: 17px;
+            font-size: 0.875em;
+            color: #142c66;
+            vertical-align: middle; }
+            .contents.private-invest .product.detail > .invest-product .utils .btn:before {
+              content: '';
+              display: inline-block;
+              margin-right: 7px;
+              vertical-align: middle; }
+            .contents.private-invest .product.detail > .invest-product .utils .btn.calc:before {
+              background-image: url(/assets/images/sprites.png);
+              background-position: -126px -744px;
+              width: 21px;
+              height: 25px; }
+            .contents.private-invest .product.detail > .invest-product .utils .btn.update {
+              display: none; }
+              .contents.private-invest .product.detail > .invest-product .utils .btn.update:before {
+                background-image: url(/assets/images/sprites.png);
+                background-position: -455px -695px;
+                width: 24px;
+                height: 25px; }
+            .contents.private-invest .product.detail > .invest-product .utils .btn.cancel {
+              display: none; }
+              .contents.private-invest .product.detail > .invest-product .utils .btn.cancel:before {
+                background-image: url(/assets/images/sprites.png);
+                background-position: -426px -695px;
+                width: 24px;
+                height: 25px; }
+        .contents.private-invest .product.detail > .invest-product .status-invest {
+          display: none;
+          margin-top: 9px;
+          font-size: 0.750em;
+          color: #ff6000;
+          text-align: center; }
+        .contents.private-invest .product.detail > .invest-product.expired .btn.calc {
+          display: none; }
+        .contents.private-invest .product.detail > .invest-product.expired .btn.update,
+        .contents.private-invest .product.detail > .invest-product.expired .btn.cancel {
+          display: inline-block; }
+        .contents.private-invest .product.detail > .invest-product.expired .status-invest {
+          display: block; }
+  .contents.private-invest .product-detail-view {
+    padding-bottom: 100px; }
+  .contents.private-invest .intro {
+    position: relative;
+    margin-top: 40px;
+    padding: 72px 0 35px 0; }
+    .contents.private-invest .intro:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 41px;
+      right: 44px;
+      height: 735px;
+      width: 288px;
+      background: url("/assets/images/bg_invest_private_visual01.png") left top no-repeat; }
+    .contents.private-invest .intro > .title {
+      display: block;
+      height: 46px;
+      width: 515px;
+      text-indent: -9999px;
+      background: url("/assets/images/txt/title_invest_private01.png") left top no-repeat; }
+    .contents.private-invest .intro p {
+      font-size: 0.875em;
+      color: #6b7581;
+      line-height: 22px; }
+    .contents.private-invest .intro .private-investment {
+      margin-top: 76px; }
+      .contents.private-invest .intro .private-investment > .title {
+        display: block;
+        height: 36px;
+        width: 519px;
+        text-indent: -9999px;
+        background: url("/assets/images/txt/title_invest_private02.png") left top no-repeat; }
+      .contents.private-invest .intro .private-investment dd {
+        padding-top: 16px; }
+        .contents.private-invest .intro .private-investment dd .list-intro > li {
+          position: relative;
+          margin-top: 20px;
+          padding: 0 0 0 56px; }
+          .contents.private-invest .intro .private-investment dd .list-intro > li:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0; }
+          .contents.private-invest .intro .private-investment dd .list-intro > li.seq01:before {
+            background-image: url(/assets/images/sprites.png);
+            background-position: -731px -98px;
+            width: 46px;
+            height: 44px; }
+          .contents.private-invest .intro .private-investment dd .list-intro > li.seq02:before {
+            background-image: url(/assets/images/sprites.png);
+            background-position: -731px -343px;
+            width: 46px;
+            height: 44px; }
+          .contents.private-invest .intro .private-investment dd .list-intro > li.seq03:before {
+            background-image: url(/assets/images/sprites.png);
+            background-position: -731px 0px;
+            width: 46px;
+            height: 44px; }
+        .contents.private-invest .intro .private-investment dd .list-intro strong {
+          display: block;
+          font-size: 1.125em;
+          color: #14378c;
+          line-height: 44px; }
+        .contents.private-invest .intro .private-investment dd .list-intro p {
+          margin-top: 7px; }
 
 /* 기업이 빌리기 */
 .contents.borrowing .borrowing-intro {
@@ -5714,7 +5904,7 @@ article.contents {
             left: 50%;
             margin-left: -5.5px;
             background-image: url(/assets/images/sprites.png);
-            background-position: -782px -475px;
+            background-position: -782px -471px;
             width: 11px;
             height: 6px; }
           .contents.borrowing-private .application > .box .proceedings > li .tooltip.down:before {
@@ -5722,7 +5912,7 @@ article.contents {
             bottom: -6px;
             margin-left: -5.5px;
             background-image: url(/assets/images/sprites.png);
-            background-position: -782px -497px;
+            background-position: -782px -493px;
             width: 11px;
             height: 6px; }
         .contents.borrowing-private .application > .box .proceedings > li .title {
@@ -5891,7 +6081,7 @@ article.contents {
             left: 50%;
             margin-left: -5.5px;
             background-image: url(/assets/images/sprites.png);
-            background-position: -782px -475px;
+            background-position: -782px -471px;
             width: 11px;
             height: 6px; }
           .contents.borrowing-private .borrowing-application .proceedings > li .tooltip.down:before {
@@ -5899,7 +6089,7 @@ article.contents {
             bottom: -6px;
             margin-left: -5.5px;
             background-image: url(/assets/images/sprites.png);
-            background-position: -782px -497px;
+            background-position: -782px -493px;
             width: 11px;
             height: 6px; }
         .contents.borrowing-private .borrowing-application .proceedings > li.step01:before {
@@ -6200,19 +6390,9 @@ article.contents {
             height: 3px;
             width: 3px;
             background-color: #ff4776; }
-      .contents.borrowing-private .borrowing-application .proceedings-step .btn-sumbit {
-        display: block;
-        margin: 33px auto 0 auto;
-        width: 264px;
-        font-size: 0.875em;
-        font-weight: bold;
-        color: #fff;
-        line-height: 40px;
-        text-align: center;
-        border-radius: 2px;
-        background-color: #52b924; }
-        .contents.borrowing-private .borrowing-application .proceedings-step .btn-sumbit.update {
-          background-color: #3a99e8; }
+      .contents.borrowing-private .borrowing-application .proceedings-step .btn-submit {
+        margin-top: 33px;
+        width: 264px; }
       .contents.borrowing-private .borrowing-application .proceedings-step .submit-desc {
         margin-top: 10px;
         font-size: 0.750em;
@@ -6374,19 +6554,10 @@ article.contents {
           .contents.borrowing-private .borrowing-application .proceedings-step.application .btns .btn-tip-txt {
             float: right;
             margin-top: 3px; }
-          .contents.borrowing-private .borrowing-application .proceedings-step.application .btns .btn-options {
+          .contents.borrowing-private .borrowing-application .proceedings-step.application .btns .btn-submit {
             display: inline-block;
-            width: 105px;
-            font-size: 0.875em;
-            font-weight: bold;
-            color: #fff;
-            line-height: 40px;
-            text-align: center;
-            border-radius: 2px;
-            background-color: #3a99e8; }
-        .contents.borrowing-private .borrowing-application .proceedings-step.application .btn-sumbit {
-          margin-top: 0px;
-          background-color: #ff507d; }
+            margin-top: 0px;
+            width: 105px; }
         .contents.borrowing-private .borrowing-application .proceedings-step.application .preview-popup {
           display: none;
           position: absolute;
@@ -6432,7 +6603,7 @@ article.contents {
             top: -6px;
             left: 106px;
             background-image: url(/assets/images/sprites.png);
-            background-position: -782px -475px;
+            background-position: -782px -471px;
             width: 11px;
             height: 6px; }
           .contents.borrowing-private .borrowing-application .proceedings-step.application .tip-txt-popup > h1 {

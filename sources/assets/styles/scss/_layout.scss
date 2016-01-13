@@ -504,7 +504,6 @@ article.contents { min-width: $contents-container-width; padding: 60px 0 110px 0
 		> .right { padding-top: 40px; border-left: 0px;
 			&:before { content: ''; display: block; margin: 0 auto 20px auto; height: 183px; width: 177px; background: url('/assets/images/membership02.png') left top no-repeat; }
 			.needs { &:before { background-color: $color-borrowing; } }
-			.btn-submit { background-color: $color-borrowing; }
 		}
 
 		.needs { position: relative; margin-top: 20px; padding: 0 0 0 10px; font-size: 0.750em; color: $color-content; line-height: 18px; text-align: left;
@@ -517,10 +516,7 @@ article.contents { min-width: $contents-container-width; padding: 60px 0 110px 0
 		}
 	}
 	
-	.btn-submit { display: block; width: 100%; font-size: 14px; font-weight: bold; color: #fff; line-height: 40px; text-decoration: none; border-radius: 2px; background-color: $color-menu1-hover;
-		&.fb { text-align: center; background-color: #3a99e8;
-			&:before { content: ''; display: inline-block; margin-right: 11px; vertical-align: bottom; @include sprite($sprite-icon-fb02); }
-		}
+	.btn-submit { width: 100%;
 		+ .warning { margin-top: 30px; }
 	}
 
@@ -589,7 +585,7 @@ article.contents { min-width: $contents-container-width; padding: 60px 0 110px 0
 		> .right { float: left; width: 50%; text-align: center; }
 	}
 
-	.btn-submit-auth { margin-top: 60px; }
+	.btn-submit { margin-top: 60px; }
 
 	.list-notice { margin-top: 22px;
 		li {
@@ -623,7 +619,7 @@ article.contents { min-width: $contents-container-width; padding: 60px 0 110px 0
 	&.borrowers { padding-bottom: 135px;
 		> h1 { margin-bottom: 88px; }
 		table.agreements { margin-top: 70px; }
-		.btn-submit-auth { margin-top: 77px; background-color: $color-borrowing; }
+		.btn-submit { margin-top: 77px; width: 360px; }
 	}
 
 	.investor-guide { display: none; top: 87px; right: 180px; left: 180px;
@@ -651,6 +647,7 @@ article.contents { min-width: $contents-container-width; padding: 60px 0 110px 0
 				&:before { @include sprite($sprite-icon-check07); }
 			}
 
+			.btn-submit { margin: 12px 0 0 0; width: 278px; }
 			.btn-borrowing { display: block; margin-top: 12px; width: 278px; font-size: 14px; font-weight: bold; color: #fff; text-align: center; text-decoration: none; line-height: 40px; border-radius: 2px; background-color: $color-borrowing; }
 		}
 	}
@@ -729,8 +726,8 @@ article.contents { min-width: $contents-container-width; padding: 60px 0 110px 0
 	}
 
 	.btns { margin-top: 40px;
-		a { display: block; float: right; width: 176px; font-size: 0.875em; font-weight: bold; color: #fff; line-height: 40px; text-align: center; border-radius: 2px; background-color: $color-menu1-hover;
-			&:first-child { float: left; background-color: #3a99e8; }
+		.btn-submit { float: right; margin-top: 0px; width: 176px;
+			&:first-child { float: left; }
 		}
 	}
 
@@ -740,7 +737,7 @@ article.contents { min-width: $contents-container-width; padding: 60px 0 110px 0
 		}
 	}
 
-	.btn-submit-find { display: block; margin: 40px auto 0 auto; width: 100%; font-size: 0.875em; font-weight: bold; color: #fff; line-height: 40px; border-radius: 2px; background-color: #3a99e8; }
+	.btn-submit { margin-top: 40px; }
 
 	.list-notice { margin: 9px 0 0 0; text-align: center; }
 

@@ -1,0 +1,112 @@
+/* 채권 투자 */
+.contents.bonds-invest {
+	/* 정렬 및 검색 조건 - super _contents.scss */
+	.paging {
+		.filter-bonds { padding-bottom: 14px;
+			.sorting {
+				.cr-box { float: left; }
+				.item-form { clear: none; float: right;
+					label { display: inline-block; margin: 0; font-size: 0.875em; color: $color-content; line-height: 37px; }
+					input[type=text] { display: inline-block; margin: 0 3px; height: 37px; width: 185px; line-height: 35px; text-align: center; vertical-align: middle; }
+				}
+			}
+			.results { margin-top: 12px; font-size: 0.875em; color: $color-content; text-align: right;
+				&:before { content: ''; display: inline-block; margin: -4px 5px 0 0; vertical-align: middle; @include sprite($sprite-icon-check08); }
+			}
+		}
+	}
+
+
+	/// 채권 상품 목록
+	.list-products {
+		$product-width: 266px;
+		position: relative; overflow: hidden; width: 100%;
+		> li {
+			display: block; float: left; margin: 40px 32px 0 0; width: $product-width;
+			&:nth-child(4n+4),
+			&.lb { margin-right: 0px; }
+		}
+	}
+
+	/// 채권 투자 - 상품
+	.product { display: block;
+		$border-radius: 18px;
+		$product-height: 417px;
+		
+		display: block; position: relative; overflow: hidden; height: $product-height; color: $color-title; border: 1px solid #d4dae4; border-radius: $border-radius; background-color: #fff;
+
+		> .options { overflow: hidden; position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: z("default")+1; border-radius: $border-radius 0 0 0;
+			> em { position: absolute; position: absolute; top: 0; left: 0; text-indent: -9999px; }
+			> .invest-type { display: none; }
+			> .new { @include sprite($sprite-badge-new03); }
+			> .user-in { top: 10px; left: auto; right: 16px; font-size: 0.750em; color: $color-content; text-indent: 0px; }
+			> .favorate { top: 14px; right: 14px; left: auto; @include sprite($sprite-icon-favorate01-selected); }
+		}
+
+		> .trust-ratings { display: block; float: left; position: relative; z-index: z("default"); padding: 28px 0 0 0; height: $product-height - 28px; width: 100%; border-radius: $border-radius 0 0 0;
+			> p { float: left; }
+			.borrowing-purposes { margin-right: 6px; height: 84px; width: 104px;
+				> .tooltip { left: 19px; }
+			}
+			.borrowing-count { padding-top: 28px;
+				> .convert {
+					> em { display: inline-block; height: 44px; text-indent: -9999px;
+						&.bid0 { @include sprite($sprite-cnt-bid0-b); }
+						&.bid1 { @include sprite($sprite-cnt-bid1-b); }
+						&.bid2 { @include sprite($sprite-cnt-bid2-b); }
+						&.bid3 { @include sprite($sprite-cnt-bid3-b); }
+						&.bid4 { @include sprite($sprite-cnt-bid4-b); }
+						&.bid5 { @include sprite($sprite-cnt-bid5-b); }
+						&.bid6 { @include sprite($sprite-cnt-bid6-b); }
+						&.bid7 { @include sprite($sprite-cnt-bid7-b); }
+						&.bid8 { @include sprite($sprite-cnt-bid8-b); }
+						&.bid9 { @include sprite($sprite-cnt-bid9-b); }
+					}
+				}
+			}
+			.credit-rating { padding-top: 28px;
+				> .convert {
+					> em { display: inline-block; height: 44px; text-indent: -9999px;
+						&.overdue-a { @include sprite($sprite-bg-overdue02-b); }
+						&.overdue-b { @include sprite($sprite-bg-overdue03-b); }
+						&.overdue-c { @include sprite($sprite-bg-overdue04-b); }
+						&.overdue-d { @include sprite($sprite-bg-overdue05-b); }
+					}
+				}
+			}
+			.tooltip { display: block; position: absolute; top: 18px; bottom: auto; z-index: z("tooltip"); padding: 0 8px; font-size: 0.750em; color: $color-content; text-align: center; line-height: 25px; white-space: nowrap; border: 1px solid #c3d0e1; border-radius: 5px; background-color: #fff;
+				&:before { content: ''; display: block; position: absolute; top: auto; bottom: -$sprite-bg-arrow08-height; left: 50%; margin-left: -$sprite-bg-arrow08-width/2; @include sprite($sprite-bg-arrow08); }
+			}
+
+			.p-i { clear: both; padding: 11px 0 0 26px;
+				> p { float: left; font-size: 1.750em; color: $color-title;
+					> em { }
+					> span { display: block; margin-top: 7px; font-size: 0.429em; color: $color-desc; vertical-align: baseline; }
+				}
+
+				> .price { }
+				> .duration { padding: 0 10px; text-align: center;
+					> em {
+						&:before { content: '-'; display: inline-block; margin-right: 10px; vertical-align: middle; }
+						&:after { content: '-'; display: inline-block; margin-left: 9px; vertical-align: middle; }
+					}
+				}
+				> .interest { }
+			}
+		}
+
+
+		&:hover > .hover { display: block; animation-duration: 0.3s; }
+		> .hover {
+			display: none; overflow: hidden; position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: z("hover"); height: 100%; width: 100%; text-align: center; border-radius: $border-radius;
+			> button { display: block; position: absolute; top: 13px; right: 17px; z-index: z("default") + 1; font-size: 12px; color: $color-desc; vertical-align: middle; line-height: 18px; 
+				&:before { content: ''; display: inline-block; margin-top: -2px; margin-right: 5px; vertical-align: middle; @include sprite($sprite-icon-favorate01); }
+				&:hover { text-decoration: underline; }
+				&.selected:before { @include sprite($sprite-icon-favorate01-selected); }
+			}
+			> span { font-size: 1.375em; font-weight: bold; color: #fff; line-height: $product-height; }
+
+			&:before { content: ''; display: block; position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: -1; height: 100%; width: 100%; background: url(/assets/images/bg_product_highlights.png) left top repeat; }
+		}
+	}
+}

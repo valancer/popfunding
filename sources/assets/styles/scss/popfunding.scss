@@ -126,6 +126,8 @@ $z-layers: (
 .btn-submit { display: block; margin: 0 auto; width: 360px; font-size: 14px; font-weight: bold; color: #fff !important; line-height: 40px; text-align: center !important; text-decoration: none !important; border-radius: 2px; background-color: $color-menu1-hover;
 	&:hover { text-decoration: none; }
 
+	&.inner { display: inline-block; min-width: 125px; width: auto; line-height: 37px; vertical-align: middle; }
+
 	&.color-done { background-color: #cad2de; }
 	&.color-blue { background-color: #3a99e8; }
 	&.color-borrowing { background-color: $color-borrowing; }
@@ -143,6 +145,7 @@ $z-layers: (
 @import "layout";
 @import "contents_invest";
 @import "contents_invest_private";
+@import "contents_invest_bonds";
 @import "contents_borrowing";
 @import "contents_borrowing_private";
 @import "contents_popup_window";

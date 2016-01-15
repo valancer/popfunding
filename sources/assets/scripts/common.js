@@ -21,6 +21,7 @@ $(document).ready(function (e) {
 	Main.init();
 	Product.init();
 	PrivateProduct.init();
+	BondsProduct.init();
 	Invest.init();
 	Popup.init();
 });
@@ -281,6 +282,103 @@ var PrivateProduct = (function ($) {
 		_isDetail = false,
 		init = function () {
 			$container = $('.contents.private-invest');
+			$listProducts = $container.find('.list-products');
+			$products = $container.find('.product');
+
+			_isDetail = $products.hasClass('detail');
+			if( _isDetail ) {
+				$tooltips = $products.find('.trust-ratings > p');
+			}
+
+			$countAndRatings = $container.find('.convert.cr');
+			$numbers = $container.find('.convert.price');
+
+	 		initLayout();
+			initEvent();
+
+		};//end init
+
+	function initLayout() {
+		if( $numbers.length > 0 ) {
+			$numbers.each(function () {
+				convertNumberToImage($(this));
+			});
+		}
+		if( $countAndRatings.length > 0 ) {
+			$countAndRatings.each(function () {
+				convertCRToImage($(this));
+			});
+		}
+	}
+
+	function initEvent() {
+		if( _isDetail ) {
+			if( $tooltips.length > 0 ) {
+				$tooltips.on('mouseover', function(e) {
+					var $target = $(this).find('.tooltip');
+					$target.show();
+				}).on('mouseout', function(e) {
+					var $target = $(this).find('.tooltip');
+					$target.hide();
+				});
+			}
+		}
+	}
+
+
+	function convertCRToImage($element) {
+		var value = $.trim($element.text().toLowerCase());
+		var convert = '';
+
+		var array = value.split('');
+
+		if( $element.closest('.borrowing-count').length > 0 ) {
+			convert += '<em class="bid' + array[0] + '">' + array[0] + '</em>\n';
+		} else if( $element.closest('.credit-rating').length > 0 ) {
+			convert += '<em class="overdue-' + array[0] + '">' + array[0] + '</em>';
+		} else {
+			convert += '<em class="overdue-' + array[0] + '">' + array[0] + '</em>';
+		}
+		$element.html(convert);
+	}
+
+	function convertNumberToImage($element) {
+		var array = $element.text().split('');
+		var convert = '';
+		for( var i=0; i<array.length; i++ ) {
+			if( array[i] == '%' ) {
+				convert += '<span class="price-percent">' + array[i] + '</span>';
+			} else {
+				convert += '<span class="price' + array[i] + '">' + array[i] + '</span>';
+			}
+		}
+		$element.html(convert);
+	}
+
+	return {
+		init: function () {
+			init();
+		}
+	};
+}(jQuery));
+
+
+
+
+/********************************************************************************************/
+/*********************************** 채권 투자 상품 목록 및 상품 ***********************************/
+/********************************************************************************************/
+var BondsProduct = (function ($) {
+	var $container,
+		$listProducts,
+		$products,
+		$countAndRatings,
+		$numbers,
+		$tooltips,
+
+		_isDetail = false,
+		init = function () {
+			$container = $('.contents.bonds-invest');
 			$listProducts = $container.find('.list-products');
 			$products = $container.find('.product');
 

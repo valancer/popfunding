@@ -1,0 +1,73 @@
+include "head.html"
+
+	<!-- 상단 영역 -->
+	include "header.html"
+
+
+	<!-- 본문 영역 -->
+	<article class="contents bonds-invest">
+		<h1>투자하기</h1>
+
+		<div class="inner">
+		
+
+			<!-- 필터 및 소개  -->
+			<div class="filter-container">
+				<fieldset class="filter">
+					<legend>투자종류선택</legend>
+
+					<input type="radio" id="invest01" name="invest-type"><label for="invest01">개인투자</label>
+					<input type="radio" id="invest02" name="invest-type"><label for="invest02">기업투자</label>
+					<input type="radio" id="invest03" name="invest-type" checked="checked" class="selected"><label for="invest03">채권마켓</label>
+				</fieldset>
+				
+				<div class="utils-guide">
+					<a href="#" class="btn-tip">꿀팁</a>
+					<a href="#" class="btn-rd">나의 채권 보기</a>
+				</div>
+			</div>
+
+
+			<!-- 상품 정보 -->
+			<section class="product detail">
+				<div class="options">
+					<em class="invest-type">[개인채권]</em>
+					<em class="new">[새로운 투자상품]</em>
+					<!-- <em class="favorate">[회원님께서 관심상품으로 설정하셨습니다.]</em> -->
+					<em class="user-in">나의 채권</em>
+				</div>
+
+				<!-- 상품 정보 -->
+				<figure>
+					<div class="thumb"><img src="/assets/images/temp/product_list01.jpg" alt="폴로 랄프로렌 신발 대표 이미지"></div>
+					<figcaption class="info">
+						include "bonds_info.html"
+					</figcaption>
+				</figure>
+
+				<!-- 매수하기 -->
+				<div class="buy-bonds">
+					<a href="#" class="btn-invest">매수하기</a>
+				</div>
+
+				
+				<p class="hover animated fadeIn">
+					<button>관심설정</button>
+					<a href="#" class="btn-submit color-blue">투자 상세보기</a>
+				</p>
+			</section>
+
+
+
+			
+include "bonds_product_bottom_btns.html"
+
+		</div>
+	</article>
+	
+
+	<!-- 하단 영역 -->
+	include "footer.html"
+
+</body>
+</html>

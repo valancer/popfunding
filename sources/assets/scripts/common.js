@@ -369,7 +369,8 @@ var PrivateProduct = (function ($) {
 /*********************************** 채권 투자 상품 목록 및 상품 ***********************************/
 /********************************************************************************************/
 var BondsProduct = (function ($) {
-	var $container,
+	var _containerWidth = 0,
+		$container,
 		$listProducts,
 		$products,
 		$countAndRatings,
@@ -381,6 +382,8 @@ var BondsProduct = (function ($) {
 			$container = $('.contents.bonds-invest');
 			$listProducts = $container.find('.list-products');
 			$products = $container.find('.product');
+			$thumbs = $products.find('> figure .thumb > img');
+			_containerWidth = $products.find('> figure .thumb').width();
 
 			_isDetail = $products.hasClass('detail');
 			if( _isDetail ) {
@@ -409,6 +412,8 @@ var BondsProduct = (function ($) {
 	}
 
 	function initEvent() {
+		imageload($thumbs);
+
 		if( _isDetail ) {
 			if( $tooltips.length > 0 ) {
 				$tooltips.on('mouseover', function(e) {
@@ -422,6 +427,17 @@ var BondsProduct = (function ($) {
 		}
 	}
 
+
+	function imageload($elements) {
+		$elements.one('load', function() {
+		}).each(function() {
+			if( this.complete ) {
+				var width = $(this).width();
+				var left = (-width/2 + _containerWidth/2);
+				$(this).show().css('left', left).addClass('animated fadeIn');
+			}
+		});
+	}
 
 	function convertCRToImage($element) {
 		var value = $.trim($element.text().toLowerCase());

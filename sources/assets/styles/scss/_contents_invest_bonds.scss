@@ -28,10 +28,33 @@
 		}
 	}
 
+
+
+	/// 개인 투자 - 숫자 to 이미지
+	em.convert {
+		&.price {
+			span { display: inline-block; margin-right: 1px; height: 20px; text-indent: -9999px; vertical-align: middle;
+				&.price0 { @include sprite($sprite-private-price0-s); }
+				&.price1 { @include sprite($sprite-private-price1-s); }
+				&.price2 { @include sprite($sprite-private-price2-s); }
+				&.price3 { @include sprite($sprite-private-price3-s); }
+				&.price4 { @include sprite($sprite-private-price4-s); }
+				&.price5 { @include sprite($sprite-private-price5-s); }
+				&.price6 { @include sprite($sprite-private-price6-s); }
+				&.price7 { @include sprite($sprite-private-price7-s); }
+				&.price8 { @include sprite($sprite-private-price8-s); }
+				&.price9 { @include sprite($sprite-private-price9-s); }
+				&.price-percent { @include sprite($sprite-private-percent-s); }
+			}
+		}
+	}
+
+
 	/// 채권 투자 - 상품
 	.product { display: block;
 		$border-radius: 18px;
 		$product-height: 417px;
+		$thumb-height: 171px;
 		
 		display: block; position: relative; overflow: hidden; height: $product-height; color: $color-title; border: 1px solid #d4dae4; border-radius: $border-radius; background-color: #fff;
 
@@ -43,7 +66,8 @@
 			> .favorate { top: 14px; right: 14px; left: auto; @include sprite($sprite-icon-favorate01-selected); }
 		}
 
-		> .trust-ratings { display: block; float: left; position: relative; z-index: z("default"); padding: 28px 0 0 0; height: $product-height - 28px; width: 100%; border-radius: $border-radius 0 0 0;
+		/* 개인 채권 */
+		> .trust-ratings { display: block; position: relative; z-index: z("default"); padding: 13px 0 0 0; height: $thumb-height - 13; width: 100%; border-bottom: 1px solid #e6e9ee; border-radius: $border-radius 0 0 0;
 			> p { float: left; }
 			.borrowing-purposes { margin-right: 6px; height: 84px; width: 104px;
 				> .tooltip { left: 19px; }
@@ -95,11 +119,55 @@
 			}
 		}
 
+		/* 기업 채권 */
+		> figure {
+			> .thumb { display: block; position: relative; z-index: z("default") - 1; overflow: hidden; height: $thumb-height; width: 100%; border-bottom: 1px solid #e6e9ee; border-radius: $border-radius $border-radius 0px 0px;
+				> img { display: none; position: absolute; left: 0; max-width: 100%; }
+			}
+		}
+
+		/* 정보 */
+		.info { 
+			h2 { display: none; }
+			.group { overflow: hidden; font-size: 0.875em; border-top: 1px solid #e6e9ee;
+				&.basic { padding: 14px 0 14px 0; border-top: 0px; }
+				&.status {
+					li { padding: 12px 0 14px 14px; }
+				}
+				&.price { padding-top: 12px;
+					.title { display: block; }
+				}
+
+				li { float: left; line-height: 18px; padding: 0 0 0 14px;
+					&.date-sale { display: none; }
+					&.dc, &.repayment-history { .title { display: none; } }
+					&.dc { width: 82px; color: $color-menu1-hover; }
+					&.repayment-history { border-left: 1px solid #e6e9ee; }
+					&.expected { clear: both; margin-top: 13px;
+						em { display: block; margin-top: 2px; font-size: 14px; }
+						strong { color: $color-menu1-hover; }
+						.btn-inline-box { display: none; }
+					}
+					&.price { 
+						del, em { display: block; margin-top: 7px; font-size: 20px; line-height: 1.000em; text-decoration: none; }
+							
+						&.base { }
+						&.sell { padding-left: 6px; }
+						del { position: relative; overflow: hidden; padding-right: 10px; min-width: 108px;
+							&:before { content: ''; display: block; position: absolute; top: 50%; right: 0; margin-top: -$sprite-bg-arrow18-height/2; @include sprite($sprite-bg-arrow18); }
+						}
+					}
+				}
+				.title { display: none; font-size: 12px; color: $color-desc; }
+				.overdue { display: none; }
+			}
+		}
+
 
 		&:hover > .hover { display: block; animation-duration: 0.3s; }
 		> .hover {
 			display: none; overflow: hidden; position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: z("hover"); height: 100%; width: 100%; text-align: center; border-radius: $border-radius;
-			> button { display: block; position: absolute; top: 13px; right: 17px; z-index: z("default") + 1; font-size: 12px; color: $color-desc; vertical-align: middle; line-height: 18px; 
+			> button { display: block; position: absolute; top: 10px; right: 17px; z-index: z("default") + 1; font-size: 12px; color: $color-desc; vertical-align: middle; line-height: 18px; 
 				&:before { content: ''; display: inline-block; margin-top: -2px; margin-right: 5px; vertical-align: middle; @include sprite($sprite-icon-favorate01); }
 				&:hover { text-decoration: underline; }
 				&.selected:before { @include sprite($sprite-icon-favorate01-selected); }
@@ -107,6 +175,146 @@
 			> span { font-size: 1.375em; font-weight: bold; color: #fff; line-height: $product-height; }
 
 			&:before { content: ''; display: block; position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: -1; height: 100%; width: 100%; background: url(/assets/images/bg_product_highlights.png) left top repeat; }
+		}
+
+
+
+		///	 상품 상세 보기일 경우
+		&.detail {
+			$thumb-width: 528px;
+			$thumb-height: 361px;
+			$product-height: 621px;
+
+			margin-top: 40px; height: auto;
+
+			> .options { height: $thumb-height; width: $thumb-width;
+				> em { }
+				> .invest-type01 { @include sprite($sprite-badge-invest03-detail); }
+				> .new { @include sprite($sprite-badge-new03-detail); }
+				> .user-in { top: 15px; left: auto; right: 19px; font-size: 0.875em; color: $color-point2; text-indent: 0px; }
+				> .favorate { top: 17px; right: 19px; left: auto; @include sprite($sprite-icon-favorate01-selected); }
+			}
+
+			.btn-submit { position: absolute; right: 0; bottom: 0; left: 0; width: 100%; border-radius: 0px; }
+
+			> .trust-ratings { float: left; margin: 63px 0 0 100px; height: 180px; width: 428px; z-index: z("hover") + 1; border: 0px; border-radius: 0px;
+				em.convert {
+					&.price {
+						span { display: inline-block; margin-right: 1px; height: 28px; text-indent: -9999px; vertical-align: middle;
+							&.price0 { @include sprite($sprite-private-price0-b); }
+							&.price1 { @include sprite($sprite-private-price1-b); }
+							&.price2 { @include sprite($sprite-private-price2-b); }
+							&.price3 { @include sprite($sprite-private-price3-b); }
+							&.price4 { @include sprite($sprite-private-price4-b); }
+							&.price5 { @include sprite($sprite-private-price5-b); }
+							&.price6 { @include sprite($sprite-private-price6-b); }
+							&.price7 { @include sprite($sprite-private-price7-b); }
+							&.price8 { @include sprite($sprite-private-price8-b); }
+							&.price9 { @include sprite($sprite-private-price9-b); }
+							&.price-percent { @include sprite($sprite-private-percent-b); }
+						}
+					}
+				}
+
+				.tooltip { display: none; top: -11px; }
+				.borrowing-purposes { position: relative; }
+				.borrowing-count { position: relative;
+					.tooltip { top: -11px; left: -20px; }
+				}
+				.credit-rating { position: relative;
+					.tooltip { top: -11px; left: -17px; }
+				}
+
+				.p-i { clear: both; padding: 13px 0 0 26px;
+					> p { float: left; font-size: 2.500em; color: $color-title;
+						> em { }
+						> span { display: block; margin-top: 9px; font-size: 0.350em; color: $color-title; vertical-align: baseline; }
+					}
+					> .price { }
+					> .duration { padding: 0 10px; text-align: center;
+						> em {
+							&:before { content: '-'; display: inline-block; margin-right: 10px; vertical-align: middle; }
+							&:after { content: '-'; display: inline-block; margin-left: 9px; vertical-align: middle; }
+						}
+					}
+					> .interest { }
+				}
+
+			}
+
+			> figure { height: $thumb-height;
+				> .thumb { float: left; height: $thumb-height; width: $thumb-width; border-radius: $border-radius 0px 0px 0px;
+					> img { max-height: 100%; max-width: none; }
+				}
+
+				> .info { float: left; }
+			}
+
+
+			/* 정보 */
+			.info { float: left; height: $thumb-height - 1; width: 629px; border-bottom: 1px solid #d4dae4;
+				h2 { display: block; padding-left: 30px; font-size: 1.125em; font-weight: normal; color: $color-title; line-height: 63px; }
+				.group { padding: 0 0 0 10px; font-size: 1.125em; border-top: 1px solid #d4dae4;
+					&.basic { padding-top: 12px; padding-bottom: 14px; }
+					&.status {
+						li { padding: 17px 0 17px 20px; }
+					}
+					&.price { padding-top: 18px; }
+
+					li { line-height: 24px; padding: 0 0 0 20px;
+						&.idx { width: 178px; }
+						&.p-i { }
+						&.date-sale { display: block; }
+						&.dc { width: 178px; }
+						&.repayment-history { border-left: 1px solid #d4dae4; }
+						&.price { 
+							del, em { font-size: 38px; }
+								
+							&.base { }
+							&.sell { padding-left: 10px; }
+							del { padding: 0; width: 246px;
+								&:before { margin-top: -$sprite-bg-arrow18-b-height/2; @include sprite($sprite-bg-arrow18-b); }
+							}
+						}
+
+						&.price {
+							del, em { margin-top: 2px; font-size: 38px; }
+						}
+						&.expected { margin-top: 7px;
+							em { margin-top: 0px; font-size: 18px; }
+							.btn-inline-box { display: inline-block; margin-top: -2px; vertical-align: middle; }
+						}
+					}
+					.title { display: block; }
+					.overdue { display: inline-block; color: $color-menu1-hover; }
+					.minus { color: #006bf0 !important; }
+				}
+			}
+
+			> .buy-bonds { display: block; clear: both; position: relative; padding: 52px 0; }
+
+			> .hover { 
+				display: block; overflow: hidden; position: absolute; top: 0; right: 630px; bottom: auto; left: auto; z-index: z("hover"); height: $thumb-height; width: $thumb-width; text-align: center; border-right: 1px solid #d4dae4; border-radius: 0px;
+				> button { display: block; position: absolute; top: 17px; right: 10px; z-index: z("default") + 1; width: 30px; font-size: 14px; color: $color-desc; vertical-align: middle; line-height: 16px; 
+					&:before { content: ''; display: block; margin: 0px auto 6px; @include sprite($sprite-icon-favorate01-detail); }
+					&:hover { text-decoration: underline; }
+					&.selected:before { @include sprite($sprite-icon-favorate01-detail-selected); }
+				}
+				> span { display: none; }
+				&:before { content: none; }
+			}
+
+
+		}
+	}
+
+
+	/* 동일 채권 현황 */
+	.same-bonds { margin-top: 66px; padding-bottom: 40px; border-bottom: 1px solid #e2e6ec;
+		h1 { font-size: 1.063em; font-weight: normal; color: $color-title; line-height: 1.3em; }
+		.results { margin-top: 16px; font-size: 0.875em; color: $color-content; text-align: left;
+			&:before { content: ''; display: inline-block; margin: -4px 5px 0 0; vertical-align: middle; @include sprite($sprite-icon-check08); }
+			em { color: $color-menu1-hover; }
 		}
 	}
 }

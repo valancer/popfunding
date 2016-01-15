@@ -1,0 +1,124 @@
+include "head.html"
+
+	<!-- 상단 영역 -->
+	include "header.html"
+
+
+	<!-- 본문 영역 -->
+	<article class="contents bonds-invest">
+		<h1>투자하기</h1>
+
+		<div class="inner">
+		
+
+			<!-- 필터 및 소개  -->
+			<div class="filter-container">
+				<fieldset class="filter">
+					<legend>투자종류선택</legend>
+
+					<input type="radio" id="invest01" name="invest-type"><label for="invest01">개인투자</label>
+					<input type="radio" id="invest02" name="invest-type"><label for="invest02">기업투자</label>
+					<input type="radio" id="invest03" name="invest-type" checked="checked" class="selected"><label for="invest03">채권마켓</label>
+				</fieldset>
+				
+				<div class="utils-guide">
+					<a href="#" class="btn-tip">꿀팁</a>
+					<a href="#" class="btn-rd">나의 채권 보기</a>
+				</div>
+			</div>
+
+
+			<!-- 상품 정보 -->
+			<section class="product detail">
+				<div class="options">
+					<em class="invest-type">[개인채권]</em>
+					<em class="new">[새로운 투자상품]</em>
+					<!-- <em class="favorate">[회원님께서 관심상품으로 설정하셨습니다.]</em> -->
+					<em class="user-in">나의 채권</em>
+				</div>
+
+				<!-- 용도 및 등급 -->
+				<div class="trust-ratings">
+					<p class="borrowing-purposes" style="background-image: url(http://placehold.it/104x84);">
+						<span class="tooltip">자동차 구입</span>
+					</p>
+					<p class="borrowing-count">
+						<span class="tooltip">빌린 회수</span>
+						<span class="convert cr">3</span>
+					</p>
+					<p class="credit-rating">
+						<span class="tooltip">연체 등급</span>
+						<span class="convert cr">A</span>
+					</p>
+					<div class="p-i">
+						<p class="price">
+							<em class="convert price">500</em>
+							<span>신청금액(만원)</span>
+						</p>
+						<p class="duration">
+							<em class="convert price">15</em>
+							<span>기간(개월)</span>
+						</p>
+						<p class="interest">
+							<em class="convert price">25%</em>
+							<span>연이자</span>
+						</p>
+					</div>
+				</div>
+
+				<!-- 상품 정보 -->
+				<div class="info">
+					include "bonds_info.html"
+				</div>
+
+				<!-- 매수하기 -->
+				<div class="buy-bonds">
+					<a href="#" class="btn-invest">매수하기</a>
+				</div>
+
+
+				<p class="hover animated fadeIn">
+					<button>관심설정</button>
+					<a href="#" class="btn-submit color-blue">투자 상세보기</a>
+				</p>
+			</section>
+
+
+			
+			<!-- 동일 투자 채권현황 -->
+			<section class="same-bonds">
+				<h1>동일 투자 채권현황</h1>
+				<p class="results">현재 동일한 투자에 대해 매수 가능한 주문이 <em>12</em>건 있습니다.</p>
+
+				<!-- 상품 리스트 -->
+				<ul class="list-products">
+					<li>
+						include "bonds_list_private.html"
+					</li>
+					<li>
+						include "bonds_list_private.html"
+					</li>
+					<li>
+						include "bonds_list_private.html"
+					</li>
+					<li class="lb">
+						include "bonds_list_private.html"
+					</li>
+					<li>
+						include "bonds_list_private.html"
+					</li>
+				</ul>
+			</section>
+
+			
+include "bonds_product_bottom_btns.html"
+
+		</div>
+	</article>
+	
+
+	<!-- 하단 영역 -->
+	include "footer.html"
+
+</body>
+</html>

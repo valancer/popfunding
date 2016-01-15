@@ -120,7 +120,7 @@ $z-layers: (
 		&:before { @include sprite($sprite-icon-help01-highlights); }
 	}
 }
-.btn-inline-box { display: inline-block; padding: 0 11px; font-size: 0.750em; color: $color-content; line-height: 24px; border: 1px solid #c3d0e1; border-radius: 5px; }
+.btn-inline-box { display: inline-block; padding: 0 11px; font-size: 12px; color: $color-content; line-height: 24px; border: 1px solid #c3d0e1; border-radius: 5px; }
 
 
 .btn-submit { display: block; margin: 0 auto; width: 360px; font-size: 14px; font-weight: bold; color: #fff !important; line-height: 40px; text-align: center !important; text-decoration: none !important; border-radius: 2px; background-color: $color-menu1-hover;

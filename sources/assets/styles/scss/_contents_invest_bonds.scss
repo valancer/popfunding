@@ -161,6 +161,8 @@
 				.title { display: none; font-size: 12px; color: $color-desc; }
 				.overdue { display: none; }
 			}
+
+			.auto-bidding { display: none; }
 		}
 
 
@@ -247,12 +249,16 @@
 					> img { max-height: 100%; max-width: none; }
 				}
 
-				> .info { float: left; }
+				> .info { float: left; position: relative;
+					.auto-bidding { display: block; position: absolute; bottom: 9px; right: 16px; font-size: 0.750em; color: $color-desc; text-align: center;
+						&:before { content: ''; display: block; margin: 0 auto 4px auto; @include sprite($sprite-icon-autobidding); }
+					}
+				}
 			}
 
 
 			/* 정보 */
-			.info { float: left; height: $thumb-height - 1; width: 629px; border-bottom: 1px solid #d4dae4;
+			.info { float: left; height: $thumb-height - 1; width: 630px; border-bottom: 1px solid #d4dae4;
 				h2 { display: block; padding-left: 30px; font-size: 1.125em; font-weight: normal; color: $color-title; line-height: 63px; }
 				.group { padding: 0 0 0 10px; font-size: 1.125em; border-top: 1px solid #d4dae4;
 					&.basic { padding-top: 12px; padding-bottom: 14px; }

@@ -95,15 +95,23 @@
 	}
 
 	.contents { display: none; box-sizing: border-box; margin: 0 auto; width: 1160px; text-align: center;
+		.btn-shortcut { display: inline-block; position: relative; height: 37px; min-width: 190px; font-size: 0.875em; font-weight: 500; color: #fff; text-align: center; line-height: 37px; border-radius: 37px; background-color: #6cc800;
+			&:hover { text-decoration: none; background-color: #4eb500; }
+			.badge { display: block; position: absolute; top: -9px; left: 27px; text-indent: -9999px; @include sprite($sprite-icon-new01); }
+		}
 
-		/* main */
-		&.main { padding-top: 236px;  height: 770px; background: url('/assets/images/bg_header_visual_main.png') left top no-repeat;
+		/* 전체메인 */
+		&.main { display: block; padding-top: 236px; height: 770px; background: url('/assets/images/bg_header_visual_main.png') center top no-repeat;
 			.title { display: block; margin: 0 auto; height: 153px; width: 396px; text-indent: -9999px; background: url('/assets/images/txt/header_main.png') left top no-repeat; }
 			p { margin-top: 30px; font-size: 0.875em; color: $color-menu2; line-height: 20px; }
-			.btn-shortcut { display: inline-block; position: relative; margin-top: 27px; height: 37px; min-width: 190px; font-size: 0.875em; font-weight: 500; color: #fff; text-align: center; line-height: 37px; border-radius: 37px; background-color: #6cc800;
-				&:hover { text-decoration: none; background-color: #4eb500; }
-				.badge { display: block; position: absolute; top: -9px; left: 27px; text-indent: -9999px; @include sprite($sprite-icon-new01); }
-			}
+			.btn-shortcut { margin-top: 27px; }
+		}
+
+		/* 투자하기 */
+		&.invest { display: block; padding-top: 89px; height: 303px; background: url('/assets/images/bg_header_visual_invest.png') center top no-repeat;
+			.title { display: block; margin: 0 auto; height: 32px; width: 356px; text-indent: -9999px; background: url('/assets/images/txt/header_invest_title.png') left top no-repeat; }
+			p { margin-top: 18px; font-size: 0.750em; color: $color-menu2; line-height: 18px; }
+			.btn-shortcut { margin-top: 36px; }
 		}
 	}
 
@@ -129,7 +137,6 @@
 		&:after { height: 63px; }
 
 		.user { display: block; }
-		.contents.main { display: block; }
 
 		nav { 
 			> ul {

@@ -1659,11 +1659,38 @@ span.center {
     margin: 0 auto;
     width: 1160px;
     text-align: center;
-    /* main */ }
+    /* 전체메인 */
+    /* 투자하기 */ }
+    .header .contents .btn-shortcut {
+      display: inline-block;
+      position: relative;
+      height: 37px;
+      min-width: 190px;
+      font-size: 0.875em;
+      font-weight: 500;
+      color: #fff;
+      text-align: center;
+      line-height: 37px;
+      border-radius: 37px;
+      background-color: #6cc800; }
+      .header .contents .btn-shortcut:hover {
+        text-decoration: none;
+        background-color: #4eb500; }
+      .header .contents .btn-shortcut .badge {
+        display: block;
+        position: absolute;
+        top: -9px;
+        left: 27px;
+        text-indent: -9999px;
+        background-image: url(/assets/images/sprites.png);
+        background-position: -151px -735px;
+        width: 20px;
+        height: 24px; }
     .header .contents.main {
+      display: block;
       padding-top: 236px;
       height: 770px;
-      background: url("/assets/images/bg_header_visual_main.png") left top no-repeat; }
+      background: url("/assets/images/bg_header_visual_main.png") center top no-repeat; }
       .header .contents.main .title {
         display: block;
         margin: 0 auto;
@@ -1677,31 +1704,26 @@ span.center {
         color: #525e7b;
         line-height: 20px; }
       .header .contents.main .btn-shortcut {
-        display: inline-block;
-        position: relative;
-        margin-top: 27px;
-        height: 37px;
-        min-width: 190px;
-        font-size: 0.875em;
-        font-weight: 500;
-        color: #fff;
-        text-align: center;
-        line-height: 37px;
-        border-radius: 37px;
-        background-color: #6cc800; }
-        .header .contents.main .btn-shortcut:hover {
-          text-decoration: none;
-          background-color: #4eb500; }
-        .header .contents.main .btn-shortcut .badge {
-          display: block;
-          position: absolute;
-          top: -9px;
-          left: 27px;
-          text-indent: -9999px;
-          background-image: url(/assets/images/sprites.png);
-          background-position: -151px -735px;
-          width: 20px;
-          height: 24px; }
+        margin-top: 27px; }
+    .header .contents.invest {
+      display: block;
+      padding-top: 89px;
+      height: 303px;
+      background: url("/assets/images/bg_header_visual_invest.png") center top no-repeat; }
+      .header .contents.invest .title {
+        display: block;
+        margin: 0 auto;
+        height: 32px;
+        width: 356px;
+        text-indent: -9999px;
+        background: url("/assets/images/txt/header_invest_title.png") left top no-repeat; }
+      .header .contents.invest p {
+        margin-top: 18px;
+        font-size: 0.750em;
+        color: #525e7b;
+        line-height: 18px; }
+      .header .contents.invest .btn-shortcut {
+        margin-top: 36px; }
   .header nav {
     position: absolute;
     bottom: 0;
@@ -1737,8 +1759,6 @@ span.center {
     .header.main:after {
       height: 63px; }
     .header.main .user {
-      display: block; }
-    .header.main .contents.main {
       display: block; }
     .header.main nav > ul {
       height: 63px; }

@@ -45,7 +45,7 @@ include "head.html"
 				<div class="invest-popup-container" style="position: absolute; top: 400px; left: 35%; width: 100%;">
 
 					<!-- 투자하기 팝업 -->
-					<aside id="popup-invest" class="invest-popup invest" style="top: 0; bottom: auto; left: 0;">
+					<aside id="popup-invest" class="invest-popup invest-private" style="top: 0; bottom: auto; left: 0;">
 						<fieldset class="inner">
 							<legend>투자금액 입력</legend>
 							<button class="btn-popup-close" data-target="#popup-invest">팝업닫기</button>
@@ -57,18 +57,21 @@ include "head.html"
 
 							<div class="type">
 								<p class="input-price">
-									<label for="price">참가금액</label>
+									<a href="#popup-floating-rates" class="btn-fr">변동금리</a>
+									<label for="price">12.5%</label>
 									<input type="text" id="price" name="price" value="">
 								</p>
 								<p class="type-options">
-									<span class="btns">
-										<button>100만원</button>
+									<span class="btns auto">
 										<button>10만원</button>
 										<button>1만원</button>
+										<button>1천원</button>
 										<button>삭제</button>
 									</span>
 
-									투자단위 1만원
+									연이자(%)
+									&nbsp;&nbsp;&nbsp;&nbsp;
+									투자금액 (천원단위)
 									<!-- <span class="msg">현재 570,000,000원 참가중</span> -->
 								</p>
 							</div>
@@ -88,14 +91,40 @@ include "head.html"
 							<div class="private-guide">
 								<ul>
 									<li>
-										회원님은 Vvip회원이며, 개인투자에서<br>한 펀드당 <em>10만원까지</em> 투자 가능합니다.
+										개인투자에 투자시, 신청금액의 <em>1/50 이하로 투자</em> 하실 수 있습니다.
 									</li>
 									<li>
-										개인투자는 한 펀드에 많은 금액을 투자하실 경우 리스크가 높아질 수 있습니다.<br>
-										따라서 한 펀드당 총 투자금액의 <em>1/50 이하로 분산투자</em> 하실 것을 권해드립니다.<br>
+										이 펀드는 연이자 <em>1.72~5.72(변동금리)</em> 사이에서 투자가능합니다.
 									</li>
 								</ul>
 							</div>
+
+
+							<aside id="popup-floating-rates" class="popup guide-popup floating-rates-popup">
+								<button class="btn-popup-close" data-target="#popup-floating-rates">팝업닫기</button>
+
+								<h1 class="normal">연이자(변동금리)</h1>
+								<p>
+									이번 펀드는 COFIX 변동금리가 적용됩니다.
+								</p>
+
+								<div class="contents">
+									<p class="interest-rates">
+										<span>
+											1.12%
+											<sub>COFIX 금리</sub>
+										</span>
+										<span class="factor">
+											4%
+											<sub>가산금리</sub>
+										</span>
+										<span class="result">
+											5.12%
+											<sub>연이율</sub>
+										</span>
+									</p>
+								</div>
+							</aside>
 						</fieldset>
 					</aside>
 
@@ -116,7 +145,7 @@ include "head.html"
 
 
 					<!-- 금액 수정하기 팝업 -->
-					<aside id="popup-invest" class="invest-popup invest" style="top: 420px; bottom: auto; left: 0;">
+					<aside id="popup-invest" class="invest-popup invest-private" style="top: 520px; bottom: auto; left: 0;">
 						<fieldset class="inner">
 							<legend>투자금액 입력</legend>
 							<button class="btn-popup-close" data-target="#popup-invest">팝업닫기</button>
@@ -128,18 +157,23 @@ include "head.html"
 
 							<div class="type">
 								<p class="input-price">
-									<label for="price">참가금액</label>
+									<a href="#" class="btn-fr">변동금리</a>
+									<label for="price">12.2%</label>
 									<input type="text" id="price" name="price" class="small" value="500,000원 + 쿠폰 10,000원">
 									<!-- 쿠폰 포함일 경우 class="small" 추가 -->
 								</p>
 								<p class="type-options">
-									<span class="btns">
-										<button>100만원</button>
+									<span class="btns auto">
 										<button>10만원</button>
 										<button>1만원</button>
+										<button>1천원</button>
 										<button>삭제</button>
 									</span>
-
+<!--
+									연이자(%)
+									&nbsp;&nbsp;&nbsp;&nbsp;
+									투자금액 (천원단위)
+-->
 									<span class="msg">현재 570,000,000원 참가중</span>
 								</p>
 							</div>
@@ -158,11 +192,10 @@ include "head.html"
 							<div class="private-guide">
 								<ul>
 									<li>
-										회원님은 Vvip회원이며, 개인투자에서<br>한 펀드당 <em>10만원까지</em> 투자 가능합니다.
+										개인투자에 투자시, 신청금액의 <em>1/50 이하로 투자</em> 하실 수 있습니다.
 									</li>
 									<li>
-										개인투자는 한 펀드에 많은 금액을 투자하실 경우 리스크가 높아질 수 있습니다.<br>
-										따라서 한 펀드당 총 투자금액의 <em>1/50 이하로 분산투자</em> 하실 것을 권해드립니다.<br>
+										이 펀드는 연이자 <em>1.72~5.72(변동금리)</em> 사이에서 투자가능합니다.
 									</li>
 								</ul>
 							</div>
@@ -306,7 +339,7 @@ include "head.html"
 
 
 					<!-- 완료 메시지 -->
-					<aside id="popup-invest-message" class="invest-popup message animated fadeIn" style="top: 420px; right: 0px; bottom: auto; left: auto;">
+					<aside id="popup-invest-message" class="invest-popup message animated fadeIn" style="top: 520px; right: 0px; bottom: auto; left: auto;">
 						<div class="inner">
 							<button class="btn-popup-close" data-target="#popup-invest-message">팝업닫기</button>
 
@@ -322,7 +355,7 @@ include "head.html"
 
 
 					<!-- 취소하기 팝업(컨펌 형태) -->
-					<aside id="popup-invest-message" class="invest-popup message confirm animated fadeIn" style="top: 800px; right: auto; bottom: auto; left: 0;">
+					<aside id="popup-invest-message" class="invest-popup message confirm animated fadeIn" style="top: 1300px; right: auto; bottom: auto; left: 0;">
 						<div class="inner">
 							<button class="btn-popup-close" data-target="#popup-invest-message">팝업닫기</button>
 
@@ -339,7 +372,7 @@ include "head.html"
 
 
 					<!-- 수익금 계산기 팝업 -->
-					<aside id="popup-calc" class="invest-popup calc" style="top: 1100px; right: auto; bottom: auto; left: 0;">
+					<aside id="popup-calc" class="invest-popup calc" style="top: 1600px; right: auto; bottom: auto; left: 0;">
 						<fieldset class="inner">
 							<legend>수익금 계산 입력</legend>
 							<button class="btn-popup-close" data-target="#popup-calc">팝업닫기</button>
@@ -351,18 +384,21 @@ include "head.html"
 
 							<div class="type">
 								<p class="input-price">
-									<label for="price-calc">참가금액</label>
+									<a href="#" class="btn-fr">변동금리</a>
+									<label for="price-calc">12.2%</label>
 									<input type="text" id="price-calc" name="price-calc" value="">
 								</p>
 								<p class="type-options">
-									<span class="btns">
-										<button>100만원</button>
+									<span class="btns auto">
 										<button>10만원</button>
 										<button>1만원</button>
+										<button>1천원</button>
 										<button>삭제</button>
 									</span>
 
-									투자단위 1만원
+									연이자(%)
+									&nbsp;&nbsp;&nbsp;&nbsp;
+									투자금액 (천원단위)
 								</p>
 							</div>
 
@@ -381,25 +417,30 @@ include "head.html"
 					
 
 					<!-- 수익금 계산 후 -->
-					<aside id="popup-calc-after" class="invest-popup calc-after" style="top: 1500px; right: auto; bottom: auto; left: 0;">
+					<aside id="popup-calc-after" class="invest-popup calc-after" style="top: 2000px; right: auto; bottom: auto; left: 0;">
 						<fieldset class="inner">
 							<legend>수익금 계산 후 입력</legend>
 							<button class="btn-popup-close" data-target="#popup-calc-after">팝업닫기</button>
 
 							<div class="type">
+								<p class="type-options center">
+									<span class="msg">회원님이 2,500,000원을 투자할때, 6개월 후 예상수익입니다.</span>
+								</p>
 								<p class="input-price">
-									<label for="price-calc-after">예상 수익금</label>
+									<a href="#" class="btn-fr">변동금리</a>
+									<label for="price-calc-after">11%</label>
 									<input type="text" id="price-calc-after" name="price-calc-after" readonly="readonly" value="285,500원">
 								</p>
 								<p class="type-options">
-									<span class="msg">회원님이 2,500,000원을 투자할때, 6개월 후 예상수익입니다.</span>
+									연이자(%)
+									&nbsp;&nbsp;&nbsp;&nbsp;
+									투자금액 (천원단위)
 								</p>
 							</div>
 
 							<div class="type">
 								<a href="#" class="btn-invest recalc">다시 계산하기</a>
 								<a href="#" class="btn-invest invest">투자하러 가기</a>
-
 								<div class="type-options">
 									<ul class="list-dot">
 										<li>이 펀드는 6개월만기 일시상환, 연11%로 계산됩니다.</li>

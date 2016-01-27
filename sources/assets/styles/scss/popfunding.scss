@@ -106,7 +106,7 @@ $z-layers: (
 }
 
 /* 투자하기 큰 버튼 */
-.btn-invest { display: block; margin: 0 auto; padding-left: 20px; height: 55px; width: 380px; font-size: 18px; color: #fff; font-weight: bold; line-height: 55px; text-align: center; border-radius: 55px; background-color: #14378c;
+.btn-invest { display: block; margin: 0 auto; /*padding-left: 20px;*/ height: 55px; width: 380px; font-size: 20px; color: #fff; font-weight: bold; line-height: 55px; text-align: center; border-radius: 55px; background-color: #14378c;
 	&:after { content: ''; display: inline-block; margin-top: -2px; margin-left: 9px; vertical-align: middle; @include sprite($sprite-bg-arrow03); }
 	&:hover { text-decoration: none; background-color: #0f2969; }
 	.expired & { padding-left: 0; width: 400px; background-color: #afb2b7;

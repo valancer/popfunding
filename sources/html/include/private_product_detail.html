@@ -95,7 +95,7 @@
 				<div class="invest-popup-container">
 
 					<!-- 투자하기 팝업 -->
-					<aside id="popup-invest" class="invest-popup invest">
+					<aside id="popup-invest" class="invest-popup invest-private">
 						<fieldset class="inner">
 							<legend>투자금액 입력</legend>
 							<button class="btn-popup-close" data-target="#popup-invest">팝업닫기</button>
@@ -107,18 +107,21 @@
 
 							<div class="type">
 								<p class="input-price">
-									<label for="price">참가금액</label>
+									<a href="#popup-floating-rates" class="btn-fr">변동금리</a>
+									<label for="price">12.2%</label>
 									<input type="text" id="price" name="price" value="">
 								</p>
 								<p class="type-options">
-									<span class="btns">
-										<button>100만원</button>
+									<span class="btns auto">
 										<button>10만원</button>
 										<button>1만원</button>
+										<button>1천원</button>
 										<button>삭제</button>
 									</span>
 
-									투자단위 1만원
+									연이자(%)
+									&nbsp;&nbsp;&nbsp;&nbsp;
+									투자금액 (천원단위)
 									<!-- <span class="msg">현재 570,000,000원 참가중</span> -->
 								</p>
 							</div>
@@ -138,14 +141,40 @@
 							<div class="private-guide">
 								<ul>
 									<li>
-										회원님은 Vvip회원이며, 개인투자에서<br>한 펀드당 <em>10만원까지</em> 투자 가능합니다.
+										개인투자에 투자시, 신청금액의 <em>1/50 이하로 투자</em> 하실 수 있습니다.
 									</li>
 									<li>
-										개인투자는 한 펀드에 많은 금액을 투자하실 경우 리스크가 높아질 수 있습니다.<br>
-										따라서 한 펀드당 총 투자금액의 <em>1/50 이하로 분산투자</em> 하실 것을 권해드립니다.<br>
+										이 펀드는 연이자 <em>1.72~5.72(변동금리)</em> 사이에서 투자가능합니다.
 									</li>
 								</ul>
 							</div>
+
+							<aside id="popup-floating-rates" class="popup guide-popup floating-rates-popup">
+								<button class="btn-popup-close" data-target="#popup-floating-rates">팝업닫기</button>
+
+								<h1 class="normal">연이자(변동금리)</h1>
+								<p>
+									이번 펀드는 COFIX 변동금리가 적용됩니다.
+								</p>
+
+								<div class="contents">
+									<p class="interest-rates">
+										<span>
+											1.12%
+											<sub>COFIX 금리</sub>
+										</span>
+										<span class="factor">
+											4%
+											<sub>가산금리</sub>
+										</span>
+										<span class="result">
+											5.12%
+											<sub>연이율</sub>
+										</span>
+									</p>
+								</div>
+							</aside>
+
 						</fieldset>
 					</aside>
 

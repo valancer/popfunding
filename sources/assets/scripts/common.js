@@ -524,6 +524,7 @@ var Invest = (function ($) {
 		$investPopup,
 		$calcPopup,
 		$calcAfterPopup,
+		$frPopup,
 		_isOpen = false,
 		init = function () {
 			$investPopupContainer = $('.invest-popup-container');
@@ -532,6 +533,7 @@ var Invest = (function ($) {
 			$investPopup = $('#popup-invest');
 			$calcPopup = $('#popup-calc');
 			$calcAfterPopup = $('#popup-calc-after');
+			$frPopup = $investPopupContainer.find('.btn-fr');
 			
 	 		initLayout();
 			initEvent();
@@ -561,6 +563,12 @@ var Invest = (function ($) {
 		$investBtnsContainer.on('click.Invest', '.utils .calc', function(e) {
 			e.preventDefault();
 			openCalcPopup();
+		});
+
+		$frPopup.on('click', function(e) {
+			e.preventDefault();
+			var target = $(this).attr('href');
+			$(target).toggle();
 		});
 	}
 

@@ -92,6 +92,8 @@ $z-layers: (
 	.filter-container & {
 		&:hover { color: $color-menu1-hover; text-decoration: none; }
 	}
+
+	&.color-blue { font-size: 14px; font-weight: bold; color: #fff; border: 1px solid #2e96d6; background-color: #2e96d6; }
 }
 .btn-rd-small { display: inline-block; padding: 0 18px 0 18px; font-size: 12px; color: $color-content; text-align: center; vertical-align: center; line-height: 28px; border: 1px solid #d4dae4; border-radius: 30px; background-color: #fff; }
 

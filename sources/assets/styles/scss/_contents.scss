@@ -57,7 +57,7 @@
 	}
 	span.center { display: inline-block; margin-right: 10px; vertical-align: middle;
 		input[type=text],
-		input[type=password] { display: inline-block; width: 110px; vertical-align: middle; }
+		input[type=password] { display: inline-block; padding-right: 0; padding-left: 0; width: 110px; vertical-align: middle; }
 	}
 
 
@@ -65,6 +65,9 @@
 .item-form { position: relative; clear: both;
 
 	.time { float: right; font-size: 12px; color: $color-menu1-hover; line-height: 28px; }
+	.writer { float: right; font-size: 12px; color: $color-content; line-height: 28px;
+		> .time { color: $color-content; }
+	}
 
 	label { display: block; margin-top: 12px; font-size: 0.750em; color: $color-content; line-height: 28px;
 		// 자세히 버튼
@@ -178,7 +181,23 @@
 	.tooltip { top: -38px; bottom: auto; 
 		&:before { top: auto; bottom: -$sprite-bg-arrow13-height; @include sprite($sprite-bg-arrow13); }
 	}
+
+	/* 큰 사이즈 */
+	&.big {
+		input[type=radio] {
+			+ label { margin-right: 42px; padding-left: 29px; font-size: 16px; line-height: 21px;
+				&:before { content: ''; display: block; position: absolute; top: 0px; left: 0; @include sprite($sprite-icon-radio02); }
+			}
+
+			&.checked + label,
+			&:checked + label {
+				&:before { @include sprite($sprite-icon-radio02-selected); }
+			}
+		}
+	}
 }
+
+
 
 /* 기본 테이블 데이터 타입 */
 .table-data { margin-top: 12px; width: 100%; border-top: 2px solid #252525; border-bottom: 2px solid #252525;

@@ -669,19 +669,30 @@ article.contents { min-width: $contents-container-width; padding: 60px 0 110px 0
 	&:before { content: ''; position: absolute; top: -$sprite-bg-arrow10-height; @include sprite($sprite-bg-arrow10); }
 	.btn-popup-close { position: absolute; top: 13px; right: 13px; }
 
-	strong { color: $color-menu1-hover; }
+	strong, em { color: $color-menu1-hover; }
 
 	h1 { display: block; position: relative; padding: 0 0 0 38px; font-size: 1.000em; font-weight: normal; color: $color-menu1-hover;
 		&:before { content: ''; display: block; position: absolute; bottom: 0; left: 0; @include sprite($sprite-icon-check06); }
 	}
+	h1.normal { padding: 0; font-size: 0.875em; font-weight: normal; color: $color-title;
+		&:before { content: none; }
+	}
+
 	h2 { margin-top: 36px; font-size: 0.875em; font-weight: normal; color: $color-title; }
 	.contents { padding-top: 7px; font-size: 0.750em; color: $color-content; line-height: 18px;
 		p { margin-top: 8px; }
+		.btn-shortcut { color: $color-title; text-decoration: underline; }
 	}
 
 	.list-warning { padding-top: 11px;
 		> li { display: block; position: relative; margin-top: 14px; padding-left: 40px; font-size: 0.750em; color: $color-content; line-height: 18px;
 			&:before { content: ''; display: block; position: absolute; top: 50%; left: 8px; margin-top: -$sprite-icon-iks01-height/2; @include sprite($sprite-icon-iks01); }
+		}
+	}
+
+	.list-dot {
+		> li { display: block; position: relative; margin-top: 14px; padding-left: 10px; font-size: 0.750em; color: $color-content; line-height: 18px;
+			&:before { content: ''; display: block; position: absolute; top: 9px; left: 1px; margin-top: -1px; height: 2px; width: 2px; background-color: $color-content; }
 		}
 	}
 }

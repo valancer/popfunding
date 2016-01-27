@@ -704,6 +704,132 @@ $border-inner-color: #e6e9ee;
 		}
 	}
 
+
+	/// 연체상황판
+	&.overdue {  padding-top: 78px; padding-bottom: 80px;
+		.status { display: block; font-size: 1.500em; color: $color-title; line-height: 60px;
+			&:before { content: ''; display: inline-block; margin: -3px 9px 0 0; vertical-align: middle; @include sprite($sprite-icon-person01); }
+			> strong { color: $color-menu1-hover; }
+		}
+
+		.btn-inline { color: $color-menu1-hover !important; text-decoration: underline; }
+		.btn-inline-box { margin-bottom: 15px; padding: 0 15px; line-height: 29px; }
+		.warning { position: relative; margin: 37px 0 0 0; padding-left: 30px; font-size: 0.750em; color: $color-content; line-height: 20px; text-align: left;
+			&:before { content: ''; display: block; position: absolute; top: 0; left: 0; @include sprite($sprite-icon-iks01); }
+			em, strong { color: $color-menu1-hover; }
+		}
+
+		.pd-container { position: relative; padding: 0 119px 80px 119px;
+			.title { margin-top: 60px; font-size: 1.125em; font-weight: normal; color: $color-title;
+				> em { color: $color-menu1-hover; }
+			}
+			.list-dot-pd { margin-top: 34px;
+				> li { display: block; position: relative; padding-left: 8px; font-size: 0.875em; color: $color-content; line-height: 27px;
+					&:before { content: ''; display: block; position: absolute; top: 12px; left: 1px; height: 2px; width: 2px; background-color: #667386; }
+
+					span { margin-left: 10px; color: $color-title;
+						&.bar { margin-left: 0px;
+							&:before { content: '|'; margin-right: 10px; color: #e1e5ec; }
+						}
+					}
+					em { margin-right: 5px; margin-left: 5px; color: $color-menu1-hover; }
+
+					a { color: $color-content; text-decoration: underline; }
+				}
+			}
+
+			table { width: 100%; border-top: 2px solid #252525; border-bottom: 2px solid #252525;
+				tr { border-bottom: 1px solid #d4dae4; }
+				th { height: 54px; font-size: 0.875em; font-weight: normal; color: $color-title; text-align: center; border-left: 1px solid #d4dae4;
+					&:first-child { border-left: 0px; }
+				}
+				thead { }
+				tfoot {
+					th { position: relative;
+						&:before { content: ''; display: block; position: absolute; top: 50%; right: 0px; margin-top: -7px; height: 15px; width: 1px; background-color: #d4dae4; }
+					}
+					td { padding: 20px 0 20px 0;
+						&[colspan] { padding-left: 38px; }
+					}
+					.btn-submit { width: 100%; }
+				}
+				tbody {
+					th, td { height: 54px; font-size: 0.875em; font-weight: normal; color: $color-content; text-align: center; border-left: 1px solid #d4dae4;
+						&:first-child { border-left: 0px; }
+					}
+				}
+
+				/* 문자 발송 목록 */
+				&.tbl-list-sms {
+					tbody {
+						th, td { height: 40px; font-size: 0.750em; border: 0px; }
+						th { padding-left: 20px; text-align: left; }
+					}
+				}
+			}
+
+			/* 대손채권처리 선택 */
+			&.bad-debt {
+				.tbl-bad-debt { margin-top: 33px;
+					+ .btns { position: relative; padding-top: 18px; text-align: right;
+						.btn-inline {
+							&:before { content: ''; display: inline-block; margin-right: 4px; height: 2px; width: 2px; vertical-align: middle; background-color: $color-menu1-hover; }
+						}
+					}
+				}
+			}
+
+			/* 문자보내기 */
+			&.send-message { border-top: 1px solid #e6e9ee;
+				.btn-inline-box.message { float: right; margin-top: -10px; }
+
+				.item-form { clear: none; float: left; margin-top: 20px;
+					+ .item-form { margin-left: 10px; }
+					.btn-inner-form { float: left; margin-left: 20px; }
+				}
+			}
+
+			/* 투자자 talk */
+			&.talk { padding-bottom: 0px; border-top: 1px solid #e6e9ee;
+				.warning { margin-top: 0; }
+				.btn-inline-box.talk { float: right; margin-top: -10px; }
+
+				.list-talk { clear: both; width: 100%; border-top: 2px solid $color-title;
+					> li { padding: 25px 0 25px 0; font-size: 0.875em; color: $color-content; line-height: 22px; border-bottom: 1px solid #d4dae4;
+						p { margin-top: 20px; }
+					}
+				}
+
+				textarea { height: 85px; }
+				.btns { padding-top: 20px;; text-align: center; }
+			}
+
+			/* 팝업 */
+			/* 설명 팝업 */
+			.bad-debt-popup { display: none; position: absolute; top: 205px; right: 230px; z-index: z("modaless"); width: 700px;
+				&:before { right: 258px; left: auto; }
+
+				.warning {
+					+ .warning { margin-top: 15px; }
+				}
+			}
+
+			/* 채권행사 주의사항 */
+			.bad-debt-guide-popup { display: none; position: absolute; top: 45px; right: 0px; z-index: z("modaless"); width: 700px;
+				&:before { right: 60px; left: auto; }
+
+				.legal-information { margin-top: 6px; font-size: 0.750em; color: $color-menu1-hover; }				
+				.btn-shortcut { float: right; margin-top: 25px; }
+			}
+
+			/* */
+			.sms-guide-popup { display: none; position: absolute; top: 90px; left: 119px; z-index: z("modaless"); padding: 10px 25px 25px 30px; width: 435px;
+				&:before { left: 209px; right: auto; }
+			}
+		}
+
+		
+	}
 }
 
 

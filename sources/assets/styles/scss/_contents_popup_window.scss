@@ -20,7 +20,10 @@ body.popup-window { min-width: auto; background-color: #eaf5fa; }
 		}
 	}
 	
-	.tip { display: block; position: relative; margin: 53px auto 0 auto; padding-left: 33px; width: 330px; font-size: 0.750em; color: $color-content; line-height: 18px; text-align: left;
+	.tip { display: block; position: relative; margin: 53px auto 0 auto; padding-left: 33px; width: 380px; font-size: 0.750em; color: $color-content; line-height: 18px; text-align: left;
 		&:before { content: ''; display: block; position: absolute; top: 0; left: 0; @include sprite($sprite-btn-tip02); }
+	}
+	.warning { display: block; position: relative; margin: 10px auto 0 auto; padding-left: 33px; width: 380px; font-size: 0.750em; color: $color-content; line-height: 18px; text-align: left;
+		&:before { content: ''; display: block; position: absolute; top: 0; left: 0; @include sprite($sprite-icon-iks01); }
 	}
 }

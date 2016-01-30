@@ -1,0 +1,442 @@
+include "head.html"
+	<script>
+	$(window.document).ready(function(){
+	});
+	</script>
+
+	<!-- 상단 영역 -->
+	include "header.html"
+
+
+	<!-- 본문 영역 -->
+	<article class="contents borrowing-private kt">
+		<h1>빌리기</h1>
+
+		<div class="inner">
+		
+
+			<!-- 필터 및 소개  -->
+			<div class="filter-container">
+				<fieldset class="filter">
+					<legend>투자종류선택</legend>
+
+					<input type="radio" id="borrowing01" name="borrowing-type" checked="checked" class="selected"><label for="borrowing01">개인이 빌리기</label>
+					<input type="radio" id="borrowing02" name="borrowing-type"><label for="borrowing02">기업이 빌리기</label>
+				</fieldset>
+				
+				<div class="utils-guide">
+					<a href="#" class="btn-tip">꿀팁</a>
+				</div>
+			</div>
+
+
+			<!-- 개인이 빌리기 -->
+			<section class="borrowing-application">
+				<a href="#" class="btn-back">소개 화면으로 돌아가기</a>
+
+				<ul class="proceedings">
+					<li class="step01">
+						<span class="tooltip down">신용보고서 기간만료</span>
+						<h1 class="title">빌리기 신청</h1>
+					</li>
+					<li class="step03 selected">
+						<span class="tooltip down">임시저장</span>
+						<span class="title">빌리기 신청</span>
+					</li>
+				</ul>
+
+				<div class="proceedings-step application">
+					<h2>빌리기 신청</h2>
+					<p class="description">
+						20분 이상 페이지 이동이 없으면 자동으로 로그아웃 됩니다.<br>
+						1분마다 자동저장이 되며, 필요시 임시 저장을 눌러주세요.<br>
+					</p>
+
+					<fieldset class="basic-info-form">
+						<legend>빌리기 신청 내용</legend>
+
+						<fieldset class="basic">
+							<legend>기본 정보</legend>
+
+							<div class="item-form" style="margin-right: 20px; width: 345px;">
+								<label for="email">이메일</label>
+								<input type="text" id="email" name="email">
+								<span class="tooltip">이메일을 입력하세요.</span>
+							</div>
+							<div class="item-form">
+								<label for="">휴대전화</label>
+								<span class="center">
+									<input type="text" id="" name="" disabled="disabled" value="010">
+									-
+									<input type="text" id="" name="" disabled="disabled" value="1234">
+									-
+									<input type="text" id="" name="" disabled="disabled" value="5678">
+								</span>
+							</div>
+							<p class="warning no-icon" style="margin-top: 45px;">이미 인증된 KT휴대전화입니다.</p>
+						</fieldset>
+
+						<fieldset class="contacts">
+							<legend>연락처</legend>
+
+							<div class="item-form">
+								<label for="">집전화</label>
+								<span class="center">
+									<input type="text" id="" name="">
+									-
+									<input type="text" id="" name="">
+									-
+									<input type="text" id="" name="">
+									<span class="tooltip">집전화를 입력하세요. 없으면 [집전화 없음]을 체크하세요.</span>
+								</span>
+								<p class="cr-box">
+									<input type="checkbox" id="tel-none" name="tel-none"><label for="tel-none">집전화 없음</label>
+								</p>
+							</div>
+							<div class="item-form">
+								<label for="">회사전화</label>
+								<span class="center">
+									<input type="text" id="" name="">
+									-
+									<input type="text" id="" name="">
+									-
+									<input type="text" id="" name="">
+									<span class="tooltip">회사전화를 입력하세요. 없으면 [회사전화 없음]을 체크하세요.</span>
+								</span>
+								<p class="cr-box">
+									<input type="checkbox" id="co-tel-none" name="co-tel-none"><label for="co-tel-none">회사전화 없음</label>
+								</p>
+							</div>
+
+							<div class="contacts-description">
+								<p class="warning" style="margin-top: 0;">
+									반드시 연락이 가능한 회원님의 연락처, 주소, 정보 등을<br>
+									입력해야 합니다.
+									<strong>입력한 내용이 불일치 및 확인이 안 될 경우,<br>선청 및 대출이 취소됩니다.</strong>
+								</p>
+							</div>
+						</fieldset>
+
+
+						<fieldset class="address">
+							<legend>주소 정보</legend>
+
+							<!-- 주민등록 주소 -->
+							<div class="item-form">
+								<label for="">주소</label>
+								<span class="center">
+									<input type="text" id="" name="" style="width: 86px;">
+								</span>
+								<a href="#" class="btn-inner-form">
+									검색
+									<span class="tooltip">주소를 검색하세요.</span>
+								</a>
+							</div>
+							<div class="item-form" style="width: 407px;">
+								<label for="" class="visible-hidden">주소</label>
+								<input type="text" id="" name="">
+							</div>
+							<div class="item-form" style="width: 318px; margin-right: 0px;">
+								<label for="">상세주소</label>
+								<input type="text" id="" name="">
+								<span class="tooltip">상세주소를 검색하세요.</span>
+							</div>
+							<div class="clear"></div>
+						</fieldset>
+
+
+						<fieldset class="account">
+							<legend>계좌 정보</legend>
+
+							<div class="item-form" style="width: 173px;">
+								<label for="">은행명</label>
+
+								<div class="select">
+									<button value="">우리은행</button>
+									<ul class="list-selecting" style="display: none;">
+										<li><button value="">은행명</button></li>
+										<li><button value="">은행명</button></li>
+										<li><button value="">은행명</button></li>
+									</ul>
+								</div>
+							</div>
+							<div class="item-form" style="width: 402px;">
+								<label for="">계좌번호</label>
+								<input type="text" id="" name="">
+								<span class="tooltip">계좌번호를 입력하세요.</span>
+							</div>
+							<p class="desc">
+								<em>대출금을 송금 받을 계좌이며,</em><br>
+								반드시 본인 명의의 계좌를 입력하세요.
+							</p>
+						</fieldset>
+
+
+						<fieldset class="etc">
+							<legend>기타 정보 입력</legend>
+							
+							<div class="item-form">
+								<div class="item-form" style="width: 410px;">
+									<label for="">직군</label>
+
+									<div class="select center" style="margin-right: 10px; width: 195px;">
+										<button value="">선택</button>
+										<ul class="list-selecting" style="display: none;">
+											<li><button value="">선택</button></li>
+											<li><button value="">선택</button></li>
+											<li><button value="">선택</button></li>
+										</ul>
+										<span class="tooltip">직군을 선택하세요.</span>
+									</div>
+
+									<div class="select center" style="width: 195px;">
+										<button value="">선택</button>
+										<ul class="list-selecting" style="display: none;">
+											<li><button value="">선택</button></li>
+											<li><button value="">선택</button></li>
+											<li><button value="">선택</button></li>
+										</ul>
+										<span class="tooltip">직군을 선택하세요.</span>
+									</div>
+								</div>
+								<div class="item-form" style="width: 175px;">
+									<label for="">직군 상세 (선택)</label>
+									<input type="text" id="" name="">
+								</div>
+							</div>
+						</fieldset>
+
+
+						<fieldset class="basic">
+							<legend>신청 정보 입력</legend>
+							
+							<div class="item-form" style="width: 749px;">
+								<div class="item-form" style="width: 171px;">
+									<label for="">신청금액</label>
+
+									<div class="select center">
+										<button value="">미정</button>
+										<ul class="list-selecting" style="display: none;">
+											<li><button value="">미정</button></li>
+											<li><button value="">미정</button></li>
+											<li><button value="">미정</button></li>
+										</ul>
+										<span class="tooltip">금액을 선택하세요.</span>
+									</div>
+								</div>
+
+								<div class="item-form" style="width: 171px;">
+									<label for="">신청기간</label>
+
+									<div class="select center">
+										<button value="">미정</button>
+										<ul class="list-selecting" style="display: none;">
+											<li><button value="">미정</button></li>
+											<li><button value="">미정</button></li>
+											<li><button value="">미정</button></li>
+										</ul>
+										<span class="tooltip">기간을 선택하세요.</span>
+									</div>
+								</div>
+
+								<div class="item-form" style="width: 171px;">
+									<label for="">연이자(고정)</label>
+
+									<input type="text" id="" name="" disabled="disabled" value="9.9%(원금균등상황)">
+								</div>
+
+								<a href="#preview-repayment" class="btn-inner-form only-buttons">
+									상환내역 미리보기
+								</a>
+								<script>
+								$(window.document).ready(function(){
+									// 상환내역 미리보기
+									var $btnPreview = $('a.btn-inner-form');
+									$btnPreview.on('click', function(e) {
+										e.preventDefault();
+										var target = $btnPreview.attr('href');
+										$(target).toggle();
+									});
+								});
+								</script>
+
+								<!-- 팝업 -->
+								<aside id="preview-repayment" class="popup guide-popup preview-popup">
+									<button class="btn-popup-close" data-target="#preview-repayment">팝업닫기</button>
+
+									<h1>상환내역 미리보기</h1>
+									<div class="scroll">
+										<table class="table-data">
+											<caption>상환내역 미리보기</caption>
+											<thead>
+												<tr>
+													<th>월</th>
+													<th>원금</th>
+													<th>이자</th>
+													<th>상환합계</th>
+													<th>원대출 잔액</th>
+												</tr>
+											</thead>
+											<tfoot>
+												<tr>
+													<th>합계</th>
+													<td>1,000,000</td>
+													<td>72,916</td>
+													<td>1,072,916</td>
+													<td>0</td>
+												</tr>
+											</tfoot>
+											<tbody>
+												<tr>
+													<td>1</td>
+													<td>166,667</td>
+													<td>20,833</td>
+													<td>187,500</td>
+													<td>83,333</td>
+												</tr>
+												<tr>
+													<td>2</td>
+													<td>166,667</td>
+													<td>17,361</td>
+													<td>184,028</td>
+													<td>666,666</td>
+												</tr>
+												<tr>
+													<td>3</td>
+													<td>166,667</td>
+													<td>13,889</td>
+													<td>180,556</td>
+													<td>499,999</td>
+												</tr>
+												<tr>
+													<td>4</td>
+													<td>166,667</td>
+													<td>10,417</td>
+													<td>177,084</td>
+													<td>33,333</td>
+												</tr>
+												<tr>
+													<td>5</td>
+													<td>166,667</td>
+													<td>6,944</td>
+													<td>173,611</td>
+													<td>166,665</td>
+												</tr>
+												<tr>
+													<td>6</td>
+													<td>166,667</td>
+													<td>3,472</td>
+													<td>170,137</td>
+													<td>0</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</aside>
+							</div>
+
+							<div class="item-form" style="width: 171px;">
+								<label for="">
+									마감일
+									<time datetime="" class="time">2015.12.12</time>
+								</label>
+
+								<div class="select center">
+									<button value="">미정</button>
+									<ul class="list-selecting" style="display: none;">
+										<li><button value="">미정</button></li>
+										<li><button value="">미정</button></li>
+										<li><button value="">미정</button></li>
+									</ul>
+									<span class="tooltip">마감일을 선택하세요.</span>
+								</div>
+								<p class="warning no-icon">투자금 100% 도달 시 자동 마감</p>
+							</div>
+						</fieldset>		<!-- class="basic" -->
+
+
+
+						<fieldset class="story">
+							<legend>신청 사연 정보 입력</legend>
+							
+							<div class="item-form" style="width: 682px;">
+								<label for="story">사연 제목</label>
+
+								<input type="text" id="story" name="story" class="title">
+								<span class="tooltip">사연 제목을 입력하세요.</span>
+							</div>
+
+							<div class="item-form" style="float: right; margin-top: 12px; width: 171px;">
+								<label for="">자금용도</label>
+
+								<div class="select center">
+									<button value="">미정</button>
+									<ul class="list-selecting" style="display: none;">
+										<li><button value="">미정</button></li>
+										<li><button value="">미정</button></li>
+										<li><button value="">미정</button></li>
+									</ul>
+									<span class="tooltip">용도를 선택하세요.</span>
+								</div>
+							</div>
+
+							<div class="item-form" style="margin-top: 25px; width: 838px;">
+								<label for="story-content">사연 내용</label>
+
+								<textarea name="story-content" id="story-content" cols="100" rows="30">
+								</textarea>
+								<span class="tooltip">사연 내용을 입력하세요.</span>
+							</div>
+							<p class="warning">
+								<em>가족 중 빌리기 경력이 있거나 신청 중이면 내용을 입력해 주세요.</em><br>
+								미리 밝히지 않을 경우에는 신청 및 대출이 취소될 수 있습니다.
+							</p>
+						</fieldset>		<!-- class="story" -->
+
+
+						<div class="box-disclosure">
+							<div class="item-form" style="width: 265px;">
+								<span class="cr-box">
+									<input type="checkbox" id="disclosure01" name="disclosure">
+									<label for="disclosure01"><a href="#">개인정보 수집</a> 및<br><a href="#">개인정보 제3자 제공</a>에 동의합니다.</label>
+								</span>
+								<span class="tooltip down">정보 공개에 동의하세요.</span>
+							</div>
+							<div class="item-form">
+								<span class="cr-box">
+									<input type="checkbox" id="disclosure02" name="disclosure"><label for="disclosure02">아래의 개인정보 공개에 동의합니다.</label>
+								</span>
+								<span class="tooltip down">정보 공개에 동의하세요.</span>
+
+								<ul class="list-dot">
+									<li>회원님의 KT 가입 정보를 투자자 회원에게 공개됩니다.</li>
+									<li>10일 이상 연체 - 투자자들에게 회원님의 성함, 핸드폰, 집, 전화번호,이메일 주소가 공개됩니다.</li>
+								</ul>
+							</div>
+
+							<div class="clear"></div>
+						</div>
+
+						<div class="btns">
+							<a href="#" class="btn-submit color-blue">임시저장</a>
+							<a href="#" class="btn-submit color-blue">미리보기</a>
+						</div>
+					</fieldset>		<!-- class="basic-info-form" -->
+					
+
+					<a href="#" class="btn-submit">빌리기 신청하기</a>
+					<p class="submit-desc">&lt;신청하기&gt; 이후에는 개인정보 및 신청내용을 수정할 수 없습니다.</p>
+
+				</div>
+			</section>
+
+
+		</div>
+	</article>
+
+
+	<!-- 하단 영역 -->
+	include "footer.html"
+
+</body>
+</html>

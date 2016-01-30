@@ -209,7 +209,7 @@
 
 			/* 빌리기 준비 과정 */
 			.prepare-step01 { margin: 40px auto 0 auto; width: 920px;
-				> li { position: relative; padding: 27px 90px 32px 110px; border-top: 1px solid #d4dae4;
+				> li { position: relative; padding: 27px 90px 32px 110px; min-height: 70px; border-top: 1px solid #d4dae4;
 					&:first-child { border-top: 0px; }
 					&:before { content: ''; display: block; position: absolute; top: 19px; left: 50px; }
 
@@ -411,6 +411,35 @@
 
 		}
 
+	}
+
+
+	/* KT 회원 */
+	&.kt {
+		.borrowing-application {
+			.proceedings {
+				&:before { right: 33%; left: 33%; }
+				> li { margin: 0 150px; }
+			}
+
+			.proceedings-step {
+				&.application {
+					.basic-info-form {
+						.box-disclosure { padding-left: 65px; text-align: left;
+							.item-form { clear: none; float: left;
+								.tooltip.down { bottom: auto; }
+							}
+
+							.list-dot { margin-left: 10px;
+								> li {
+									&:before { top: 8px; height: 2px; width: 2px; background-color: $color-content; }
+								}
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 
 }

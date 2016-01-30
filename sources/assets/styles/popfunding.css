@@ -570,6 +570,8 @@ span.center {
     height: 52px;
     font-size: 1.500em;
     line-height: 50px; }
+  .item-form input[disabled] {
+    background-color: #f6f7f8; }
   .item-form textarea {
     display: block;
     box-sizing: border-box;
@@ -6984,7 +6986,8 @@ article.contents {
   /* 타입 선택 */
   /* 빌리기 신청 */
   /* 빌리기 받기 */
-  /* 신청 진행 */ }
+  /* 신청 진행 */
+  /* KT 회원 */ }
   .contents.borrowing-private .borrowing-intro {
     position: relative;
     margin-top: 42px;
@@ -7517,6 +7520,7 @@ article.contents {
         .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li {
           position: relative;
           padding: 27px 90px 32px 110px;
+          min-height: 70px;
           border-top: 1px solid #d4dae4;
           /* 대출자 인증 후 */
           /* 가입비 팝업 */ }
@@ -7973,6 +7977,26 @@ article.contents {
             font-size: 0.857em;
             color: #6b7581;
             text-decoration: underline; }
+  .contents.borrowing-private.kt .borrowing-application .proceedings:before {
+    right: 33%;
+    left: 33%; }
+  .contents.borrowing-private.kt .borrowing-application .proceedings > li {
+    margin: 0 150px; }
+  .contents.borrowing-private.kt .borrowing-application .proceedings-step.application .basic-info-form .box-disclosure {
+    padding-left: 65px;
+    text-align: left; }
+    .contents.borrowing-private.kt .borrowing-application .proceedings-step.application .basic-info-form .box-disclosure .item-form {
+      clear: none;
+      float: left; }
+      .contents.borrowing-private.kt .borrowing-application .proceedings-step.application .basic-info-form .box-disclosure .item-form .tooltip.down {
+        bottom: auto; }
+    .contents.borrowing-private.kt .borrowing-application .proceedings-step.application .basic-info-form .box-disclosure .list-dot {
+      margin-left: 10px; }
+      .contents.borrowing-private.kt .borrowing-application .proceedings-step.application .basic-info-form .box-disclosure .list-dot > li:before {
+        top: 8px;
+        height: 2px;
+        width: 2px;
+        background-color: #6b7581; }
 
 body.popup-window {
   min-width: auto;
@@ -8028,7 +8052,7 @@ body.popup-window {
     position: relative;
     margin: 53px auto 0 auto;
     padding-left: 33px;
-    width: 330px;
+    width: 380px;
     font-size: 0.750em;
     color: #6b7581;
     line-height: 18px;
@@ -8043,3 +8067,23 @@ body.popup-window {
       background-position: -347px -650px;
       width: 29px;
       height: 23px; }
+  .popup-window-contents .warning {
+    display: block;
+    position: relative;
+    margin: 10px auto 0 auto;
+    padding-left: 33px;
+    width: 380px;
+    font-size: 0.750em;
+    color: #6b7581;
+    line-height: 18px;
+    text-align: left; }
+    .popup-window-contents .warning:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image: url(/assets/images/sprites.png);
+      background-position: -782px -710px;
+      width: 23px;
+      height: 20px; }

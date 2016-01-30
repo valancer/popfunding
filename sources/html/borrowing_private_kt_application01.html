@@ -1,0 +1,111 @@
+include "head.html"
+	<script>
+	$(window.document).ready(function(){
+	});
+	</script>
+
+	<!-- 상단 영역 -->
+	include "header.html"
+
+
+	<!-- 본문 영역 -->
+	<article class="contents borrowing-private kt">
+		<h1>빌리기</h1>
+
+		<div class="inner">
+		
+
+			<!-- 필터 및 소개  -->
+			<div class="filter-container">
+				<fieldset class="filter">
+					<legend>투자종류선택</legend>
+
+					<input type="radio" id="borrowing01" name="borrowing-type" checked="checked" class="selected"><label for="borrowing01">개인이 빌리기</label>
+					<input type="radio" id="borrowing02" name="borrowing-type"><label for="borrowing02">기업이 빌리기</label>
+				</fieldset>
+				
+				<div class="utils-guide">
+					<a href="#" class="btn-tip">꿀팁</a>
+				</div>
+			</div>
+
+
+			<!-- 개인이 빌리기 -->
+			<section class="borrowing-application">
+				<a href="#" class="btn-back">소개 화면으로 돌아가기</a>
+
+				<ul class="proceedings">
+					<li class="step01 selected">
+						<span class="tooltip down">신용보고서 기간만료</span>
+						<h1 class="title">빌리기 신청</h1>
+					</li>
+					<li class="step03">
+						<span class="tooltip down">임시저장</span>
+						<span class="title">빌리기 신청</span>
+					</li>
+				</ul>
+
+				<div class="proceedings-step prepare">
+					<h2>빌리기 준비</h2>
+
+					<ol class="prepare-step01">
+						<li class="seq01 done">
+							<span class="title">대출자 인증</span>
+							<p>
+								대출 신청시 정보확인을 위해 실명인증과 휴대폰인증을 진행합니다.<br>
+								인증 이후, 회원님의 전용 가상계좌가 만들어 집니다.<br>
+							</p>
+							<a href="#" class="btn-auth">
+								대출자<br>인증하기
+								<span class="tooltip down">인증이 필요합니다.</span>
+							</a>
+
+							<!-- 인증 후 -->
+							<div class="box-auth">
+								<strong class="title">인증이 완료 되어, 가상계좌가 부여 되었습니다.</strong>
+								<p class="message">
+									가상계좌 이용료 200원 포함하여 2만원을 입금하시고, 2단계의 대출회원 가입비를 결제해주세요.
+								</p>
+								<p class="info">
+									우리은행 <em>245612-14-123654</em>
+									제영순 <em>0원</em>
+								</p>
+							</div>
+						</li>
+						<li class="seq02">
+							<span class="title">KT 휴대폰 가입인증</span>
+							<p>
+								본인명의의 KT 휴대폰 가입정보를 인증합니다.
+							</p>
+
+							<a href="#" class="btn-auth">KT휴대폰<br>가입정보 인증</a>
+						</li>
+						<li class="seq03">
+							<span class="title">KT서비스 이용정보 조회 동의</span>
+							<p>
+								KT서비스 이용정보 조회를 진행하면, 회원님의 빌리기 정보 내에 공개됩니다.<br>
+								(동의일로부터 30일간 유효)
+							</p>
+							<ul class="list-dot">
+								<li>KT서비스 (휴대폰, 인터넷, 유선전화, IPTV)를 현재 이용 중이신 회원님만 빌리기 신청이 가능합니다.</li>
+								<li>KT서비스 이용정보 조회는 영업일 1~2일 이후 최종 확인이 완료됩니다.</li>
+							</ul>
+
+							<a href="#" class="btn-auth">KT서비스 이용정보<br>조회 동의</a>
+						</li>
+					</ol>
+
+					<a href="#" class="btn-submit color-borrowing">준비 완료</a>	
+				</div>
+			</section>
+
+
+		</div>
+	</article>
+
+
+	<!-- 하단 영역 -->
+	include "footer.html"
+
+</body>
+</html>

@@ -18,6 +18,8 @@
 				&:hover { text-decoration: none; }
 			}
 		}
+
+		+ .clear + .paging { margin-top: 15px; }
 	}
 
 	/// 개인 투자 - 숫자 to 이미지
@@ -50,6 +52,7 @@
 		> .options { overflow: hidden; position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: z("default")+1; border-radius: $border-radius 0 0 0;
 			> em { position: absolute; position: absolute; top: 0; left: 0; text-indent: -9999px; }
 			> .invest-type01 { border-radius: $border-radius 0px 0px 0px; @include sprite($sprite-badge-invest03); }
+			> .invest-type02 { border-radius: $border-radius 0px 0px 0px; @include sprite($sprite-badge-invest05); }
 			> .new { @include sprite($sprite-badge-new03); }
 			> .user-in { top: 10px; left: auto; right: 16px; font-size: 0.750em; color: $color-content; text-indent: 0px; }
 			> .favorate { top: 14px; right: 14px; left: auto; @include sprite($sprite-icon-favorate01-selected); }

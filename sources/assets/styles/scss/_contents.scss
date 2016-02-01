@@ -6,16 +6,18 @@
 .txt { display: block; text-indent: -9999px; }
 
 /* 페이지 상단 필터 */
-.filter-container { overflow: hidden;
-	.filter { position: relative; float: left;
+.filter-container {
+	.filter { position: relative;
 		input[type=radio] { position: absolute; top: -9999px; left: -9999px;
 			&.selected + label { color: $color-menu1-hover; }
 		}
-		label { font-size: 1.063em; font-weight: bold; color: $color-menu1; cursor: pointer; line-height: 37px;
+		label { display: block; float: left; position: relative; font-size: 1.063em; font-weight: bold; color: $color-menu1; cursor: pointer; line-height: 37px;
 			&:hover { color: $color-menu1-hover; }
 			+ input[type=radio] + label {
 				&:before { content: '|'; display: inline-block; margin-right: 20px; margin-left: 16px; color: #dee1e7; text-decoration: none; }
 			}
+
+			.new { display: block; position: absolute; top: -14px; left: 43px; text-indent: -9999px; @include sprite($sprite-icon-new02); }
 		}
 	}
 
@@ -325,6 +327,8 @@
 
 /* 상품 목록 - 페이징 & 정렬 */
 .paging { position: relative; margin-top: 43px; text-align: center;
+	.btn-top { position: absolute; top: 0; right: 0; border: 0px; }
+
 	> a { display: inline-block; margin-right: 3px; margin-left: 2px; height: 37px; width: 37px; font-size: 1.125em; color: $color-menu1; text-align: center; line-height: 36px; border: 1px solid #d4dae4; border-radius: 37px; background-color: #fff;
 		transition: background-color 0.2s linear, color 0.2s;
 		&:hover,

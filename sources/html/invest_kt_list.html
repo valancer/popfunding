@@ -17,18 +17,18 @@ include "head.html"
 
 			<!-- 필터 및 소개  -->
 			<div class="filter-container">
+				<div class="utils-guide">
+					<a href="#" class="btn-rd">개인투자 소개</a>
+				</div>
+
 				<fieldset class="filter">
 					<legend>투자종류선택</legend>
 
-					<input type="radio" id="invest01" name="invest-type" checked="checked" class="selected"><label for="invest01">개인투자</label>
+					<input type="radio" id="invest01" name="invest-type"><label for="invest01">개인투자</label>
+					<input type="radio" id="invest04" name="invest-type" checked="checked" class="selected"><label for="invest04"><span class="new">[새로운투자가 있습니다.]</span>KT개인투자</label>
 					<input type="radio" id="invest02" name="invest-type"><label for="invest02">기업투자</label>
 					<input type="radio" id="invest03" name="invest-type"><label for="invest03">채권마켓</label>
 				</fieldset>
-				
-				<div class="utils-guide">
-					<a href="#" class="btn-tip">꿀팁</a>
-					<a href="#" class="btn-rd">개인투자 소개</a>
-				</div>
 			</div>
 
 			
@@ -144,15 +144,13 @@ include "head.html"
 				<li>
 					<a href="#" class="product">
 						<div class="options">
-							<em class="invest-type01">[개인투자]</em>
+							<em class="invest-type01">[KT개인투자]</em>
 							<em class="new">[새로운 투자상품]</em>
 							<em class="favorate">[회원님께서 관심상품으로 설정하셨습니다.]</em>
 						</div>
 
 						<div class="trust-ratings">
-							<p class="borrowing-purposes" style="background-image: url(http://placehold.it/104x84);">
-								<span class="tooltip">생활비</span>
-							</p>
+							<p class="borrowing-purposes" style="background-image: url(/assets/images/type_kt.jpg);"></p>
 							<p class="borrowing-count">
 								<span class="convert cr">3</span>
 							</p>
@@ -185,8 +183,7 @@ include "head.html"
 							</p>
 							<fieldset class="has-information">
 								<legend>팝펀딩에서 보관하고 있는 정보</legend>
-								<input type="checkbox" id="info01" name="information" checked="checked" disabled="disabled"><label for="info01">신용</label>
-								<input type="checkbox" id="info02" name="information" checked="checked" disabled="disabled"><label for="info02">소득</label>
+								<input type="checkbox" id="info07" name="information" checked="checked" disabled="disabled"><label for="info07">KT</label>
 								<input type="checkbox" id="info03" name="information" disabled="disabled"><label for="info03">핸드폰</label>
 								<input type="checkbox" id="info04" name="information" disabled="disabled"><label for="info04">집전화</label>
 								<input type="checkbox" id="info05" name="information" checked="checked" disabled="disabled"><label for="info05">회사전화</label>
@@ -208,14 +205,12 @@ include "head.html"
 				<li class="lb">
 					<a href="#" class="product">
 						<div class="options">
-							<em class="invest-type01">[개인투자]</em>
+							<em class="invest-type02">[개인투자]</em>
 							<em class="user-in">참여중</em>
 						</div>
 
 						<div class="trust-ratings">
-							<p class="borrowing-purposes" style="background-image: url(http://placehold.it/104x84);">
-								<span class="tooltip">차량구입 및 수리</span>
-							</p>
+							<p class="borrowing-purposes" style="background-image: url(/assets/images/type_kt.jpg);"></p>
 							<p class="borrowing-count">
 								<span class="convert cr">4</span>
 							</p>
@@ -248,8 +243,128 @@ include "head.html"
 							</p>
 							<fieldset class="has-information">
 								<legend>팝펀딩에서 보관하고 있는 정보</legend>
-								<input type="checkbox" id="info01" name="information" checked="checked" disabled="disabled"><label for="info01">신용</label>
-								<input type="checkbox" id="info02" name="information" checked="checked" disabled="disabled"><label for="info02">소득</label>
+								<input type="checkbox" id="info07" name="information" checked="checked" disabled="disabled"><label for="info07">KT</label>
+								<input type="checkbox" id="info03" name="information" disabled="disabled"><label for="info03">핸드폰</label>
+								<input type="checkbox" id="info04" name="information" disabled="disabled"><label for="info04">집전화</label>
+								<input type="checkbox" id="info05" name="information" checked="checked" disabled="disabled"><label for="info05">회사전화</label>
+								<input type="checkbox" id="info06" name="information" disabled="disabled"><label for="info06">서류</label>
+							</fieldset>
+							<p class="progress">
+								<span class="value animated fadeInLeft" style="width: 65%;"></span>
+								<em>65%</em>진행 (10명)
+								<time datetime="">3일 17시간 남음</time>
+							</p>
+						</div>
+						
+						<p class="hover animated fadeIn">
+							<button>관심설정</button>
+							<span>투자 상세보기</span>
+						</p>
+					</a>
+				</li>
+				<li>
+					<a href="#" class="product">
+						<div class="options">
+							<em class="invest-type01">[KT개인투자]</em>
+							<em class="new">[새로운 투자상품]</em>
+							<em class="favorate">[회원님께서 관심상품으로 설정하셨습니다.]</em>
+						</div>
+
+						<div class="trust-ratings">
+							<p class="borrowing-purposes" style="background-image: url(/assets/images/type_kt.jpg);"></p>
+							<p class="borrowing-count">
+								<span class="convert cr">3</span>
+							</p>
+							<p class="credit-rating">
+								<span class="convert cr">A</span>
+							</p>
+							<div class="p-i">
+								<p class="price">
+									<em class="convert price">500</em>
+									<span>만원</span>
+								</p>
+								<p class="duration">
+									<em class="convert price">15</em>
+									<span>개월</span>
+								</p>
+								<p class="interest">
+									<em class="convert price">25%</em>
+									<span>이자</span>
+								</p>
+							</div>
+						</div>
+
+						<div class="info">
+							<p>
+								<span class="idx">B150721-1</span>
+								<span class="user">heoneymoon</span>
+							</p>
+							<p class="desc">
+								자동차 구매 비용이 필요합니다.
+							</p>
+							<fieldset class="has-information">
+								<legend>팝펀딩에서 보관하고 있는 정보</legend>
+								<input type="checkbox" id="info07" name="information" checked="checked" disabled="disabled"><label for="info07">KT</label>
+								<input type="checkbox" id="info03" name="information" disabled="disabled"><label for="info03">핸드폰</label>
+								<input type="checkbox" id="info04" name="information" disabled="disabled"><label for="info04">집전화</label>
+								<input type="checkbox" id="info05" name="information" checked="checked" disabled="disabled"><label for="info05">회사전화</label>
+								<input type="checkbox" id="info06" name="information" disabled="disabled"><label for="info06">서류</label>
+							</fieldset>
+							<p class="progress">
+								<span class="value animated fadeInLeft" style="width: 65%;"></span>
+								<em>65%</em>진행 (10명)
+								<time datetime="">3일 17시간 남음</time>
+							</p>
+						</div>
+						
+						<p class="hover animated fadeIn">
+							<button class="selected">관심해제</button>
+							<span>투자 상세보기</span>
+						</p>
+					</a>
+				</li>
+				<li class="lb">
+					<a href="#" class="product">
+						<div class="options">
+							<em class="invest-type02">[개인투자]</em>
+							<em class="user-in">참여중</em>
+						</div>
+
+						<div class="trust-ratings">
+							<p class="borrowing-purposes" style="background-image: url(/assets/images/type_kt.jpg);"></p>
+							<p class="borrowing-count">
+								<span class="convert cr">4</span>
+							</p>
+							<p class="credit-rating">
+								<span class="convert cr">A</span>
+							</p>
+							<div class="p-i">
+								<p class="price">
+									<em class="convert price">500</em>
+									<span>만원</span>
+								</p>
+								<p class="duration">
+									<em class="convert price">15</em>
+									<span>개월</span>
+								</p>
+								<p class="interest">
+									<em class="convert price">25%</em>
+									<span>이자</span>
+								</p>
+							</div>
+						</div>
+
+						<div class="info">
+							<p>
+								<span class="idx">B150721-1</span>
+								<span class="user">heoneymoon</span>
+							</p>
+							<p class="desc">
+								자동차 구매 비용이 필요합니다.
+							</p>
+							<fieldset class="has-information">
+								<legend>팝펀딩에서 보관하고 있는 정보</legend>
+								<input type="checkbox" id="info07" name="information" checked="checked" disabled="disabled"><label for="info07">KT</label>
 								<input type="checkbox" id="info03" name="information" disabled="disabled"><label for="info03">핸드폰</label>
 								<input type="checkbox" id="info04" name="information" disabled="disabled"><label for="info04">집전화</label>
 								<input type="checkbox" id="info05" name="information" checked="checked" disabled="disabled"><label for="info05">회사전화</label>
@@ -271,15 +386,13 @@ include "head.html"
 				<li>
 					<a href="#" class="product">
 						<div class="options">
-							<em class="invest-type01">[개인투자]</em>
+							<em class="invest-type01">[KT개인투자]</em>
 							<em class="new">[새로운 투자상품]</em>
 							<em class="favorate">[회원님께서 관심상품으로 설정하셨습니다.]</em>
 						</div>
 
 						<div class="trust-ratings">
-							<p class="borrowing-purposes" style="background-image: url(http://placehold.it/104x84);">
-								<span class="tooltip">차량구입 및 수리</span>
-							</p>
+							<p class="borrowing-purposes" style="background-image: url(/assets/images/type_kt.jpg);"></p>
 							<p class="borrowing-count">
 								<span class="convert cr">3</span>
 							</p>
@@ -312,73 +425,9 @@ include "head.html"
 							</p>
 							<fieldset class="has-information">
 								<legend>팝펀딩에서 보관하고 있는 정보</legend>
-								<input type="checkbox" id="info01" name="information" checked="checked" disabled="disabled"><label for="info01">신용</label>
-								<input type="checkbox" id="info02" name="information" disabled="disabled"><label for="info02">소득</label>
+								<input type="checkbox" id="info07" name="information" checked="checked" disabled="disabled"><label for="info07">KT</label>
 								<input type="checkbox" id="info03" name="information" disabled="disabled"><label for="info03">핸드폰</label>
 								<input type="checkbox" id="info04" name="information" disabled="disabled"><label for="info04">집전화</label>
-								<input type="checkbox" id="info05" name="information" checked="checked" disabled="disabled"><label for="info05">회사전화</label>
-								<input type="checkbox" id="info06" name="information" checked="checked" disabled="disabled"><label for="info06">서류</label>
-							</fieldset>
-							<p class="progress">
-								<span class="value animated fadeInLeft" style="width: 65%;"></span>
-								<em>65%</em>진행 (10명)
-								<time datetime="">3일 17시간 남음</time>
-							</p>
-						</div>
-						
-						<p class="hover animated fadeIn">
-							<button class="selected">관심해제</button>
-							<span>투자 상세보기</span>
-						</p>
-					</a>
-				</li>
-				<li class="lb">
-					<a href="#" class="product">
-						<div class="options">
-							<em class="invest-type01">[개인투자]</em>
-							<em class="user-in">참여중</em>
-						</div>
-
-						<div class="trust-ratings">
-							<p class="borrowing-purposes" style="background-image: url(http://placehold.it/104x84);">
-								<span class="tooltip">차량구입 및 수리</span>
-							</p>
-							<p class="borrowing-count">
-								<span class="convert cr">4</span>
-							</p>
-							<p class="credit-rating">
-								<span class="convert cr">A</span>
-							</p>
-							<div class="p-i">
-								<p class="price">
-									<em class="convert price">500</em>
-									<span>만원</span>
-								</p>
-								<p class="duration">
-									<em class="convert price">15</em>
-									<span>개월</span>
-								</p>
-								<p class="interest">
-									<em class="convert price">25%</em>
-									<span>이자</span>
-								</p>
-							</div>
-						</div>
-
-						<div class="info">
-							<p>
-								<span class="idx">B150721-1</span>
-								<span class="user">heoneymoon</span>
-							</p>
-							<p class="desc">
-								자동차 구매 비용이 필요합니다.
-							</p>
-							<fieldset class="has-information">
-								<legend>팝펀딩에서 보관하고 있는 정보</legend>
-								<input type="checkbox" id="info01" name="information" checked="checked" disabled="disabled"><label for="info01">신용</label>
-								<input type="checkbox" id="info02" name="information" checked="checked" disabled="disabled"><label for="info02">소득</label>
-								<input type="checkbox" id="info03" name="information" disabled="disabled"><label for="info03">핸드폰</label>
-								<input type="checkbox" id="info04" name="information" checked="checked" disabled="disabled"><label for="info04">집전화</label>
 								<input type="checkbox" id="info05" name="information" checked="checked" disabled="disabled"><label for="info05">회사전화</label>
 								<input type="checkbox" id="info06" name="information" disabled="disabled"><label for="info06">서류</label>
 							</fieldset>
@@ -390,70 +439,6 @@ include "head.html"
 						</div>
 						
 						<p class="hover animated fadeIn">
-							<button>관심설정</button>
-							<span>투자 상세보기</span>
-						</p>
-					</a>
-				</li>
-				<li>
-					<a href="#" class="product">
-						<div class="options">
-							<em class="invest-type01">[개인투자]</em>
-							<em class="new">[새로운 투자상품]</em>
-							<em class="favorate">[회원님께서 관심상품으로 설정하셨습니다.]</em>
-						</div>
-
-						<div class="trust-ratings">
-							<p class="borrowing-purposes" style="background-image: url(http://placehold.it/104x84);">
-								<span class="tooltip">차량구입 및 수리</span>
-							</p>
-							<p class="borrowing-count">
-								<span class="convert cr">3</span>
-							</p>
-							<p class="credit-rating">
-								<span class="convert cr">A</span>
-							</p>
-							<div class="p-i">
-								<p class="price">
-									<em class="convert price">500</em>
-									<span>만원</span>
-								</p>
-								<p class="duration">
-									<em class="convert price">15</em>
-									<span>개월</span>
-								</p>
-								<p class="interest">
-									<em class="convert price">25%</em>
-									<span>이자</span>
-								</p>
-							</div>
-						</div>
-
-						<div class="info">
-							<p>
-								<span class="idx">B150721-1</span>
-								<span class="user">heoneymoon</span>
-							</p>
-							<p class="desc">
-								자동차 구매 비용이 필요합니다.
-							</p>
-							<fieldset class="has-information">
-								<legend>팝펀딩에서 보관하고 있는 정보</legend>
-								<input type="checkbox" id="info01" name="information" checked="checked" disabled="disabled"><label for="info01">신용</label>
-								<input type="checkbox" id="info02" name="information" disabled="disabled"><label for="info02">소득</label>
-								<input type="checkbox" id="info03" name="information" disabled="disabled"><label for="info03">핸드폰</label>
-								<input type="checkbox" id="info04" name="information" disabled="disabled"><label for="info04">집전화</label>
-								<input type="checkbox" id="info05" name="information" checked="checked" disabled="disabled"><label for="info05">회사전화</label>
-								<input type="checkbox" id="info06" name="information" checked="checked" disabled="disabled"><label for="info06">서류</label>
-							</fieldset>
-							<p class="progress">
-								<span class="value animated fadeInLeft" style="width: 65%;"></span>
-								<em>65%</em>진행 (10명)
-								<time datetime="">3일 17시간 남음</time>
-							</p>
-						</div>
-						
-						<p class="hover animated fadeIn">
 							<button class="selected">관심해제</button>
 							<span>투자 상세보기</span>
 						</p>
@@ -462,14 +447,12 @@ include "head.html"
 				<li class="lb">
 					<a href="#" class="product">
 						<div class="options">
-							<em class="invest-type01">[개인투자]</em>
+							<em class="invest-type02">[개인투자]</em>
 							<em class="user-in">참여중</em>
 						</div>
 
 						<div class="trust-ratings">
-							<p class="borrowing-purposes" style="background-image: url(http://placehold.it/104x84);">
-								<span class="tooltip">차량구입 및 수리</span>
-							</p>
+							<p class="borrowing-purposes" style="background-image: url(/assets/images/type_kt.jpg);"></p>
 							<p class="borrowing-count">
 								<span class="convert cr">4</span>
 							</p>
@@ -502,10 +485,9 @@ include "head.html"
 							</p>
 							<fieldset class="has-information">
 								<legend>팝펀딩에서 보관하고 있는 정보</legend>
-								<input type="checkbox" id="info01" name="information" checked="checked" disabled="disabled"><label for="info01">신용</label>
-								<input type="checkbox" id="info02" name="information" checked="checked" disabled="disabled"><label for="info02">소득</label>
+								<input type="checkbox" id="info07" name="information" checked="checked" disabled="disabled"><label for="info07">KT</label>
 								<input type="checkbox" id="info03" name="information" disabled="disabled"><label for="info03">핸드폰</label>
-								<input type="checkbox" id="info04" name="information" checked="checked" disabled="disabled"><label for="info04">집전화</label>
+								<input type="checkbox" id="info04" name="information" disabled="disabled"><label for="info04">집전화</label>
 								<input type="checkbox" id="info05" name="information" checked="checked" disabled="disabled"><label for="info05">회사전화</label>
 								<input type="checkbox" id="info06" name="information" disabled="disabled"><label for="info06">서류</label>
 							</fieldset>
@@ -525,15 +507,13 @@ include "head.html"
 				<li class="sextuple">
 					<a href="#" class="product">
 						<div class="options">
-							<em class="invest-type01">[개인투자]</em>
+							<em class="invest-type01">[KT개인투자]</em>
 							<em class="new">[새로운 투자상품]</em>
 							<em class="favorate">[회원님께서 관심상품으로 설정하셨습니다.]</em>
 						</div>
 
 						<div class="trust-ratings">
-							<p class="borrowing-purposes" style="background-image: url(http://placehold.it/104x84);">
-								<span class="tooltip">차량구입 및 수리</span>
-							</p>
+							<p class="borrowing-purposes" style="background-image: url(/assets/images/type_kt.jpg);"></p>
 							<p class="borrowing-count">
 								<span class="convert cr">3</span>
 							</p>
@@ -566,12 +546,11 @@ include "head.html"
 							</p>
 							<fieldset class="has-information">
 								<legend>팝펀딩에서 보관하고 있는 정보</legend>
-								<input type="checkbox" id="info01" name="information" checked="checked" disabled="disabled"><label for="info01">신용</label>
-								<input type="checkbox" id="info02" name="information" disabled="disabled"><label for="info02">소득</label>
+								<input type="checkbox" id="info07" name="information" checked="checked" disabled="disabled"><label for="info07">KT</label>
 								<input type="checkbox" id="info03" name="information" disabled="disabled"><label for="info03">핸드폰</label>
 								<input type="checkbox" id="info04" name="information" disabled="disabled"><label for="info04">집전화</label>
 								<input type="checkbox" id="info05" name="information" checked="checked" disabled="disabled"><label for="info05">회사전화</label>
-								<input type="checkbox" id="info06" name="information" checked="checked" disabled="disabled"><label for="info06">서류</label>
+								<input type="checkbox" id="info06" name="information" disabled="disabled"><label for="info06">서류</label>
 							</fieldset>
 							<p class="progress">
 								<span class="value animated fadeInLeft" style="width: 65%;"></span>
@@ -586,17 +565,15 @@ include "head.html"
 						</p>
 					</a>
 				</li>
-				<li class="sextuple lb">
+				<li class="lb">
 					<a href="#" class="product">
 						<div class="options">
-							<em class="invest-type01">[개인투자]</em>
+							<em class="invest-type02">[개인투자]</em>
 							<em class="user-in">참여중</em>
 						</div>
 
 						<div class="trust-ratings">
-							<p class="borrowing-purposes" style="background-image: url(http://placehold.it/104x84);">
-								<span class="tooltip">차량구입 및 수리</span>
-							</p>
+							<p class="borrowing-purposes" style="background-image: url(/assets/images/type_kt.jpg);"></p>
 							<p class="borrowing-count">
 								<span class="convert cr">4</span>
 							</p>
@@ -629,10 +606,9 @@ include "head.html"
 							</p>
 							<fieldset class="has-information">
 								<legend>팝펀딩에서 보관하고 있는 정보</legend>
-								<input type="checkbox" id="info01" name="information" checked="checked" disabled="disabled"><label for="info01">신용</label>
-								<input type="checkbox" id="info02" name="information" checked="checked" disabled="disabled"><label for="info02">소득</label>
+								<input type="checkbox" id="info07" name="information" checked="checked" disabled="disabled"><label for="info07">KT</label>
 								<input type="checkbox" id="info03" name="information" disabled="disabled"><label for="info03">핸드폰</label>
-								<input type="checkbox" id="info04" name="information" checked="checked" disabled="disabled"><label for="info04">집전화</label>
+								<input type="checkbox" id="info04" name="information" disabled="disabled"><label for="info04">집전화</label>
 								<input type="checkbox" id="info05" name="information" checked="checked" disabled="disabled"><label for="info05">회사전화</label>
 								<input type="checkbox" id="info06" name="information" disabled="disabled"><label for="info06">서류</label>
 							</fieldset>
@@ -652,15 +628,13 @@ include "head.html"
 				<li>
 					<a href="#" class="product">
 						<div class="options">
-							<em class="invest-type01">[개인투자]</em>
+							<em class="invest-type01">[KT개인투자]</em>
 							<em class="new">[새로운 투자상품]</em>
 							<em class="favorate">[회원님께서 관심상품으로 설정하셨습니다.]</em>
 						</div>
 
 						<div class="trust-ratings">
-							<p class="borrowing-purposes" style="background-image: url(http://placehold.it/104x84);">
-								<span class="tooltip">차량구입 및 수리</span>
-							</p>
+							<p class="borrowing-purposes" style="background-image: url(/assets/images/type_kt.jpg);"></p>
 							<p class="borrowing-count">
 								<span class="convert cr">3</span>
 							</p>
@@ -693,12 +667,11 @@ include "head.html"
 							</p>
 							<fieldset class="has-information">
 								<legend>팝펀딩에서 보관하고 있는 정보</legend>
-								<input type="checkbox" id="info01" name="information" checked="checked" disabled="disabled"><label for="info01">신용</label>
-								<input type="checkbox" id="info02" name="information" disabled="disabled"><label for="info02">소득</label>
+								<input type="checkbox" id="info07" name="information" checked="checked" disabled="disabled"><label for="info07">KT</label>
 								<input type="checkbox" id="info03" name="information" disabled="disabled"><label for="info03">핸드폰</label>
 								<input type="checkbox" id="info04" name="information" disabled="disabled"><label for="info04">집전화</label>
 								<input type="checkbox" id="info05" name="information" checked="checked" disabled="disabled"><label for="info05">회사전화</label>
-								<input type="checkbox" id="info06" name="information" checked="checked" disabled="disabled"><label for="info06">서류</label>
+								<input type="checkbox" id="info06" name="information" disabled="disabled"><label for="info06">서류</label>
 							</fieldset>
 							<p class="progress">
 								<span class="value animated fadeInLeft" style="width: 65%;"></span>
@@ -716,14 +689,12 @@ include "head.html"
 				<li class="lb">
 					<a href="#" class="product">
 						<div class="options">
-							<em class="invest-type01">[개인투자]</em>
+							<em class="invest-type02">[개인투자]</em>
 							<em class="user-in">참여중</em>
 						</div>
 
 						<div class="trust-ratings">
-							<p class="borrowing-purposes" style="background-image: url(http://placehold.it/104x84);">
-								<span class="tooltip">차량구입 및 수리</span>
-							</p>
+							<p class="borrowing-purposes" style="background-image: url(/assets/images/type_kt.jpg);"></p>
 							<p class="borrowing-count">
 								<span class="convert cr">4</span>
 							</p>
@@ -756,10 +727,9 @@ include "head.html"
 							</p>
 							<fieldset class="has-information">
 								<legend>팝펀딩에서 보관하고 있는 정보</legend>
-								<input type="checkbox" id="info01" name="information" checked="checked" disabled="disabled"><label for="info01">신용</label>
-								<input type="checkbox" id="info02" name="information" checked="checked" disabled="disabled"><label for="info02">소득</label>
+								<input type="checkbox" id="info07" name="information" checked="checked" disabled="disabled"><label for="info07">KT</label>
 								<input type="checkbox" id="info03" name="information" disabled="disabled"><label for="info03">핸드폰</label>
-								<input type="checkbox" id="info04" name="information" checked="checked" disabled="disabled"><label for="info04">집전화</label>
+								<input type="checkbox" id="info04" name="information" disabled="disabled"><label for="info04">집전화</label>
 								<input type="checkbox" id="info05" name="information" checked="checked" disabled="disabled"><label for="info05">회사전화</label>
 								<input type="checkbox" id="info06" name="information" disabled="disabled"><label for="info06">서류</label>
 							</fieldset>
@@ -779,15 +749,13 @@ include "head.html"
 				<li>
 					<a href="#" class="product">
 						<div class="options">
-							<em class="invest-type01">[개인투자]</em>
+							<em class="invest-type01">[KT개인투자]</em>
 							<em class="new">[새로운 투자상품]</em>
 							<em class="favorate">[회원님께서 관심상품으로 설정하셨습니다.]</em>
 						</div>
 
 						<div class="trust-ratings">
-							<p class="borrowing-purposes" style="background-image: url(http://placehold.it/104x84);">
-								<span class="tooltip">차량구입 및 수리</span>
-							</p>
+							<p class="borrowing-purposes" style="background-image: url(/assets/images/type_kt.jpg);"></p>
 							<p class="borrowing-count">
 								<span class="convert cr">3</span>
 							</p>
@@ -820,12 +788,11 @@ include "head.html"
 							</p>
 							<fieldset class="has-information">
 								<legend>팝펀딩에서 보관하고 있는 정보</legend>
-								<input type="checkbox" id="info01" name="information" checked="checked" disabled="disabled"><label for="info01">신용</label>
-								<input type="checkbox" id="info02" name="information" disabled="disabled"><label for="info02">소득</label>
+								<input type="checkbox" id="info07" name="information" checked="checked" disabled="disabled"><label for="info07">KT</label>
 								<input type="checkbox" id="info03" name="information" disabled="disabled"><label for="info03">핸드폰</label>
 								<input type="checkbox" id="info04" name="information" disabled="disabled"><label for="info04">집전화</label>
 								<input type="checkbox" id="info05" name="information" checked="checked" disabled="disabled"><label for="info05">회사전화</label>
-								<input type="checkbox" id="info06" name="information" checked="checked" disabled="disabled"><label for="info06">서류</label>
+								<input type="checkbox" id="info06" name="information" disabled="disabled"><label for="info06">서류</label>
 							</fieldset>
 							<p class="progress">
 								<span class="value animated fadeInLeft" style="width: 65%;"></span>
@@ -843,14 +810,12 @@ include "head.html"
 				<li class="lb">
 					<a href="#" class="product">
 						<div class="options">
-							<em class="invest-type01">[개인투자]</em>
+							<em class="invest-type02">[개인투자]</em>
 							<em class="user-in">참여중</em>
 						</div>
 
 						<div class="trust-ratings">
-							<p class="borrowing-purposes" style="background-image: url(http://placehold.it/104x84);">
-								<span class="tooltip">차량구입 및 수리</span>
-							</p>
+							<p class="borrowing-purposes" style="background-image: url(/assets/images/type_kt.jpg);"></p>
 							<p class="borrowing-count">
 								<span class="convert cr">4</span>
 							</p>
@@ -883,10 +848,9 @@ include "head.html"
 							</p>
 							<fieldset class="has-information">
 								<legend>팝펀딩에서 보관하고 있는 정보</legend>
-								<input type="checkbox" id="info01" name="information" checked="checked" disabled="disabled"><label for="info01">신용</label>
-								<input type="checkbox" id="info02" name="information" checked="checked" disabled="disabled"><label for="info02">소득</label>
+								<input type="checkbox" id="info07" name="information" checked="checked" disabled="disabled"><label for="info07">KT</label>
 								<input type="checkbox" id="info03" name="information" disabled="disabled"><label for="info03">핸드폰</label>
-								<input type="checkbox" id="info04" name="information" checked="checked" disabled="disabled"><label for="info04">집전화</label>
+								<input type="checkbox" id="info04" name="information" disabled="disabled"><label for="info04">집전화</label>
 								<input type="checkbox" id="info05" name="information" checked="checked" disabled="disabled"><label for="info05">회사전화</label>
 								<input type="checkbox" id="info06" name="information" disabled="disabled"><label for="info06">서류</label>
 							</fieldset>
@@ -904,6 +868,7 @@ include "head.html"
 					</a>
 				</li>
 			</ul>
+			<div class="clear"></div>
 
 			<!-- 정렬 & 페이징 -->
 			<div class="paging">

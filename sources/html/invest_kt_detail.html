@@ -1,0 +1,276 @@
+include "head.html"
+
+	<!-- 상단 영역 -->
+	include "header_invest.html"
+
+
+	<!-- 본문 영역 -->
+	<article class="contents private-invest kt">
+		<h1>투자하기</h1>
+
+		<div class="inner">
+		
+
+			<!-- 필터 및 소개  -->
+			<div class="filter-container">
+				<div class="utils-guide">
+					<a href="#" class="btn-tip">꿀팁</a>
+					<a href="#" class="btn-rd">기업투자 소개</a>
+				</div>
+
+				<fieldset class="filter">
+					<legend>투자종류선택</legend>
+
+					<input type="radio" id="invest01" name="invest-type"><label for="invest01">개인투자</label>
+					<input type="radio" id="invest04" name="invest-type" checked="checked" class="selected"><label for="invest04">KT개인투자</label>
+					<input type="radio" id="invest02" name="invest-type"><label for="invest02">기업투자</label>
+					<input type="radio" id="invest03" name="invest-type"><label for="invest03">채권마켓</label>
+				</fieldset>
+			</div>
+
+
+			<!-- 상품 정보 -->
+			<section class="product detail">
+				<div class="options">
+					<em class="invest-type01">[개인투자]</em>
+					<em class="new">[새로운 투자상품]</em>
+					<!-- <em class="favorate">[회원님께서 관심상품으로 설정하셨습니다.]</em> -->
+					<em class="user-in">참여중</em>
+				</div>
+
+				<!--  -->
+				<div class="profile"><img src="/assets/images/default_profile_b.png" alt=""></div>
+
+				<!-- 좌측 사용자 정보 -->
+				<div class="user-info">
+					<ul class="list-info">
+						<li>heoneymoon</li>
+						<li>낭만혹은미친</li>
+						<li>남자</li>
+						<li>32세</li>
+						<li>경남 진해시 풍호동</li>
+						<li>월세</li>
+						<li>생산직</li>
+						<li>의약품 제조 OP</li>
+					</ul>
+				</div>
+
+				<!-- 우측 용도 및 등급 -->
+				<div class="trust-ratings">
+					<div class="idx">B150721-1</div>
+
+					<p class="borrowing-purposes" style="background-image: url(/assets/images/type_kt.jpg);"></p>
+					<p class="borrowing-count">
+						<span class="tooltip">빌린 회수</span>
+						<span class="convert cr">3</span>
+					</p>
+					<p class="credit-rating">
+						<span class="tooltip">연체 등급</span>
+						<span class="convert cr">A</span>
+					</p>
+					<div class="p-i">
+						<p class="price">
+							<em class="convert price">500</em>
+							<span>신청금액(만원)</span>
+						</p>
+						<p class="duration">
+							<em class="convert price">15</em>
+							<span>기간(개월)</span>
+						</p>
+						<p class="interest">
+							<em class="convert price">25%</em>
+							<span>연이자</span>
+						</p>
+					</div>
+				</div>
+
+				<div class="inner">
+					<div class="stroy-summary">
+						<h2 title="빌리는 사연">32살 아직 더 배워야 겠습니다.</h2>
+						
+						<p class="desc">
+							제가 월평균 210만원을 법니다.<br>
+							요번달부터 갑자기 회사일이 엄청 바빠져 토요일 일요일도 다 출근하고있구요. 이럴경우 한달에 250만원이상 들어옵니다.<br>
+							아파트보증금담보및 차량할부 75만원 / 신용대출 50만원 / 임대아파트 월임대료 15만원 개인회생 월납입금 48만원 / 차량은 회사차량 이용해 출퇴근중입니다....<br>
+							대출관련 상환은 다제월급으로 하고있고 남는돈+ 와이프가 알바해서 60만원정도 벌어서 생활비및 약간씩 대출 원금상환중입니다.<br>
+						</p>
+
+						<a href="#story" class="btn-inline-box">더 보기</a>
+					</div>
+
+					<p class="progress">
+						<span class="value animated fadeInLeft" style="width: 32%;"></span>
+						<time datetime="">3일 17시간 남음</time>
+						<em>32%</em>진행 (28명) - 현재 125,000원
+					</p>
+
+				</div>
+
+				<div class="invest-product">	<!-- expired -->
+					<p class="utils">
+						<a href="#" class="btn calc">수익금 계산기</a>
+						<a href="#" class="btn update">참가금액 수정</a>
+						<a href="#" class="btn cancel">투자취소</a>
+					</p>
+
+					<a href="#" class="btn-invest">투자하기</a> <!-- disabled="disabled" -->
+				</div>
+
+				<p class="hover animated fadeIn">
+					<button>관심설정</button>
+					<span>투자 상세보기</span>
+				</p>
+			</section>
+
+
+			<div class="product-tab">
+				<table>
+					<caption>상품 상세 메뉴</caption>
+					<tbody>
+						<tr>
+							<td>
+								<a href="#" class="selected">
+									<span class="new"><span class="inner">추가글 <em>3</em>건</span></span>
+									상세보기
+								</a>
+							</td>
+							<td>
+								<a href="#">
+									<span class="new"><span class="inner">새로운 글 <em>0</em>건</span></span>
+									Q &amp; A
+								</a>
+							</td>
+							<td><a href="#">상환내역</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+
+
+			<!-- 상세보기 -->
+			<section class="product-detail-view">
+				<h1>상세보기</h1>
+
+				<!-- 상품 특징 -->
+				<table class="product-feature">
+					<caption>상품 특징</caption>
+					<tbody>
+						<tr>
+							<td><span class="feature05">신용형 개인대출</span></td>
+							<td><span class="feature02">선착순 경매방식</span></td>
+							<td>
+								<a href="#" class="feature08">kt서비스 이용정보 조회</a>
+								<span class="feature08 expired">kt 정보조회 유효기간 경과</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				
+				<!--  팝펀딩에서 보관하고 있는 정보 -->
+				<div class="pd-container has-information">
+					<div class="inner">
+
+						<fieldset>
+							<legend>팝펀딩에서 보관하고 있는 정보</legend>
+
+							<input type="checkbox" id="info07" name="information" checked="checked" disabled="disabled"><label for="info07">KT 이용정보</label>
+							<input type="checkbox" id="info03" name="information" disabled="disabled"><label for="info03">핸드폰 번호</label>
+							<input type="checkbox" id="info04" name="information" disabled="disabled"><label for="info04">집전화 번호</label>
+							<input type="checkbox" id="info05" name="information" checked="checked" disabled="disabled"><label for="info05">회사전화번호</label>
+						</fieldset>
+
+						<p class="bad-debt">
+							정보들은 팝펀딩에서 보관하고 있습니다. 대손이 발생할 경우 투자자들에게 일부 공개됩니다.
+						</p>	
+					</div>
+
+				</div>
+
+
+				<!-- 빌리는 사연 -->
+				<div id="story" class="pd-container story">
+					<div class="inner">
+						<h2 title="빌리는 사연">32살 아직 더 배워야 겠습니다.</h2>
+						
+						<p class="desc">
+							제가 월평균 210만원을 법니다.<br>
+							요번달부터 갑자기 회사일이 엄청 바빠져 토요일 일요일도 다 출근하고있구요. 이럴경우 한달에 250만원이상 들어옵니다.<br>
+							아파트보증금담보및 차량할부 75만원 / 신용대출 50만원 / 임대아파트 월임대료 15만원 개인회생 월납입금 48만원 / 차량은 회사차량 이용해 출퇴근중입니다.<br>
+							대출관련 상환은 다제월급으로 하고있고 남는돈+ 와이프가 알바해서 60만원정도 벌어서 생활비및 약간씩 대출 원금상환중입니다.<br>
+							<br>
+							제가 월평균 210만원을 법니다.<br>
+							요번달부터 갑자기 회사일이 엄청 바빠져 토요일 일요일도 다 출근하고있구요. 이럴경우 한달에 250만원이상 들어옵니다.<br>
+							아파트보증금담보및 차량할부 75만원 / 신용대출 50만원 / 임대아파트 월임대료 15만원 개인회생 월납입금 48만원 / 차량은 회사차량 이용해 출퇴근중입니다. 대출관련 상환은 다제월급으로 하고있고 남는돈+와이프가 알바해서 60만원정도 벌어서 생활비및 약간씩 대출 원금상환중입니다.<br>
+						</p>
+
+
+						<div class="add-story">
+							<time datetime="" class="update">2015.11.18 / 11:30</time>
+							<h3>추가글 01</h3>
+							<p class="desc">
+								제가 월평균 210만원을 법니다.<br>
+								요번달부터 갑자기 회사일이 엄청 바빠져 토요일 일요일도 다 출근하고있구요. 이럴경우 한달에 250만원이상 들어옵니다.<br>
+								아파트보증금담보및 차량할부 75만원 / 신용대출 50만원 / 임대아파트 월임대료 15만원 개인회생 월납입금 48만원 / 차량은 회사차량 이용해 출퇴근중입니다.<br>
+								대출관련 상환은 다제월급으로 하고있고 남는돈+ 와이프가 알바해서 60만원정도 벌어서 생활비및 약간씩 대출 원금상환중입니다.<br>
+								<br>
+								제가 월평균 210만원을 법니다.<br>
+								요번달부터 갑자기 회사일이 엄청 바빠져 토요일 일요일도 다 출근하고있구요. 이럴경우 한달에 250만원이상 들어옵니다.<br>
+							</p>
+						</div>
+					</div>
+				</div>
+
+
+				<!-- 과거내역 -->
+				<div class="pd-container past-history">
+					<div class="inner">
+						<h2>과거내역</h2>	
+
+						<table class="tbl">
+							<caption>과거내역 목록</caption>
+							<colgroup>
+								<col>
+								<col style="width: 90px;">
+								<col style="width: 280px;">
+								<col style="width: 130px;">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>500만원 - 18개월 - 연 25%</th>
+									<td>B150721-1</td>
+									<td class="c"><time datetime="">2013.12.18</time> (빌림) - <time datetime="">2013.12.18</time> <em>(상환)</em></td>
+									<td class="r">월평균 연체 <em>5일</em></td>
+								</tr>
+								<tr>
+									<th>1000만원 - 18개월 - 연 25%</th>
+									<td>B150721-1</td>
+									<td class="c"><time datetime="">2013.12.18</time> (빌림) - <time datetime="">2013.12.18</time> <em>(상환)</em></td>
+									<td class="r">월평균 연체 <em>0.5일</em></td>
+								</tr>
+								<tr>
+									<th>500만원 - 18개월 - 연 25%</th>
+									<td>B150721-1</td>
+									<td class="c"><time datetime="">2013.12.18</time> (빌림) - <time datetime="">2013.12.18</time> <em>(상환)</em></td>
+									<td class="r">월평균 연체 <em>11일</em></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+			</section>
+
+			
+include "private_product_bottom_btns.html"
+
+		</div>
+	</article>
+	
+
+	<!-- 하단 영역 -->
+	include "footer.html"
+
+</body>
+</html>

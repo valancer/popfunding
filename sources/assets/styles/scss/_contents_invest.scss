@@ -331,6 +331,12 @@ $border-inner-color: #e6e9ee;
 							&:before { @include sprite($sprite-icon-feature07-disabled); }
 						}
 					}
+					&.feature08 { text-decoration: underline;
+						&:before { @include sprite($sprite-icon-feature08); }
+						&.expired { color: $color-point4; text-decoration: none;
+							&:before { @include sprite($sprite-icon-feature08-expired); }
+						}
+					}
 				}
 			}
 		}
@@ -478,14 +484,14 @@ $border-inner-color: #e6e9ee;
 		> .inner { margin: -5px auto 0 auto; width: $privateInnerWidth;
 			> fieldset { position: relative; text-align: center;
 				input[type=checkbox] { position: absolute; top: -100%; left: -100%; }
-				label { display: block; float: left; width: $privateInnerWidth/6; font-size: 0.875em; color: $color-title; text-align: center;
+				label { display: inline-block; margin-left: -4px; width: $privateInnerWidth/6; font-size: 0.875em; color: $color-title; text-align: center;
 					&:after { content: ''; display: block; margin: 13px auto 0 auto; @include sprite($sprite-icon-check03); }
 				}
 				input[type=checkbox]:checked + label,
 				input[type=checkbox].checked + label { &:after { @include sprite($sprite-icon-check03-selected); } }
 			}
 			.bad-debt { margin-top: 17px; font-size: 0.813em; color: $color-content; text-align: center;
-				&:before { content: ''; display: inline-block; margin-top: 2px; vertical-align: top; @include sprite($sprite-icon-check04); }
+				&:before { content: ''; display: inline-block; margin-top: -7px; vertical-align: middle; @include sprite($sprite-icon-check04); }
 				.btn-help { margin-left: 10px; }
 			}
 		}

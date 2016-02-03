@@ -342,13 +342,16 @@ var PrivateProduct = (function ($) {
 		var convert = '';
 
 		var array = value.split('');
+		console.log(array.length);
 
-		if( $element.closest('.borrowing-count').length > 0 ) {
-			convert += '<em class="bid' + array[0] + '">' + array[0] + '</em>\n';
-		} else if( $element.closest('.credit-rating').length > 0 ) {
-			convert += '<em class="overdue-' + array[0] + '">' + array[0] + '</em>';
-		} else {
-			convert += '<em class="overdue-' + array[0] + '">' + array[0] + '</em>';
+		for( var i=0; i<array.length; i++ ) {
+			if( $element.closest('.borrowing-count').length > 0 ) {
+				convert += '<em class="bid' + array[i] + '">' + array[i] + '</em>\n';
+			} else if( $element.closest('.credit-rating').length > 0 ) {
+				convert += '<em class="overdue-' + array[i] + '">' + array[i] + '</em>';
+			} else {
+				convert += '<em class="overdue-' + array[i] + '">' + array[i] + '</em>';
+			}
 		}
 		$element.html(convert);
 	}

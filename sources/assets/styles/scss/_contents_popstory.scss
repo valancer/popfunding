@@ -1,0 +1,62 @@
+/* 팝스토리 */
+.contents.popstory {
+
+	/* 팝스토리 목록 */
+	.list-popstory { position: relative; overflow: hidden; width: 100%;
+		> li {
+			display: block; float: left; margin: 0 0 40px 0; width: $product-width;
+			&:nth-child(3n+2),
+			&.middle { padding: 0 73px; }
+
+			> a {
+				&:hover { text-decoration: none; }
+			}
+		}
+	}
+
+
+	/* 팝스토리 */
+	.pop-story {
+		$border-radius: 0px;
+		$thumb-height: 255px;
+		$product-height: 486px;
+
+		display: block; position: relative; overflow: hidden; min-height: $product-height; color: $color-title; border: 1px solid #d4dae4; border-radius: $border-radius; background-color: #fff;
+		
+		> .options { overflow: hidden; position: absolute; top: 0; right: 0; left: 0; z-index: z("default"); height: $thumb-height;
+			> em { position: absolute; position: absolute; top: 0; left: 0; text-indent: -9999px; }
+			> .new { @include sprite($sprite-badge-new04); }
+		}
+
+		> figure {
+			> .thumb { display: block; position: relative; z-index: z("default") - 1; overflow: hidden; height: $thumb-height; width: 100%; border-radius: $border-radius $border-radius 0px 0px;
+				> img { display: none; position: absolute; left: 0; max-height: 100%; }
+			}
+
+			> .info { position: relative; padding: 27px 28px 0 28px; border-top: 1px solid #e6e9ee;
+				.popstory { display: block; font-size: 0.750em; color: #ff91ad; }
+				.title { display: block; margin-top: 13px; font-size: 1.125em; font-weight: normal; line-height: 1em; }
+				.desc { margin-top: 21px; font-size: 0.813em; color: $color-content; line-height: 21px; }
+				time { display: block; margin-top: 18px; font-size: 0.750em; color: $color-desc; text-align: right; }
+			}
+		}
+
+		///	 상품 상세 보기일 경우
+		&.detail {
+			> figure {
+				> .info { position: relative; margin: 0 auto; padding: 78px 0 0 0; width: 780px; border-top: 0px;
+					.popstory { }
+					.title { margin-top: 27px; font-size: 1.875em; }
+					.desc { display: none; }
+					time { position: absolute; top: 78px; right: 0; margin-top: 0px; }
+				}
+			}
+		}
+	}
+
+}
+
+/// 상품 상세 컨테이너
+.popstory-detail-view { margin: 0 auto; padding-top: 48px; padding-bottom: 100px; width: 780px; border-top: 0px;
+	> h1 { display: none; }
+}

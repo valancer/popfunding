@@ -23,6 +23,7 @@ $(document).ready(function (e) {
 	PrivateProduct.init();
 	BondsProduct.init();
 	Invest.init();
+	Story.init();
 	Popup.init();
 });
 
@@ -481,6 +482,69 @@ var BondsProduct = (function ($) {
 	return {
 		init: function () {
 			init();
+		}
+	};
+}(jQuery));
+
+
+
+
+/********************************************************************************************/
+/************************************* 팝스토리 목록 및 상품 *************************************/
+/********************************************************************************************/
+var Story = (function ($) {
+	var _containerWidth = 0,
+		$container,
+		$listProducts,
+		$products,
+		_isDetail = false,
+		init = function () {
+			$container = $('.contents.popstory');
+			$listProducts = $container.find('.list-popstory');
+			$products = $container.find('.pop-story');
+			$thumbs = $products.find('> figure .thumb > img');
+			_containerWidth = $products.width();
+
+	 		initLayout();
+			initEvent();
+		};//end init
+
+	function initLayout() {
+	}
+
+	function imageload($elements) {
+		$elements.one('load', function() {
+			console.log('load');
+		}).each(function() {
+			if( this.complete ) {
+				var width = $(this).width();
+				var left = (-width/2 + _containerWidth/2);
+				$(this).show().css('left', left).addClass('animated fadeIn');
+			}
+		});
+	}
+
+	function initEvent() {
+		imageload($thumbs);
+	}
+
+	function addProducts($elements) {
+		$listProducts.append($elements);
+
+		var $_thumbs = $elements.find('.product > figure .thumb > img');
+		imageload($_thumbs);
+	}
+
+	return {
+		init: function () {
+			scope = this;
+
+			init();
+		},
+		addProducts: function ($elements) {
+			scope = this;
+			
+			addProducts($elements);
 		}
 	};
 }(jQuery));

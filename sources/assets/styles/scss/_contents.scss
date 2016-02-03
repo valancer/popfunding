@@ -424,3 +424,42 @@
 }
 
 
+
+/* 기본용어설명 */
+.popup.dictionary { background: url('/assets/images/bg_dictionary.png') left top repeat;
+	> .inner { position: relative; margin: 0 auto; width: 1160px; }
+	.popup-close { position: absolute; top: 110px; right: 0px; text-indent: -9999px; @include sprite($sprite-btn-close02); }
+	
+	.title { height: 263px; width: 1160px; text-indent: -9999px; background: url('/assets/images/txt/title_dictionary.png') left top no-repeat; }
+
+	.list-dictionary { position: relative; overflow: hidden; margin-top: -13px; padding-top: 92px;
+		&:before { content: ''; display: block; position: absolute; top: 0; bottom: 0; left: 570px; height: 100%; width: 1px; background-color: #39393c; }
+
+		> li { float: left; padding-bottom: 59px; width: 570px;
+			&.lb { padding-left: 28px; width: 560px; }
+		}
+
+		dt { font-size: 1.375em; font-weight: bold; color: #6c9d09; line-height: 1.3em;
+			dfn { font-style: normal;
+				&.type02 { color: #d34066; }
+				&.type03 { color: #0c959d; }
+			}
+		}
+		dd { margin-top: 19px;
+			p { font-size: 0.875em; color: #a7a7a7; line-height: 20px;
+				&.ex { margin-top: 4px; color: $color-content; }
+				em { color: #a7a7a7; text-decoration: underline; }
+			}
+		}
+	}
+
+	.btns { padding-top: 70px; padding-bottom: 130px; text-align: center; }
+}
+
+
+
+
+
+
+
+

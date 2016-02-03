@@ -36,10 +36,12 @@ var Header = (function ($) {
 	var scope,
 		$headerContainer,
 		$user,
+		$btnHelp,
 		init = function () {
 			$headerContainer = $('header.header');
 			$user = $headerContainer.find('.user');
 			$convert = $user.find('.convert');
+			$btnHelp = $headerContainer.find('.btn-help');
 
 			initLayout();
 			initEvent();
@@ -54,7 +56,15 @@ var Header = (function ($) {
 	}
 
 	function initEvent() {
-		
+		if( $btnHelp.length > 0 ) {
+			$btnHelp.magnificPopup({
+				type: 'ajax',
+				alignTop: true,
+				mainClass: 'mfp-fade',
+				closeOnContentClick: false,
+				closeOnBgClick: true
+			});
+		}
 	}
 
 	function convertNumberToImage($element) {

@@ -40,39 +40,40 @@
 	}
 
 	.user { display: none; position: absolute; bottom: 140px; left: 30px; padding: 60px 0 0 0; min-width: 200px;
-		> .credit-rating { display: block; position: absolute; top: 40px; left: 50%; z-index: z("default"); margin-left: 22px; padding: 8px; height: 30px; min-width: 40px; white-space: nowrap; border: 1px solid #c4cad9; border-radius: 10px; background-color: #fff;
+		> .credit-rating { display: block; position: absolute; top: 40px; left: 50%; z-index: z("default"); margin-left: 22px; padding: 7px 8px; height: 32px; min-width: 40px; white-space: nowrap; border: 1px solid #c4cad9; border-radius: 10px; background-color: #fff;
 			&:before { content: ''; display: block; position: absolute; bottom: -$sprite-bg-arrow04-height; left: 10px; z-index: z("default"); @include sprite($sprite-bg-arrow04); }
 			
-			> span { display: inline-block; height: 30px;
-				&.invest { text-indent: -9999px;
-					&.none { @include sprite($sprite-bg-invest01); }
-					&.basic { @include sprite($sprite-bg-invest02); }
+			> span { display: inline-block; vertical-align: top;
+				&.invest { text-indent: -9999px; @include sprite($sprite-bg-invest01);
+					&.newbie { @include sprite($sprite-bg-invest02); }
 					&.silver { @include sprite($sprite-bg-invest03); }
 					&.gold { @include sprite($sprite-bg-invest04); }
-					&.vip { @include sprite($sprite-bg-invest05); }
-					&.vvip { @include sprite($sprite-bg-invest06); }
+					&.vip-silver { @include sprite($sprite-bg-invest05); }
+					&.vip-gold { @include sprite($sprite-bg-invest06); }
+					&.vvip { @include sprite($sprite-bg-invest07); }
+					&.super { margin-top: -4px; @include sprite($sprite-bg-invest08); }
 				}
 				&.invest + .loan { position: relative; margin-left: 4px; padding-left: 8px;
 					&:before { content: ''; display: block; position: absolute; top: -8px; bottom: -8px; left: 0; width: 1px; background-color: #c4cad9; }
 				}
 
-				> em { display: inline-block; height: 30px; text-indent: -9999px;
-					&.bid0 { margin-right: -2px; @include sprite($sprite-cnt-bid0); }
-					&.bid1 { margin-right: -2px; @include sprite($sprite-cnt-bid1); }
-					&.bid2 { margin-right: -2px; @include sprite($sprite-cnt-bid2); }
-					&.bid3 { margin-right: -2px; @include sprite($sprite-cnt-bid3); }
-					&.bid4 { margin-right: -2px; @include sprite($sprite-cnt-bid4); }
-					&.bid5 { margin-right: -2px; @include sprite($sprite-cnt-bid5); }
-					&.bid6 { margin-right: -2px; @include sprite($sprite-cnt-bid6); }
-					&.bid7 { margin-right: -2px; @include sprite($sprite-cnt-bid7); }
-					&.bid8 { margin-right: -2px; @include sprite($sprite-cnt-bid8); }
-					&.bid9 { margin-right: -2px; @include sprite($sprite-cnt-bid9); }
+				> em { display: inline-block; text-indent: -9999px;
+					&.bid0 { margin-top: 1px; margin-right: -2px; @include sprite($sprite-cnt-bid0); }
+					&.bid1 { margin-top: 1px; margin-right: -2px; @include sprite($sprite-cnt-bid1); }
+					&.bid2 { margin-top: 1px; margin-right: -2px; @include sprite($sprite-cnt-bid2); }
+					&.bid3 { margin-top: 1px; margin-right: -2px; @include sprite($sprite-cnt-bid3); }
+					&.bid4 { margin-top: 1px; margin-right: -2px; @include sprite($sprite-cnt-bid4); }
+					&.bid5 { margin-top: 1px; margin-right: -2px; @include sprite($sprite-cnt-bid5); }
+					&.bid6 { margin-top: 1px; margin-right: -2px; @include sprite($sprite-cnt-bid6); }
+					&.bid7 { margin-top: 1px; margin-right: -2px; @include sprite($sprite-cnt-bid7); }
+					&.bid8 { margin-top: 1px; margin-right: -2px; @include sprite($sprite-cnt-bid8); }
+					&.bid9 { margin-top: 1px; margin-right: -2px; @include sprite($sprite-cnt-bid9); }
 
-					&.overdue-none { @include sprite($sprite-bg-overdue01); }
-					&.overdue-a { @include sprite($sprite-bg-overdue02); }
-					&.overdue-b { @include sprite($sprite-bg-overdue03); }
-					&.overdue-c { @include sprite($sprite-bg-overdue04); }
-					&.overdue-d { @include sprite($sprite-bg-overdue05); }
+					&.overdue-none { margin-top: 1px; @include sprite($sprite-bg-overdue01); }
+					&.overdue-a { margin-top: 1px; @include sprite($sprite-bg-overdue02); }
+					&.overdue-b { margin-top: 1px; @include sprite($sprite-bg-overdue03); }
+					&.overdue-c { margin-top: 1px; @include sprite($sprite-bg-overdue04); }
+					&.overdue-d { margin-top: 1px; @include sprite($sprite-bg-overdue05); }
 				}
 			}
 			

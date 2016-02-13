@@ -76,8 +76,14 @@ var Header = (function ($) {
 			$element.addClass(value);
 		} else if( $element.hasClass('loan') ) {
 			var array = value.split('');
-			convert += '<em class="bid' + array[0] + '">' + array[0] + '</em>\n';
-			convert += '<em class="overdue-' + array[1] + '">' + array[1] + '</em>';
+
+			for( var i=0; i<array.length; i++ ) {
+				if( isNaN(array[i]) ) {
+					convert += '<em class="overdue-' + array[i] + '">' + array[i] + '</em>';
+				} else {
+					convert += '<em class="bid' + array[i] + '">' + array[i] + '</em>\n';
+				}
+			}
 			$element.html(convert);
 		}
 	}

@@ -362,36 +362,30 @@
 		.rating-popup { display: none; position: absolute; top: 54px; z-index: z("modaless"); padding: 0; border: 1px solid #d4dae4; background-color: #fff;
 			&:before { content: ''; position: absolute; top: -$sprite-bg-arrow10-height; left: 220px; @include sprite($sprite-bg-arrow10); }
 			.btn-popup-close { position: absolute; top: 13px; right: 13px; }
-			.list-example { padding: 174px 409px 188px 186px; height: 83px; width: 193px;
+			.list-example { padding: 164px 430px 226px 122px; height: 83px; width: 236px;
 				> li { display: block; float: left; height: 83px;
 					figure {
-						figcaption { position: absolute;
+						figcaption { position: absolute; background-color: #0f0;
 							&:before { content: ''; display: block; }
-							strong { margin-top: 6px; font-size: 0.875em; color: $color-content; }
+							strong { margin-top: 6px; font-size: 0.875em; color: $color-content; line-height: 18px; }
 							.box { box-sizing: border-box; padding: 10px 0 10px 20px; width: 100%; font-size: 0.750em; color: $color-content; line-height: 16px; text-align: left; border: 1px solid #cdd4de; }
 						}
 
 						&.type { margin-right: 24px;
-							figcaption { bottom: 54px; left: 137px; width: 160px; text-align: center;
-								&:before { margin: 0 auto; @include sprite($sprite-bg-direction01); }
-
-								.box { position: relative; margin-top: 9px;
-									&:before { content: ''; display: block; position: absolute; top: 14px; left: 13px; @include sprite($sprite-icon-iks02); }
-								}
+							figcaption { top: 75px; left: 102px; padding-bottom: 43px; width: 100px; text-align: center;
+								&:before { position: absolute; bottom: 0; left: 50%; margin-left: -$sprite-bg-direction02-width/2; @include sprite($sprite-bg-direction02); }
 							}
 						}
 						&.cnt { margin-right: 8px;
-							figcaption { top: 51px; left: 218px; padding-top: 63px; padding-bottom: 43px; width: 150px; text-align: center;
+							figcaption { top: 75px; left: 192px; padding-bottom: 43px; width: 120px; text-align: center;
 								&:before { position: absolute; bottom: 0; left: 50%; margin-left: -$sprite-bg-direction02-width/2; @include sprite($sprite-bg-direction02); }
-
-								.box { position: absolute; top: 0; }
 							}
 						}
 						&.overdue { 
-							figcaption { top: 84px; left: 380px; width: 282px;
+							figcaption { top: 70px; left: 380px; width: 332px;
 								&:before { position: absolute; top: 50%; left: 0; margin-top: -$sprite-bg-direction03-height/2; @include sprite($sprite-bg-direction03); }
 
-								strong { display: block; position: absolute; top: 50%; left: 0px; margin-top: -20px; width: $sprite-bg-direction03-width; text-align: center; }
+								strong { display: block; position: absolute; top: 50%; left: 0px; margin-top: -46px; width: $sprite-bg-direction03-width; text-align: center; }
 								table { float: right; width: 180px; border: 1px solid #cdd4de;
 									tbody {
 										tr.top {

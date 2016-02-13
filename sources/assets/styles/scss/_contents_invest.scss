@@ -100,8 +100,9 @@ $border-inner-color: #e6e9ee;
 			> .thumb { display: block; position: relative; z-index: z("default") - 1; overflow: hidden; height: $thumb-height; width: 100%; border-radius: $border-radius $border-radius 0px 0px;
 				> img { display: none; position: absolute; left: 0; max-height: 100%; }
 			}
-			> .info { position: relative; padding: 38px 29px 0 29px; border-top: 1px solid #e6e9ee;
+			> .info { position: relative; padding: 44px 29px 0 29px; border-top: 1px solid #e6e9ee;
 				> .sub-info {
+					.uid { position: absolute; top: 8px; left: 10px; font-size: 0.813em; color: $color-desc; }
 					.title { margin-left: -2px; font-size: 1.125em; font-weight: normal; line-height: 1em; }
 					time { display: block; margin-top: 8px; font-size: 0.813em; color: $color-point1; }
 					.desc { display: none; font-size: 0.875em; color: $color-content; line-height: 20px; }
@@ -155,8 +156,9 @@ $border-inner-color: #e6e9ee;
 			}
 			> figure {
 				> .thumb { height: $thumb-height; }
-				> .info { overflow: hidden; padding: 46px 39px 0 39px;
+				> .info { overflow: hidden; padding: 52px 39px 0 39px;
 					> .sub-info { display: block; float: left; padding-right: 25px; width: 352px;
+						.uid { top: 28px; left: 39px; }
 						.title { font-size: 1.375em; font-weight: bold; }
 						time { margin-top: 12px; font-size: 0.875em; }
 						.desc { display: block; margin-top: 23px; }

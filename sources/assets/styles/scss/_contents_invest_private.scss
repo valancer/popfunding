@@ -54,6 +54,7 @@
 			> .invest-type01 { border-radius: $border-radius 0px 0px 0px; @include sprite($sprite-badge-invest03); }
 			> .invest-type02 { border-radius: $border-radius 0px 0px 0px; @include sprite($sprite-badge-invest05); }
 			> .new { @include sprite($sprite-badge-new03); }
+			> .best { @include sprite($sprite-badge-best01); }
 			> .user-in { top: 10px; left: auto; right: 16px; font-size: 0.750em; color: $color-content; text-indent: 0px; }
 			> .favorate { top: 14px; right: 14px; left: auto; @include sprite($sprite-icon-favorate01-selected); }
 		}

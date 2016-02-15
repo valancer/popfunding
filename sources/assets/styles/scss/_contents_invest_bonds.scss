@@ -162,7 +162,7 @@
 				.overdue { display: none; }
 			}
 
-			.auto-bidding { display: none; }
+			.guide-popup.expected-calc { display: none; }
 		}
 
 
@@ -248,26 +248,20 @@
 				> .thumb { float: left; height: $thumb-height; width: $thumb-width; border-radius: $border-radius 0px 0px 0px;
 					> img { max-height: 100%; max-width: none; }
 				}
-
-				> .info { float: left; position: relative;
-					.auto-bidding { display: block; position: absolute; bottom: 9px; right: 16px; font-size: 0.750em; color: $color-desc; text-align: center;
-						&:before { content: ''; display: block; margin: 0 auto 4px auto; @include sprite($sprite-icon-autobidding); }
-					}
-				}
 			}
 
 
 			/* 정보 */
-			.info { float: left; height: $thumb-height - 1; width: 630px; border-bottom: 1px solid #d4dae4;
+			.info { float: left; position: relative; height: $thumb-height - 1; width: 630px; border-bottom: 1px solid #d4dae4;
 				h2 { display: block; padding-left: 30px; font-size: 1.125em; font-weight: normal; color: $color-title; line-height: 63px; }
 				.group { padding: 0 0 0 10px; font-size: 1.125em; border-top: 1px solid #d4dae4;
 					&.basic { padding-top: 12px; padding-bottom: 14px; }
 					&.status {
-						li { padding: 17px 0 17px 20px; }
+						> li { padding: 17px 0 17px 20px; }
 					}
 					&.price { padding-top: 18px; }
 
-					li { line-height: 24px; padding: 0 0 0 20px;
+					> li { line-height: 24px; padding: 0 0 0 20px;
 						&.idx { width: 178px; }
 						&.p-i { }
 						&.date-sale { display: block; }
@@ -286,7 +280,7 @@
 						&.price {
 							del, em { margin-top: 2px; font-size: 38px; }
 						}
-						&.expected { margin-top: 7px;
+						&.expected { position: relative; margin-top: 7px;
 							em { margin-top: 0px; font-size: 18px; }
 							.btn-inline-box { display: inline-block; margin-top: -2px; vertical-align: middle; }
 						}
@@ -295,9 +289,30 @@
 					.overdue { display: inline-block; color: $color-menu1-hover; }
 					.minus { color: #006bf0 !important; }
 				}
+
+				.auto-bidding { display: block; position: absolute; bottom: 9px; right: 16px; font-size: 0.750em; color: $color-desc; text-align: center;
+					&:before { content: ''; display: block; margin: 0 auto 4px auto; @include sprite($sprite-icon-autobidding); }
+				}
+				.meto-bidding { display: block; position: absolute; bottom: 9px; right: 16px; font-size: 0.750em; color: $color-desc; text-align: center;
+					&:before { content: ''; display: block; margin: 0 auto 4px auto; @include sprite($sprite-icon-metobidding); }
+				}
+
+				/* 예상 수익 */
+				.guide-popup.expected-calc { display: none; bottom: -30px; left: 200px;
+					&:before { top: 25px; }
+				}
 			}
 
-			> .buy-bonds { display: block; clear: both; position: relative; padding: 52px 0; }
+			> .buy-bonds { display: block; clear: both; position: relative; padding: 52px 0;
+				.utils { position: absolute; top: 85px; left: 68%;
+					.btn { display: inline-block; margin-right: 17px; font-size: 0.875em; color: $color-menu1; vertical-align: middle;
+						&:before { content: ''; display: inline-block; margin-right: 7px; vertical-align: middle; }
+						&.warning {
+							&:before { @include sprite($sprite-icon-iks01); }
+						}
+					}
+				}
+			}
 
 			> .hover { 
 				display: block; overflow: hidden; position: absolute; top: 0; right: 630px; bottom: auto; left: auto; z-index: z("hover"); height: $thumb-height; width: $thumb-width; text-align: center; border-right: 1px solid #d4dae4; border-radius: 0px;

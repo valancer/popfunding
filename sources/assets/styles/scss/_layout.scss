@@ -736,6 +736,19 @@ article.contents { min-width: $contents-container-width; padding: 60px 0 110px 0
 			&:before { content: ''; display: block; position: absolute; top: 9px; left: 1px; margin-top: -1px; height: 2px; width: 2px; background-color: $color-content; }
 		}
 	}
+
+	/* tooltip stype */
+	&.type-tooltip { padding: 14px 20px 17px 20px;; border-radius: 5px;
+		&:before { top: -$sprite-bg-arrow15-height; left: 43px; @include sprite($sprite-bg-arrow15); }
+
+		&.left {
+			&:before { top: auto; left: -$sprite-bg-arrow19-width; @include sprite($sprite-bg-arrow19); }
+		}
+
+		.list-dot {
+			> li { margin-top: 5px; }
+		}
+	}
 }
 
 

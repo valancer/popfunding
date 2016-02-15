@@ -104,6 +104,11 @@
 
 	+ .warning { margin-top: 8px; }
 
+	// 우상단
+	.tr-cr { position: absolute; top: 6px; right: 0;
+		.cr-box + .cr-box { margin-left: 7px; }
+	}
+
 	// 한줄에 input 2개
 	.input-column { display: inline-block; width: 172px; }
 

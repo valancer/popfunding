@@ -365,7 +365,7 @@
 			.list-example { padding: 164px 430px 226px 122px; height: 83px; width: 236px;
 				> li { display: block; float: left; height: 83px;
 					figure {
-						figcaption { position: absolute; background-color: #0f0;
+						figcaption { position: absolute;
 							&:before { content: ''; display: block; }
 							strong { margin-top: 6px; font-size: 0.875em; color: $color-content; line-height: 18px; }
 							.box { box-sizing: border-box; padding: 10px 0 10px 20px; width: 100%; font-size: 0.750em; color: $color-content; line-height: 16px; text-align: left; border: 1px solid #cdd4de; }
@@ -393,7 +393,7 @@
 										}
 										th { width: 52px; text-align: center; border-top: 1px solid #cdd4de;
 											> .convert {
-												> em { display: inline-block; height: 30px; text-indent: -9999px;
+												> em { display: inline-block; height: 30px; text-indent: -9999px; opacity: 0.5;
 													&.overdue-n { @include sprite($sprite-bg-overdue01); }
 													&.overdue-a { @include sprite($sprite-bg-overdue02); }
 													&.overdue-b { @include sprite($sprite-bg-overdue03); }
@@ -411,6 +411,14 @@
 							}
 						}
 					}
+				}
+			}
+
+			.list-ex { position: absolute; left: 123px; bottom: 65px;
+				> li { position: relative; margin-top: 24px; padding-left: 19px; font-size: 0.750em; color: $color-content; line-height: 18px;
+					&:before { content: '예)'; position: absolute; top: 0; left: 0; }
+					.borrowing-count { color: #ff6000; }
+					.credit-rating { color: #0e52a5; }
 				}
 			}
 		} /// .rating-popup

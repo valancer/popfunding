@@ -236,10 +236,12 @@
 					&.seq02:before { @include sprite($sprite-prepare02); }
 					&.seq03:before { @include sprite($sprite-prepare03); }
 					&.seq04:before { @include sprite($sprite-prepare04); }
+					&.seq05:before { @include sprite($sprite-prepare05); }
 					&.seq01.done:before { @include sprite($sprite-prepare01-done); }
 					&.seq02.done:before { @include sprite($sprite-prepare02-done); }
 					&.seq03.done:before { @include sprite($sprite-prepare03-done); }
 					&.seq04.done:before { @include sprite($sprite-prepare04-done); }
+					&.seq05.done:before { @include sprite($sprite-prepare05-done); }
 
 					/* 대출자 인증 후 */
 					.box-auth { position: relative; margin-top: 23px; padding: 14px 0 14px 86px; font-size: 0.875em; line-height: 24px; border: 1px solid #d4dae4;

@@ -98,7 +98,7 @@
 
 							<div class="type">
 								<p class="input-price">
-									<label for="price">12.2%</label>
+									<input type="text" id="interest-rates" name="interest-rates" value="12.2%" class="interest-rates">
 									<input type="text" id="price" name="price" value="">
 								</p>
 								<p class="type-options">
@@ -274,7 +274,7 @@
 
 							<div class="type">
 								<p class="input-price">
-									<label for="price-calc">참가금액</label>
+									<input type="text" id="interest-rates" name="interest-rates" value="12.2%" class="interest-rates">
 									<input type="text" id="price-calc" name="price-calc" value="">
 								</p>
 								<p class="type-options">
@@ -323,7 +323,7 @@
 
 							<div class="type">
 								<p class="input-price">
-									<label for="price-calc-after">예상 수익금</label>
+									<input type="text" id="interest-rates" name="interest-rates" value="12.2%" class="interest-rates">
 									<input type="text" id="price-calc-after" name="price-calc-after" readonly="readonly" value="285,500원">
 								</p>
 								<p class="type-options">
@@ -349,13 +349,11 @@
 								var $btnInvest = $('#popup-calc-after a.btn-invest.invest');
 								$btnReCalc.on('click', function(e) {
 									e.preventDefault();
-									console.log('recalc');
 									Invest.openCalc();
 								});
 
 								$btnInvest.on('click', function(e) {
 									e.preventDefault();
-									console.log('invest');
 									Invest.openInvest();
 								});
 							});

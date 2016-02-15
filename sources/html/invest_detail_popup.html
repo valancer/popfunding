@@ -57,7 +57,8 @@ include "head.html"
 
 							<div class="type">
 								<p class="input-price">
-									<label for="price">12.2%</label>
+									<!-- <label for="price">12.2%</label> -->
+									<input type="text" id="interest-rates" name="interest-rates" value="12.2%" class="interest-rates">
 									<input type="text" id="price" name="price" value="">
 								</p>
 								<p class="type-options">
@@ -123,7 +124,7 @@ include "head.html"
 
 							<div class="type">
 								<p class="input-price">
-									<label for="price">12.2%</label>
+									<input type="text" id="interest-rates" name="interest-rates" value="12.2%" class="interest-rates">
 									<input type="text" id="price" name="price" class="small" value="500,000원 + 쿠폰 10,000원">
 									<!-- 쿠폰 포함일 경우 class="small" 추가 -->
 								</p>
@@ -334,7 +335,7 @@ include "head.html"
 
 							<div class="type">
 								<p class="input-price">
-									<label for="price-calc">12.2%</label>
+									<input type="text" id="interest-rates" name="interest-rates" value="12.2%" class="interest-rates">
 									<input type="text" id="price-calc" name="price-calc" value="">
 								</p>
 								<p class="type-options">
@@ -376,7 +377,8 @@ include "head.html"
 									<span class="msg">회원님이 2,500,000원을 투자할때, 6개월 후 예상수익입니다.</span>
 								</p>
 								<p class="input-price">
-									<label for="price-calc-after">12.2%</label>
+<!-- 									<label for="price-calc-after">12.2%</label> -->
+									<input type="text" id="interest-rates" name="interest-rates" value="12.2%" class="interest-rates">
 									<input type="text" id="price-calc-after" name="price-calc-after" readonly="readonly" value="285,500원">
 								</p>
 							</div>
@@ -399,13 +401,11 @@ include "head.html"
 								var $btnInvest = $('#popup-calc-after a.btn-invest.invest');
 								$btnReCalc.on('click', function(e) {
 									e.preventDefault();
-									console.log('recalc');
 									Invest.openCalc();
 								});
 
 								$btnInvest.on('click', function(e) {
 									e.preventDefault();
-									console.log('invest');
 									Invest.openInvest();
 								});
 							});

@@ -69,13 +69,13 @@ include "head.html"
 
 				<!-- 상품 정보 -->
 				<div class="info">
-					include "bonds_info.html"
+					include "bonds_info_detail.html"
 				</div>
 
 				<!-- 매수하기 -->
 				<div class="buy-bonds">
 					<p class="utils">
-						<a href="#" class="btn warning">유의사항</a>
+						<a href="#popup-bonds-warning" class="btn warning va-toogle-btns">유의사항</a>
 					</p>
 					<a href="#" class="btn-invest">매수하기</a>
 				</div>
@@ -87,6 +87,25 @@ include "head.html"
 				</p>
 			</section>
 
+			<!-- 채권 매수하기 - 유의사항 -->
+			<div id="popup-bonds-warning" class="popup guide-popup type-tooltip bonds-warning">
+				<button class="btn-popup-close" data-target="#popup-bonds-warning">팝업닫기</button>
+
+				<ul class="list-dot">
+					<li>
+						매수하기는 판매가 만큼의 <em>투자가능금액과 수수료 0.1%</em>가 있어야 합니다.
+					</li>
+					<li>
+						채권거래수수료도 매수 체결 시 차감됩니다.
+					</li>
+					<li>
+						동일한 투자에 대해 추가로 매수 가능한 채권들은 하단의<br>[동일투자 채권현황]에 표시됩니다.
+					</li>
+					<li>
+						유효기간 만료/대손종료/상환완료된 채권은 거래되지 않습니다.
+					</li>
+				</ul>
+			</div>
 
 			
 			<!-- 동일 투자 채권현황 -->

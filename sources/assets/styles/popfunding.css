@@ -355,14 +355,14 @@ body {
     margin-right: 4px;
     vertical-align: middle;
     background-image: url(/assets/images/sprites.png);
-    background-position: -443px -743px;
+    background-position: -462px -743px;
     width: 14px;
     height: 13px; }
   .btn-help:hover {
     color: #ff4776; }
     .btn-help:hover:before {
       background-image: url(/assets/images/sprites.png);
-      background-position: -424px -743px;
+      background-position: -481px -743px;
       width: 14px;
       height: 13px; }
 
@@ -720,14 +720,14 @@ span.center {
       display: inline-block;
       text-indent: -9999px;
       background-image: url(/assets/images/sprites.png);
-      background-position: -730px -706px;
+      background-position: -709px -652px;
       width: 16px;
       height: 16px; }
     .item-form .income-table .btn-add {
       display: inline-block;
       text-indent: -9999px;
       background-image: url(/assets/images/sprites.png);
-      background-position: -709px -652px;
+      background-position: -730px -706px;
       width: 16px;
       height: 16px; }
     .item-form .income-table .select {
@@ -798,12 +798,12 @@ span.center {
     top: 0;
     left: 0;
     background-image: url(/assets/images/sprites.png);
-    background-position: -346px -743px;
+    background-position: -366px -743px;
     width: 15px;
     height: 15px; }
   .cr-box input[type=checkbox].checked + label:before, .cr-box input[type=checkbox]:checked + label:before {
     background-image: url(/assets/images/sprites.png);
-    background-position: -366px -743px;
+    background-position: -346px -743px;
     width: 15px;
     height: 15px; }
   .cr-box input[type=radio] + label:before {
@@ -813,7 +813,7 @@ span.center {
     top: 1px;
     left: 0;
     background-image: url(/assets/images/sprites.png);
-    background-position: -386px -743px;
+    background-position: -443px -743px;
     width: 14px;
     height: 14px; }
   .cr-box input[type=radio].checked + label, .cr-box input[type=radio]:checked + label {
@@ -856,12 +856,12 @@ span.center {
       top: 0px;
       left: 0;
       background-image: url(/assets/images/sprites.png);
-      background-position: -231px -743px;
+      background-position: -205px -743px;
       width: 21px;
       height: 21px; }
   .cr-box.big input[type=radio].checked + label:before, .cr-box.big input[type=radio]:checked + label:before {
     background-image: url(/assets/images/sprites.png);
-    background-position: -205px -743px;
+    background-position: -231px -743px;
     width: 21px;
     height: 21px; }
 
@@ -1060,6 +1060,8 @@ span.center {
       .procedding-investment .btns p a {
         color: #6b7581;
         text-decoration: underline; }
+    .procedding-investment .btns .btn-invest {
+      font-size: 18px; }
 
 /* 개인/기업 투자 소개 - 수익금 출금 */
 .withdraw {
@@ -1355,7 +1357,7 @@ span.center {
                 opacity: 0.5; }
                 .paging .sorting .rating-popup .list-example > li figure.overdue figcaption table tbody th > .convert > em.overdue-n {
                   background-image: url(/assets/images/sprites.png);
-                  background-position: -845px -107px;
+                  background-position: -845px -72px;
                   width: 17px;
                   height: 30px; }
                 .paging .sorting .rating-popup .list-example > li figure.overdue figcaption table tbody th > .convert > em.overdue-a {
@@ -1365,7 +1367,7 @@ span.center {
                   height: 30px; }
                 .paging .sorting .rating-popup .list-example > li figure.overdue figcaption table tbody th > .convert > em.overdue-b {
                   background-image: url(/assets/images/sprites.png);
-                  background-position: 0px -780px;
+                  background-position: -24px -780px;
                   width: 19px;
                   height: 30px; }
                 .paging .sorting .rating-popup .list-example > li figure.overdue figcaption table tbody th > .convert > em.overdue-c {
@@ -1376,7 +1378,7 @@ span.center {
                   height: 30px; }
                 .paging .sorting .rating-popup .list-example > li figure.overdue figcaption table tbody th > .convert > em.overdue-d {
                   background-image: url(/assets/images/sprites.png);
-                  background-position: -24px -780px;
+                  background-position: 0px -780px;
                   width: 19px;
                   height: 30px; }
             .paging .sorting .rating-popup .list-example > li figure.overdue figcaption table tbody td {
@@ -1497,7 +1499,7 @@ span.center {
   position: relative;
   height: 353px;
   min-width: 1160px;
-  background: url(/assets/images/bg_header.jpg) center top no-repeat; }
+  background: #d0d9e2 url(/assets/images/bg_header.jpg) center top no-repeat; }
   .header:after {
     content: '';
     display: block;
@@ -1505,7 +1507,7 @@ span.center {
     bottom: 0;
     right: 0;
     left: 0;
-    z-index: -1;
+    z-index: 0;
     height: 50px;
     width: 100%;
     background-color: #14378c; }
@@ -1691,35 +1693,35 @@ span.center {
             margin-top: 1px;
             margin-right: -2px;
             background-image: url(/assets/images/sprites.png);
-            background-position: -845px -177px;
+            background-position: -845px -282px;
             width: 16px;
             height: 30px; }
           .header .user > .credit-rating > span > em.bid3 {
             margin-top: 1px;
             margin-right: -2px;
             background-image: url(/assets/images/sprites.png);
-            background-position: -845px -72px;
+            background-position: -845px -37px;
             width: 17px;
             height: 30px; }
           .header .user > .credit-rating > span > em.bid4 {
             margin-top: 1px;
             margin-right: -2px;
             background-image: url(/assets/images/sprites.png);
-            background-position: -845px -37px;
+            background-position: -845px -107px;
             width: 17px;
             height: 30px; }
           .header .user > .credit-rating > span > em.bid5 {
             margin-top: 1px;
             margin-right: -2px;
             background-image: url(/assets/images/sprites.png);
-            background-position: -845px -317px;
+            background-position: -845px -177px;
             width: 16px;
             height: 30px; }
           .header .user > .credit-rating > span > em.bid6 {
             margin-top: 1px;
             margin-right: -2px;
             background-image: url(/assets/images/sprites.png);
-            background-position: -845px -282px;
+            background-position: -845px -212px;
             width: 16px;
             height: 30px; }
           .header .user > .credit-rating > span > em.bid7 {
@@ -1740,13 +1742,13 @@ span.center {
             margin-top: 1px;
             margin-right: -2px;
             background-image: url(/assets/images/sprites.png);
-            background-position: -845px -212px;
+            background-position: -845px -317px;
             width: 16px;
             height: 30px; }
           .header .user > .credit-rating > span > em.overdue-none {
             margin-top: 1px;
             background-image: url(/assets/images/sprites.png);
-            background-position: -845px -107px;
+            background-position: -845px -72px;
             width: 17px;
             height: 30px; }
           .header .user > .credit-rating > span > em.overdue-a {
@@ -1758,7 +1760,7 @@ span.center {
           .header .user > .credit-rating > span > em.overdue-b {
             margin-top: 1px;
             background-image: url(/assets/images/sprites.png);
-            background-position: 0px -780px;
+            background-position: -24px -780px;
             width: 19px;
             height: 30px; }
           .header .user > .credit-rating > span > em.overdue-c {
@@ -1770,7 +1772,7 @@ span.center {
           .header .user > .credit-rating > span > em.overdue-d {
             margin-top: 1px;
             background-image: url(/assets/images/sprites.png);
-            background-position: -24px -780px;
+            background-position: 0px -780px;
             width: 19px;
             height: 30px; }
     .header .user > figure .thumb {
@@ -1836,7 +1838,7 @@ span.center {
       height: 37px;
       min-width: 190px;
       font-size: 0.875em;
-      font-weight: 500;
+      font-weight: bold;
       color: #fff;
       text-align: center;
       line-height: 37px;
@@ -1897,7 +1899,8 @@ span.center {
     position: absolute;
     bottom: 0;
     right: 0;
-    left: 0; }
+    left: 0;
+    z-index: 1; }
     .header nav > ul {
       position: relative;
       height: 50px;
@@ -1924,7 +1927,7 @@ span.center {
             color: #dee1e9; }
   .header.main {
     height: 833px;
-    background: url(/assets/images/bg_header_main.jpg) center top no-repeat; }
+    background: #dbe2ea url(/assets/images/bg_header_main.jpg) center top no-repeat; }
     .header.main:after {
       height: 63px; }
     .header.main .user {
@@ -2337,6 +2340,7 @@ article.contents {
           line-height: 31px; }
         .invest-popup > .inner > .type .input-price > input[type=text] {
           display: block;
+          height: 31px;
           width: 340px;
           font-size: 20px;
           color: #000;
@@ -2346,6 +2350,16 @@ article.contents {
           border-left: 1px solid #d4d8e1; }
           .invest-popup > .inner > .type .input-price > input[type=text].small {
             font-size: 20px; }
+        .invest-popup > .inner > .type .input-price > input[type=text].interest-rates {
+          float: left;
+          display: block;
+          margin-left: 25px;
+          height: 31px;
+          width: 76px;
+          font-size: 20px;
+          color: #252525;
+          line-height: 31px;
+          border: 0px; }
         .invest-popup > .inner > .type .input-price .btn-fr {
           display: block;
           position: absolute;
@@ -2411,7 +2425,7 @@ article.contents {
             padding-right: 12px;
             padding-left: 17px;
             height: 34px;
-            font-size: 0.857em;
+            font-size: 12px;
             color: #6b7581;
             line-height: 34px;
             white-space: nowrap;
@@ -3249,6 +3263,8 @@ article.contents {
       height: 2px;
       width: 2px;
       background-color: #6b7581; }
+    .popup.guide-popup .list-dot > li.em:before {
+      background-color: #ff4776; }
   .popup.guide-popup.type-tooltip {
     padding: 14px 20px 17px 20px;
     border-radius: 5px; }
@@ -3516,12 +3532,12 @@ article.contents {
       height: 21px; }
     .contents.invest em.convert.price span.price2 {
       background-image: url(/assets/images/sprites.png);
-      background-position: -827px -188px;
+      background-position: -827px -136px;
       width: 13px;
       height: 21px; }
     .contents.invest em.convert.price span.price3 {
       background-image: url(/assets/images/sprites.png);
-      background-position: -827px -110px;
+      background-position: -827px -214px;
       width: 13px;
       height: 21px; }
     .contents.invest em.convert.price span.price4 {
@@ -3531,12 +3547,12 @@ article.contents {
       height: 21px; }
     .contents.invest em.convert.price span.price5 {
       background-image: url(/assets/images/sprites.png);
-      background-position: -827px -162px;
+      background-position: -827px -110px;
       width: 13px;
       height: 21px; }
     .contents.invest em.convert.price span.price6 {
       background-image: url(/assets/images/sprites.png);
-      background-position: -827px -214px;
+      background-position: -827px -188px;
       width: 13px;
       height: 21px; }
     .contents.invest em.convert.price span.price7 {
@@ -3546,12 +3562,12 @@ article.contents {
       height: 21px; }
     .contents.invest em.convert.price span.price8 {
       background-image: url(/assets/images/sprites.png);
-      background-position: -827px -136px;
+      background-position: -827px -84px;
       width: 13px;
       height: 21px; }
     .contents.invest em.convert.price span.price9 {
       background-image: url(/assets/images/sprites.png);
-      background-position: -827px -84px;
+      background-position: -827px -162px;
       width: 13px;
       height: 21px; }
     .contents.invest em.convert.price span.price-comma {
@@ -3662,7 +3678,7 @@ article.contents {
         right: 10px;
         left: auto;
         background-image: url(/assets/images/sprites.png);
-        background-position: -706px -706px;
+        background-position: -685px -652px;
         width: 19px;
         height: 18px; }
       .contents.invest .product > .options > .imminent-deadline {
@@ -3698,11 +3714,11 @@ article.contents {
           text-indent: -9999px;
           background-image: url("/assets/images/sprites.png"); }
           .contents.invest .product > .options > .share a.btn-fb {
-            background-position: -370px -706px; }
+            background-position: -515px -706px; }
           .contents.invest .product > .options > .share a.btn-tw {
-            background-position: -428px -706px; }
-          .contents.invest .product > .options > .share a.btn-ks {
             background-position: -457px -706px; }
+          .contents.invest .product > .options > .share a.btn-ks {
+            background-position: -486px -706px; }
     .contents.invest .product > figure > .thumb {
       display: block;
       position: relative;
@@ -3834,14 +3850,14 @@ article.contents {
           margin-right: 5px;
           vertical-align: middle;
           background-image: url(/assets/images/sprites.png);
-          background-position: -685px -652px;
+          background-position: -706px -706px;
           width: 19px;
           height: 18px; }
         .contents.invest .product > .hover > button:hover {
           text-decoration: underline; }
         .contents.invest .product > .hover > button.selected:before {
           background-image: url(/assets/images/sprites.png);
-          background-position: -706px -706px;
+          background-position: -685px -652px;
           width: 19px;
           height: 18px; }
       .contents.invest .product > .hover > span {
@@ -3942,12 +3958,12 @@ article.contents {
                   height: 32px; }
                 .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price2 {
                   background-image: url(/assets/images/sprites.png);
-                  background-position: -52px -743px;
+                  background-position: -410px -327px;
                   width: 20px;
                   height: 32px; }
                 .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price3 {
                   background-image: url(/assets/images/sprites.png);
-                  background-position: -410px -327px;
+                  background-position: -410px -290px;
                   width: 20px;
                   height: 32px; }
                 .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price4 {
@@ -3957,7 +3973,7 @@ article.contents {
                   height: 32px; }
                 .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price5 {
                   background-image: url(/assets/images/sprites.png);
-                  background-position: -410px -290px;
+                  background-position: -52px -743px;
                   width: 20px;
                   height: 32px; }
                 .contents.invest .product.detail > figure > .info > .status-info .p-i > p em.convert.price span.price6 {
@@ -4030,12 +4046,12 @@ article.contents {
             display: block;
             margin: 0 auto 8px auto;
             background-image: url(/assets/images/sprites.png);
-            background-position: -685px -652px;
+            background-position: -706px -706px;
             width: 19px;
             height: 18px; }
           .contents.invest .product.detail > .hover > button.selected:before {
             background-image: url(/assets/images/sprites.png);
-            background-position: -706px -706px;
+            background-position: -685px -652px;
             width: 19px;
             height: 18px; }
         .contents.invest .product.detail > .hover > span {
@@ -4517,12 +4533,12 @@ article.contents {
               height: 32px; }
             .product-detail-view .goal .chart .circle .rate em.convert.price span.price2 {
               background-image: url(/assets/images/sprites.png);
-              background-position: -52px -743px;
+              background-position: -410px -327px;
               width: 20px;
               height: 32px; }
             .product-detail-view .goal .chart .circle .rate em.convert.price span.price3 {
               background-image: url(/assets/images/sprites.png);
-              background-position: -410px -327px;
+              background-position: -410px -290px;
               width: 20px;
               height: 32px; }
             .product-detail-view .goal .chart .circle .rate em.convert.price span.price4 {
@@ -4532,7 +4548,7 @@ article.contents {
               height: 32px; }
             .product-detail-view .goal .chart .circle .rate em.convert.price span.price5 {
               background-image: url(/assets/images/sprites.png);
-              background-position: -410px -290px;
+              background-position: -52px -743px;
               width: 20px;
               height: 32px; }
             .product-detail-view .goal .chart .circle .rate em.convert.price span.price6 {
@@ -5332,9 +5348,8 @@ article.contents {
             content: '';
             display: block;
             position: absolute;
-            top: 50%;
+            top: center;
             right: 0px;
-            margin-top: -7px;
             height: 15px;
             width: 1px;
             background-color: #d4dae4; }
@@ -5528,17 +5543,17 @@ article.contents {
       height: 20px; }
     .contents.private-invest em.convert.price span.price5 {
       background-image: url(/assets/images/sprites.png);
-      background-position: -327px -743px;
+      background-position: -592px -425px;
       width: 14px;
       height: 20px; }
     .contents.private-invest em.convert.price span.price6 {
       background-image: url(/assets/images/sprites.png);
-      background-position: -845px -648px;
+      background-position: -845px -598px;
       width: 16px;
       height: 20px; }
     .contents.private-invest em.convert.price span.price7 {
       background-image: url(/assets/images/sprites.png);
-      background-position: -592px -425px;
+      background-position: -327px -743px;
       width: 14px;
       height: 20px; }
     .contents.private-invest em.convert.price span.price8 {
@@ -5548,7 +5563,7 @@ article.contents {
       height: 20px; }
     .contents.private-invest em.convert.price span.price9 {
       background-image: url(/assets/images/sprites.png);
-      background-position: -845px -598px;
+      background-position: -845px -648px;
       width: 16px;
       height: 20px; }
     .contents.private-invest em.convert.price span.price-percent {
@@ -6016,7 +6031,7 @@ article.contents {
             height: 28px; }
           .contents.private-invest .product.detail > .trust-ratings em.convert.price span.price2 {
             background-image: url(/assets/images/sprites.png);
-            background-position: -77px -743px;
+            background-position: -103px -743px;
             width: 21px;
             height: 28px; }
           .contents.private-invest .product.detail > .trust-ratings em.convert.price span.price3 {
@@ -6031,7 +6046,7 @@ article.contents {
             height: 28px; }
           .contents.private-invest .product.detail > .trust-ratings em.convert.price span.price5 {
             background-image: url(/assets/images/sprites.png);
-            background-position: -103px -743px;
+            background-position: -77px -743px;
             width: 21px;
             height: 28px; }
           .contents.private-invest .product.detail > .trust-ratings em.convert.price span.price6 {
@@ -6321,6 +6336,7 @@ article.contents {
 /* 채권 투자 */
 .contents.bonds-invest {
   /* 정렬 및 검색 조건 - super _contents.scss */
+  /* 매수 유의사항 팝업 */
   /* 동일 채권 현황 */ }
   .contents.bonds-invest .paging .filter-bonds {
     padding-bottom: 14px; }
@@ -6401,17 +6417,17 @@ article.contents {
       height: 20px; }
     .contents.bonds-invest em.convert.price span.price5 {
       background-image: url(/assets/images/sprites.png);
-      background-position: -327px -743px;
+      background-position: -592px -425px;
       width: 14px;
       height: 20px; }
     .contents.bonds-invest em.convert.price span.price6 {
       background-image: url(/assets/images/sprites.png);
-      background-position: -845px -648px;
+      background-position: -845px -598px;
       width: 16px;
       height: 20px; }
     .contents.bonds-invest em.convert.price span.price7 {
       background-image: url(/assets/images/sprites.png);
-      background-position: -592px -425px;
+      background-position: -327px -743px;
       width: 14px;
       height: 20px; }
     .contents.bonds-invest em.convert.price span.price8 {
@@ -6421,7 +6437,7 @@ article.contents {
       height: 20px; }
     .contents.bonds-invest em.convert.price span.price9 {
       background-image: url(/assets/images/sprites.png);
-      background-position: -845px -598px;
+      background-position: -845px -648px;
       width: 16px;
       height: 20px; }
     .contents.bonds-invest em.convert.price span.price-percent {
@@ -6714,6 +6730,40 @@ article.contents {
         color: #c4c9d1; }
       .contents.bonds-invest .product .info .group .overdue {
         display: none; }
+    .contents.bonds-invest .product .info .auto-bidding {
+      display: block;
+      position: absolute;
+      bottom: 15px;
+      right: 14px;
+      font-size: 0.750em;
+      color: #c4c9d1;
+      text-align: left;
+      text-indent: -9999px; }
+      .contents.bonds-invest .product .info .auto-bidding:before {
+        content: '';
+        display: block;
+        position: absolute;
+        background-image: url(/assets/images/sprites.png);
+        background-position: -386px -743px;
+        width: 14px;
+        height: 14px; }
+    .contents.bonds-invest .product .info .meto-bidding {
+      display: block;
+      position: absolute;
+      bottom: 15px;
+      right: 14px;
+      font-size: 0.750em;
+      color: #c4c9d1;
+      text-align: left;
+      text-indent: -9999px; }
+      .contents.bonds-invest .product .info .meto-bidding:before {
+        content: '';
+        display: block;
+        position: absolute;
+        background-image: url(/assets/images/sprites.png);
+        background-position: -424px -743px;
+        width: 14px;
+        height: 14px; }
     .contents.bonds-invest .product .info .guide-popup.expected-calc {
       display: none; }
     .contents.bonds-invest .product:hover > .hover {
@@ -6842,7 +6892,7 @@ article.contents {
             height: 28px; }
           .contents.bonds-invest .product.detail > .trust-ratings em.convert.price span.price2 {
             background-image: url(/assets/images/sprites.png);
-            background-position: -77px -743px;
+            background-position: -103px -743px;
             width: 21px;
             height: 28px; }
           .contents.bonds-invest .product.detail > .trust-ratings em.convert.price span.price3 {
@@ -6857,7 +6907,7 @@ article.contents {
             height: 28px; }
           .contents.bonds-invest .product.detail > .trust-ratings em.convert.price span.price5 {
             background-image: url(/assets/images/sprites.png);
-            background-position: -103px -743px;
+            background-position: -77px -743px;
             width: 21px;
             height: 28px; }
           .contents.bonds-invest .product.detail > .trust-ratings em.convert.price span.price6 {
@@ -7006,32 +7056,22 @@ article.contents {
           .contents.bonds-invest .product.detail .info .group .minus {
             color: #006bf0 !important; }
         .contents.bonds-invest .product.detail .info .auto-bidding {
-          display: block;
-          position: absolute;
           bottom: 9px;
           right: 16px;
-          font-size: 0.750em;
-          color: #c4c9d1;
-          text-align: center; }
+          text-indent: 0px; }
           .contents.bonds-invest .product.detail .info .auto-bidding:before {
-            content: '';
-            display: block;
+            position: relative;
             margin: 0 auto 4px auto;
             background-image: url(/assets/images/sprites.png);
             background-position: -281px -743px;
             width: 18px;
             height: 21px; }
         .contents.bonds-invest .product.detail .info .meto-bidding {
-          display: block;
-          position: absolute;
           bottom: 9px;
           right: 16px;
-          font-size: 0.750em;
-          color: #c4c9d1;
-          text-align: center; }
+          text-indent: 0px; }
           .contents.bonds-invest .product.detail .info .meto-bidding:before {
-            content: '';
-            display: block;
+            position: relative;
             margin: 0 auto 4px auto;
             background-image: url(/assets/images/sprites.png);
             background-position: -682px -706px;
@@ -7112,6 +7152,13 @@ article.contents {
           display: none; }
         .contents.bonds-invest .product.detail > .hover:before {
           content: none; }
+  .contents.bonds-invest .guide-popup.bonds-warning {
+    display: none;
+    top: 550px;
+    right: 0;
+    padding-right: 50px; }
+    .contents.bonds-invest .guide-popup.bonds-warning:before {
+      left: 130px; }
   .contents.bonds-invest .same-bonds {
     margin-top: 66px;
     padding-bottom: 40px;
@@ -7573,7 +7620,7 @@ article.contents {
           .contents.borrowing-private .done-application > .box .process-done > li.seq01:before {
             left: 0px;
             background-image: url(/assets/images/sprites.png);
-            background-position: -486px -706px;
+            background-position: -428px -706px;
             width: 24px;
             height: 24px; }
           .contents.borrowing-private .done-application > .box .process-done > li.seq02:before {
@@ -7585,7 +7632,7 @@ article.contents {
           .contents.borrowing-private .done-application > .box .process-done > li.seq03:before {
             left: 28px;
             background-image: url(/assets/images/sprites.png);
-            background-position: -515px -706px;
+            background-position: -370px -706px;
             width: 24px;
             height: 24px; }
       .contents.borrowing-private .done-application > .box .tooltip {

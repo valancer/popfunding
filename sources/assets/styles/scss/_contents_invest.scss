@@ -754,7 +754,7 @@ $border-inner-color: #e6e9ee;
 				thead { }
 				tfoot {
 					th { position: relative;
-						&:before { content: ''; display: block; position: absolute; top: 50%; right: 0px; margin-top: -7px; height: 15px; width: 1px; background-color: #d4dae4; }
+						&:before { content: ''; display: block; position: absolute; top: center; right: 0px; height: 15px; width: 1px; background-color: #d4dae4; }
 					}
 					td { padding: 20px 0 20px 0;
 						&[colspan] { padding-left: 38px; }

@@ -575,8 +575,10 @@ var Story = (function ($) {
 /******************************************* 팝업 ********************************************/
 /********************************************************************************************/
 var Popup = (function ($) {
-	var $btnClose,
+	var $btnToggles,
+		$btnClose,
 		init = function () {
+			$btnToggles = $('.va-toogle-btns');
 			$btnClose = $('.popup button.btn-popup-close');
 
 			initLayout();
@@ -594,6 +596,19 @@ var Popup = (function ($) {
 				$(target).hide();
 			});
 		}
+
+		// 전체 토글 버튼
+		$btnToggles.on('click', function(e) {
+			e.preventDefault();
+
+			var target = null;
+			if( $(this).is('[value]') ) {
+				target = $(this).val();
+			} else if( $(this).is('[href]') ) {
+				target = $(this).attr('href');
+			}
+			$(target).toggle();
+		});
 	}
 
 	return {

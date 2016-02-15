@@ -162,6 +162,13 @@
 				.overdue { display: none; }
 			}
 
+			.auto-bidding { display: block; position: absolute; bottom: 15px; right: 14px; font-size: 0.750em; color: $color-desc; text-align: left; text-indent: -9999px;
+				&:before { content: ''; display: block; position: absolute; @include sprite($sprite-icon-autobidding-s); }
+			}
+			.meto-bidding { display: block; position: absolute; bottom: 15px; right: 14px; font-size: 0.750em; color: $color-desc; text-align: left; text-indent: -9999px;
+				&:before { content: ''; display: block; position: absolute; @include sprite($sprite-icon-metobidding-s); }
+			}
+
 			.guide-popup.expected-calc { display: none; }
 		}
 
@@ -290,11 +297,11 @@
 					.minus { color: #006bf0 !important; }
 				}
 
-				.auto-bidding { display: block; position: absolute; bottom: 9px; right: 16px; font-size: 0.750em; color: $color-desc; text-align: center;
-					&:before { content: ''; display: block; margin: 0 auto 4px auto; @include sprite($sprite-icon-autobidding); }
+				.auto-bidding { bottom: 9px; right: 16px; text-indent: 0px;
+					&:before { position: relative; margin: 0 auto 4px auto; @include sprite($sprite-icon-autobidding); }
 				}
-				.meto-bidding { display: block; position: absolute; bottom: 9px; right: 16px; font-size: 0.750em; color: $color-desc; text-align: center;
-					&:before { content: ''; display: block; margin: 0 auto 4px auto; @include sprite($sprite-icon-metobidding); }
+				.meto-bidding { bottom: 9px; right: 16px; text-indent: 0px;
+					&:before { position: relative; margin: 0 auto 4px auto; @include sprite($sprite-icon-metobidding); }
 				}
 
 				/* 예상 수익 */
@@ -324,9 +331,13 @@
 				> span { display: none; }
 				&:before { content: none; }
 			}
-
-
 		}
+
+	}
+
+	/* 매수 유의사항 팝업 */
+	.guide-popup.bonds-warning { display: none; top: 550px; right: 0; padding-right: 50px;
+		&:before { left: 130px; }
 	}
 
 

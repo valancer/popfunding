@@ -40,7 +40,7 @@
 							</em>
 						</li>
 					</ul>
-<!--
+
 					<div id="popup-expected-calc" class="popup guide-popup type-tooltip left expected-calc">
 						<ul class="list-dot">
 							<li>
@@ -52,8 +52,24 @@
 							</li>
 						</ul>
 					</div>
--->
+
 
 					<!-- <span class="auto-bidding">오토비딩</span> -->
 					<span class="meto-bidding">미투비딩</span>
 
+
+					<script>
+					$(window.document).ready(function(){
+						// 예상수익 버튼
+						var $btnExpectedCalc = $('.product.detail .expected a.btn-inline-box');
+						console.log($btnExpectedCalc.length);
+						$btnExpectedCalc.on('click', function(e) {
+							e.preventDefault();
+
+							
+							var target = $(this).attr('href');
+							console.log(target);
+							$(target).toggle();
+						});
+					});
+					</script>

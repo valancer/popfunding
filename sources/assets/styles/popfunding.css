@@ -275,7 +275,7 @@ body {
   display: inline-block;
   position: relative;
   padding-left: 32px;
-  font-size: 0.750em;
+  font-size: 12px;
   color: #6b7581;
   line-height: 29px;
   text-decoration: underline !important; }
@@ -582,7 +582,7 @@ span.center {
   .item-form label {
     display: block;
     margin-top: 12px;
-    font-size: 0.750em;
+    font-size: 12px;
     color: #6b7581;
     line-height: 28px; }
     .item-form label .btn-detail {
@@ -597,7 +597,7 @@ span.center {
     padding: 0 0 0 16px;
     height: 40px;
     width: 100%;
-    font-size: 1.000em;
+    font-size: 16px;
     color: #252525;
     line-height: 40px;
     border: 1px solid #bec3cd;
@@ -618,7 +618,7 @@ span.center {
     padding: 16px 19px;
     height: 320px;
     width: 100%;
-    font-size: 0.875em;
+    font-size: 14px;
     color: #6b7581;
     line-height: 22px;
     border: 1px solid #bec3cd;
@@ -638,7 +638,7 @@ span.center {
     .item-form .select > button {
       display: block;
       width: 100%;
-      font-size: 1.000em;
+      font-size: 16px;
       color: #252525;
       line-height: 38px;
       text-align: left; }
@@ -666,7 +666,7 @@ span.center {
       .item-form .select .list-selecting > li button {
         display: block;
         width: 100%;
-        font-size: 1.000em;
+        font-size: 16px;
         color: #252525;
         line-height: 28px;
         text-align: left; }
@@ -684,7 +684,7 @@ span.center {
   .item-form .tr-cr {
     position: absolute;
     top: 6px;
-    right: 0; }
+    right: 92px; }
     .item-form .tr-cr .cr-box + .cr-box {
       margin-left: 7px; }
   .item-form .input-column {
@@ -712,7 +712,7 @@ span.center {
     position: relative;
     padding: 0 15px;
     min-width: 38px;
-    font-size: 0.875em;
+    font-size: 14px;
     font-weight: bold;
     color: #fff;
     line-height: 40px;
@@ -768,7 +768,7 @@ span.center {
         position: relative;
         padding-right: 10px;
         width: 90px;
-        font-size: 0.875em;
+        font-size: 14px;
         color: #ff4776;
         text-align: right;
         line-height: 40px; }
@@ -777,7 +777,7 @@ span.center {
           padding: 0 8px 0 0;
           height: 32px;
           width: 100% !important;
-          font-size: 1.000em;
+          font-size: 16px;
           color: #ff4776;
           line-height: 30px;
           text-align: right;
@@ -789,7 +789,7 @@ span.center {
         padding: 0 0 0 8px;
         height: 32px;
         width: 100%;
-        font-size: 0.875em;
+        font-size: 14px;
         color: #252525;
         line-height: 30px;
         text-align: left;
@@ -801,7 +801,7 @@ span.center {
       text-align: left; }
     .item-form .income-table > tfoot th {
       padding-right: 10px;
-      font-size: 1.000em;
+      font-size: 16px;
       color: #252525;
       text-align: right; }
 
@@ -810,7 +810,8 @@ span.center {
   position: relative;
   margin-top: 10px;
   margin-bottom: 3px;
-  /* 큰 사이즈 */ }
+  /* 큰 사이즈 */
+  /* 작은 사이즈 */ }
   .cr-box input[type=checkbox],
   .cr-box input[type=radio] {
     position: absolute;
@@ -830,16 +831,18 @@ span.center {
     background-position: -401px -743px;
     width: 15px;
     height: 15px; }
-  .cr-box input[type=radio] + label:before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 1px;
-    left: 0;
-    background-image: url(/assets/images/sprites.png);
-    background-position: -722px -706px;
-    width: 14px;
-    height: 14px; }
+  .cr-box input[type=radio] + label {
+    font-size: 14px; }
+    .cr-box input[type=radio] + label:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 1px;
+      left: 0;
+      background-image: url(/assets/images/sprites.png);
+      background-position: -722px -706px;
+      width: 14px;
+      height: 14px; }
   .cr-box input[type=radio].checked + label, .cr-box input[type=radio]:checked + label {
     color: #252525; }
     .cr-box input[type=radio].checked + label:before, .cr-box input[type=radio]:checked + label:before {
@@ -888,6 +891,8 @@ span.center {
     background-position: -71px -780px;
     width: 21px;
     height: 21px; }
+  .cr-box.small input[type=radio] + label {
+    font-size: 12px; }
 
 /* 기본 테이블 데이터 타입 */
 .table-data {
@@ -897,7 +902,7 @@ span.center {
   border-bottom: 2px solid #252525; }
   .table-data th {
     height: 44px;
-    font-size: 0.875em;
+    font-size: 14px;
     font-weight: normal;
     color: #252525;
     text-align: center;
@@ -905,7 +910,7 @@ span.center {
     background-color: #fbfbfb; }
   .table-data td {
     height: 44px;
-    font-size: 0.875em;
+    font-size: 14px;
     color: #6b7581;
     text-align: center;
     border-left: 1px solid #d4dae4;
@@ -968,7 +973,7 @@ span.center {
           background-color: #fff; }
       .procedding-investment .proceedings > li .desc {
         margin-top: 13px;
-        font-size: 0.875em;
+        font-size: 14px;
         color: #6b7581;
         line-height: 22px; }
       .procedding-investment .proceedings > li .btn-submit {
@@ -977,7 +982,7 @@ span.center {
       .procedding-investment .proceedings > li .certifed {
         display: inline-block;
         margin-top: 10px;
-        font-size: 0.750em;
+        font-size: 12px;
         color: #6b7581; }
         .procedding-investment .proceedings > li .certifed.not {
           color: #ff4776; }
@@ -985,11 +990,11 @@ span.center {
         margin-top: 15px;
         text-align: left; }
         .procedding-investment .proceedings > li .account .title {
-          font-size: 0.875em;
+          font-size: 14px;
           color: #6b7581; }
         .procedding-investment .proceedings > li .account .info-account {
           margin-top: 6px;
-          font-size: 0.875em;
+          font-size: 14px;
           color: #252525;
           line-height: 45px;
           text-align: center;
@@ -1005,7 +1010,7 @@ span.center {
         position: relative;
         margin: 20px 0 0 50px;
         padding-left: 30px;
-        font-size: 0.750em;
+        font-size: 12px;
         color: #6b7581;
         line-height: 20px;
         text-align: left; }
@@ -1028,7 +1033,7 @@ span.center {
           position: relative;
           margin-top: 9px;
           padding: 0 0 0 9px;
-          font-size: 0.750em;
+          font-size: 12px;
           color: #6b7581;
           line-height: 18px;
           text-align: left; }
@@ -1079,7 +1084,7 @@ span.center {
     text-align: center; }
     .procedding-investment .btns p {
       margin-top: 12px;
-      font-size: 0.750em;
+      font-size: 12px;
       color: #6b7581; }
       .procedding-investment .btns p a {
         color: #6b7581;
@@ -1109,11 +1114,11 @@ span.center {
         width: 610px;
         border-left: 0px; }
       .withdraw .withdraw-contents > li .title {
-        font-size: 0.875em;
+        font-size: 14px;
         color: #252525; }
       .withdraw .withdraw-contents > li p {
         margin-top: 13px;
-        font-size: 0.875em;
+        font-size: 14px;
         color: #6b7581;
         line-height: 22px; }
         .withdraw .withdraw-contents > li p em, .withdraw .withdraw-contents > li p strong {
@@ -1123,7 +1128,7 @@ span.center {
         margin-top: 10px;
         margin-bottom: 18px;
         padding-left: 8px;
-        font-size: 0.750em;
+        font-size: 12px;
         color: #6b7581;
         line-height: 18px; }
         .withdraw .withdraw-contents > li .dot:before {
@@ -1159,11 +1164,11 @@ span.center {
       .withdraw .popup.overdue-popup ul > li:first-child {
         border-top: 0px; }
       .withdraw .popup.overdue-popup ul > li .title {
-        font-size: 0.875em;
+        font-size: 14px;
         color: #252525; }
       .withdraw .popup.overdue-popup ul > li p {
         margin-top: 15px;
-        font-size: 0.750em;
+        font-size: 12px;
         color: #6b7581;
         line-height: 18px; }
 
@@ -1200,7 +1205,7 @@ span.center {
       background-color: #ff4776;
       transition: background-color 0.2s linear, color 0.2s; }
     .paging > a.type-txt {
-      font-size: 0.875em;
+      font-size: 14px;
       border: 0px; }
       .paging > a.type-txt:hover {
         color: #ff4776;
@@ -1303,14 +1308,14 @@ span.center {
             display: block; }
           .paging .sorting .rating-popup .list-example > li figure figcaption strong {
             margin-top: 6px;
-            font-size: 0.875em;
+            font-size: 14px;
             color: #6b7581;
             line-height: 18px; }
           .paging .sorting .rating-popup .list-example > li figure figcaption .box {
             box-sizing: border-box;
             padding: 10px 0 10px 20px;
             width: 100%;
-            font-size: 0.750em;
+            font-size: 12px;
             color: #6b7581;
             line-height: 16px;
             text-align: left;
@@ -1413,14 +1418,14 @@ span.center {
                   height: 30px; }
             .paging .sorting .rating-popup .list-example > li figure.overdue figcaption table tbody td {
               padding-left: 5px;
-              font-size: 0.875em;
+              font-size: 14px;
               color: #6b7581;
               line-height: 53px;
               border-top: 1px solid #cdd4de; }
           .paging .sorting .rating-popup .list-example > li figure.overdue figcaption .tb-bottom {
             clear: both;
             padding-top: 7px;
-            font-size: 0.750em;
+            font-size: 12px;
             color: #6b7581;
             text-align: right; }
             .paging .sorting .rating-popup .list-example > li figure.overdue figcaption .tb-bottom:before {
@@ -1439,7 +1444,7 @@ span.center {
         position: relative;
         margin-top: 24px;
         padding-left: 19px;
-        font-size: 0.750em;
+        font-size: 12px;
         color: #6b7581;
         line-height: 18px; }
         .paging .sorting .rating-popup .list-ex > li:before {
@@ -1509,7 +1514,7 @@ span.center {
     .popup.dictionary .list-dictionary dd {
       margin-top: 19px; }
       .popup.dictionary .list-dictionary dd p {
-        font-size: 0.875em;
+        font-size: 14px;
         color: #a7a7a7;
         line-height: 20px; }
         .popup.dictionary .list-dictionary dd p.ex {
@@ -1562,7 +1567,7 @@ span.center {
         display: inline-block;
         padding-right: 13px;
         padding-left: 8px;
-        font-size: 0.750em;
+        font-size: 12px;
         color: #c9cfd6; }
       .header .utils-member > li > a.btn-help {
         display: inline-block;
@@ -1594,7 +1599,7 @@ span.center {
         display: inline-block;
         padding-right: 13px;
         padding-left: 8px;
-        font-size: 0.750em;
+        font-size: 12px;
         color: #c9cfd6; }
       .header .utils-help > li > a {
         position: relative; }
@@ -1816,7 +1821,7 @@ span.center {
     .header .user > figure figcaption {
       display: block;
       margin-top: 12px;
-      font-size: 0.750em;
+      font-size: 12px;
       color: #525e7b;
       text-align: center; }
     .header .user > .message {
@@ -1827,7 +1832,7 @@ span.center {
       padding-right: 12px;
       padding-left: 17px;
       height: 32px;
-      font-size: 0.750em;
+      font-size: 12px;
       color: #6b7581;
       line-height: 32px;
       white-space: nowrap;
@@ -1867,7 +1872,7 @@ span.center {
       position: relative;
       height: 37px;
       min-width: 190px;
-      font-size: 0.875em;
+      font-size: 14px;
       font-weight: bold;
       color: #fff;
       text-align: center;
@@ -1901,7 +1906,7 @@ span.center {
         background: url("/assets/images/txt/header_main.png") left top no-repeat; }
       .header .contents.main p {
         margin-top: 30px;
-        font-size: 0.875em;
+        font-size: 14px;
         color: #525e7b;
         line-height: 20px; }
       .header .contents.main .btn-shortcut {
@@ -1920,7 +1925,7 @@ span.center {
         background: url("/assets/images/txt/header_invest_title.png") left top no-repeat; }
       .header .contents.invest p {
         margin-top: 18px;
-        font-size: 0.750em;
+        font-size: 12px;
         color: #525e7b;
         line-height: 18px; }
       .header .contents.invest .btn-shortcut {
@@ -1986,7 +1991,7 @@ span.center {
       margin: 0 11px;
       display: inline-block;
       position: relative;
-      font-size: 0.75em;
+      font-size: 12px;
       color: #6b7581;
       vertical-align: middle;
       text-decoration: none; }
@@ -1995,7 +2000,7 @@ span.center {
     margin-top: 67px;
     margin-left: 198px;
     padding-left: 192px;
-    font-size: 0.75em;
+    font-size: 12px;
     color: #6b7581;
     line-height: 20px; }
     .footer .company-info:before {
@@ -2032,7 +2037,7 @@ article.contents {
       padding-top: 1px;
       height: 36px;
       min-width: 154px;
-      font-size: 0.875em;
+      font-size: 14px;
       font-weight: 500;
       color: #fff;
       text-align: center;
@@ -2115,7 +2120,7 @@ article.contents {
           text-indent: -9999px; }
         article.contents.main .investment-type .investment p {
           margin-top: 25px;
-          font-size: 0.875em;
+          font-size: 14px;
           color: #525e7b;
           line-height: 20px; }
         article.contents.main .investment-type .investment .btn-shortcut {
@@ -2176,7 +2181,7 @@ article.contents {
           position: relative;
           z-index: 1;
           padding-top: 99px;
-          font-size: 0.875em;
+          font-size: 14px;
           color: #748bb9;
           text-align: center;
           line-height: 20px; }
@@ -2237,7 +2242,7 @@ article.contents {
           text-indent: -9999px; }
         article.contents.main .service-shortcut .box p {
           padding-top: 18px;
-          font-size: 0.750em;
+          font-size: 12px;
           color: #525e7b;
           line-height: 18px; }
         article.contents.main .service-shortcut .box .btns {
@@ -2339,7 +2344,7 @@ article.contents {
       overflow: hidden;
       margin-bottom: 5px;
       padding: 0 23px 0 27px;
-      font-size: 0.750em;
+      font-size: 12px;
       color: #0e52a5; }
       .invest-popup > .inner > .remain .balance:before {
         content: '|';
@@ -2410,7 +2415,7 @@ article.contents {
         width: 100%; }
       .invest-popup > .inner > .type .type-options {
         padding: 8px 23px 0 27px;
-        font-size: 0.750em;
+        font-size: 12px;
         color: #6b7581; }
         .invest-popup > .inner > .type .type-options.center {
           padding-bottom: 9px;
@@ -2493,7 +2498,7 @@ article.contents {
           text-align: left; }
           .invest-popup > .inner > .type .type-options .list-dot > li {
             position: relative;
-            font-size: 1.000em;
+            font-size: 16px;
             color: #6b7581;
             line-height: 20px; }
             .invest-popup > .inner > .type .type-options .list-dot > li:before {
@@ -2529,7 +2534,7 @@ article.contents {
         position: relative;
         float: left;
         padding: 0 60px 0 8px;
-        font-size: 0.750em;
+        font-size: 12px;
         color: #6b7581;
         line-height: 20px; }
         .invest-popup > .inner > .private-guide li:before {
@@ -2581,7 +2586,7 @@ article.contents {
           .invest-popup > .inner .coupon-container .tbl-list-coupon > tbody > tr td {
             position: relative;
             height: 56px;
-            font-size: 0.875em;
+            font-size: 14px;
             color: #6b7581;
             border-bottom: 1px solid #e9ecf1; }
             .invest-popup > .inner .coupon-container .tbl-list-coupon > tbody > tr td.c {
@@ -2687,7 +2692,7 @@ article.contents {
               vertical-align: middle; }
           .invest-popup > .inner .coupon-container .list-coupon > li .coupon .info {
             padding-top: 29px;
-            font-size: 0.875em;
+            font-size: 14px;
             color: #525e7b;
             line-height: 18px;
             text-decoration: none; }
@@ -2711,10 +2716,10 @@ article.contents {
     .invest-popup .guide-popup.floating-rates-popup:before {
       content: none !important; }
     .invest-popup .guide-popup.floating-rates-popup .normal {
-      font-size: 1.000em; }
+      font-size: 16px; }
       .invest-popup .guide-popup.floating-rates-popup .normal + p {
         margin-top: 6px;
-        font-size: 0.750em;
+        font-size: 12px;
         color: #6b7581; }
     .invest-popup .guide-popup.floating-rates-popup .interest-rates > span {
       display: block;
@@ -2810,7 +2815,7 @@ article.contents {
   .popup.membership > .message {
     margin-top: 31px;
     margin-bottom: 6px;
-    font-size: 0.875em;
+    font-size: 14px;
     color: #6b7581;
     line-height: 22px; }
     .popup.membership > .message > strong {
@@ -2870,7 +2875,7 @@ article.contents {
       position: relative;
       margin-top: 20px;
       padding: 0 0 0 10px;
-      font-size: 0.750em;
+      font-size: 12px;
       color: #6b7581;
       line-height: 18px;
       text-align: left; }
@@ -2902,7 +2907,7 @@ article.contents {
   .popup.membership .warning {
     position: relative;
     padding-left: 32px;
-    font-size: 0.750em;
+    font-size: 12px;
     color: #6b7581;
     text-align: left;
     vertical-align: middle; }
@@ -2928,7 +2933,7 @@ article.contents {
         top: 50%;
         margin-top: -10px; }
   .popup.membership .notice > li {
-    font-size: 0.750em;
+    font-size: 12px;
     color: #6b7581;
     line-height: 28px; }
     .popup.membership .notice > li a {
@@ -2955,7 +2960,7 @@ article.contents {
       z-index: 1;
       float: left;
       padding: 0 45px;
-      font-size: 0.875em;
+      font-size: 14px;
       color: #6b7581;
       line-height: 36px;
       text-decoration: none; }
@@ -2987,7 +2992,7 @@ article.contents {
       float: right;
       margin-top: 10px; }
       .popup.membership .membership-form .find-info a {
-        font-size: 0.750em;
+        font-size: 12px;
         color: #6b7581;
         text-decoration: underline; }
         .popup.membership .membership-form .find-info a:after {
@@ -3042,7 +3047,7 @@ article.contents {
   .popup.membership .list-notice {
     margin-top: 22px; }
     .popup.membership .list-notice li span {
-      font-size: 0.750em;
+      font-size: 12px;
       color: #6b7581;
       line-height: 18px; }
       .popup.membership .list-notice li span:before {
@@ -3144,7 +3149,7 @@ article.contents {
       position: relative;
       margin-top: 62px;
       padding: 0 0 0 38px;
-      font-size: 1.000em;
+      font-size: 16px;
       font-weight: normal;
       color: #ff4776; }
       .popup.auth .complete h2:before {
@@ -3160,7 +3165,7 @@ article.contents {
     .popup.auth .complete p {
       margin-top: 10px;
       padding-left: 38px;
-      font-size: 0.750em;
+      font-size: 12px;
       color: #6b7581;
       line-height: 26px; }
       .popup.auth .complete p > a {
@@ -3219,7 +3224,7 @@ article.contents {
     display: block;
     position: relative;
     padding: 0 0 0 38px;
-    font-size: 1.000em;
+    font-size: 16px;
     font-weight: normal;
     color: #ff4776; }
     .popup.guide-popup h1:before {
@@ -3234,19 +3239,19 @@ article.contents {
       height: 35px; }
   .popup.guide-popup h1.normal {
     padding: 0;
-    font-size: 0.875em;
+    font-size: 14px;
     font-weight: normal;
     color: #252525; }
     .popup.guide-popup h1.normal:before {
       content: none; }
   .popup.guide-popup h2 {
     margin-top: 36px;
-    font-size: 0.875em;
+    font-size: 14px;
     font-weight: normal;
     color: #252525; }
   .popup.guide-popup .contents {
     padding-top: 7px;
-    font-size: 0.750em;
+    font-size: 12px;
     color: #6b7581;
     line-height: 18px; }
     .popup.guide-popup .contents p {
@@ -3261,7 +3266,7 @@ article.contents {
       position: relative;
       margin-top: 14px;
       padding-left: 40px;
-      font-size: 0.750em;
+      font-size: 12px;
       color: #6b7581;
       line-height: 18px; }
       .popup.guide-popup .list-warning > li:before {
@@ -3280,7 +3285,7 @@ article.contents {
     position: relative;
     margin-top: 14px;
     padding-left: 10px;
-    font-size: 0.750em;
+    font-size: 12px;
     color: #6b7581;
     line-height: 18px; }
     .popup.guide-popup .list-dot > li:before {
@@ -3344,7 +3349,7 @@ article.contents {
       padding: 21px 0 14px 0;
       height: 117px;
       width: 25%;
-      font-size: 0.750em;
+      font-size: 12px;
       color: #6b7581;
       line-height: 16px;
       text-align: center;
@@ -3443,7 +3448,7 @@ article.contents {
     display: inline-block;
     position: relative;
     padding: 0 0 0 38px;
-    font-size: 1.000em;
+    font-size: 16px;
     font-weight: normal;
     color: #252525; }
     .popup.find .complete-message .message:before {
@@ -3505,7 +3510,7 @@ article.contents {
       .product-tab table > tbody > tr td a {
         display: block;
         position: relative;
-        font-size: 0.875em;
+        font-size: 14px;
         color: #6b7581;
         text-align: center;
         text-decoration: none;
@@ -3792,7 +3797,7 @@ article.contents {
         color: #ff6000; }
       .contents.invest .product > figure > .info > .sub-info .desc {
         display: none;
-        font-size: 0.875em;
+        font-size: 14px;
         color: #6b7581;
         line-height: 20px; }
       .contents.invest .product > figure > .info > .status-info .p-i {
@@ -3806,7 +3811,7 @@ article.contents {
           .contents.invest .product > figure > .info > .status-info .p-i > p > span {
             display: block;
             padding-bottom: 2px;
-            font-size: 0.750em;
+            font-size: 12px;
             color: #c4c9d1; }
           .contents.invest .product > figure > .info > .status-info .p-i > p > em {
             display: block;
@@ -3833,7 +3838,7 @@ article.contents {
         overflow: hidden;
         margin-top: 22px;
         padding: 15px 0 0 0;
-        font-size: 0.875em; }
+        font-size: 14px; }
         .contents.invest .product > figure > .info > .status-info .progress:before {
           content: '';
           display: block;
@@ -3950,7 +3955,7 @@ article.contents {
             font-weight: bold; }
           .contents.invest .product.detail > figure > .info > .sub-info time {
             margin-top: 12px;
-            font-size: 0.875em; }
+            font-size: 14px; }
           .contents.invest .product.detail > figure > .info > .sub-info .desc {
             display: block;
             margin-top: 23px; }
@@ -3967,7 +3972,7 @@ article.contents {
               padding-right: 28px; }
               .contents.invest .product.detail > figure > .info > .status-info .p-i > p > span {
                 padding-bottom: 15px;
-                font-size: 0.875em; }
+                font-size: 14px; }
               .contents.invest .product.detail > figure > .info > .status-info .p-i > p > em {
                 font-size: 32px; }
               .contents.invest .product.detail > figure > .info > .status-info .p-i > p.interest {
@@ -4052,7 +4057,7 @@ article.contents {
           .contents.invest .product.detail > figure > .info > .status-info .progress {
             margin-top: 33px;
             padding: 19px 0 0 0;
-            font-size: 1.000em; }
+            font-size: 16px; }
             .contents.invest .product.detail > figure > .info > .status-info .progress:before {
               height: 6px; }
             .contents.invest .product.detail > figure > .info > .status-info .progress > .value {
@@ -4108,7 +4113,7 @@ article.contents {
           .contents.invest .product.detail > .invest-product .utils .btn {
             display: inline-block;
             margin-right: 17px;
-            font-size: 0.875em;
+            font-size: 14px;
             color: #142c66;
             vertical-align: middle; }
             .contents.invest .product.detail > .invest-product .utils .btn:before {
@@ -4138,7 +4143,7 @@ article.contents {
         .contents.invest .product.detail > .invest-product .status-invest {
           display: none;
           margin-top: 9px;
-          font-size: 0.750em;
+          font-size: 12px;
           color: #ff6000;
           text-align: center; }
         .contents.invest .product.detail > .invest-product.expired .btn.calc {
@@ -4168,7 +4173,7 @@ article.contents {
       text-indent: -9999px;
       background: url("/assets/images/txt/title_invest01.png") left top no-repeat; }
     .contents.invest .intro p {
-      font-size: 0.875em;
+      font-size: 14px;
       color: #6b7581;
       line-height: 22px; }
     .contents.invest .intro .investment {
@@ -4191,7 +4196,7 @@ article.contents {
           .contents.invest .intro .investment dd table th {
             padding: 11px 0;
             width: 68px;
-            font-size: 0.875em;
+            font-size: 14px;
             font-weight: normal;
             color: #252525;
             line-height: 22px;
@@ -4199,13 +4204,13 @@ article.contents {
             vertical-align: top; }
           .contents.invest .intro .investment dd table td {
             padding: 11px 0;
-            font-size: 0.875em;
+            font-size: 14px;
             color: #6b7581;
             line-height: 22px; }
         .contents.invest .intro .investment dd .dot {
           position: relative;
           padding-left: 8px;
-          font-size: 0.750em;
+          font-size: 12px;
           color: #6b7581;
           line-height: 18px; }
           .contents.invest .intro .investment dd .dot:before {
@@ -4269,7 +4274,7 @@ article.contents {
       background-color: #d7dde5; }
   .product-detail-view h2 + p {
     margin-top: 16px;
-    font-size: 0.875em;
+    font-size: 14px;
     color: #6b7581;
     line-height: 22px; }
   .product-detail-view .pd-container {
@@ -4286,7 +4291,7 @@ article.contents {
         display: inline-block;
         position: relative;
         height: 62px;
-        font-size: 0.875em;
+        font-size: 14px;
         color: #14378c;
         line-height: 62px; }
         .product-detail-view .product-feature > tbody > tr td > span:before,
@@ -4454,7 +4459,7 @@ article.contents {
         vertical-align: middle; }
       .product-detail-view .goal .info-price > li p {
         margin-top: 10px;
-        font-size: 0.750em;
+        font-size: 12px;
         color: #c4c9d1; }
       .product-detail-view .goal .info-price > li.normal:before {
         left: 0;
@@ -4493,7 +4498,7 @@ article.contents {
         .product-detail-view .goal .chart .circle .amount {
           position: absolute;
           z-index: 1;
-          font-size: 0.750em;
+          font-size: 12px;
           color: #c4c9d1;
           text-align: left; }
           .product-detail-view .goal .chart .circle .amount:before {
@@ -4547,7 +4552,7 @@ article.contents {
         .product-detail-view .goal .chart .circle .rate {
           display: block;
           margin-top: 113px;
-          font-size: 0.750em;
+          font-size: 12px;
           color: #6b7581;
           line-height: 16px;
           text-align: center; }
@@ -4636,7 +4641,7 @@ article.contents {
       .product-detail-view .manager > figure figcaption {
         display: block;
         margin-top: 10px;
-        font-size: 0.750em;
+        font-size: 12px;
         color: #6b7581;
         text-align: right; }
     .product-detail-view .manager > hgroup {
@@ -4648,13 +4653,13 @@ article.contents {
         color: #252525; }
       .product-detail-view .manager > hgroup > h2 {
         margin-top: 30px;
-        font-size: 1.000em;
+        font-size: 16px;
         font-weight: normal;
         color: #0e52a5;
         line-height: 24px; }
       .product-detail-view .manager > hgroup > p {
         margin-top: 20px;
-        font-size: 0.875em;
+        font-size: 14px;
         line-height: 22px; }
   .product-detail-view .values {
     border-top: 1px solid #e6e9ee; }
@@ -4669,7 +4674,7 @@ article.contents {
         width: 33.33333%;
         text-align: center; }
         .product-detail-view .values .value-price > p > span {
-          font-size: 0.875em; }
+          font-size: 14px; }
         .product-detail-view .values .value-price > p > em {
           display: block;
           font-family: "Montserrat", sans-serif;
@@ -4700,7 +4705,7 @@ article.contents {
           max-width: 234px; }
         .product-detail-view .pawn .list-pawn > li figure figcaption {
           padding-top: 24px;
-          font-size: 0.875em;
+          font-size: 14px;
           color: #6b7581;
           line-height: 22px;
           text-align: center; }
@@ -4714,7 +4719,7 @@ article.contents {
         float: left; }
       .product-detail-view .pawn-photos > .inner time {
         float: right;
-        font-size: 0.750em;
+        font-size: 12px;
         color: #6b7581; }
       .product-detail-view .pawn-photos > .inner .slider {
         clear: both;
@@ -4750,7 +4755,7 @@ article.contents {
           display: inline-block;
           margin-left: -4px;
           width: 130px;
-          font-size: 0.875em;
+          font-size: 14px;
           color: #252525;
           text-align: center; }
           .product-detail-view .has-information > .inner > fieldset label:after {
@@ -4805,7 +4810,7 @@ article.contents {
           color: #ff4776; }
       .product-detail-view .has-information .bad-debt-popup time {
         float: right;
-        font-size: 0.750em;
+        font-size: 12px;
         color: #c4c9d1; }
   .product-detail-view .story {
     border-top: 1px solid #e6e9ee; }
@@ -4835,12 +4840,12 @@ article.contents {
           width: 61px;
           height: 73px; }
       .product-detail-view .story > .inner h3 {
-        font-size: 1.000em;
+        font-size: 16px;
         font-weight: normal;
         color: #ff6000; }
       .product-detail-view .story > .inner .desc {
         margin-top: 28px;
-        font-size: 0.875em;
+        font-size: 14px;
         color: #6b7581;
         line-height: 22px; }
       .product-detail-view .story > .inner .add-story {
@@ -4851,7 +4856,7 @@ article.contents {
           margin-top: 25px; }
         .product-detail-view .story > .inner .add-story .update {
           float: right;
-          font-size: 0.750em;
+          font-size: 12px;
           color: #c4c9d1; }
         .product-detail-view .story > .inner .add-story .write-add-story {
           position: relative;
@@ -4861,7 +4866,7 @@ article.contents {
           .product-detail-view .story > .inner .add-story .write-add-story label {
             display: block;
             padding: 0 20px;
-            font-size: 0.875em;
+            font-size: 14px;
             color: #ff4776; }
           .product-detail-view .story > .inner .add-story .write-add-story textarea {
             display: block;
@@ -4869,7 +4874,7 @@ article.contents {
             padding: 20px;
             height: 278px;
             width: 100%;
-            font-size: 0.875em;
+            font-size: 14px;
             color: #6b7581;
             line-height: 22px;
             border: 1px solid #bec3cd;
@@ -4880,7 +4885,7 @@ article.contents {
             .product-detail-view .story > .inner .add-story .write-add-story .btns .btn-write {
               display: inline-block;
               padding: 0 26px;
-              font-size: 0.875em;
+              font-size: 14px;
               color: #fff;
               line-height: 37px;
               border-radius: 37px;
@@ -4892,7 +4897,7 @@ article.contents {
     .product-detail-view .tbl th {
       position: relative;
       padding: 9px 0 12px 0;
-      font-size: 0.875em;
+      font-size: 14px;
       font-weight: normal;
       color: #252525;
       line-height: 30px;
@@ -4901,7 +4906,7 @@ article.contents {
     .product-detail-view .tbl td {
       position: relative;
       padding: 9px 0 12px 0;
-      font-size: 0.875em;
+      font-size: 14px;
       color: #6b7581;
       line-height: 30px;
       text-align: left;
@@ -4970,7 +4975,7 @@ article.contents {
           height: 112px; }
       .product-detail-view .repayment-plan > .inner .desc {
         margin-top: 28px;
-        font-size: 0.875em;
+        font-size: 14px;
         color: #6b7581;
         line-height: 22px; }
       .product-detail-view .repayment-plan > .inner .add-story {
@@ -5020,7 +5025,7 @@ article.contents {
     .product-detail-view .product-qna > p {
       position: relative;
       padding: 0 0 0 177px;
-      font-size: 0.875em;
+      font-size: 14px;
       color: #6b7581;
       line-height: 22px; }
       .product-detail-view .product-qna > p:before {
@@ -5058,7 +5063,7 @@ article.contents {
         border-bottom: 2px solid #99d7fe; }
         .product-detail-view .product-qna > .write-question > p .user {
           float: right;
-          font-size: 0.875em;
+          font-size: 14px;
           color: #6b7581; }
           .product-detail-view .product-qna > .write-question > p .user > time:before {
             content: '|';
@@ -5070,7 +5075,7 @@ article.contents {
           display: block;
           height: 38px;
           width: 80%;
-          font-size: 1.000em;
+          font-size: 16px;
           color: #252525;
           line-height: 38px;
           border: 0px;
@@ -5080,7 +5085,7 @@ article.contents {
         padding-top: 9px;
         height: 87px;
         width: 100%;
-        font-size: 0.875em;
+        font-size: 14px;
         color: #6b7581;
         line-height: 22px;
         border: 0px;
@@ -5090,7 +5095,7 @@ article.contents {
       margin: 20px auto 0 auto;
       height: 37px;
       min-width: 154px;
-      font-size: 0.875em;
+      font-size: 14px;
       font-weight: bold;
       color: #fff;
       text-align: center;
@@ -5113,7 +5118,7 @@ article.contents {
         border-bottom: 2px solid #b7e3ff; }
         .product-detail-view .qna-contents .list-qna > li .title .user {
           float: right;
-          font-size: 0.875em;
+          font-size: 14px;
           color: #6b7581; }
           .product-detail-view .qna-contents .list-qna > li .title .user > time:before {
             content: '|';
@@ -5125,7 +5130,7 @@ article.contents {
         position: relative;
         margin-top: 16px;
         padding: 0 0 0 60px;
-        font-size: 0.875em;
+        font-size: 14px;
         color: #6b7581;
         line-height: 22px; }
         .product-detail-view .qna-contents .list-qna > li > div:before {
@@ -5174,7 +5179,7 @@ article.contents {
             border-bottom: 2px solid #ffc8d6; }
             .product-detail-view .qna-contents .list-qna > li .question-answer > .write-answer > p .user {
               float: right;
-              font-size: 0.875em;
+              font-size: 14px;
               color: #6b7581; }
               .product-detail-view .qna-contents .list-qna > li .question-answer > .write-answer > p .user > time:before {
                 content: '|';
@@ -5186,7 +5191,7 @@ article.contents {
               display: block;
               height: 38px;
               width: 80%;
-              font-size: 1.000em;
+              font-size: 16px;
               color: #252525;
               line-height: 38px;
               border: 0px;
@@ -5196,7 +5201,7 @@ article.contents {
             margin-top: 13px;
             height: 80px;
             width: 100%;
-            font-size: 0.875em;
+            font-size: 14px;
             color: #6b7581;
             line-height: 22px;
             border: 0px;
@@ -5206,7 +5211,7 @@ article.contents {
           margin: 20px auto 0 auto;
           height: 37px;
           min-width: 154px;
-          font-size: 0.875em;
+          font-size: 14px;
           font-weight: bold;
           color: #fff;
           text-align: center;
@@ -5219,7 +5224,7 @@ article.contents {
   .product-detail-view.repayment {
     padding: 90px 69px 95px 69px; }
     .product-detail-view.repayment .filter-container .filter label {
-      font-size: 1.000em; }
+      font-size: 16px; }
     .product-detail-view.repayment .tb-repayment {
       width: 100%;
       margin-top: 30px; }
@@ -5228,7 +5233,7 @@ article.contents {
         .product-detail-view.repayment .tb-repayment thead tr th {
           padding: 15px 0 14px 0;
           min-width: 90px;
-          font-size: 0.875em;
+          font-size: 14px;
           font-weight: normal;
           color: #fff;
           text-align: center;
@@ -5240,7 +5245,7 @@ article.contents {
         background-color: #f3f8fd; }
         .product-detail-view.repayment .tb-repayment tfoot tr td {
           padding: 15px 0 14px 0;
-          font-size: 0.875em;
+          font-size: 14px;
           color: #6b7581;
           text-align: center;
           line-height: 18px;
@@ -5249,7 +5254,7 @@ article.contents {
             color: #0e52a5; }
       .product-detail-view.repayment .tb-repayment tbody tr td {
         padding: 15px 0 14px 0;
-        font-size: 0.875em;
+        font-size: 14px;
         color: #6b7581;
         text-align: center;
         line-height: 18px;
@@ -5265,7 +5270,7 @@ article.contents {
             color: #1d7dcf; }
       .product-detail-view.repayment .tb-repayment + .tb-bottom-caption {
         margin-top: 17px;
-        font-size: 0.875em;
+        font-size: 14px;
         color: #6b7581;
         text-align: right;
         line-height: 22px; }
@@ -5299,7 +5304,7 @@ article.contents {
       position: relative;
       margin: 37px 0 0 0;
       padding-left: 30px;
-      font-size: 0.750em;
+      font-size: 12px;
       color: #6b7581;
       line-height: 20px;
       text-align: left; }
@@ -5338,7 +5343,7 @@ article.contents {
           display: block;
           position: relative;
           padding-left: 8px;
-          font-size: 0.875em;
+          font-size: 14px;
           color: #6b7581;
           line-height: 27px; }
           .product-detail-view.overdue .pd-container .list-dot-pd > li:before {
@@ -5375,7 +5380,7 @@ article.contents {
           border-bottom: 1px solid #d4dae4; }
         .product-detail-view.overdue .pd-container table th {
           height: 54px;
-          font-size: 0.875em;
+          font-size: 14px;
           font-weight: normal;
           color: #252525;
           text-align: center;
@@ -5401,7 +5406,7 @@ article.contents {
           width: 100%; }
         .product-detail-view.overdue .pd-container table tbody th, .product-detail-view.overdue .pd-container table tbody td {
           height: 54px;
-          font-size: 0.875em;
+          font-size: 14px;
           font-weight: normal;
           color: #6b7581;
           text-align: center;
@@ -5410,7 +5415,7 @@ article.contents {
             border-left: 0px; }
         .product-detail-view.overdue .pd-container table.tbl-list-sms tbody th, .product-detail-view.overdue .pd-container table.tbl-list-sms tbody td {
           height: 40px;
-          font-size: 0.750em;
+          font-size: 12px;
           border: 0px; }
         .product-detail-view.overdue .pd-container table.tbl-list-sms tbody th {
           padding-left: 20px;
@@ -5457,7 +5462,7 @@ article.contents {
           border-top: 2px solid #252525; }
           .product-detail-view.overdue .pd-container.talk .list-talk > li {
             padding: 25px 0 25px 0;
-            font-size: 0.875em;
+            font-size: 14px;
             color: #6b7581;
             line-height: 22px;
             border-bottom: 1px solid #d4dae4; }
@@ -5492,7 +5497,7 @@ article.contents {
           left: auto; }
         .product-detail-view.overdue .pd-container .bad-debt-guide-popup .legal-information {
           margin-top: 6px;
-          font-size: 0.750em;
+          font-size: 12px;
           color: #ff4776; }
         .product-detail-view.overdue .pd-container .bad-debt-guide-popup .btn-shortcut {
           float: right;
@@ -5661,7 +5666,7 @@ article.contents {
         top: 10px;
         left: auto;
         right: 16px;
-        font-size: 0.750em;
+        font-size: 12px;
         color: #6b7581;
         text-indent: 0px; }
       .contents.private-invest .product > .options > .favorate {
@@ -5779,7 +5784,7 @@ article.contents {
         bottom: auto;
         z-index: 100;
         padding: 0 8px;
-        font-size: 0.750em;
+        font-size: 12px;
         color: #6b7581;
         text-align: center;
         line-height: 25px;
@@ -5830,7 +5835,7 @@ article.contents {
       float: left;
       padding: 46px 25px 0 25px;
       width: 242px;
-      font-size: 0.750em; }
+      font-size: 12px; }
       .contents.private-invest .product > .info .idx {
         font-size: 1.167em;
         color: #252525; }
@@ -5973,7 +5978,7 @@ article.contents {
           top: 15px;
           left: auto;
           right: 19px;
-          font-size: 0.875em;
+          font-size: 14px;
           color: #6b7581;
           text-indent: 0px; }
         .contents.private-invest .product.detail > .options > .favorate {
@@ -6013,7 +6018,7 @@ article.contents {
         .contents.private-invest .product.detail > .user-info .list-info > li {
           display: block;
           float: left;
-          font-size: 0.875em;
+          font-size: 14px;
           color: #252525;
           line-height: 35px; }
           .contents.private-invest .product.detail > .user-info .list-info > li:nth-child(odd) {
@@ -6047,7 +6052,7 @@ article.contents {
           background-color: #d4dae4; }
         .contents.private-invest .product.detail > .trust-ratings > .idx {
           padding-left: 29px;
-          font-size: 0.875em;
+          font-size: 14px;
           color: #252525;
           line-height: 42px;
           border-bottom: 1px solid #e6e9ee; }
@@ -6169,7 +6174,7 @@ article.contents {
             overflow: hidden;
             margin-top: 23px;
             height: 88px;
-            font-size: 0.875em;
+            font-size: 14px;
             color: #6b7581;
             text-align: left;
             line-height: 22px; }
@@ -6181,7 +6186,7 @@ article.contents {
           overflow: hidden;
           margin-top: 35px;
           padding: 21px 0 0 0;
-          font-size: 1.000em;
+          font-size: 16px;
           color: #252525; }
           .contents.private-invest .product.detail > .inner .progress:before {
             content: '';
@@ -6205,7 +6210,7 @@ article.contents {
                     animation-delay: 1s; }
           .contents.private-invest .product.detail > .inner .progress > time {
             float: right;
-            font-size: 0.875em;
+            font-size: 14px;
             color: #ff6000; }
       .contents.private-invest .product.detail > .hover {
         display: block;
@@ -6262,7 +6267,7 @@ article.contents {
           .contents.private-invest .product.detail > .invest-product .utils .btn {
             display: inline-block;
             margin-right: 17px;
-            font-size: 0.875em;
+            font-size: 14px;
             color: #142c66;
             vertical-align: middle; }
             .contents.private-invest .product.detail > .invest-product .utils .btn:before {
@@ -6292,7 +6297,7 @@ article.contents {
         .contents.private-invest .product.detail > .invest-product .status-invest {
           display: none;
           margin-top: 9px;
-          font-size: 0.750em;
+          font-size: 12px;
           color: #ff6000;
           text-align: center; }
         .contents.private-invest .product.detail > .invest-product.expired .btn.calc {
@@ -6327,7 +6332,7 @@ article.contents {
       text-indent: -9999px;
       background: url("/assets/images/txt/title_invest_private01.png") left top no-repeat; }
     .contents.private-invest .intro p {
-      font-size: 0.875em;
+      font-size: 14px;
       color: #6b7581;
       line-height: 22px; }
     .contents.private-invest .intro .private-investment {
@@ -6388,7 +6393,7 @@ article.contents {
       .contents.bonds-invest .paging .filter-bonds .sorting .item-form label {
         display: inline-block;
         margin: 0;
-        font-size: 0.875em;
+        font-size: 14px;
         color: #6b7581;
         line-height: 37px; }
       .contents.bonds-invest .paging .filter-bonds .sorting .item-form input[type=text] {
@@ -6401,7 +6406,7 @@ article.contents {
         vertical-align: middle; }
     .contents.bonds-invest .paging .filter-bonds .results {
       margin-top: 12px;
-      font-size: 0.875em;
+      font-size: 14px;
       color: #6b7581;
       text-align: right; }
       .contents.bonds-invest .paging .filter-bonds .results:before {
@@ -6524,7 +6529,7 @@ article.contents {
         top: 10px;
         left: auto;
         right: 16px;
-        font-size: 0.750em;
+        font-size: 12px;
         color: #6b7581;
         text-indent: 0px; }
       .contents.bonds-invest .product > .options > .favorate {
@@ -6641,7 +6646,7 @@ article.contents {
         bottom: auto;
         z-index: 100;
         padding: 0 8px;
-        font-size: 0.750em;
+        font-size: 12px;
         color: #6b7581;
         text-align: center;
         line-height: 25px;
@@ -6705,7 +6710,7 @@ article.contents {
       display: none; }
     .contents.bonds-invest .product .info .group {
       overflow: hidden;
-      font-size: 0.875em;
+      font-size: 14px;
       border-top: 1px solid #e6e9ee; }
       .contents.bonds-invest .product .info .group.basic {
         padding: 14px 0 14px 0;
@@ -6744,7 +6749,7 @@ article.contents {
           display: block;
           margin-top: 7px;
           font-size: 20px;
-          line-height: 1.000em;
+          line-height: 16px;
           text-decoration: none; }
         .contents.bonds-invest .product .info .group li.price.sell {
           padding-left: 6px; }
@@ -6775,7 +6780,7 @@ article.contents {
       position: absolute;
       bottom: 15px;
       right: 14px;
-      font-size: 0.750em;
+      font-size: 12px;
       color: #c4c9d1;
       text-align: left;
       text-indent: -9999px; }
@@ -6792,7 +6797,7 @@ article.contents {
       position: absolute;
       bottom: 15px;
       right: 14px;
-      font-size: 0.750em;
+      font-size: 12px;
       color: #c4c9d1;
       text-align: left;
       text-indent: -9999px; }
@@ -6888,7 +6893,7 @@ article.contents {
           top: 15px;
           left: auto;
           right: 19px;
-          font-size: 0.875em;
+          font-size: 14px;
           color: #14378c;
           text-indent: 0px; }
         .contents.bonds-invest .product.detail > .options > .favorate {
@@ -7135,7 +7140,7 @@ article.contents {
           .contents.bonds-invest .product.detail > .buy-bonds .utils .btn {
             display: inline-block;
             margin-right: 17px;
-            font-size: 0.875em;
+            font-size: 14px;
             color: #142c66;
             vertical-align: middle; }
             .contents.bonds-invest .product.detail > .buy-bonds .utils .btn:before {
@@ -7210,7 +7215,7 @@ article.contents {
       line-height: 1.3em; }
     .contents.bonds-invest .same-bonds .results {
       margin-top: 16px;
-      font-size: 0.875em;
+      font-size: 14px;
       color: #6b7581;
       text-align: left; }
       .contents.bonds-invest .same-bonds .results:before {
@@ -7241,7 +7246,7 @@ article.contents {
       background: url("/assets/images/txt/borrowing_message01.png") left top no-repeat; }
   .contents.borrowing .borrowing-intro p {
     margin-top: 30px;
-    font-size: 0.875em;
+    font-size: 14px;
     color: #6b7581;
     line-height: 22px; }
     .contents.borrowing .borrowing-intro p em {
@@ -7270,7 +7275,7 @@ article.contents {
     line-height: 40px; }
   .contents.borrowing .application .desc {
     margin-top: 4px;
-    font-size: 0.875em;
+    font-size: 14px;
     color: #6b7581;
     line-height: 22px; }
   .contents.borrowing .application .btn-borrowing {
@@ -7278,7 +7283,7 @@ article.contents {
     margin-top: 21px;
     margin-left: -120px;
     width: 380px;
-    font-size: 1.000em;
+    font-size: 16px;
     font-weight: bold;
     color: #fff;
     line-height: 55px;
@@ -7297,7 +7302,7 @@ article.contents {
       height: 18px; }
   .contents.borrowing .application .faq {
     margin: 12px 0 0 -120px;
-    font-size: 0.750em;
+    font-size: 12px;
     color: #6b7581;
     line-height: 18px;
     text-align: center; }
@@ -7327,7 +7332,7 @@ article.contents {
         width: 378px;
         background: url("/assets/images/txt/borrowing_private_message01.png") left top no-repeat; }
     .contents.borrowing-private .borrowing-intro p {
-      font-size: 0.875em;
+      font-size: 14px;
       color: #6b7581;
       line-height: 22px; }
       .contents.borrowing-private .borrowing-intro p em {
@@ -7363,7 +7368,7 @@ article.contents {
           display: inline-block;
           float: right;
           margin-top: 14px;
-          font-size: 0.875em; }
+          font-size: 14px; }
     .contents.borrowing-private .borrowing-intro .epr-popup {
       display: none;
       position: absolute;
@@ -7376,7 +7381,7 @@ article.contents {
         right: 109px; }
       .contents.borrowing-private .borrowing-intro .epr-popup h1 {
         padding: 0;
-        font-size: 0.875em;
+        font-size: 14px;
         color: #252525; }
         .contents.borrowing-private .borrowing-intro .epr-popup h1:before {
           content: none; }
@@ -7404,7 +7409,7 @@ article.contents {
       position: relative;
       z-index: 1;
       width: 191px;
-      font-size: 0.875em;
+      font-size: 14px;
       color: #142c66;
       text-align: center;
       line-height: 44px;
@@ -7415,7 +7420,6 @@ article.contents {
         color: #ff4776;
         border-bottom: 2px solid #f7f7f7; }
   .contents.borrowing-private .application {
-    margin-top: 65px;
     /* KT 회원 */ }
     .contents.borrowing-private .application h1 {
       font-size: 1.375em;
@@ -7482,7 +7486,7 @@ article.contents {
             color: #252525;
             line-height: 1.3em; }
           .contents.borrowing-private .application > .box .proceedings > li p {
-            font-size: 0.875em;
+            font-size: 14px;
             color: #6b7581;
             line-height: 22px; }
             .contents.borrowing-private .application > .box .proceedings > li p a {
@@ -7574,7 +7578,7 @@ article.contents {
           height: 18px; }
       .contents.borrowing-private .application > .box .faq {
         margin-top: 12px;
-        font-size: 0.750em;
+        font-size: 12px;
         color: #6b7581;
         line-height: 18px;
         text-align: center; }
@@ -7612,7 +7616,7 @@ article.contents {
       padding: 57px 0px 73px 163px;
       border: 1px solid #d4dae4; }
       .contents.borrowing-private .done-application > .box .message {
-        font-size: 0.875em;
+        font-size: 14px;
         color: #323232; }
       .contents.borrowing-private .done-application > .box .warning {
         position: relative;
@@ -7639,7 +7643,7 @@ article.contents {
           position: relative;
           padding: 0 39px 0 60px;
           height: 54px;
-          font-size: 0.875em;
+          font-size: 14px;
           color: #252525;
           line-height: 25px;
           border-left: 1px solid #e4e4e4; }
@@ -7858,12 +7862,12 @@ article.contents {
             top: 19px;
             left: 50px; }
           .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li > .title {
-            font-size: 0.875em;
+            font-size: 14px;
             color: #252525;
             line-height: 1.3em; }
           .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li > p {
             margin-top: 7px;
-            font-size: 0.875em;
+            font-size: 14px;
             color: #6b7581;
             line-height: 22px; }
           .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li > .btn-auth {
@@ -7875,7 +7879,7 @@ article.contents {
             padding-bottom: 7px;
             height: 47px;
             width: 155px;
-            font-size: 0.875em;
+            font-size: 14px;
             font-weight: bold;
             color: #fff;
             line-height: 18px;
@@ -7908,7 +7912,7 @@ article.contents {
             left: 408px;
             margin: 0px;
             padding-left: 30px;
-            font-size: 0.875em;
+            font-size: 14px;
             color: #6b7581; }
             .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li > .warning:before {
               content: '';
@@ -7986,7 +7990,7 @@ article.contents {
             position: relative;
             margin-top: 23px;
             padding: 14px 0 14px 86px;
-            font-size: 0.875em;
+            font-size: 14px;
             line-height: 24px;
             border: 1px solid #d4dae4; }
             .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li .box-auth:before {
@@ -8018,7 +8022,7 @@ article.contents {
             z-index: 900;
             padding: 34px 0 38px 38px;
             width: 486px;
-            font-size: 0.875em;
+            font-size: 14px;
             color: #6b7581;
             line-height: 22px; }
             .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li .mfee-popup:before {
@@ -8066,7 +8070,7 @@ article.contents {
         .contents.borrowing-private .borrowing-application .proceedings-step .list-dot > li {
           position: relative;
           padding-left: 8px;
-          font-size: 0.750em;
+          font-size: 12px;
           color: #6b7581;
           line-height: 21px; }
           .contents.borrowing-private .borrowing-application .proceedings-step .list-dot > li:before {
@@ -8083,7 +8087,7 @@ article.contents {
         width: 264px; }
       .contents.borrowing-private .borrowing-application .proceedings-step .submit-desc {
         margin-top: 10px;
-        font-size: 0.750em;
+        font-size: 12px;
         color: #6b7581;
         text-align: center; }
       .contents.borrowing-private .borrowing-application .proceedings-step .basic-info-form {
@@ -8201,13 +8205,15 @@ article.contents {
               clear: none;
               float: left;
               width: 425px; }
+              .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .income .item-form label {
+                font-size: 14px; }
             .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .income .price .item-form {
               margin-top: -2px;
               vertical-align: middle; }
             .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .income .final {
               clear: both;
               padding-top: 20px;
-              font-size: 1.000em;
+              font-size: 16px;
               color: #252525;
               text-align: right; }
               .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .income .final strong {
@@ -8215,12 +8221,14 @@ article.contents {
                 padding-right: 10px;
                 width: 94px;
                 color: #ff4776; }
-          .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .etc .item-form {
-            clear: none;
-            float: left; }
-            .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .etc .item-form .select {
-              float: left;
-              box-sizing: border-box; }
+          .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .etc {
+            margin-top: 50px; }
+            .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .etc .item-form {
+              clear: none;
+              float: left; }
+              .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .etc .item-form .select {
+                float: left;
+                box-sizing: border-box; }
           .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .box-disclosure {
             margin-top: 20px;
             padding: 25px 0px;
@@ -8229,7 +8237,7 @@ article.contents {
             border-radius: 2px;
             background-color: #fff; }
             .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .box-disclosure p {
-              font-size: 0.750em;
+              font-size: 12px;
               color: #6b7581;
               line-height: 18px; }
               .contents.borrowing-private .borrowing-application .proceedings-step.application .basic-info-form .box-disclosure p em {
@@ -8254,7 +8262,7 @@ article.contents {
           z-index: 900;
           padding: 34px 0 0px 60px;
           width: 545px;
-          font-size: 0.875em;
+          font-size: 14px;
           color: #6b7581;
           line-height: 22px; }
           .contents.borrowing-private .borrowing-application .proceedings-step.application .preview-popup:before {
@@ -8263,7 +8271,7 @@ article.contents {
           .contents.borrowing-private .borrowing-application .proceedings-step.application .preview-popup > h1 {
             display: block;
             padding: 0;
-            font-size: 1.000em;
+            font-size: 16px;
             color: #252525; }
             .contents.borrowing-private .borrowing-application .proceedings-step.application .preview-popup > h1:before {
               content: none; }
@@ -8279,7 +8287,7 @@ article.contents {
           z-index: 900;
           padding: 13px 16px;
           width: 340px;
-          font-size: 0.875em;
+          font-size: 14px;
           color: #6b7581;
           line-height: 22px;
           border: 1px solid #c3d0e1;
@@ -8398,7 +8406,7 @@ article.contents {
       border-top: 1px solid #e6e9ee; }
       .contents.popstory .pop-story > figure > .info .popstory {
         display: block;
-        font-size: 0.750em;
+        font-size: 12px;
         color: #ff91ad; }
       .contents.popstory .pop-story > figure > .info .title {
         display: block;
@@ -8414,7 +8422,7 @@ article.contents {
       .contents.popstory .pop-story > figure > .info time {
         display: block;
         margin-top: 18px;
-        font-size: 0.750em;
+        font-size: 12px;
         color: #c4c9d1;
         text-align: right; }
     .contents.popstory .pop-story.detail > figure > .info {
@@ -8460,14 +8468,14 @@ body.popup-window {
   .popup-window-contents p em, .popup-window-contents p strong {
     color: #ff4776; }
   .popup-window-contents > .message {
-    font-size: 0.875em;
+    font-size: 14px;
     line-height: 22px; }
   .popup-window-contents > .btns {
     margin-top: 35px; }
     .popup-window-contents > .btns a {
       display: inline-block;
       padding: 0 25px;
-      font-size: 0.875em;
+      font-size: 14px;
       color: #142c66;
       line-height: 35px;
       border: 1px solid #d4dae4;
@@ -8498,7 +8506,7 @@ body.popup-window {
     margin: 53px auto 0 auto;
     padding-left: 33px;
     width: 380px;
-    font-size: 0.750em;
+    font-size: 12px;
     color: #6b7581;
     line-height: 18px;
     text-align: left; }
@@ -8518,7 +8526,7 @@ body.popup-window {
     margin: 10px auto 0 auto;
     padding-left: 33px;
     width: 380px;
-    font-size: 0.750em;
+    font-size: 12px;
     color: #6b7581;
     line-height: 18px;
     text-align: left; }
@@ -8554,7 +8562,7 @@ body.popup-window {
           color: #dee1e7;
           text-decoration: none; }
     .contents.myzone .menus-sub a {
-      font-size: 0.875em;
+      font-size: 14px;
       color: #142c66; }
       .contents.myzone .menus-sub a:hover, .contents.myzone .menus-sub a.selected {
         color: #ff4776; }
@@ -8669,7 +8677,7 @@ body.popup-window {
       background-color: #81c845; }
     .contents.myzone.account .status span {
       display: block;
-      font-size: 0.875em;
+      font-size: 14px;
       font-weight: bold;
       color: #fff; }
     .contents.myzone.account .status a {

@@ -8,7 +8,7 @@ $border-inner-color: #e6e9ee;
 	table { table-layout: fixed; width: 100%; border-left: 1px solid $border-color;
 		> tbody > tr {
 			td { border-right: 1px solid $border-color;
-				a { display: block; position: relative; font-size: 0.875em; color: $color-content; text-align: center; text-decoration: none; line-height: 53px; border-top: 1px solid $border-color; border-bottom: 1px solid $border-color; background-color: #f8f9fb;
+				a { display: block; position: relative; font-size: 14px; color: $color-content; text-align: center; text-decoration: none; line-height: 53px; border-top: 1px solid $border-color; border-bottom: 1px solid $border-color; background-color: #f8f9fb;
 					&:hover { color: $color-menu1-hover; }
 					&.selected { color: $color-menu1; border-bottom: 1px solid #fff; background-color: #fff; }
 
@@ -105,12 +105,12 @@ $border-inner-color: #e6e9ee;
 					.uid { position: absolute; top: 8px; left: 10px; font-size: 0.813em; color: $color-desc; }
 					.title { margin-left: -2px; font-size: 1.125em; font-weight: normal; line-height: 1em; }
 					time { display: block; margin-top: 8px; font-size: 0.813em; color: $color-point1; }
-					.desc { display: none; font-size: 0.875em; color: $color-content; line-height: 20px; }
+					.desc { display: none; font-size: 14px; color: $color-content; line-height: 20px; }
 				}
 				> .status-info {
 					.p-i { overflow: hidden;
 						> p { float: left; position: relative; margin-top: 16px; padding-right: 14px; text-align: left;
-							> span { display: block; padding-bottom: 2px; font-size: 0.750em; color: $color-desc; }
+							> span { display: block; padding-bottom: 2px; font-size: 12px; color: $color-desc; }
 							> em { display: block; margin-top: 2px; font-size: 20px; line-height: 1.2em; }
 
 							&.price { }
@@ -121,7 +121,7 @@ $border-inner-color: #e6e9ee;
 						}
 					}
 					
-					.progress { display: block; position: relative; overflow: hidden; margin-top: 22px; padding: 15px 0 0 0; font-size: 0.875em;
+					.progress { display: block; position: relative; overflow: hidden; margin-top: 22px; padding: 15px 0 0 0; font-size: 14px;
 						&:before { content: ''; display: block; position: absolute; top: 0; right: 0; left: 0; height: 5px; width: 100%; background-color: #d5d9e1; }
 						> .value { display: block; position: absolute; top: 0; left: 0; height: 5px; width: 0%; background-color: #00bb00; animation-delay: 1s; }
 					}
@@ -160,14 +160,14 @@ $border-inner-color: #e6e9ee;
 					> .sub-info { display: block; float: left; padding-right: 25px; width: 352px;
 						.uid { top: 28px; left: 39px; }
 						.title { font-size: 1.375em; font-weight: bold; }
-						time { margin-top: 12px; font-size: 0.875em; }
+						time { margin-top: 12px; font-size: 14px; }
 						.desc { display: block; margin-top: 23px; }
 					}
 
 					> .status-info { float: left; padding-bottom: 10px; padding-left: 38px; width: 664px; border-left: 1px solid #e2e4e8;
 						.p-i { overflow: hidden;
 							> p { margin-top: 0px; padding-right: 28px;
-								> span { padding-bottom: 15px; font-size: 0.875em; }
+								> span { padding-bottom: 15px; font-size: 14px; }
 								> em { font-size: 32px; }
 
 								&.price {}
@@ -198,7 +198,7 @@ $border-inner-color: #e6e9ee;
 							}
 						}
 						
-						.progress { margin-top: 33px; padding: 19px 0 0 0; font-size: 1.000em;
+						.progress { margin-top: 33px; padding: 19px 0 0 0; font-size: 16px;
 							&:before { height: 6px; }
 							> .value { height: 6px; }
 						}
@@ -218,7 +218,7 @@ $border-inner-color: #e6e9ee;
 
 			> .invest-product { display: block; position: relative; margin-top: 45px; height: 100px;
 				.utils { position: absolute; top: 28px; left: 69%;
-					.btn { display: inline-block; margin-right: 17px; font-size: 0.875em; color: $color-menu1; vertical-align: middle;
+					.btn { display: inline-block; margin-right: 17px; font-size: 14px; color: $color-menu1; vertical-align: middle;
 						&:before { content: ''; display: inline-block; margin-right: 7px; vertical-align: middle; }
 						&.calc {
 							&:before { @include sprite($sprite-icon-calc01); }
@@ -231,7 +231,7 @@ $border-inner-color: #e6e9ee;
 						}
 					}
 				}
-				.status-invest { display: none; margin-top: 9px; font-size: 0.750em; color: $color-point1; text-align: center; }
+				.status-invest { display: none; margin-top: 9px; font-size: 12px; color: $color-point1; text-align: center; }
 
 				&.expired {
 					.btn.calc { display: none; }
@@ -250,7 +250,7 @@ $border-inner-color: #e6e9ee;
 		&:before { content: ''; display: block; position: absolute; top: 356px; lefty: 0px; height: 566px; width: 500px; background: url('/assets/images/bg_invest_visual01.png') left top no-repeat; }
 
 		> .title { display: block; height: 42px; width: 958px; text-indent: -9999px; background: url('/assets/images/txt/title_invest01.png') left top no-repeat; }
-		p { font-size: 0.875em; color: $color-content; line-height: 22px; }
+		p { font-size: 14px; color: $color-content; line-height: 22px; }
 
 		.investment { margin-top: 74px; margin-left: 580px;
 			> .title { display: block; height: 36px; width: 519px; text-indent: -9999px; background: url('/assets/images/txt/title_invest02.png') left top no-repeat; }
@@ -259,10 +259,10 @@ $border-inner-color: #e6e9ee;
 					tr { border-top: 1px solid #d4dae4;
 						&:first-child { border-top: 0px; }
 					}
-					th { padding: 11px 0; width: 68px; font-size: 0.875em; font-weight: normal; color: $color-title; line-height: 22px; text-align: left; vertical-align: top; }
-					td { padding: 11px 0; font-size: 0.875em; color: $color-content; line-height: 22px; }
+					th { padding: 11px 0; width: 68px; font-size: 14px; font-weight: normal; color: $color-title; line-height: 22px; text-align: left; vertical-align: top; }
+					td { padding: 11px 0; font-size: 14px; color: $color-content; line-height: 22px; }
 				}
-				.dot { position: relative; padding-left: 8px; font-size: 0.750em; color: $color-content; line-height: 18px;
+				.dot { position: relative; padding-left: 8px; font-size: 12px; color: $color-content; line-height: 18px;
 					&:before { content: ''; display: block; position: absolute; top: 8px; left: 0; height: 2px; width: 2px; background-color: $color-content; }
 				}
 
@@ -296,7 +296,7 @@ $border-inner-color: #e6e9ee;
 	h2 { font-size: 1.125em; font-weight: normal; color: $color-title;
 		.bar { display: inline-block; margin: -2px 9px 0 10px;; height: 17px; width: 1px; vertical-align: middle; background-color: #d7dde5; }
 	}
-	h2 + p { margin-top: 16px; font-size: 0.875em; color: $color-content; line-height: 22px; }
+	h2 + p { margin-top: 16px; font-size: 14px; color: $color-content; line-height: 22px; }
 	.pd-container { position: relative; padding: 80px 69px 60px 69px; }
 
 
@@ -305,7 +305,7 @@ $border-inner-color: #e6e9ee;
 		> tbody > tr {
 			td { padding: 98px 0 67px 0; text-align: center;
 				> span,
-				> a { display: inline-block; position: relative; height: 62px; font-size: 0.875em; color: $color-point2; line-height: 62px;
+				> a { display: inline-block; position: relative; height: 62px; font-size: 14px; color: $color-point2; line-height: 62px;
 					&:before { content: ''; display: inline-block; margin-right: 10px; vertical-align: middle; }
 					&.feature01:before { @include sprite($sprite-icon-feature01); }
 					&.feature02:before { @include sprite($sprite-icon-feature02); }
@@ -354,7 +354,7 @@ $border-inner-color: #e6e9ee;
 				&:first-child { padding-left: 18px; border-left: 0px; }
 
 				span { margin-right: 5px; font-size: 1.125em; color: $color-title; vertical-align: middle; }
-				p { margin-top: 10px; font-size: 0.750em; color: $color-desc; }
+				p { margin-top: 10px; font-size: 12px; color: $color-desc; }
 
 				&.normal {
 					&:before { left: 0; background-color: #ff507d; }
@@ -374,7 +374,7 @@ $border-inner-color: #e6e9ee;
 			.circle { display: inline-block; position: relative; margin: 0 104px; height: 289px; width: 292px; background: url('/assets/images/bg_chart_circle.png') left top no-repeat; 
 				.bg-circle { display: block; position: absolute; top: 25px; left: 50%; z-index: 0; margin-left: -120px; height: 240px; width: 240px; }
 
-				.amount { position: absolute; z-index: z("default"); font-size: 0.750em; color: $color-desc; text-align: left;
+				.amount { position: absolute; z-index: z("default"); font-size: 12px; color: $color-desc; text-align: left;
 					&:before { content: ''; display: block; position: absolute; bottom: -2px; left: 0; }
 					em { display: block; margin-top: 8px; padding-bottom: 9px; font-size: 18px; font-weight: bold; letter-spacing: -0.02em; }
 					
@@ -392,7 +392,7 @@ $border-inner-color: #e6e9ee;
 					}
 				}
 
-				.rate { display: block; margin-top: 113px; font-size: 0.750em; color: $color-content; line-height: 16px; text-align: center;
+				.rate { display: block; margin-top: 113px; font-size: 12px; color: $color-content; line-height: 16px; text-align: center;
 					p { margin-top: 10px; }
 					em.convert {
 						&.price {
@@ -424,12 +424,12 @@ $border-inner-color: #e6e9ee;
 	/// 기업투자 - funding manager
 	.manager { overflow: hidden; padding: 80px 69px 60px 140px; border-top: 1px solid $border-inner-color;
 		> figure { float: left; padding-right: 109px;
-			figcaption { display: block; margin-top: 10px; font-size: 0.750em; color: $color-content; text-align: right; }
+			figcaption { display: block; margin-top: 10px; font-size: 12px; color: $color-content; text-align: right; }
 		}
 		> hgroup { display: block; padding-top: 40px;
 			> h1 { font-size: 1.125em; font-weight: normal; color: $color-title; }
-			> h2 { margin-top: 30px; font-size: 1.000em; font-weight: normal; color: $color-point3; line-height: 24px; }
-			> p { margin-top: 20px; font-size: 0.875em; line-height: 22px; }
+			> h2 { margin-top: 30px; font-size: 16px; font-weight: normal; color: $color-point3; line-height: 24px; }
+			> p { margin-top: 20px; font-size: 14px; line-height: 22px; }
 		}
 	}
 
@@ -439,7 +439,7 @@ $border-inner-color: #e6e9ee;
 		.value-price { overflow: hidden; margin: 36px -69px 0 -69px;
 			$width: 100%;
 			> p { display: block; float: left; padding-top: 24px; height: 82px; width: $width / 3; text-align: center;
-				> span { font-size: 0.875em; }
+				> span { font-size: 14px; }
 				> em { display: block; font-family: $font-number-stack; font-size: 2.188em; color: #ffffff; line-height: 1.2em; }
 				&.bg01 { color: #ffcbd8; background-color: #ff507d; }
 				&.bg02 { color: #9aa5be; background-color: #14378c; }
@@ -455,7 +455,7 @@ $border-inner-color: #e6e9ee;
 			> li { float: left; padding: 0 21px 31px 0;
 				figure {
 					> img { display: block; margin: 0 auto; max-height: 100%; max-width: 234px; }
-					figcaption { padding-top: 24px; font-size: 0.875em; color: $color-content; line-height: 22px; text-align: center; }
+					figcaption { padding-top: 24px; font-size: 14px; color: $color-content; line-height: 22px; text-align: center; }
 				}
 			}
 		}
@@ -466,7 +466,7 @@ $border-inner-color: #e6e9ee;
 	.pawn-photos { padding-bottom: 0px; border-top: 1px solid $border-inner-color;
 		> .inner { margin: 0 auto; width: 585px;
 			h2 { float: left; }
-			time { float: right; font-size: 0.750em; color: $color-content; }
+			time { float: right; font-size: 12px; color: $color-content; }
 			.slider { clear: both; padding-top: 30px;
 				.slick-dots { margin-top: 16px; height: 6px; text-align: center;
 					> li { display: inline-block; padding: 0 2px;
@@ -486,7 +486,7 @@ $border-inner-color: #e6e9ee;
 		> .inner { margin: -5px auto 0 auto; width: $privateInnerWidth;
 			> fieldset { position: relative; text-align: center;
 				input[type=checkbox] { position: absolute; top: -100%; left: -100%; }
-				label { display: inline-block; margin-left: -4px; width: $privateInnerWidth/6; font-size: 0.875em; color: $color-title; text-align: center;
+				label { display: inline-block; margin-left: -4px; width: $privateInnerWidth/6; font-size: 14px; color: $color-title; text-align: center;
 					&:after { content: ''; display: block; margin: 13px auto 0 auto; @include sprite($sprite-icon-check03); }
 				}
 				input[type=checkbox]:checked + label,
@@ -503,7 +503,7 @@ $border-inner-color: #e6e9ee;
 			h1 { font-size: 1.125em; font-weight: normal; color: $color-title;
 				> em { color: $color-menu1-hover; }
 			}
-			time { float: right; font-size: 0.750em; color: $color-desc; }
+			time { float: right; font-size: 12px; color: $color-desc; }
 		}
 	}
 
@@ -514,20 +514,20 @@ $border-inner-color: #e6e9ee;
 				&:before { content: attr(title); display: block; margin-bottom: 11px; font-size: 18px; }
 				&:after { content: ''; display: block; position: absolute; top: -9px; left: 6px; @include sprite($sprite-icon-story01); }
 			}
-			h3 { font-size: 1.000em; font-weight: normal; color: $color-point1; }
-			.desc { margin-top: 28px; font-size: 0.875em; color: $color-content; line-height: 22px; }
+			h3 { font-size: 16px; font-weight: normal; color: $color-point1; }
+			.desc { margin-top: 28px; font-size: 14px; color: $color-content; line-height: 22px; }
 
 			.add-story { margin-top: 36px; padding-top: 40px; border-top: 1px solid $border-inner-color;
 				.desc { margin-top: 25px; }
-				.update { float: right; font-size: 0.750em; color: $color-desc; }
+				.update { float: right; font-size: 12px; color: $color-desc; }
 
 				/// 추가글 등록
 				.write-add-story { position: relative; right: -20px; left: -20px; padding: 45px 0 20px 0;
-					label { display: block; padding: 0 20px; font-size: 0.875em; color: $color-menu1-hover; }
-					textarea { display: block; margin-top: 9px; padding: 20px; height: 278px; width: 100%; font-size: 0.875em; color: $color-content; line-height: 22px; border: 1px solid #bec3cd; border-radius: 3px; }
+					label { display: block; padding: 0 20px; font-size: 14px; color: $color-menu1-hover; }
+					textarea { display: block; margin-top: 9px; padding: 20px; height: 278px; width: 100%; font-size: 14px; color: $color-content; line-height: 22px; border: 1px solid #bec3cd; border-radius: 3px; }
 
 					.btns { padding-top: 20px; text-align: center;
-						.btn-write { display: inline-block; padding: 0 26px; font-size: 0.875em; color: #fff; line-height: 37px; border-radius: 37px; background-color: #6cc800; }
+						.btn-write { display: inline-block; padding: 0 26px; font-size: 14px; color: #fff; line-height: 37px; border-radius: 37px; background-color: #6cc800; }
 					}
 				}
 			}
@@ -536,8 +536,8 @@ $border-inner-color: #e6e9ee;
 
 	/// 개인투자 - 상환 계획
 	.tbl { width: 100%; margin-top: 36px; border-top: 2px solid #252525;
-		th { position: relative; padding: 9px 0 12px 0; font-size: 0.875em; font-weight: normal; color: $color-title; line-height: 30px; text-align: left; vertical-align: top; }
-		td { position: relative; padding: 9px 0 12px 0; font-size: 0.875em; color: $color-content; line-height: 30px; text-align: left; vertical-align: top; }
+		th { position: relative; padding: 9px 0 12px 0; font-size: 14px; font-weight: normal; color: $color-title; line-height: 30px; text-align: left; vertical-align: top; }
+		td { position: relative; padding: 9px 0 12px 0; font-size: 14px; color: $color-content; line-height: 30px; text-align: left; vertical-align: top; }
 		em { color: $color-menu1-hover; }
 		strong { color: $color-point1; }
 
@@ -569,7 +569,7 @@ $border-inner-color: #e6e9ee;
 				&:before { content: attr(title); display: block; margin-bottom: 11px; font-size: 18px; }
 				&:after { content: ''; display: block; position: absolute; top: -36px; left: -12px; @include sprite($sprite-icon-repayment01); }
 			}
-			.desc { margin-top: 28px; font-size: 0.875em; color: $color-content; line-height: 22px; }
+			.desc { margin-top: 28px; font-size: 14px; color: $color-content; line-height: 22px; }
 
 			.add-story { margin-top: 36px; padding-top: 40px; border-top: 1px solid $border-inner-color;
 				.desc { margin-top: 25px; }
@@ -608,7 +608,7 @@ $border-inner-color: #e6e9ee;
 
 	/// qna
 	.product-qna { padding: 98px 69px 73px 69px; border-bottom: 1px solid #e6e9ee;
-		> p { position: relative; padding: 0 0 0 177px; font-size: 0.875em; color: $color-content; line-height: 22px;
+		> p { position: relative; padding: 0 0 0 177px; font-size: 14px; color: $color-content; line-height: 22px;
 			&:before { content: ''; position: absolute; top: 0; left: 0; @include sprite($sprite-qna-title); }
 			> span { line-height: 30px;
 				strong { font-weight: normal; color: $color-point1; }
@@ -617,14 +617,14 @@ $border-inner-color: #e6e9ee;
 		> .write-question { position: relative; margin-top: 60px; padding: 7px 0 0px 62px; background-color: #f8f9fb;
 			&:before { content: ''; position: absolute; top: 12px; left: 14px; @include sprite($sprite-bg-question01); }
 			> p { overflow: hidden; margin-right: 62px; line-height: 40px; border-bottom: 2px solid #99d7fe;
-				.user { float: right; font-size: 0.875em; color: $color-content;
+				.user { float: right; font-size: 14px; color: $color-content;
 					> time:before { content: '|'; display: inline-block; margin-right: 8px; margin-left: 6px; color: #d8e3ef; }
 				}
-				input[type=text] { display: block; height: 38px; width: 80%; font-size: 1.000em; color: $color-title; line-height: 38px; border: 0px; background-color: transparent; }
+				input[type=text] { display: block; height: 38px; width: 80%; font-size: 16px; color: $color-title; line-height: 38px; border: 0px; background-color: transparent; }
 			}
-			textarea { overflow: auto; padding-top: 9px; height: 87px; width: 100%; font-size: 0.875em; color: $color-content; line-height: 22px; border: 0px; background-color: transparent; }
+			textarea { overflow: auto; padding-top: 9px; height: 87px; width: 100%; font-size: 14px; color: $color-content; line-height: 22px; border: 0px; background-color: transparent; }
 		}
-		> .btn-question { display: block; margin: 20px auto 0 auto; height: 37px; min-width: 154px; font-size: 0.875em; font-weight: bold; color: #fff; text-align: center; line-height: 37px; border-radius: 37px; background-color: #2e96d6;
+		> .btn-question { display: block; margin: 20px auto 0 auto; height: 37px; min-width: 154px; font-size: 14px; font-weight: bold; color: #fff; text-align: center; line-height: 37px; border-radius: 37px; background-color: #2e96d6;
 			&:hover { text-decoration: none; background-color: #2389cf; }
 		}
 	}
@@ -635,12 +635,12 @@ $border-inner-color: #e6e9ee;
 		.list-qna { 
 			> li { padding-top: 37px; padding-bottom: 13px;
 				.title { padding-bottom: 1px; font-size: 1.143em; color: $color-title; line-height: 40px; border-bottom: 2px solid #b7e3ff;
-					.user { float: right; font-size: 0.875em; color: $color-content;
+					.user { float: right; font-size: 14px; color: $color-content;
 						> time:before { content: '|'; display: inline-block; margin-right: 8px; margin-left: 6px; color: #d8e3ef; }
 					}
 				}
 
-				> div { position: relative; margin-top: 16px; padding: 0 0 0 60px; font-size: 0.875em; color: $color-content; line-height: 22px;
+				> div { position: relative; margin-top: 16px; padding: 0 0 0 60px; font-size: 14px; color: $color-content; line-height: 22px;
 					&:before { content: ''; position: absolute; top: 8px; left: 12px; }
 					> p { margin-top: 10px; color: $color-content; }
 				}
@@ -658,14 +658,14 @@ $border-inner-color: #e6e9ee;
 					> .write-answer { position: relative; margin-top: 32px; padding: 7px 0px 23px 62px; background-color: #f8f9fb;
 						&:before { content: ''; position: absolute; top: 12px; left: 14px; @include sprite($sprite-bg-answer01); }
 						> p { overflow: hidden; margin-right: 38px; line-height: 38px; border-bottom: 2px solid #ffc8d6;
-							.user { float: right; font-size: 0.875em; color: $color-content;
+							.user { float: right; font-size: 14px; color: $color-content;
 								> time:before { content: '|'; display: inline-block; margin-right: 8px; margin-left: 6px; color: #d8e3ef; }
 							}
-							input[type=text] { display: block; height: 38px; width: 80%; font-size: 1.000em; color: $color-title; line-height: 38px; border: 0px; background-color: transparent; }
+							input[type=text] { display: block; height: 38px; width: 80%; font-size: 16px; color: $color-title; line-height: 38px; border: 0px; background-color: transparent; }
 						}
-						textarea { overflow: auto; margin-top: 13px; height: 80px; width: 100%; font-size: 0.875em; color: $color-content; line-height: 22px; border: 0px; background-color: transparent; }
+						textarea { overflow: auto; margin-top: 13px; height: 80px; width: 100%; font-size: 14px; color: $color-content; line-height: 22px; border: 0px; background-color: transparent; }
 					}
-					> .btn-answer { display: block; margin: 20px auto 0 auto; height: 37px; min-width: 154px; font-size: 0.875em; font-weight: bold; color: #fff; text-align: center; line-height: 37px; border-radius: 37px; background-color: #6cc800;
+					> .btn-answer { display: block; margin: 20px auto 0 auto; height: 37px; min-width: 154px; font-size: 14px; font-weight: bold; color: #fff; text-align: center; line-height: 37px; border-radius: 37px; background-color: #6cc800;
 						&:hover { text-decoration: none; background-color: #4eb500; }
 					}
 				}
@@ -679,28 +679,28 @@ $border-inner-color: #e6e9ee;
 		/// 필터
 		.filter-container {
 			.filter {
-				label { font-size: 1.000em; }
+				label { font-size: 16px; }
 			}
 		}
 
 		.tb-repayment { width: 100%; margin-top: 30px;
 			thead {
 				tr { background-color: #2e91d8;
-					th { padding: 15px 0 14px 0; min-width: 90px; font-size: 0.875em; font-weight: normal; color: #fff; text-align: center; line-height: 18px; border-left: 1px solid #2982c2;
+					th { padding: 15px 0 14px 0; min-width: 90px; font-size: 14px; font-weight: normal; color: #fff; text-align: center; line-height: 18px; border-left: 1px solid #2982c2;
 						&:first-child { border-left: 0px; }
 					}
 				}
 			}
 			tfoot {
 				tr { background-color: #f3f8fd;
-					td { padding: 15px 0 14px 0; font-size: 0.875em; color: $color-content; text-align: center; line-height: 18px; border-bottom: 1px solid #d4e8f2;
+					td { padding: 15px 0 14px 0; font-size: 14px; color: $color-content; text-align: center; line-height: 18px; border-bottom: 1px solid #d4e8f2;
 						&.em { color: $color-point3; }
 					}
 				}
 			}
 			tbody {
 				tr {
-					td { padding: 15px 0 14px 0; font-size: 0.875em; color: $color-content; text-align: center; line-height: 18px; border-bottom: 1px solid #d4e8f2;
+					td { padding: 15px 0 14px 0; font-size: 14px; color: $color-content; text-align: center; line-height: 18px; border-bottom: 1px solid #d4e8f2;
 						&.em { color: $color-point3; }
 						> .idx { font-family: $font-number-stack; font-size: 32px; color: #ced1d9; vertical-align: middle;
 							&.top { color: #1d7dcf; }
@@ -708,7 +708,7 @@ $border-inner-color: #e6e9ee;
 					}
 				}
 			}
-			+ .tb-bottom-caption { margin-top: 17px; font-size: 0.875em; color: $color-content; text-align: right; line-height: 22px; }
+			+ .tb-bottom-caption { margin-top: 17px; font-size: 14px; color: $color-content; text-align: right; line-height: 22px; }
 		}
 	}
 
@@ -722,7 +722,7 @@ $border-inner-color: #e6e9ee;
 
 		.btn-inline { color: $color-menu1-hover !important; text-decoration: underline; }
 		.btn-inline-box { margin-bottom: 15px; padding: 0 15px; line-height: 29px; }
-		.warning { position: relative; margin: 37px 0 0 0; padding-left: 30px; font-size: 0.750em; color: $color-content; line-height: 20px; text-align: left;
+		.warning { position: relative; margin: 37px 0 0 0; padding-left: 30px; font-size: 12px; color: $color-content; line-height: 20px; text-align: left;
 			&:before { content: ''; display: block; position: absolute; top: 0; left: 0; @include sprite($sprite-icon-iks01); }
 			em, strong { color: $color-menu1-hover; }
 		}
@@ -732,7 +732,7 @@ $border-inner-color: #e6e9ee;
 				> em { color: $color-menu1-hover; }
 			}
 			.list-dot-pd { margin-top: 34px;
-				> li { display: block; position: relative; padding-left: 8px; font-size: 0.875em; color: $color-content; line-height: 27px;
+				> li { display: block; position: relative; padding-left: 8px; font-size: 14px; color: $color-content; line-height: 27px;
 					&:before { content: ''; display: block; position: absolute; top: 12px; left: 1px; height: 2px; width: 2px; background-color: #667386; }
 
 					span { margin-left: 10px; color: $color-title;
@@ -748,7 +748,7 @@ $border-inner-color: #e6e9ee;
 
 			table { width: 100%; border-top: 2px solid #252525; border-bottom: 2px solid #252525;
 				tr { border-bottom: 1px solid #d4dae4; }
-				th { height: 54px; font-size: 0.875em; font-weight: normal; color: $color-title; text-align: center; border-left: 1px solid #d4dae4;
+				th { height: 54px; font-size: 14px; font-weight: normal; color: $color-title; text-align: center; border-left: 1px solid #d4dae4;
 					&:first-child { border-left: 0px; }
 				}
 				thead { }
@@ -762,7 +762,7 @@ $border-inner-color: #e6e9ee;
 					.btn-submit { width: 100%; }
 				}
 				tbody {
-					th, td { height: 54px; font-size: 0.875em; font-weight: normal; color: $color-content; text-align: center; border-left: 1px solid #d4dae4;
+					th, td { height: 54px; font-size: 14px; font-weight: normal; color: $color-content; text-align: center; border-left: 1px solid #d4dae4;
 						&:first-child { border-left: 0px; }
 					}
 				}
@@ -770,7 +770,7 @@ $border-inner-color: #e6e9ee;
 				/* 문자 발송 목록 */
 				&.tbl-list-sms {
 					tbody {
-						th, td { height: 40px; font-size: 0.750em; border: 0px; }
+						th, td { height: 40px; font-size: 12px; border: 0px; }
 						th { padding-left: 20px; text-align: left; }
 					}
 				}
@@ -803,7 +803,7 @@ $border-inner-color: #e6e9ee;
 				.btn-inline-box.talk { float: right; margin-top: -10px; }
 
 				.list-talk { clear: both; width: 100%; border-top: 2px solid $color-title;
-					> li { padding: 25px 0 25px 0; font-size: 0.875em; color: $color-content; line-height: 22px; border-bottom: 1px solid #d4dae4;
+					> li { padding: 25px 0 25px 0; font-size: 14px; color: $color-content; line-height: 22px; border-bottom: 1px solid #d4dae4;
 						p { margin-top: 20px; }
 					}
 				}
@@ -826,7 +826,7 @@ $border-inner-color: #e6e9ee;
 			.bad-debt-guide-popup { display: none; position: absolute; top: 45px; right: 0px; z-index: z("modaless"); width: 700px;
 				&:before { right: 60px; left: auto; }
 
-				.legal-information { margin-top: 6px; font-size: 0.750em; color: $color-menu1-hover; }				
+				.legal-information { margin-top: 6px; font-size: 12px; color: $color-menu1-hover; }				
 				.btn-shortcut { float: right; margin-top: 25px; }
 			}
 

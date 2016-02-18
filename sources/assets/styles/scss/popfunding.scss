@@ -103,7 +103,7 @@ $z-layers: (
 	@include sprite($sprite-btn-tip01);
 	&:hover { @include sprite($sprite-btn-tip01-higilights); }
 }
-.btn-tip-txt { display: inline-block; position: relative; padding-left: 32px; font-size: 0.750em; color: $color-content; line-height: 29px; text-decoration: underline !important;
+.btn-tip-txt { display: inline-block; position: relative; padding-left: 32px; font-size: 12px; color: $color-content; line-height: 29px; text-decoration: underline !important;
 	&:before { content: ''; display: block; position: absolute; top: 0; left: 0; @include sprite($sprite-btn-tip02); }
 }
 

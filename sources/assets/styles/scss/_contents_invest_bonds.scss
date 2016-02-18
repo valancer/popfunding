@@ -6,11 +6,11 @@
 			.sorting {
 				.cr-box { float: left; }
 				.item-form { clear: none; float: right;
-					label { display: inline-block; margin: 0; font-size: 0.875em; color: $color-content; line-height: 37px; }
+					label { display: inline-block; margin: 0; font-size: 14px; color: $color-content; line-height: 37px; }
 					input[type=text] { display: inline-block; margin: 0 3px; height: 37px; width: 185px; line-height: 35px; text-align: center; vertical-align: middle; }
 				}
 			}
-			.results { margin-top: 12px; font-size: 0.875em; color: $color-content; text-align: right;
+			.results { margin-top: 12px; font-size: 14px; color: $color-content; text-align: right;
 				&:before { content: ''; display: inline-block; margin: -4px 5px 0 0; vertical-align: middle; @include sprite($sprite-icon-check08); }
 			}
 		}
@@ -62,7 +62,7 @@
 			> em { position: absolute; position: absolute; top: 0; left: 0; text-indent: -9999px; }
 			> .invest-type { display: none; }
 			> .new { @include sprite($sprite-badge-new03); }
-			> .user-in { top: 10px; left: auto; right: 16px; font-size: 0.750em; color: $color-content; text-indent: 0px; }
+			> .user-in { top: 10px; left: auto; right: 16px; font-size: 12px; color: $color-content; text-indent: 0px; }
 			> .favorate { top: 14px; right: 14px; left: auto; @include sprite($sprite-icon-favorate01-selected); }
 		}
 
@@ -98,7 +98,7 @@
 					}
 				}
 			}
-			.tooltip { display: block; position: absolute; top: 18px; bottom: auto; z-index: z("tooltip"); padding: 0 8px; font-size: 0.750em; color: $color-content; text-align: center; line-height: 25px; white-space: nowrap; border: 1px solid #c3d0e1; border-radius: 5px; background-color: #fff;
+			.tooltip { display: block; position: absolute; top: 18px; bottom: auto; z-index: z("tooltip"); padding: 0 8px; font-size: 12px; color: $color-content; text-align: center; line-height: 25px; white-space: nowrap; border: 1px solid #c3d0e1; border-radius: 5px; background-color: #fff;
 				&:before { content: ''; display: block; position: absolute; top: auto; bottom: -$sprite-bg-arrow08-height; left: 50%; margin-left: -$sprite-bg-arrow08-width/2; @include sprite($sprite-bg-arrow08); }
 			}
 
@@ -129,7 +129,7 @@
 		/* 정보 */
 		.info { 
 			h2 { display: none; }
-			.group { overflow: hidden; font-size: 0.875em; border-top: 1px solid #e6e9ee;
+			.group { overflow: hidden; font-size: 14px; border-top: 1px solid #e6e9ee;
 				&.basic { padding: 14px 0 14px 0; border-top: 0px; }
 				&.status {
 					li { padding: 12px 0 14px 14px; }
@@ -149,7 +149,7 @@
 						.btn-inline-box { display: none; }
 					}
 					&.price { 
-						del, em { display: block; margin-top: 7px; font-size: 20px; line-height: 1.000em; text-decoration: none; }
+						del, em { display: block; margin-top: 7px; font-size: 20px; line-height: 16px; text-decoration: none; }
 							
 						&.base { }
 						&.sell { padding-left: 6px; }
@@ -162,10 +162,10 @@
 				.overdue { display: none; }
 			}
 
-			.auto-bidding { display: block; position: absolute; bottom: 15px; right: 14px; font-size: 0.750em; color: $color-desc; text-align: left; text-indent: -9999px;
+			.auto-bidding { display: block; position: absolute; bottom: 15px; right: 14px; font-size: 12px; color: $color-desc; text-align: left; text-indent: -9999px;
 				&:before { content: ''; display: block; position: absolute; @include sprite($sprite-icon-autobidding-s); }
 			}
-			.meto-bidding { display: block; position: absolute; bottom: 15px; right: 14px; font-size: 0.750em; color: $color-desc; text-align: left; text-indent: -9999px;
+			.meto-bidding { display: block; position: absolute; bottom: 15px; right: 14px; font-size: 12px; color: $color-desc; text-align: left; text-indent: -9999px;
 				&:before { content: ''; display: block; position: absolute; @include sprite($sprite-icon-metobidding-s); }
 			}
 
@@ -200,7 +200,7 @@
 				> em { }
 				> .invest-type01 { @include sprite($sprite-badge-invest03-detail); }
 				> .new { @include sprite($sprite-badge-new03-detail); }
-				> .user-in { top: 15px; left: auto; right: 19px; font-size: 0.875em; color: $color-point2; text-indent: 0px; }
+				> .user-in { top: 15px; left: auto; right: 19px; font-size: 14px; color: $color-point2; text-indent: 0px; }
 				> .favorate { top: 17px; right: 19px; left: auto; @include sprite($sprite-icon-favorate01-selected); }
 			}
 
@@ -312,7 +312,7 @@
 
 			> .buy-bonds { display: block; clear: both; position: relative; padding: 52px 0;
 				.utils { position: absolute; top: 85px; left: 68%;
-					.btn { display: inline-block; margin-right: 17px; font-size: 0.875em; color: $color-menu1; vertical-align: middle;
+					.btn { display: inline-block; margin-right: 17px; font-size: 14px; color: $color-menu1; vertical-align: middle;
 						&:before { content: ''; display: inline-block; margin-right: 7px; vertical-align: middle; }
 						&.warning {
 							&:before { @include sprite($sprite-icon-iks01); }
@@ -344,7 +344,7 @@
 	/* 동일 채권 현황 */
 	.same-bonds { margin-top: 66px; padding-bottom: 40px; border-bottom: 1px solid #e2e6ec;
 		h1 { font-size: 1.063em; font-weight: normal; color: $color-title; line-height: 1.3em; }
-		.results { margin-top: 16px; font-size: 0.875em; color: $color-content; text-align: left;
+		.results { margin-top: 16px; font-size: 14px; color: $color-content; text-align: left;
 			&:before { content: ''; display: inline-block; margin: -4px 5px 0 0; vertical-align: middle; @include sprite($sprite-icon-check08); }
 			em { color: $color-menu1-hover; }
 		}

@@ -34,10 +34,10 @@
 			}
 
 			> .info { position: relative; padding: 27px 28px 0 28px; border-top: 1px solid #e6e9ee;
-				.popstory { display: block; font-size: 0.750em; color: #ff91ad; }
+				.popstory { display: block; font-size: 12px; color: #ff91ad; }
 				.title { display: block; margin-top: 13px; font-size: 1.125em; font-weight: normal; line-height: 1em; }
 				.desc { margin-top: 21px; font-size: 0.813em; color: $color-content; line-height: 21px; }
-				time { display: block; margin-top: 18px; font-size: 0.750em; color: $color-desc; text-align: right; }
+				time { display: block; margin-top: 18px; font-size: 12px; color: $color-desc; text-align: right; }
 			}
 		}
 

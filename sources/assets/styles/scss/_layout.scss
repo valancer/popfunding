@@ -7,7 +7,7 @@
 	$header-height: 353px;
 
 	@mixin li-bar() {
-		content: '|'; display: inline-block; padding-right: 13px; padding-left: 8px; font-size: 0.750em; color: #c9cfd6;
+		content: '|'; display: inline-block; padding-right: 13px; padding-left: 8px; font-size: 12px; color: #c9cfd6;
 	}
 
 	display: block; position: relative; height: $header-height; min-width: $contents-container-width; background: #d0d9e2 url(/assets/images/bg_header.jpg) center top no-repeat;
@@ -80,10 +80,10 @@
 		}
 		> figure {
 			.thumb { display: block; overflow: hidden; margin: 0 auto; height: 84px; width: 84px; border-radius: 84px; background-color: #fff; }
-			figcaption { display: block; margin-top: 12px; font-size: 0.750em; color: $color-menu2; text-align: center; }
+			figcaption { display: block; margin-top: 12px; font-size: 12px; color: $color-menu2; text-align: center; }
 		}
 
-		> .message { display: block; position: absolute; left: 0; z-index: z("default"); padding-right: 12px; padding-left: 17px; height: 32px; font-size: 0.750em; color: $color-content; line-height: 32px; white-space: nowrap; border: 1px solid #c3d0e1; border-radius: 3px; background-color: #fff;
+		> .message { display: block; position: absolute; left: 0; z-index: z("default"); padding-right: 12px; padding-left: 17px; height: 32px; font-size: 12px; color: $color-content; line-height: 32px; white-space: nowrap; border: 1px solid #c3d0e1; border-radius: 3px; background-color: #fff;
 			&:before { content: ''; display: block; position: absolute; bottom: -$sprite-bg-arrow05-height; left: 68px; @include sprite($sprite-bg-arrow05); }
 
 			em { color: $color-menu1-hover; }
@@ -96,7 +96,7 @@
 	}
 
 	.contents { display: none; box-sizing: border-box; margin: 0 auto; width: 1160px; text-align: center;
-		.btn-shortcut { display: inline-block; position: relative; height: 37px; min-width: 190px; font-size: 0.875em; font-weight: bold; color: #fff; text-align: center; line-height: 37px; border-radius: 37px; background-color: #6cc800;
+		.btn-shortcut { display: inline-block; position: relative; height: 37px; min-width: 190px; font-size: 14px; font-weight: bold; color: #fff; text-align: center; line-height: 37px; border-radius: 37px; background-color: #6cc800;
 			&:hover { text-decoration: none; background-color: #4eb500; }
 			.badge { display: block; position: absolute; top: -9px; left: 27px; text-indent: -9999px; @include sprite($sprite-icon-new01); }
 		}
@@ -104,14 +104,14 @@
 		/* 전체메인 */
 		&.main { display: block; padding-top: 236px; height: 770px; background: url('/assets/images/bg_header_visual_main.png') center top no-repeat;
 			.title { display: block; margin: 0 auto; height: 153px; width: 396px; text-indent: -9999px; background: url('/assets/images/txt/header_main.png') left top no-repeat; }
-			p { margin-top: 30px; font-size: 0.875em; color: $color-menu2; line-height: 20px; }
+			p { margin-top: 30px; font-size: 14px; color: $color-menu2; line-height: 20px; }
 			.btn-shortcut { margin-top: 27px; }
 		}
 
 		/* 투자하기 */
 		&.invest { display: block; padding-top: 89px; height: 303px; background: url('/assets/images/bg_header_visual_invest.png') center top no-repeat;
 			.title { display: block; margin: 0 auto; height: 32px; width: 356px; text-indent: -9999px; background: url('/assets/images/txt/header_invest_title.png') left top no-repeat; }
-			p { margin-top: 18px; font-size: 0.750em; color: $color-menu2; line-height: 18px; }
+			p { margin-top: 18px; font-size: 12px; color: $color-menu2; line-height: 18px; }
 			.btn-shortcut { margin-top: 36px; }
 		}
 	}
@@ -156,14 +156,14 @@
 
 /* FOOTER */
 .footer {
-	$font-size: 0.750em;
+	$font-size: 12px;
 	$line-height: 20px;
 
 	padding: 48px 0 79px 0; min-width: $contents-container-width; border-top: 1px solid #e4e4e4; background-color: #fff;
 	.inner { @include inner-container(); }
 	.shortcut { text-align: center;
 		> a { margin: 0 11px;
-			@include btn-inline-txt(0.750em, $color-content);
+			@include btn-inline-txt(12px, $color-content);
 		}
 	}
 	.company-info { position: relative; margin-top: 67px; margin-left: 198px; padding-left: 192px; font-size: $font-size; color: $color-content; line-height: $line-height;
@@ -182,7 +182,7 @@ article.contents { min-width: $contents-container-width; padding: 60px 0 110px 0
 
 	/* 메인 */
 	&.main { overflow: hidden;
-		.btn-shortcut { display: inline-block; padding-top: 1px; height: 36px; min-width: 154px; font-size: 0.875em; font-weight: 500; color: #fff; text-align: center; line-height: 36px; border-radius: 37px; background-color: #6cc800;
+		.btn-shortcut { display: inline-block; padding-top: 1px; height: 36px; min-width: 154px; font-size: 14px; font-weight: 500; color: #fff; text-align: center; line-height: 36px; border-radius: 37px; background-color: #6cc800;
 			&:hover { text-decoration: none; background-color: #4eb500; }
 		}
 
@@ -211,7 +211,7 @@ article.contents { min-width: $contents-container-width; padding: 60px 0 110px 0
 			/* 기업투자 */
 			.investment { position: relative; height: 100%; width: 100%; text-align: center;
 				.title { margin: 72px auto 0 auto; text-indent: -9999px; }
-				p { margin-top: 25px; font-size: 0.875em; color: $color-menu2; line-height: 20px; }
+				p { margin-top: 25px; font-size: 14px; color: $color-menu2; line-height: 20px; }
 				.btn-shortcut { display: block; position: absolute; bottom: 45px; left: 50%; margin-left: -110px; width: 220px; color: #fff; background-color: $color-point2; }
 			}
 
@@ -227,7 +227,7 @@ article.contents { min-width: $contents-container-width; padding: 60px 0 110px 0
 				.before { display: block; position: relative; z-index: z("default"); top: 77px; margin: 0 auto; @include sprite($sprite-btn-play01); }
 				&:after { content: ''; display: block; position: absolute; top: 0; left: 0; z-index: z("default") - 1; height: 100%; width: 100%; background: url('/assets/images/tp_interview01.png') left top repeat; }
 				&:hover > .before { @include sprite($sprite-btn-play01-highlights); }
-				p { position: relative; z-index: z("default"); padding-top: 99px; font-size: 0.875em; color: #748bb9; text-align: center; line-height: 20px; }
+				p { position: relative; z-index: z("default"); padding-top: 99px; font-size: 14px; color: #748bb9; text-align: center; line-height: 20px; }
 			}
 		}
 
@@ -259,7 +259,7 @@ article.contents { min-width: $contents-container-width; padding: 60px 0 110px 0
 		.service-shortcut { clear: both; overflow: hidden; padding-top: 60px;
 			.box { float: left; position: relative; padding-top: 63px; height: 346px; width: 575px; text-align: center; background-color: #ede8e3;
 				> h1 { margin: 0 auto; height: 57px; text-indent: -9999px; }
-				p { padding-top: 18px; font-size: 0.750em; color: $color-menu2; line-height: 18px; }
+				p { padding-top: 18px; font-size: 12px; color: $color-menu2; line-height: 18px; }
 				.btns { position: absolute; bottom: 50px; width: 100%; }
 			}
 			.borrow { margin-right: 10px; background: url('/assets/images/bg_main_borrow01.jpg') center top no-repeat;
@@ -312,7 +312,7 @@ article.contents { min-width: $contents-container-width; padding: 60px 0 110px 0
 		}
 
 
-		> .remain { overflow: hidden; margin-bottom: 5px; padding: 0 23px 0 27px; font-size: 0.750em; color: $color-point3;
+		> .remain { overflow: hidden; margin-bottom: 5px; padding: 0 23px 0 27px; font-size: 12px; color: $color-point3;
 			.balance {
 				&:before { content: '|'; display: inline-block; margin-right: 12px; margin-left: 9px; color: #bbd7ed; }
 			}
@@ -332,7 +332,7 @@ article.contents { min-width: $contents-container-width; padding: 60px 0 110px 0
 
 			.btn-invest { box-sizing: border-box; margin-top: 12px; width: 100%; }
 
-			.type-options { padding: 8px 23px 0 27px; font-size: 0.750em; color: $color-content;
+			.type-options { padding: 8px 23px 0 27px; font-size: 12px; color: $color-content;
 				&.center { padding-bottom: 9px; text-align: center; }
 
 				.msg { color: $color-point1;
@@ -354,7 +354,7 @@ article.contents { min-width: $contents-container-width; padding: 60px 0 110px 0
 				}
 
 				.list-dot { margin-top: 10px; padding-left: 7px; text-align: left;
-					> li { position: relative; font-size: 1.000em; color: $color-content; line-height: 20px;
+					> li { position: relative; font-size: 16px; color: $color-content; line-height: 20px;
 						&:before { content: ''; display: block; position: absolute; top: 50%; left: -7px; margin-top: -1px; height: 2px; width: 2px; background-color: $color-content; }
 						em { color: $color-point1; }
 					}
@@ -371,7 +371,7 @@ article.contents { min-width: $contents-container-width; padding: 60px 0 110px 0
 
 		/// 개인 투자 하단 설명
 		> .private-guide { overflow: hidden; margin: 50px 0px 0 27px;
-			li { display: block; position: relative; float: left; padding: 0 60px 0 8px; font-size: 0.750em; color: $color-content; line-height: 20px;
+			li { display: block; position: relative; float: left; padding: 0 60px 0 8px; font-size: 12px; color: $color-content; line-height: 20px;
 				&:before { content: ''; display: block; position: absolute; top: 8px; left: 0; height: 2px; width: 2px; background-color: $color-content; }
 				em { color: $color-point1; }
 
@@ -385,7 +385,7 @@ article.contents { min-width: $contents-container-width; padding: 60px 0 110px 0
 			&:before { content: ''; display: block; position: absolute; top: 0; left: 0; z-index: z("default"); @include sprite($sprite-badge-coupon01); }
 			.tbl-list-coupon { width: 100%;
 				> tbody > tr { background-color: #fff;
-					td { position: relative; height: 56px; font-size: 0.875em; color: $color-content; border-bottom: 1px solid #e9ecf1;
+					td { position: relative; height: 56px; font-size: 14px; color: $color-content; border-bottom: 1px solid #e9ecf1;
 
 						&.c { padding: 0 10px; text-align: center; }
 						&.r { padding-right: 5px; text-align: right; }
@@ -429,7 +429,7 @@ article.contents { min-width: $contents-container-width; padding: 60px 0 110px 0
 							.badge { display: block; position: absolute; top: 0; left: 0; z-index: z("default"); text-indent: -9999px; text-align: left; @include sprite($sprite-badge-use01); }
 							img { display: inline-block; vertical-align: middle; }
 						}
-						.info { padding-top: 29px; font-size: 0.875em;; color: $color-menu2; line-height: 18px; text-decoration: none;
+						.info { padding-top: 29px; font-size: 14px;; color: $color-menu2; line-height: 18px; text-decoration: none;
 							p { font-size: 0.857em; }
 							.price { display: block; margin-top: 5px; font-weight: normal; color: $color-point2; }
 						}
@@ -445,8 +445,8 @@ article.contents { min-width: $contents-container-width; padding: 60px 0 110px 0
 	.guide-popup.floating-rates-popup { display: none; position: absolute; top: -1px; left: -1px; z-index: z("modaless"); padding: 30px 34px; width: 250px;
 		&:before { content: none !important; }
 
-		.normal { font-size: 1.000em;
-			+ p { margin-top: 6px; font-size: 0.750em; color: $color-content; }
+		.normal { font-size: 16px;
+			+ p { margin-top: 6px; font-size: 12px; color: $color-content; }
 		}
 
 		.interest-rates {
@@ -515,7 +515,7 @@ article.contents { min-width: $contents-container-width; padding: 60px 0 110px 0
 	> .right { float: left; padding-top: 53px; padding-left: 100px; width: 360px; border-left: 1px solid #d4dae4; }
 
 
-	> .message { margin-top: 31px; margin-bottom: 6px; font-size: 0.875em; color: $color-content; line-height: 22px;
+	> .message { margin-top: 31px; margin-bottom: 6px; font-size: 14px; color: $color-content; line-height: 22px;
 		> strong { display: block; margin: 5px 0; color: $color-menu1-hover; }
 	}
 
@@ -555,7 +555,7 @@ article.contents { min-width: $contents-container-width; padding: 60px 0 110px 0
 			.needs { &:before { background-color: $color-borrowing; } }
 		}
 
-		.needs { position: relative; margin-top: 20px; padding: 0 0 0 10px; font-size: 0.750em; color: $color-content; line-height: 18px; text-align: left;
+		.needs { position: relative; margin-top: 20px; padding: 0 0 0 10px; font-size: 12px; color: $color-content; line-height: 18px; text-align: left;
 			&:before { content: ''; display: block; position: absolute; top: 6px; left: 0; height: 6px; width: 6px; border-radius: 6px; background-color: $color-menu1-hover; }
 			> a { color: $color-content; text-decoration: underline; }
 		}
@@ -569,7 +569,7 @@ article.contents { min-width: $contents-container-width; padding: 60px 0 110px 0
 		+ .warning { margin-top: 30px; }
 	}
 
-	.warning { position: relative; padding-left: 32px; font-size: 0.750em; color: $color-content; text-align: left; vertical-align: middle;
+	.warning { position: relative; padding-left: 32px; font-size: 12px; color: $color-content; text-align: left; vertical-align: middle;
 		&:before { content: ''; display: block; position: absolute; top: -1px; left: 0; @include sprite($sprite-icon-iks01); }
 		&.none { padding-left: 0;
 			&:before { content: none; }
@@ -580,7 +580,7 @@ article.contents { min-width: $contents-container-width; padding: 60px 0 110px 0
 	}
 
 	.notice {
-		> li { font-size: 0.750em; color: $color-content; line-height: 28px;
+		> li { font-size: 12px; color: $color-content; line-height: 28px;
 			a { color: $color-content; text-decoration: underline; }
 		}
 	}
@@ -588,7 +588,7 @@ article.contents { min-width: $contents-container-width; padding: 60px 0 110px 0
 
 	.auth-tab { position: relative; overflow: hidden; margin-top: 45px; height: 38px;
 		&:before { content: ''; display: block; position: absolute; right: 0; bottom: 0; left: 0; height: 1px; width: 100%; background-color: #bec3cd; }
-		> a { display: block; position: relative; z-index: 1; float: left; padding: 0 45px; font-size: 0.875em; color: $color-content; line-height: 36px; text-decoration: none;
+		> a { display: block; position: relative; z-index: 1; float: left; padding: 0 45px; font-size: 14px; color: $color-content; line-height: 36px; text-decoration: none;
 			&:hover { color: $color-menu1-hover; }
 			&.selected { color: $color-menu1-hover; border: 1px solid #bec3cd; border-bottom: 1px solid #fff; }
 		}
@@ -610,7 +610,7 @@ article.contents { min-width: $contents-container-width; padding: 60px 0 110px 0
 		.btn-submit { margin-top: 40px; }
 
 		.find-info { float: right; margin-top: 10px;
-			a { font-size: 0.750em; color: $color-content; text-decoration: underline;
+			a { font-size: 12px; color: $color-content; text-decoration: underline;
 				&:after { content: ''; display: inline-block; margin-left: 4px; @include sprite($sprite-bg-arrow11); }
 				&.none { &:after { content: none; } }
 			}
@@ -636,7 +636,7 @@ article.contents { min-width: $contents-container-width; padding: 60px 0 110px 0
 
 	.list-notice { margin-top: 22px;
 		li {
-			span { font-size: 0.750em; color: $color-content; line-height: 18px;
+			span { font-size: 12px; color: $color-content; line-height: 18px;
 				&:before { content: ''; display: inline-block; height: 2px; width: 2px; vertical-align: middle; line-height: 18px; background-color: $color-content; }
 				a { color: $color-menu1-hover; text-decoration: underline; }
 			}
@@ -685,11 +685,11 @@ article.contents { min-width: $contents-container-width; padding: 60px 0 110px 0
 
 	/* 완료 메시지 */
 	.complete { box-sizing: border-box; text-align: left; padding: 85px 0 0 140px; height: 547px;
-		h2 { display: block; position: relative; margin-top: 62px; padding: 0 0 0 38px; font-size: 1.000em; font-weight: normal; color: $color-menu1-hover;
+		h2 { display: block; position: relative; margin-top: 62px; padding: 0 0 0 38px; font-size: 16px; font-weight: normal; color: $color-menu1-hover;
 			&:before { content: ''; display: block; position: absolute; bottom: 0; left: 0; @include sprite($sprite-icon-check06); }
 		}
 
-		p { margin-top: 10px; padding-left: 38px; font-size: 0.750em; color: $color-content; line-height: 26px;
+		p { margin-top: 10px; padding-left: 38px; font-size: 12px; color: $color-content; line-height: 26px;
 			> a { color: $color-content; text-decoration: underline; }
 		}
 
@@ -713,27 +713,27 @@ article.contents { min-width: $contents-container-width; padding: 60px 0 110px 0
 
 	strong, em { color: $color-menu1-hover; }
 
-	h1 { display: block; position: relative; padding: 0 0 0 38px; font-size: 1.000em; font-weight: normal; color: $color-menu1-hover;
+	h1 { display: block; position: relative; padding: 0 0 0 38px; font-size: 16px; font-weight: normal; color: $color-menu1-hover;
 		&:before { content: ''; display: block; position: absolute; bottom: 0; left: 0; @include sprite($sprite-icon-check06); }
 	}
-	h1.normal { padding: 0; font-size: 0.875em; font-weight: normal; color: $color-title;
+	h1.normal { padding: 0; font-size: 14px; font-weight: normal; color: $color-title;
 		&:before { content: none; }
 	}
 
-	h2 { margin-top: 36px; font-size: 0.875em; font-weight: normal; color: $color-title; }
-	.contents { padding-top: 7px; font-size: 0.750em; color: $color-content; line-height: 18px;
+	h2 { margin-top: 36px; font-size: 14px; font-weight: normal; color: $color-title; }
+	.contents { padding-top: 7px; font-size: 12px; color: $color-content; line-height: 18px;
 		p { margin-top: 8px; }
 		.btn-shortcut { color: $color-title; text-decoration: underline; }
 	}
 
 	.list-warning { padding-top: 11px;
-		> li { display: block; position: relative; margin-top: 14px; padding-left: 40px; font-size: 0.750em; color: $color-content; line-height: 18px;
+		> li { display: block; position: relative; margin-top: 14px; padding-left: 40px; font-size: 12px; color: $color-content; line-height: 18px;
 			&:before { content: ''; display: block; position: absolute; top: 50%; left: 8px; margin-top: -$sprite-icon-iks01-height/2; @include sprite($sprite-icon-iks01); }
 		}
 	}
 
 	.list-dot {
-		> li { display: block; position: relative; margin-top: 14px; padding-left: 10px; font-size: 0.750em; color: $color-content; line-height: 18px;
+		> li { display: block; position: relative; margin-top: 14px; padding-left: 10px; font-size: 12px; color: $color-content; line-height: 18px;
 			&:before { content: ''; display: block; position: absolute; top: 9px; left: 1px; margin-top: -1px; height: 2px; width: 2px; background-color: $color-content; }
 
 			&.em {
@@ -763,7 +763,7 @@ article.contents { min-width: $contents-container-width; padding: 60px 0 110px 0
 .popup.find { position: relative; overflow: hidden; margin: 130px auto 0 auto; padding: 50px 209px 0px 209px; width: 740px; text-align: center; border: 1px solid #d4dae4; border-radius: 18px; background-color: #fff;
 
 	.find-type-tab { overflow: hidden; margin-top: 14px; width: 100%;
-		> a { display: block; box-sizing: border-box; float: left; padding: 21px 0 14px 0; height: 117px; width: 25%; font-size: 0.750em; color: $color-content; line-height: 16px; text-align: center; border: 1px solid #d4dae4; border-left: 0px;
+		> a { display: block; box-sizing: border-box; float: left; padding: 21px 0 14px 0; height: 117px; width: 25%; font-size: 12px; color: $color-content; line-height: 16px; text-align: center; border: 1px solid #d4dae4; border-left: 0px;
 			&:first-child { border-left: 1px solid #d4dae4; }
 			&:before { content: ''; display: block; margin: 0 auto 8px auto; }
 			&:hover { text-decoration: none; }
@@ -814,7 +814,7 @@ article.contents { min-width: $contents-container-width; padding: 60px 0 110px 0
 	}
 
 	.complete-message {
-		.message { display: inline-block; position: relative; padding: 0 0 0 38px; font-size: 1.000em; font-weight: normal; color: $color-title;
+		.message { display: inline-block; position: relative; padding: 0 0 0 38px; font-size: 16px; font-weight: normal; color: $color-title;
 			&:before { content: ''; display: block; position: absolute; bottom: 0; left: 0; @include sprite($sprite-icon-check06); }
 		}
 	}

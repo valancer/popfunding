@@ -11,7 +11,7 @@
 			}
 		}
 
-		a { font-size: 0.875em; color: $color-menu1;
+		a { font-size: 14px; color: $color-menu1;
 			&:hover,
 			&.selected { color: $color-menu1-hover; }
 		}
@@ -70,7 +70,7 @@
 		&.type03 { background-color: #00bbd4; }
 		&.type04 { background-color: #81c845; }
 
-		span { display: block; font-size: 0.875em; font-weight: bold; color: #fff; }
+		span { display: block; font-size: 14px; font-weight: bold; color: #fff; }
 		a { display: inline-block; text-align: center; text-decoration: none; }
 		strong { display: inline-block; font-size: 1.500em; font-weight: bold; color: #fff; line-height: 1.2em; border-bottom: 2px solid #fff; }
 

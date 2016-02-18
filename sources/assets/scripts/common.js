@@ -579,7 +579,7 @@ var Popup = (function ($) {
 		$btnClose,
 		$btnOvers;
 		init = function () {
-			$btnToggles = $('.va-toogle-btns');
+			$btnToggles = $('.va-toggle-btns');
 			$btnClose = $('.popup button.btn-popup-close');
 			$btnOvers = $('.va-over-btns');
 

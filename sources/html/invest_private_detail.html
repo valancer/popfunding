@@ -102,12 +102,12 @@ include "private_product_detail.html"
 
 						<p class="bad-debt">
 							정보들은 팝펀딩에서 보관하고 있습니다. 대손이 발생할 경우 투자자들에게 일부 공개됩니다.
-							<a href="#popup-bad-debt" class="btn-help">정보공개</a>
+							<a href="#popup-bad-debt" class="btn-help va-toggle-btns">정보공개</a>
 						</p>	
 					</div>
 
 
-					<aside id="popup-bad-debt" class="bad-debt-popup">
+					<aside id="popup-bad-debt" class="popup bad-debt-popup">
 						<button class="btn-popup-close" data-target="#popup-bad-debt">팝업닫기</button>
 
 						<time datetime="">2015.11.18 / 11:30</time>
@@ -137,17 +137,6 @@ include "private_product_detail.html"
 						</table>
 					</aside>
 				</div>
-				<script>
-				$(window.document).ready(function(){
-					// 정보공개
-					var $btnHelp = $('.has-information .btn-help');
-					$btnHelp.on('click', function(e) {
-						e.preventDefault();
-						var target = $btnHelp.attr('href');
-						$(target).toggle();
-					});
-				});
-				</script>
 
 
 				<!-- 빌리는 사연 -->

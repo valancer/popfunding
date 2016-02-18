@@ -46,7 +46,7 @@ include "head.html"
 						</ul>
 					</div>
 
-					<a href="#popup-rating" class="btn-help">팝펀딩 신뢰등급 보기</a>
+					<a href="#popup-rating" class="btn-help va-toggle-btns">팝펀딩 신뢰등급 보기</a>
 
 					<div id="popup-rating" class="popup guide-popup rating-popup">
 						<button class="btn-popup-close" data-target="#popup-rating">팝업닫기</button>
@@ -56,21 +56,15 @@ include "head.html"
 								<figure class="type">
 									<img src="/assets/images/icon_feature07_example.png" alt="">
 									<figcaption>
-										<strong>대출용도</strong>
-										<p class="box">
-											실제 투자에서 마우스를<br>올리면 확인 가능합니다.
-										</p>
+										<strong><br>빌리기 용도</strong>
 									</figcaption>
 								</figure>
 							</li>
 							<li>
 								<figure class="cnt">
-									<img src="/assets/images/cnt_bid2_example.png" alt="">
+									<img src="/assets/images/cnt_bid32_example.png" alt="">
 									<figcaption>
-										<strong>경매횟수</strong>
-										<p class="box">
-											경매에서 상환까지<br>대손없이 완료한 횟수
-										</p>
+										<strong>정상상환<br>누적 개월수</strong>
 									</figcaption>
 								</figure>
 							</li>
@@ -78,37 +72,46 @@ include "head.html"
 								<figure class="overdue">
 									<img src="/assets/images/bg_overdue02_example.png" alt="">
 									<figcaption>
-										<strong>상환등급</strong>
+										<strong>연체등급<br>(월평균 연체일 기준)</strong>
 										<table>
-											<caption>상환등급 설명</caption>
+											<caption>연체등급 설명</caption>
 											<tbody>
 												<tr class="top">
 													<th><span class="convert cr">a</span></th>
-													<td>0일 ~ 0.9일</td>
+													<td>월 0.5일 미만 연체</td>
 												</tr>
 												<tr>
 													<th><span class="convert cr">b</span></th>
-													<td>1일 ~ 2.9일</td>
+													<td>월 3일 미만 연체</td>
 												</tr>
 												<tr>
 													<th><span class="convert cr">c</span></th>
-													<td>3일 ~ 10일</td>
+													<td>월 10일 미만 연체</td>
 												</tr>
 												<tr>
 													<th><span class="convert cr">d</span></th>
-													<td>11일 이상</td>
+													<td>월 10일 이상 연체</td>
 												</tr>
 												<tr>
-													<th><span class="convert cr">none</span></th>
+													<th><span class="convert cr">n</span></th>
 													<td>기록 없음</td>
 												</tr>
 											</tbody>
 										</table>
-										<p class="tb-bottom">월 평균 연체일 기준</p>
 									</figcaption>
 								</figure>
 							</li>
-						</ul>						
+						</ul>
+
+						<ul class="list-ex">
+							<li>
+								<span class="borrowing-count">95</span><span class="credit-rating">A</span>인 경우, 정상상환 개월 수가 95회로 팝펀딩에서 대출경력이<br>많고 연체등급이 A로 연체율이 매우 낮은 대출자입니다.
+							</li>
+							<li>
+								<span class="borrowing-count">24</span><span class="credit-rating">D</span>인 경우, 정상상환 개월 수가 24회로 팝펀딩에서 대출경력이<br>조금 있고 연체등급이 D로 연체율이 높은 대출자입니다.
+     						</li>
+						</ul>
+
 					</div>
 				</fieldset>
 				<script>
@@ -119,14 +122,6 @@ include "head.html"
 						e.preventDefault();
 
 						$(this).toggleClass('hover');
-					});
-
-					// 신뢰등급 보기
-					var $btnHelp = $('.sorting .btn-help');
-					$btnHelp.on('click', function(e) {
-						e.preventDefault();
-						var target = $btnHelp.attr('href');
-						$(target).toggle();
 					});
 				});
 				</script>

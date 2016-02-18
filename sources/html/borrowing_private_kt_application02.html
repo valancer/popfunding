@@ -245,20 +245,9 @@ include "head.html"
 									<input type="text" id="" name="" disabled="disabled" value="9.9%(원금균등상황)">
 								</div>
 
-								<a href="#preview-repayment" class="btn-inner-form only-buttons">
+								<a href="#preview-repayment" class="btn-inner-form only-buttons va-toggle-btns">
 									상환내역 미리보기
 								</a>
-								<script>
-								$(window.document).ready(function(){
-									// 상환내역 미리보기
-									var $btnPreview = $('a.btn-inner-form');
-									$btnPreview.on('click', function(e) {
-										e.preventDefault();
-										var target = $btnPreview.attr('href');
-										$(target).toggle();
-									});
-								});
-								</script>
 
 								<!-- 팝업 -->
 								<aside id="preview-repayment" class="popup guide-popup preview-popup">

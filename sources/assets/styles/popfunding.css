@@ -297,7 +297,7 @@ body {
   /*padding-left: 20px;*/
   height: 55px;
   width: 380px;
-  font-size: 20px;
+  font-size: 18px;
   color: #fff;
   font-weight: bold;
   line-height: 55px;
@@ -1084,8 +1084,6 @@ span.center {
       .procedding-investment .btns p a {
         color: #6b7581;
         text-decoration: underline; }
-    .procedding-investment .btns .btn-invest {
-      font-size: 18px; }
 
 /* 개인/기업 투자 소개 - 수익금 출금 */
 .withdraw {
@@ -4786,6 +4784,7 @@ article.contents {
         .product-detail-view .has-information > .inner .bad-debt .btn-help {
           margin-left: 10px; }
     .product-detail-view .has-information .bad-debt-popup {
+      display: none;
       position: absolute;
       top: -1px;
       right: -1px;
@@ -5208,6 +5207,7 @@ article.contents {
           height: 37px;
           min-width: 154px;
           font-size: 0.875em;
+          font-weight: bold;
           color: #fff;
           text-align: center;
           line-height: 37px;
@@ -7555,7 +7555,7 @@ article.contents {
         display: block;
         margin: 30px auto 0 auto;
         width: 400px;
-        font-size: 1.000em;
+        font-size: 1.125em;
         font-weight: bold;
         color: #fff;
         line-height: 55px;
@@ -7566,7 +7566,7 @@ article.contents {
         .contents.borrowing-private .application > .box .btn-borrowing:after {
           content: '';
           display: inline-block;
-          margin: -2px 0 0 22px;
+          margin: -2px 0 0 10px;
           vertical-align: middle;
           background-image: url(/assets/images/sprites.png);
           background-position: -827px -303px;
@@ -7835,7 +7835,7 @@ article.contents {
         line-height: 1.3em; }
       .contents.borrowing-private .borrowing-application .proceedings-step .description {
         margin-top: 13px;
-        font-size: 0.750em;
+        font-size: 12px;
         color: #6b7581;
         line-height: 18px;
         text-align: center; }
@@ -8272,6 +8272,7 @@ article.contents {
             padding-right: 60px;
             height: 423px; }
         .contents.borrowing-private .borrowing-application .proceedings-step.application .tip-txt-popup {
+          display: none;
           position: absolute;
           top: 26px;
           right: -120px;

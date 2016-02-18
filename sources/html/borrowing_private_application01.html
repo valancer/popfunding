@@ -82,18 +82,7 @@ include "head.html"
 								신용/소득 보고서 조회, SMS 발송,<br>
 								증빙서류스캔등의 비용이 발생합니다.<br>
 							</p>
-							<a href="#popup-m-fee" class="warning">가입비 결제 전에 꼭 확인하세요!</a>
-							<script>
-							$(window.document).ready(function(){
-								// 가입비
-								var $btnMFee = $('a.warning');
-								$btnMFee.on('click', function(e) {
-									e.preventDefault();
-									var target = $btnMFee.attr('href');
-									$(target).toggle();
-								});
-							});
-							</script>
+							<a href="#popup-m-fee" class="warning va-toggle-btns">가입비 결제 전에 꼭 확인하세요!</a>
 							
 							<!-- 팝업 -->
 							<aside id="popup-m-fee" class="popup guide-popup mfee-popup">

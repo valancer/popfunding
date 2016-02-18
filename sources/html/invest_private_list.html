@@ -47,7 +47,7 @@ include "head.html"
 						</ul>
 					</div>
 
-					<a href="#popup-rating" class="btn-help">팝펀딩 신뢰등급 보기</a>
+					<a href="#popup-rating" class="btn-help va-toggle-btns">팝펀딩 신뢰등급 보기</a>
 
 					<div id="popup-rating" class="popup guide-popup rating-popup">
 						<button class="btn-popup-close" data-target="#popup-rating">팝업닫기</button>
@@ -123,14 +123,6 @@ include "head.html"
 						e.preventDefault();
 
 						$(this).toggleClass('hover');
-					});
-
-					// 신뢰등급 보기
-					var $btnHelp = $('.sorting .btn-help');
-					$btnHelp.on('click', function(e) {
-						e.preventDefault();
-						var target = $btnHelp.attr('href');
-						$(target).toggle();
 					});
 				});
 				</script>

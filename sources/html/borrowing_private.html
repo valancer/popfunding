@@ -66,20 +66,9 @@ include "head.html"
 					<li>
 						<span class="txt title04">이자와 상환방법</span>
 						<p>
-							연 0~25% (자율설정)이고, <a href="#popup-epr" class="btn-epr">원금 균등상환</a>입니다.<br>
+							연 0~25% (자율설정)이고, <a href="#popup-epr" class="btn-epr va-toggle-btns">원금 균등상환</a>입니다.<br>
 							( KT회원 소액빌리기 : 연 9.9% 고정금리, 원금균등상환 )
 						</p>
-						<script>
-						$(window.document).ready(function(){
-							// 원금 균등상환
-							var $btnEPR = $('.btn-epr');
-							$btnEPR.on('click', function(e) {
-								e.preventDefault();
-								var target = $btnEPR.attr('href');
-								$(target).toggle();
-							});
-						});
-						</script>
 
 						<aside id="popup-epr" class="popup guide-popup epr-popup">
 							<button class="btn-popup-close" data-target="#popup-epr">팝업닫기</button>
@@ -179,7 +168,7 @@ include "head.html"
 							<strong class="title">빌리기 신청</strong>
 							<p>
 								대출자 인증<br>
-								대출회원 가입비 결제 <a href="#member-fee" class="btn-member-fee">(19,800원)</a><br>
+								대출회원 가입비 결제 <a href="#member-fee" class="btn-member-fee va-toggle-btns">(19,800원)</a><br>
 								신용보고서 조회<br>
 								소득보고서 조회(선택)<br>
 							</p>
@@ -223,7 +212,7 @@ include "head.html"
 						<li class="seq01">
 							팝펀딩에 서류 제출하기
 							<p>
-								<a href="#paper-detail" class="btn-paper-detail">증빙서류 자세히 보기</a>
+								<a href="#paper-detail" class="btn-paper-detail va-toggle-btns">증빙서류 자세히 보기</a>
 							</p>
 						</li>
 						<li class="seq02">
@@ -248,16 +237,6 @@ include "head.html"
 					</div>
 				</div>
 			</section>
-			<script>
-			$(window.document).ready(function(){
-				// 가입비 결제 / 증빙서류 자세히 보기
-				$('.btn-member-fee, .btn-paper-detail').on('click', function(e) {
-					e.preventDefault();
-					var target = $(this).attr('href');
-					$(target).toggle();
-				});
-			});
-			</script>
 
 		</div>
 	</article>

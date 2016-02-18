@@ -105,20 +105,9 @@ include "head.html"
 									</div>
 								</div>
 
-								<a href="#preview-repayment" class="btn-inner-form only-buttons">
+								<a href="#preview-repayment" class="btn-inner-form only-buttons va-toggle-btns">
 									상환내역 미리보기
 								</a>
-								<script>
-								$(window.document).ready(function(){
-									// 상환내역 미리보기
-									var $btnPreview = $('a.btn-inner-form');
-									$btnPreview.on('click', function(e) {
-										e.preventDefault();
-										var target = $btnPreview.attr('href');
-										$(target).toggle();
-									});
-								});
-								</script>
 
 								<!-- 팝업 -->
 								<aside id="preview-repayment" class="popup guide-popup preview-popup">
@@ -535,18 +524,7 @@ include "head.html"
 						</div>
 
 						<div class="btns">
-							<a href="#tip-txt" class="btn-tip-txt">추가 증빙서류는 100% 달성에 도움이 됩니다.</a>
-							<script>
-							$(window.document).ready(function(){
-								// 
-								var $btnTipTxt = $('a.btn-tip-txt');
-								$btnTipTxt.on('click', function(e) {
-									e.preventDefault();
-									var target = $btnTipTxt.attr('href');
-									$(target).toggle();
-								});
-							});
-							</script>
+							<a href="#tip-txt" class="btn-tip-txt va-toggle-btns">추가 증빙서류는 100% 달성에 도움이 됩니다.</a>
 							
 							<aside id="tip-txt" class="popup tip-txt-popup">
 								<h1>추가 증빙서류 스캔 서비스</h1>

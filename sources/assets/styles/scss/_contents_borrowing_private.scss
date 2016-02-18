@@ -94,8 +94,8 @@
 				}
 			}
 
-			.btn-borrowing { display: block; margin: 30px auto 0 auto; width: 400px; font-size: 1.000em; font-weight: bold; color: #fff; line-height: 55px; text-align: center; text-decoration: none; border-radius: 55px; background-color: $color-borrowing;
-				&:after { content: ''; display: inline-block; margin: -2px 0 0 22px; vertical-align: middle; @include sprite($sprite-bg-arrow17); }
+			.btn-borrowing { display: block; margin: 30px auto 0 auto; width: 400px; font-size: 1.125em; font-weight: bold; color: #fff; line-height: 55px; text-align: center; text-decoration: none; border-radius: 55px; background-color: $color-borrowing;
+				&:after { content: ''; display: inline-block; margin: -2px 0 0 10px; vertical-align: middle; @include sprite($sprite-bg-arrow17); }
 			}
 			.faq { margin-top: 12px; font-size: 0.750em; color: $color-content; line-height: 18px; text-align: center; 
 				a { color: $color-content; text-decoration: underline; }
@@ -205,7 +205,7 @@
 		/* 빌리기 과정 */
 		.proceedings-step { padding: 46px 0 80px 0;
 			> h2 { font-size: 1.375em; font-weight: bold; color: $color-title; text-align: center; line-height: 1.3em; }
-			.description { margin-top: 13px; font-size: 0.750em; color: $color-content; line-height: 18px; text-align: center; }
+			.description { margin-top: 13px; font-size: 12px; color: $color-content; line-height: 18px; text-align: center; }
 
 			/* 빌리기 준비 과정 */
 			.prepare-step01 { margin: 40px auto 0 auto; width: 920px;
@@ -400,7 +400,7 @@
 				}
 
 				/* 증빙서류 관련 팁 텍스트 */
-				.tip-txt-popup { position: absolute; top: 26px; right: -120px; z-index: z("modaless"); padding: 13px 16px; width: 340px; font-size: 0.875em; color: $color-content; line-height: 22px; border: 1px solid #c3d0e1; border-radius: 4px; background-color: #fff;
+				.tip-txt-popup { display: none; position: absolute; top: 26px; right: -120px; z-index: z("modaless"); padding: 13px 16px; width: 340px; font-size: 0.875em; color: $color-content; line-height: 22px; border: 1px solid #c3d0e1; border-radius: 4px; background-color: #fff;
 					&:before { content: ''; display: block; position: absolute; top: -$sprite-bg-arrow15-height; left: 106px; @include sprite($sprite-bg-arrow15); }
 
 					> h1 { display: block; padding: 0; font-size: 0.857em; color: $color-title;

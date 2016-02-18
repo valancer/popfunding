@@ -498,7 +498,7 @@ $border-inner-color: #e6e9ee;
 			}
 		}
 
-		.bad-debt-popup { position: absolute; top: -1px; right: -1px; left: -1px; z-index: z("modaless"); padding: 50px 187px; border: 2px solid $border-color; background-color: #fff;
+		.bad-debt-popup { display: none; position: absolute; top: -1px; right: -1px; left: -1px; z-index: z("modaless"); padding: 50px 187px; border: 2px solid $border-color; background-color: #fff;
 			.btn-popup-close { position: absolute; top: 12px; right: 12px; }
 			h1 { font-size: 1.125em; font-weight: normal; color: $color-title;
 				> em { color: $color-menu1-hover; }
@@ -665,7 +665,7 @@ $border-inner-color: #e6e9ee;
 						}
 						textarea { overflow: auto; margin-top: 13px; height: 80px; width: 100%; font-size: 0.875em; color: $color-content; line-height: 22px; border: 0px; background-color: transparent; }
 					}
-					> .btn-answer { display: block; margin: 20px auto 0 auto; height: 37px; min-width: 154px; font-size: 0.875em; color: #fff; text-align: center; line-height: 37px; border-radius: 37px; background-color: #6cc800;
+					> .btn-answer { display: block; margin: 20px auto 0 auto; height: 37px; min-width: 154px; font-size: 0.875em; font-weight: bold; color: #fff; text-align: center; line-height: 37px; border-radius: 37px; background-color: #6cc800;
 						&:hover { text-decoration: none; background-color: #4eb500; }
 					}
 				}

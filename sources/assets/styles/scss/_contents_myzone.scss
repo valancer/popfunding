@@ -1,0 +1,105 @@
+/* 마이존 */
+.contents.myzone { padding-bottom: 117px;
+
+	/* 마이존 상단 서브 메뉴 */
+	.menus-sub { margin-top: 47px;
+		ul { text-align: center;
+			> li { display: inline-block;
+				+ li {
+					&:before { content: '|'; display: inline-block; margin-right: 13px; margin-left: 9px; color: #dee1e7; text-decoration: none; }
+				}
+			}
+		}
+
+		a { font-size: 0.875em; color: $color-menu1;
+			&:hover,
+			&.selected { color: $color-menu1-hover; }
+		}
+	}
+
+	/* 마이존 컨테츠 박스 */
+	.myzone-box { margin-top: 54px; padding-bottom: 80px; border: 1px solid #d4dae4; border-radius: 18px; background-color: #fff; }
+
+	/* 게별 섹션 */
+	.section { padding: 77px 119px 0 119px;
+		.title { font-size: 1.125em; font-weight: normal; color: $color-title; line-height: 1.3em;
+			+ .tbl-data-h,
+			+ .tbl-data-v { margin-top: 28px; }
+		}
+
+		.filter { float: right; margin-top: -4px; }
+	}
+
+	/* 데이터 테이블 */
+	.tbl-data-h { table-layout: fixed; width: 100%; border-top: 2px solid $color-title;
+		th { height: 54px; font-size: 14px; font-weight: normal; color: $color-title; line-height: 16px; border-bottom: 1px solid #d4dae4; background-color: #fbfbfb; }
+		td { height: 54px; font-size: 14px; color: $color-content; text-align: center; line-height: 16px; border-bottom: 1px solid #d4dae4; border-left: 1px solid #d4dae4; background-color: #fff;
+			em { color: $color-menu1-hover; }
+			strong { color: $color-menu1-hover; text-decoration: underline; }
+		}
+	}
+	.tbl-data-v { table-layout: fixed; width: 100%; border-top: 2px solid $color-title;
+		> thead { border-bottom: 1px solid #7c7f84;
+			th { height: 45px; font-size: 14px; font-weight: normal; color: $color-title; line-height: 16px; border-left: 1px solid #d4dae4; background-color: #fbfbfb;
+				&:first-child { border-left: 0px; }
+			}
+		}
+		> tbody {
+			td { position: relative; height: 45px; font-size: 14px; color: $color-content; text-align: center; line-height: 16px; border-bottom: 1px solid #d4dae4; border-left: 1px solid #d4dae4; background-color: #fff;
+				&:first-child { border-left: 0px; }
+				a { color: $color-content; text-decoration: underline; }
+				.plus { color: #006bf0; }
+				.minus { color: $color-menu1-hover; }
+			}
+		}
+
+		.btn-detail { display: inline-block; text-indent: -9999px; @include sprite($sprite-btn-view01); }
+
+		+ .paging { margin-top: 40px; }
+	}
+
+
+}
+
+
+/* 마이존 - 내 계좌 */
+.contents.myzone.account {
+	.status { position: relative; padding: 31px 0 37px 0; height: 50px; text-align: center; border-radius: 5px; background-color: #0f0;
+		&.type01 { background-color: #ff507d; }
+		&.type02 { background-color: #14378c; }
+		&.type03 { background-color: #00bbd4; }
+		&.type04 { background-color: #81c845; }
+
+		span { display: block; font-size: 0.875em; font-weight: bold; color: #fff; }
+		a { display: inline-block; text-align: center; text-decoration: none; }
+		strong { display: inline-block; font-size: 1.500em; font-weight: bold; color: #fff; line-height: 1.2em; border-bottom: 2px solid #fff; }
+
+		button { display: block; position: absolute; text-indent: -9999px;
+			&.btn-status-help { top: 3px; right: 3px; @include sprite($sprite-btn-help03); }
+			&.btn-status-detail { bottom: 3px; right: 3px; @include sprite($sprite-btn-detail01); }
+		}
+	}
+
+	.list-staus-account { margin: 27px -2px 0 -2px; height: 118px;
+		> li { display: block; float: left; box-sizing: border-box; height: 118px; padding: 0 2px; width: 25%;
+		}
+	}
+
+	/* section 내 2단 컬럼 */
+	.column { float: left; width: 50%; }
+
+	/* 테이블 내 오버시 노출되는 데이터 */
+	.tbl-over-data { display: none; bottom: 85%; right: -20px; left: auto; padding: 10px 14px;
+		&:before { right: 40px; }
+
+		table { min-width: 190px;
+			th { height: auto; width: 54px; font-size: 12px; font-weight: normal; color: $color-content; text-align: left; line-height: 23px; border-top: 1px solid #c3d0e1; border-bottom: 0px; }
+			td { padding-left: 7px; height: auto; font-size: 12px; font-weight: normal; color: $color-content; text-align: left; line-height: 23px; border-left: 1px solid #c3d0e1; border-top: 1px solid #c3d0e1; border-bottom: 0px; }
+			tbody {
+				tr:first-child { 
+					th, td { border-top: 0px;  }
+				}
+			}
+		}
+	}
+}

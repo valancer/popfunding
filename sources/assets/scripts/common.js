@@ -577,9 +577,11 @@ var Story = (function ($) {
 var Popup = (function ($) {
 	var $btnToggles,
 		$btnClose,
+		$btnOvers;
 		init = function () {
 			$btnToggles = $('.va-toogle-btns');
 			$btnClose = $('.popup button.btn-popup-close');
+			$btnOvers = $('.va-over-btns');
 
 			initLayout();
 			initEvent();
@@ -608,6 +610,26 @@ var Popup = (function ($) {
 				target = $(this).attr('href');
 			}
 			$(target).toggle();
+		});
+
+		// 전체 마우스 오버 버튼
+		$btnOvers.on('mouseover', function(e) {
+			var target = null;
+			if( $(this).is('[value]') ) {
+				target = $(this).val();
+			} else if( $(this).is('[href]') ) {
+				target = $(this).attr('href');
+			}
+			$(target).show();
+			
+		}).on('mouseout', function(e) {
+			var target = null;
+			if( $(this).is('[value]') ) {
+				target = $(this).val();
+			} else if( $(this).is('[href]') ) {
+				target = $(this).attr('href');
+			}
+			$(target).hide();
 		});
 	}
 

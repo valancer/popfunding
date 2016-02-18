@@ -1,6 +1,13 @@
 /* 공통 */
 
 
+/* 셀렉트 박스 */
+select { appearance: none; box-sizing:border-box; min-width: 60px; padding: 7px 26px 8px 16px; font-size: 12px; color: $color-title; border: 1px solid #c3d0e1; border-radius: 3px; background:#fff url(/assets/images//bg_select.png) 100% 0 no-repeat;
+}
+.ie9 select {background-image:none;}
+.ie8 select {background-image:none;}
+select::-ms-expand { display: none; }
+
 
 /* 이미지 텍스트 */
 .txt { display: block; text-indent: -9999px; }
@@ -8,8 +15,9 @@
 /* 페이지 상단 필터 */
 .filter-container {
 	.filter { position: relative;
-		input[type=radio] { position: absolute; top: -9999px; left: -9999px;
-			&.selected + label { color: $color-menu1-hover; }
+		input[type=radio] { position: absolute; left: -9999px;
+			&.selected, { color: $color-menu1-hover; }
+			&:checked + label { color: $color-menu1-hover; }
 		}
 		label { display: block; float: left; position: relative; font-size: 1.063em; font-weight: bold; color: $color-menu1; cursor: pointer; line-height: 37px;
 			&:hover { color: $color-menu1-hover; }
@@ -335,11 +343,14 @@
 .paging { position: relative; margin-top: 43px; text-align: center;
 	.btn-top { position: absolute; top: 0; right: 0; border: 0px; }
 
-	> a { display: inline-block; margin-right: 3px; margin-left: 2px; height: 37px; width: 37px; font-size: 1.125em; color: $color-menu1; text-align: center; line-height: 36px; border: 1px solid #d4dae4; border-radius: 37px; background-color: #fff;
+	> a { display: inline-block; padding-right: 10px; padding-left: 10px; margin-right: 3px; margin-left: 2px; height: 37px; min-width: 17px; font-size: 1.125em; color: $color-menu1; text-align: center; line-height: 36px; border: 1px solid #d4dae4; border-radius: 37px; background-color: #fff;
 		transition: background-color 0.2s linear, color 0.2s;
 		&:hover,
 		&.selected { font-weight: 700; color: #fff; text-decoration: none; background-color: $color-menu1-hover;
 			transition: background-color 0.2s linear, color 0.2s;
+		}
+		&.type-txt { font-size: 0.875em; border: 0px;
+			&:hover { color: $color-menu1-hover; background-color: #fff; }
 		}
 	}
 

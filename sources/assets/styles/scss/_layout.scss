@@ -749,6 +749,9 @@ article.contents { min-width: $contents-container-width; padding: 60px 0 110px 0
 		&.left {
 			&:before { top: auto; left: -$sprite-bg-arrow19-width; @include sprite($sprite-bg-arrow19); }
 		}
+		&.bottom {
+			&:before { top: auto; bottom: -$sprite-bg-arrow16-height; left: auto; @include sprite($sprite-bg-arrow16); }
+		}
 
 		.list-dot {
 			> li { margin-top: 5px; }

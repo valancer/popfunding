@@ -25,6 +25,8 @@
 		.title { font-size: 1.125em; font-weight: normal; color: $color-title; line-height: 1.3em;
 			+ .tbl-data-h,
 			+ .tbl-data-v { margin-top: 28px; }
+
+			.btn-help-withdraw { display: inline-block; margin-top: -2px; text-indent: -9999px; vertical-align: middle; @include sprite($sprite-btn-help04); }
 		}
 
 		.filter { float: right; margin-top: -4px; }
@@ -70,7 +72,7 @@
 		&.type03 { background-color: #00bbd4; }
 		&.type04 { background-color: #81c845; }
 
-		span { display: block; font-size: 14px; font-weight: bold; color: #fff; }
+		span { display: block; margin-bottom: 4px; font-size: 14px; font-weight: bold; color: #fff; }
 		a { display: inline-block; text-align: center; text-decoration: none; }
 		strong { display: inline-block; font-size: 1.500em; font-weight: bold; color: #fff; line-height: 1.2em; border-bottom: 2px solid #fff; }
 
@@ -85,8 +87,15 @@
 		}
 	}
 
-	/* section 내 2단 컬럼 */
-	.column { float: left; width: 50%; }
+	/* 도움말 팝업 */
+	.status-help-popup { display: block;
+		figure {
+			dl {
+				dt { display: none; }
+				dd { display: block; font-size: 12px; color: $color-content; line-height: 18px; }
+			}
+		}	
+	}
 
 	/* 테이블 내 오버시 노출되는 데이터 */
 	.tbl-over-data { display: none; bottom: 85%; right: -20px; left: auto; padding: 10px 14px;
@@ -102,4 +111,62 @@
 			}
 		}
 	}
+
+
+	/* 나의 계좌 & 출금 */
+	.section.my-account-withdraw {
+		/* section 내 2단 컬럼 */
+		.column { float: left; position: relative; width: 410px;
+			.withdraw-popup { top: 28px; width: 420px;
+				&:before { left: 74px; }
+			}
+		}
+		.column + .column {
+			.info { width: 509px; border-left: 1px solid #d4dae4; background-color: #fbfbfb; }
+		}
+		.info { box-sizing: border-box; margin-top: 27px; padding: 29px 0 0 20px; height: 192px; border-top: 2px solid $color-title; border-bottom: 1px solid #d4dae4;
+			.bank-account { margin-top: 0px; font-size: 16px; color: $color-title; line-height: 22px;
+				a { color: $color-menu1-hover; text-decoration: underline; }
+			}
+
+			.item-form { overflow: hidden; height: 116px;
+				.bank-account { margin-bottom: 17px; }
+				.center { float: left; }
+				input[type=text] { width: 272px; color: $color-menu1-hover; }
+				.btn-submit { float: left; width: 154px; }
+			}
+			
+			.desc { clear: both; padding-top: 7px; font-size: 14px; color: $color-content; line-height: 1.3em;
+				em { color: $color-menu1-hover; }
+			}
+
+			.results { overflow: hidden;
+				.amount { float: left; margin-right: 10px; padding-top: 2px; padding-bottom: 2px; height: 33px; min-width: 158px; font-size: 16px; color: $color-title; border-right: 1px solid #d4dae4;
+					strong { margin-left: 5px; color: $color-menu1-hover; }
+					span { display: block; margin-top: 2px; font-size: 12px; color: $color-content; }
+				}
+				dl { float: left; line-height: 18px;
+					dt { display: block; float: left; font-size: 12px; color: $color-content; }
+					dd { display: block; float: left; margin-left: 6px; font-size: 12px; color: $color-menu1-hover;
+						+ dt { clear: left; }
+					}
+				}
+				.btn-submit { float: right; margin-right: 27px; width: 87px; }
+			}
+
+			.dot { position: relative; margin-top: 16px; padding-left: 8px; font-size: 12px; color: $color-content; line-height: 1.3em;
+				&:before { content: ''; display: block; position: absolute; top: 6px; left: 0; height: 3px; width: 3px; background-color: $color-menu1-hover; }
+
+				em { color: $color-menu1-hover; }
+				a { color: $color-content; text-decoration: underline; }
+			}
+		}
+	}
 }
+
+
+
+
+
+
+

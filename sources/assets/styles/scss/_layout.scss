@@ -707,9 +707,9 @@ article.contents { min-width: $contents-container-width; padding: 60px 0 110px 0
 
 
 /* GUIDE POPUP */
-.popup.guide-popup { position: absolute; z-index: z("modaless"); padding: 40px 25px 43px 38px; text-align: left; border: 1px solid #d4dae4; background-color: #fff;
+.popup.guide-popup { display: none; position: absolute; z-index: z("modaless"); padding: 40px 25px 43px 38px; text-align: left; border: 1px solid #d4dae4; background-color: #fff;
 	&:before { content: ''; position: absolute; top: -$sprite-bg-arrow10-height; @include sprite($sprite-bg-arrow10); }
-	.btn-popup-close { position: absolute; top: 13px; right: 13px; }
+	.btn-popup-close { position: absolute; top: 13px; right: 13px; z-index: z("default"); }
 
 	strong, em { color: $color-menu1-hover; }
 
@@ -735,6 +735,7 @@ article.contents { min-width: $contents-container-width; padding: 60px 0 110px 0
 	.list-dot {
 		> li { display: block; position: relative; margin-top: 14px; padding-left: 10px; font-size: 12px; color: $color-content; line-height: 18px;
 			&:before { content: ''; display: block; position: absolute; top: 9px; left: 1px; margin-top: -1px; height: 2px; width: 2px; background-color: $color-content; }
+			&:first-child { padding-right: 20px; }
 
 			&.em {
 				&:before { background-color: $color-menu1-hover; }

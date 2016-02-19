@@ -3199,6 +3199,7 @@ article.contents {
 
 /* GUIDE POPUP */
 .popup.guide-popup {
+  display: none;
   position: absolute;
   z-index: 900;
   padding: 40px 25px 43px 38px;
@@ -3217,7 +3218,8 @@ article.contents {
   .popup.guide-popup .btn-popup-close {
     position: absolute;
     top: 13px;
-    right: 13px; }
+    right: 13px;
+    z-index: 1; }
   .popup.guide-popup strong, .popup.guide-popup em {
     color: #ff4776; }
   .popup.guide-popup h1 {
@@ -3298,6 +3300,8 @@ article.contents {
       height: 2px;
       width: 2px;
       background-color: #6b7581; }
+    .popup.guide-popup .list-dot > li:first-child {
+      padding-right: 20px; }
     .popup.guide-popup .list-dot > li.em:before {
       background-color: #ff4776; }
   .popup.guide-popup.type-tooltip {
@@ -6749,7 +6753,7 @@ article.contents {
           display: block;
           margin-top: 7px;
           font-size: 20px;
-          line-height: 16px;
+          line-height: 1.000em;
           text-decoration: none; }
         .contents.bonds-invest .product .info .group li.price.sell {
           padding-left: 6px; }
@@ -8582,6 +8586,15 @@ body.popup-window {
       .contents.myzone .section .title + .tbl-data-h,
       .contents.myzone .section .title + .tbl-data-v {
         margin-top: 28px; }
+      .contents.myzone .section .title .btn-help-withdraw {
+        display: inline-block;
+        margin-top: -2px;
+        text-indent: -9999px;
+        vertical-align: middle;
+        background-image: url(/assets/images/sprites.png);
+        background-position: -379px -743px;
+        width: 17px;
+        height: 17px; }
     .contents.myzone .section .filter {
       float: right;
       margin-top: -4px; }
@@ -8658,8 +8671,9 @@ body.popup-window {
 
 /* 마이존 - 내 계좌 */
 .contents.myzone.account {
-  /* section 내 2단 컬럼 */
-  /* 테이블 내 오버시 노출되는 데이터 */ }
+  /* 도움말 팝업 */
+  /* 테이블 내 오버시 노출되는 데이터 */
+  /* 나의 계좌 & 출금 */ }
   .contents.myzone.account .status {
     position: relative;
     padding: 31px 0 37px 0;
@@ -8677,6 +8691,7 @@ body.popup-window {
       background-color: #81c845; }
     .contents.myzone.account .status span {
       display: block;
+      margin-bottom: 4px;
       font-size: 14px;
       font-weight: bold;
       color: #fff; }
@@ -8719,9 +8734,15 @@ body.popup-window {
       height: 118px;
       padding: 0 2px;
       width: 25%; }
-  .contents.myzone.account .column {
-    float: left;
-    width: 50%; }
+  .contents.myzone.account .status-help-popup {
+    display: block; }
+    .contents.myzone.account .status-help-popup figure dl dt {
+      display: none; }
+    .contents.myzone.account .status-help-popup figure dl dd {
+      display: block;
+      font-size: 12px;
+      color: #6b7581;
+      line-height: 18px; }
   .contents.myzone.account .tbl-over-data {
     display: none;
     bottom: 85%;
@@ -8755,3 +8776,115 @@ body.popup-window {
         border-bottom: 0px; }
       .contents.myzone.account .tbl-over-data table tbody tr:first-child th, .contents.myzone.account .tbl-over-data table tbody tr:first-child td {
         border-top: 0px; }
+  .contents.myzone.account .section.my-account-withdraw {
+    /* section 내 2단 컬럼 */ }
+    .contents.myzone.account .section.my-account-withdraw .column {
+      float: left;
+      position: relative;
+      width: 410px; }
+      .contents.myzone.account .section.my-account-withdraw .column .withdraw-popup {
+        top: 28px;
+        width: 420px; }
+        .contents.myzone.account .section.my-account-withdraw .column .withdraw-popup:before {
+          left: 74px; }
+    .contents.myzone.account .section.my-account-withdraw .column + .column .info {
+      width: 509px;
+      border-left: 1px solid #d4dae4;
+      background-color: #fbfbfb; }
+    .contents.myzone.account .section.my-account-withdraw .info {
+      box-sizing: border-box;
+      margin-top: 27px;
+      padding: 29px 0 0 20px;
+      height: 192px;
+      border-top: 2px solid #252525;
+      border-bottom: 1px solid #d4dae4; }
+      .contents.myzone.account .section.my-account-withdraw .info .bank-account {
+        margin-top: 0px;
+        font-size: 16px;
+        color: #252525;
+        line-height: 22px; }
+        .contents.myzone.account .section.my-account-withdraw .info .bank-account a {
+          color: #ff4776;
+          text-decoration: underline; }
+      .contents.myzone.account .section.my-account-withdraw .info .item-form {
+        overflow: hidden;
+        height: 116px; }
+        .contents.myzone.account .section.my-account-withdraw .info .item-form .bank-account {
+          margin-bottom: 17px; }
+        .contents.myzone.account .section.my-account-withdraw .info .item-form .center {
+          float: left; }
+        .contents.myzone.account .section.my-account-withdraw .info .item-form input[type=text] {
+          width: 272px;
+          color: #ff4776; }
+        .contents.myzone.account .section.my-account-withdraw .info .item-form .btn-submit {
+          float: left;
+          width: 154px; }
+      .contents.myzone.account .section.my-account-withdraw .info .desc {
+        clear: both;
+        padding-top: 7px;
+        font-size: 14px;
+        color: #6b7581;
+        line-height: 1.3em; }
+        .contents.myzone.account .section.my-account-withdraw .info .desc em {
+          color: #ff4776; }
+      .contents.myzone.account .section.my-account-withdraw .info .results {
+        overflow: hidden; }
+        .contents.myzone.account .section.my-account-withdraw .info .results .amount {
+          float: left;
+          margin-right: 10px;
+          padding-top: 2px;
+          padding-bottom: 2px;
+          height: 33px;
+          min-width: 158px;
+          font-size: 16px;
+          color: #252525;
+          border-right: 1px solid #d4dae4; }
+          .contents.myzone.account .section.my-account-withdraw .info .results .amount strong {
+            margin-left: 5px;
+            color: #ff4776; }
+          .contents.myzone.account .section.my-account-withdraw .info .results .amount span {
+            display: block;
+            margin-top: 2px;
+            font-size: 12px;
+            color: #6b7581; }
+        .contents.myzone.account .section.my-account-withdraw .info .results dl {
+          float: left;
+          line-height: 18px; }
+          .contents.myzone.account .section.my-account-withdraw .info .results dl dt {
+            display: block;
+            float: left;
+            font-size: 12px;
+            color: #6b7581; }
+          .contents.myzone.account .section.my-account-withdraw .info .results dl dd {
+            display: block;
+            float: left;
+            margin-left: 6px;
+            font-size: 12px;
+            color: #ff4776; }
+            .contents.myzone.account .section.my-account-withdraw .info .results dl dd + dt {
+              clear: left; }
+        .contents.myzone.account .section.my-account-withdraw .info .results .btn-submit {
+          float: right;
+          margin-right: 27px;
+          width: 87px; }
+      .contents.myzone.account .section.my-account-withdraw .info .dot {
+        position: relative;
+        margin-top: 16px;
+        padding-left: 8px;
+        font-size: 12px;
+        color: #6b7581;
+        line-height: 1.3em; }
+        .contents.myzone.account .section.my-account-withdraw .info .dot:before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 6px;
+          left: 0;
+          height: 3px;
+          width: 3px;
+          background-color: #ff4776; }
+        .contents.myzone.account .section.my-account-withdraw .info .dot em {
+          color: #ff4776; }
+        .contents.myzone.account .section.my-account-withdraw .info .dot a {
+          color: #6b7581;
+          text-decoration: underline; }

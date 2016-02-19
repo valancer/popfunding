@@ -38,8 +38,34 @@ include "head.html"
 							<div class="status type01">
 								<span>총 자산금액</span>
 								<a href="#"><strong>578,456원</strong></a>
-								<button type="button" class="btn-status-help">총 자산금액 도움말 보기</button>
-								<button type="button" class="btn-status-detail">총 자산금액 내역 보기</button>
+								<button type="button" value="#" class="btn-status-help va-toggle-btns">총 자산금액 도움말 보기</button>
+								<button type="button" value="#" class="btn-status-detail">총 자산금액 내역 보기</button>
+							</div>
+
+							<div id="popup-status-help01" class="popup guide-popup status-help-popup">
+								<button class="btn-popup-close" data-target="#popup-status-help01">팝업닫기</button>
+
+								<figure>
+									<img src="" alt="">
+									<figcaption>
+										<dl>
+											<dt>총자산</dt>
+											<dd>회원님께서 팝펀딩에서 보유하고 계신 모든 자산의 총합을 의미합니다</dd>
+
+											<dt>계좌잔액</dt>
+											<dd>계좌 내 출금이 가능<br>(현금화 가능한)한 금액</dd>
+
+											<dt>채권자산</dt>
+											<dd>채권(상환중/연체중)의 원금잔액</dd>
+
+											<dt>쿠폰자산</dt>
+											<dd>보유중/투자 참가중인 쿠폰의 금액</dd>
+
+											<dt>대손자산</dt>
+											<dd>대손 후 받을 권리가 있는 원금</dd>
+										</dl>
+									</figcaption>
+								</figure>
 							</div>
 						</li>
 						<li>
@@ -70,33 +96,101 @@ include "head.html"
 
 
 
-				<section class="section">
+				<section class="section my-account-withdraw">
 					<div class="column">
 						<h1 class="title">나의 가상계좌</h1>
 
 						<div class="info">
-							<label for="">우리은행    1002-332-456123    ( 예금주 : 제영순 )</label>
-							<p>
+							<span class="bank-account">
+								전용계좌가 없습니다.<br>
+								<a href="#">투자자인증</a>을 통해 계좌를 발급받으세요.
+							</span>
+
+<!--
+							투자자인증 후
+
+							<label for="" class="bank-account">
+								우리은행
+								&nbsp;&nbsp;&nbsp;&nbsp;
+								1002-332-456123
+								&nbsp;&nbsp;&nbsp;&nbsp;
+								( 예금주 : 제영순 )
+							</span>
+-->
+							<p class="dot">
 								반드시 가상계좌 이용료 <strong>200원</strong>하여 입금해주세요
 							</p>
 						</div>
 					</div>
 					<div class="column">
-						<h1 class="title">출금하기</h1>
+						<h1 class="title">
+							출금하기
+							<button type="button" value="#popup-withdraw" class="btn-help-withdraw va-toggle-btns">도움말보기</button>
+						</h1>
 
-						<div class="info">
-							<label for="">우리은행    1002-332-456123    ( 예금주 : 제영순 )</label>
-							<input type="text" id="" name="">
-							<input type="submit" class="" value="출금신청">
-							<p>
-								출금 가능액  <em>365,583원</em> (타행수수료 500원)
-							</p>
+						<div id="popup-withdraw" class="popup guide-popup type-tooltip withdraw-popup">
+							<button class="btn-popup-close" data-target="#popup-withdraw">팝업닫기</button>
 
-							<p>
+							<ul class="list-dot">
+								<li>
+									출금신청을 위해서는 회원님 본인 실명의 은행계좌를 등록해주셔야 합니다.<br>(마이존&gt;회원정보수정)
+								</li>
+								<li>
+									회원명과 예금주가 다른 경우에 출금이 제한됩니다.
+								</li>
+								<li>
+									장기 미출금 회원의 출금 및 일정 금액 이상 출금 시, 유선 본인확인이 필요합니다.
+								</li>
+								<li>
+									수익증권/MMF 통장의 경우 본인명의라 하더라도 입금이 안될 수 있습니다.<br>보통입출금 통장을 등록해주세요.
+								</li>
+							</ul>
+						</div>
+
+						<fieldset class="info">
+							<legend>출금하기</legend>
+
+							<div class="item-form">
+								<label for="" class="bank-account">
+									우리은행
+									&nbsp;&nbsp;&nbsp;&nbsp;
+									1002-332-456123
+									&nbsp;&nbsp;&nbsp;&nbsp;
+									( 예금주 : 제영순 )
+								</label>
+
+<!--
+								출근 신청 후
+
+								<span class="center">
+									<input type="text" id="" name="" value="0원">
+								</span>
+								<input type="submit" class="btn-submit" value="출금신청">
+								<p class="desc">
+									출금 가능액  <em>365,583원</em> (타행수수료 500원)
+								</p>
+-->
+								<div class="results">
+									<p class="amount">
+										신청금 <strong>650,000원</strong><br>
+										<span>(타행수수료 500원)</span>
+									</p>
+									<dl>
+										<dt>신청일</dt>
+										<dd><time datetime="">2015.12.12 / 14 : 45</time></dd>
+										<dt>신청금외 출금 가능액</dt>
+										<dd>365,583원</dd>
+									</dl>
+									<a href="#" class="btn-submit">신청취소</a>
+								</div>
+							</div>
+
+							<p class="dot">
 								은행계좌 등록/수정은 <a href="#">마이존&gt;정보수정</a>에서 가능합니다.
 							</p>
-						</div>
+						</fieldset>
 					</div>
+					<div class="clear"></div>
 				</section>
 
 

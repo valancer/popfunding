@@ -82,19 +82,88 @@
 		}
 	}
 
-	.list-staus-account { margin: 27px -2px 0 -2px; height: 118px;
+	.list-staus-account { position: relative; margin: 27px -2px 0 -2px; height: 118px;
 		> li { display: block; float: left; box-sizing: border-box; height: 118px; padding: 0 2px; width: 25%;
 		}
 	}
 
 	/* 도움말 팝업 */
-	.status-help-popup { display: block;
-		figure {
+	.status-help-popup { box-sizing: border-box; top: 35px; right: 2px; left: 2px; padding: 60px 0 0 0px; height: 236px;
+		&.type01 { &:before { left: 200px; } }
+		&.type02 { &:before { left: 431px; } }
+		&.type03 { &:before { left: 662px; } }
+
+		figure { margin: 0 auto; text-align: center;
 			dl {
 				dt { display: none; }
-				dd { display: block; font-size: 12px; color: $color-content; line-height: 18px; }
+				dd { display: block; box-sizing: border-box; float: left; margin-top: 6px; font-size: 12px; color: $color-content; line-height: 18px;
+					a { display: block; margin-top: 6px; color: $color-content; text-decoration: underline; }
+				}
+				&.col5 {
+					dd { width: 20%; }
+				}
+				&.col4 {
+					dd { width: 25%; }
+				}
+				&.col3 {
+					dd { width: 33%; }
+				}
 			}
 		}	
+	}
+
+	/* 내역 팝업 */
+	.status-content-popup { box-sizing: border-box; top: 98px; right: 2px; left: 2px; padding: 56px 60px 60px 60px;
+		&:before { left: 789px; }
+
+		.title { padding: 0px; font-size: 14px; font-weight: normal; color: $color-title-sub;
+			&:before { content: none; }
+		}
+
+		table { margin-top: 12px; width: 100%; border-top: 2px solid #252525; border-bottom: 2px solid #252525;
+			thead {
+				th { padding-top: 9px; padding-bottom: 9px; font-size: 14px; font-weight: normal; color: $color-title-sub; line-height: 18px; text-align: center; border-bottom: 1px solid #7c7f84; border-left: 1px solid #7c7f84; background-color: #fbfbfb;
+					&:first-child { border-left: 0px; }
+
+					em { color: $color-menu1-hover; }
+				}
+			}
+			tbody {
+				th { padding-top: 13px; padding-bottom: 12px; font-size: 14px; font-weight: normal; color: $color-content; text-align: center; line-height: 18px; border-bottom: 1px solid #d4dae4; border-left: 1px solid #7c7f84; background-color: #fbfbfb;
+					&:first-child { border-left: 0px; }
+					&[scope=col] { border-bottom: 1px solid #7c7f84; }
+				}
+				td { padding-top: 13px; padding-bottom: 12px; font-size: 14px; font-weight: normal; color: $color-content; text-align: center; line-height: 18px; border-bottom: 1px solid #d4dae4; border-left: 1px solid #d4dae4; }
+			}
+		}
+
+		/* 총 자산현황 */
+		&.total {
+			&:before { left: 95px; }
+		}
+		/* 계좌운용수익 */
+		&.profit {
+			&:before { left: 328px; }
+		}
+
+		/* 수익률 */
+		.rates-graph { margin-top: 12px; height: 241px; border-top: 2px solid #252525; border-bottom: 2px solid #252525;
+			ul { padding-left: 70px; height: 281px; background: url('/assets/images/bg_graph01.png') left top repeat-x;
+				> li { float: left; padding: 40px 15px 0 15px; height: 241px; }
+			}
+			.item { position: relative; height: 201px; width: 100px; text-align: center;
+				.title { display: block; position: absolute; bottom: -50px; height: 36px; width: 100%; font-size: 14px; color: $color-content; line-height: 18px; }
+				.point { display: block; position: absolute; bottom: 0px; left: 50%; margin-left: -25px; width: 50px; text-indent: -9999px; background-color: #00bbd4;
+					&:before { content: attr(data-rates); display: block; position: absolute; top: -26px; right: -10px; left: -10px; font-size: 18px; font-weight: bold; color: $color-title; text-indent: 0px; }
+					&.other { background-color: #81c845; }
+				}
+			}
+		}
+		
+		&.rates { 
+			&:before { left: 560px; }
+		}
+		
 	}
 
 	/* 테이블 내 오버시 노출되는 데이터 */

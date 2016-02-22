@@ -8672,6 +8672,7 @@ body.popup-window {
 /* 마이존 - 내 계좌 */
 .contents.myzone.account {
   /* 도움말 팝업 */
+  /* 내역 팝업 */
   /* 테이블 내 오버시 노출되는 데이터 */
   /* 나의 계좌 & 출금 */ }
   .contents.myzone.account .status {
@@ -8725,6 +8726,7 @@ body.popup-window {
         width: 31px;
         height: 16px; }
   .contents.myzone.account .list-staus-account {
+    position: relative;
     margin: 27px -2px 0 -2px;
     height: 118px; }
     .contents.myzone.account .list-staus-account > li {
@@ -8735,14 +8737,160 @@ body.popup-window {
       padding: 0 2px;
       width: 25%; }
   .contents.myzone.account .status-help-popup {
-    display: block; }
-    .contents.myzone.account .status-help-popup figure dl dt {
-      display: none; }
-    .contents.myzone.account .status-help-popup figure dl dd {
-      display: block;
-      font-size: 12px;
-      color: #6b7581;
-      line-height: 18px; }
+    box-sizing: border-box;
+    top: 35px;
+    right: 2px;
+    left: 2px;
+    padding: 60px 0 0 0px;
+    height: 236px; }
+    .contents.myzone.account .status-help-popup.type01:before {
+      left: 200px; }
+    .contents.myzone.account .status-help-popup.type02:before {
+      left: 431px; }
+    .contents.myzone.account .status-help-popup.type03:before {
+      left: 662px; }
+    .contents.myzone.account .status-help-popup figure {
+      margin: 0 auto;
+      text-align: center; }
+      .contents.myzone.account .status-help-popup figure dl dt {
+        display: none; }
+      .contents.myzone.account .status-help-popup figure dl dd {
+        display: block;
+        box-sizing: border-box;
+        float: left;
+        margin-top: 6px;
+        font-size: 12px;
+        color: #6b7581;
+        line-height: 18px; }
+        .contents.myzone.account .status-help-popup figure dl dd a {
+          display: block;
+          margin-top: 6px;
+          color: #6b7581;
+          text-decoration: underline; }
+      .contents.myzone.account .status-help-popup figure dl.col5 dd {
+        width: 20%; }
+      .contents.myzone.account .status-help-popup figure dl.col4 dd {
+        width: 25%; }
+      .contents.myzone.account .status-help-popup figure dl.col3 dd {
+        width: 33%; }
+  .contents.myzone.account .status-content-popup {
+    box-sizing: border-box;
+    top: 98px;
+    right: 2px;
+    left: 2px;
+    padding: 56px 60px 60px 60px;
+    /* 총 자산현황 */
+    /* 계좌운용수익 */
+    /* 수익률 */ }
+    .contents.myzone.account .status-content-popup:before {
+      left: 789px; }
+    .contents.myzone.account .status-content-popup .title {
+      padding: 0px;
+      font-size: 14px;
+      font-weight: normal;
+      color: #323232; }
+      .contents.myzone.account .status-content-popup .title:before {
+        content: none; }
+    .contents.myzone.account .status-content-popup table {
+      margin-top: 12px;
+      width: 100%;
+      border-top: 2px solid #252525;
+      border-bottom: 2px solid #252525; }
+      .contents.myzone.account .status-content-popup table thead th {
+        padding-top: 9px;
+        padding-bottom: 9px;
+        font-size: 14px;
+        font-weight: normal;
+        color: #323232;
+        line-height: 18px;
+        text-align: center;
+        border-bottom: 1px solid #7c7f84;
+        border-left: 1px solid #7c7f84;
+        background-color: #fbfbfb; }
+        .contents.myzone.account .status-content-popup table thead th:first-child {
+          border-left: 0px; }
+        .contents.myzone.account .status-content-popup table thead th em {
+          color: #ff4776; }
+      .contents.myzone.account .status-content-popup table tbody th {
+        padding-top: 13px;
+        padding-bottom: 12px;
+        font-size: 14px;
+        font-weight: normal;
+        color: #6b7581;
+        text-align: center;
+        line-height: 18px;
+        border-bottom: 1px solid #d4dae4;
+        border-left: 1px solid #7c7f84;
+        background-color: #fbfbfb; }
+        .contents.myzone.account .status-content-popup table tbody th:first-child {
+          border-left: 0px; }
+        .contents.myzone.account .status-content-popup table tbody th[scope=col] {
+          border-bottom: 1px solid #7c7f84; }
+      .contents.myzone.account .status-content-popup table tbody td {
+        padding-top: 13px;
+        padding-bottom: 12px;
+        font-size: 14px;
+        font-weight: normal;
+        color: #6b7581;
+        text-align: center;
+        line-height: 18px;
+        border-bottom: 1px solid #d4dae4;
+        border-left: 1px solid #d4dae4; }
+    .contents.myzone.account .status-content-popup.total:before {
+      left: 95px; }
+    .contents.myzone.account .status-content-popup.profit:before {
+      left: 328px; }
+    .contents.myzone.account .status-content-popup .rates-graph {
+      margin-top: 12px;
+      height: 241px;
+      border-top: 2px solid #252525;
+      border-bottom: 2px solid #252525; }
+      .contents.myzone.account .status-content-popup .rates-graph ul {
+        padding-left: 70px;
+        height: 281px;
+        background: url("/assets/images/bg_graph01.png") left top repeat-x; }
+        .contents.myzone.account .status-content-popup .rates-graph ul > li {
+          float: left;
+          padding: 40px 15px 0 15px;
+          height: 241px; }
+      .contents.myzone.account .status-content-popup .rates-graph .item {
+        position: relative;
+        height: 201px;
+        width: 100px;
+        text-align: center; }
+        .contents.myzone.account .status-content-popup .rates-graph .item .title {
+          display: block;
+          position: absolute;
+          bottom: -50px;
+          height: 36px;
+          width: 100%;
+          font-size: 14px;
+          color: #6b7581;
+          line-height: 18px; }
+        .contents.myzone.account .status-content-popup .rates-graph .item .point {
+          display: block;
+          position: absolute;
+          bottom: 0px;
+          left: 50%;
+          margin-left: -25px;
+          width: 50px;
+          text-indent: -9999px;
+          background-color: #00bbd4; }
+          .contents.myzone.account .status-content-popup .rates-graph .item .point:before {
+            content: attr(data-rates);
+            display: block;
+            position: absolute;
+            top: -26px;
+            right: -10px;
+            left: -10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #252525;
+            text-indent: 0px; }
+          .contents.myzone.account .status-content-popup .rates-graph .item .point.other {
+            background-color: #81c845; }
+    .contents.myzone.account .status-content-popup.rates:before {
+      left: 560px; }
   .contents.myzone.account .tbl-over-data {
     display: none;
     bottom: 85%;

@@ -37,61 +37,338 @@ include "head.html"
 						<li>
 							<div class="status type01">
 								<span>총 자산금액</span>
-								<a href="#"><strong>578,456원</strong></a>
-								<button type="button" value="#" class="btn-status-help va-toggle-btns">총 자산금액 도움말 보기</button>
-								<button type="button" value="#" class="btn-status-detail">총 자산금액 내역 보기</button>
+								<a href="#popup-status-total" class="va-toggle-btns"><strong>578,456원</strong></a>
+								<button type="button" value="#popup-status-help01" class="btn-status-help va-toggle-btns">총 자산금액 도움말 보기</button>
+								<button type="button" value="#popup-status-total" class="btn-status-detail va-toggle-btns">총 자산금액 내역 보기</button>
 							</div>
 
-							<div id="popup-status-help01" class="popup guide-popup status-help-popup">
+							<!-- 총 자산금액 도움말 -->
+							<aside id="popup-status-help01" class="popup guide-popup status-help-popup type01">
 								<button class="btn-popup-close" data-target="#popup-status-help01">팝업닫기</button>
 
 								<figure>
-									<img src="" alt="">
+									<img src="/assets/images/txt/account_help01.jpg" alt="총자산 = 계좌잔액 + 채권자산 + 쿠폰자산 + 대손자산">
 									<figcaption>
-										<dl>
-											<dt>총자산</dt>
-											<dd>회원님께서 팝펀딩에서 보유하고 계신 모든 자산의 총합을 의미합니다</dd>
+										<dl class="col5" style="padding-right: 88px; padding-left: 84px;">
+											<dt><dfn>총자산</dfn></dt>
+											<dd style="padding-right: 7px;">회원님께서 팝펀딩에서<br>보유하고 계신 모든 자산의<br>총합을 의미합니다</dd>
 
-											<dt>계좌잔액</dt>
-											<dd>계좌 내 출금이 가능<br>(현금화 가능한)한 금액</dd>
+											<dt><dfn>계좌잔액</dfn></dt>
+											<dd style="padding-right: 11px;">계좌 내 출금이 가능<br>(현금화 가능한)한 금액</dd>
 
-											<dt>채권자산</dt>
-											<dd>채권(상환중/연체중)의 원금잔액</dd>
+											<dt><dfn>채권자산</dfn></dt>
+											<dd style="padding-right: 8px;">채권(상환중/연체중)의<br>원금잔액</dd>
 
-											<dt>쿠폰자산</dt>
-											<dd>보유중/투자 참가중인 쿠폰의 금액</dd>
+											<dt><dfn>쿠폰자산</dfn></dt>
+											<dd>보유중/투자 참가중인<br>쿠폰의 금액</dd>
 
-											<dt>대손자산</dt>
-											<dd>대손 후 받을 권리가 있는 원금</dd>
+											<dt><dfn>대손자산</dfn></dt>
+											<dd>대손 후 받을 권리가<br>있는 원금</dd>
 										</dl>
 									</figcaption>
 								</figure>
-							</div>
+							</aside>
+
+							<!-- 총 자산금액 내역 -->
+							<aside id="popup-status-total" class="popup guide-popup status-content-popup total">
+								<button class="btn-popup-close" data-target="#popup-status-total">팝업닫기</button>
+
+								<h1 class="title">총 자산</h1>
+								<table>
+									<caption></caption>
+									<colgroup>
+										<col style="width: 12.5%;">
+										<col style="width: 12.5%;">
+										<col style="width: 12.5%;">
+										<col style="width: 12.5%;">
+										<col style="width: 12.5%;">
+										<col style="width: 12.5%;">
+										<col style="width: 12.5%;">
+										<col style="width: 12.5%;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th colspan="2">계좌잔액<br><em>578,456원</em></th>
+											<th colspan="2">채권잔액<br><em>578,456원</em></th>
+											<th colspan="2">쿠폰<br><em>0원</em></th>
+											<th colspan="2">대손자산<br><em>120,350원</em></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th>출금가능</th>
+											<td>900,256</td>
+											<th>상환중</th>
+											<td>586,540</td>
+											<th>사용가능</th>
+											<td>0</td>
+											<th>대손처리중</th>
+											<td>0</td>
+										</tr>
+										<tr>
+											<th>출금신청</th>
+											<td>0</td>
+											<th>단기연체</th>
+											<td>525</td>
+											<th>투자중</th>
+											<td>0</td>
+											<th>대손원금</th>
+											<td>1,449</td>
+										</tr>
+										<tr>
+											<th>투자참가중</th>
+											<td>25,000</td>
+											<th>장기연체</th>
+											<td>0</td>
+											<th></th>
+											<td></td>
+											<th>상환원금</th>
+											<td>-525</td>
+										</tr>
+										<tr>
+											<th></th>
+											<td></td>
+											<th>팝다이렉트</th>
+											<td>0</td>
+											<th></th>
+											<td></td>
+											<th></th>
+											<td></td>
+										</tr>
+									</tbody>
+								</table>
+							</aside>
 						</li>
 						<li>
 							<div class="status type02">
 								<span>계좌운용수익</span>
-								<a href="#"><strong>78,456원</strong></a>
-								<button type="button" class="btn-status-help">계좌운용수익 도움말 보기</button>
-								<button type="button" class="btn-status-detail">계좌운용수익 내역 보기</button>
+								<a href="#popup-status-profit" class="va-toggle-btns"><strong>78,456원</strong></a>
+								<button type="button" value="#popup-status-help02" class="btn-status-help va-toggle-btns">계좌운용수익 도움말 보기</button>
+								<button type="button" value="#popup-status-profit" class="btn-status-detail va-toggle-btns">계좌운용수익 내역 보기</button>
 							</div>
+
+							<!-- 계좌운용수익 도움말 -->
+							<aside id="popup-status-help02" class="popup guide-popup status-help-popup type02">
+								<button class="btn-popup-close" data-target="#popup-status-help02">팝업닫기</button>
+
+								<figure>
+									<img src="/assets/images/txt/account_help02.jpg" alt="계좌운용수익 = 투자수익 + 채권매매수익 + 기타수익">
+									<figcaption>
+										<dl class="col4" style="padding-right: 72px; padding-left: 116px;">
+											<dt><dfn>계좌운용수익</dfn></dt>
+											<dd style="padding-right: 0px;">팝펀딩에서 투자/채권매매/<br>미투비딩 활동을 통하여 얻은<br>총 수익을 의미합니다.</dd>
+
+											<dt><dfn>투자수익</dfn></dt>
+											<dd style="padding-left: 8px;">투자를 통해 발생한 순이익으로<br>상환이자에서 원천징수,대손손실,<br>각종수수료를 뺀 금액</dd>
+
+											<dt><dfn>채권매매수익</dfn></dt>
+											<dd style="padding-right: 8px;">채권 매도과<br>채권 매수 수익의 합계</dd>
+
+											<dt><dfn>기타수익</dfn></dt>
+											<dd>미투비딩 수익</dd>
+										</dl>
+									</figcaption>
+								</figure>
+							</aside>
+
+
+							<!-- 계좌운용수익 내역 -->
+							<aside id="popup-status-profit" class="popup guide-popup status-content-popup profit">
+								<button class="btn-popup-close" data-target="#popup-status-profit">팝업닫기</button>
+
+								<h1 class="title">계좌운용수익</h1>
+								<table>
+									<caption>계좌운용수익</caption>
+									<colgroup>
+										<col style="width: 12.5%;">
+										<col style="width: 12.5%;">
+										<col style="width: 12.5%;">
+										<col style="width: 12.5%;">
+										<col style="width: 12.5%;">
+										<col style="width: 12.5%;">
+										<col style="width: 12.5%;">
+										<col style="width: 12.5%;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th colspan="2">투자수익<br><em>578,456원</em></th>
+											<th colspan="4">채권매매수익<br><em>246원</em></th>
+											<th colspan="2">기타수익<br><em>5,245원</em></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th>상환이자</th>
+											<td>900,256</td>
+											<th colspan="2" scope="col">매도수익 <em>-100원</em></th>
+											<th colspan="2" scope="col">매수수익 <em>356원</em></th>
+											<th>미투비딩</th>
+											<td>5,245</td>
+										</tr>
+										<tr>
+											<th>원천징수</th>
+											<td>0</td>
+											<th>매도금액</th>
+											<td>1,000</td>
+											<th>매수금액</th>
+											<td>-1,310</td>
+											<th></th>
+											<td></td>
+										</tr>
+										<tr>
+											<th>대손손실</th>
+											<td>-25,000</td>
+											<th>매도원금</th>
+											<td>-1,100</td>
+											<th>매수원금</th>
+											<td>1,100</td>
+											<th></th>
+											<td></td>
+										</tr>
+										<tr>
+											<th>수수료</th>
+											<td>-125</td>
+											<th>수수료</th>
+											<td>-10</td>
+											<th>수수료</th>
+											<td>-10</td>
+											<th></th>
+											<td></td>
+										</tr>
+									</tbody>
+								</table>
+							</aside>
 						</li>
 						<li>
 							<div class="status type03">
 								<span>투자 수익률</span>
-								<a href="#"><strong>10.09%</strong></a>
-								<button type="button" class="btn-status-help">투자 수익률 도움말 보기</button>
-								<button type="button" class="btn-status-detail">투자 수익률 내역 보기</button>
+								<a href="#popup-status-rates" class="va-toggle-btns"><strong>10.09%</strong></a>
+								<button type="button" value="#popup-status-help03" class="btn-status-help va-toggle-btns">투자 수익률 도움말 보기</button>
+								<button type="button" value="#popup-status-rates" class="btn-status-detail va-toggle-btns">투자 수익률 내역 보기</button>
 							</div>
+
+							<!-- 총 자산금액 도움말 -->
+							<aside id="popup-status-help03" class="popup guide-popup status-help-popup type03">
+								<button class="btn-popup-close" data-target="#popup-status-help03">팝업닫기</button>
+
+								<figure>
+									<img src="/assets/images/txt/account_help03.jpg" alt="계좌수익률 / 투자수익률 / 채권매매수익과 기타수익률">
+									<figcaption>
+										<dl class="col3" style="padding-right: 94px; padding-left: 83px;">
+											<dt><dfn>계좌수익률</dfn></dt>
+											<dd>기간평균 원금 대비<br>계좌 운용수익 비율 나타냅니다.</dd>
+
+											<dt><dfn>투자수익률</dfn></dt>
+											<dd style="padding-right: 23px;">
+												기간평균 원금 대비<br>투자수익 비율을 나타냅니다.
+												<a href="#">FAQ에서 자세히</a>
+											</dd>
+
+											<dt><dfn>채권매매수익과 기타수익률</dfn></dt>
+											<dd style="padding-top: 12px;">
+												기간평균 원금 대비<br>채권매매 순수익과 미투비딩 순수익의<br>합계 비율을 나타냅니다.
+											</dd>
+										</dl>
+									</figcaption>
+								</figure>
+							</aside>
+						
+
+							<!-- 투자 수익률 / 대손율 -->
+							<aside id="popup-status-rates" class="popup guide-popup status-content-popup rates">
+								<button class="btn-popup-close" data-target="#popup-status-rates">팝업닫기</button>
+
+								<h1 class="title">수익률</h1>
+
+								<div class="rates-graph">
+									<ul>
+										<li>
+											<p class="item">
+												<span class="title">계좌운용수익률</span>
+												<strong class="point" data-rates="14.25%" style="height: 100%;">14.25%</strong>
+											</p>
+										</li>
+										<li>
+											<p class="item">
+												<span class="title">투자 수익률</span>
+												<strong class="point" data-rates="10.15%" style="height: 71.228070175439%;">10.15%</strong>
+											</p>
+										</li>
+										<li>
+											<p class="item">
+												<span class="title">채권매매수익과<br>기타수익</span>
+												<strong class="point" data-rates="4.1%" style="height: 28.771929824561%;">4.1%</strong>
+											</p>
+										</li>
+										<li>
+											<p class="item">
+												<span class="title">연체율</span>
+												<strong class="point other" data-rates="4.75%" style="height: 33.333333333333%;">4.75%</strong>
+											</p>
+										</li>
+										<li>
+											<p class="item">
+												<span class="title">대손율</span>
+												<strong class="point other" data-rates="2.25%" style="height: 15.789473684211%;">2.25%</strong>
+											</p>
+										</li>
+									</ul>
+								</div>
+							</aside>
 						</li>
 						<li>
 							<div class="status type04">
 								<span>대손율</span>
-								<a href="#"><strong>2.8%</strong></a>
-								<button type="button" class="btn-status-detail">대손율 내역 보기</button>
+								<a href="#popup-status-rates02" class="va-toggle-btns"><strong>2.8%</strong></a>
+								<button type="button" value="#popup-status-rates02" class="btn-status-detail va-toggle-btns">대손율 내역 보기</button>
 							</div>
+
+						
+
+							<!-- 투자 수익률 / 대손율 -->
+							<aside id="popup-status-rates02" class="popup guide-popup status-content-popup">
+								<button class="btn-popup-close" data-target="#popup-status-rates02">팝업닫기</button>
+
+								<h1 class="title">수익률</h1>
+
+								<div class="rates-graph">
+									<ul>
+										<li>
+											<p class="item">
+												<span class="title">계좌운용수익률</span>
+												<strong class="point" data-rates="14.25%" style="height: 100%;">14.25%</strong>
+											</p>
+										</li>
+										<li>
+											<p class="item">
+												<span class="title">투자 수익률</span>
+												<strong class="point" data-rates="10.15%" style="height: 71.228070175439%;">10.15%</strong>
+											</p>
+										</li>
+										<li>
+											<p class="item">
+												<span class="title">채권매매수익과<br>기타수익</span>
+												<strong class="point" data-rates="4.1%" style="height: 28.771929824561%;">4.1%</strong>
+											</p>
+										</li>
+										<li>
+											<p class="item">
+												<span class="title">연체율</span>
+												<strong class="point other" data-rates="4.75%" style="height: 33.333333333333%;">4.75%</strong>
+											</p>
+										</li>
+										<li>
+											<p class="item">
+												<span class="title">대손율</span>
+												<strong class="point other" data-rates="2.25%" style="height: 15.789473684211%;">2.25%</strong>
+											</p>
+										</li>
+									</ul>
+								</div>
+							</aside>
 						</li>
 					</ul>
+
 				</section>
 
 
@@ -203,14 +480,14 @@ include "head.html"
 							<tr>
 								<th>투자 현황</th>
 								<td>참가중 <em>0건</em></td>
-								<td>연체중 <strong>1건</strong></td>
+								<td>연체중 <a href="#"><strong>1건</strong></a></td>
 								<td>상환중 <em>30건</em></td>
 								<td>대손종료 <em>30건</em></td>
 							</tr>
 							<tr>
 								<th>빌리기 현황</th>
 								<td colspan="2">진행중인 빌리기 <em>0건</em></td>
-								<td colspan="2">상환중인 빌리기 <strong>1건(연체중)</strong></td>
+								<td colspan="2">상환중인 빌리기 <a href="#"><strong>1건(연체중)</strong></a></td>
 							</tr>
 						</tbody>
 					</table>

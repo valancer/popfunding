@@ -582,6 +582,7 @@ var Popup = (function ($) {
 			$btnToggles = $('.va-toggle-btns');
 			$btnClose = $('.popup button.btn-popup-close');
 			$btnOvers = $('.va-over-btns');
+			$lastTargetToggle = null;
 
 			initLayout();
 			initEvent();
@@ -609,7 +610,13 @@ var Popup = (function ($) {
 			} else if( $(this).is('[href]') ) {
 				target = $(this).attr('href');
 			}
+
+			if( !$(target).is($lastTargetToggle) && $lastTargetToggle !== null ) {
+				$lastTargetToggle.hide();
+			}
+
 			$(target).toggle();
+			$lastTargetToggle = $(target);
 		});
 
 		// 전체 마우스 오버 버튼

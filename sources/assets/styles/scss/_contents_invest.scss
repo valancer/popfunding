@@ -43,6 +43,7 @@ $border-inner-color: #e6e9ee;
 				&.price7 { @include sprite($sprite-price7-s); }
 				&.price8 { @include sprite($sprite-price8-s); }
 				&.price9 { @include sprite($sprite-price9-s); }
+				&.price-dot { @include sprite($sprite-price-dot-s); }
 				&.price-comma { @include sprite($sprite-price-comma-s); }
 				&.price-percent { @include sprite($sprite-price-percent-s); }
 				&.price-won { @include sprite($sprite-price-won-s); }
@@ -189,6 +190,7 @@ $border-inner-color: #e6e9ee;
 											&.price7 { @include sprite($sprite-price7-b); }
 											&.price8 { @include sprite($sprite-price8-b); }
 											&.price9 { @include sprite($sprite-price9-b); }
+											&.price-dot { @include sprite($sprite-price-dot-b); }
 											&.price-comma { @include sprite($sprite-price-comma-b); }
 											&.price-percent { @include sprite($sprite-price-percent-b); }
 											&.price-won { @include sprite($sprite-price-won-b); }

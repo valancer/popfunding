@@ -36,6 +36,7 @@
 				&.price7 { @include sprite($sprite-private-price7-s); }
 				&.price8 { @include sprite($sprite-private-price8-s); }
 				&.price9 { @include sprite($sprite-private-price9-s); }
+				&.price-dot { @include sprite($sprite-private-dot-s); }
 				&.price-percent { @include sprite($sprite-private-percent-s); }
 			}
 		}
@@ -82,7 +83,7 @@
 			}
 			.credit-rating { padding-top: 28px;
 				> .convert {
-					> em { display: inline-block; height: 44px; text-indent: -9999px;
+					> em { display: inline-block; height: 44px; text-indent: -9999px; @include sprite($sprite-bg-overdue01-b); 
 						&.overdue-a { @include sprite($sprite-bg-overdue02-b); }
 						&.overdue-b { @include sprite($sprite-bg-overdue03-b); }
 						&.overdue-c { @include sprite($sprite-bg-overdue04-b); }
@@ -198,6 +199,7 @@
 							&.price7 { @include sprite($sprite-private-price7-b); }
 							&.price8 { @include sprite($sprite-private-price8-b); }
 							&.price9 { @include sprite($sprite-private-price9-b); }
+							&.price-dot { @include sprite($sprite-private-dot-b); }
 							&.price-percent { @include sprite($sprite-private-percent-b); }
 						}
 					}

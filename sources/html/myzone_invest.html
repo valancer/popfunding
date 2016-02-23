@@ -9,7 +9,7 @@ include "head.html"
 
 
 	<!-- 본문 영역 -->
-	<article class="contents myzone account">
+	<article class="contents myzone myinvest">
 		<h1>마이존</h1>
 
 		<div class="inner">
@@ -41,37 +41,147 @@ include "head.html"
 						<button type="button" value="#popup-withdraw" class="btn-help-withdraw va-toggle-btns">도움말보기</button>
 					</h1>
 
+
 					<div class="info-myinvest">
+						<div class="rating">
+							<p class="info">
+								제영순님의 투자자 등급은 <strong class="rating-profile newbie">VIP골드</strong><br>
+								지난 3개월간 투자실적은 <strong>200점</strong> <a href="#">상세보기</a>
+							</p>
+							<p class="desc">
+								투자자 등급은 회원님의 지난 3개월간 실적을 기준으로 매달 1일에 갱신됩니다.<br>
+								팝펀딩의 투자활동을 위해서는 [투자자인증]이 필요합니다.<br>
+							</p>
 
-						<p>
-							제영순님의 투자자 등급은 <strong>VVIP골드</strong><br>
-							지난 3개월간 투자실적은 <strong>200점</strong> <a href="#">상세보기</a>
-						</p>
-						<p>
-							투자자 등급은 회원님의 지난 3개월간 실적을 기준으로 매달 1일에 갱신됩니다.<br>
-							팝펀딩의 투자활동을 위해서는 [투자자인증]이 필요합니다.<br>
-						</p>
-						<a href="#" class="btn-inline-box">투자자 인증받기</a>
+							<p class="btns">
+								<a href="#" class="btn-inline-box">투자자 인증받기</a>
+							</p>
+							
+						</div>
 
-						<ul>
-							<li>
-								투자성사
-								<em>356건</em>
+						<ul class="list-staus-account">
+							<li style="width: 234px;">
+								<div class="status type01">
+									<span>투자성사</span>
+									<strong>356건</strong>
+								</div>
 							</li>
-							<li>
-								참가중 투자
-								<em>356건</em>
+							<li style="width: 201px;">
+								<div class="status type02">
+									<span>참가중 투자</span>
+									<strong>356건</strong>
+								</div>
 							</li>
-							<li>
-								참가중 금액
-								<em>356건</em>
+							<li style="width: 277px;">
+								<div class="status type03">
+									<span>참가중 금액</span>
+									<strong>78,456원</strong>
+								</div>
 							</li>
-							<li>
-								투자 수익률
-								<em>356건</em>
+							<li style="width: 211px;">
+								<div class="status type04">
+									<span>투자 수익률</span>
+									<strong>11.6%</strong>
+								</div>
 							</li>
 						</ul>
 					</div>
+
+					<!--  -->
+					<div class="tbl-container">
+							
+						<fieldset class="filter">
+							<legend></legend>
+
+							<select name="" id="">
+								<option value="">5개 보기</option>
+							</select>
+						</fieldset>
+
+						<div class="tab-data">
+							<a href="#" class="selected">참가중인 투자</a>
+							<a href="#">관심 투자</a>
+							<a href="#">관심 투자(채권)</a>
+						</div>
+
+						<table class="tbl-data-v">
+							<caption>참가중인 투자 목록</caption>
+							<colgroup>
+								<col>
+								<col>
+								<col>
+								<col>
+								<col>
+								<col>
+								<col>
+							</colgroup>
+							<thead>
+								<tr>
+									<th>투자번호(구분)</th>
+									<th>참가상태</th>
+									<th>자동</th>
+									<th>마감일</th>
+									<th>참가금액</th>
+									<th>이자율</th>
+									<th>참가시각</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<span class="new">[신규 투자항목입니다.]</span>
+										<a href="#">B15244-1(기업)</a>
+									</td>
+									<td>중도철회 X</td>
+									<td>
+										M갑<br><em class="nickname">(250건)</em>
+									</td>
+									<td><time datetime="2015-12-12">2015.12.12</time></td>
+									<td>1,500,000원</td>
+									<td>11%</td>
+									<td><time datetime="2015-12-12 11:30">2015.12.12 / 11:30</time></td>
+								</tr>
+								<tr>
+									<td>
+										<span class="new">[신규 투자항목입니다.]</span>
+										<a href="#">B15244-1(개인)</a>
+									</td>
+									<td><em class="minus">달성 (심사중)</em></td>
+									<td>
+										A<br><em class="nickname">(어떤조건)</em>
+									</td>
+									<td><time datetime="2015-12-12">2015.12.12</time></td>
+									<td>10,000원</td>
+									<td>25%</td>
+									<td><time datetime="2015-12-12 11:30">2015.12.12 / 11:30</time></td>
+								</tr>
+								<tr>
+									<td><a href="#">B15244-1(KT)</a></td>
+									<td>참가중</td>
+									<td>
+										M을<br><em class="nickname">(hong1298)</em>
+									</td>
+									<td><time datetime="2015-12-12">2015.12.12</time></td>
+									<td>10,000원</td>
+									<td>25%</td>
+									<td><time datetime="2015-12-12 11:30">2015.12.12 / 11:30</time></td>
+								</tr>
+							</tbody>
+						</table>
+						<p class="tbl-data-v-bottom">
+							실패한 투자내역은 1개월간 보관
+						</p>
+
+						<div class="paging">
+							<a href="#">1</a>
+							<a href="#" class="selected">2</a>
+							<a href="#">3</a>
+							<a href="#">4</a>
+							<a href="#">5</a>
+							<a href="#">6</a>
+						</div>
+					</div>
+
 				</section>
 
 

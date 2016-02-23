@@ -40,32 +40,35 @@
 			strong { color: $color-menu1-hover; text-decoration: underline; }
 		}
 	}
-	.tbl-data-v { table-layout: fixed; width: 100%; border-top: 2px solid $color-title;
+	.tbl-data-v { width: 100%; border-top: 2px solid $color-title;
 		> thead { border-bottom: 1px solid #7c7f84;
 			th { height: 45px; font-size: 14px; font-weight: normal; color: $color-title; line-height: 16px; border-left: 1px solid #d4dae4; background-color: #fbfbfb;
 				&:first-child { border-left: 0px; }
 			}
 		}
 		> tbody {
-			td { position: relative; height: 45px; font-size: 14px; color: $color-content; text-align: center; line-height: 16px; border-bottom: 1px solid #d4dae4; border-left: 1px solid #d4dae4; background-color: #fff;
+			td { position: relative; padding-right: 5px; padding-left: 5px; height: 45px; font-size: 14px; color: $color-content; text-align: center; line-height: 16px; border-bottom: 1px solid #d4dae4; border-left: 1px solid #d4dae4; background-color: #fff;
 				&:first-child { border-left: 0px; }
 				a { color: $color-content; text-decoration: underline; }
 				.plus { color: #006bf0; }
 				.minus { color: $color-menu1-hover; }
+
+				/* new badge */
+				.new { display: block; position: absolute; top: 0; left: 0; text-indent: -9999px; @include sprite($sprite-badge-new05); }
+				.nickname { display: inline-block; overflow: hidden; margin: 0 auto; height: 16px; max-width: 80px; text-overflow: ellipsis; white-space: nowrap; }
 			}
 		}
 
 		.btn-detail { display: inline-block; text-indent: -9999px; @include sprite($sprite-btn-view01); }
 
 		+ .paging { margin-top: 40px; }
+		+ .tbl-data-v-bottom { margin-top: 12px; font-size: 12px; color: $color-content; text-align: right;
+			&:before { content: ''; display: inline-block; height: 2px; width: 2px; vertical-align: middle; background-color: $color-content; }
+		}
 	}
 
 
-}
-
-
-/* 마이존 - 내 계좌 */
-.contents.myzone.account {
+	/* 마이존 상태 색깔 박스 */
 	.status { position: relative; padding: 31px 0 37px 0; height: 50px; text-align: center; border-radius: 5px; background-color: #0f0;
 		&.type01 { background-color: #ff507d; }
 		&.type02 { background-color: #14378c; }
@@ -74,7 +77,7 @@
 
 		span { display: block; margin-bottom: 4px; font-size: 14px; font-weight: bold; color: #fff; }
 		a { display: inline-block; text-align: center; text-decoration: none; }
-		strong { display: inline-block; font-size: 1.500em; font-weight: bold; color: #fff; line-height: 1.2em; border-bottom: 2px solid #fff; }
+		strong { display: inline-block; font-size: 24px; font-weight: bold; color: #fff; line-height: 1.2em; border-bottom: 2px solid #fff; }
 
 		button { display: block; position: absolute; text-indent: -9999px;
 			&.btn-status-help { top: 3px; right: 3px; @include sprite($sprite-btn-help03); }
@@ -83,10 +86,13 @@
 	}
 
 	.list-staus-account { position: relative; margin: 27px -2px 0 -2px; height: 118px;
-		> li { display: block; float: left; box-sizing: border-box; height: 118px; padding: 0 2px; width: 25%;
-		}
+		> li { display: block; float: left; box-sizing: border-box; height: 118px; padding: 0 2px; width: 25%; }
 	}
+}
 
+
+/* 마이존 - 내 계좌 */
+.contents.myzone.account {
 	/* 도움말 팝업 */
 	.status-help-popup { box-sizing: border-box; top: 35px; right: 2px; left: 2px; padding: 60px 0 0 0px; height: 236px;
 		&.type01 { &:before { left: 200px; } }
@@ -235,7 +241,57 @@
 
 
 
+/* 마이존 - 나의 투자 */
+.contents.myzone.myinvest {
 
+	/* 나의 투자 써머리 */
+	.info-myinvest { margin-top: 27px; border-top: 2px solid #252525;
+		.list-staus-account { overflow: hidden; margin-top: 0px;
+			.type01 { padding-top: 26px; padding-bottom: 0px; height: 91px;
+				strong { font-size: 37px; }
+			}
+			.type02 { padding-top: 26px; padding-bottom: 0px; height: 91px;
+				strong { font-size: 37px; }
+			}
+		}
+
+
+		.rating { position: relative; padding-top: 46px; padding-left: 260px; height: 201px;
+			.info { font-size: 16px; color: $color-title; line-height: 25px;
+				strong { color: $color-menu1-hover; }
+				a { font-size: 12px; color: $color-content; text-decoration: underline; }
+			}
+
+			.desc { margin-top: 14px; font-size: 12px; color: $color-content; line-height: 20px; }
+			.btns { margin-top: 11px; }
+
+			.rating-profile {
+				&:before { content: ''; display: block; position: absolute; top: 4px; left: 0; height: 239px; width: 230px; border-radius: 6px; background: #edeff4 url('/assets/images/default_profile02.png') center bottom no-repeat;; }
+				&:after { content: ''; display: block; position: absolute; top: 4px; left: 0; height: 239px; width: 230px; background: url('/assets/images/bg_invest01_b.png') center 25px no-repeat; }
+
+				&.newbie:after { background-image: url('/assets/images/bg_invest02_b.png'); }
+				&.silver:after { background-image: url('/assets/images/bg_invest03_b.png'); }
+				&.gold:after { background-image: url('/assets/images/bg_invest04_b.png'); }
+				&.vip-silver:after { background-image: url('/assets/images/bg_invest05_b.png'); }
+				&.vip-gold:after { background-image: url('/assets/images/bg_invest06_b.png'); }
+				&.vvip:after { background-image: url('/assets/images/bg_invest07_b.png'); }
+				&.super:after { background-image: url('/assets/images/bg_invest08_b.png'); }
+			}			
+		}
+	}
+
+	/* 나의 투자 데이터 테이블 */
+	.tbl-container { margin-top: 80px;
+		.filter { margin-top: 4px; }
+
+		.tab-data { overflow: hidden; padding-bottom: 6px;
+			a { display: block; float: left; margin-right: -2px; padding-top: 19px; height: 31px; width: 184px; font-size: 14px; color: $color-content; text-align: center; border: 2px solid #e1e5ec; border-bottom: 0px; border-radius: 9px 9px 0px 0px;
+				&.selected { position: relative; z-index: z("default"); color: $color-title; border-color: $color-title; }
+			}
+		}
+	}
+
+}
 
 
 

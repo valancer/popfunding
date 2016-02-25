@@ -23,6 +23,7 @@ button { appearance: none; cursor: pointer; border: 0px; background-color: trans
 table {border-collapse:collapse;border-spacing:0;}
 input, textarea, keygen, select, button { font-family: $font-base-stack; }
 strong { font-weight: normal; }
+dfn { font-style: normal; }
 
 /* link Style */
 a:link, a:visited, a:active, a:focus { text-decoration: none; }

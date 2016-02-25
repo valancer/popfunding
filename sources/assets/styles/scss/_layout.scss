@@ -503,6 +503,19 @@ article.contents { min-width: $contents-container-width; padding: 60px 0 110px 0
 		}
 	}
 
+	/* 작은 레이어 팝업 */
+	&.part { left: 0px; bottom: auto;
+		> .inner { left: auto; padding: 30px 50px 34px 50px; width: auto;
+			&:before { content: ''; display: block; position: absolute; top: -$sprite-bg-arrow22-height; left: 128px; @include sprite($sprite-bg-arrow22); }
+
+			.message { margin-top: 0px; font-size: 12px; color: $color-point2; line-height: 18px; }
+			.f20 { font-size: 20px; }
+
+			.btn-part-submit { display: inline-block; padding-right: 25px; padding-left: 25px;font-size: 14px; font-weight: bold; color: #fff; line-height: 40px; border-radius: 2px; background-color: $color-point2;
+				&:after { content: ''; display: inline-block; margin-top: -1px; margin-left: 3px; vertical-align: middle; @include sprite($sprite-bg-arrow21); }
+			}
+		}
+	}
 }
 
 

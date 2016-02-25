@@ -32,14 +32,14 @@
 
 
 	/* 데이터 테이블 상단 옵션 */
-	.tbl-options { padding: 20px 10px 20px 10px; height: 31px; border-top: 2px solid $color-title; background-color: #fbfbfb;
+	.tbl-options { position: relative; padding: 20px 10px 20px 10px; height: 31px; border-top: 2px solid $color-title; background-color: #fbfbfb;
 		.right-column { float: right; }
-		input[type=text] { display: inline-block; height: 29px; width: 93px; font-size: 12px; color: $color-title; line-height: 29px; vertical-align: middle; text-align: center; border: 1px solid #d4dae4; background-color: #fff; }
+		input.txt { display: inline-block; height: 29px; width: 93px; font-size: 12px; color: $color-title; line-height: 29px; vertical-align: middle; text-align: center; border: 1px solid #d4dae4; background-color: #fff; }
 		select { margin-left: 6px; vertical-align: middle; border: 1px solid #d4dae4; border-radius: 0px; }
 		.cr-box { margin-left: 20px; }
 
 		.btn-search { display: inline-block; margin-left: 6px; min-width: 68px; font-size: 12px; font-weight: bold; color: #fff; line-height: 31px; border-radius: 2px; background-color: #6e80a9; }
-		.btn-inline-submit { display: inline-block; padding-right: 15px; padding-left: 15px; font-size: 12px; font-weight: bold; color: #fff; line-height: 31px; border-radius: 2px; background-color: #14378c;
+		.btn-inline-submit { display: inline-block; padding-right: 15px; padding-left: 15px; font-size: 12px; font-weight: bold; color: #fff; line-height: 31px; vertical-align: middle; border-radius: 2px; background-color: #14378c;
 			&.em { padding-right: 25px; padding-left: 25px;
 				&:after { content: ''; display: inline-block; margin-top: -1px; margin-left: 3px; vertical-align: middle; @include sprite($sprite-bg-arrow21); }
 			}
@@ -48,17 +48,19 @@
 		+ .tbl-data-v { border-top: 1px solid #d4dae4; }
 	}
 
+
+
 	/* 데이터 테이블 */
-	.tbl-data-h { table-layout: fixed; width: 100%; border-top: 2px solid $color-title;
+	.tbl-data-h { /*table-layout: fixed;*/ width: 100%; border-top: 2px solid $color-title;
 		th { height: 54px; font-size: 14px; font-weight: normal; color: $color-title; line-height: 16px; border-bottom: 1px solid #d4dae4; background-color: #fbfbfb; }
 		td { height: 54px; font-size: 14px; color: $color-content; text-align: center; line-height: 16px; border-bottom: 1px solid #d4dae4; border-left: 1px solid #d4dae4; background-color: #fff;
 			em { color: $color-menu1-hover; }
 			strong { color: $color-menu1-hover; text-decoration: underline; }
 		}
 	}
-	.tbl-data-v { table-layout: fixed; width: 100%; border-top: 2px solid $color-title;
+	.tbl-data-v { /*table-layout: fixed;*/ width: 100%; border-top: 2px solid $color-title;
 		> thead { border-bottom: 1px solid #7c7f84;
-			th { position: relative; height: 45px; font-size: 14px; font-weight: normal; color: $color-title; line-height: 16px; border-left: 1px solid #d4dae4; background-color: #fbfbfb;
+			th { position: relative; height: 45px; font-size: 14px; font-weight: normal; color: $color-title; line-height: 16px; text-align: center; border-left: 1px solid #d4dae4; background-color: #fbfbfb;
 				&:first-child { border-left: 0px; }
 			}
 
@@ -69,17 +71,9 @@
 			.cr-box {
 				label { font-size: 14px; color: $color-title; }
 			}
-
-			.tooltip { display: none; left: -20px; bottom: auto; color: $color-content; border: 1px solid #c3d0e1;
-				&:before { top: -$sprite-bg-arrow15-height; left: 50%; margin-left: -$sprite-bg-arrow15-width/2; @include sprite($sprite-bg-arrow15); }
-				
-				&.down {
-					&:before { top: auto; bottom: -$sprite-bg-arrow16-height; margin-left: -$sprite-bg-arrow16-width/2; @include sprite($sprite-bg-arrow16); }
-				}
-			}
 		}
 		> tbody {
-			td { position: relative; padding-right: 5px; padding-left: 5px; height: 45px; font-size: 14px; color: $color-content; text-align: center; line-height: 16px; border-bottom: 1px solid #d4dae4; border-left: 1px solid #d4dae4; background-color: #fff;
+			th, td { position: relative; padding-right: 5px; padding-left: 5px; height: 45px; font-size: 14px; font-weight: normal; color: $color-content; text-align: center; line-height: 16px; border-bottom: 1px solid #d4dae4; border-left: 1px solid #d4dae4; background-color: #fff;
 				&:first-child { border-left: 0px; }
 				a { position: relative; color: $color-content; text-decoration: underline;
 					/*  대손 상환 */
@@ -95,12 +89,24 @@
 				/* new badge */
 				.new { display: block; position: absolute; top: 0; left: 0; text-indent: -9999px; @include sprite($sprite-badge-new05); }
 				.nickname { display: inline-block; overflow: hidden; margin: 0 auto; height: 16px; max-width: 80px; text-overflow: ellipsis; white-space: nowrap; }
-				.title { display: inline-block; overflow: hidden; height: 16px; max-width: 100%; text-overflow: ellipsis; white-space: nowrap; }
+				.title { display: inline-block; overflow: hidden; height: 16px; max-width: 260px; text-overflow: ellipsis; white-space: nowrap; }
 			}
 
 			.cr-box {
 				label { padding-left: 0px; height: 16px; width: 14px; text-indent: -9999px; }
 			}
+		}
+
+		/* tooltip */
+		.tooltip { display: none; bottom: auto; color: $color-content; border: 1px solid #c3d0e1;
+			&:before { top: -$sprite-bg-arrow15-height; left: 50%; margin-left: -$sprite-bg-arrow15-width/2; @include sprite($sprite-bg-arrow15); }
+			
+			&.down {
+				&:before { top: auto; bottom: -$sprite-bg-arrow16-height; margin-left: -$sprite-bg-arrow16-width/2; @include sprite($sprite-bg-arrow16); }
+			}
+
+			/* bar */
+			.bar { color: #e7ecf3; }
 		}
 
 		/* text align */
@@ -119,6 +125,24 @@
 			&:before { content: ''; display: inline-block; height: 2px; width: 2px; vertical-align: middle; background-color: $color-content; }
 
 			+ .paging { margin-top: 15px; }
+		}
+	}
+
+
+	.tbl-data-tootip-v { margin-top: 12px; width: 100%; border-top: 2px solid #252525; border-bottom: 2px solid #252525;
+		> thead {
+			th { padding-top: 9px; padding-bottom: 9px; font-size: 14px; font-weight: normal; color: $color-title-sub; line-height: 18px; text-align: center; border-bottom: 1px solid #7c7f84; border-left: 1px solid #7c7f84; background-color: #fbfbfb;
+				&:first-child { border-left: 0px; }
+
+				em { color: $color-menu1-hover; }
+			}
+		}
+		> tbody {
+			th { padding-top: 13px; padding-bottom: 12px; font-size: 14px; font-weight: normal; color: $color-content; text-align: center; line-height: 18px; border-bottom: 1px solid #d4dae4; border-left: 1px solid #7c7f84; background-color: #fbfbfb;
+				&:first-child { border-left: 0px; }
+				&[scope=col] { border-bottom: 1px solid #7c7f84; }
+			}
+			td { padding-top: 13px; padding-bottom: 12px; font-size: 14px; font-weight: normal; color: $color-content; text-align: center; line-height: 18px; border-bottom: 1px solid #d4dae4; border-left: 1px solid #d4dae4; }
 		}
 	}
 
@@ -179,23 +203,6 @@
 
 		> .title { padding: 0px; font-size: 14px; font-weight: normal; color: $color-title-sub;
 			&:before { content: none; }
-		}
-
-		table { margin-top: 12px; width: 100%; border-top: 2px solid #252525; border-bottom: 2px solid #252525;
-			thead {
-				th { padding-top: 9px; padding-bottom: 9px; font-size: 14px; font-weight: normal; color: $color-title-sub; line-height: 18px; text-align: center; border-bottom: 1px solid #7c7f84; border-left: 1px solid #7c7f84; background-color: #fbfbfb;
-					&:first-child { border-left: 0px; }
-
-					em { color: $color-menu1-hover; }
-				}
-			}
-			tbody {
-				th { padding-top: 13px; padding-bottom: 12px; font-size: 14px; font-weight: normal; color: $color-content; text-align: center; line-height: 18px; border-bottom: 1px solid #d4dae4; border-left: 1px solid #7c7f84; background-color: #fbfbfb;
-					&:first-child { border-left: 0px; }
-					&[scope=col] { border-bottom: 1px solid #7c7f84; }
-				}
-				td { padding-top: 13px; padding-bottom: 12px; font-size: 14px; font-weight: normal; color: $color-content; text-align: center; line-height: 18px; border-bottom: 1px solid #d4dae4; border-left: 1px solid #d4dae4; }
-			}
 		}
 
 		/* 총 자산현황 */
@@ -299,6 +306,21 @@
 /* 마이존 - 나의 투자 */
 .contents.myzone.myinvest {
 
+	/* 나의 투자 팝업 */
+	.help-myinvest { &:before { left: 79px; } }
+	.help-mybond { &:before { left: 79px; } }
+	.list-dfn { overflow: hidden;
+		> li { float: left; }
+	}
+	.dfn-auto { overflow: hidden; margin-top: 12px;
+		dt { display: block; float: left; padding: 0 8px; font-size: 14px; color: $color-content; line-height: 16px; text-align: center; }
+		dd { display: block; float: left; padding-right: 10px; font-size: 12px; color: $color-desc; line-height: 16px; }
+	}
+	.dfn-word { margin-top: 14px;
+		dt { display: block; font-size: 14px; color: $color-title; line-height: 22px; }
+		dd { display: block; margin-top: 2px; padding-right: 20px; font-size: 12px; color: $color-content; line-height: 18px; }
+	}
+
 	/* 나의 투자 써머리 */
 	.info-myinvest { margin-top: 27px; border-top: 2px solid #252525;
 		.list-staus-account { overflow: hidden; margin-top: 0px;
@@ -333,6 +355,18 @@
 				&.super:after { background-image: url('/assets/images/bg_invest08_b.png'); }
 			}			
 		}
+
+		/* 투자실적 상세내역 팝업 */
+		.investment-performance { top: 96px; left: 375px; padding: 28px 40px 40px 40px; width: 360px;
+			&:before { left: 122px; }
+
+			> .title { padding: 0px; font-size: 14px; font-weight: normal; color: $color-title-sub;
+				&:before { content: none; }
+			}
+
+			.tbl-data-v { margin-top: 12px; border-bottom: 2px solid $color-title; }
+		}		
+
 	}
 
 	/* 나의 투자 데이터 테이블 */

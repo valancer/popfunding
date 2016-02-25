@@ -38,15 +38,50 @@ include "head.html"
 
 					<h1 class="title">
 						나의 투자
-						<button type="button" value="#" class="btn-help02 va-toggle-btns">도움말보기</button>
+						<button type="button" value="#popup-help-myinvest" class="btn-help02 va-toggle-btns">도움말보기</button>
 					</h1>
 
+					<aside id="popup-help-myinvest" class="popup guide-popup type-tooltip help-myinvest">
+						<button class="btn-popup-close" data-target="#popup-help-myinvest">팝업닫기</button>
+
+						<ul class="list-dot">
+							<li>
+								진행중인 투자 중 회원님께서 직접 참가하신 투자입니다.
+							</li>
+							<li>
+								한 투자에 많은 금액을 투자하실 경우 리스크가 높아질 수 있으므로 한 투자당<br>총 투자금액의 1/50 이하로 분산투자 하실 것을 권해드립니다.
+							</li>
+							<li>
+								자동참가로 참여한 투자인 경우 다음과 같은 내용이 표시됩니다.
+							</li>
+						</ul>
+
+						<dl class="dfn-auto">
+							<dt>A<br>(참가자수)</dt>
+							<dd>
+								-오토비딩<br>
+								-조건설정
+							</dd>
+
+							<dt>M갑<br>(250건)</dt>
+							<dd>
+								-미투비딩 갑<br>
+								-을회원 투자 건수
+							</dd>
+
+							<dt>M을<br>(hkng12)</dt>
+							<dd>
+								-미투비딩 을<br>
+								-갑회원의 아이디
+							</dd>
+						</dl>
+					</aside>
 
 					<div class="info-myinvest">
 						<div class="rating">
 							<p class="info">
 								제영순님의 투자자 등급은 <strong class="rating-profile newbie">VIP골드</strong><br>
-								지난 3개월간 투자실적은 <strong>200점</strong> <a href="#">상세보기</a>
+								지난 3개월간 투자실적은 <strong>200점</strong> <a href="#popup-investment-performance" class="va-toggle-btns">상세보기</a>
 							</p>
 							<p class="desc">
 								투자자 등급은 회원님의 지난 3개월간 실적을 기준으로 매달 1일에 갱신됩니다.<br>
@@ -56,7 +91,45 @@ include "head.html"
 							<p class="btns">
 								<a href="#" class="btn-inline-box">투자자 인증받기</a>
 							</p>
-							
+		
+							<!-- 투자실적 상세내역 팝업 -->
+							<aside id="popup-investment-performance" class="popup guide-popup type-tooltip investment-performance">
+								<button class="btn-popup-close" data-target="#popup-investment-performance">팝업닫기</button>
+								
+								<h1 class="title">투자실적 상세내역</h1>
+								<table class="tbl-data-v">
+									<caption>투자실적 상세내역</caption>
+									<thead>
+										<tr>
+											<th>항목</th>
+											<th>실적</th>
+											<th>점수</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th>총 투자 금액</th>
+											<td>306,000원</td>
+											<td><em>300점</em></td>
+										</tr>
+										<tr>
+											<th>총 투자 횟수</th>
+											<td>18회</td>
+											<td><em>18점</em></td>
+										</tr>
+										<tr>
+											<th>총 투자 시간</th>
+											<td>55일</td>
+											<td><em>50점</em></td>
+										</tr>
+										<tr>
+											<th>투자경험</th>
+											<td>있음</td>
+											<td><em>100점</em></td>
+										</tr>
+									</tbody>
+								</table>
+							</aside>
 						</div>
 
 						<ul class="list-staus-account">
@@ -115,7 +188,7 @@ include "head.html"
 								<col>
 								<col>
 								<col>
-								<col style="width: 18.043%;">
+								<col>
 							</colgroup>
 							<thead>
 								<tr>
@@ -207,9 +280,9 @@ include "head.html"
 							<colgroup>
 								<col style="width: 16.957%;">
 								<col style="width: 29.891%;">
-								<col style="width: 21.957%;">
-								<col style="width: 12.826%;">
-								<col style="width: 18.043%;">
+								<col>
+								<col>
+								<col>
 							</colgroup>
 							<thead>
 								<tr>
@@ -302,8 +375,8 @@ include "head.html"
 								<col style="width: 16.957%;">
 								<col>
 								<col>
-								<col style="width: 26.630%;">
-								<col style="width: 18.043%;">
+								<col>
+								<col>
 							</colgroup>
 							<thead>
 								<tr>
@@ -399,9 +472,55 @@ include "head.html"
 				<section class="section">
 					<h1 class="title">
 						나의 채권
-						<button type="button" value="#" class="btn-help02 va-toggle-btns">도움말보기</button>
+						<button type="button" value="#popup-help-mybond" class="btn-help02 va-toggle-btns">도움말보기</button>
 					</h1>
 					
+					<aside id="popup-help-mybond" class="popup guide-popup type-tooltip help-mybond">
+						<button class="btn-popup-close" data-target="#popup-help-mybond">팝업닫기</button>
+
+						<ul class="list-dot">
+							<li>
+								보유한 채권들의 현황입니다.
+							</li>
+							<li>
+								채권번호를 클릭하거나, 체크박스에 체크 후 [선택매도주문]을 통해 채권을 거래할 수 있습니다.<br>(상환/연체중 상태의 채권만 거래가 가능합니다.)
+							</li>
+							<li>
+								종료된 채권의 경우에는 원금 잔액과 관계없이 기준가가 0으로 표시됩니다.
+							</li>
+							<li>
+								대기중인 채권만 주문수정 및 취소가 가능합니다.
+							</li>
+						</ul>
+
+						<ul class="list-dfn">
+							<li>
+								<dl class="dfn-word">
+									<dt><dfn>기준가</dfn></dt>
+									<dd>
+										원금잔액
+									</dd>
+								</dl>
+							</li>
+							<li>
+								<dl class="dfn-word">
+									<dt><dfn>매매가</dfn></dt>
+									<dd>
+										할인율이 적용된<br>거래가격
+									</dd>
+								</dl>
+							</li>
+							<li>
+								<dl class="dfn-word">
+									<dt><dfn>할인율</dfn></dt>
+									<dd>
+										채권의 잔여원금을 기준으로 얼마만큼<br>할인하여 매도하려고 하는지 나타내는 수치
+									</dd>
+								</dl>
+							</li>
+						</ul>
+					</aside>
+
 					<ul class="list-staus-account">
 						<li style="width: 33.3%;">
 							<div class="status type01">
@@ -449,7 +568,7 @@ include "head.html"
 							<legend>보유 채권 검색 옵션</legend>
 
 							<div class="right-column">
-								<input type="text" id="" name="" placeholder="투자번호">
+								<input type="text" id="" name="" placeholder="투자번호" class="txt">
 								<select name="" id="">
 									<option value="">선택</option>
 									<option value="1">상환중</option>
@@ -458,9 +577,9 @@ include "head.html"
 
 								<span class="cr-box">
 									<input type="checkbox" id="" name=""><label for="">시작일</label>
-									<input type="text" id="" name="" placeholder="2015.12.12">
+									<input type="text" id="" name="" placeholder="2015.12.12" class="txt">
 									-
-									<input type="text" id="" name="" placeholder="2015.12.12">
+									<input type="text" id="" name="" placeholder="2015.12.12" class="txt">
 								</span>
 								<button type="button" class="btn-search">검색</button>
 							</div>
@@ -471,15 +590,15 @@ include "head.html"
 						<table class="tbl-data-v">
 							<caption></caption>
 							<colgroup>
-								<col style="width: 8.043%;">
-								<col style="width: 13.152%;">
+								<col>
+								<col>
 								<col style="width: 13.152%;">
 								<col>
 								<col>
-								<col style="width: 7.283%;">
-								<col style="width: 9.891%;">
-								<col style="width: 8.587%;">
-								<col style="width: 8.587%;">
+								<col>
+								<col>
+								<col>
+								<col>
 							</colgroup>
 							<thead>
 								<tr>
@@ -494,7 +613,7 @@ include "head.html"
 									<th>
 										잔여상환금
 										<button type="button" value="#remaining-payments" class="btn-help02 va-over-btns">도움말보기</button>
-										<span id="remaining-payments" class="tooltip down">원금잔액 + 이자잔액 – 수수료잔액(자동참가)</span>
+										<span id="remaining-payments" class="tooltip down" style="left: -33px;">원금잔액 + 이자잔액 – 수수료잔액(자동참가)</span>
 									</th>
 									<th>상환</th>
 									<th>자동</th>
@@ -620,7 +739,7 @@ include "head.html"
 							<legend>거래 내역 검색 옵션</legend>
 
 							<div class="right-column">
-								<input type="text" id="" name="" placeholder="투자번호">
+								<input type="text" id="" name="" placeholder="투자번호" class="txt">
 								<select name="" id="">
 									<option value="">상태 선택</option>
 									<option value="1">상환중</option>
@@ -633,15 +752,43 @@ include "head.html"
 									<option value="">선택</option>
 								</select>
 
-								<input type="text" id="" name="" placeholder="2015.12.12" style="margin-left: 6px;">
+								<input type="text" id="" name="" placeholder="2015.12.12" class="txt" style="margin-left: 6px;">
 								-
-								<input type="text" id="" name="" placeholder="2015.12.12">
+								<input type="text" id="" name="" placeholder="2015.12.12" class="txt">
 								<button type="button" class="btn-search">검색</button>
 							</div>
 
 							<button type="button" class="btn-inline-submit">거래취소</button>
-							<button type="button" class="btn-inline-submit">할인/할증 수정</button>
+							<button type="button" value="#" class="btn-inline-submit">할인/할증 수정</button>
+
+							<!-- 할인/할증 수정 팝업 -->
+							<aside id="popup-update-sp" class="invest-popup part" style="top: 62px;">
+								<fieldset class="inner">
+									<legend>할인/할증 수정</legend>
+									<button class="btn-popup-close" data-target="#popup-invest">팝업닫기</button>
+
+									<p class="message">
+										매도중인 채권의 할인/할증을 수정하고,<br>선택한 모든 채권에 반영됩니다.
+									</p>
+									
+									<div class="item-form" style="margin-top: 18px;">
+										<div class="select inline center">
+											<button value="">선택</button>
+											<ul class="list-selecting" style="/* display: none; */">
+												<li><button value="">할인</button></li>
+												<li><button value="">할증</button></li>
+											</ul>
+										</div>
+										<span class="center">
+											<input type="text" id="" name="" class="f20" value="0%" style="width: 78px;">
+										</span>
+										
+										<button type="submit" class="btn-part-submit">수정하기</button>
+									</div>
+								</fieldset>
+							</aside>
 						</fieldset>
+
 
 						<table class="tbl-data-v">
 							<caption></caption>
@@ -676,7 +823,7 @@ include "head.html"
 									<td>
 										<span class="new">[신규 항목입니다.]</span>
 										<span class="cr-box">
-											<input type="checkbox" id="select01" name="select"><label for="select01">항목선택</label>
+											<input type="checkbox" id="index01" name="select"><label for="index01">항목선택</label>
 										</span>
 									</td>
 									<td>
@@ -694,6 +841,215 @@ include "head.html"
 										1,500,000원
 										<strong class="sale-price">1,490,000원</strong>
 									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="cr-box">
+											<input type="checkbox" id="index02" name="select"><label for="index02">항목선택</label>
+										</span>
+									</td>
+									<td>
+										<a href="#">B151224-108</a>
+									</td>
+									<td><em class="minus">연체중</em></td>
+									<td>체결</td>
+									<td><em class="minus">매도</em></td>
+									<td>
+										<time datetime="">2015.12.12</time> ~<br>
+										<time datetime="">2015.12.12</time>
+									</td>
+									<td>할증10%</td>
+									<td>
+										150,000원
+										<strong class="sale-price">190,000원</strong>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="cr-box">
+											<input type="checkbox" id="index03" name="select"><label for="index03">항목선택</label>
+										</span>
+									</td>
+									<td>
+										<a href="#">B151224-108</a>
+									</td>
+									<td><em class="minus">연체중</em></td>
+									<td>취소<br>(기간만료)</td>
+									<td><em class="minus">매도</em></td>
+									<td>
+										<time datetime="">2015.12.12</time> ~<br>
+										<time datetime="">2015.12.12</time>
+									</td>
+									<td>할인10%</td>
+									<td>
+										1,550,000원
+										<strong class="sale-price">1,490,000원</strong>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="cr-box">
+											<input type="checkbox" id="index04" name="select"><label for="index04">항목선택</label>
+										</span>
+									</td>
+									<td>
+										<a href="#">B151224-108</a>
+									</td>
+									<td><em class="minus">대손발생</em></td>
+									<td>취소<br>(대손발생)</td>
+									<td><em class="plus">매수</em></td>
+									<td>
+										<time datetime="">2015.12.12</time> ~<br>
+										<time datetime="">2015.12.12</time>
+									</td>
+									<td>할증10%</td>
+									<td>
+										2,000원
+										<strong class="sale-price">1,490원</strong>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="cr-box">
+											<input type="checkbox" id="index05" name="select"><label for="index05">항목선택</label>
+										</span>
+									</td>
+									<td>
+										<a href="#">B151224-108</a>
+									</td>
+									<td>상환중</td>
+									<td>대기</td>
+									<td><em class="plus">매수</em></td>
+									<td>
+										<time datetime="">2015.12.12</time> ~<br>
+										<time datetime="">2015.12.12</time>
+									</td>
+									<td>할인10%</td>
+									<td>
+										1,550,000원
+										<strong class="sale-price">1,490,000원</strong>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+
+						<!-- 종료 채권 옵션 / 목록 -->
+						<fieldset class="tbl-options">
+							<legend>종료 채권 검색 옵션</legend>
+
+							<div class="right-column">
+								<input type="text" id="" name="" placeholder="투자번호" class="txt">
+								<select name="" id="">
+									<option value="">선택</option>
+								</select>
+
+								<span class="cr-box">
+									<input type="checkbox" id="" name=""><label for="">시작일</label>
+									<input type="text" id="" name="" placeholder="2015.12.12" class="txt">
+									-
+									<input type="text" id="" name="" placeholder="2015.12.12" class="txt">
+								</span>
+								<button type="button" class="btn-search">검색</button>
+							</div>
+						</fieldset>
+
+						<table class="tbl-data-v">
+							<caption></caption>
+							<colgroup>
+								<col style="width: 13.152%;">
+								<col>
+								<col>
+								<col>
+								<col>
+								<col>
+								<col>
+							</colgroup>
+							<thead>
+								<tr>
+									<th>채권번호</th>
+									<th>상환상태</th>
+									<th>원금 / 이율</th>
+									<th>
+										잔여상환금
+										<button type="button" value="#remaining-payments" class="btn-help02 va-over-btns">도움말보기</button>
+										<span id="remaining-payments" class="tooltip down" style="left: -33px;">원금잔액 + 이자잔액 – 수수료잔액(자동참가)</span>
+									</th>
+									<th>상환</th>
+									<th>자동</th>
+									<th>연체<br>일수</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<a href="#">B151224-108</a>
+									</td>
+									<td>정상종료</td>
+									<td>1,200,000원 / 25%</td>
+									<td>1,250,000원</td>
+									<td><span class="cnt">21/24</span></td>
+									<td>
+										M갑<br><em class="nickname">(250건)</em>
+									</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>
+										<a href="#">B151224-108</a>
+									</td>
+									<td>대손종료</td>
+									<td>1,000원 / 11%</td>
+									<td>1,090원</td>
+									<td><span class="cnt">2/12</span></td>
+									<td>
+										-
+									</td>
+									<td>3</td>
+								</tr>
+								<tr>
+									<td>
+										<a href="#">B151224-108</a>
+									</td>
+									<td>
+										정상종료
+									</td>
+									<td>1,200,000원 / 25%</td>
+									<td>1,250,000원</td>
+									<td><span class="cnt">21/24</span></td>
+									<td>
+										M갑<br><em class="nickname">(250건)</em>
+									</td>
+									<td>
+										<a href="#sale01" class="va-over-btns">150<br>채권매각</a>
+										<span id="sale01" class="tooltip down" style="left: -10px;">매각가격 <span class="bar">|</span> 25,896원</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<a href="#">B151224-108</a>
+									</td>
+									<td>대손종료</td>
+									<td>1,000원 / 11%</td>
+									<td>1,090원</td>
+									<td><span class="cnt">2/12</span></td>
+									<td>
+										-
+									</td>
+									<td>3</td>
+								</tr>
+								<tr>
+									<td>
+										<a href="#">B151224-108</a>
+									</td>
+									<td>대손종료</td>
+									<td>1,000원 / 11%</td>
+									<td>1,090원</td>
+									<td><span class="cnt">2/12</span></td>
+									<td>
+										-
+									</td>
+									<td>3</td>
 								</tr>
 							</tbody>
 						</table>

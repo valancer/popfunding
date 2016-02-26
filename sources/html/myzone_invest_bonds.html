@@ -283,135 +283,137 @@ include "head.html"
 							<button type="button" class="btn-inline-submit em">선택 매도주문</button>
 						</fieldset>
 
-<!-- 매도 주문 -->
-<aside id="popup-invest-bonds" class="invest-popup sell-bonds">
-	<fieldset class="inner">
-		<legend>채권 매도 주문</legend>
-		<button class="btn-popup-close" data-target="#invest-bonds">팝업닫기</button>
+						<!-- 매도 주문 -->
+						<aside id="popup-invest-bonds" class="invest-popup sell-bonds">
+							<fieldset class="inner">
+								<legend>채권 매도 주문</legend>
+								<button class="btn-popup-close" data-target="#invest-bonds">팝업닫기</button>
 
-		<h1 class="title">채권 매도</h1>
+								<h1 class="title">채권 매도</h1>
 
-		<div class="options">
-			<div class="item-form">
-				<button type="button" value="#popup-save-help" class="btn-save-help va-toggle-btns">할인률</button>
-				<div class="select inline center">
-					<button value="">선택</button>
-					<ul class="list-selecting" style="display: none;">
-						<li><button value=""></button></li>
-						<li><button value=""></button></li>
-					</ul>
-				</div>
-				<span class="center">
-					<input type="text" id="" name="" class="f20" value="0%" style="width: 78px;">
-				</span>
-				
-				<button type="submit" class="btn-part-submit">일괄적용</button>
-			</div>
+								<div class="options">
+									<div class="item-form">
+										<button type="button" value="#popup-save-help" class="btn-save-help va-toggle-btns">할인률</button>
+										<div class="select inline center">
+											<button value="">선택</button>
+											<ul class="list-selecting" style="display: none;">
+												<li><button value=""></button></li>
+												<li><button value=""></button></li>
+											</ul>
+										</div>
+										<span class="center">
+											<input type="text" id="" name="" class="f20" value="0%" style="width: 78px;">
+										</span>
+										
+										<button type="submit" class="btn-part-submit">일괄적용</button>
+									</div>
 
 
-			<!-- 할인율 도뭄말 팝업 -->
-			<div id="popup-save-help" class="popup guide-popup type-tooltip right save-help">
-				<button class="btn-popup-close" data-target="#popup-save-help">팝업닫기</button>
+									<!-- 할인율 도뭄말 팝업 -->
+									<div id="popup-save-help" class="popup guide-popup type-tooltip right save-help">
+										<button class="btn-popup-close" data-target="#popup-save-help">팝업닫기</button>
 
-				<ul class="list-dot">
-					<li>
-						할인율은 채권의 잔여원금을 기준으로 얼마만큼 할인하여 매도하려고 하는지 나타내는 수치입니다.
-					</li>
-					<li>
-						채권의 이자율에 따른 기대수익금과 자동참가 등의 비용을 고려해 매매해주세요.
-					</li>
-					<li>
-						할인율은 -20%에서부터 +99.9까지 소수점 첫째짜리 단위로 조정할 수 있습니다.
-					</li>
-				</ul>
-			</div>
-		</div>
+										<ul class="list-dot">
+											<li>
+												할인율은 채권의 잔여원금을 기준으로 얼마만큼 할인하여 매도하려고 하는지 나타내는 수치입니다.
+											</li>
+											<li>
+												채권의 이자율에 따른 기대수익금과 자동참가 등의 비용을 고려해 매매해주세요.
+											</li>
+											<li>
+												할인율은 -20%에서부터 +99.9까지 소수점 첫째짜리 단위로 조정할 수 있습니다.
+											</li>
+										</ul>
+									</div>
+								</div>
 
-		<table class="list-sell-bonds">
-			<caption>채권 목록</caption>
-			<thead>
-				<tr>
-					<th>
-						<span class="cr-box">
-							<input type="checkbox" id="select-all" name="select-all"><label for="select-all">선택</label>
-						</span>
-					</th>
-					<th>채권번호</th>
-					<th>상환</th>
-					<th>이자</th>
-					<th>연체</th>
-					<th>자동</th>
-					<th>기준가</th>
-					<th>할인/할증</th>
-					<th>매매가</th>
-				</tr>
-			</thead>
-			<tfoot>
-				<tr>
-					<td colspan="9">
-						총 2건 / 120,000원
-					</td>
-				</tr>
-			</tfoot>
-			<tbody>
-				<tr>
-					<td>
-						<span class="cr-box">
-							<input type="checkbox" id="select01" name="select"><label for="select01">항목선택</label>
-						</span>
-					</td>
-					<td>B147852-1-123</td>
-					<td>1/12</td>
-					<td>25%</td>
-					<td>0</td>
-					<td>-</td>
-					<td>1,000,000</td>
-					<td>
-						<select name="" id="">
-							<option value="">선택</option>
-						</select>
-						<input type="text" id="" name="" value="0%" class="txt">
-					</td>
-					<td>
-						<em>1,000,000</em>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<span class="cr-box">
-							<input type="checkbox" id="select01" name="select"><label for="select01">항목선택</label>
-						</span>
-					</td>
-					<td>B147852-1-123</td>
-					<td>1/12</td>
-					<td>25%</td>
-					<td>0</td>
-					<td>M갑(250건)</td>
-					<td>1,000,000</td>
-					<td>
-						<select name="" id="">
-							<option value="">선택</option>
-						</select>
-						<input type="text" id="" name="" value="0%" class="txt">
-					</td>
-					<td>
-						<em>1,000,000</em>
-					</td>
-				</tr>
-			</tbody>
-		</table>
+								<table class="list-sell-bonds">
+									<caption>채권 목록</caption>
+									<thead>
+										<tr>
+											<th>
+												<span class="cr-box">
+													<input type="checkbox" id="select-all" name="select-all"><label for="select-all">선택</label>
+												</span>
+											</th>
+											<th>채권번호</th>
+											<th>상환</th>
+											<th>이자</th>
+											<th>연체</th>
+											<th>자동</th>
+											<th>기준가</th>
+											<th>할인/할증</th>
+											<th>매매가</th>
+										</tr>
+									</thead>
+									<tfoot>
+										<tr>
+											<td colspan="9">
+												총 2건 / 120,000원
+											</td>
+										</tr>
+									</tfoot>
+									<tbody>
+										<tr>
+											<td>
+												<span class="cr-box">
+													<input type="checkbox" id="select01" name="select"><label for="select01">항목선택</label>
+												</span>
+											</td>
+											<td>B147852-1-123</td>
+											<td>1/12</td>
+											<td>25%</td>
+											<td>0</td>
+											<td>-</td>
+											<td>1,000,000</td>
+											<td>
+												<select name="" id="">
+													<option value="">선택</option>
+												</select>
+												<input type="text" id="" name="" value="0%" class="txt">
+											</td>
+											<td>
+												<em>1,000,000</em>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<span class="cr-box">
+													<input type="checkbox" id="select01" name="select"><label for="select01">항목선택</label>
+												</span>
+											</td>
+											<td>B147852-1-123</td>
+											<td>1/12</td>
+											<td>25%</td>
+											<td>0</td>
+											<td>M갑(250건)</td>
+											<td>1,000,000</td>
+											<td>
+												<select name="" id="">
+													<option value="">선택</option>
+												</select>
+												<input type="text" id="" name="" value="0%" class="txt">
+											</td>
+											<td>
+												<em>1,000,000</em>
+											</td>
+										</tr>
+									</tbody>
+								</table>
 
-		<div class="type">
-			<a href="#" class="btn-invest">매도 주문하기</a>
-			<div class="type-options">
-				<ul class="list-dot">
-					<li>매도 주문을 하면, 회원님의 채권이 채권마켓에서 7일간 판매됩니다.</li>
-					<li>기준가는 원금잔액이고, 매매가는 할인율이 판매 수익입니다.</li>
-				</ul>
-			</div>	
-		</div>
-	</fieldset>
-</aside>
+								<div class="type">
+									<a href="#" class="btn-invest">매도 주문하기</a>
+									<div class="type-options">
+										<ul class="list-dot">
+											<li>매도 주문을 하면, 회원님의 채권이 채권마켓에서 7일간 판매됩니다.</li>
+											<li>기준가는 원금잔액이고, 매매가는 할인율이 판매 수익입니다.</li>
+										</ul>
+									</div>	
+								</div>
+							</fieldset>
+						</aside>
+
+
 
 						<table class="tbl-data-v">
 							<caption></caption>

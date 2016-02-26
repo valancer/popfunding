@@ -32,7 +32,7 @@ include "head.html"
 
 				<section class="section">
 					<p class="filter">
-						<button type="button" class="btn-inline-box">등급선정기준 및 혜택</button>
+						<button type="button" value="#popup-rating-benefit" class="btn-inline-box va-toggle-btns">등급선정기준 및 혜택</button>
 						<button type="button" class="btn-inline-box">대부회원 전환안내</button>
 					</p>
 
@@ -469,6 +469,8 @@ include "head.html"
 				</section>
 
 
+
+				<!-- 나의 채권 -->
 				<section class="section">
 					<h1 class="title">
 						나의 채권
@@ -1065,7 +1067,92 @@ include "head.html"
 					</div>	<!-- class="tbl-container -->
 				</section>
 
-			</div>
+
+				<!-- 투자자 등급 산정 기준 및 혜택 -->
+				<aside id="popup-rating-benefit" class="popup guide-popup rating-benefit">
+					<button class="btn-popup-close" data-target="#popup-rating-benefit">팝업닫기</button>
+
+					<h1 class="title">투자자 등급 산정 기준 및 혜택</h1>
+					<p class="message">
+						투자자등급은 회원님의 지난 3개월간 투자금액/횟수/기간 등을 고려하여 산정됩니다. 
+					</p>
+
+					<table class="tbl-rating">
+						<caption>투자자 등급 산정 기준 및 혜택</caption>
+						<tbody>
+							<tr class="rating">
+								<th>등급</th>
+								<td>
+									<span class="rating none">등급없음</span>
+								</td>
+								<td>
+									<span class="rating newbie">새내기</span>
+								</td>
+								<td>
+									<span class="rating silver">SILVER</span>
+								</td>
+								<td>
+									<span class="rating gold">GOLD</span>
+								</td>
+								<td>
+									<span class="rating vip-silver">VIP SILVER</span>
+								</td>
+								<td>
+									<span class="rating vip-gold">VIP GOLD</span>
+								</td>
+								<td>
+									<span class="rating vvip">VVIP</span>
+								</td>
+								<td>
+									<span class="rating special">대부회원</span>
+								</td>
+							</tr>
+							<tr class="rating">
+								<th>점수</th>
+								<td><em>0점</em></td>
+								<td><em>100점</em></td>
+								<td><em>200점</em></td>
+								<td><em>300점</em></td>
+								<td><em>400점</em></td>
+								<td><em>500점</em></td>
+								<td><em>600점</em></td>
+								<td><em>-</em></td>
+							</tr>
+							<tr>
+								<th>개인에게<br>투자</th>
+								<td colspan="7">빌리기 신청금액의 1/50로 제한</td>
+								<td>제한없음</td>
+							</tr>
+							<tr>
+								<th>기업에게<br>투자</th>
+								<td colspan="8">투자금액 제한없음</td>
+							</tr>
+							<tr>
+								<th>채권거래<br>수수료</th>
+								<td colspan="2">1%</td>
+								<td>0.5%</td>
+								<td>0.3%</td>
+								<td>0.2%</td>
+								<td colspan="3">0.1%</td>
+							</tr>
+							<tr>
+								<th>채권<br>보유한도</th>
+								<td colspan="6">5천만원</td>
+								<td>무제한</td>
+								<td>무제한</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h2 class="sub-title">등급산정기준</h2>
+					<p class="sub-content">
+						3개월 투자금액 : 500만원 이상(+300점), 150만원 이상(+200점), 50만원 이상(+100점)<br>
+						3개월 투자횟수 : 10회 이상(+100점)<br>
+						총 투자기간 : 6개월 이상 (총 투자금액 3만원 이상) +100점<br>
+						투자경험 : 1회 이상 (+100점)<br>
+					</p>
+				</aside>
+			</div>	<!-- class="myzone-box" -->
 			
 			
 

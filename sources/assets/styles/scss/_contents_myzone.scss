@@ -18,7 +18,7 @@
 	}
 
 	/* 마이존 컨테츠 박스 */
-	.myzone-box { margin-top: 54px; padding-bottom: 80px; border: 1px solid #d4dae4; border-radius: 18px; background-color: #fff; }
+	.myzone-box { position: relative; margin-top: 54px; padding-bottom: 80px; border: 1px solid #d4dae4; border-radius: 18px; background-color: #fff; }
 
 	/* 게별 섹션 */
 	.section { padding: 77px 119px 0 119px;
@@ -383,6 +383,57 @@
 					}
 
 					em { color: $color-point1; }
+				}
+			}
+		}
+	}
+
+	/* 투자자 등급 및 산정 기준 및 혜택 */
+	.rating-benefit { top: 70px; right: 119px; left: 119px; padding: 63px 60px 70px 60px;
+		&:before { content: none; }
+
+		h1.title { padding: 0; font-size: 18px; color: $color-title;
+			&:before { content: none; }
+		}
+		.message { margin-top: 19px; font-size: 14px; color: $color-content; }
+		.sub-title { margin-top: 47px; font-size: 14px; color: $color-title; }
+		.sub-content { margin-top: 10px; font-size: 12px; color: $color-content; line-height: 22px; }
+
+		.tbl-rating { table-layout: fixed; margin-top: 44px; width: 100%; border-top: 2px solid $color-title;
+			tbody {
+				tr.rating {
+					th { font-size: 14px; }
+				}
+				th { height: 69px; width: 76px; font-size: 12px; font-weight: normal; color: $color-content; line-height: 16px; text-align: center; border-right: 1px solid #d4dae4; border-bottom: 1px solid #d4dae4; border-left: 1px solid #d4dae4; background-color: #fbfbfb; }
+				td { font-size: 14px; color: $color-content; text-align: center; border-right: 1px solid #d4dae4; border-bottom: 1px solid #d4dae4; background-color: #fff; }
+
+				span.rating { display: block; margin: 16px auto 17px auto; font-size: 12px; color: $color-desc; text-indent: -9999px;
+					&:before { content: ''; display: block; margin: 0 auto; }
+
+					&.none {
+						&:before { margin-top: 0px; margin-bottom: 0px; @include sprite($sprite-bg-invest01); }
+					}
+					&.newbie { @include sprite($sprite-bg-invest02-p);
+						&:before { content: none; }
+					}
+					&.silver { @include sprite($sprite-bg-invest03-p);
+						&:before { content: none; }
+					}
+					&.gold { @include sprite($sprite-bg-invest04-p);
+						&:before { content: none; }
+					}
+					&.vip-silver { @include sprite($sprite-bg-invest05);
+						&:before { content: none; }
+					}
+					&.vip-gold { @include sprite($sprite-bg-invest06);
+						&:before { content: none; }
+					}
+					&.vvip { @include sprite($sprite-bg-invest07);
+						&:before { content: none; }
+					}
+					&.special {
+						&:before { margin-bottom: 7px; @include sprite($sprite-bg-invest08); }
+					}
 				}
 			}
 		}

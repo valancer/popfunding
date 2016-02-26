@@ -354,7 +354,7 @@ article.contents { min-width: $contents-container-width; padding: 60px 0 110px 0
 				}
 
 				.list-dot { margin-top: 10px; padding-left: 7px; text-align: left;
-					> li { position: relative; font-size: 16px; color: $color-content; line-height: 20px;
+					> li { position: relative; font-size: 12px; color: $color-content; line-height: 20px;
 						&:before { content: ''; display: block; position: absolute; top: 50%; left: -7px; margin-top: -1px; height: 2px; width: 2px; background-color: $color-content; }
 						em { color: $color-point1; }
 					}
@@ -765,6 +765,9 @@ article.contents { min-width: $contents-container-width; padding: 60px 0 110px 0
 		}
 		&.bottom {
 			&:before { top: auto; bottom: -$sprite-bg-arrow16-height; left: auto; @include sprite($sprite-bg-arrow16); }
+		}
+		&.right {
+			&:before { top: 50%; right: -$sprite-bg-arrow23-width; left: auto; margin-top: -$sprite-bg-arrow23-height/2; @include sprite($sprite-bg-arrow23); }
 		}
 
 		.list-dot {

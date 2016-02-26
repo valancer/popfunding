@@ -34,7 +34,7 @@
 	/* 데이터 테이블 상단 옵션 */
 	.tbl-options { position: relative; padding: 20px 10px 20px 10px; height: 31px; border-top: 2px solid $color-title; background-color: #fbfbfb;
 		.right-column { float: right; }
-		input.txt { display: inline-block; height: 29px; width: 93px; font-size: 12px; color: $color-title; line-height: 29px; vertical-align: middle; text-align: center; border: 1px solid #d4dae4; background-color: #fff; }
+		input.txt { display: inline-block; height: 29px; width: 93px; font-size: 12px; color: $color-title; line-height: 29px; text-indent: 0; vertical-align: middle; text-align: center; border: 1px solid #d4dae4; background-color: #fff; }
 		select { margin-left: 6px; vertical-align: middle; border: 1px solid #d4dae4; border-radius: 0px; }
 		.cr-box { margin-left: 20px; }
 
@@ -370,7 +370,7 @@
 	}
 
 	/* 나의 투자 데이터 테이블 */
-	.tbl-container { margin-top: 80px;
+	.tbl-container { position: relative; margin-top: 80px;
 		.filter { margin-top: 4px; }
 
 		.tab-data { padding-bottom: 6px; height: 52px;
@@ -384,6 +384,53 @@
 
 					em { color: $color-point1; }
 				}
+			}
+		}
+	}
+
+	/* 매도주문 하기 */
+	.sell-bonds { top: 0;
+		.inner { padding: 67px 80px 18px 80px; width: 758px;
+			.title { font-size: 18px; color: $color-title; }
+			.options { position: absolute; top: 61px; right: 80px;
+				.btn-save-help { font-size: 14px; color: #2266b9;
+					&:after { content: ''; display: inline-block; margin: -2px 6px 0 5px; vertical-align: middle; @include sprite($sprite-btn-help05); }
+				}
+				span.center { margin-right: 5px; margin-left: 6px; }
+
+				/* 도움말 팝업 */
+				.save-help { top: -60px; right: 90%; left: -80%; }
+			}
+
+			.btn-part-submit { display: inline-block; padding-right: 20px; padding-left: 20px;font-size: 14px; font-weight: bold; color: #fff; line-height: 40px; vertical-align: middle; border-radius: 2px; background-color: $color-point2; }
+
+			.list-sell-bonds { margin-top: 23px; width: 100%; border-top: 2px solid $color-title; border-bottom: 2px solid $color-title; background-color: #fff;
+				> thead {
+					th { height: 50px; font-size: 12px; font-weight: normal; color: $color-title; text-align: center; border-bottom: 1px solid #d4dae4; border-left: 1px solid #d4dae4;
+						&:first-child { border-left: 0px; }
+						.cr-box {
+							label { font-size: 12px; color: $color-title; }
+						}
+					}
+				}
+				> tfoot {
+					td { height: 48px; font-size: 18px; color: $color-menu1-hover; text-align: center; }
+				}
+				> tbody {
+					td { height: 50px; font-size: 12px; color: $color-content; text-align: center; border-bottom: 1px solid #d4dae4; border-left: 1px solid #d4dae4;
+						&:first-child { border-left: 0px; }
+
+						.cr-box {
+							label { padding-left: 0px; height: 16px; width: 14px; text-indent: -9999px; }
+						}
+					}
+				}
+				em { color: $color-menu1-hover; }
+				input.txt { display: inline-block; height: 28px; width: 55px; font-size: 16px; color: $color-title; line-height: 29px; text-indent: 0; vertical-align: middle; text-align: center; border: 1px solid #d4dae4; background-color: #fff; }
+			}
+
+			.type { margin: 0 auto; padding-top: 18px; width: 400px;
+				.type-options { padding-top: 16px; }
 			}
 		}
 	}

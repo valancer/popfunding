@@ -1,6 +1,9 @@
 /* 마이존 */
 .contents.myzone { padding-bottom: 117px;
 
+	/* 공통 btns-inline-box */
+	.btn-inline-box { line-height: 29px; }
+
 	/* 마이존 상단 서브 메뉴 */
 	.menus-sub { margin-top: 47px;
 		ul { text-align: center;
@@ -90,6 +93,8 @@
 				.new { display: block; position: absolute; top: 0; left: 0; text-indent: -9999px; @include sprite($sprite-badge-new05); }
 				.nickname { display: inline-block; overflow: hidden; margin: 0 auto; height: 16px; max-width: 80px; text-overflow: ellipsis; white-space: nowrap; }
 				.title { display: inline-block; overflow: hidden; height: 16px; max-width: 260px; text-overflow: ellipsis; white-space: nowrap; }
+
+				input[type=text] { height: 29px; width: 90%; font-size: 14px; color: $color-title; text-align: center; line-height: 29px; border: 1px solid #d4dae4; background-color: #fff; }
 			}
 
 			.cr-box {
@@ -121,9 +126,13 @@
 		.btn-sell { display: inline-block; text-indent: -9999px; @include sprite($sprite-btn-sell01); }
 
 		+ .paging { margin-top: 40px; }
-		+ .tbl-data-v-bottom { margin-top: 12px; font-size: 12px; color: $color-content; text-align: right;
-			&:before { content: ''; display: inline-block; height: 2px; width: 2px; vertical-align: middle; background-color: $color-content; }
-
+		+ .tbl-data-v-bottom { margin-top: 12px; 
+			> li { font-size: 12px; color: $color-content; text-align: right; line-height: 18px;
+				p {
+					&:before { content: ''; display: inline-block; margin-right: 3px; height: 2px; width: 2px; vertical-align: middle; background-color: $color-content; }	
+				}
+			}
+		
 			+ .paging { margin-top: 15px; }
 		}
 	}
@@ -166,6 +175,26 @@
 
 	.list-staus-account { position: relative; margin: 27px -2px 0 -2px; height: 118px;
 		> li { display: block; float: left; box-sizing: border-box; height: 118px; padding: 0 2px; width: 25%; }
+	}
+
+
+	/* 데이터 테이블 */
+	.tbl-container { position: relative; margin-top: 80px;
+		.filter { margin-top: 4px; }
+
+		.tab-data { padding-bottom: 6px; height: 52px;
+			a { display: block; position: relative; float: left; margin-right: -2px; padding-top: 19px; height: 31px; width: 184px; font-size: 14px; color: $color-content; text-align: center; border: 2px solid #e1e5ec; border-bottom: 0px; border-radius: 9px 9px 0px 0px;
+				&.selected { position: relative; z-index: z("default"); color: $color-title; border-color: $color-title; }
+
+				> .new { display: block; position: absolute; top: -21px; left: 50%;
+					.inner { display: block; position: relative; left: -50%; padding: 0 12px; font-size: 12px; color: $color-content; line-height: 29px; white-space: nowrap; border: 1px solid #c3d0e1; border-radius: 5px; background-color: #fff;
+						&:before { content: ''; display: block; position: absolute; bottom: -$sprite-bg-arrow08-height; left: 50%; margin-left: -$sprite-bg-arrow08-width/2; @include sprite($sprite-bg-arrow08); }
+					}
+
+					em { color: $color-point1; }
+				}
+			}
+		}
 	}
 }
 
@@ -371,25 +400,6 @@
 
 	}
 
-	/* 나의 투자 데이터 테이블 */
-	.tbl-container { position: relative; margin-top: 80px;
-		.filter { margin-top: 4px; }
-
-		.tab-data { padding-bottom: 6px; height: 52px;
-			a { display: block; position: relative; float: left; margin-right: -2px; padding-top: 19px; height: 31px; width: 184px; font-size: 14px; color: $color-content; text-align: center; border: 2px solid #e1e5ec; border-bottom: 0px; border-radius: 9px 9px 0px 0px;
-				&.selected { position: relative; z-index: z("default"); color: $color-title; border-color: $color-title; }
-
-				> .new { display: block; position: absolute; top: -21px; left: 50%;
-					.inner { display: block; position: relative; left: -50%; padding: 0 12px; font-size: 12px; color: $color-content; line-height: 29px; white-space: nowrap; border: 1px solid #c3d0e1; border-radius: 5px; background-color: #fff;
-						&:before { content: ''; display: block; position: absolute; bottom: -$sprite-bg-arrow08-height; left: 50%; margin-left: -$sprite-bg-arrow08-width/2; @include sprite($sprite-bg-arrow08); }
-					}
-
-					em { color: $color-point1; }
-				}
-			}
-		}
-	}
-
 
 	/* 매도주문 하기 */
 	.sell-bonds { top: 0;
@@ -523,6 +533,51 @@
 		.message { position: absolute; bottom: -25px; right: 124px; font-size: 12px; color: #8995b2; }
 	}
 
+	/* 미투비딩 설정 현황 */
+	.list-settings-meto { padding-top: 3px; height: 209px; 
+		> li { display: block; box-sizing: border-box; position: relative; float: left; padding: 63px 0 0 208px; height: 209px; width: 50%; border: 1px solid #d4dae4;
+			&:before { content: ''; display: block; position: absolute; bottom: 0; left: 29px; }
+
+			> strong { font-size: 14px; color: $color-title;
+				> em { margin-left: 6px; font-size: 20px; color: $color-menu1-hover; }
+			}
+			> p { margin-top: 15px; margin-bottom: 17px; font-size: 12px; color: $color-content; line-height: 18px; }
+
+			+ li { margin-left: -1px; }
+
+			&.meto01 {
+				&:before { @include sprite($sprite-profile-meto01); }
+			}
+			&.meto02 {
+				&:before { @include sprite($sprite-profile-meto02); }
+			}
+		}
+	}
+
+	/* 미투비딩 (값) 설정 옵션 */
+	.meto01-options { margin-bottom: 37px; padding: 38px 0 34px 44px; border: 1px solid #d4dae4; border-top: 2px solid $color-title; background-color: #d6ebf6;
+		ul { overflow: hidden;
+			> li { float: left; padding-left: 10px; font-size: 12px; color: $color-content; 
+				&:first-child { padding-left: 0px; }
+
+				label { display: block; margin-bottom: 8px; font-size: 12px; color: $color-content; }
+				input[type=text] { height: 38px; font-size: 20px; color: $color-title; line-height: 38px; text-align: center; border: 1px solid #d4d8e1; box-shadow: inset 0 2px 0 0 #e7ebf3; background-color: #fff;
+					&[readonly] { box-shadow: 0px; background-color: #e6eff5; }
+					&.em { color: $color-menu1-hover; }
+				}
+				textarea { padding: 12px 15px 0 15px; height: 76px; width: 498px; font-size: 14px; color: $color-content; line-height: 22px; border: 1px solid #d4d8e1; box-shadow: inset 0 2px 0 0 #e7ebf3; background-color: #fff; }
+				p { margin-top: 7px; text-align: center; }
+			}
+		}
+
+		.btns { margin-top: 26px; text-align: center;
+			a { display: inline-block; padding: 0 25px; font-size: 14px; font-weight: bold; color: #fff; line-height: 40px; text-align: center; border-radius: 2px; background-color: #6e80a9;
+				&.em { padding: 0 21px; background-color: $color-point2;
+					&:after { content: ''; display: inline-block; margin-top: -1px; margin-left: 8px; vertical-align: middle; @include sprite($sprite-bg-arrow24); }
+				}
+			}
+		}
+	}
 }
 
 

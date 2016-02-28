@@ -27,10 +27,11 @@ include "head.html"
 			</nav>
 
 
-			<h2 class="hidden">자동 투자 - 미투비딩</h2>
+			<h2 class="hidden">자동 투자</h2>
 			<div class="myzone-box">
 
 
+				<!-- 미투/오토 비딩 전환 -->
 				<nav class="shortcut-bidding">
 					<a href="#" class="bidding selected">
 						<strong class="meto">미투비딩</strong>
@@ -51,6 +52,184 @@ include "head.html"
 					</p>
 				</nav>
 
+				
+				<section class="section">
+					<h1 class="hidden">미투비딩</h1>
+
+
+					<!-- 미투비딩 설정 상태 -->
+					<div class="status-meto-bidding">
+						<ul class="list-settings-meto">
+							<li class="meto01">
+								<strong>미투비딩(갑) <em>사용중</em></strong>
+								<p>
+									회원님이 대표투자자(갑)가 되어<br>다수(을)의 투자수익에서 수수료를 받습니다.
+								</p>
+								<button type="button" value="#" class="btn-inline-box">자세히</button>
+							</li>
+							<li class="meto02">
+								<strong>미투비딩(을) <em>미 설정</em></strong>
+								<p>
+									회원님이 (을)이 되어, 투자능력이 뛰어난<br>(갑)투자자를 따라서 자동 투자됩니다.
+								</p>
+								<button type="button" value="#" class="btn-inline-box">자세히</button>
+							</li>
+						</ul>
+					</div>
+
+
+					<div class="tbl-container">
+						
+
+						<div class="filter">
+							<button type="button" value="#" class="btn-inline-box type-other01">다른 (갑)회원 보기</button>
+						</div>
+
+						<div class="tab-data">
+							<a href="#" class="selected">(갑) 설정하기</a>
+							<a href="#">(을) 설정하기</a>
+						</div>
+
+
+						<!-- (갑)설정 옵션 -->
+						<fieldset class="meto01-options">
+							<legend>(값)설정 옵션</legend>
+
+							<ul>
+								<li>
+									<label for="">상태</label>
+									<input type="text" id="" name="" readonly="readonly" style="width: 98px;" class="em" value="사용중">
+									<p>
+										<time datetime="2015-12-12">2015.12.12</time> 설정
+									</p>
+								</li>
+								<li>
+									<label for="">수수료율</label>
+									<input type="text" id="" name="" style="width: 78px;" value="10%">
+								</li>
+								<li>
+									<label for="">소개글</label>
+									<textarea name="" id="" cols="100" rows="30">안녕하세요.</textarea>
+								</li>
+								<li>
+									<label for="">현재(을)현황</label>
+									<input type="text" id="" name="" readonly="readonly" style="width: 88px;" value="35명">
+								</li>
+							</ul>
+
+							<p class="btns">
+								<a href="#" class="em">설정하기</a>
+								<a href="#">수정하기</a>
+								<a href="#">취소하기</a>
+							</p>
+						</fieldset>
+
+
+
+						<div class="filter">
+							<button type="button" value="#" class="btn-inline-box color-b">모든(을)에게 메시지 보내기</button>
+							<select name="" id="">
+								<option value="">10개 보기</option>
+							</select>
+						</div>
+
+						<h1 class="title">현재 (을)현황</h1>
+						
+						<table class="tbl-data-v">
+							<caption>현재 (을)현황 목록</caption>
+							<thead>
+								<tr>
+									<th>NO</th>
+									<th>아이디</th>
+									<th>수수료율</th>
+									<th>유형 (투자금액)</th>
+									<th>등록시간</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>35</td>
+									<td>*****</td>
+									<td>10%</td>
+									<td><em class="minus">고정금액(12,000원)</em></td>
+									<td><time datetime="2015-12-12 11:24">2015.12.12 11:24</time></td>
+								</tr>
+								<tr>
+									<td>34</td>
+									<td>*****</td>
+									<td>10%</td>
+									<td><em class="minus">고정금액(20,000원)</em></td>
+									<td><time datetime="2015-12-12 11:24">2015.12.12 11:24</time></td>
+								</tr>
+								<tr>
+									<td>33</td>
+									<td>*****</td>
+									<td>10%</td>
+									<td><em class="minus">상환금액(-120,000원)</em></td>
+									<td><time datetime="2015-12-12 11:24">2015.12.12 11:24</time></td>
+								</tr>
+								<tr>
+									<td>32</td>
+									<td>*****</td>
+									<td>10%</td>
+									<td><em class="minus">고정금액(20,000원)</em></td>
+									<td><time datetime="2015-12-12 11:24">2015.12.12 11:24</time></td>
+								</tr>
+								<tr>
+									<td>31</td>
+									<td>*****</td>
+									<td>10%</td>
+									<td><em class="minus">(갑)과동일</em></td>
+									<td><time datetime="2015-12-12 11:24">2015.12.12 11:24</time></td>
+								</tr>
+								<tr>
+									<td>30</td>
+									<td>*****</td>
+									<td>10%</td>
+									<td><em class="minus">고정금액(20,000원)</em></td>
+									<td><time datetime="2015-12-12 11:24">2015.12.12 11:24</time></td>
+								</tr>
+								<tr>
+									<td>29</td>
+									<td>*****</td>
+									<td>10%</td>
+									<td><em class="minus">고정금액(20,000원)</em></td>
+									<td><time datetime="2015-12-12 11:24">2015.12.12 11:24</time></td>
+								</tr>
+								<tr>
+									<td>28</td>
+									<td>*****</td>
+									<td>10%</td>
+									<td><em class="minus">고정금액(20,000원)</em></td>
+									<td><time datetime="2015-12-12 11:24">2015.12.12 11:24</time></td>
+								</tr>
+								<tr>
+									<td>27</td>
+									<td>*****</td>
+									<td>10%</td>
+									<td><em class="minus">고정금액(20,000원)</em></td>
+									<td><time datetime="2015-12-12 11:24">2015.12.12 11:24</time></td>
+								</tr>
+								<tr>
+									<td>26</td>
+									<td>*****</td>
+									<td>10%</td>
+									<td><em class="minus">고정금액(20,000원)</em></td>
+									<td><time datetime="2015-12-12 11:24">2015.12.12 11:24</time></td>
+								</tr>
+							</tbody>
+						</table>
+
+						<div class="paging">
+							<a href="#">1</a>
+							<a href="#" class="selected">2</a>
+							<a href="#">3</a>
+							<a href="#">4</a>
+							<a href="#">5</a>
+							<a href="#">6</a>
+						</div>
+					</div>
+				</section>
 
 
 			</div>	<!-- class="myzone-box" -->

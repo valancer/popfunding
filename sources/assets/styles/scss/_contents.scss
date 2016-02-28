@@ -200,6 +200,17 @@ select::-ms-expand { display: none; }
 
 	/* 큰 사이즈 */
 	&.big {
+		input[type=checkbox] {
+			+ label { padding-left: 27px; font-size: 12px; color: $color-title; line-height: 22px;
+				&:before { @include sprite($sprite-icon-check05-big); }
+			}
+
+			&.checked + label,
+			&:checked + label {
+				&:before { @include sprite($sprite-icon-check05-big-selected); }
+			}
+		}
+
 		input[type=radio] {
 			+ label { margin-right: 42px; padding-left: 29px; font-size: 16px; line-height: 21px;
 				&:before { content: ''; display: block; position: absolute; top: 0px; left: 0; @include sprite($sprite-icon-radio02); }
@@ -216,6 +227,22 @@ select::-ms-expand { display: none; }
 	&.small {
 		input[type=radio] {
 			+ label { font-size: 12px; }
+		}
+	}
+
+	/* 검쟁 */
+	&.black {
+		input[type=checkbox] {
+			+ label { margin-right: 15px; padding-left: 19px;
+				&:before { content: ''; display: block; position: absolute; top: 0; left: 0; @include sprite($sprite-icon-check05); }
+			}
+
+			&.disabled + label { color: $color-desc; }
+
+			&.checked + label,
+			&:checked + label {
+				&:before { @include sprite($sprite-icon-check05-black-selected); }
+			}
 		}
 	}
 }

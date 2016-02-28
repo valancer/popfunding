@@ -66,9 +66,19 @@ include "head.html"
 									회원님께서 설정 및 동의하신 조건으로<br>투자에 자동으로 참가하는 서비스입니다.
 								</p>
 								<button type="button" value="#" class="btn-inline-box">자세히</button>
+
+								<div class="switch">
+									<input type="checkbox" id="" name="" class="js-switch">
+								</div>
 							</li>
 						</ul>
 					</div>
+					<script>
+					$(window.document).ready(function(){
+						var elem = document.querySelector('.js-switch');
+						var init = new Switchery(elem, { size: 'large', color: '#7fc6f7', secondaryColor: '#e1e5ec', jackColor: '#fff', jackSecondaryColor: '#fff' });
+					});
+					</script>
 
 
 					<div class="tbl-container">
@@ -80,10 +90,157 @@ include "head.html"
 						<div class="clear"></div>
 
 						<!-- (을)설정 옵션 -->
-						<fieldset class="bidding-options">
+						<fieldset class="bidding-options is-set">
 							<legend>(을)설정 옵션</legend>
 
+							<ul class="auto">
+								<li>
+									<label for="">참가이자율</label>
+									<input type="text" id="" name="" style="width: 99px;" value="10%">
+								</li>
+								<li>
+									<label for="">참가금액</label>
+									<input type="text" id="" name="" style="width: 148px;" value="20,000원">
+								</li>
+								<li>
+									<label for="">일일 한도금액</label>
+									<input type="text" id="" name="" style="width: 186px;" value="1,000,000원">
+									<p class="message">
+										이자율, 참가금액, 한도금액은<br>기본설정입니다.
+									</p>
+								</li>
+							</ul>
+							<ul class="auto">
+								<li>
+									<span class="cr-box big">
+										<input type="checkbox" id="join_count_yn" name="join_count_yn"><label for="join_count_yn">참가자수 (1순위)</label>
+									</span>
+									
+									<div class="item-form">
+										<div class="select inline">
+											<button value="">선택</button>
+											<ul class="list-selecting" style="display: none;">
+												<li><button value="">1</button></li>
+												<li><button value="">2</button></li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li>
+									<span class="cr-box big">
+										<input type="checkbox" id="join_percent_yn" name="join_percent_yn"><label for="join_percent_yn">참가율 (2순위)</label>
+									</span>
+									
+									<div class="item-form">
+										<div class="select inline">
+											<button value="">선택</button>
+											<ul class="list-selecting" style="display: none;">
+												<li><button value="">1</button></li>
+												<li><button value="">2</button></li>
+											</ul>
+										</div>
+									</div>
 
+									<p class="message">
+										참가자수, 참가율, 조건별은 투자조건이며<br>최소 1개 이상 사용하셔야 합니다.
+									</p>
+								</li>
+							</ul>
+							<ul class="auto">
+								<li>
+									<span class="cr-box big">
+										<input type="checkbox" id="search_yn" name="search_yn"><label for="search_yn">조건별 (3순위)</label>
+									</span>
+
+									<div class="inner-box">
+										<p>
+											<label for="">인증정보</label>
+											<span class="cr-box black">
+												<input type="checkbox" id="auth-info01" name="auth-info"><label for="auth-info01">신용</label>
+											</span>
+											<span class="cr-box black">
+												<input type="checkbox" id="auth-info02" name="auth-info"><label for="auth-info02">소득</label>
+											</span>
+											<span class="cr-box black">
+												<input type="checkbox" id="auth-info03" name="auth-info"><label for="auth-info03">휴대폰</label>
+											</span>
+										</p>
+										<p>
+											<label for="">비 인증정보</label>
+											<span class="cr-box black">
+												<input type="checkbox" id="non-auth-info01" name="non-auth-info" class="disabled"><label for="non-auth-info01">집</label>
+											</span>
+											<span class="cr-box black">
+												<input type="checkbox" id="non-auth-info02" name="non-auth-info" class="disabled"><label for="non-auth-info02">직장전화</label>
+											</span>
+											<span class="cr-box black">
+												<input type="checkbox" id="non-auth-info03" name="non-auth-info" class="disabled"><label for="non-auth-info03">스캔</label>
+											</span>
+										</p>
+
+										<div class="alter-li">
+											<div class="item-form">
+												<label for="">대출기간</label>
+												<div class="select inline">
+													<button value="">12개월</button>
+													<ul class="list-selecting" style="display: none;">
+														<li><button value=""></button></li>
+														<li><button value=""></button></li>
+													</ul>
+												</div>
+												-
+												<div class="select inline">
+													<button value="">36개월</button>
+													<ul class="list-selecting" style="display: none;">
+														<li><button value=""></button></li>
+														<li><button value=""></button></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="alter-li">
+											<div class="item-form">
+												<label for="">연체등급</label>
+												<div class="select inline">
+													<button value="">A등급</button>
+													<ul class="list-selecting" style="display: none;">
+														<li><button value=""></button></li>
+														<li><button value=""></button></li>
+													</ul>
+												</div>
+												-
+												<div class="select inline">
+													<button value="">D등급</button>
+													<ul class="list-selecting" style="display: none;">
+														<li><button value=""></button></li>
+														<li><button value=""></button></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="alter-li">
+											<div class="item-form">
+												<label for="">대출신청금액</label>
+												<div class="select inline">
+													<button value="">선택</button>
+													<ul class="list-selecting" style="display: none;">
+														<li><button value=""></button></li>
+														<li><button value=""></button></li>
+													</ul>
+												</div>
+												-
+												<div class="select inline">
+													<button value="">선택</button>
+													<ul class="list-selecting" style="display: none;">
+														<li><button value=""></button></li>
+														<li><button value=""></button></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
 
 							<p class="btns">
 								<a href="#" class="em">설정하기</a>

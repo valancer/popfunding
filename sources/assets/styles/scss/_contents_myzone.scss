@@ -571,13 +571,14 @@
 			}
 			&.auto01 { padding-left: 275px; width: 100%;
 				&:before { left: 70px; @include sprite($sprite-profile-auto01); }
+				.switch { position: absolute; top: 50%; left: 512px; margin-top: -20px; }
 			}
 		}
 	}
 
-	/* 미투비딩 / 오토비딩 설정 옵션 */
+	/* 미투/오토비딩 설정 옵션 */
 	.bidding-options { clear: both; margin-bottom: 37px; padding: 38px 0 34px 44px; border: 1px solid #d4dae4; border-top: 2px solid $color-title; background-color: #d6ebf6;
-		ul { overflow: hidden;
+		.meto { overflow: hidden;
 			> li { float: left; padding-left: 10px; font-size: 12px; color: $color-content; 
 				&:first-child { padding-left: 0px; }
 
@@ -591,6 +592,30 @@
 			}
 		}
 
+		.auto { clear: both; overflow: hidden;
+			> li { float: left; padding-bottom: 30px; padding-left: 10px;
+				&:first-child { padding-left: 0px; }
+
+				.item-form { clear: none; float: left; margin-top: 5px; }
+				.cr-box.big { label { display: block; } }
+				> label { display: block; margin-bottom: 8px; font-size: 12px; color: $color-content; }
+				input[type=text] { height: 38px; font-size: 16px; color: $color-title; line-height: 38px; text-align: center; border: 1px solid #d4d8e1; background-color: #fff; }
+
+				.inner-box { overflow: hidden; margin-top: 6px; padding-bottom: 20px; width: 800px; border: 1px solid #aac4d3;
+					p { float: left; padding: 14px 0 15px 20px; width: 300px; border-bottom: 1px solid #aac4d3;
+						> label { margin-right: 10px; font-size: 12px; color: $color-content; }
+						+ p { width: 459px; border-left: 1px solid #aac4d3; }
+					}
+					.alter-li { float: left; padding: 8px 0 0 20px;
+						label { margin-top: 0px; }
+					}
+				}
+				.message { float: right; margin-top: 2px; margin-left: 19px; font-size: 12px; color: $color-content; line-height: 18px; }
+			}
+
+			+ .btns { margin-top: 10px; }
+		}
+
 		.btns { margin-top: 26px; text-align: center;
 			a { display: inline-block; padding: 0 25px; font-size: 14px; font-weight: bold; color: #fff; line-height: 40px; text-align: center; border-radius: 2px; background-color: #6e80a9;
 				&.em { padding: 0 21px; background-color: $color-point2;
@@ -598,7 +623,19 @@
 				}
 			}
 		}
+
+		/* 설정 됨 */
+		&.is-set { background-color: #fbfbfb;
+			.auto {
+				.inner-box { border: 1px solid #d4d8e1;
+					p { border-bottom: 1px solid #d4d8e1;
+						+ p { border-left: 1px solid #d4d8e1; }
+					}
+				}
+			}
+		}
 	}
+
 }
 
 

@@ -65,13 +65,45 @@ include "head.html"
 								<p>
 									회원님께서 설정 및 동의하신 조건으로<br>투자에 자동으로 참가하는 서비스입니다.
 								</p>
-								<button type="button" value="#" class="btn-inline-box">자세히</button>
+								<button type="button" value="#popup-auto" class="btn-inline-box va-toggle-btns">자세히</button>
 
 								<div class="switch">
 									<input type="checkbox" id="" name="" class="js-switch">
 								</div>
 							</li>
 						</ul>
+
+						<!-- 오토비딩 도움말 -->
+						<aside id="popup-auto" class="popup guide-popup type-tooltip auto-popup">
+							<button class="btn-popup-close" data-target="#popup-auto">팝업닫기</button>
+
+							<h1 class="normal">오토비딩 참가법</h1>
+							<ol class="list-idx">
+								<li data-idx="1.">
+									오토비딩에 필요한 투자조건을 설정합니다.<br>
+									- 투자자 본인이 직접 설정한 내용에 따라 자동으로 투자 됩니다.<br>
+									- 3가지 상세설정 중 1가지는 반드시 선택하셔야 합니다.<br>
+								</li>
+								<li data-idx="2.">
+									진행중인 투자에 매일 2차례 자동으로 참가합니다.<br>
+									- 진행중인 투자에 <em>매일 오전 7시 / 11시30분에 자동</em>으로 참가합니다.<br>
+								</li>
+								<li data-idx="3.">
+									상환되는 이자(원천징수 후)의 10%가 오토비딩 이용료로 부과됩니다.
+								</li>
+							</ol>
+
+							<h1 class="normal">오토비딩 우선순위</h1>
+							<p>
+								<em>참가자수 &gt; 참가율 &gt; 조건별</em> 순으로 검색되며, 조건에 맞는 투자가 없는 경우<br>다음 순위의 조건으로 검색하여 참가합니다.
+							</p>
+
+							<ul class="list-dot">
+								<li>
+									오토비딩은 회원님께서 직접 설정하는 것이며, 이러한 설정에 따른 결과에 대해<br>팝펀딩에서는 일체의 책임을 지지 않습니다.
+								</li>
+							</ul>
+						</aside>
 					</div>
 					<script>
 					$(window.document).ready(function(){
@@ -83,7 +115,61 @@ include "head.html"
 
 					<div class="tbl-container">
 						<div class="filter">
-							<button type="button" value="#" class="btn-inline-box">설명보기</button>
+							<button type="button" value="#popup-auto-setting" class="btn-inline-box va-toggle-btns">설명보기</button>
+
+							<!-- 오토비딩 설정 도움말 -->
+							<aside id="popup-auto-setting" class="popup guide-popup type-tooltip auto-setting-popup">
+								<button class="btn-popup-close" data-target="#popup-auto-setting">팝업닫기</button>
+
+								<ul class="list-guide">
+									<li>
+										<em>참가이자율</em>
+										<p>
+											투자에 참가할 이자율입니다.<br>
+											0.1~25 사이의 소수점 1자리까지 입력이 가능합니다. (예 : 15.5%)<br>
+										</p>
+									</li>
+									<li class="colume2">
+										<em>참가금액</em>
+										<p>
+											한 투자당 설정한 금액으로 참가합니다.<br>
+											(최대 2만원까지 설정 가능)<br>
+										</p>
+									</li>
+									<li class="colume2">
+										<em>일일 한도금액</em>
+										<p>
+											일일 최대 투자금액 한도입니다.<br>
+											(1~200만원 한도)
+										</p>
+									</li>
+									<li class="colume2">
+										<em>참가자수</em>
+										<p>
+											설정한 참가자수 이상의 투자에 참가합니다
+										</p>
+									</li>
+									<li class="colume2">
+										<em>참가율</em>
+										<p>
+											설정한 참가율 이상의 투자에 참가합니다.
+										</p>
+									</li>
+									<li>
+										<em>조건별</em>
+										<p>
+											체크한 범위 내의 투자건만 검색합니다.<br>
+										</p>
+										<p>
+											&middot; 인증정보 : 체크한 인증정보가 확인된 투자만 자동참가<br>
+											&middot; 비인증정보 : 체크한 비인증정보가 확인된 투자만 자동참가<br>
+											&middot; 대출기간 : 선택한 대출기간의 투자건만 자동참가<br>
+											&middot; 연체등급 : 선택한 연체등급 내의 투자건만 자동 참가<br>
+											&middot; 대출신청금액 : 선택한 신청금액의 투자건만 자동참가<br>
+										</p>
+									</li>
+								</ul>
+							</aside>
 						</div>
 
 						<h1 class="title">설정하기</h1>
@@ -241,6 +327,7 @@ include "head.html"
 									</div>
 								</li>
 							</ul>
+
 
 							<p class="btns">
 								<a href="#" class="em">설정하기</a>

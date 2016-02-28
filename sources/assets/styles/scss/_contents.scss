@@ -4,8 +4,8 @@
 /* 셀렉트 박스 */
 select { appearance: none; box-sizing:border-box; min-width: 60px; padding: 7px 26px 8px 16px; font-size: 12px; color: $color-title; border: 1px solid #c3d0e1; border-radius: 3px; background:#fff url(/assets/images//bg_select.png) 100% 0 no-repeat;
 }
-.ie9 select {background-image:none;}
-.ie8 select {background-image:none;}
+.ie9 select { padding-right: 10px; background-image:none;}
+.ie8 select { padding-right: 10px; background-image:none;}
 select::-ms-expand { display: none; }
 
 

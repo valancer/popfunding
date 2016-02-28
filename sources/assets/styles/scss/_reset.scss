@@ -11,7 +11,8 @@ body { position: relative; /*min-height: 800px;*/ min-width: 1160px; margin: 0 a
 }
 header, h1 { font-size: 100%; }
 html, body { height: 100%; }
-caption,legend { display: none; position: absolute; width:0; height: 0; font-size: 0; overflow: hidden; visibility: hidden; }
+caption,legend { position: absolute; top: -9999px; left: -9999px; width:0; height: 0; font-size: 0; overflow: hidden; visibility: hidden; }
+caption { display: none; }
 img { border: none; vertical-align: top; /*width: 100%;*/ }
 select, input { vertical-align: top; }
 hr { display: none; border: 0 none; }

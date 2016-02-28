@@ -67,9 +67,9 @@
 			strong { color: $color-menu1-hover; text-decoration: underline; }
 		}
 	}
-	.tbl-data-v { /*table-layout: fixed;*/ width: 100%; border-top: 2px solid $color-title;
-		> thead { border-bottom: 1px solid #7c7f84;
-			th { position: relative; height: 45px; font-size: 14px; font-weight: normal; color: $color-title; line-height: 16px; text-align: center; border-left: 1px solid #d4dae4; background-color: #fbfbfb;
+	.tbl-data-v { /*table-layout: fixed;*/ position: relative; width: 100%; border-top: 2px solid $color-title;
+		> thead {
+			th { position: relative; height: 45px; font-size: 14px; font-weight: normal; color: $color-title; line-height: 16px; text-align: center; border-bottom: 1px solid #7c7f84; border-left: 1px solid #d4dae4; background-color: #fbfbfb; background-clip: padding-box;
 				&:first-child { border-left: 0px; }
 				&.small { font-size: 12px; }
 			}
@@ -83,7 +83,7 @@
 			}
 		}
 		> tbody {
-			th, td { position: relative; padding-right: 5px; padding-left: 5px; height: 45px; font-size: 14px; font-weight: normal; color: $color-content; text-align: center; line-height: 16px; border-bottom: 1px solid #d4dae4; border-left: 1px solid #d4dae4; background-color: #fff;
+			th, td { position: relative; padding-right: 5px; padding-left: 5px; height: 45px; font-size: 14px; font-weight: normal; color: $color-content; text-align: center; line-height: 16px; border-bottom: 1px solid #d4dae4; border-left: 1px solid #d4dae4; background-color: #fff; background-clip: padding-box;
 				&:first-child { border-left: 0px; }
 				a { position: relative; color: $color-content; text-decoration: underline;
 					/*  대손 상환 */
@@ -525,10 +525,10 @@
 
 	/* 미투비딩 / 오토비딩 탭 */
 	.shortcut-bidding { position: relative; padding: 0 119px; height: 211px;
-		&:before { content: ''; display: block; position: absolute; right: 0; bottom: 0; left: 0; z-index: z("default"); height: 4px; background-color: #d4dae4; }
+		&:before { content: ''; display: block; position: absolute; right: 0; bottom: 0; left: 0; z-index: z("default")+1; height: 4px; background-color: #d4dae4; }
 
 		a { text-decoration: none; }
-		.bidding { display: block; box-sizing: border-box; position: relative; float: left; padding: 37px 0 0 30px; height: 211px; width: 50%; border: 4px solid #fff;
+		.bidding { display: block; box-sizing: border-box; position: relative; z-index: z("default"); float: left; padding: 37px 0 4px 30px; height: 211px; width: 50%; border: 4px solid #fff; border-bottom: 0px;
 			> strong { display: block; text-indent: -9999px; background-repeat: no-repeat;
 				&.meto { height: 69px; width: 177px; background-image: url('/assets/images/txt/title_meto01.png'); }
 				&.auto { height: 70px; width: 178px; background-image: url('/assets/images/txt/title_auto01.png'); }
@@ -539,7 +539,7 @@
 
 			+ .bidding { margin-left: -4px; }
 
-			&.selected { z-index: z("default")+1; border: 4px solid #d4dae4; border-bottom: 4px solid #fff;
+			&.selected { z-index: z("default")+1; padding-bottom: 4px; border: 4px solid #d4dae4; border-bottom: 4px solid #fff;
 				> strong {
 					&.meto { background-image: url('/assets/images/txt/title_meto01_selected.png'); }
 					&.auto { background-image: url('/assets/images/txt/title_auto01_selected.png'); }
@@ -552,6 +552,7 @@
 	}
 
 	/* 미투비딩 설정 현황 */
+	.status-bidding { position: relative; }
 	.list-settings-meto { padding-top: 3px; height: 209px; 
 		> li { display: block; box-sizing: border-box; position: relative; float: left; padding: 63px 0 0 208px; height: 209px; width: 50%; border: 1px solid #d4dae4;
 			&:before { content: ''; display: block; position: absolute; bottom: 0; left: 29px; }
@@ -576,8 +577,19 @@
 		}
 	}
 
+	/* 미투비딩 (갑/을) 팝업 */
+	.meto01-popup { top: 175px; 
+		&:before { left: 231px; }
+	}
+	.meto02-popup { top: 175px; right: 0px; left: auto;
+		&:before { left: auto; right: 216px; }
+	}
+
 	/* 미투/오토비딩 설정 옵션 */
-	.bidding-options { clear: both; margin-bottom: 37px; padding: 38px 0 34px 44px; border: 1px solid #d4dae4; border-top: 2px solid $color-title; background-color: #d6ebf6;
+	.tab-data {
+		+ .bidding-options { margin-top: 0px; }
+	}
+	.bidding-options { clear: both; margin-top: 15px; margin-bottom: 37px; padding: 38px 0 34px 44px; border: 1px solid #d4dae4; border-top: 2px solid $color-title; background-color: #d6ebf6;
 		.meto { overflow: hidden;
 			> li { float: left; padding-left: 10px; font-size: 12px; color: $color-content; 
 				&:first-child { padding-left: 0px; }
@@ -636,6 +648,32 @@
 		}
 	}
 
+
+	/* 메시지 보내기 */
+	.send-message { right: 0; left: auto; padding: 0 30px 33px 30px; width: 588px;
+		&:before { right: 171px; left: auto; }
+
+		fieldset {
+			label { display: block; margin-top: 28px; margin-bottom: 6px; font-size: 12px; color: $color-content; }
+			input[type=text] { box-sizing: border-box; padding-left: 15px; height: 38px; width: 100%; font-size: 14px; color: $color-content; line-height: 38px; border: 1px solid #bec3cd; border-radius: 2px; background-color: #fff; }
+			textarea { box-sizing: border-box; padding: 10px 15px 10px 15px; height: 152px; width: 100%; font-size: 14px; color: $color-content; line-height: 22px; border: 1px solid #bec3cd; border-radius: 2px; background-color: #fff; }
+			.btns { margin-top: 26px; text-align: center; }
+		}
+	}
+
+	/* 오보비딩 도움말 */
+	.auto-popup { top: 175px; left: 160px;
+		&:before { left: 138px; }
+
+		h1.title { padding: 0;  font-size: 14px; color: $color-title;
+			&:before { content: none; }
+		}
+	}
+
+	/* 오보비딩 설정 도움말 */
+	.auto-setting-popup { right: -65px; left: auto; width: 460px;
+		&:before { right: 90px; left: auto; }
+	}
 }
 
 

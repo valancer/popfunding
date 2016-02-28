@@ -26,6 +26,8 @@
   box-sizing: content-box;
   background-clip: content-box;
 }
+.switchery:before { content: 'OFF'; display: block; position: absolute; top: -18px; left: 15px; font-size: 11px; color: #c4c9d1; }
+.switchery:after { content: 'ON'; display: block; position: absolute; top: -18px; right: 15px; font-size: 11px; color: #c4c9d1; }
 
 .switchery > small {
   background: #fff;

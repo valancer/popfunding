@@ -65,16 +65,122 @@ include "head.html"
 								<p>
 									회원님이 대표투자자(갑)가 되어<br>다수(을)의 투자수익에서 수수료를 받습니다.
 								</p>
-								<button type="button" value="#" class="btn-inline-box">자세히</button>
+								<button type="button" value="#popup-meto01" class="btn-inline-box va-toggle-btns">자세히</button>
 							</li>
 							<li class="meto02">
 								<strong>미투비딩(을) <em>미 설정</em></strong>
 								<p>
 									회원님이 (을)이 되어, 투자능력이 뛰어난<br>(갑)투자자를 따라서 자동 투자됩니다.
 								</p>
-								<button type="button" value="#" class="btn-inline-box">자세히</button>
+								<button type="button" value="#popup-meto02" class="btn-inline-box va-toggle-btns">자세히</button>
 							</li>
 						</ul>
+
+						<!-- 미투비딩(갑) 도움말 -->
+						<aside id="popup-meto01" class="popup guide-popup type-tooltip meto01-popup">
+							<button class="btn-popup-close" data-target="#popup-meto01">팝업닫기</button>
+
+							<ul class="list-dot">
+								<li>
+									미투비딩(갑)을 통해 팝펀딩의 대표투자자가 되세요.
+								</li>
+								<li>
+									미투비딩(을)을 사용중인 경우에는 설정을 취소하고 신청하세요.
+								</li>
+							</ul>
+
+							<ul class="list-guide">
+								<li>
+									<em>수수료 설정</em>
+									<p>
+										(을)설정회원의 투자자수수료 중 일정비율을 미투비딩 수수료로 설정 가능합니다.<br>(10~99% 범위)
+									</p>
+								</li>
+								<li>
+									<em>투자</em>
+									<p>
+										(갑)이 투자를 하면 (을)도 투자, (갑)이 철회하면 (을)도 철회됩니다.
+									</p>
+								</li>
+								<li class="colume2">
+									<em>해지</em>
+									<p>
+										미투비딩에 대한 승인과 해지는<br>언제든지 가능합니다.
+									</p>
+								</li>
+								<li class="colume2">
+									<em>상환</em>
+									<p>
+										상환 시마다 정보제공수수료가<br>함께 입금됩니다.
+									</p>
+								</li>
+							</ul>
+						</aside>
+
+						<!-- 미투비딩(을) 도움말 -->
+						<aside id="popup-meto02" class="popup guide-popup type-tooltip meto02-popup">
+							<button class="btn-popup-close" data-target="#popup-meto02">팝업닫기</button>
+
+							<ul class="list-dot">
+								<li>
+									대표투자자들을 따라갈 수 있는 그룹형 투자서비스 미투비딩(Me too-bidding)은 편리하고 안정적인 수익을 얻을 수 있습니다.
+								</li>
+							</ul>
+
+							<ul class="list-guide">
+								<li>
+									<em>설정</em>
+									<p>
+										1. (갑)선택 : 미투 비딩하고자 하는 대표투자자(갑)의 정보를 확인하고 선택합니다.<br>
+										2. 참가유형을 선택합니다.<br>
+									</p>
+									<table>
+										<caption>설정 설명</caption>
+										<tbody>
+											<tr>
+												<th>고정금액</th>
+												<td>투자 건 당 고정된 금액으로 투자 <em>(최대 2만원)</em></td>
+											</tr>
+											<tr>
+												<th>(갑)과 동일</th>
+												<td>대표투자자 회원이 투자하는 금액과 동일한 금액으로 투자</td>
+											</tr>
+											<tr>
+												<th>상한금액설정</th>
+												<td>
+													(을)이 설정하는 특정금액(상한선) &gt; 갑이 투자하는 금액 = 갑과 동일한 금액을 투자<br>
+													(을)이 설정하는 특정금액(상한선) &lt; 갑이 투자하는 금액 = 일정 상한선의 금액까지만 투자. <em>(최대 20만원)</em><br>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</li>
+								<li class="colume2" style="width: 60%;">
+									<em>투자</em>
+									<p>
+										(을)은 (갑)의 모든 투자활동을 똑같이 따라갑니다.<br>
+										투자 시 수수료율은 (갑)이 설정하는 것과 동일하게 자동 투자됩니다.<br>
+										(갑)이 투자 후 투자가 종료되기 전까지는 을이 임의로 철회가 불가능합니다<br>
+										(을)의 계좌잔액이 투자금액보다 작은 경우 투자되지 않습니다.<br>
+									</p>
+								</li>
+								<li class="colume2" style="width: 40%;">
+									<em>해지</em>
+									<p>
+										미투비딩 설정 후 취소할 경우, 이전 투자건까지는<br>
+										계약을 철회한 (갑)과의 계약이 유지됩니다,<br>
+										계약기준은 투자성공이 아닌 투자참가기준입니다.
+									</p>
+								</li>
+								<li>
+									<em>상환</em>
+									<p>
+										미투비딩을 통해 성사된 투자건에 대한 수수료는 매월 상환금액에 대한 원천징수 후 수수료금액에서 부과됩니다.<br>
+										수수료는 미투비딩 계약 시 갑이 설정했던 수수료율에 따라 갑 회원에게 지급됩니다.<br>
+									</p>
+								</li>
+							</ul>
+						</aside>
 					</div>
 
 
@@ -126,10 +232,29 @@ include "head.html"
 
 
 						<div class="filter">
-							<button type="button" value="#" class="btn-inline-box color-b">모든(을)에게 메시지 보내기</button>
+							<button type="button" value="#popup-send-message" class="btn-inline-box color-b va-toggle-btns">모든(을)에게 메시지 보내기</button>
 							<select name="" id="">
 								<option value="">10개 보기</option>
 							</select>
+
+							<!-- 메시지 보내기 -->
+							<aside id="popup-send-message" class="popup guide-popup type-tooltip send-message">
+								<button class="btn-popup-close" data-target="#popup-send-message">팝업닫기</button>
+
+								<fieldset>
+									<legend>메시지 보내기 입력 폼</legend>
+
+									<label for="">제목</label>
+									<input type="text" id="" name="">
+
+									<label for="">내용</label>
+									<textarea name="" id="" cols="10" rows="30"></textarea>
+									
+									<p class="btns">
+										<input type="submit" class="btn-rd color-blue" value="메시지 보내기">	
+									</p>
+								</fieldset>
+							</aside>
 						</div>
 
 						<h1 class="title">현재 (을)현황</h1>

@@ -87,7 +87,7 @@ $z-layers: (
 }
 .btn-more { display: block; font-size: 14px; color: $color-content; text-align: center; line-height: 48px; border: 1px solid #d7dce6; background-color: #fff; }
 .btn-more:after { content: ''; display: inline-block; margin-left: 5px; vertical-align: middle; @include sprite($sprite-bg-arrow02); }
-.btn-rd { display: inline-block; padding: 1px 28px 0 28px; font-size: 13px; color: $color-content; text-align: center; line-height: 34px; border: 1px solid #d4dae4; border-radius: 35px; background-color: #fff; 
+.btn-rd { display: inline-block; padding: 0px 28px 0 28px; font-size: 13px; color: $color-content; text-align: center; line-height: 35px; border: 1px solid #d4dae4; border-radius: 35px; background-color: #fff; 
 	&.selected { color: $color-menu1-hover; }
 
 	.filter-container & {

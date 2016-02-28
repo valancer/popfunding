@@ -1,0 +1,68 @@
+include "head.html"
+	<script>
+	$(window.document).ready(function(){
+	});
+	</script>
+
+	<!-- 상단 영역 -->
+	include "header_myzone.html"
+
+
+	<!-- 본문 영역 -->
+	<article class="contents myzone auto-invest">
+		<h1>마이존</h1>
+
+		<div class="inner">
+		
+			<!-- 마이존 서브메뉴 바로가기 -->
+			<nav class="menus-sub">
+				<ul>
+					<li><a href="#">내 계좌</a></li>
+					<li><a href="#">나의 투자</a></li>
+					<li><a href="#" class="selected">자동투자</a></li>
+					<li><a href="#">나의 빌리기</a></li>
+					<li><a href="#">쿠폰 &amp; 메시지</a></li>
+					<li><a href="#">정보수정</a></li>
+				</ul>
+			</nav>
+
+
+			<h2 class="hidden">자동 투자 - 오토비딩</h2>
+			<div class="myzone-box">
+
+
+				<nav class="shortcut-bidding">
+					<a href="#" class="bidding">
+						<strong class="meto">미투비딩</strong>
+						<p>
+							미투비딩은 대표투자자(갑)들의<br>
+							<em>투자를 따라하는 자동투자 서비스입니다.</em>
+						</p>
+					</a>
+					<a href="#" class="bidding selected">
+						<strong class="auto">오토비딩</strong>
+						<p>
+							미투비딩은 회원님이<br>
+							<em>설정한 조건에 따른 자동투자 서비스입니다.</em>
+						</p>
+					</a>
+					<p class="message">
+						(모든 자동투자는 개인투자에만 가능합니다.)
+					</p>
+				</nav>
+
+
+
+			</div>	<!-- class="myzone-box" -->
+			
+			
+
+			include "myzone_bottom_btns.html"
+		</div>
+	</article>
+	
+	<!-- 하단 영역 -->
+	include "footer.html"
+
+</body>
+</html>

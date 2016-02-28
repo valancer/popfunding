@@ -1,6 +1,5 @@
 @charset "UTF-8";
 @import url(nanumgothic.css);
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 @import url(animate.min.css);
 @import url(slick.css);
 @import url(magnific-popup.css);
@@ -9716,3 +9715,73 @@ body.popup-window {
           background-position: -731px -584px;
           width: 41px;
           height: 40px; }
+
+/* 미투비딩 */
+.contents.myzone.auto-invest {
+  /* 미투비딩 / 오토비딩 탭 */ }
+  .contents.myzone.auto-invest .myzone-box {
+    padding-top: 79px; }
+  .contents.myzone.auto-invest .shortcut-bidding {
+    position: relative;
+    padding: 0 119px;
+    height: 211px; }
+    .contents.myzone.auto-invest .shortcut-bidding:before {
+      content: '';
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      height: 4px;
+      background-color: #d4dae4; }
+    .contents.myzone.auto-invest .shortcut-bidding a {
+      text-decoration: none; }
+    .contents.myzone.auto-invest .shortcut-bidding .bidding {
+      display: block;
+      box-sizing: border-box;
+      position: relative;
+      float: left;
+      padding: 37px 0 0 30px;
+      height: 211px;
+      width: 50%;
+      border: 4px solid #fff; }
+      .contents.myzone.auto-invest .shortcut-bidding .bidding > strong {
+        display: block;
+        text-indent: -9999px;
+        background-repeat: no-repeat; }
+        .contents.myzone.auto-invest .shortcut-bidding .bidding > strong.meto {
+          height: 69px;
+          width: 177px;
+          background-image: url("/assets/images/txt/title_meto01.png"); }
+        .contents.myzone.auto-invest .shortcut-bidding .bidding > strong.auto {
+          height: 70px;
+          width: 178px;
+          background-image: url("/assets/images/txt/title_auto01.png"); }
+      .contents.myzone.auto-invest .shortcut-bidding .bidding > p {
+        margin-top: 25px;
+        font-size: 14px;
+        color: #8995b2;
+        line-height: 22px; }
+        .contents.myzone.auto-invest .shortcut-bidding .bidding > p em {
+          display: block;
+          margin-top: 2px;
+          font-size: 18px; }
+      .contents.myzone.auto-invest .shortcut-bidding .bidding + .bidding {
+        margin-left: -4px; }
+      .contents.myzone.auto-invest .shortcut-bidding .bidding.selected {
+        z-index: 2;
+        border: 4px solid #d4dae4;
+        border-bottom: 4px solid #fff; }
+        .contents.myzone.auto-invest .shortcut-bidding .bidding.selected > strong.meto {
+          background-image: url("/assets/images/txt/title_meto01_selected.png"); }
+        .contents.myzone.auto-invest .shortcut-bidding .bidding.selected > strong.auto {
+          background-image: url("/assets/images/txt/title_auto01_selected.png"); }
+        .contents.myzone.auto-invest .shortcut-bidding .bidding.selected > p {
+          color: #142c66; }
+    .contents.myzone.auto-invest .shortcut-bidding .message {
+      position: absolute;
+      bottom: -25px;
+      right: 124px;
+      font-size: 12px;
+      color: #8995b2; }

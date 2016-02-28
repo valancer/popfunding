@@ -54,6 +54,12 @@
 
 
 	/* 데이터 테이블 */
+	.tbl-data-top { margin-top: 12px; margin-bottom: 19px;
+		> li { position: relative; padding-left: 8px; font-size: 12px; color: $color-content; line-height: 20px;
+			&:before { content: ''; display: block; position: absolute; top: 8px; left: 0; height: 2px; width: 2px; background-color: $color-content; }	
+		}
+	}
+
 	.tbl-data-h { /*table-layout: fixed;*/ width: 100%; border-top: 2px solid $color-title;
 		th { height: 54px; font-size: 14px; font-weight: normal; color: $color-title; line-height: 16px; border-bottom: 1px solid #d4dae4; background-color: #fbfbfb; }
 		td { height: 54px; font-size: 14px; color: $color-content; text-align: center; line-height: 16px; border-bottom: 1px solid #d4dae4; border-left: 1px solid #d4dae4; background-color: #fff;
@@ -65,6 +71,7 @@
 		> thead { border-bottom: 1px solid #7c7f84;
 			th { position: relative; height: 45px; font-size: 14px; font-weight: normal; color: $color-title; line-height: 16px; text-align: center; border-left: 1px solid #d4dae4; background-color: #fbfbfb;
 				&:first-child { border-left: 0px; }
+				&.small { font-size: 12px; }
 			}
 
 			.sale-price {
@@ -89,16 +96,26 @@
 				.plus { color: #006bf0; }
 				.minus { color: $color-menu1-hover; }
 
+				/* form controls */
+				input[type=text] { height: 29px; width: 90%; font-size: 14px; color: $color-title; text-align: center; line-height: 29px; border: 1px solid #d4dae4; background-color: #fff; }
+
 				/* new badge */
 				.new { display: block; position: absolute; top: 0; left: 0; text-indent: -9999px; @include sprite($sprite-badge-new05); }
+
+				/* contents */
 				.nickname { display: inline-block; overflow: hidden; margin: 0 auto; height: 16px; max-width: 80px; text-overflow: ellipsis; white-space: nowrap; }
 				.title { display: inline-block; overflow: hidden; height: 16px; max-width: 260px; text-overflow: ellipsis; white-space: nowrap; }
-
-				input[type=text] { height: 29px; width: 90%; font-size: 14px; color: $color-title; text-align: center; line-height: 29px; border: 1px solid #d4dae4; background-color: #fff; }
+				.disabled { color: #c4c9d1; }
 			}
 
 			.cr-box {
 				label { padding-left: 0px; height: 16px; width: 14px; text-indent: -9999px; }
+			}
+
+
+			/* 작은 내용 */
+			&.small {
+				th, td { height: 75px; font-size: 12px; line-height: 18px; }
 			}
 		}
 
@@ -126,6 +143,7 @@
 		.btn-sell { display: inline-block; text-indent: -9999px; @include sprite($sprite-btn-sell01); }
 
 		+ .paging { margin-top: 40px; }
+
 		+ .tbl-data-v-bottom { margin-top: 12px; 
 			> li { font-size: 12px; color: $color-content; text-align: right; line-height: 18px;
 				p {
@@ -551,11 +569,14 @@
 			&.meto02 {
 				&:before { @include sprite($sprite-profile-meto02); }
 			}
+			&.auto01 { padding-left: 275px; width: 100%;
+				&:before { left: 70px; @include sprite($sprite-profile-auto01); }
+			}
 		}
 	}
 
-	/* 미투비딩 (값) 설정 옵션 */
-	.meto01-options { margin-bottom: 37px; padding: 38px 0 34px 44px; border: 1px solid #d4dae4; border-top: 2px solid $color-title; background-color: #d6ebf6;
+	/* 미투비딩 / 오토비딩 설정 옵션 */
+	.bidding-options { clear: both; margin-bottom: 37px; padding: 38px 0 34px 44px; border: 1px solid #d4dae4; border-top: 2px solid $color-title; background-color: #d6ebf6;
 		ul { overflow: hidden;
 			> li { float: left; padding-left: 10px; font-size: 12px; color: $color-content; 
 				&:first-child { padding-left: 0px; }

@@ -187,12 +187,12 @@ include "head.html"
 
 					<div class="tbl-container">
 						<div class="filter">
-							<button type="button" value="#" class="btn-inline-box type-other01">다른 (갑)회원 보기</button>
+							<button type="button" value="#popup-view-users" class="btn-inline-box type-other01 va-toggle-btns">다른 (갑)회원 보기</button>
 						</div>
 
-						<!-- 감회원보기 -->
+						<!-- 갑회원보기 -->
 						<aside id="popup-view-users" class="popup guide-popup view-users-popup" style="display: block;">
-							<button class="btn-popup-close" data-target="#popup-auto">팝업닫기</button>
+							<button class="btn-popup-close" data-target="#popup-view-users">팝업닫기</button>
 
 							<h1 class="title">다른 M(갑)회원 보기</h1>
 
@@ -208,11 +208,307 @@ include "head.html"
 										</select>
 									</div>
 									
-									<input type="text" id="" name="" placeholder="아이디 찾기" class="txt">
+									<input type="text" id="" name="" placeholder="아이디 찾기" class="txt" style="width: 138px;">
 									<button type="button" class="btn-search">검색</button>
 								</fieldset>
 
+								<table class="tbl-data-v scroll">
+									<caption></caption>
+									<thead>
+										<tr class="small">
+											<th>(갑)ID</th>
+											<th>등급</th>
+											<th>총투자<br>기간</th>
+											<th>1년간<br>투자수</th>
+											<th>1년간<br>투자금액</th>
+											<th>1년간<br>수익률</th>
+											<th>누적<br>수익률</th>
+											<th>정상<br>종료</th>
+											<th>상환중</th>
+											<th>연체중</th>
+											<th>대손<br>종료</th>
+											<th>매각후<br>대손</th>
+											<th>대손율</th>
+											<th>수수료율</th>
+										</tr>
+									</thead>
+									<tbody class="small-popup">
+										<tr>
+											<td>
+												<a href="#nick01" class="nickname va-over-btns">smart7894</a>
+												<span id="nick01" class="tooltip nick-message">안녕하세요. 팝펀딩 투자회원 여러분!<br>저를 믿고 따라오세요. 연 20%의 고수익을 책임지겠습니다.<br>저를 믿는 회원에게 수익이 있습니다.</span>
+											</td>
+											<td>S</td>
+											<td>
+												<em class="minus">1년</em>
+											</td>
+											<td>25</td>
+											<td>77,837,000</td>
+											<td>13.5%</td>
+											<td>60%</td>
+											<td>60</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1.8%</td>
+											<td>
+												<em class="minus">10%</em>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<a href="#" class="nickname">hopooppo78901</a>
+											</td>
+											<td>S</td>
+											<td>
+												<em class="minus">3년</em>
+											</td>
+											<td>25</td>
+											<td>837,000</td>
+											<td>22.5%</td>
+											<td>60%</td>
+											<td>60</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>0.5%</td>
+											<td>
+												<em class="minus">10%</em>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<a href="#" class="nickname">smart7894</a>
+											</td>
+											<td>S</td>
+											<td>
+												<em class="minus">1년</em>
+											</td>
+											<td>25</td>
+											<td>77,837,000</td>
+											<td>13.5%</td>
+											<td>60%</td>
+											<td>60</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1.8%</td>
+											<td>
+												<em class="minus">10%</em>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<a href="#nick02" class="nickname va-over-btns">hopooppo78901</a>
+												<span id="nick02" class="tooltip nick-message">안녕하세요. 팝펀딩 투자회원 여러분!<br>저를 믿고 따라오세요.</span>
+											</td>
+											<td>S</td>
+											<td>
+												<em class="minus">3년</em>
+											</td>
+											<td>25</td>
+											<td>837,000</td>
+											<td>22.5%</td>
+											<td>60%</td>
+											<td>60</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>0.5%</td>
+											<td>
+												<em class="minus">10%</em>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<a href="#" class="nickname">smart7894</a>
+											</td>
+											<td>S</td>
+											<td>
+												<em class="minus">1년</em>
+											</td>
+											<td>25</td>
+											<td>77,837,000</td>
+											<td>13.5%</td>
+											<td>60%</td>
+											<td>60</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1.8%</td>
+											<td>
+												<em class="minus">10%</em>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<a href="#" class="nickname">hopooppo78901</a>
+											</td>
+											<td>S</td>
+											<td>
+												<em class="minus">3년</em>
+											</td>
+											<td>25</td>
+											<td>837,000</td>
+											<td>22.5%</td>
+											<td>60%</td>
+											<td>60</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>0.5%</td>
+											<td>
+												<em class="minus">10%</em>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<a href="#nick01" class="nickname va-over-btns">smart7894</a>
+												<span id="nick01" class="tooltip nick-message">안녕하세요. 팝펀딩 투자회원 여러분!<br>저를 믿고 따라오세요. 연 20%의 고수익을 책임지겠습니다.<br>저를 믿는 회원에게 수익이 있습니다.</span>
+											</td>
+											<td>S</td>
+											<td>
+												<em class="minus">1년</em>
+											</td>
+											<td>25</td>
+											<td>77,837,000</td>
+											<td>13.5%</td>
+											<td>60%</td>
+											<td>60</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1.8%</td>
+											<td>
+												<em class="minus">10%</em>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<a href="#" class="nickname">hopooppo78901</a>
+											</td>
+											<td>S</td>
+											<td>
+												<em class="minus">3년</em>
+											</td>
+											<td>25</td>
+											<td>837,000</td>
+											<td>22.5%</td>
+											<td>60%</td>
+											<td>60</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>0.5%</td>
+											<td>
+												<em class="minus">10%</em>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<a href="#" class="nickname">smart7894</a>
+											</td>
+											<td>S</td>
+											<td>
+												<em class="minus">1년</em>
+											</td>
+											<td>25</td>
+											<td>77,837,000</td>
+											<td>13.5%</td>
+											<td>60%</td>
+											<td>60</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1.8%</td>
+											<td>
+												<em class="minus">10%</em>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<a href="#nick02" class="nickname va-over-btns">hopooppo78901</a>
+												<span id="nick02" class="tooltip nick-message">안녕하세요. 팝펀딩 투자회원 여러분!<br>저를 믿고 따라오세요.</span>
+											</td>
+											<td>S</td>
+											<td>
+												<em class="minus">3년</em>
+											</td>
+											<td>25</td>
+											<td>837,000</td>
+											<td>22.5%</td>
+											<td>60%</td>
+											<td>60</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>0.5%</td>
+											<td>
+												<em class="minus">10%</em>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<a href="#" class="nickname">smart7894</a>
+											</td>
+											<td>S</td>
+											<td>
+												<em class="minus">1년</em>
+											</td>
+											<td>25</td>
+											<td>77,837,000</td>
+											<td>13.5%</td>
+											<td>60%</td>
+											<td>60</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1.8%</td>
+											<td>
+												<em class="minus">10%</em>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<a href="#" class="nickname">hopooppo78901</a>
+											</td>
+											<td>S</td>
+											<td>
+												<em class="minus">3년</em>
+											</td>
+											<td>25</td>
+											<td>837,000</td>
+											<td>22.5%</td>
+											<td>60%</td>
+											<td>60</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>0.5%</td>
+											<td>
+												<em class="minus">10%</em>
+											</td>
+										</tr>
+									</tbody>
+								</table>
 							</div>
+							<script>
+								$(window.document).ready(function(){
+									$('.tbl-data-v.scroll').tableScroll({height:460, width:905});
+								});
+							</script>
 						</aside>
 
 						<div class="tab-data">

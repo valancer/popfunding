@@ -69,6 +69,9 @@
 	}
 	.tbl-data-v { /*table-layout: fixed;*/ position: relative; width: 100%; border-top: 2px solid $color-title;
 		> thead {
+			tr.small {
+				th { padding-right: 5px; padding-left: 5px; font-size: 12px; line-height: 16px; }
+			}
 			th { position: relative; height: 45px; font-size: 14px; font-weight: normal; color: $color-title; line-height: 16px; text-align: center; border-bottom: 1px solid #7c7f84; border-left: 1px solid #d4dae4; background-color: #fbfbfb; background-clip: padding-box;
 				&:first-child { border-left: 0px; }
 				&.small { font-size: 12px; }
@@ -104,6 +107,9 @@
 
 				/* contents */
 				.nickname { display: inline-block; overflow: hidden; margin: 0 auto; height: 16px; max-width: 80px; text-overflow: ellipsis; white-space: nowrap; }
+				.nick-message { left: -30px;
+					&:before { left: 90px; }
+				}
 				.title { display: inline-block; overflow: hidden; height: 16px; max-width: 260px; text-overflow: ellipsis; white-space: nowrap; }
 				.disabled { color: #c4c9d1; }
 			}
@@ -112,10 +118,12 @@
 				label { padding-left: 0px; height: 16px; width: 14px; text-indent: -9999px; }
 			}
 
-
 			/* 작은 내용 */
 			&.small {
 				th, td { height: 75px; font-size: 12px; line-height: 18px; }
+			}
+			&.small-popup {
+				th, td { font-size: 12px; }
 			}
 		}
 
@@ -141,6 +149,7 @@
 
 		.btn-detail { display: inline-block; text-indent: -9999px; @include sprite($sprite-btn-view01); }
 		.btn-sell { display: inline-block; text-indent: -9999px; @include sprite($sprite-btn-sell01); }
+		.btn-set-meto { display: inline-block; text-indent: -9999px; @include sprite($sprite-btn-set01); }
 
 		+ .paging { margin-top: 40px; }
 
@@ -586,11 +595,17 @@
 	}
 
 	/* 미투비딩 갑 아이디 조회 */
-	.view-users-popup { width: 905px;
+	.view-users-popup { padding: 57px 30px 60px 30px;
 		&:before { content: none; }
 
 		h1.title { padding: 0;
 			&:before { content: none; }
+		}
+
+		.tbl-container { margin-top: 18px !important;
+			.tablescroll {
+				.tbl-data-v { border-top: 1px solid #d4dae4; }
+			}
 		}
 	}
 

@@ -9879,6 +9879,7 @@ body.popup-window {
   /* 미투비딩 / 오토비딩 탭 */
   /* 미투비딩 설정 현황 */
   /* 미투비딩 (갑/을) 팝업 */
+  /* 미투비딩 갑 아이디 조회 */
   /* 미투/오토비딩 설정 옵션 */
   /* 메시지 보내기 */
   /* 오보비딩 도움말 */
@@ -10022,6 +10023,14 @@ body.popup-window {
     .contents.myzone.auto-invest .meto02-popup:before {
       left: auto;
       right: 216px; }
+  .contents.myzone.auto-invest .view-users-popup {
+    width: 905px; }
+    .contents.myzone.auto-invest .view-users-popup:before {
+      content: none; }
+    .contents.myzone.auto-invest .view-users-popup h1.title {
+      padding: 0; }
+      .contents.myzone.auto-invest .view-users-popup h1.title:before {
+        content: none; }
   .contents.myzone.auto-invest .tab-data + .bidding-options {
     margin-top: 0px; }
   .contents.myzone.auto-invest .bidding-options {

@@ -585,6 +585,15 @@
 		&:before { left: auto; right: 216px; }
 	}
 
+	/* 미투비딩 갑 아이디 조회 */
+	.view-users-popup { width: 905px;
+		&:before { content: none; }
+
+		h1.title { padding: 0;
+			&:before { content: none; }
+		}
+	}
+
 	/* 미투/오토비딩 설정 옵션 */
 	.tab-data {
 		+ .bidding-options { margin-top: 0px; }

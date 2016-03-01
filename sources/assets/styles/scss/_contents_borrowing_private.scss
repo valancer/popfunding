@@ -398,7 +398,7 @@
 						&:before { content: none; }
 					}
 
-					> .scroll { overflow: scroll; padding-right: 60px; height: 423px; }
+					> .scroll { overflow: scroll; overflow-x: hidden; padding-right: 60px; height: 423px; }
 				}
 
 				/* 증빙서류 관련 팁 텍스트 */

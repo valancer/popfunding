@@ -8482,6 +8482,7 @@ article.contents {
               content: none; }
           .contents.borrowing-private .borrowing-application .proceedings-step.application .preview-popup > .scroll {
             overflow: scroll;
+            overflow-x: hidden;
             padding-right: 60px;
             height: 423px; }
         .contents.borrowing-private .borrowing-application .proceedings-step.application .tip-txt-popup {

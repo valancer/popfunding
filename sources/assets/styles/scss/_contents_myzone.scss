@@ -25,9 +25,11 @@
 
 	/* 게별 섹션 */
 	.section { padding: 77px 119px 0 119px;
-		h1.title { font-size: 1.125em; font-weight: normal; color: $color-title; line-height: 1.3em;
+		h1.title { font-size: 18px; font-weight: normal; color: $color-title; line-height: 1.3em;
 			+ .tbl-data-h,
 			+ .tbl-data-v { margin-top: 28px; }
+
+			em { color: $color-menu1-hover; }
 		}
 
 		.filter { float: right; margin-top: -4px; }
@@ -60,19 +62,59 @@
 		}
 	}
 
+	.tbl-data-h,
+	.tbl-data-v {
+		+ .paging { margin-top: 40px; }
+		+ p.tbl-data-v-bottom { margin-top: 10px; font-size: 12px; color: $color-content; text-align: right;
+			.btn-txt { display: inline-block; margin-right: 20px; font-size: 12px; color: $color-menu1-hover; text-decoration: underline; }
+			em { color: $color-menu1-hover; }
+
+			&.iks { margin-top: 12px;
+				&:before { content: ''; display: inline-block; vertical-align: middle; @include sprite($sprite-icon-iks01); }
+			}
+		}
+		+ ul.tbl-data-v-bottom { margin-top: 12px; 
+			> li { font-size: 12px; color: $color-content; text-align: right; line-height: 18px;
+				p {
+					&:before { content: ''; display: inline-block; margin-right: 3px; height: 2px; width: 2px; vertical-align: middle; background-color: $color-content; }	
+				}
+			}
+		
+			+ .paging { margin-top: 15px; }
+		}
+
+		.btn-calc { display: inline-block; font-size: 12px; color: $color-menu1; text-decoration: underline;
+			&:before { content: ''; display: inline-block; margin-top: -2px; margin-right: 6px; vertical-align: middle; @include sprite($sprite-icon-calc01); }
+		}
+	}
 	.tbl-data-h { /*table-layout: fixed;*/ width: 100%; border-top: 2px solid $color-title;
-		th { height: 54px; font-size: 14px; font-weight: normal; color: $color-title; line-height: 16px; border-bottom: 1px solid #d4dae4; background-color: #fbfbfb; }
-		td { height: 54px; font-size: 14px; color: $color-content; text-align: center; line-height: 16px; border-bottom: 1px solid #d4dae4; border-left: 1px solid #d4dae4; background-color: #fff;
+		th { padding-top: 16px; padding-bottom: 16px; min-height: 55px; font-size: 14px; font-weight: normal; color: $color-title; line-height: 22px; border-bottom: 1px solid #d4dae4; background-color: #fbfbfb;
+			+ td { border-left: 1px solid #7c7f84; }
+		}
+		td { position: relative; padding-top: 16px; padding-bottom: 16px; min-height: 55px; font-size: 14px; color: $color-content; text-align: center; line-height: 22px; border-bottom: 1px solid #d4dae4; border-left: 1px solid #d4dae4; background-color: #fff;
 			em { color: $color-menu1-hover; }
 			strong { color: $color-menu1-hover; text-decoration: underline; }
 		}
+		.l { padding-left: 20px; text-align: left; }
+		.r { padding-right: 20px; text-align: right; }
+		.vb { vertical-align: bottom; }
+		.btns { border-left: 0px; }
+		.disabled { color: #c4c9d1; }
+
+		/* buttons */
+		.btn-help { display: inline-block; margin-top: -2px; margin-left: 3px; text-indent: -9999px; line-height: 22px; vertical-align: middle; @include sprite($sprite-btn-help06); }
+		.btn-auth { display: inline-block; height: 35px; width: 200px; font-size: 14px; font-weight: bold; color: #fff; text-align: center; line-height: 35px; background-color: #008df0;
+			&.disabled { background-color: #cad2de; }
+			&.after { background-color: #6e80a9; }
+		}
+		.btn-paper { font-size: 14px; color: $color-menu1-hover; text-decoration: underline; }
 	}
 	.tbl-data-v { /*table-layout: fixed;*/ position: relative; width: 100%; border-top: 2px solid $color-title;
 		> thead {
 			tr.small {
 				th { padding-right: 5px; padding-left: 5px; font-size: 12px; line-height: 16px; }
 			}
-			th { position: relative; height: 45px; font-size: 14px; font-weight: normal; color: $color-title; line-height: 16px; text-align: center; border-bottom: 1px solid #7c7f84; border-left: 1px solid #d4dae4; background-color: #fbfbfb; background-clip: padding-box;
+			th { position: relative; height: 50px; font-size: 14px; font-weight: normal; color: $color-title; line-height: 16px; text-align: center; border-bottom: 1px solid #7c7f84; border-left: 1px solid #d4dae4; background-color: #fbfbfb; background-clip: padding-box;
 				&:first-child { border-left: 0px; }
 				&.small { font-size: 12px; }
 			}
@@ -86,7 +128,7 @@
 			}
 		}
 		> tbody {
-			th, td { position: relative; padding-right: 5px; padding-left: 5px; height: 45px; font-size: 14px; font-weight: normal; color: $color-content; text-align: center; line-height: 16px; border-bottom: 1px solid #d4dae4; border-left: 1px solid #d4dae4; background-color: #fff; background-clip: padding-box;
+			th, td { position: relative; padding: 10px 5px; min-height: 50px; font-size: 14px; font-weight: normal; color: $color-content; text-align: center; line-height: 18px; border-bottom: 1px solid #d4dae4; border-left: 1px solid #d4dae4; background-color: #fff; background-clip: padding-box;
 				&:first-child { border-left: 0px; }
 				a { position: relative; color: $color-content; text-decoration: underline;
 					/*  대손 상환 */
@@ -112,6 +154,9 @@
 				}
 				.title { display: inline-block; overflow: hidden; height: 16px; max-width: 260px; text-overflow: ellipsis; white-space: nowrap; }
 				.disabled { color: #c4c9d1; }
+				strong.waring { display: block; color: $color-menu1-hover;
+					&:before { content: ''; display: block; margin: 0 auto 2px auto; @include sprite($sprite-icon-iks01); }
+				}
 			}
 
 			.cr-box {
@@ -147,21 +192,10 @@
 			&:before { content: ''; display: inline-block; margin: -1px 3px 0 0; vertical-align: middle; @include sprite($sprite-bg-arrow20); }
 		}
 
+		.btn-inline-box { line-height: 24px; text-decoration: none; }
 		.btn-detail { display: inline-block; text-indent: -9999px; @include sprite($sprite-btn-view01); }
 		.btn-sell { display: inline-block; text-indent: -9999px; @include sprite($sprite-btn-sell01); }
 		.btn-set-meto { display: inline-block; text-indent: -9999px; @include sprite($sprite-btn-set01); }
-
-		+ .paging { margin-top: 40px; }
-
-		+ .tbl-data-v-bottom { margin-top: 12px; 
-			> li { font-size: 12px; color: $color-content; text-align: right; line-height: 18px;
-				p {
-					&:before { content: ''; display: inline-block; margin-right: 3px; height: 2px; width: 2px; vertical-align: middle; background-color: $color-content; }	
-				}
-			}
-		
-			+ .paging { margin-top: 15px; }
-		}
 	}
 
 
@@ -411,7 +445,7 @@
 				&.vip-gold:after { background-image: url('/assets/images/bg_invest06_b.png'); }
 				&.vvip:after { background-image: url('/assets/images/bg_invest07_b.png'); }
 				&.super:after { background-image: url('/assets/images/bg_invest08_b.png'); }
-			}			
+			}
 		}
 
 		/* 투자실적 상세내역 팝업 */
@@ -528,7 +562,7 @@
 }
 
 
-/* 미투비딩 */
+/* 자동투자 - 미투/오토비딩 */
 .contents.myzone.auto-invest {
 	.myzone-box { padding-top: 79px; }
 
@@ -699,5 +733,40 @@
 		&:before { right: 90px; left: auto; }
 	}
 }
+
+
+/* 나의 빌리기 */
+.contents.myzone.myborrow {
+	/*  빌리기 써머리 */
+	.info-myborrow { margin-top: 27px; border-top: 2px solid #252525; border-bottom: 1px solid #d4dae4;
+		.rating { position: relative; padding-top: 46px; padding-left: 260px; height: 201px;
+			.info { font-size: 16px; color: $color-title; line-height: 25px;
+				strong { color: $color-menu1-hover; }
+				a { font-size: 12px; color: $color-content; text-decoration: underline; }
+				em { font-weight: bold;
+					&.bidding { color: $color-point1; }
+					&.overdue { color: $color-point3; }
+				}
+			}
+
+			.desc { margin-top: 14px; font-size: 12px; color: $color-content; line-height: 20px; }
+			.btns { margin-top: 22px;
+				.btn-submit { display: inline-block; width: 230px; }
+			}
+
+			.rating-profile {
+				&:before { content: ''; display: block; position: absolute; top: 4px; left: 0; height: 239px; width: 230px; border-radius: 6px; background: #f2f6f4 url('/assets/images/default_profile02.png') center bottom no-repeat;; }
+				&:after { content: ''; display: block; position: absolute; top: 4px; left: 0; height: 239px; width: 230px; background: center 50px no-repeat; }
+
+				&.bule:after { background-image: url('/assets/images/bg_borrow01.png'); }
+				&.red:after { background-image: url('/assets/images/bg_borrow02.png'); }
+				&.normal:after { background-image: url('/assets/images/bg_borrow03.png'); }
+				&.green:after { background-image: url('/assets/images/bg_borrow04.png'); }
+			}			
+		}
+	}
+
+}
+
 
 

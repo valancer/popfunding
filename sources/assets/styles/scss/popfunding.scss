@@ -125,7 +125,7 @@ $z-layers: (
 	}
 }
 .btn-help02 { display: inline-block; margin-top: -2px; text-indent: -9999px; vertical-align: middle; @include sprite($sprite-btn-help04); }
-.btn-inline-box { display: inline-block; padding: 0 11px; font-size: 12px; color: $color-content; line-height: 24px; border: 1px solid #c3d0e1; border-radius: 5px;
+.btn-inline-box { display: inline-block; padding: 0 11px; font-size: 12px; color: $color-content; line-height: 24px; text-decoration: none; border: 1px solid #c3d0e1; border-radius: 5px;
 	&.color-b { color: $color-title; }
 	&.type-other01 { color: $color-point2; background-color: #d6ebf6; }
 }

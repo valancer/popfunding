@@ -1,0 +1,309 @@
+include "head.html"
+	<script>
+	$(window.document).ready(function(){
+	});
+	</script>
+
+	<!-- 상단 영역 -->
+	include "header_myzone.html"
+
+
+	<!-- 본문 영역 -->
+	<article class="contents myzone myborrow">
+		<h1>마이존</h1>
+
+		<div class="inner">
+		
+			<!-- 마이존 서브메뉴 바로가기 -->
+			<nav class="menus-sub">
+				<ul>
+					<li><a href="#">내 계좌</a></li>
+					<li><a href="#">나의 투자</a></li>
+					<li><a href="#">자동투자</a></li>
+					<li><a href="#" class="selected">나의 빌리기</a></li>
+					<li><a href="#">쿠폰 &amp; 메시지</a></li>
+					<li><a href="#">정보수정</a></li>
+				</ul>
+			</nav>
+
+
+			<h2 class="hidden">나의 빌리기</h2>
+			<div class="myzone-box">
+
+	
+				<section class="section">
+					<p class="filter">
+						<button type="button" value="#" class="btn-inline-box">등급선정기준</button>
+						<button type="button" value="#" class="btn-inline-box">등급별 혜택</button>
+					</p>
+					<h1 class="title">나의 빌리기</h1>
+
+					<div class="info-myborrow">
+						<div class="rating">
+							<p class="info">
+								제영순님의 빌리기 등급은 <strong class="rating-profile red">Red</strong><br>
+								빌리기 실적은 <em class="bidding">30</em><em class="overdue">A</em> <a href="#" class="va-toggle-btns">상세보기</a>
+							</p>
+							<p class="desc">
+								빌리기 등급은 회원님의 빌리기 상환내역을 기준으로 매달 1일에 갱신됩니다.<br>
+								대출자 인증을 받으신 후 빌리기 신청을 하실 수 있습니다.<br>
+							</p>
+
+							<p class="btns">
+								<a href="#" class="btn-submit color-borrowing">대출자 인증받기</a>
+							</p>
+						</div>
+					</div>
+				</section>
+
+				<section class="section">
+					<h1 class="title">가입 / 인증정보</h1>
+					
+					<table class="tbl-data-h">
+						<caption>가입/인증정보</caption>
+						<tbody>
+							<tr>
+								<th class="l">
+									대출회원 가입
+									<button type="button" value="#" class="btn-help">대출회원 가입 도움말</button>
+								</th>
+								<td class="l">
+									대출회원 가입비를 <em>결제</em>하였습니다. (2015.12.12 만료)
+								</td>
+								<td class="r btns">
+									<a href="#" class="btn-auth disabled">대출회원 가입비 결제</a>
+								</td>
+							</tr>
+							<tr>
+								<th class="l">
+									신용보고서
+									<button type="button" value="#" class="btn-help">신용보고서 도움말</button>
+								</th>
+								<td class="l">
+									신용보고서를 <em>조회</em>하였습니다. (2015.12.12 만료)
+								</td>
+								<td class="r btns">
+									<a href="#" class="btn-auth">신용보고서 조회</a>
+								</td>
+							</tr>
+							<tr>
+								<th class="l">
+									소득보고서
+									<button type="button" value="#" class="btn-help">소득보고서 도움말</button>
+								</th>
+								<td class="l">
+									<span class="disabled">조회하지 않았습니다.</span>
+								</td>
+								<td class="r btns">
+									<a href="#" class="btn-auth after">소득보고서 조회</a>
+								</td>
+							</tr>
+							<tr>
+								<th class="l">
+									서류/스캔정보
+									<button type="button" value="#" class="btn-help">서류/스캔정보 도움말</button>
+								</th>
+								<td colspan="2" class="l">
+									<button type="button" class="btn-paper">정보공개서류 5건</button> / <button type="button" class="btn-paper">본인인증서류(필수) 10건</button>이 등록되었습니다. 
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+
+
+
+				<section class="section">
+					<h1 class="title">빌리기 신청내역 <em>(진행중)</em></h1>
+					
+					<table class="tbl-data-v">
+						<caption></caption>
+						<thead>
+							<tr>
+								<th>빌리기 번호 / 제목</th>
+								<th>신청내용</th>
+								<th>인증정보</th>
+								<th>비인증정보</th>
+								<th>이메일 확인</th>
+								<th>참가율/참가자</th>
+								<th>잔여일시</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="l">
+									<a href="#">B456123-3</a> /<br>
+									매달 조기상환하겠습니다.
+								</td>
+								<td>600만원 - 24개월 - 25%</td>
+								<td>
+									신용<br>
+									<span class="disabled">소득</span><br>
+									<span class="disabled">휴대폰</span><br>
+								</td>
+								<td>
+									<span class="disabled">집</span><br>
+									<span class="disabled">직장전화</span><br>
+									<span class="disabled">스캔</span><br>
+								</td>
+								<td>
+									<strong class="waring">이메일을<br>확인해주세요.</strong>
+								</td>
+								<td>100% / 125명</td>
+								<td>12일 18:20</td>
+							</tr>
+						</tbody>
+					</table>
+					<p class="tbl-data-v-bottom">
+						<button type="button" value="#" class="btn-txt">KT회원 유의사항</button>
+					</p>
+				</section>
+
+
+
+				<section class="section">
+					<h1 class="title">나의 상환내역</h1>
+					
+					<table class="tbl-data-h">
+						<caption>나의 상환내역</caption>
+						<tbody>
+							<tr>
+								<th class="l">다음 상환일</th>
+								<td class="l">
+									<em>2015.12.30 &gt; 375,215원</em> 상환 예정입니다.
+								</td>
+								<td class="r btns">
+									<a href="#" class="btn-inline-box">상환내역 보기</a>
+								</td>
+							</tr>
+							<tr>
+								<th class="l">신용보고서</th>
+								<td colspan="2" class="l">
+									입금금액은 <em>184,992원</em>입니다. 
+								</td>
+							</tr>
+							<tr>
+								<th class="l">소득보고서</th>
+								<td class="l">
+									최소상환금액은 남은 상환원금의 <em>1/10이상을 납부</em>해주셔야 합니다.<br>
+									중도상환 시 입금액은 <em>중도상환 계산기</em>를 통해 확인해주세요<br>
+									(연체중인 경우 중도상환 불가)<br>
+								</td>
+								<td class="vb r btns">
+									<button type="button" value="#" class="btn-calc">중도상환 계산기</button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<p class="tbl-data-v-bottom iks">
+						상환금액에는 <em>입금수수료 200원</em>이 포함됩니다. 일시/중도상환을 원하시는 경우 <em>입금 후 1:1 게시판</em>에 요청해주세요.
+					</p>	
+				</section>
+
+
+
+				<section class="section">
+					<h1 class="title">빌리기 성사내역</h1>
+					
+					<table class="tbl-data-v">
+						<caption></caption>
+						<thead>
+							<tr>
+								<th>빌리기 번호/제목</th>
+								<th>신청내용</th>
+								<th>진행상태</th>
+								<th>현금출금상태</th>
+								<th>계약서</th>
+								<th>본인인증</th>
+								<th>납부</th>
+								<th>계약일시</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="l">
+									<a href="#">B456123-3</a> /<br>
+									매달 조기상환하겠습니다.
+								</td>
+								<td>600만원 - 24개월 - 25%</td>
+								<td>대손완료</td>
+								<td>출금완료</td>
+								<td>
+									<a href="#" class="btn-inline-box">보기</a>
+								</td>
+								<td>인증완료</td>
+								<td>
+									<em class="minus">5/24</em>
+								</td>
+								<td><time datetime="2015-12-12">2015.12.12</time></td>
+							</tr>
+							<tr>
+								<td class="l">
+									<a href="#">B456123-3</a> /<br>
+									매달 조기상환하겠습니다.
+								</td>
+								<td>600만원 - 24개월 - 25%</td>
+								<td>상환완료</td>
+								<td>출금완료</td>
+								<td>
+									<a href="#" class="btn-inline-box">보기</a>
+								</td>
+								<td>인증완료</td>
+								<td>
+									<em class="minus">5/24</em>
+								</td>
+								<td><time datetime="2015-12-12">2015.12.12</time></td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+
+
+
+				<section class="section">
+					<h1 class="title">팝다이렉트 내역</h1>
+					
+					<table class="tbl-data-v">
+						<caption></caption>
+						<thead>
+							<tr>
+								<th>빌리기 번호</th>
+								<th>신청일</th>
+								<th>채권자ID</th>
+								<th>이자율</th>
+								<th>대출금액</th>
+								<th>잔여상환금</th>
+								<th>계약상태</th>
+								<th>상환하기</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>DR-122</td>
+								<td><time datetime="2015-12-12">2015.12.12</time></td>
+								<td>jpg1234</td>
+								<td>28%</td>
+								<td>100,000</td>
+								<td>358,235</td>
+								<td>상환중</td>
+								<td>
+									<a href="#" class="btn-inline-box">상환하기</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+
+			</div>	<!-- class="myzone-box" -->
+			
+			
+
+			include "myzone_bottom_btns.html"
+		</div>
+	</article>
+	
+	<!-- 하단 영역 -->
+	include "footer.html"
+
+</body>
+</html>

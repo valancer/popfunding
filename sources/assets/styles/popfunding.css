@@ -5102,12 +5102,32 @@ article.contents {
       line-height: 30px;
       text-align: left;
       vertical-align: top; }
+      .product-detail-view .tbl td a {
+        color: #6b7581;
+        text-decoration: underline; }
     .product-detail-view .tbl em {
       color: #ff4776; }
     .product-detail-view .tbl strong {
       color: #ff6000; }
     .product-detail-view .tbl tbody th, .product-detail-view .tbl tbody td {
       border-bottom: 1px solid #d4dae4; }
+    .product-detail-view .tbl .tooltip {
+      display: none;
+      right: 0;
+      color: #6b7581;
+      border: 1px solid #c3d0e1; }
+      .product-detail-view .tbl .tooltip:before {
+        right: 30px;
+        left: auto;
+        background-image: url(/assets/images/sprites.png);
+        background-position: -456px -514px;
+        width: 11px;
+        height: 6px; }
+      .product-detail-view .tbl .tooltip.down:before {
+        background-image: url(/assets/images/sprites.png);
+        background-position: -635px -469px;
+        width: 11px;
+        height: 6px; }
     .product-detail-view .tbl .r {
       text-align: right; }
     .product-detail-view .tbl .c {
@@ -5445,6 +5465,7 @@ article.contents {
             color: #0e52a5; }
       .product-detail-view.repayment .tb-repayment tbody tr td {
         padding: 15px 0 14px 0;
+        height: 36px;
         font-size: 14px;
         color: #6b7581;
         text-align: center;
@@ -5865,7 +5886,7 @@ article.contents {
         font-size: 12px;
         color: #6b7581;
         text-indent: 0px; }
-      .contents.private-invest .product > .options > .favorate {
+      .contents.private-invest .product > .options > .favorite {
         top: 14px;
         right: 14px;
         left: auto;
@@ -6181,7 +6202,7 @@ article.contents {
           font-size: 14px;
           color: #6b7581;
           text-indent: 0px; }
-        .contents.private-invest .product.detail > .options > .favorate {
+        .contents.private-invest .product.detail > .options > .favorite {
           top: 17px;
           right: 19px;
           left: auto;
@@ -6737,7 +6758,7 @@ article.contents {
         font-size: 12px;
         color: #6b7581;
         text-indent: 0px; }
-      .contents.bonds-invest .product > .options > .favorate {
+      .contents.bonds-invest .product > .options > .favorite {
         top: 14px;
         right: 14px;
         left: auto;
@@ -7101,7 +7122,7 @@ article.contents {
           font-size: 14px;
           color: #14378c;
           text-indent: 0px; }
-        .contents.bonds-invest .product.detail > .options > .favorate {
+        .contents.bonds-invest .product.detail > .options > .favorite {
           top: 17px;
           right: 19px;
           left: auto;

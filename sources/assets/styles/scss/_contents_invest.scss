@@ -539,7 +539,9 @@ $border-inner-color: #e6e9ee;
 	/// 개인투자 - 상환 계획
 	.tbl { width: 100%; margin-top: 36px; border-top: 2px solid #252525;
 		th { position: relative; padding: 9px 0 12px 0; font-size: 14px; font-weight: normal; color: $color-title; line-height: 30px; text-align: left; vertical-align: top; }
-		td { position: relative; padding: 9px 0 12px 0; font-size: 14px; color: $color-content; line-height: 30px; text-align: left; vertical-align: top; }
+		td { position: relative; padding: 9px 0 12px 0; font-size: 14px; color: $color-content; line-height: 30px; text-align: left; vertical-align: top;
+			a { color: $color-content; text-decoration: underline; }
+		}
 		em { color: $color-menu1-hover; }
 		strong { color: $color-point1; }
 
@@ -551,6 +553,13 @@ $border-inner-color: #e6e9ee;
 			th, td { border-bottom: 1px solid #d4dae4; }
 		}
 
+		.tooltip { display: none; right: 0; color: $color-content; border: 1px solid #c3d0e1;
+			&:before { right: 30px; left: auto; @include sprite($sprite-bg-arrow15); }
+
+			&.down {
+				&:before { @include sprite($sprite-bg-arrow16); }
+			}
+		}
 		.r { text-align: right; }
 		.c { text-align: center; }
 		.dot { &:before { content: ''; display: inline-block; margin-top: -2px; margin-right: 5px; height: 2px; width: 2px; vertical-align: middle; background-color: #667386; } }
@@ -702,7 +711,7 @@ $border-inner-color: #e6e9ee;
 			}
 			tbody {
 				tr {
-					td { padding: 15px 0 14px 0; font-size: 14px; color: $color-content; text-align: center; line-height: 18px; border-bottom: 1px solid #d4e8f2;
+					td { padding: 15px 0 14px 0; height: 36px; font-size: 14px; color: $color-content; text-align: center; line-height: 18px; border-bottom: 1px solid #d4e8f2;
 						&.em { color: $color-point3; }
 						> .idx { font-family: $font-number-stack; font-size: 32px; color: #ced1d9; vertical-align: middle;
 							&.top { color: #1d7dcf; }

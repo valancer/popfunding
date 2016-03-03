@@ -8661,6 +8661,8 @@ article.contents {
 body.popup-window {
   min-width: auto;
   background-color: #eaf5fa; }
+  body.popup-window.white {
+    background-color: #fff; }
 
 .popup-window-contents {
   padding: 50px 0 34px 0;
@@ -8747,6 +8749,97 @@ body.popup-window {
       background-position: -322px -807px;
       width: 23px;
       height: 20px; }
+
+/* 주소 찾기 */
+.popup-window-contents.find-address {
+  padding: 40px;
+  text-align: left; }
+  .popup-window-contents.find-address h1 {
+    font-size: 14px;
+    font-weight: normal;
+    color: #252525; }
+  .popup-window-contents.find-address .form-find-address {
+    overflow: hidden;
+    margin-top: 14px;
+    padding: 20px 10px;
+    border-top: 2px solid #252525;
+    border-bottom: 1px solid #d4dae4;
+    background-color: #eaf5fa; }
+    .popup-window-contents.find-address .form-find-address input[type=text] {
+      float: left;
+      padding-left: 10px;
+      width: 239px;
+      font-size: 14px;
+      color: #252525;
+      line-height: 29px;
+      border: 1px solid #d4dae4; }
+    .popup-window-contents.find-address .form-find-address .btn-search {
+      float: left;
+      display: block;
+      margin-left: 10px;
+      min-width: 68px;
+      font-size: 12px;
+      font-weight: bold;
+      color: #fff;
+      line-height: 31px;
+      border-radius: 2px;
+      background-color: #6e80a9; }
+    .popup-window-contents.find-address .form-find-address .message {
+      float: left;
+      margin-top: -2px;
+      margin-left: 10px;
+      font-size: 12px;
+      color: #6b7581;
+      line-height: 18px; }
+  .popup-window-contents.find-address .results {
+    overflow: scroll;
+    margin-top: 15px;
+    padding: 0 20px;
+    height: 347px;
+    text-align: left;
+    border: 1px solid #d4dae4; }
+    .popup-window-contents.find-address .results .list-address > li {
+      border-bottom: 1px solid #d4dae4;
+      /* 검색 결과 없음 */ }
+      .popup-window-contents.find-address .results .list-address > li a {
+        display: block;
+        position: relative;
+        padding: 12px 0 11px 60px;
+        text-decoration: none; }
+        .popup-window-contents.find-address .results .list-address > li a .zip-code {
+          display: block;
+          position: absolute;
+          top: 15px;
+          left: 0;
+          width: 60px;
+          font-size: 13px;
+          color: #ff4776; }
+        .popup-window-contents.find-address .results .list-address > li a p {
+          font-size: 13px;
+          color: #6b7581;
+          line-height: 20px; }
+        .popup-window-contents.find-address .results .list-address > li a:hover .zip-code,
+        .popup-window-contents.find-address .results .list-address > li a:hover p {
+          color: #252525;
+          text-decoration: none; }
+      .popup-window-contents.find-address .results .list-address > li.none {
+        padding: 0;
+        height: 347px;
+        text-align: center;
+        border-bottom: 0px; }
+        .popup-window-contents.find-address .results .list-address > li.none p {
+          padding-top: 138px;
+          font-size: 14px;
+          color: #6b7581;
+          line-height: 20px; }
+          .popup-window-contents.find-address .results .list-address > li.none p:before {
+            content: '';
+            display: block;
+            margin: 0 auto 6px auto;
+            background-image: url(/assets/images/sprites.png);
+            background-position: -322px -807px;
+            width: 23px;
+            height: 20px; }
 
 /* 마이존 */
 .contents.myzone {

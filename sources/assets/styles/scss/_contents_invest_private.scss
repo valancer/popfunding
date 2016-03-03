@@ -57,7 +57,7 @@
 			> .new { @include sprite($sprite-badge-new03); }
 			> .best { @include sprite($sprite-badge-best01); }
 			> .user-in { top: 10px; left: auto; right: 16px; font-size: 12px; color: $color-content; text-indent: 0px; }
-			> .favorate { top: 14px; right: 14px; left: auto; @include sprite($sprite-icon-favorate01-selected); }
+			> .favorite { top: 14px; right: 14px; left: auto; @include sprite($sprite-icon-favorite01-selected); }
 		}
 
 		> .trust-ratings { display: block; float: left; position: relative; z-index: z("default"); padding: 28px 0 0 0; height: $product-height - 28px; width: 254px; border-right: 1px solid #e6e9ee; border-radius: $border-radius 0 0 0;
@@ -141,9 +141,9 @@
 		> .hover {
 			display: none; overflow: hidden; position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: z("hover"); height: 100%; width: 100%; text-align: center; border-radius: $border-radius;
 			> button { display: block; position: absolute; top: 13px; right: 17px; z-index: z("default") + 1; font-size: 12px; color: $color-desc; vertical-align: middle; line-height: 18px; 
-				&:before { content: ''; display: inline-block; margin-top: -2px; margin-right: 5px; vertical-align: middle; @include sprite($sprite-icon-favorate01); }
+				&:before { content: ''; display: inline-block; margin-top: -2px; margin-right: 5px; vertical-align: middle; @include sprite($sprite-icon-favorite01); }
 				&:hover { text-decoration: underline; }
-				&.selected:before { @include sprite($sprite-icon-favorate01-selected); }
+				&.selected:before { @include sprite($sprite-icon-favorite01-selected); }
 			}
 			> span { font-size: 1.375em; font-weight: bold; color: #fff; line-height: $product-height; }
 
@@ -164,7 +164,7 @@
 				> .invest-type01 { @include sprite($sprite-badge-invest03-detail); }
 				> .new { @include sprite($sprite-badge-new03-detail); }
 				> .user-in { top: 15px; left: auto; right: 19px; font-size: 14px; color: $color-content; text-indent: 0px; }
-				> .favorate { top: 17px; right: 19px; left: auto; @include sprite($sprite-icon-favorate01-selected); }
+				> .favorite { top: 17px; right: 19px; left: auto; @include sprite($sprite-icon-favorite01-selected); }
 			}
 
 			> .profile { position: relative; z-index: z("hover"); margin: 0 auto; width: 251px; text-align: center; }
@@ -249,9 +249,9 @@
 			> .hover {
 				display: block; overflow: hidden; position: absolute; top: 0; right: 0; bottom: auto; left: auto; z-index: z("hover"); height: 92px; width: 51px; text-align: center; border-radius: 0px;
 				> button { display: block; position: absolute; top: 17px; right: 10px; z-index: z("default") + 1; width: 30px; font-size: 14px; color: $color-desc; vertical-align: middle; line-height: 16px; 
-					&:before { content: ''; display: block; margin: 0px auto 6px; @include sprite($sprite-icon-favorate01-detail); }
+					&:before { content: ''; display: block; margin: 0px auto 6px; @include sprite($sprite-icon-favorite01-detail); }
 					&:hover { text-decoration: underline; }
-					&.selected:before { @include sprite($sprite-icon-favorate01-detail-selected); }
+					&.selected:before { @include sprite($sprite-icon-favorite01-detail-selected); }
 				}
 				> span { display: none; }
 				&:before { content: none; }

@@ -1,0 +1,157 @@
+include "head.html"
+
+	<!-- 상단 영역 -->
+	include "header_invest.html"
+
+
+	<!-- 본문 영역 -->
+	<article class="contents private-invest">
+		<h1>투자하기</h1>
+
+		<div class="inner">
+		
+
+			<!-- 필터 및 소개  -->
+			<div class="filter-container">
+				<div class="utils-guide">
+					<a href="#" class="btn-tip">꿀팁</a>
+					<a href="#" class="btn-rd">기업투자 소개</a>
+				</div>
+
+				<fieldset class="filter">
+					<legend>투자종류선택</legend>
+
+					<input type="radio" id="invest01" name="invest-type" checked="checked" class="selected"><label for="invest01">개인투자</label>
+					<input type="radio" id="invest04" name="invest-type"><label for="invest04">KT개인투자</label>
+					<input type="radio" id="invest02" name="invest-type"><label for="invest02">기업투자</label>
+					<input type="radio" id="invest03" name="invest-type"><label for="invest03">채권마켓</label>
+				</fieldset>
+			</div>
+
+
+			<!-- 상품 정보 -->
+include "private_product_detail.html"
+
+
+			<div class="product-tab">
+				<table>
+					<caption>상품 상세 메뉴</caption>
+					<tbody>
+						<tr>
+							<td>
+								<a href="#">
+									<span class="new"><span class="inner">추가글 <em>3</em>건</span></span>
+									상세보기
+								</a>
+							</td>
+							<td>
+								<a href="#">
+									<span class="new"><span class="inner">새로운 글 <em>0</em>건</span></span>
+									Q &amp; A
+								</a>
+							</td>
+							<td><a href="#" class="selected">상환내역</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+
+
+			<!-- 상세보기 -->
+			<section class="product-detail-view repayment">
+				<h1>상환내역</h1>
+					
+					<!-- 필터 및 소개  -->
+					<div class="filter-container">
+						<fieldset class="filter">
+							<legend>상환내역 선택</legend>
+
+							<input type="radio" id="repayment01" name="repayment-type"><label for="repayment01">나의 채권 상환내역</label>
+							<input type="radio" id="repayment02" name="repayment-type"><label for="repayment02">전체 상환내역</label>
+							<input type="radio" id="repayment03" name="repayment-type" checked="checked"><label for="repayment03">대손후 상환내역</label>
+						</fieldset>
+					</div>
+
+
+					<table class="tb-repayment">
+						<caption>대손후 상환내역</caption>
+						<thead>
+							<tr>
+								<th scope="col">회차</th>
+								<th scope="col">상환일</th>
+								<th scope="col">상환원금</th>
+								<th scope="col">상환이자</th>
+								<th scope="col">상환합계</th>
+								<th scope="col">세후수익</th>
+								<th scope="col">잔여상환금</th>
+								<th scope="col">원금잔액</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><span class="idx top">4</span></td>
+								<td>
+									<time datetime="">2015.9.7</time>
+								</td>
+								<td>647</td>
+								<td>2,353</td>
+								<td class="em">3,000</td>
+								<td class="em">2,353</td>
+								<td>13,934</td>
+								<td>10,934</td>
+							</tr>
+							<tr>
+								<td><span class="idx top">3</span></td>
+								<td>
+									<time datetime="">2015.9.7</time>
+								</td>
+								<td>647</td>
+								<td>2,353</td>
+								<td class="em">3,000</td>
+								<td class="em">2,353</td>
+								<td>13,934</td>
+								<td>10,934</td>
+							</tr>
+							<tr>
+								<td><span class="idx top">2</span></td>
+								<td>
+									<time datetime="">2015.9.7</time>
+								</td>
+								<td>647</td>
+								<td>2,353</td>
+								<td class="em">3,000</td>
+								<td class="em">2,353</td>
+								<td>13,934</td>
+								<td>10,934</td>
+							</tr>
+							<tr>
+								<td><span class="idx top">1</span></td>
+								<td>
+									<time datetime="">2015.9.7</time>
+								</td>
+								<td>647</td>
+								<td>2,353</td>
+								<td class="em">3,000</td>
+								<td class="em">2,353</td>
+								<td>13,934</td>
+								<td>10,934</td>
+							</tr>
+						</tbody>
+					</table>
+
+				</div>
+			</section>
+
+			
+include "private_product_bottom_btns.html"
+
+		</div>
+	</article>
+	
+
+	<!-- 하단 영역 -->
+	include "footer.html"
+
+</body>
+</html>

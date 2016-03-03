@@ -65,7 +65,22 @@ include "head.html"
 							<tr>
 								<th class="l">
 									대출회원 가입
-									<button type="button" value="#" class="btn-help">대출회원 가입 도움말</button>
+									<button type="button" value="#popup-help01" class="btn-help va-toggle-btns">대출회원 가입 도움말</button>
+
+									<div id="popup-help01" class="popup guide-popup type-tooltip help01">
+										<button class="btn-popup-close" data-target="#popup-help01">팝업닫기</button>
+
+										<div class="contents">
+											<p>
+												팝펀딩에서 빌리기 투자를 진행하려면 19,800원의 대출회원가입비를 결제하셔야 합니다.<br>
+												(결제일을 기준으로 60일간 대출신청 서비스가 유효합니다.)<br>
+											</p>
+											<p class="warning">
+												대출회원 결제후 신용보고서를 조회하지 않은 경우에는 환불이 가능합니다.<br>
+												조회 이후에는 빌리기 성사여부와 관계없이 환불이 불가합니다.<br>
+											</p>
+										</div>
+									</div>
 								</th>
 								<td class="l">
 									대출회원 가입비를 <em>결제</em>하였습니다. (2015.12.12 만료)
@@ -77,7 +92,17 @@ include "head.html"
 							<tr>
 								<th class="l">
 									신용보고서
-									<button type="button" value="#" class="btn-help">신용보고서 도움말</button>
+									<button type="button" value="#popup-help02" class="btn-help va-toggle-btns">신용보고서 도움말</button>
+
+									<div id="popup-help02" class="popup guide-popup type-tooltip help02">
+										<button class="btn-popup-close" data-target="#popup-help02">팝업닫기</button>
+
+										<div class="contents">
+											<p>
+												신용보고서 조회는 대출자 본인이 직접 조회를 하는<br>시스템으로 신용조회기록이 남지 않습니다. 
+											</p>
+										</div>
+									</div>
 								</th>
 								<td class="l">
 									신용보고서를 <em>조회</em>하였습니다. (2015.12.12 만료)
@@ -89,7 +114,20 @@ include "head.html"
 							<tr>
 								<th class="l">
 									소득보고서
-									<button type="button" value="#" class="btn-help">소득보고서 도움말</button>
+									<button type="button" value="#popup-help03" class="btn-help va-toggle-btns">소득보고서 도움말</button>
+
+									<div id="popup-help03" class="popup guide-popup type-tooltip help03">
+										<button class="btn-popup-close" data-target="#popup-help03">팝업닫기</button>
+
+										<div class="contents">
+											<p>
+												국민연금 납부내역을 조회하여 회원님의 소득금액에 대한 증명으로 사용됩니다.
+											</p>
+											<p>
+												직장인, 사업자가 구분되므로 직업, 급여, 납세에 대한 증빙이 가능하여<br>추가 서류 제출의 번거로움이 줄어듭니다.
+											</p>
+										</div>
+									</div>
 								</th>
 								<td class="l">
 									<span class="disabled">조회하지 않았습니다.</span>
@@ -101,7 +139,93 @@ include "head.html"
 							<tr>
 								<th class="l">
 									서류/스캔정보
-									<button type="button" value="#" class="btn-help">서류/스캔정보 도움말</button>
+									<button type="button" value="#popup-paper-info" class="btn-help va-toggle-btns">서류/스캔정보 도움말</button>
+
+									<div id="popup-paper-info" class="popup guide-popup type-tooltip paper-info">
+										<button class="btn-popup-close" data-target="#popup-paper-info">팝업닫기</button>
+										
+										<ul class="list-guide">
+											<li>
+												<em>정보공개서류(선택)</em>
+												<p>
+													빌리기 진행에 신뢰를 주기 위해 투자자들에게 공개를 원하는 서류가 있으신 경우,<br>
+													팝펀딩 운영팀에 보내주시면 스캔서비스를 통해 회원님의 투자정보 내에 업로드해 드립니다.
+												</p>
+
+												<ol class="process-open-paper">
+													<li>
+														<em>정보공개 서류발송</em>
+														<p>
+															공개를 원하는 서류를<br>팝펀딩 운영팀에<br>우편으로 발송
+														</p>
+													</li>
+													<li>
+														<em>서류공개요청</em>
+														<ol>
+															<li data-index="1">위의 [정보공개서류] &gt; [서류공개요청]<br>(한번 설정 후 취소 불가)</li>
+															<li data-index="2">1:1 게시판에 요청</li>
+														</ol>
+													</li>
+													<li>
+														<em>투자정보 내 공개</em>														
+														<p>
+															정보보호 차원에서 개인정보<br>
+															블라인드 처리과정 후 공개<br>
+															<button type="button" value="#popup-blind" class="va-inner-toggle-btns">블라인드 처리항목보기</button>
+														</p>
+													</li>
+												</ol>
+												<div class="clear"></div>
+											</li>
+											<li>
+												<em>본인인증서류(필수/비공개)</em>
+												<p>
+													빌리기 100% 달성 후, 본인인증에 필요한 서류를 제출하여야 합니다.
+												</p>
+											</li>
+										</ul>
+
+										<!-- 블라인드 팝업 -->
+										<div id="popup-blind" class="popup guide-popup type-tooltip paper-blind">
+											<button class="btn-popup-close" data-target="#popup-blind">팝업닫기</button>
+
+											<table>
+												<caption>서류별 블라인드 처리 항목</caption>
+												<colgroup>
+													<col style="width: 123px;">
+													<col>
+												</colgroup>
+												<thead>
+													<tr>
+														<th>증빙서류</th>
+														<th>블라인드 처리 항목</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>임대차계약서</td>
+														<td class="l">주소, 이름(임대인,임차인), 주민등록번호, 임대인 계좌번호, 연락처</td>
+													</tr>
+													<tr>
+														<td>등기부등본</td>
+														<td class="l">주소, 이름, 주민등록번호</td>
+													</tr>
+													<tr>
+														<td>재직증명서</td>
+														<td class="l">직장명, 직장주소 ,이름, 주민등록번호, 주소</td>
+													</tr>
+													<tr>
+														<td>급여통장거래내역서</td>
+														<td class="l">급여내역 외의 내용 모두(금액 제외)</td>
+													</tr>
+													<tr>
+														<td>원천징수영수증</td>
+														<td class="l">주소, 이름, 주민등록번호</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
 								</th>
 								<td colspan="2" class="l">
 									<button type="button" class="btn-paper">정보공개서류 5건</button> / <button type="button" class="btn-paper">본인인증서류(필수) 10건</button>이 등록되었습니다. 
@@ -294,6 +418,97 @@ include "head.html"
 					</table>
 				</section>
 
+
+				<aside id="popup-rating-borrow" class="popup guide-popup rating-benefit" style="display: block;">
+					<button class="btn-popup-close" data-target="#popup-rating-borrow">팝업닫기</button>
+
+					<h1 class="title">빌리기 등급 산정 기준</h1>
+					<p class="message">
+						빌리기 등급은 아래 표의 신뢰등급을 기준으로 산정됩니다. (매달 1일에 갱신)
+					</p>
+					<p class="message">
+						신뢰등급은 대출 후 정상상환 누적 개월수와 상환기간 대비 월평균 연체일수를 기준으로 산정됩니다. (1일1회 갱신)<br>
+						예) 5A (정상상환이 5회, 연체등급이 A등급인 회원)<br>
+					</p>
+
+					<table class="tbl-rating">
+						<caption></caption>
+						<thead>
+							<tr>
+								<th scope="row"><span>연체등급</span></th>
+								<th rowspan="2" scope="col">A</th>
+								<th rowspan="2" scope="col">B</th>
+								<th rowspan="2" scope="col">C</th>
+								<th rowspan="2" scope="col">D</th>
+							</tr>
+							<tr>
+								<th scope="col"><span>정상 상환 개월수</span></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th>1~11개월</th>
+								<td>일반</td>
+								<td>일반</td>
+								<td>일반</td>
+								<td>일반</td>
+							</tr>
+							<tr>
+								<th>12~23개월</th>
+								<td>일반</td>
+								<td>일반</td>
+								<td>일반</td>
+								<td>일반</td>
+							</tr>
+							<tr>
+								<th>24~35개월</th>
+								<td><span class="green">Green</span></td>
+								<td>일반</td>
+								<td>일반</td>
+								<td>일반</td>
+							</tr>
+							<tr>
+								<th>36~47개월</th>
+								<td><span class="bule">Blue</span></td>
+								<td><span class="green">Green</span></td>
+								<td>일반</td>
+								<td>일반</td>
+							</tr>
+							<tr>
+								<th>48~59개월</th>
+								<td><span class="red">Red</span></td>
+								<td><span class="bule">Blue</span></td>
+								<td><span class="green">Green</span></td>
+								<td>일반</td>
+							</tr>
+							<tr>
+								<th>60~71개월</th>
+								<td><span class="red">Red</span></td>
+								<td><span class="red">Red</span></td>
+								<td><span class="green">Green</span></td>
+								<td>일반</td>
+							</tr>
+							<tr>
+								<th>72~83개월</th>
+								<td><span class="red">Red</span></td>
+								<td><span class="red">Red</span></td>
+								<td><span class="blue">Blue</span></td>
+								<td><span class="green">Green</span></td>
+							</tr>
+							<tr>
+								<th>84개월</th>
+								<td><span class="red">Red</span></td>
+								<td><span class="red">Red</span></td>
+								<td><span class="blue">Blue</span></td>
+								<td><span class="blue">Blue</span></td>
+							</tr>
+						</tbody>
+					</table>
+					<ul class="list-dot">
+						<li>연체등급 산정기준 : A(0.5일 미만), B(3일미만), C(10일미만), D(10일 초과)</li>
+						<li>중도상환은 상환 횟수에 포함되지 않습니다.</li>
+					</ul>
+				</aside>
 			</div>	<!-- class="myzone-box" -->
 			
 			

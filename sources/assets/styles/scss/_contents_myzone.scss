@@ -257,7 +257,58 @@
 			}
 		}
 	}
-}
+
+
+	/* 투자자 등급 및 산정 기준 및 혜택 & 빌리기 등급 산정 기준 */
+	.rating-benefit { top: 70px; right: 119px; left: 119px; padding: 63px 60px 70px 60px;
+		&:before { content: none; }
+
+		h1.title { padding: 0; font-size: 18px; color: $color-title;
+			&:before { content: none; }
+		}
+		.message { margin-top: 19px; font-size: 14px; color: $color-content; }
+		.sub-title { margin-top: 47px; font-size: 14px; color: $color-title; }
+		.sub-content { margin-top: 10px; font-size: 12px; color: $color-content; line-height: 22px; }
+
+		.tbl-rating { table-layout: fixed; margin-top: 44px; width: 100%; border-top: 2px solid $color-title;
+			tbody {
+				tr.rating {
+					th { font-size: 14px; }
+				}
+				th { height: 69px; width: 76px; font-size: 12px; font-weight: normal; color: $color-content; line-height: 16px; text-align: center; border-right: 1px solid #d4dae4; border-bottom: 1px solid #d4dae4; border-left: 1px solid #d4dae4; background-color: #fbfbfb; }
+				td { font-size: 14px; color: $color-content; text-align: center; border-right: 1px solid #d4dae4; border-bottom: 1px solid #d4dae4; background-color: #fff; }
+
+				span.rating { display: block; margin: 16px auto 17px auto; font-size: 12px; color: $color-desc; text-indent: -9999px;
+					&:before { content: ''; display: block; margin: 0 auto; }
+
+					&.none { margin-top: 30px;
+						&:before { margin-top: 0px; margin-bottom: 0px; @include sprite($sprite-bg-invest01); }
+					}
+					&.newbie { @include sprite($sprite-bg-invest02-p);
+						&:before { content: none; }
+					}
+					&.silver { @include sprite($sprite-bg-invest03-p);
+						&:before { content: none; }
+					}
+					&.gold { @include sprite($sprite-bg-invest04-p);
+						&:before { content: none; }
+					}
+					&.vip-silver { @include sprite($sprite-bg-invest05);
+						&:before { content: none; }
+					}
+					&.vip-gold { @include sprite($sprite-bg-invest06);
+						&:before { content: none; }
+					}
+					&.vvip { @include sprite($sprite-bg-invest07);
+						&:before { content: none; }
+					}
+					&.special {
+						&:before { margin-bottom: 7px; @include sprite($sprite-bg-invest08); }
+					}
+				}
+			}
+		}
+	}	}
 
 
 
@@ -391,6 +442,7 @@
 			}
 		}
 	}
+
 }
 
 
@@ -509,56 +561,6 @@
 		}
 	}
 
-	/* 투자자 등급 및 산정 기준 및 혜택 */
-	.rating-benefit { top: 70px; right: 119px; left: 119px; padding: 63px 60px 70px 60px;
-		&:before { content: none; }
-
-		h1.title { padding: 0; font-size: 18px; color: $color-title;
-			&:before { content: none; }
-		}
-		.message { margin-top: 19px; font-size: 14px; color: $color-content; }
-		.sub-title { margin-top: 47px; font-size: 14px; color: $color-title; }
-		.sub-content { margin-top: 10px; font-size: 12px; color: $color-content; line-height: 22px; }
-
-		.tbl-rating { table-layout: fixed; margin-top: 44px; width: 100%; border-top: 2px solid $color-title;
-			tbody {
-				tr.rating {
-					th { font-size: 14px; }
-				}
-				th { height: 69px; width: 76px; font-size: 12px; font-weight: normal; color: $color-content; line-height: 16px; text-align: center; border-right: 1px solid #d4dae4; border-bottom: 1px solid #d4dae4; border-left: 1px solid #d4dae4; background-color: #fbfbfb; }
-				td { font-size: 14px; color: $color-content; text-align: center; border-right: 1px solid #d4dae4; border-bottom: 1px solid #d4dae4; background-color: #fff; }
-
-				span.rating { display: block; margin: 16px auto 17px auto; font-size: 12px; color: $color-desc; text-indent: -9999px;
-					&:before { content: ''; display: block; margin: 0 auto; }
-
-					&.none { margin-top: 30px;
-						&:before { margin-top: 0px; margin-bottom: 0px; @include sprite($sprite-bg-invest01); }
-					}
-					&.newbie { @include sprite($sprite-bg-invest02-p);
-						&:before { content: none; }
-					}
-					&.silver { @include sprite($sprite-bg-invest03-p);
-						&:before { content: none; }
-					}
-					&.gold { @include sprite($sprite-bg-invest04-p);
-						&:before { content: none; }
-					}
-					&.vip-silver { @include sprite($sprite-bg-invest05);
-						&:before { content: none; }
-					}
-					&.vip-gold { @include sprite($sprite-bg-invest06);
-						&:before { content: none; }
-					}
-					&.vvip { @include sprite($sprite-bg-invest07);
-						&:before { content: none; }
-					}
-					&.special {
-						&:before { margin-bottom: 7px; @include sprite($sprite-bg-invest08); }
-					}
-				}
-			}
-		}
-	}
 }
 
 
@@ -766,6 +768,49 @@
 		}
 	}
 
+	/* 레이어 팝업 */
+	.popup.type-tooltip {
+		.content { padding: 0px; }
+
+		&.help01 { margin-left: -20px; padding: 0 40px 17px 18px;
+			&:before { left: 111px; }
+			.warning { position: relative; padding-left: 35px;
+				&:before { content: ''; display: block; position: absolute; top: 0; left: 0; @include sprite($sprite-icon-iks01); }
+			}
+		}
+		&.help02 { margin-left: -20px; padding: 0 40px 17px 18px;
+			&:before { left: 95px; }
+		}
+		&.help03 { margin-left: -20px; padding: 0 40px 17px 18px;
+			&:before { left: 95px; }
+		}
+	}
+
+	.paper-info { margin-left: -20px; padding: 13px 30px 27px 30px;
+		&:before { left: 113px; }
+
+		.process-open-paper { margin-top: 13px;
+			> li { float: left; position: relative; padding-right: 20px; padding-left: 20px;
+				em { font-size: 12px; color: $color-title; }
+				p { font-size: 12px; color: $color-content; line-height: 18px; }
+				button { font-size: 12px; color: $color-content; text-decoration: underline; }
+
+				+ li { padding-left: 50px;
+					&:before { content: ''; display: block; position: absolute; top: 50%; left: 0; margin-top: -27px; @include sprite($sprite-bg-arrow25); }
+				}
+			}
+		}
+
+		.paper-blind { top: 173px; right: -200px; padding-right: 54px;
+			&:before { left: 183px; }
+			table { width: 100%; border-top: 1px solid #d4dae4; border-right: 1px solid #d4dae4; 
+				th, td { padding: 0 10px; font-size: 12px; font-weight: normal; line-height: 35px; text-align: center; border-bottom: 1px solid #d4dae4; border-left: 1px solid #d4dae4; }
+				th { color: $color-title; background-color: #fbfbfb; }
+				td { color: $color-content; }
+				.l { text-align: left; }
+			}
+		}
+	}
 }
 
 

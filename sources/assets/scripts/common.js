@@ -578,10 +578,12 @@ var Story = (function ($) {
 /********************************************************************************************/
 var Popup = (function ($) {
 	var $btnToggles,
+		$btnInnerToggles,
 		$btnClose,
 		$btnOvers;
 		init = function () {
 			$btnToggles = $('.va-toggle-btns');
+			$btnInnerToggles = $('.va-inner-toggle-btns');
 			$btnClose = $('.popup button.btn-popup-close');
 			$btnOvers = $('.va-over-btns');
 			$lastTargetToggle = null;
@@ -619,6 +621,20 @@ var Popup = (function ($) {
 
 			$(target).toggle();
 			$lastTargetToggle = $(target);
+		});
+
+		// 개별 토글
+		$btnInnerToggles.on('click', function(e) {
+			e.preventDefault();
+
+			var target = null;
+			if( $(this).is('[value]') ) {
+				target = $(this).val();
+			} else if( $(this).is('[href]') ) {
+				target = $(this).attr('href');
+			}
+
+			$(target).toggle();
 		});
 
 		// 전체 마우스 오버 버튼

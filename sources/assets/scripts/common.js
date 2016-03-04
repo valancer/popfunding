@@ -34,6 +34,7 @@ $(document).ready(function (e) {
 	BondsProduct.init();
 	Invest.init();
 	Story.init();
+	Myzone.init();
 	Popup.init();
 });
 
@@ -477,12 +478,14 @@ var BondsProduct = (function ($) {
 
 		var array = value.split('');
 
-		if( $element.closest('.borrowing-count').length > 0 ) {
-			convert += '<em class="bid' + array[0] + '">' + array[0] + '</em>\n';
-		} else if( $element.closest('.credit-rating').length > 0 ) {
-			convert += '<em class="overdue-' + array[0] + '">' + array[0] + '</em>';
-		} else {
-			convert += '<em class="overdue-' + array[0] + '">' + array[0] + '</em>';
+		for( var i=0; i<array.length; i++ ) {
+			if( $element.closest('.borrowing-count').length > 0 ) {
+				convert += '<em class="bid' + array[i] + '">' + array[i] + '</em>\n';
+			} else if( $element.closest('.credit-rating').length > 0 ) {
+				convert += '<em class="overdue-' + array[i] + '">' + array[i] + '</em>';
+			} else {
+				convert += '<em class="overdue-' + array[i] + '">' + array[i] + '</em>';
+			}
 		}
 		$element.html(convert);
 	}
@@ -566,6 +569,67 @@ var Story = (function ($) {
 			scope = this;
 			
 			addProducts($elements);
+		}
+	};
+}(jQuery));
+
+
+
+
+/********************************************************************************************/
+/******************************************* 마이존 *******************************************/
+/********************************************************************************************/
+var Myzone = (function ($) {
+	var _containerWidth = 0,
+		$container,
+		$listProducts,
+		$products,
+		$countAndRatings,
+		$numbers,
+		$tooltips,
+
+		_isDetail = false,
+		init = function () {
+			$container = $('.contents.myzone');
+			$countAndRatings = $container.find('.convert.cr');
+
+	 		initLayout();
+			initEvent();
+
+		};//end init
+
+	function initLayout() {
+		if( $countAndRatings.length > 0 ) {
+			$countAndRatings.each(function () {
+				convertCRToImage($(this));
+			});
+		}
+	}
+
+	function initEvent() {
+	}
+
+	function convertCRToImage($element) {
+		var value = $.trim($element.text().toLowerCase());
+		var convert = '';
+
+		var array = value.split('');
+
+		for( var i=0; i<array.length; i++ ) {
+			if( $element.closest('.borrowing-count').length > 0 ) {
+				convert += '<em class="bid' + array[i] + '">' + array[i] + '</em>\n';
+			} else if( $element.closest('.credit-rating').length > 0 ) {
+				convert += '<em class="overdue-' + array[i] + '">' + array[i] + '</em>';
+			} else {
+				convert += '<em class="overdue-' + array[i] + '">' + array[i] + '</em>';
+			}
+		}
+		$element.html(convert);
+	}
+
+	return {
+		init: function () {
+			init();
 		}
 	};
 }(jQuery));

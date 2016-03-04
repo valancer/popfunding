@@ -24,7 +24,7 @@
 	.myzone-box { position: relative; margin-top: 54px; padding-bottom: 80px; border: 1px solid #d4dae4; border-radius: 18px; background-color: #fff; }
 
 	/* 게별 섹션 */
-	.section { padding: 77px 119px 0 119px;
+	.section { position: relative; padding: 77px 119px 0 119px;
 		h1.title { font-size: 18px; font-weight: normal; color: $color-title; line-height: 1.3em;
 			+ .tbl-data-h,
 			+ .tbl-data-v { margin-top: 28px; }
@@ -127,8 +127,14 @@
 				label { font-size: 14px; color: $color-title; }
 			}
 		}
+		> tfoot {
+			th { height: 50px; font-size: 14px; font-weight: normal; color: $color-title; text-align: center; border-left: 1px solid #d4dae4; background-color: #fbfbfb;
+				&:first-child { border-left: 0px; }
+			}
+			td { font-size: 14px; text-align: center; border-left: 1px solid #d4dae4; background-color: #fbfbfb; }
+		}
 		> tbody {
-			th, td { position: relative; padding: 10px 5px; min-height: 50px; font-size: 14px; font-weight: normal; color: $color-content; text-align: center; line-height: 18px; border-bottom: 1px solid #d4dae4; border-left: 1px solid #d4dae4; background-color: #fff; background-clip: padding-box;
+			th, td { position: relative; padding: 10px 5px; height: 30px; font-size: 14px; font-weight: normal; color: $color-content; text-align: center; line-height: 18px; border-bottom: 1px solid #d4dae4; border-left: 1px solid #d4dae4; background-color: #fff; background-clip: padding-box;
 				&:first-child { border-left: 0px; }
 				a { position: relative; color: $color-content; text-decoration: underline;
 					/*  대손 상환 */
@@ -258,57 +264,7 @@
 		}
 	}
 
-
-	/* 투자자 등급 및 산정 기준 및 혜택 & 빌리기 등급 산정 기준 */
-	.rating-benefit { top: 70px; right: 119px; left: 119px; padding: 63px 60px 70px 60px;
-		&:before { content: none; }
-
-		h1.title { padding: 0; font-size: 18px; color: $color-title;
-			&:before { content: none; }
-		}
-		.message { margin-top: 19px; font-size: 14px; color: $color-content; }
-		.sub-title { margin-top: 47px; font-size: 14px; color: $color-title; }
-		.sub-content { margin-top: 10px; font-size: 12px; color: $color-content; line-height: 22px; }
-
-		.tbl-rating { table-layout: fixed; margin-top: 44px; width: 100%; border-top: 2px solid $color-title;
-			tbody {
-				tr.rating {
-					th { font-size: 14px; }
-				}
-				th { height: 69px; width: 76px; font-size: 12px; font-weight: normal; color: $color-content; line-height: 16px; text-align: center; border-right: 1px solid #d4dae4; border-bottom: 1px solid #d4dae4; border-left: 1px solid #d4dae4; background-color: #fbfbfb; }
-				td { font-size: 14px; color: $color-content; text-align: center; border-right: 1px solid #d4dae4; border-bottom: 1px solid #d4dae4; background-color: #fff; }
-
-				span.rating { display: block; margin: 16px auto 17px auto; font-size: 12px; color: $color-desc; text-indent: -9999px;
-					&:before { content: ''; display: block; margin: 0 auto; }
-
-					&.none { margin-top: 30px;
-						&:before { margin-top: 0px; margin-bottom: 0px; @include sprite($sprite-bg-invest01); }
-					}
-					&.newbie { @include sprite($sprite-bg-invest02-p);
-						&:before { content: none; }
-					}
-					&.silver { @include sprite($sprite-bg-invest03-p);
-						&:before { content: none; }
-					}
-					&.gold { @include sprite($sprite-bg-invest04-p);
-						&:before { content: none; }
-					}
-					&.vip-silver { @include sprite($sprite-bg-invest05);
-						&:before { content: none; }
-					}
-					&.vip-gold { @include sprite($sprite-bg-invest06);
-						&:before { content: none; }
-					}
-					&.vvip { @include sprite($sprite-bg-invest07);
-						&:before { content: none; }
-					}
-					&.special {
-						&:before { margin-bottom: 7px; @include sprite($sprite-bg-invest08); }
-					}
-				}
-			}
-		}
-	}	}
+}
 
 
 
@@ -561,7 +517,60 @@
 		}
 	}
 
+	/* 투자자 등급 및 산정 기준 및 혜택 */
+	.rating-benefit { top: 70px; right: 119px; left: 119px; padding: 63px 60px 70px 60px;
+		&:before { content: none; }
+
+		h1.title { padding: 0; font-size: 18px; color: $color-title;
+			&:before { content: none; }
+		}
+		.message { margin-top: 19px; font-size: 14px; color: $color-content; }
+		.sub-title { margin-top: 47px; font-size: 14px; color: $color-title; }
+		.sub-content { margin-top: 10px; font-size: 12px; color: $color-content; line-height: 22px; }
+
+		.tbl-rating { table-layout: fixed; margin-top: 44px; width: 100%; border-top: 2px solid $color-title;
+			tbody {
+				tr.rating {
+					th { font-size: 14px; }
+				}
+				th { height: 69px; width: 76px; font-size: 12px; font-weight: normal; color: $color-content; line-height: 16px; text-align: center; border-right: 1px solid #d4dae4; border-bottom: 1px solid #d4dae4; border-left: 1px solid #d4dae4; background-color: #fbfbfb; }
+				td { font-size: 14px; color: $color-content; text-align: center; border-right: 1px solid #d4dae4; border-bottom: 1px solid #d4dae4; background-color: #fff; }
+
+				span.rating { display: block; margin: 16px auto 17px auto; font-size: 12px; color: $color-desc; text-indent: -9999px;
+					&:before { content: ''; display: block; margin: 0 auto; }
+
+					&.none { margin-top: 30px;
+						&:before { margin-top: 0px; margin-bottom: 0px; @include sprite($sprite-bg-invest01); }
+					}
+					&.newbie { @include sprite($sprite-bg-invest02-p);
+						&:before { content: none; }
+					}
+					&.silver { @include sprite($sprite-bg-invest03-p);
+						&:before { content: none; }
+					}
+					&.gold { @include sprite($sprite-bg-invest04-p);
+						&:before { content: none; }
+					}
+					&.vip-silver { @include sprite($sprite-bg-invest05);
+						&:before { content: none; }
+					}
+					&.vip-gold { @include sprite($sprite-bg-invest06);
+						&:before { content: none; }
+					}
+					&.vvip { @include sprite($sprite-bg-invest07);
+						&:before { content: none; }
+					}
+					&.special {
+						&:before { margin-bottom: 7px; @include sprite($sprite-bg-invest08); }
+					}
+				}
+			}
+		}
+	}
+
 }
+
+
 
 
 /* 자동투자 - 미투/오토비딩 */
@@ -737,6 +746,8 @@
 }
 
 
+
+
 /* 나의 빌리기 */
 .contents.myzone.myborrow {
 	/*  빌리기 써머리 */
@@ -786,6 +797,7 @@
 		}
 	}
 
+	/* 서류 정보 */
 	.paper-info { margin-left: -20px; padding: 13px 30px 27px 30px;
 		&:before { left: 113px; }
 
@@ -811,6 +823,203 @@
 			}
 		}
 	}
+
+	/* 서류 정보 */
+	.paper-details { right: 119px; left: 119px; margin-top: -16px; padding: 20px 20px 40px 39px;
+		.list-guide {
+			> li {
+				em { 
+					+ p { margin-top: 12px; }
+				}
+				p { margin-top: 3px; }
+			}
+		}
+
+		.list-paper-uploaded { overflow: hidden; margin-top: 28px;
+			> li { float: left; width: 105px;
+				.cr-box { margin: 0; text-align: center;
+					label { padding: 0 0 23px 0;
+						&:before { top: auto; bottom: 0px; left: 50%; margin-left: -7px; }
+
+						figure { width: 100%; text-align: center;
+							.thumb { display: block; margin: 0 auto; height: 100px; width: 71px; border: 1px solid #d4dae4; }
+							figcaption { margin-top: 7px; letter-spacing: -0.1em; }
+						}
+					}
+				}
+			}
+		}
+
+		.btns { padding-top: 40px; }
+		.btn-submit { width: 230px; }
+
+		&.select {
+			&:before { left: 236px; }
+		}
+		&.uploaded {
+			&:before { left: 353px; }
+
+			.thumb { display: block; margin: 0 auto; height: 100px; width: 71px; border: 1px solid #d4dae4; }
+			figcaption { display: none; }
+		}
+	}
+
+
+	/* 투자자 등급 및 산정 기준 및 혜택 */
+	.rating-borrow { top: 70px; right: 119px; left: 119px; width: 798px; padding: 63px 60px 60px 60px;
+		&:before { content: none; }
+
+		h1.title { padding: 0; font-size: 18px; color: $color-title;
+			&:before { content: none; }
+
+			+ .message { margin-top: 29px; }
+		}
+		.message { margin-top: 7px; font-size: 14px; color: $color-content; line-height: 22px;
+			em { color: $color-menu1-hover;
+				&.bidding { color: $color-point1; }
+				&.overdue { color: $color-point3; }
+			}
+		}
+
+		.tbl-rating { table-layout: fixed; margin-top: 44px; width: 100%; border-top: 2px solid $color-title;
+			> thead {
+				th { position: relative; height: 55px; width: 157px; font-weight: normal; border-right: 1px solid #d4dae4; border-bottom: 1px solid #d4dae4; border-left: 1px solid #d4dae4; background-color: #fbfbfb;
+					span { position: absolute; font-size: 12px; color: $color-content;
+						&.tr { top: 8px; right: 10px; }
+						&.bl { bottom: 7px; left: 7px; }
+					}
+					&.diagonal { background-image: url('/assets/images/bg_diagonal1.png'); background-size: 100%; }
+				}
+				td { font-size: 20px; font-weight: bold; color: $color-point3; text-align: center; border-right: 1px solid #d4dae4; border-bottom: 1px solid #d4dae4; background-color: #fff; }
+			}
+			> tbody {
+				th { height: 49px; font-size: 12px; font-weight: normal; color: $color-content; line-height: 16px; text-align: center; border-right: 1px solid #d4dae4; border-bottom: 1px solid #d4dae4; border-left: 1px solid #d4dae4; background-color: #fbfbfb; }
+				td { font-size: 14px; color: $color-content; text-align: center; border-right: 1px solid #d4dae4; border-bottom: 1px solid #d4dae4; background-color: #fff; }
+
+				span.rating { display: inline-block; font-size: 12px; color: $color-desc; text-indent: -9999px;
+					&.blue { @include sprite($sprite-bg-borrow01); }
+					&.red { @include sprite($sprite-bg-borrow02); }
+					&.green { @include sprite($sprite-bg-borrow04); }
+				}
+			}
+		}
+
+		.list-dot { margin-top: 15px;
+			> li { margin-top: 0; line-height: 20px; }
+		}
+	}
+
+	/* 등급별 혜택 */
+	.benefit-borrow { top: 70px; right: 119px; left: auto; width: 628px; padding: 20px 60px 60px 60px;
+		&:before { content: none; }
+
+		h1.title { margin-top: 37px; padding: 0; font-size: 14px; color: $color-title;
+			&:before { content: none; }
+		}
+
+		table { table-layout: fixed; margin-top: 14px; width: 100%; border-top: 1px solid #d4dae4; border-left: 1px solid #d4dae4; 
+			> thead {
+				th { height: 35px; font-size: 12px; font-weight: normal; color: $color-title; text-align: center; border-right: 1px solid #d4dae4; border-bottom: 1px solid #d4dae4; background-color: #fbfbfb; }
+			}
+
+			> tbody {
+				td { height: 35px; font-size: 12px; color: $color-content; text-align: center; border-right: 1px solid #d4dae4; border-bottom: 1px solid #d4dae4; border-bottom: 1px solid #d4dae4; background-color: #fff; }
+			}
+		}
+	}
+
+
+	/* 빌리기 실적 상세내역 팝업 */
+	.borrow-performance { top: 96px; left: 300px; padding: 28px 50px 40px 50px; width: 360px;
+		&:before { left: 110px; }
+
+		> .title { padding: 0px; font-size: 14px; font-weight: normal; color: $color-title-sub;
+			&:before { content: none; }
+
+			+ .message { margin-top: 10px; }
+		}
+		.message { font-size: 12px; color: $color-content; }
+
+		.tbl-data-v { margin-top: 12px; border-bottom: 2px solid $color-title;
+			th, td { padding-top: 0px; padding-bottom: 0px; height: 44px; }
+		}
+
+		.trust-ratings { position: absolute; top: 44px; right: 50px;
+			.borrowing-count { padding-top: 0px;
+				> .convert {
+					> em { display: inline-block; height: 44px; text-indent: -9999px;
+						&.bid0 { @include sprite($sprite-cnt-bid0-b); }
+						&.bid1 { @include sprite($sprite-cnt-bid1-b); }
+						&.bid2 { @include sprite($sprite-cnt-bid2-b); }
+						&.bid3 { @include sprite($sprite-cnt-bid3-b); }
+						&.bid4 { @include sprite($sprite-cnt-bid4-b); }
+						&.bid5 { @include sprite($sprite-cnt-bid5-b); }
+						&.bid6 { @include sprite($sprite-cnt-bid6-b); }
+						&.bid7 { @include sprite($sprite-cnt-bid7-b); }
+						&.bid8 { @include sprite($sprite-cnt-bid8-b); }
+						&.bid9 { @include sprite($sprite-cnt-bid9-b); }
+					}
+				}
+			}
+			.credit-rating { padding-top: 0px;
+				> .convert {
+					> em { display: inline-block; height: 44px; text-indent: -9999px; @include sprite($sprite-bg-overdue01-b); 
+						&.overdue-a { @include sprite($sprite-bg-overdue02-b); }
+						&.overdue-b { @include sprite($sprite-bg-overdue03-b); }
+						&.overdue-c { @include sprite($sprite-bg-overdue04-b); }
+						&.overdue-d { @include sprite($sprite-bg-overdue05-b); }
+					}
+				}
+			}
+		}
+	}
+
+	/* kt 유의사항 */
+	.kt-guide { right: 119px;
+		&:before { right: 55px; left: auto; }
+
+		p { margin-top: 0px; }
+	}
+
+	/* 중도상환 계산기 */
+	/* 매도주문 하기 */
+	.prepayment-calc { display: none; top: 193px; right: 119px; left: auto;
+		.inner { left: auto; padding: 37px 50px 20px 50px; width: 410px;
+			.message { font-size: 12px; color: $color-content;
+				&:before { content: ''; display: inline-block; height: 2px; width: 2px; margin-top: -2px; vertical-align: middle; background-color: $color-content; }
+			}
+			.prepayment { margin-top: 7px;
+				.message { float: right; margin-top: -22px; margin-right: 2px; }
+				.center { display: inline-block; padding-right: 4px; width: 252px; vertical-align: middle;
+					input[type=text] { color: $color-menu1-hover; }
+				}
+			}
+			.item-form {
+				input[type=text] { font-size: 20px; padding: 0; }
+				.btn-calc-submit { display: inline-block; padding-right: 20px; padding-left: 20px; width: 147px; font-size: 14px; font-weight: bold; color: #fff; line-height: 40px; vertical-align: middle; border-radius: 2px; background-color: $color-point2;
+					&:after { content: ''; display: inline-block; margin: -1px 0 0 7px; vertical-align: middle; @include sprite($sprite-bg-arrow02); }
+				}
+			}
+
+			.results { overflow: hidden;
+				.item-form { clear: none; float: left; width: 33.3%;
+					input[readonly] { background-color: #f1f3f5;
+						&.normal { color: $color-title; }
+					}
+					+ .item-form { margin-left: -1px; }
+				}
+
+				.price-message { position: relative; margin-top: 7px; padding-left: 13px; font-size: 12px; color: $color-content; letter-spacing: -0.1em;
+					&:before { content: ''; display: block; position: absolute; top: 2px; left: 0; @include sprite($sprite-icon-reply01); }
+				}
+				.message { position: relative; top: -16px; margin-top: 0px; }
+			}
+
+		}
+	}
+
+
+
 }
 
 

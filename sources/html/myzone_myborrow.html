@@ -33,8 +33,8 @@ include "head.html"
 	
 				<section class="section">
 					<p class="filter">
-						<button type="button" value="#" class="btn-inline-box">등급선정기준</button>
-						<button type="button" value="#" class="btn-inline-box">등급별 혜택</button>
+						<button type="button" value="#popup-rating-borrow" class="btn-inline-box va-toggle-btns">등급선정기준</button>
+						<button type="button" value="#popup-benefit-borrow" class="btn-inline-box va-toggle-btns">등급별 혜택</button>
 					</p>
 					<h1 class="title">나의 빌리기</h1>
 
@@ -42,7 +42,7 @@ include "head.html"
 						<div class="rating">
 							<p class="info">
 								제영순님의 빌리기 등급은 <strong class="rating-profile red">Red</strong><br>
-								빌리기 실적은 <em class="bidding">30</em><em class="overdue">A</em> <a href="#" class="va-toggle-btns">상세보기</a>
+								빌리기 실적은 <em class="bidding">30</em><em class="overdue">A</em> <a href="#popup-borrow-performance" class="va-toggle-btns">상세보기</a>
 							</p>
 							<p class="desc">
 								빌리기 등급은 회원님의 빌리기 상환내역을 기준으로 매달 1일에 갱신됩니다.<br>
@@ -52,6 +52,66 @@ include "head.html"
 							<p class="btns">
 								<a href="#" class="btn-submit color-borrowing">대출자 인증받기</a>
 							</p>
+
+
+							<!-- 투자실적 상세내역 팝업 -->
+							<aside id="popup-borrow-performance" class="popup guide-popup type-tooltip borrow-performance">
+								<button class="btn-popup-close" data-target="#popup-borrow-performance">팝업닫기</button>
+								
+								<h1 class="title">빌리기 실적 상세내역</h1>
+
+								<p class="message">
+									대출 후 정상상환 누적 개월수와 상환기간 대비<br>월평균 연체일수를 기준으로 산정됩니다.
+								</p>
+	
+								<p class="trust-ratings">
+									<span class="borrowing-count">
+										<span class="convert cr">64</span>
+									</span>
+									<span class="credit-rating">
+										<span class="convert cr">B</span>
+									</span>
+								</p>
+								<table class="tbl-data-v">
+									<caption>빌리기 실적 상세내역</caption>
+									<thead>
+										<tr>
+											<th>투자번호</th>
+											<th class="small">정상상환<br>누적 개월수</th>
+											<th class="small">월평균<br>연체일수</th>
+										</tr>
+									</thead>
+									<tfoot>
+										<tr>
+											<th>합계</th>
+											<td><em>46</em></td>
+											<td><em>1.25일 (B등급)</em></td>
+										</tr>
+									</tfoot>
+									<tbody>
+										<tr>
+											<th>B151208-1</th>
+											<td>10</td>
+											<td>0</td>
+										</tr>
+										<tr>
+											<th>B151208-1</th>
+											<td>10</td>
+											<td>0</td>
+										</tr>
+										<tr>
+											<th>B151208-1</th>
+											<td>10</td>
+											<td>0</td>
+										</tr>
+										<tr>
+											<th>B151208-1</th>
+											<td>10</td>
+											<td>0</td>
+										</tr>
+									</tbody>
+								</table>
+							</aside>
 						</div>
 					</div>
 				</section>
@@ -141,6 +201,7 @@ include "head.html"
 									서류/스캔정보
 									<button type="button" value="#popup-paper-info" class="btn-help va-toggle-btns">서류/스캔정보 도움말</button>
 
+									<!-- 서류/스캔정보 도움말 -->
 									<div id="popup-paper-info" class="popup guide-popup type-tooltip paper-info">
 										<button class="btn-popup-close" data-target="#popup-paper-info">팝업닫기</button>
 										
@@ -228,11 +289,195 @@ include "head.html"
 									</div>
 								</th>
 								<td colspan="2" class="l">
-									<button type="button" class="btn-paper">정보공개서류 5건</button> / <button type="button" class="btn-paper">본인인증서류(필수) 10건</button>이 등록되었습니다. 
+									<button type="button" value="#popup-paper-select" class="btn-paper va-toggle-btns">정보공개서류 5건</button> / <button type="button" value="#popup-paper-uploaded" class="btn-paper va-toggle-btns">본인인증서류(필수) 10건</button>이 등록되었습니다. 
 								</td>
 							</tr>
 						</tbody>
 					</table>
+
+					<!-- 정보공개서류 -->
+					<div id="popup-paper-select" class="popup guide-popup type-tooltip paper-details select">
+						<button class="btn-popup-close" data-target="#popup-paper-select">팝업닫기</button>
+
+						<ul class="list-guide">
+							<li>
+								<em>정보공개서류(선택)</em>
+								<p>
+									빌리기 진행에 신뢰를 주기 위하여 투자자들에게 공개를 원하는 서류가 있으신 경우 팝펀딩 운영팀에 보내주세요.<br>
+									<em>[서류 공개 요청] 버튼 클릭 후에 1:1게시판에 요청해주시기 바랍니다.</em> 스캔서비스를 통해 회원님의 빌리기 정보 내에 업로드해 드립니다.<br>
+								</p>
+								<p>
+									빌리기 진행 중 공개여부를 한번 설정한 서류는 서류공개여부 취소가 불가능하니 신중히 선택해 주세요.<br>
+									단, 아직 공개여부를 선택하지 않은 서류와 추가로 보내주신 서류의 공개설정은 가능합니다.<br>
+								</p>
+							</li>
+						</ul>
+
+						<fieldset>
+							<legend>공개서류 선택</legend>
+
+							<ul class="list-paper-uploaded">
+								<li>
+									<div class="cr-box">
+										<input type="checkbox" id="paper01" name="papers">
+										<label for="paper01">
+											<figure>
+												<div class="thumb"><img src="/assets/images/temp/paper01.png" alt=""></div>
+												<figcaption>임대차계약서</figcaption>
+											</figure>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="cr-box">
+										<input type="checkbox" id="paper02" name="papers">
+										<label for="paper02">
+											<figure>
+												<div class="thumb"><img src="/assets/images/temp/paper01.png" alt=""></div>
+												<figcaption>등기부등본</figcaption>
+											</figure>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="cr-box">
+										<input type="checkbox" id="paper03" name="papers">
+										<label for="paper03">
+											<figure>
+												<div class="thumb"><img src="/assets/images/temp/paper01.png" alt=""></div>
+												<figcaption>재직증명서</figcaption>
+											</figure>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="cr-box">
+										<input type="checkbox" id="paper04" name="papers">
+										<label for="paper04">
+											<figure>
+												<div class="thumb"><img src="/assets/images/temp/paper01.png" alt=""></div>
+												<figcaption>금여통장거래 내역서</figcaption>
+											</figure>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="cr-box">
+										<input type="checkbox" id="paper05" name="papers">
+										<label for="paper05">
+											<figure>
+												<div class="thumb"><img src="/assets/images/temp/paper01.png" alt=""></div>
+												<figcaption>임대차계약서</figcaption>
+											</figure>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="cr-box">
+										<input type="checkbox" id="paper06" name="papers">
+										<label for="paper06">
+											<figure>
+												<div class="thumb"><img src="/assets/images/temp/paper01.png" alt=""></div>
+												<figcaption>재직증명서</figcaption>
+											</figure>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="cr-box">
+										<input type="checkbox" id="paper07" name="papers">
+										<label for="paper07">
+											<figure>
+												<div class="thumb"><img src="/assets/images/temp/paper01.png" alt=""></div>
+												<figcaption>금여통장거래 내역서</figcaption>
+											</figure>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="cr-box">
+										<input type="checkbox" id="paper08" name="papers">
+										<label for="paper08">
+											<figure>
+												<div class="thumb"><img src="/assets/images/temp/paper01.png" alt=""></div>
+												<figcaption>임대차계약서</figcaption>
+											</figure>
+										</label>
+									</div>
+								</li>
+							</ul>
+
+							<p class="btns">
+								<a href="#" class="btn-submit color-borrowing">서류 공개 요청</a>	
+							</p>
+						</fieldset>
+					</div>
+						
+					<!-- 본인인증서류 /-->
+					<div id="popup-paper-uploaded" class="popup guide-popup type-tooltip paper-details uploaded">
+						<button class="btn-popup-close" data-target="#popup-paper-uploaded">팝업닫기</button>
+
+						<ul class="list-guide">
+							<li>
+								<em>본인확인 서류(필수)</em>
+								<p>
+									회원님께서 보내주신 서류를 스캔한 이미지입니다.<br>
+									본인확인 서류는 회원님의 본인 확인을 위해 운영진에서만 확인하고, 투자정보 내에는 노출이 불가합니다.<br>
+								</p>
+							</li>
+						</ul>
+
+							<ul class="list-paper-uploaded">
+								<li>
+									<figure>
+										<div class="thumb"><img src="/assets/images/temp/paper01.png" alt=""></div>
+										<figcaption>임대차계약서</figcaption>
+									</figure>
+								</li>
+								<li>
+									<figure>
+										<div class="thumb"><img src="/assets/images/temp/paper01.png" alt=""></div>
+										<figcaption>등기부등본</figcaption>
+									</figure>
+								</li>
+								<li>
+									<figure>
+										<div class="thumb"><img src="/assets/images/temp/paper01.png" alt=""></div>
+										<figcaption>재직증명서</figcaption>
+									</figure>
+								</li>
+								<li>
+									<figure>
+										<div class="thumb"><img src="/assets/images/temp/paper01.png" alt=""></div>
+										<figcaption>금여통장거래 내역서</figcaption>
+									</figure>
+								</li>
+								<li>
+									<figure>
+										<div class="thumb"><img src="/assets/images/temp/paper01.png" alt=""></div>
+										<figcaption>임대차계약서</figcaption>
+									</figure>
+								</li>
+								<li>
+									<figure>
+										<div class="thumb"><img src="/assets/images/temp/paper01.png" alt=""></div>
+										<figcaption>재직증명서</figcaption>
+									</figure>
+								</li>
+								<li>
+									<figure>
+										<div class="thumb"><img src="/assets/images/temp/paper01.png" alt=""></div>
+										<figcaption>금여통장거래 내역서</figcaption>
+									</figure>
+								</li>
+								<li>
+									<figure>
+										<div class="thumb"><img src="/assets/images/temp/paper01.png" alt=""></div>
+										<figcaption>임대차계약서</figcaption>
+									</figure>
+								</li>
+							</ul>
+					</div>
 				</section>
 
 
@@ -279,8 +524,18 @@ include "head.html"
 						</tbody>
 					</table>
 					<p class="tbl-data-v-bottom">
-						<button type="button" value="#" class="btn-txt">KT회원 유의사항</button>
+						<button type="button" value="#popup-kt-guide" class="btn-txt va-toggle-btns">KT회원 유의사항</button>
 					</p>
+
+					<div id="popup-kt-guide" class="popup guide-popup type-tooltip kt-guide">
+						<div class="contents">
+							<p>
+								KT회원 전용 소액대출의 경우,<br>
+								영업일 1~2일의 조회소요 기간 이후에 경매리스트에 노출됩니다.<br>
+								(조회 완료시, 인증정보가 활성화 됩니다.)<br>
+							</p>
+						</div>
+					</div>					
 				</section>
 
 
@@ -314,14 +569,66 @@ include "head.html"
 									(연체중인 경우 중도상환 불가)<br>
 								</td>
 								<td class="vb r btns">
-									<button type="button" value="#" class="btn-calc">중도상환 계산기</button>
+									<button type="button" value="#popup-prepayment-calc" class="btn-calc va-toggle-btns">중도상환 계산기</button>
 								</td>
 							</tr>
 						</tbody>
 					</table>
 					<p class="tbl-data-v-bottom iks">
 						상환금액에는 <em>입금수수료 200원</em>이 포함됩니다. 일시/중도상환을 원하시는 경우 <em>입금 후 1:1 게시판</em>에 요청해주세요.
-					</p>	
+					</p>
+
+
+					<!-- 종도상환 계산기 -->
+					<aside id="popup-prepayment-calc" class="popup invest-popup prepayment-calc">
+						<fieldset class="inner">
+							<legend>중도상환 계산기</legend>
+							<button class="btn-popup-close" data-target="#popup-prepayment-calc">팝업닫기</button>
+
+							<h1 class="title">중도상환 계산기</h1>
+
+							<div class="item-form prepayment">
+								<label for="price">상환 원금 입력</label>
+								<p class="message">
+									남은 원금 : 916,666원 / 최소 상환금액 : 91,667원
+								</p>
+								<p class="center">
+									<input type="text" id="price" name="price" value="150,000">
+								</p>
+								<button type="submit" class="btn-calc-submit">계산하기</button>
+							</div>
+
+							<div class="results">
+								<div class="item-form">
+									<label for="">상환 원금</label>
+									<p class="center">
+										<input type="text" id="" name="" value="150,000" readonly="readonly" class="normal">
+									</p>
+								</div>
+								<div class="item-form">
+									<label for="">상환 이자</label>
+									<p class="center">
+										<input type="text" id="" name="" value="32,235" readonly="readonly" class="normal">
+									</p>
+								</div>
+								<div class="item-form">
+									<label for="">총 입금 금액</label>
+									<p class="center">
+										<input type="text" id="" name="" value="182,253" readonly="readonly">
+									</p>
+									<p class="price-message">
+										입금 수수료가 포함된 금액
+									</p>
+								</div>
+								<div class="clear"></div>
+
+								<p class="message">
+									상환후 원금 잔액 : 916,666원
+								</p>
+							</div>
+
+						</fieldset>
+					</aside>			
 				</section>
 
 
@@ -419,7 +726,8 @@ include "head.html"
 				</section>
 
 
-				<aside id="popup-rating-borrow" class="popup guide-popup rating-benefit" style="display: block;">
+				<!-- 빌리기 등급 산정 기준 -->
+				<aside id="popup-rating-borrow" class="popup guide-popup rating-borrow">
 					<button class="btn-popup-close" data-target="#popup-rating-borrow">팝업닫기</button>
 
 					<h1 class="title">빌리기 등급 산정 기준</h1>
@@ -427,22 +735,22 @@ include "head.html"
 						빌리기 등급은 아래 표의 신뢰등급을 기준으로 산정됩니다. (매달 1일에 갱신)
 					</p>
 					<p class="message">
-						신뢰등급은 대출 후 정상상환 누적 개월수와 상환기간 대비 월평균 연체일수를 기준으로 산정됩니다. (1일1회 갱신)<br>
-						예) 5A (정상상환이 5회, 연체등급이 A등급인 회원)<br>
+						신뢰등급은 대출 후 <em>정상상환 누적 개월수</em>와 상환기간 대비 <em>월평균 연체일수</em>를 기준으로 산정됩니다. (1일1회 갱신)<br>
+						예) <em class="bidding">5</em><em class="overdue">A</em> (정상상환이 5회, 연체등급이 A등급인 회원)<br>
 					</p>
 
 					<table class="tbl-rating">
-						<caption></caption>
+						<caption>빌리기 등급 산정 기준</caption>
 						<thead>
 							<tr>
-								<th scope="row"><span>연체등급</span></th>
-								<th rowspan="2" scope="col">A</th>
-								<th rowspan="2" scope="col">B</th>
-								<th rowspan="2" scope="col">C</th>
-								<th rowspan="2" scope="col">D</th>
-							</tr>
-							<tr>
-								<th scope="col"><span>정상 상환 개월수</span></th>
+								<th class="diagonal">
+									<span class="tr">연체등급</span>
+									<span class="bl">정상 상환 개월수</span>
+								</th>
+								<td>A</td>
+								<td>B</td>
+								<td>C</td>
+								<td>D</td>
 							</tr>
 						</thead>
 						<tbody>
@@ -462,56 +770,182 @@ include "head.html"
 							</tr>
 							<tr>
 								<th>24~35개월</th>
-								<td><span class="green">Green</span></td>
+								<td><span class="rating green">Green</span></td>
 								<td>일반</td>
 								<td>일반</td>
 								<td>일반</td>
 							</tr>
 							<tr>
 								<th>36~47개월</th>
-								<td><span class="bule">Blue</span></td>
-								<td><span class="green">Green</span></td>
+								<td><span class="rating blue">Blue</span></td>
+								<td><span class="rating green">Green</span></td>
 								<td>일반</td>
 								<td>일반</td>
 							</tr>
 							<tr>
 								<th>48~59개월</th>
-								<td><span class="red">Red</span></td>
-								<td><span class="bule">Blue</span></td>
-								<td><span class="green">Green</span></td>
+								<td><span class="rating red">Red</span></td>
+								<td><span class="rating blue">Blue</span></td>
+								<td><span class="rating green">Green</span></td>
 								<td>일반</td>
 							</tr>
 							<tr>
 								<th>60~71개월</th>
-								<td><span class="red">Red</span></td>
-								<td><span class="red">Red</span></td>
-								<td><span class="green">Green</span></td>
+								<td><span class="rating red">Red</span></td>
+								<td><span class="rating red">Red</span></td>
+								<td><span class="rating green">Green</span></td>
 								<td>일반</td>
 							</tr>
 							<tr>
 								<th>72~83개월</th>
-								<td><span class="red">Red</span></td>
-								<td><span class="red">Red</span></td>
-								<td><span class="blue">Blue</span></td>
-								<td><span class="green">Green</span></td>
+								<td><span class="rating red">Red</span></td>
+								<td><span class="rating red">Red</span></td>
+								<td><span class="rating blue">Blue</span></td>
+								<td><span class="rating green">Green</span></td>
 							</tr>
 							<tr>
 								<th>84개월</th>
-								<td><span class="red">Red</span></td>
-								<td><span class="red">Red</span></td>
-								<td><span class="blue">Blue</span></td>
-								<td><span class="blue">Blue</span></td>
+								<td><span class="rating red">Red</span></td>
+								<td><span class="rating red">Red</span></td>
+								<td><span class="rating blue">Blue</span></td>
+								<td><span class="rating blue">Blue</span></td>
 							</tr>
 						</tbody>
 					</table>
+
 					<ul class="list-dot">
 						<li>연체등급 산정기준 : A(0.5일 미만), B(3일미만), C(10일미만), D(10일 초과)</li>
 						<li>중도상환은 상환 횟수에 포함되지 않습니다.</li>
 					</ul>
 				</aside>
+
+
+				<!-- 등급별 혜택 -->
+				<aside id="popup-benefit-borrow" class="popup guide-popup benefit-borrow">
+					<button class="btn-popup-close" data-target="#popup-benefit-borrow">팝업닫기</button>
+
+					<h1 class="title">빌리기 등급별 혜택</h1>
+					<table>
+						<caption>빌리기 등급별 혜택</caption>
+						<thead>
+							<tr>
+								<th>혜택</th>
+								<th>일반</th>
+								<th>Green</th>
+								<th>Blue</th>
+								<th>Red</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>대출상환금액</td>
+								<td>200만원</td>
+								<td>300만원</td>
+								<td>500만원</td>
+								<td>500만원</td>
+							</tr>
+							<tr>
+								<td>상위노출</td>
+								<td></td>
+								<td></td>
+								<td colspan="2">경매목록 내 최상위 노출되어 주목도 상승</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h1 class="title">빌리기 등급별 혜택</h1>
+					<table>
+						<caption>빌리기 등급별 혜택</caption>
+						<thead>
+							<tr>
+								<th>기간</th>
+								<th>100~150만원</th>
+								<th>200~250만원</th>
+								<th>300~450만원</th>
+								<th>500~650만원</th>
+								<th>700~1000만원</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>12개월</td>
+								<td><em>O</em></td>
+								<td><em>O</em></td>
+								<td>X</td>
+								<td>X</td>
+								<td>X</td>
+							</tr>
+							<tr>
+								<td>15개월</td>
+								<td>X</td>
+								<td><em>O</em></td>
+								<td><em>O</em></td>
+								<td>X</td>
+								<td>X</td>
+							</tr>
+							<tr>
+								<td>18개월</td>
+								<td>X</td>
+								<td><em>O</em></td>
+								<td><em>O</em></td>
+								<td>X</td>
+								<td>X</td>
+							</tr>
+							<tr>
+								<td>21개월</td>
+								<td>X</td>
+								<td><em>O</em></td>
+								<td><em>O</em></td>
+								<td>X</td>
+								<td>X</td>
+							</tr>
+							<tr>
+								<td>24개월</td>
+								<td><em>O</em></td>
+								<td><em>O</em></td>
+								<td><em>O</em></td>
+								<td>X</td>
+								<td>X</td>
+							</tr>
+							<tr>
+								<td>27개월</td>
+								<td>X</td>
+								<td>X</td>
+								<td>X</td>
+								<td><em>O</em></td>
+								<td>X</td>
+							</tr>
+							<tr>
+								<td>30개월</td>
+								<td>X</td>
+								<td>X</td>
+								<td>X</td>
+								<td><em>O</em></td>
+								<td>X</td>
+							</tr>
+							<tr>
+								<td>33개월</td>
+								<td>X</td>
+								<td>X</td>
+								<td>X</td>
+								<td><em>O</em></td>
+								<td>X</td>
+							</tr>
+							<tr>
+								<td>36개월</td>
+								<td>X</td>
+								<td>X</td>
+								<td>X</td>
+								<td><em>O</em></td>
+								<td><em>O</em></td>
+							</tr>
+						</tbody>
+					</table>
+				</aside>
 			</div>	<!-- class="myzone-box" -->
 			
 			
+
 
 			include "myzone_bottom_btns.html"
 		</div>

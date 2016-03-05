@@ -87,6 +87,7 @@
 			&:before { content: ''; display: inline-block; margin-top: -2px; margin-right: 6px; vertical-align: middle; @include sprite($sprite-icon-calc01); }
 		}
 	}
+
 	.tbl-data-h { /*table-layout: fixed;*/ width: 100%; border-top: 2px solid $color-title;
 		th { padding-top: 16px; padding-bottom: 16px; min-height: 55px; font-size: 14px; font-weight: normal; color: $color-title; line-height: 22px; border-bottom: 1px solid #d4dae4; background-color: #fbfbfb;
 			+ td { border-left: 1px solid #7c7f84; }
@@ -109,6 +110,7 @@
 		}
 		.btn-paper { font-size: 14px; color: $color-menu1-hover; text-decoration: underline; }
 	}
+
 	.tbl-data-v { /*table-layout: fixed;*/ position: relative; width: 100%; border-top: 2px solid $color-title;
 		> thead {
 			tr.small {
@@ -134,6 +136,9 @@
 			td { font-size: 14px; text-align: center; border-left: 1px solid #d4dae4; background-color: #fbfbfb; }
 		}
 		> tbody {
+			tr.disabled {
+				th, td { color: $color-desc; }
+			}
 			th, td { position: relative; padding: 10px 5px; height: 30px; font-size: 14px; font-weight: normal; color: $color-content; text-align: center; line-height: 18px; border-bottom: 1px solid #d4dae4; border-left: 1px solid #d4dae4; background-color: #fff; background-clip: padding-box;
 				&:first-child { border-left: 0px; }
 				a { position: relative; color: $color-content; text-decoration: underline;
@@ -159,7 +164,11 @@
 					&:before { left: 90px; }
 				}
 				.title { display: inline-block; overflow: hidden; height: 16px; max-width: 260px; text-overflow: ellipsis; white-space: nowrap; }
-				.disabled { color: #c4c9d1; }
+				.msg { display: inline-block; overflow: hidden; height: 16px; max-width: 640px; text-overflow: ellipsis; white-space: nowrap; text-decoration: none;
+					&:hover { color: $color-title; }
+					&:visited { color: $color-desc; }
+				}
+				.disabled { color: $color-desc; }
 				strong.waring { display: block; color: $color-menu1-hover;
 					&:before { content: ''; display: block; margin: 0 auto 2px auto; @include sprite($sprite-icon-iks01); }
 				}
@@ -1017,10 +1026,40 @@
 
 		}
 	}
-
-
-
 }
 
+
+/* 마이존 - 쿠폰 & 메시지 */
+.contents.myzone.cnm {
+
+	.coupon-header { position: relative; box-sizing: border-box; margin: 60px auto 0 auto; padding: 17px 0 0 309px; height: 274px; width: 920px;
+		&:before { content: ''; display: block; position: absolute; top: 0; left: -25px; height: 274px; width: 284px; background: url('/assets/images/bg_coupon01.png') left top no-repeat; }
+		.title { display: block; height: 34px; width: 594px; text-indent: -9999px; background: url('/assets/images/txt/title_coupon01.png') left top no-repeat; }
+		.list-dot { margin-top: 23px;
+			> li { position: relative; padding-left: 7px; font-size: 12px; color: $color-content; line-height: 20px;
+				&:before { content: ''; display: block; position: absolute; top: 9px; left: 0; height: 2px; width: 2px; background-color: $color-content; }
+				a { color: $color-content; text-decoration: underline; }
+			}
+		}
+
+		.buy-coupon { margin-top: 26px; padding: 19px 20px;  border: 1px solid #d4dae4; background-color: #d6ebf6; }
+	}
+
+
+	.tbl-container { margin-top: 23px; }
+
+	/* 메시지 상세 */
+	.msg-detail { display: block; position: absolute; top: 0; right: 0; bottom: 0; left: 0; padding: 26px 60px 60px 60px; border: 1px solid #d4dae4; background-color: #fff;
+		&:before { content: none; }
+
+		h1.title { position: relative; padding: 0; height: 54px; font-size: 14px; font-weight: normal; color: $color-title; line-height: 54px; border-bottom: 2px solid $color-title;
+			&:before { content: none; }
+			.via { position: absolute; right: 0px; font-size: 12px; color: $color-content; line-height: 54px; }
+		}
+		.scroll { overflow: scroll; position: absolute; top: 82px; right: 0px; bottom: 60px; left: 60px; padding: 15px 0;
+			p { font-size: 14px; color: $color-content; line-height: 22px; }
+		}
+	}
+}
 
 

@@ -9431,6 +9431,8 @@ body.popup-window {
       background-color: #fbfbfb; }
     .contents.myzone .tbl-data-v > tbody {
       /* 작은 내용 */ }
+      .contents.myzone .tbl-data-v > tbody tr.disabled th, .contents.myzone .tbl-data-v > tbody tr.disabled td {
+        color: #c4c9d1; }
       .contents.myzone .tbl-data-v > tbody th, .contents.myzone .tbl-data-v > tbody td {
         position: relative;
         padding: 10px 5px;
@@ -9509,6 +9511,18 @@ body.popup-window {
           max-width: 260px;
           text-overflow: ellipsis;
           white-space: nowrap; }
+        .contents.myzone .tbl-data-v > tbody th .msg, .contents.myzone .tbl-data-v > tbody td .msg {
+          display: inline-block;
+          overflow: hidden;
+          height: 16px;
+          max-width: 640px;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          text-decoration: none; }
+          .contents.myzone .tbl-data-v > tbody th .msg:hover, .contents.myzone .tbl-data-v > tbody td .msg:hover {
+            color: #252525; }
+          .contents.myzone .tbl-data-v > tbody th .msg:visited, .contents.myzone .tbl-data-v > tbody td .msg:visited {
+            color: #c4c9d1; }
         .contents.myzone .tbl-data-v > tbody th .disabled, .contents.myzone .tbl-data-v > tbody td .disabled {
           color: #c4c9d1; }
         .contents.myzone .tbl-data-v > tbody th strong.waring, .contents.myzone .tbl-data-v > tbody td strong.waring {
@@ -11317,3 +11331,97 @@ body.popup-window {
           position: relative;
           top: -16px;
           margin-top: 0px; }
+
+/* 마이존 - 쿠폰 & 메시지 */
+.contents.myzone.cnm {
+  /* 메시지 상세 */ }
+  .contents.myzone.cnm .coupon-header {
+    position: relative;
+    box-sizing: border-box;
+    margin: 60px auto 0 auto;
+    padding: 17px 0 0 309px;
+    height: 274px;
+    width: 920px; }
+    .contents.myzone.cnm .coupon-header:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: -25px;
+      height: 274px;
+      width: 284px;
+      background: url("/assets/images/bg_coupon01.png") left top no-repeat; }
+    .contents.myzone.cnm .coupon-header .title {
+      display: block;
+      height: 34px;
+      width: 594px;
+      text-indent: -9999px;
+      background: url("/assets/images/txt/title_coupon01.png") left top no-repeat; }
+    .contents.myzone.cnm .coupon-header .list-dot {
+      margin-top: 23px; }
+      .contents.myzone.cnm .coupon-header .list-dot > li {
+        position: relative;
+        padding-left: 7px;
+        font-size: 12px;
+        color: #6b7581;
+        line-height: 20px; }
+        .contents.myzone.cnm .coupon-header .list-dot > li:before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 9px;
+          left: 0;
+          height: 2px;
+          width: 2px;
+          background-color: #6b7581; }
+        .contents.myzone.cnm .coupon-header .list-dot > li a {
+          color: #6b7581;
+          text-decoration: underline; }
+    .contents.myzone.cnm .coupon-header .buy-coupon {
+      margin-top: 26px;
+      padding: 19px 20px;
+      border: 1px solid #d4dae4;
+      background-color: #d6ebf6; }
+  .contents.myzone.cnm .tbl-container {
+    margin-top: 23px; }
+  .contents.myzone.cnm .msg-detail {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 26px 60px 60px 60px;
+    border: 1px solid #d4dae4;
+    background-color: #fff; }
+    .contents.myzone.cnm .msg-detail:before {
+      content: none; }
+    .contents.myzone.cnm .msg-detail h1.title {
+      position: relative;
+      padding: 0;
+      height: 54px;
+      font-size: 14px;
+      font-weight: normal;
+      color: #252525;
+      line-height: 54px;
+      border-bottom: 2px solid #252525; }
+      .contents.myzone.cnm .msg-detail h1.title:before {
+        content: none; }
+      .contents.myzone.cnm .msg-detail h1.title .via {
+        position: absolute;
+        right: 0px;
+        font-size: 12px;
+        color: #6b7581;
+        line-height: 54px; }
+    .contents.myzone.cnm .msg-detail .scroll {
+      overflow: scroll;
+      position: absolute;
+      top: 82px;
+      right: 0px;
+      bottom: 60px;
+      left: 60px;
+      padding: 15px 0; }
+      .contents.myzone.cnm .msg-detail .scroll p {
+        font-size: 14px;
+        color: #6b7581;
+        line-height: 22px; }

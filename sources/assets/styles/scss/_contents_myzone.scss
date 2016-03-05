@@ -44,11 +44,6 @@
 		.cr-box { margin-left: 20px; }
 
 		.btn-search { display: inline-block; margin-left: 6px; min-width: 68px; font-size: 12px; font-weight: bold; color: #fff; line-height: 31px; border-radius: 2px; background-color: #6e80a9; }
-		.btn-inline-submit { display: inline-block; padding-right: 15px; padding-left: 15px; font-size: 12px; font-weight: bold; color: #fff; line-height: 31px; vertical-align: middle; border-radius: 2px; background-color: #14378c;
-			&.em { padding-right: 25px; padding-left: 25px;
-				&:after { content: ''; display: inline-block; margin-top: -1px; margin-left: 3px; vertical-align: middle; @include sprite($sprite-bg-arrow21); }
-			}
-		}
 
 		+ .tbl-data-v { border-top: 1px solid #d4dae4; }
 	}
@@ -492,8 +487,6 @@
 				/* 도움말 팝업 */
 				.save-help { top: -60px; right: 90%; left: -80%; }
 			}
-
-			.btn-part-submit { display: inline-block; padding-right: 20px; padding-left: 20px;font-size: 14px; font-weight: bold; color: #fff; line-height: 40px; vertical-align: middle; border-radius: 2px; background-color: $color-point2; }
 
 			.list-sell-bonds { margin-top: 23px; width: 100%; border-top: 2px solid $color-title; border-bottom: 2px solid $color-title; background-color: #fff;
 				> thead {
@@ -1042,7 +1035,29 @@
 			}
 		}
 
-		.buy-coupon { margin-top: 26px; padding: 19px 20px;  border: 1px solid #d4dae4; background-color: #d6ebf6; }
+		.buy-coupon { overflow: hidden; margin-top: 26px; padding: 19px 20px;  border: 1px solid #d4dae4; background-color: #d6ebf6;
+			.cr-box { display: inline-block; margin-top: 5px;
+				label { margin-right: 12px; color: $color-title; vertical-align: middle; }
+			}
+			.btn-inline-submit { float: right; }
+		}
+	}
+
+	/* 쿠폰 분할 */
+	.separate-coupons { top: 115px; right: 119px; left: auto;
+		.inner { padding: 40px 42px 35px 40px; width: 330px;
+			&:before { left: 50%; margin-left: -15px; }
+		}
+		label { font-size: 16px; color: $color-title;
+			em { color: $color-menu1-hover; }
+		}
+		.inputs { margin-top: 0px; padding: 0 0 15px 0;
+			input[type=text] { box-sizing: border-box; margin-top: 10px; margin-right: 6px; padding-left: 10px; height: 38px; width: 156px; font-size: 14px; color: $color-title; border: 1px solid #d4d8e1; background-color: #fff;
+				&:focus { font-size: 16px; }
+			}
+		}
+		.message { margin-top: -2px; color: $color-content; }
+		.btn-inline-submit { float: right; margin-right: 8px; background-color: #008df0; }
 	}
 
 
@@ -1060,6 +1075,7 @@
 			p { font-size: 14px; color: $color-content; line-height: 22px; }
 		}
 	}
+
 }
 
 

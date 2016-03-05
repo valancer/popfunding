@@ -438,6 +438,36 @@ body {
       width: 13px;
       height: 32px; }
 
+.btn-inline-submit {
+  display: inline-block;
+  padding-right: 15px;
+  padding-left: 15px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  line-height: 31px;
+  vertical-align: middle;
+  border-radius: 2px;
+  background-color: #14378c; }
+  .btn-inline-submit.em {
+    padding-right: 25px;
+    padding-left: 25px; }
+    .btn-inline-submit.em:after {
+      content: '';
+      display: inline-block;
+      margin-top: -1px;
+      margin-left: 3px;
+      vertical-align: middle;
+      background-image: url(/assets/images/sprites.png);
+      background-position: -873px -380px;
+      width: 7px;
+      height: 10px; }
+  .btn-inline-submit.big {
+    padding-right: 20px;
+    padding-left: 20px;
+    font-size: 14px;
+    line-height: 40px; }
+
 /**
  * import
  */
@@ -9192,30 +9222,6 @@ body.popup-window {
       line-height: 31px;
       border-radius: 2px;
       background-color: #6e80a9; }
-    .contents.myzone .tbl-options .btn-inline-submit {
-      display: inline-block;
-      padding-right: 15px;
-      padding-left: 15px;
-      font-size: 12px;
-      font-weight: bold;
-      color: #fff;
-      line-height: 31px;
-      vertical-align: middle;
-      border-radius: 2px;
-      background-color: #14378c; }
-      .contents.myzone .tbl-options .btn-inline-submit.em {
-        padding-right: 25px;
-        padding-left: 25px; }
-        .contents.myzone .tbl-options .btn-inline-submit.em:after {
-          content: '';
-          display: inline-block;
-          margin-top: -1px;
-          margin-left: 3px;
-          vertical-align: middle;
-          background-image: url(/assets/images/sprites.png);
-          background-position: -873px -380px;
-          width: 7px;
-          height: 10px; }
     .contents.myzone .tbl-options + .tbl-data-v {
       border-top: 1px solid #d4dae4; }
   .contents.myzone .tbl-data-top {
@@ -10202,17 +10208,6 @@ body.popup-window {
           top: -60px;
           right: 90%;
           left: -80%; }
-      .contents.myzone.myinvest .sell-bonds .inner .btn-part-submit {
-        display: inline-block;
-        padding-right: 20px;
-        padding-left: 20px;
-        font-size: 14px;
-        font-weight: bold;
-        color: #fff;
-        line-height: 40px;
-        vertical-align: middle;
-        border-radius: 2px;
-        background-color: #14378c; }
       .contents.myzone.myinvest .sell-bonds .inner .list-sell-bonds {
         margin-top: 23px;
         width: 100%;
@@ -11334,6 +11329,7 @@ body.popup-window {
 
 /* 마이존 - 쿠폰 & 메시지 */
 .contents.myzone.cnm {
+  /* 쿠폰 분할 */
   /* 메시지 상세 */ }
   .contents.myzone.cnm .coupon-header {
     position: relative;
@@ -11378,10 +11374,58 @@ body.popup-window {
           color: #6b7581;
           text-decoration: underline; }
     .contents.myzone.cnm .coupon-header .buy-coupon {
+      overflow: hidden;
       margin-top: 26px;
       padding: 19px 20px;
       border: 1px solid #d4dae4;
       background-color: #d6ebf6; }
+      .contents.myzone.cnm .coupon-header .buy-coupon .cr-box {
+        display: inline-block;
+        margin-top: 5px; }
+        .contents.myzone.cnm .coupon-header .buy-coupon .cr-box label {
+          margin-right: 12px;
+          color: #252525;
+          vertical-align: middle; }
+      .contents.myzone.cnm .coupon-header .buy-coupon .btn-inline-submit {
+        float: right; }
+  .contents.myzone.cnm .separate-coupons {
+    top: 115px;
+    right: 119px;
+    left: auto; }
+    .contents.myzone.cnm .separate-coupons .inner {
+      padding: 40px 42px 35px 40px;
+      width: 330px; }
+      .contents.myzone.cnm .separate-coupons .inner:before {
+        left: 50%;
+        margin-left: -15px; }
+    .contents.myzone.cnm .separate-coupons label {
+      font-size: 16px;
+      color: #252525; }
+      .contents.myzone.cnm .separate-coupons label em {
+        color: #ff4776; }
+    .contents.myzone.cnm .separate-coupons .inputs {
+      margin-top: 0px;
+      padding: 0 0 15px 0; }
+      .contents.myzone.cnm .separate-coupons .inputs input[type=text] {
+        box-sizing: border-box;
+        margin-top: 10px;
+        margin-right: 6px;
+        padding-left: 10px;
+        height: 38px;
+        width: 156px;
+        font-size: 14px;
+        color: #252525;
+        border: 1px solid #d4d8e1;
+        background-color: #fff; }
+        .contents.myzone.cnm .separate-coupons .inputs input[type=text]:focus {
+          font-size: 16px; }
+    .contents.myzone.cnm .separate-coupons .message {
+      margin-top: -2px;
+      color: #6b7581; }
+    .contents.myzone.cnm .separate-coupons .btn-inline-submit {
+      float: right;
+      margin-right: 8px;
+      background-color: #008df0; }
   .contents.myzone.cnm .tbl-container {
     margin-top: 23px; }
   .contents.myzone.cnm .msg-detail {

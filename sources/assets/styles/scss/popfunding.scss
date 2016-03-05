@@ -145,6 +145,13 @@ $z-layers: (
 	}
 }
 
+.btn-inline-submit { display: inline-block; padding-right: 15px; padding-left: 15px; font-size: 12px; font-weight: bold; color: #fff; line-height: 31px; vertical-align: middle; border-radius: 2px; background-color: $color-point2;
+	&.em { padding-right: 25px; padding-left: 25px;
+		&:after { content: ''; display: inline-block; margin-top: -1px; margin-left: 3px; vertical-align: middle; @include sprite($sprite-bg-arrow21); }
+	}
+	&.big { padding-right: 20px; padding-left: 20px; font-size: 14px; line-height: 40px; }
+}
+
 
 /**
  * import

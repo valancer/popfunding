@@ -56,18 +56,47 @@ include "head.html"
 							<input type="radio" id="coupon04" name="coupon"><label for="coupon04">5만원 쿠폰</label>
 						</span>
 
+						<button type="button" class="btn-inline-submit em">쿠폰 구매하기</button>
 					</fieldset>
 				</header>
+
+
 
 				<!-- 쿠폰 보관함 -->
 				<section class="section">
 					<p class="filter">
 						<button type="button" class="btn-inline-box type-other01">쿠폰 병합</button>
-						<button type="button" class="btn-inline-box type-other01 va-toggle-btns">쿠폰 분할</button>
-						<select name="" id="">
+						<button type="button" value="#popup-separate-coupons" class="btn-inline-box type-other01 va-toggle-btns">쿠폰 분할</button>
+						<select name="" id="" style="width: 165px;">
 							<option value="">전체보기</option>
 						</select>
 					</p>
+
+					<!-- 쿠폰분할 -->
+					<aside id="popup-separate-coupons" class="popup invest-popup part separate-coupons">
+						<fieldset class="inner">
+							<legend>쿠폰 분할 하기</legend>
+							<button class="btn-popup-close" data-target="#popup-separate-coupons">팝업닫기</button>
+
+							<h1 class="hidden">쿠폰 분할</h1>
+
+							<label for="">선택한 쿠폰금액은 <em>100,000원</em>입니다.</label>
+							<p class="inputs">
+								<input type="text" id="" name="" placeholder="분할금액 1">
+								<input type="text" id="" name="" placeholder="분할금액 2">
+								<input type="text" id="" name="" placeholder="분할금액 3">
+								<input type="text" id="" name="" placeholder="분할금액 4">
+							</p>
+
+							<button type="button" class="btn-inline-submit">분할하기</button>
+							<p class="message">
+								쿠폰을 최대 4장까지 분할할 수 있습니다.<br>
+								1,000원 단위 / 숫자로 입력하세요.<br>
+							</p>
+
+						</fieldset>
+					</aside>
+
 
 					<h1 class="title">쿠폰 보관함 <em>(25개)</em></h1>
 

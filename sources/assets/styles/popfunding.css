@@ -8862,6 +8862,245 @@ body.popup-window {
             width: 23px;
             height: 20px; }
 
+/* 투자게약서 서명 */
+.popup-window-contents.paper-sign {
+  padding: 0;
+  min-width: 900px;
+  text-align: left; }
+  .popup-window-contents.paper-sign .scroll-contents {
+    overflow: scroll;
+    padding: 57px 60px 35px 60px;
+    height: 605px;
+    font-size: 13px;
+    color: #6b7581;
+    line-height: 22px; }
+    .popup-window-contents.paper-sign .scroll-contents h1 {
+      font-size: 18px;
+      font-weight: normal;
+      color: #ff4776; }
+    .popup-window-contents.paper-sign .scroll-contents h2 {
+      margin-top: 33px;
+      font-size: 16px;
+      font-weight: normal;
+      color: #252525; }
+    .popup-window-contents.paper-sign .scroll-contents .inner-h2 {
+      margin: 28px 0 30px 0; }
+    .popup-window-contents.paper-sign .scroll-contents h3 {
+      font-size: 14px;
+      font-weight: normal;
+      color: #252525; }
+    .popup-window-contents.paper-sign .scroll-contents em {
+      color: #ff4776; }
+      .popup-window-contents.paper-sign .scroll-contents em.blue {
+        color: #0e52a5; }
+    .popup-window-contents.paper-sign .scroll-contents ol.list-numbering {
+      margin-top: 19px; }
+      .popup-window-contents.paper-sign .scroll-contents ol.list-numbering > li {
+        position: relative;
+        padding-left: 15px; }
+        .popup-window-contents.paper-sign .scroll-contents ol.list-numbering > li:before {
+          content: attr(data-index);
+          position: absolute;
+          top: 0;
+          left: 0; }
+        .popup-window-contents.paper-sign .scroll-contents ol.list-numbering > li table {
+          margin: 5px 0 36px -15px; }
+    .popup-window-contents.paper-sign .scroll-contents table {
+      border-top: 1px solid #d4dae4; }
+      .popup-window-contents.paper-sign .scroll-contents table th, .popup-window-contents.paper-sign .scroll-contents table td {
+        height: 35px;
+        font-size: 12px;
+        font-weight: normal;
+        color: #6b7581;
+        text-align: center;
+        border-right: 1px solid #d4dae4;
+        border-bottom: 1px solid #d4dae4; }
+        .popup-window-contents.paper-sign .scroll-contents table th:first-child, .popup-window-contents.paper-sign .scroll-contents table td:first-child {
+          border-left: 1px solid #d4dae4; }
+      .popup-window-contents.paper-sign .scroll-contents table > thead th {
+        background-color: #fbfbfb; }
+      .popup-window-contents.paper-sign .scroll-contents table > tbody th {
+        background-color: #fff; }
+  .popup-window-contents.paper-sign .do-sign {
+    overflow: hidden;
+    padding: 39px 50px 50px 40px;
+    border-top: 1px solid #d4dae4;
+    background-color: #d6ebf6; }
+    .popup-window-contents.paper-sign .do-sign .message {
+      padding-bottom: 10px;
+      padding-left: 20px;
+      font-size: 12px;
+      color: #ff4776; }
+    .popup-window-contents.paper-sign .do-sign .txtarea {
+      float: left;
+      position: relative;
+      overflow: hidden;
+      margin-right: 47px;
+      height: 55px;
+      width: 521px;
+      border: 1px solid #bec3cd;
+      border-radius: 2px;
+      background-color: #fff; }
+      .popup-window-contents.paper-sign .do-sign .txtarea p {
+        display: block;
+        box-sizing: border-box;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 0;
+        padding: 6px 0 0 19px;
+        height: 100%;
+        width: 100%;
+        font-size: 13px;
+        color: #c4c9d1;
+        line-height: 22px; }
+      .popup-window-contents.paper-sign .do-sign .txtarea textarea {
+        display: block;
+        box-sizing: border-box;
+        position: relative;
+        z-index: 1;
+        padding: 6px 0 0 19px;
+        height: 100%;
+        width: 100%;
+        border: 0px;
+        font-size: 13px;
+        color: #252525;
+        line-height: 22px;
+        background-color: transparent; }
+    .popup-window-contents.paper-sign .do-sign .btn-sign {
+      display: block;
+      float: left;
+      width: 227px;
+      font-size: 1.125em;
+      font-weight: bold;
+      color: #fff;
+      line-height: 55px;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 55px;
+      background-color: #52b924; }
+      .popup-window-contents.paper-sign .do-sign .btn-sign:after {
+        content: '';
+        display: inline-block;
+        margin: -2px 0 0 10px;
+        vertical-align: middle;
+        background-image: url(/assets/images/sprites.png);
+        background-position: -634px -172px;
+        width: 11px;
+        height: 18px; }
+
+/* 팝다이렉트 상환하기 */
+.popup-window-contents.redemption-popdirect {
+  text-align: left; }
+  .popup-window-contents.redemption-popdirect .scroll-contents {
+    overflow: scroll;
+    padding: 0px 60px;
+    height: 775px; }
+  .popup-window-contents.redemption-popdirect h1 {
+    font-size: 18px;
+    font-weight: normal;
+    color: #252525;
+    line-height: 1.3em; }
+  .popup-window-contents.redemption-popdirect h2 {
+    margin-top: 37px;
+    font-size: 14px;
+    font-weight: normal;
+    color: #252525;
+    line-height: 1.3em; }
+  .popup-window-contents.redemption-popdirect .popdirect-info {
+    table-layout: fixed;
+    margin-top: 28px;
+    width: 100%;
+    border-top: 2px solid #252525;
+    border-bottom: 2px solid #252525; }
+    .popup-window-contents.redemption-popdirect .popdirect-info th, .popup-window-contents.redemption-popdirect .popdirect-info td {
+      height: 44px;
+      font-size: 14px;
+      font-weight: normal;
+      text-align: center;
+      border-bottom: 1px solid #d4dae4;
+      border-left: 1px solid #7c7f84; }
+      .popup-window-contents.redemption-popdirect .popdirect-info th:first-child, .popup-window-contents.redemption-popdirect .popdirect-info td:first-child {
+        border-left: 0px; }
+    .popup-window-contents.redemption-popdirect .popdirect-info > tbody th {
+      width: 123px;
+      color: #252525;
+      background-color: #fbfbfb; }
+    .popup-window-contents.redemption-popdirect .popdirect-info > tbody td {
+      color: #6b7581; }
+    .popup-window-contents.redemption-popdirect .popdirect-info em {
+      color: #ff4776; }
+  .popup-window-contents.redemption-popdirect .repayments {
+    margin-top: 50px;
+    padding: 37px 0 40px 0;
+    border: 1px solid #d4dae4;
+    background-color: #d6ebf6; }
+    .popup-window-contents.redemption-popdirect .repayments > .inner {
+      display: block;
+      overflow: hidden;
+      margin: 0 auto;
+      width: 413px; }
+      .popup-window-contents.redemption-popdirect .repayments > .inner label {
+        display: block;
+        margin-bottom: 7px;
+        font-size: 14px;
+        color: #525e7b;
+        line-height: 18px; }
+      .popup-window-contents.redemption-popdirect .repayments > .inner input[type=text] {
+        display: inline-block;
+        margin-right: 6px;
+        height: 38px;
+        width: 253px;
+        font-size: 20px;
+        color: #ff4776;
+        line-height: 38px;
+        text-align: center;
+        border: 1px solid #d4d8e1;
+        background-color: #fff; }
+      .popup-window-contents.redemption-popdirect .repayments > .inner .btn-repayments-submit {
+        display: inline-block;
+        width: 147px;
+        font-size: 14px;
+        font-weight: bold;
+        color: #fff;
+        line-height: 40px;
+        border-radius: 2px;
+        background-color: #14378c; }
+        .popup-window-contents.redemption-popdirect .repayments > .inner .btn-repayments-submit:after {
+          content: '';
+          display: inline-block;
+          margin-top: -1px;
+          margin-left: 3px;
+          vertical-align: middle;
+          background-image: url(/assets/images/sprites.png);
+          background-position: -873px -380px;
+          width: 7px;
+          height: 10px; }
+  .popup-window-contents.redemption-popdirect .list-redemption {
+    margin-top: 12px;
+    width: 100%;
+    border-top: 1px solid #d4dae4; }
+    .popup-window-contents.redemption-popdirect .list-redemption th, .popup-window-contents.redemption-popdirect .list-redemption td {
+      height: 35px;
+      font-size: 12px;
+      font-weight: normal;
+      color: #6b7581;
+      text-align: center;
+      border-right: 1px solid #d4dae4;
+      border-bottom: 1px solid #d4dae4; }
+      .popup-window-contents.redemption-popdirect .list-redemption th:first-child, .popup-window-contents.redemption-popdirect .list-redemption td:first-child {
+        border-left: 1px solid #d4dae4; }
+    .popup-window-contents.redemption-popdirect .list-redemption > thead th {
+      color: #252525;
+      background-color: #fbfbfb; }
+    .popup-window-contents.redemption-popdirect .list-redemption > tbody th {
+      background-color: #fff; }
+  .popup-window-contents.redemption-popdirect .btns {
+    margin-top: 50px;
+    text-align: center; }
+
 /* 마이존 */
 .contents.myzone {
   padding-bottom: 117px;

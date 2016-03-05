@@ -1051,7 +1051,7 @@
 		label { font-size: 16px; color: $color-title;
 			em { color: $color-menu1-hover; }
 		}
-		.inputs { margin-top: 0px; padding: 0 0 15px 0;
+		.inputs { margin-top: 0px; padding: 7px 0 15px 0;
 			input[type=text] { box-sizing: border-box; margin-top: 10px; margin-right: 6px; padding-left: 10px; height: 38px; width: 156px; font-size: 14px; color: $color-title; border: 1px solid #d4d8e1; background-color: #fff;
 				&:focus { font-size: 16px; }
 			}
@@ -1071,7 +1071,7 @@
 			&:before { content: none; }
 			.via { position: absolute; right: 0px; font-size: 12px; color: $color-content; line-height: 54px; }
 		}
-		.scroll { overflow: scroll; position: absolute; top: 82px; right: 0px; bottom: 60px; left: 60px; padding: 15px 0;
+		.scroll { overflow: scroll; position: absolute; top: 82px; right: 0px; bottom: 60px; left: 60px; padding: 15px 60px 15px 0;
 			p { font-size: 14px; color: $color-content; line-height: 22px; }
 		}
 	}

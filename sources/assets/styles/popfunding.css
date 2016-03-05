@@ -11405,7 +11405,7 @@ body.popup-window {
         color: #ff4776; }
     .contents.myzone.cnm .separate-coupons .inputs {
       margin-top: 0px;
-      padding: 0 0 15px 0; }
+      padding: 7px 0 15px 0; }
       .contents.myzone.cnm .separate-coupons .inputs input[type=text] {
         box-sizing: border-box;
         margin-top: 10px;
@@ -11464,7 +11464,7 @@ body.popup-window {
       right: 0px;
       bottom: 60px;
       left: 60px;
-      padding: 15px 0; }
+      padding: 15px 60px 15px 0; }
       .contents.myzone.cnm .msg-detail .scroll p {
         font-size: 14px;
         color: #6b7581;

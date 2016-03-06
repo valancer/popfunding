@@ -60,17 +60,17 @@ select::-ms-expand { display: none; }
 
 
 
-	// 중앙정렬
-	.center { position: relative;
-		input[type=text],
-		input[type=password] { padding: 0 16px; text-align: center; }
+// 중앙정렬
+.center { position: relative;
+	input[type=text],
+	input[type=password] { padding: 0 16px !important; text-align: center; }
 
-		@include tooltip-center();
-	}
-	span.center { display: inline-block; margin-right: 10px; vertical-align: middle;
-		input[type=text],
-		input[type=password] { display: inline-block; padding-right: 0; padding-left: 0; width: 110px; vertical-align: middle; }
-	}
+	@include tooltip-center();
+}
+span.center { display: inline-block; margin-right: 10px; vertical-align: middle;
+	input[type=text],
+	input[type=password] { display: inline-block; padding-right: 0; padding-left: 0; width: 110px; vertical-align: middle; }
+}
 
 
 /* 개별 입력 폼 */
@@ -120,7 +120,7 @@ select::-ms-expand { display: none; }
 	}
 
 	// 한줄에 input 2개
-	.input-column { display: inline-block; width: 172px; }
+	.input-column { display: inline-block; width: 172px; vertical-align: middle; }
 
 	// box
 	.box { display: block; overflow: hidden; padding: 0 15px; line-height: 38px; border: 1px solid #bec3cd; border-radius: 2px; background-color: #fff;

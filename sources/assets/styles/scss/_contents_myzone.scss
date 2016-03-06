@@ -1079,3 +1079,67 @@
 }
 
 
+/* 마이존 - 정보수정 */
+.contents.myzone.update-user { 
+	.date-join { float: right; margin-top: 6px; font-size: 12px; color: $color-content; }
+	.update-form { margin-top: 28px; padding: 39px 20px 0 20px; border-top: 2px solid $color-title;
+		.form-left, .form-right { position: relative; box-sizing: border-box; float: left; width: 50%; }
+		.form-left { padding-right: 40px; }
+		.form-right { padding-left: 40px;
+			&:before { content: ''; display: block; position: absolute; top: 0; bottom: 0; left: 0; width: 1px; background-color: #d4dae4; }
+		}
+
+		.column {
+			.item-form { clear: none; float: left; width: 50%;
+				&:first-child { box-sizing: border-box; padding-right: 5px; }
+				+ .item-form { box-sizing: border-box; padding-left: 5px; }
+			}
+		}
+
+		.tr-cr { top: -5px; }
+		.tooltip { display: none; }
+		.expired { margin-top: 7px; font-size: 12px; color: $color-menu1-hover;
+			&:before { content: ''; display: inline-block; margin: -2px 0 0 0; height: 2px; width: 2px; vertical-align: middle; background-color: $color-menu1-hover; }
+		}
+
+		.box { margin-top: 60px; padding: 14px 10px 14px 14px; text-align: right; border: 1px solid #d4dae4;
+			label { margin-left: 20px; }
+			.warning { position: relative; float: left; margin-top: -3px; padding-left: 30px; font-size: 12px; color: $color-content; line-height: 20px; text-align: left;
+				&:before { content: ''; display: block; position: absolute; top: 0; left: 0; @include sprite($sprite-icon-iks01); }
+			}
+		}
+		.btn-rd { margin-top: 10px; }
+		.btn-submit { margin-top: 4px; width: 264px; }
+	}
+
+	/* 회원탈퇴 팝업 */
+	.popup.secession { top: 128px; padding: 38px 40px 30px 40px; width: 660px;
+		&:before { content: none; }
+		
+		.title { padding-left: 0px; font-size: 16px;
+			&:before { content: none; }
+		}
+		.message { margin-top: 8px; font-size: 12px; color: $color-content; line-height: 20px; }
+		
+		.scroll { box-sizing: border-box; overflow: scroll; margin-top: 18px; padding: 16px 20px 16px 20px; height: 490px; width: 100%; font-size: 12px; color: $color-content; line-height: 20px; border: 1px solid #d4dae4;
+			h2 { margin-top: 20px; font-size: 12px; font-weight: normal; color: $color-title; }
+
+			ol.list-numbering { margin-top: 0px;
+				> li { position: relative; margin: 0; padding-left: 15px;
+					&:before { content: attr(data-index); position: absolute; top: 0; left: 0; }
+				}
+			}
+			.list-dot {
+				> li { margin: 0; }
+			}
+
+			strong { color: $color-title; }
+			em { color: $color-menu1-hover; }
+		}
+
+		.btns { padding-top: 30px;
+			.btn-submit { width: 130px; }
+		}
+	}
+}
+

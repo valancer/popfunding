@@ -590,7 +590,7 @@ select::-ms-expand {
   position: relative; }
   .center input[type=text],
   .center input[type=password] {
-    padding: 0 16px;
+    padding: 0 16px !important;
     text-align: center; }
   .center .tooltip {
     left: 50% !important;
@@ -744,7 +744,8 @@ span.center {
       margin-left: 7px; }
   .item-form .input-column {
     display: inline-block;
-    width: 172px; }
+    width: 172px;
+    vertical-align: middle; }
   .item-form .box {
     display: block;
     overflow: hidden;
@@ -11469,3 +11470,144 @@ body.popup-window {
         font-size: 14px;
         color: #6b7581;
         line-height: 22px; }
+
+/* 마이존 - 정보수정 */
+.contents.myzone.update-user {
+  /* 회원탈퇴 팝업 */ }
+  .contents.myzone.update-user .date-join {
+    float: right;
+    margin-top: 6px;
+    font-size: 12px;
+    color: #6b7581; }
+  .contents.myzone.update-user .update-form {
+    margin-top: 28px;
+    padding: 39px 20px 0 20px;
+    border-top: 2px solid #252525; }
+    .contents.myzone.update-user .update-form .form-left, .contents.myzone.update-user .update-form .form-right {
+      position: relative;
+      box-sizing: border-box;
+      float: left;
+      width: 50%; }
+    .contents.myzone.update-user .update-form .form-left {
+      padding-right: 40px; }
+    .contents.myzone.update-user .update-form .form-right {
+      padding-left: 40px; }
+      .contents.myzone.update-user .update-form .form-right:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 1px;
+        background-color: #d4dae4; }
+    .contents.myzone.update-user .update-form .column .item-form {
+      clear: none;
+      float: left;
+      width: 50%; }
+      .contents.myzone.update-user .update-form .column .item-form:first-child {
+        box-sizing: border-box;
+        padding-right: 5px; }
+      .contents.myzone.update-user .update-form .column .item-form + .item-form {
+        box-sizing: border-box;
+        padding-left: 5px; }
+    .contents.myzone.update-user .update-form .tr-cr {
+      top: -5px; }
+    .contents.myzone.update-user .update-form .tooltip {
+      display: none; }
+    .contents.myzone.update-user .update-form .expired {
+      margin-top: 7px;
+      font-size: 12px;
+      color: #ff4776; }
+      .contents.myzone.update-user .update-form .expired:before {
+        content: '';
+        display: inline-block;
+        margin: -2px 0 0 0;
+        height: 2px;
+        width: 2px;
+        vertical-align: middle;
+        background-color: #ff4776; }
+    .contents.myzone.update-user .update-form .box {
+      margin-top: 60px;
+      padding: 14px 10px 14px 14px;
+      text-align: right;
+      border: 1px solid #d4dae4; }
+      .contents.myzone.update-user .update-form .box label {
+        margin-left: 20px; }
+      .contents.myzone.update-user .update-form .box .warning {
+        position: relative;
+        float: left;
+        margin-top: -3px;
+        padding-left: 30px;
+        font-size: 12px;
+        color: #6b7581;
+        line-height: 20px;
+        text-align: left; }
+        .contents.myzone.update-user .update-form .box .warning:before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-image: url(/assets/images/sprites.png);
+          background-position: -885px -744px;
+          width: 23px;
+          height: 20px; }
+    .contents.myzone.update-user .update-form .btn-rd {
+      margin-top: 10px; }
+    .contents.myzone.update-user .update-form .btn-submit {
+      margin-top: 4px;
+      width: 264px; }
+  .contents.myzone.update-user .popup.secession {
+    top: 128px;
+    padding: 38px 40px 30px 40px;
+    width: 660px; }
+    .contents.myzone.update-user .popup.secession:before {
+      content: none; }
+    .contents.myzone.update-user .popup.secession .title {
+      padding-left: 0px;
+      font-size: 16px; }
+      .contents.myzone.update-user .popup.secession .title:before {
+        content: none; }
+    .contents.myzone.update-user .popup.secession .message {
+      margin-top: 8px;
+      font-size: 12px;
+      color: #6b7581;
+      line-height: 20px; }
+    .contents.myzone.update-user .popup.secession .scroll {
+      box-sizing: border-box;
+      overflow: scroll;
+      margin-top: 18px;
+      padding: 16px 20px 16px 20px;
+      height: 490px;
+      width: 100%;
+      font-size: 12px;
+      color: #6b7581;
+      line-height: 20px;
+      border: 1px solid #d4dae4; }
+      .contents.myzone.update-user .popup.secession .scroll h2 {
+        margin-top: 20px;
+        font-size: 12px;
+        font-weight: normal;
+        color: #252525; }
+      .contents.myzone.update-user .popup.secession .scroll ol.list-numbering {
+        margin-top: 0px; }
+        .contents.myzone.update-user .popup.secession .scroll ol.list-numbering > li {
+          position: relative;
+          margin: 0;
+          padding-left: 15px; }
+          .contents.myzone.update-user .popup.secession .scroll ol.list-numbering > li:before {
+            content: attr(data-index);
+            position: absolute;
+            top: 0;
+            left: 0; }
+      .contents.myzone.update-user .popup.secession .scroll .list-dot > li {
+        margin: 0; }
+      .contents.myzone.update-user .popup.secession .scroll strong {
+        color: #252525; }
+      .contents.myzone.update-user .popup.secession .scroll em {
+        color: #ff4776; }
+    .contents.myzone.update-user .popup.secession .btns {
+      padding-top: 30px; }
+      .contents.myzone.update-user .popup.secession .btns .btn-submit {
+        width: 130px; }

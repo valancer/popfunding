@@ -27,7 +27,8 @@ body {
   font-size: 100%;
   line-height: 1em;
   font-family: "Nanum Gothic", sans-serif;
-  text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+      text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; }
 
 header, h1 {
@@ -75,7 +76,9 @@ address {
   font-style: normal; }
 
 button {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   cursor: pointer;
   border: 0px;
   background-color: transparent; }
@@ -114,10 +117,14 @@ a:hover {
 
 /* forms */
 fieldset {
-  appearance: none; }
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; }
 
 input[type=submit] {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   cursor: pointer;
   border: 0px; }
 
@@ -467,7 +474,9 @@ body {
 /* 공통 */
 /* 셀렉트 박스 */
 select {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   box-sizing: border-box;
   min-width: 60px;
   padding: 7px 26px 8px 16px;
@@ -585,7 +594,9 @@ select::-ms-expand {
     text-align: center; }
   .center .tooltip {
     left: 50% !important;
-    transform: translateX(-50%) !important; }
+    -webkit-transform: translateX(-50%) !important;
+        -ms-transform: translateX(-50%) !important;
+            transform: translateX(-50%) !important; }
     .ie8 .center .tooltip {
       left: 0%; }
     .center .tooltip:before {
@@ -768,7 +779,9 @@ span.center {
     background-color: #6e80a9; }
     .item-form .btn-inner-form .tooltip {
       left: 50% !important;
-      transform: translateX(-50%) !important; }
+      -webkit-transform: translateX(-50%) !important;
+          -ms-transform: translateX(-50%) !important;
+              transform: translateX(-50%) !important; }
       .ie8 .item-form .btn-inner-form .tooltip {
         left: 0%; }
       .item-form .btn-inner-form .tooltip:before {
@@ -2416,7 +2429,8 @@ article.contents {
   bottom: -1px;
   left: 50%;
   z-index: 1000;
-  animation-duration: 0.3s;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
   /* 변동금리 팝업 */
   /* 작은 레이어 팝업 */ }
   .invest-popup > .inner {
@@ -2547,7 +2561,9 @@ article.contents {
             box-shadow: 1px 1px 3px 0 #c2d8eb;
             background-color: #fff; }
             .invest-popup > .inner > .type .type-options .btns button:active {
-              transform: translate(1px, 1px);
+              -webkit-transform: translate(1px, 1px);
+                  -ms-transform: translate(1px, 1px);
+                      transform: translate(1px, 1px);
               background-color: #e7f3fa; }
           .invest-popup > .inner > .type .type-options .btns > .message {
             display: block;
@@ -3159,7 +3175,9 @@ article.contents {
         border-right: 1px solid #d4dae4; }
         .popup.membership .membership-form table.agreements tbody th .tooltip {
           left: 50% !important;
-          transform: translateX(-50%) !important; }
+          -webkit-transform: translateX(-50%) !important;
+              -ms-transform: translateX(-50%) !important;
+                  transform: translateX(-50%) !important; }
           .ie8 .popup.membership .membership-form table.agreements tbody th .tooltip {
             left: 0%; }
           .popup.membership .membership-form table.agreements tbody th .tooltip:before {
@@ -4077,10 +4095,12 @@ article.contents {
           height: 5px;
           width: 0%;
           background-color: #00bb00;
-          animation-delay: 1s; }
+          -webkit-animation-delay: 1s;
+                  animation-delay: 1s; }
     .contents.invest .product:hover > .hover {
       display: block;
-      animation-duration: 0.3s; }
+      -webkit-animation-duration: 0.3s;
+              animation-duration: 0.3s; }
     .contents.invest .product > .hover {
       display: none;
       overflow: hidden;
@@ -6141,7 +6161,8 @@ article.contents {
           height: 5px;
           width: 0%;
           background-color: #00bb00;
-          animation-delay: 1s; }
+          -webkit-animation-delay: 1s;
+                  animation-delay: 1s; }
         .contents.private-invest .product > .info .progress > time {
           color: #ff6000; }
           .contents.private-invest .product > .info .progress > time:before {
@@ -6151,7 +6172,8 @@ article.contents {
             color: #c4c9d1; }
     .contents.private-invest .product:hover > .hover {
       display: block;
-      animation-duration: 0.3s; }
+      -webkit-animation-duration: 0.3s;
+              animation-duration: 0.3s; }
     .contents.private-invest .product > .hover {
       display: none;
       overflow: hidden;
@@ -6462,7 +6484,8 @@ article.contents {
             height: 6px;
             width: 0%;
             background-color: #00bb00;
-            animation-delay: 1s; }
+            -webkit-animation-delay: 1s;
+                    animation-delay: 1s; }
           .contents.private-invest .product.detail > .inner .progress > time {
             float: right;
             font-size: 14px;
@@ -7068,7 +7091,8 @@ article.contents {
       display: none; }
     .contents.bonds-invest .product:hover > .hover {
       display: block;
-      animation-duration: 0.3s; }
+      -webkit-animation-duration: 0.3s;
+              animation-duration: 0.3s; }
     .contents.bonds-invest .product > .hover {
       display: none;
       overflow: hidden;
@@ -8148,7 +8172,9 @@ article.contents {
               box-shadow: none; }
             .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li > .btn-auth .tooltip {
               left: 50% !important;
-              transform: translateX(-50%) !important; }
+              -webkit-transform: translateX(-50%) !important;
+                  -ms-transform: translateX(-50%) !important;
+                      transform: translateX(-50%) !important; }
               .ie8 .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li > .btn-auth .tooltip {
                 left: 0%; }
               .contents.borrowing-private .borrowing-application .proceedings-step .prepare-step01 > li > .btn-auth .tooltip:before {
@@ -12006,5 +12032,3 @@ body.popup-window {
       height: 20px; }
 
 /* 이용안내 - 내 계좌 */
-
-/*# sourceMappingURL=popfunding.css.map */

@@ -113,8 +113,7 @@ body.popup-window { min-width: auto; background-color: #eaf5fa;
 
 
 /* 팝다이렉트 상환하기 */
-.popup-window-contents.redemption-popdirect {  text-align: left;
-	.scroll-contents { overflow: scroll; padding: 0px 60px; height: 775px; }
+.popup-window-contents.redemption-popdirect { padding-right: 60px; padding-left: 60px; text-align: left;
 
 	h1 { font-size: 18px; font-weight: normal; color: $color-title; line-height: 1.3em; }
 	h2 { margin-top: 37px; font-size: 14px; font-weight: normal; color: $color-title; line-height: 1.3em; }

@@ -133,7 +133,10 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 			$('th, td',thead_tr_first).each(function(i)
 			{
+
+				$(this).parents('aside').css({ position: "absolute", visibility: "hidden", display: "block" });
 				w = $(this).width();
+				$(this).parents('aside').css({ position: "", visibility: "", display: "" });
 
 				$('th:eq('+i+'), td:eq('+i+')',thead_tr_first).css('width',w+'px');
 				$('th:eq('+i+'), td:eq('+i+')',tbody_tr_first).css('width',w+'px');

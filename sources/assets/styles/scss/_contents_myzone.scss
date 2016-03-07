@@ -4,23 +4,8 @@
 	/* 공통 btns-inline-box */
 	.btn-inline-box { line-height: 29px; }
 
-	/* 마이존 상단 서브 메뉴 */
-	.menus-sub { margin-top: 47px;
-		ul { text-align: center;
-			> li { display: inline-block;
-				+ li {
-					&:before { content: '|'; display: inline-block; margin-right: 13px; margin-left: 9px; color: #dee1e7; text-decoration: none; }
-				}
-			}
-		}
 
-		a { font-size: 14px; color: $color-menu1;
-			&:hover,
-			&.selected { color: $color-menu1-hover; }
-		}
-	}
-
-	/* 마이존 컨테츠 박스 */
+	/* 이용안내 컨테츠 박스 */
 	.myzone-box { position: relative; margin-top: 54px; padding-bottom: 80px; border: 1px solid #d4dae4; border-radius: 18px; background-color: #fff; }
 
 	/* 게별 섹션 */
@@ -84,12 +69,14 @@
 	}
 
 	.tbl-data-h { /*table-layout: fixed;*/ width: 100%; border-top: 2px solid $color-title;
-		th { padding-top: 16px; padding-bottom: 16px; min-height: 55px; font-size: 14px; font-weight: normal; color: $color-title; line-height: 22px; border-bottom: 1px solid #d4dae4; background-color: #fbfbfb;
-			+ td { border-left: 1px solid #7c7f84; }
-		}
-		td { position: relative; padding-top: 16px; padding-bottom: 16px; min-height: 55px; font-size: 14px; color: $color-content; text-align: center; line-height: 22px; border-bottom: 1px solid #d4dae4; border-left: 1px solid #d4dae4; background-color: #fff;
-			em { color: $color-menu1-hover; }
-			strong { color: $color-menu1-hover; text-decoration: underline; }
+		> tbody {
+			th { padding-top: 16px; padding-bottom: 16px; font-size: 14px; font-weight: normal; color: $color-title; line-height: 22px; border-bottom: 1px solid #d4dae4; background-color: #fbfbfb;
+				+ td { border-left: 1px solid #7c7f84; }
+			}
+			td { padding-top: 16px; padding-bottom: 16px; font-size: 14px; color: $color-content; text-align: center; line-height: 22px; border-bottom: 1px solid #d4dae4; border-left: 1px solid #d4dae4; background-color: #fff;
+				em { color: $color-menu1-hover; }
+				strong { color: $color-menu1-hover; text-decoration: underline; }
+			}
 		}
 		.l { padding-left: 20px; text-align: left; }
 		.r { padding-right: 20px; text-align: right; }
@@ -155,8 +142,8 @@
 
 				/* contents */
 				.nickname { display: inline-block; overflow: hidden; margin: 0 auto; height: 16px; max-width: 80px; text-overflow: ellipsis; white-space: nowrap; }
-				.nick-message { left: -30px;
-					&:before { left: 90px; }
+				.nick-message { left: 0px;
+					&:before { left: 45px; }
 				}
 				.title { display: inline-block; overflow: hidden; height: 16px; max-width: 260px; text-overflow: ellipsis; white-space: nowrap; }
 				.msg { display: inline-block; overflow: hidden; height: 16px; max-width: 640px; text-overflow: ellipsis; white-space: nowrap; text-decoration: none;
@@ -1102,7 +1089,7 @@
 			&:before { content: ''; display: inline-block; margin: -2px 0 0 0; height: 2px; width: 2px; vertical-align: middle; background-color: $color-menu1-hover; }
 		}
 
-		.box { margin-top: 60px; padding: 14px 10px 14px 14px; text-align: right; border: 1px solid #d4dae4;
+		.agree-box { margin-top: 60px; padding: 14px 10px 14px 14px; text-align: right; border: 1px solid #d4dae4;
 			label { margin-left: 20px; }
 			.warning { position: relative; float: left; margin-top: -3px; padding-left: 30px; font-size: 12px; color: $color-content; line-height: 20px; text-align: left;
 				&:before { content: ''; display: block; position: absolute; top: 0; left: 0; @include sprite($sprite-icon-iks01); }

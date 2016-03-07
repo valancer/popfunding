@@ -512,6 +512,23 @@ span.center { display: inline-block; margin-right: 10px; vertical-align: middle;
 
 
 
+/* 마이존/이용안내 상단 서브 메뉴 */
+.menus-sub { margin-top: 47px;
+	ul { text-align: center;
+		> li { display: inline-block;
+			+ li {
+				&:before { content: '|'; display: inline-block; margin-right: 13px; margin-left: 9px; color: #dee1e7; text-decoration: none; }
+			}
+		}
+	}
+
+	a { font-size: 14px; color: $color-menu1;
+		&:hover,
+		&.selected { color: $color-menu1-hover; }
+	}
+}
+
+
 
 
 

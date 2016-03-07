@@ -1620,6 +1620,26 @@ span.center {
     padding-bottom: 130px;
     text-align: center; }
 
+/* 마이존/이용안내 상단 서브 메뉴 */
+.menus-sub {
+  margin-top: 47px; }
+  .menus-sub ul {
+    text-align: center; }
+    .menus-sub ul > li {
+      display: inline-block; }
+      .menus-sub ul > li + li:before {
+        content: '|';
+        display: inline-block;
+        margin-right: 13px;
+        margin-left: 9px;
+        color: #dee1e7;
+        text-decoration: none; }
+  .menus-sub a {
+    font-size: 14px;
+    color: #142c66; }
+    .menus-sub a:hover, .menus-sub a.selected {
+      color: #ff4776; }
+
 /* GNB HEADER */
 .header {
   display: block;
@@ -9024,11 +9044,9 @@ body.popup-window {
 
 /* 팝다이렉트 상환하기 */
 .popup-window-contents.redemption-popdirect {
+  padding-right: 60px;
+  padding-left: 60px;
   text-align: left; }
-  .popup-window-contents.redemption-popdirect .scroll-contents {
-    overflow: scroll;
-    padding: 0px 60px;
-    height: 775px; }
   .popup-window-contents.redemption-popdirect h1 {
     font-size: 18px;
     font-weight: normal;
@@ -9136,8 +9154,7 @@ body.popup-window {
 .contents.myzone {
   padding-bottom: 117px;
   /* 공통 btns-inline-box */
-  /* 마이존 상단 서브 메뉴 */
-  /* 마이존 컨테츠 박스 */
+  /* 이용안내 컨테츠 박스 */
   /* 게별 섹션 */
   /* 데이터 테이블 상단 옵션 */
   /* 데이터 테이블 */
@@ -9145,24 +9162,6 @@ body.popup-window {
   /* 데이터 테이블 */ }
   .contents.myzone .btn-inline-box {
     line-height: 29px; }
-  .contents.myzone .menus-sub {
-    margin-top: 47px; }
-    .contents.myzone .menus-sub ul {
-      text-align: center; }
-      .contents.myzone .menus-sub ul > li {
-        display: inline-block; }
-        .contents.myzone .menus-sub ul > li + li:before {
-          content: '|';
-          display: inline-block;
-          margin-right: 13px;
-          margin-left: 9px;
-          color: #dee1e7;
-          text-decoration: none; }
-    .contents.myzone .menus-sub a {
-      font-size: 14px;
-      color: #142c66; }
-      .contents.myzone .menus-sub a:hover, .contents.myzone .menus-sub a.selected {
-        color: #ff4776; }
   .contents.myzone .myzone-box {
     position: relative;
     margin-top: 54px;
@@ -9317,23 +9316,20 @@ body.popup-window {
     width: 100%;
     border-top: 2px solid #252525;
     /* buttons */ }
-    .contents.myzone .tbl-data-h th {
+    .contents.myzone .tbl-data-h > tbody th {
       padding-top: 16px;
       padding-bottom: 16px;
-      min-height: 55px;
       font-size: 14px;
       font-weight: normal;
       color: #252525;
       line-height: 22px;
       border-bottom: 1px solid #d4dae4;
       background-color: #fbfbfb; }
-      .contents.myzone .tbl-data-h th + td {
+      .contents.myzone .tbl-data-h > tbody th + td {
         border-left: 1px solid #7c7f84; }
-    .contents.myzone .tbl-data-h td {
-      position: relative;
+    .contents.myzone .tbl-data-h > tbody td {
       padding-top: 16px;
       padding-bottom: 16px;
-      min-height: 55px;
       font-size: 14px;
       color: #6b7581;
       text-align: center;
@@ -9341,9 +9337,9 @@ body.popup-window {
       border-bottom: 1px solid #d4dae4;
       border-left: 1px solid #d4dae4;
       background-color: #fff; }
-      .contents.myzone .tbl-data-h td em {
+      .contents.myzone .tbl-data-h > tbody td em {
         color: #ff4776; }
-      .contents.myzone .tbl-data-h td strong {
+      .contents.myzone .tbl-data-h > tbody td strong {
         color: #ff4776;
         text-decoration: underline; }
     .contents.myzone .tbl-data-h .l {
@@ -9508,9 +9504,9 @@ body.popup-window {
           text-overflow: ellipsis;
           white-space: nowrap; }
         .contents.myzone .tbl-data-v > tbody th .nick-message, .contents.myzone .tbl-data-v > tbody td .nick-message {
-          left: -30px; }
+          left: 0px; }
           .contents.myzone .tbl-data-v > tbody th .nick-message:before, .contents.myzone .tbl-data-v > tbody td .nick-message:before {
-            left: 90px; }
+            left: 45px; }
         .contents.myzone .tbl-data-v > tbody th .title, .contents.myzone .tbl-data-v > tbody td .title {
           display: inline-block;
           overflow: hidden;
@@ -11527,14 +11523,14 @@ body.popup-window {
         width: 2px;
         vertical-align: middle;
         background-color: #ff4776; }
-    .contents.myzone.update-user .update-form .box {
+    .contents.myzone.update-user .update-form .agree-box {
       margin-top: 60px;
       padding: 14px 10px 14px 14px;
       text-align: right;
       border: 1px solid #d4dae4; }
-      .contents.myzone.update-user .update-form .box label {
+      .contents.myzone.update-user .update-form .agree-box label {
         margin-left: 20px; }
-      .contents.myzone.update-user .update-form .box .warning {
+      .contents.myzone.update-user .update-form .agree-box .warning {
         position: relative;
         float: left;
         margin-top: -3px;
@@ -11543,7 +11539,7 @@ body.popup-window {
         color: #6b7581;
         line-height: 20px;
         text-align: left; }
-        .contents.myzone.update-user .update-form .box .warning:before {
+        .contents.myzone.update-user .update-form .agree-box .warning:before {
           content: '';
           display: block;
           position: absolute;
@@ -11611,3 +11607,397 @@ body.popup-window {
       padding-top: 30px; }
       .contents.myzone.update-user .popup.secession .btns .btn-submit {
         width: 130px; }
+
+/* 이용안내 */
+.contents.cs {
+  /* 공통 btns-inline-box */
+  /* 마이존 컨테츠 박스 */
+  /* 게별 섹션 */
+  /* 필터 */
+  /* 테이블형 리스트 */
+  /* 테이블형 상세 */ }
+  .contents.cs .btn-inline-box {
+    line-height: 29px; }
+  .contents.cs .cs-box {
+    position: relative;
+    margin-top: 54px;
+    padding-bottom: 80px;
+    border: 1px solid #d4dae4;
+    border-radius: 18px;
+    background-color: #fff; }
+  .contents.cs .section {
+    position: relative;
+    padding: 77px 119px 0 119px; }
+    .contents.cs .section h1.title {
+      font-size: 18px;
+      font-weight: normal;
+      color: #252525;
+      line-height: 1.3em; }
+      .contents.cs .section h1.title + .list-type-tbl {
+        margin-top: 23px; }
+      .contents.cs .section h1.title + .detail-type-tbl {
+        margin-top: 27px; }
+      .contents.cs .section h1.title em {
+        color: #ff4776; }
+    .contents.cs .section .filter {
+      float: right;
+      margin-top: -4px; }
+  .contents.cs .filter .right-column {
+    float: right; }
+  .contents.cs .filter input[type=text] {
+    display: inline-block;
+    margin-left: 6px;
+    height: 29px;
+    width: 155px;
+    font-size: 12px;
+    color: #252525;
+    line-height: 29px;
+    text-indent: 0;
+    vertical-align: middle;
+    text-align: center;
+    border: 1px solid #d4dae4;
+    border-radius: 5px;
+    background-color: #fff; }
+  .contents.cs .filter select {
+    margin-left: 6px;
+    vertical-align: middle;
+    border: 1px solid #d4dae4;
+    border-radius: 5px; }
+  .contents.cs .filter .btn-search {
+    display: inline-block;
+    margin-left: 6px;
+    padding-right: 18px;
+    padding-left: 18px;
+    min-width: 68px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 31px;
+    border-radius: 2px;
+    background-color: #6e80a9; }
+  .contents.cs .filter .btn-write {
+    display: inline-block;
+    margin-left: 6px;
+    padding-right: 18px;
+    padding-left: 18px;
+    min-width: 68px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 31px;
+    border-radius: 2px;
+    background-color: #2e96d6; }
+  .contents.cs .list-type-tbl {
+    width: 100%;
+    border-top: 2px solid #252525; }
+    .contents.cs .list-type-tbl > thead th {
+      height: 45px;
+      font-size: 14px;
+      font-weight: normal;
+      color: #252525;
+      text-align: center;
+      border-left: 1px solid #d4dae4;
+      border-bottom: 1px solid #7c7f84;
+      background-color: #fbfbfb; }
+      .contents.cs .list-type-tbl > thead th:first-child {
+        border-left: 0px; }
+    .contents.cs .list-type-tbl > tbody tr.notice td {
+      color: #0e52a7; }
+      .contents.cs .list-type-tbl > tbody tr.notice td a {
+        color: #0e52a7; }
+    .contents.cs .list-type-tbl > tbody td {
+      position: relative;
+      height: 45px;
+      padding-right: 10px;
+      padding-left: 10px;
+      font-size: 14px;
+      color: #6b7581;
+      text-align: center;
+      border-left: 1px solid #d4dae4;
+      border-bottom: 1px solid #d4dae4;
+      background-color: #fff; }
+      .contents.cs .list-type-tbl > tbody td:first-child {
+        border-left: 0px; }
+      .contents.cs .list-type-tbl > tbody td a {
+        color: #6b7581;
+        text-decoration: none; }
+        .contents.cs .list-type-tbl > tbody td a:hover {
+          color: #252525; }
+        .contents.cs .list-type-tbl > tbody td a.nick {
+          display: inline-block;
+          overflow: hidden;
+          height: 16px;
+          max-width: 100px;
+          text-decoration: underline;
+          text-overflow: ellipsis;
+          white-space: nowrap; }
+    .contents.cs .list-type-tbl .l {
+      padding-left: 20px;
+      text-align: left; }
+    .contents.cs .list-type-tbl .new {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      text-indent: -9999px;
+      background-image: url(/assets/images/sprites.png);
+      background-position: -842px -131px;
+      width: 37px;
+      height: 37px; }
+  .contents.cs .detail-type-tbl {
+    width: 100%;
+    font-size: 14px;
+    color: #6b7581;
+    border-top: 2px solid #252525;
+    border-bottom: 1px solid #d4dae4; }
+    .contents.cs .detail-type-tbl dt {
+      display: block;
+      position: relative;
+      padding-left: 30px;
+      line-height: 50px; }
+    .contents.cs .detail-type-tbl dd {
+      padding: 30px 30px 50px 30px;
+      line-height: 22px;
+      border-top: 1px solid #d4dae4; }
+    .contents.cs .detail-type-tbl .new {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      text-indent: -9999px;
+      background-image: url(/assets/images/sprites.png);
+      background-position: -842px -131px;
+      width: 37px;
+      height: 37px; }
+    .contents.cs .detail-type-tbl + .btns {
+      margin-top: 40px;
+      text-align: center; }
+  .contents.cs .tbl-data-v {
+    /*table-layout: fixed;*/
+    position: relative;
+    width: 100%;
+    border-top: 2px solid #252525;
+    /* tooltip */
+    /* text align */
+    /* 기준가 -> 매매가 */ }
+    .contents.cs .tbl-data-v > thead tr.small th {
+      padding-right: 5px;
+      padding-left: 5px;
+      font-size: 12px;
+      line-height: 16px; }
+    .contents.cs .tbl-data-v > thead th {
+      position: relative;
+      height: 50px;
+      font-size: 14px;
+      font-weight: normal;
+      color: #252525;
+      line-height: 16px;
+      text-align: center;
+      border-bottom: 1px solid #7c7f84;
+      border-left: 1px solid #d4dae4;
+      background-color: #fbfbfb;
+      background-clip: padding-box; }
+      .contents.cs .tbl-data-v > thead th:first-child {
+        border-left: 0px; }
+      .contents.cs .tbl-data-v > thead th.small {
+        font-size: 12px; }
+    .contents.cs .tbl-data-v > thead .sale-price:before {
+      margin: -1px 5px 0 1px; }
+    .contents.cs .tbl-data-v > thead .cr-box label {
+      font-size: 14px;
+      color: #252525; }
+    .contents.cs .tbl-data-v > tfoot th {
+      height: 50px;
+      font-size: 14px;
+      font-weight: normal;
+      color: #252525;
+      text-align: center;
+      border-left: 1px solid #d4dae4;
+      background-color: #fbfbfb; }
+      .contents.cs .tbl-data-v > tfoot th:first-child {
+        border-left: 0px; }
+    .contents.cs .tbl-data-v > tfoot td {
+      font-size: 14px;
+      text-align: center;
+      border-left: 1px solid #d4dae4;
+      background-color: #fbfbfb; }
+    .contents.cs .tbl-data-v > tbody {
+      /* 작은 내용 */ }
+      .contents.cs .tbl-data-v > tbody tr.disabled th, .contents.cs .tbl-data-v > tbody tr.disabled td {
+        color: #c4c9d1; }
+      .contents.cs .tbl-data-v > tbody th, .contents.cs .tbl-data-v > tbody td {
+        position: relative;
+        padding: 10px 5px;
+        height: 30px;
+        font-size: 14px;
+        font-weight: normal;
+        color: #6b7581;
+        text-align: center;
+        line-height: 18px;
+        border-bottom: 1px solid #d4dae4;
+        border-left: 1px solid #d4dae4;
+        background-color: #fff;
+        background-clip: padding-box;
+        /* form controls */
+        /* new badge */
+        /* contents */ }
+        .contents.cs .tbl-data-v > tbody th:first-child, .contents.cs .tbl-data-v > tbody td:first-child {
+          border-left: 0px; }
+        .contents.cs .tbl-data-v > tbody th a, .contents.cs .tbl-data-v > tbody td a {
+          position: relative;
+          color: #6b7581;
+          text-decoration: underline;
+          /*  대손 상환 */
+          /* 직접추심 */ }
+          .contents.cs .tbl-data-v > tbody th a.bed-debt:before, .contents.cs .tbl-data-v > tbody td a.bed-debt:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: -10px;
+            left: -20px;
+            background-image: url(/assets/images/sprites.png);
+            background-position: -942px -544px;
+            width: 15px;
+            height: 19px; }
+          .contents.cs .tbl-data-v > tbody th a.overdue, .contents.cs .tbl-data-v > tbody td a.overdue {
+            font-size: 12px; }
+        .contents.cs .tbl-data-v > tbody th .plus, .contents.cs .tbl-data-v > tbody td .plus {
+          color: #006bf0; }
+        .contents.cs .tbl-data-v > tbody th .minus, .contents.cs .tbl-data-v > tbody td .minus {
+          color: #ff4776; }
+        .contents.cs .tbl-data-v > tbody th input[type=text], .contents.cs .tbl-data-v > tbody td input[type=text] {
+          height: 29px;
+          width: 90%;
+          font-size: 14px;
+          color: #252525;
+          text-align: center;
+          line-height: 29px;
+          border: 1px solid #d4dae4;
+          background-color: #fff; }
+        .contents.cs .tbl-data-v > tbody th .new, .contents.cs .tbl-data-v > tbody td .new {
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          text-indent: -9999px;
+          background-image: url(/assets/images/sprites.png);
+          background-position: -842px -131px;
+          width: 37px;
+          height: 37px; }
+        .contents.cs .tbl-data-v > tbody th .nickname, .contents.cs .tbl-data-v > tbody td .nickname {
+          display: inline-block;
+          overflow: hidden;
+          margin: 0 auto;
+          height: 16px;
+          max-width: 80px;
+          text-overflow: ellipsis;
+          white-space: nowrap; }
+        .contents.cs .tbl-data-v > tbody th .nick-message, .contents.cs .tbl-data-v > tbody td .nick-message {
+          left: -30px; }
+          .contents.cs .tbl-data-v > tbody th .nick-message:before, .contents.cs .tbl-data-v > tbody td .nick-message:before {
+            left: 90px; }
+        .contents.cs .tbl-data-v > tbody th .title, .contents.cs .tbl-data-v > tbody td .title {
+          display: inline-block;
+          overflow: hidden;
+          height: 16px;
+          max-width: 260px;
+          text-overflow: ellipsis;
+          white-space: nowrap; }
+        .contents.cs .tbl-data-v > tbody th .msg, .contents.cs .tbl-data-v > tbody td .msg {
+          display: inline-block;
+          overflow: hidden;
+          height: 16px;
+          max-width: 640px;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          text-decoration: none; }
+          .contents.cs .tbl-data-v > tbody th .msg:hover, .contents.cs .tbl-data-v > tbody td .msg:hover {
+            color: #252525; }
+          .contents.cs .tbl-data-v > tbody th .msg:visited, .contents.cs .tbl-data-v > tbody td .msg:visited {
+            color: #c4c9d1; }
+        .contents.cs .tbl-data-v > tbody th .disabled, .contents.cs .tbl-data-v > tbody td .disabled {
+          color: #c4c9d1; }
+        .contents.cs .tbl-data-v > tbody th strong.waring, .contents.cs .tbl-data-v > tbody td strong.waring {
+          display: block;
+          color: #ff4776; }
+          .contents.cs .tbl-data-v > tbody th strong.waring:before, .contents.cs .tbl-data-v > tbody td strong.waring:before {
+            content: '';
+            display: block;
+            margin: 0 auto 2px auto;
+            background-image: url(/assets/images/sprites.png);
+            background-position: -885px -744px;
+            width: 23px;
+            height: 20px; }
+      .contents.cs .tbl-data-v > tbody .cr-box label {
+        padding-left: 0px;
+        height: 16px;
+        width: 14px;
+        text-indent: -9999px; }
+      .contents.cs .tbl-data-v > tbody.small th, .contents.cs .tbl-data-v > tbody.small td {
+        height: 75px;
+        font-size: 12px;
+        line-height: 18px; }
+      .contents.cs .tbl-data-v > tbody.small-popup th, .contents.cs .tbl-data-v > tbody.small-popup td {
+        font-size: 12px; }
+    .contents.cs .tbl-data-v .tooltip {
+      display: none;
+      bottom: auto;
+      color: #6b7581;
+      border: 1px solid #c3d0e1;
+      /* bar */ }
+      .contents.cs .tbl-data-v .tooltip:before {
+        top: -6px;
+        left: 50%;
+        margin-left: -5.5px;
+        background-image: url(/assets/images/sprites.png);
+        background-position: -502px -304px;
+        width: 11px;
+        height: 6px; }
+      .contents.cs .tbl-data-v .tooltip.down:before {
+        top: auto;
+        bottom: -6px;
+        margin-left: -5.5px;
+        background-image: url(/assets/images/sprites.png);
+        background-position: -502px -293px;
+        width: 11px;
+        height: 6px; }
+      .contents.cs .tbl-data-v .tooltip .bar {
+        color: #e7ecf3; }
+    .contents.cs .tbl-data-v .l {
+      padding-left: 13px;
+      text-align: left; }
+    .contents.cs .tbl-data-v .sale-price:before {
+      content: '';
+      display: inline-block;
+      margin: -1px 3px 0 0;
+      vertical-align: middle;
+      background-image: url(/assets/images/sprites.png);
+      background-position: -566px -469px;
+      width: 23px;
+      height: 8px; }
+    .contents.cs .tbl-data-v .btn-inline-box {
+      line-height: 24px;
+      text-decoration: none; }
+    .contents.cs .tbl-data-v .btn-detail {
+      display: inline-block;
+      text-indent: -9999px;
+      background-image: url(/assets/images/sprites.png);
+      background-position: -94px -847px;
+      width: 32px;
+      height: 16px; }
+    .contents.cs .tbl-data-v .btn-sell {
+      display: inline-block;
+      text-indent: -9999px;
+      background-image: url(/assets/images/sprites.png);
+      background-position: -160px -514px;
+      width: 51px;
+      height: 20px; }
+    .contents.cs .tbl-data-v .btn-set-meto {
+      display: inline-block;
+      text-indent: -9999px;
+      background-image: url(/assets/images/sprites.png);
+      background-position: -207px -770px;
+      width: 45px;
+      height: 20px; }
+
+/* 이용안내 - 내 계좌 */

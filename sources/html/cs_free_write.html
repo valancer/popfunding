@@ -1,0 +1,67 @@
+include "head.html"
+	<script>
+	$(window.document).ready(function(){
+	});
+	</script>
+
+	<!-- 상단 영역 -->
+	include "header_cs.html"
+
+
+	<!-- 본문 영역 -->
+	<article class="contents cs free">
+		<h1>이용안내</h1>
+
+		<div class="inner">
+		
+			<!-- 이용안내 서브메뉴 바로가기 -->
+			<nav class="menus-sub">
+				<ul>
+					<li><a href="#">공지 &amp; 이벤트</a></li>
+					<li><a href="#">FAQ</a></li>
+					<li><a href="#">1 : 1 문의</a></li>
+					<li><a href="#" class="selected">자유게시판</a></li>
+					<li><a href="#">대부회원안내</a></li>
+				</ul>
+			</nav>
+
+
+			<h2 class="hidden">자유게시판</h2>
+			<div class="cs-box">
+
+				<section class="section">
+
+					<div class="filter">
+						<a href="#" class="btn-rd">목록보기</a>
+					</div>
+
+					<h1 class="title">자유게시판</h1>
+
+
+					<fieldset class="write-cs">
+						<legend>글쓰기 폼</legend>
+
+						<label for="title">제목</label>
+						<input type="text" id="title" name="title">
+
+						<label for="content">내용</label>
+						<textarea name="content" id="content" cols="10" rows="30"></textarea>
+
+						<p class="btns">
+							<input type="submit" class="btn-rd color-blue" value="글 등록하기">	
+						</p>
+					</fieldset>
+				
+				</section>
+
+			</div>	<!-- class="cs-box" -->
+
+			include "cs_bottom_btns.html"
+		</div>
+	</article>
+	
+	<!-- 하단 영역 -->
+	include "footer.html"
+
+</body>
+</html>

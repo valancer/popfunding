@@ -1,0 +1,131 @@
+include "head.html"
+	<script>
+	$(window.document).ready(function(){
+	});
+	</script>
+
+	<!-- 상단 영역 -->
+	include "header_cs.html"
+
+
+	<!-- 본문 영역 -->
+	<article class="contents cs free">
+		<h1>이용안내</h1>
+
+		<div class="inner">
+		
+			<!-- 이용안내 서브메뉴 바로가기 -->
+			<nav class="menus-sub">
+				<ul>
+					<li><a href="#">공지 &amp; 이벤트</a></li>
+					<li><a href="#">FAQ</a></li>
+					<li><a href="#">1 : 1 문의</a></li>
+					<li><a href="#" class="selected">자유게시판</a></li>
+					<li><a href="#">대부회원안내</a></li>
+				</ul>
+			</nav>
+
+
+			<h2 class="hidden">자유게시판</h2>
+			<div class="cs-box">
+
+				<section class="section">
+
+					<div class="filter">
+						<a href="#" class="btn-rd">목록보기</a>
+					</div>
+
+					<h1 class="title">자유게시판</h1>
+
+
+					<table class="detail-type-tbl">
+						<caption>게시판 상세</caption>
+						<tbody>
+							<tr>
+								<th>작성자</th>
+								<td>데임 (IP: 118.131.66.***)</td>
+								<th>등록일</th>
+								<td><time datetime="2015-12-12 18:16">2015.12.12 / 18:16</time></td>
+								<th>조회</th>
+								<td>6</td>
+							</tr>
+							<tr>
+								<td colspan="6" class="content">
+									<span class="new">[새로운 게시글입니다.]</span>
+									<strong class="title">늦게 입금 정말 죄송합니다.</strong>
+
+									1회차 부터 늦게 되어 정말 죄송합니다;;<br>
+									제가 한국에 없어서 제대로 연락도 못드렸습니다. 2회차부터는 늦는 일 없도록 잘 상환드리겠습니다.<br>
+									기다려 주셔서 정말 감사합니다.<br>
+
+									<p class="btns">
+										<a href="#" class="btn-inline-box">수정</a>
+										<a href="#" class="btn-inline-box">삭제</a>
+									</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<!-- 댓글 목록 -->
+					<dl class="list-reply-dl">
+						<dt>
+							<time datetime="2015-12-12 18:16">2015.12.12 / 18:16</time>
+							제주바당 (IP: 121.188.237.***)
+						</dt>
+						<dd>
+							솔직히 마음 한편으로는 걱정했지만 그래도 남겨주신 글이 위안이 되었네요.<br>
+							연체된 이유와 미안하다는 소통글이로서 데임님의 상환의지를 볼 수 있어 괜찮았던것 같습니다.<br>
+							어렵고 힘들겠지만 화이팅하시고 따뜻한 연말연시 보내시기를 바랍니다.<br>
+
+							<p class="btns">
+								<a href="#" class="btn-inline-box">삭제</a>
+							</p>
+						</dd>
+
+						<dt>
+							<time datetime="2015-12-12 18:16">2015.12.12 / 18:16</time>
+							탄고구마 (IP: 121.188.237.***)
+						</dt>
+						<dd>
+							걱정을 끼쳐드려 죄송했습니다ㅠ 급작스레 출장을 가고 일정이 바뀌는 바람에 연락도 제대로 못남겼어요.<br>
+							다음부터는 이런일 없도록 조심하겠습니다.<br>
+							연말 잘 보내세요<br>
+
+							<p class="btns">
+								<a href="#" class="btn-inline-box">삭제</a>
+							</p>
+						</dd>
+					</dl>
+
+					<!-- 댓글 쓰기 -->
+					<fieldset class="write-reply">
+						<legend>댓글 입력 폼</legend>
+
+						<span class="user">제주바당 (IP: 121.188.237.***)</span>
+						<label for="">댓글달기</label>
+						<textarea name="" id="" cols="10" rows="30">
+솔직히 마음 한편으로는 걱정했지만 그래도 남겨주신 글이 위안이 되었네요.
+연체된 이유와 미안하다는 소통글이로서 데임님의 상환의지를 볼 수 있어 괜찮았던것 같습니다.
+어렵고 힘들겠지만 화이팅하시고 따뜻한 연말연시 보내시기를 바랍니다.  
+						</textarea>
+						<p class="message">등록하신 글은 맨위로 올라갑니다.</p>
+
+						<p class="btns">
+							<input type="submit" class="btn-rd color-blue" value="댓글 등록하기">	
+						</p>
+					</fieldset>
+				
+				</section>
+
+			</div>	<!-- class="cs-box" -->
+
+			include "cs_bottom_btns.html"
+		</div>
+	</article>
+	
+	<!-- 하단 영역 -->
+	include "footer.html"
+
+</body>
+</html>

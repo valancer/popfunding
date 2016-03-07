@@ -22,7 +22,7 @@
 
 	/* 필터 */
 	.filter {
-		&.options { float: none; margin-top: 30px; }
+		&.options { float: none; margin-top: 28px; }
 
 		.right-column { float: right; }
 
@@ -35,12 +35,14 @@
 			&.selected,
 			&:hover { color: $color-menu1-hover; }
 		}
+
+		p { font-size: 12px; color: $color-content; line-height: 19px; }
 	}
 
 
 
 	/* 테이블형 리스트 */
-	.list-type-tbl { width: 100%; border-top: 2px solid $color-title;
+	.list-type-tbl { margin-top: 19px; width: 100%; border-top: 2px solid $color-title;
 		> thead {
 			th { height: 45px; font-size: 14px; font-weight: normal; color: $color-title; text-align: center; border-left: 1px solid #d4dae4; border-bottom: 1px solid #7c7f84; background-color: #fbfbfb;
 				&:first-child { border-left: 0px; }
@@ -62,25 +64,55 @@
 
 					&.nick { display: inline-block; overflow: hidden; height: 16px; max-width: 100px; text-decoration: underline; text-overflow: ellipsis; white-space: nowrap; }
 				}
+
+				&.none { height: 75px; font-size: 12px; color: $color-menu1-hover; }
 			}
 		}
 
 		.l { padding-left: 20px; text-align: left; }
 		.new { display: block; position: absolute; top: 0; left: 0; text-indent: -9999px; @include sprite($sprite-badge-new05); }
+		.minus { color: $color-menu1-hover; }
 	}
 
+
 	/* 테이블형 상세 */
-	.detail-type-tbl { margin-top: 23px; width: 100%; font-size: 14px; color: $color-content; border-top: 2px solid $color-title; border-bottom: 1px solid #d4dae4;
-		dt { display: block; position: relative; padding-left: 30px; line-height: 50px;
-			
+	.detail-type-tbl { width: 100%; font-size: 14px; color: $color-content; border-top: 2px solid $color-title; border-bottom: 2px solid $color-title;
+		> tbody {
+			th { height: 50px; font-size: 14px; font-weight: normal; color: $color-title; text-align: center; border-bottom: 1px solid #d4dae4; border-left: 1px solid #d4dae4;
+				&:first-child { border-left: 0px; }
+			}
+			td { padding-left: 20px; font-size: 14px; color: $color-content; text-align: left; border-bottom: 1px solid #d4dae4; border-left: 1px solid #d4dae4; 
+				&:first-child { border-left: 0px; }
+				&.content { position: relative; padding: 25px 30px 46px 30px; line-height: 22px; }
+
+				.btns { position: absolute; bottom: 10px; right: 0;
+					.btn-inline-box { margin-left: 6px; color: $color-title; background-color: #f7f7f7; }
+				}
+			}
+		}
+		.new { display: block; position: absolute; top: 0; left: 0; text-indent: -9999px; @include sprite($sprite-badge-new05); }
+		.title { display: block; margin-bottom: 22px; font-weight: normal; font-size: 14px; color: $color-title; line-height: 22px; }
+	}
+
+
+	/* 간단한 상세 */
+	.detail-type-dl { margin-top: 23px; width: 100%; font-size: 14px; color: $color-content; border-bottom: 1px solid #d4dae4;
+		dt { display: block; position: relative; padding-left: 30px; color: $color-title; line-height: 50px; border-top: 2px solid $color-title; 
+			&.reply { padding-left: 60px;
+				&:before { content: ''; display: block; position: absolute; top: 13px; left: 30px; @include sprite($sprite-icon-reply02); }
+			}
 		}
 
-		dd { padding: 30px 30px 50px 30px; line-height: 22px; border-top: 1px solid #d4dae4; }
+		dd { padding: 25px 30px 46px 30px; line-height: 22px; border-top: 1px solid #d4dae4;
+			&.reply { padding-left: 60px; }
+		}
 
 		.new { display: block; position: absolute; top: 0; left: 0; text-indent: -9999px; @include sprite($sprite-badge-new05); }
+		.title { display: block; margin-bottom: 22px; font-weight: normal; font-size: 14px; color: $color-title; line-height: 22px; }
 
 		+ .btns { margin-top: 40px; text-align: center; }
 	}
+
 
 
 	/* FAQ 목록 */
@@ -95,115 +127,54 @@
 	}
 
 
-	.tbl-data-v { /*table-layout: fixed;*/ position: relative; width: 100%; border-top: 2px solid $color-title;
-		> thead {
-			tr.small {
-				th { padding-right: 5px; padding-left: 5px; font-size: 12px; line-height: 16px; }
-			}
-			th { position: relative; height: 50px; font-size: 14px; font-weight: normal; color: $color-title; line-height: 16px; text-align: center; border-bottom: 1px solid #7c7f84; border-left: 1px solid #d4dae4; background-color: #fbfbfb; background-clip: padding-box;
-				&:first-child { border-left: 0px; }
-				&.small { font-size: 12px; }
-			}
 
-			.sale-price {
-				&:before { margin: -1px 5px 0 1px; }
-			}
-
-			.cr-box {
-				label { font-size: 14px; color: $color-title; }
-			}
-		}
-		> tfoot {
-			th { height: 50px; font-size: 14px; font-weight: normal; color: $color-title; text-align: center; border-left: 1px solid #d4dae4; background-color: #fbfbfb;
-				&:first-child { border-left: 0px; }
-			}
-			td { font-size: 14px; text-align: center; border-left: 1px solid #d4dae4; background-color: #fbfbfb; }
-		}
-		> tbody {
-			tr.disabled {
-				th, td { color: $color-desc; }
-			}
-			th, td { position: relative; padding: 10px 5px; height: 30px; font-size: 14px; font-weight: normal; color: $color-content; text-align: center; line-height: 18px; border-bottom: 1px solid #d4dae4; border-left: 1px solid #d4dae4; background-color: #fff; background-clip: padding-box;
-				&:first-child { border-left: 0px; }
-				a { position: relative; color: $color-content; text-decoration: underline;
-					/*  대손 상환 */
-					&.bed-debt {
-						&:before { content: ''; display: block; position: absolute; top: -10px; left: -20px; @include sprite($sprite-icon-iks03); }
-					}
-					/* 직접추심 */
-					&.overdue { font-size: 12px; }
-				}
-				.plus { color: #006bf0; }
-				.minus { color: $color-menu1-hover; }
-
-				/* form controls */
-				input[type=text] { height: 29px; width: 90%; font-size: 14px; color: $color-title; text-align: center; line-height: 29px; border: 1px solid #d4dae4; background-color: #fff; }
-
-				/* new badge */
-				.new { display: block; position: absolute; top: 0; left: 0; text-indent: -9999px; @include sprite($sprite-badge-new05); }
-
-				/* contents */
-				.nickname { display: inline-block; overflow: hidden; margin: 0 auto; height: 16px; max-width: 80px; text-overflow: ellipsis; white-space: nowrap; }
-				.nick-message { left: -30px;
-					&:before { left: 90px; }
-				}
-				.title { display: inline-block; overflow: hidden; height: 16px; max-width: 260px; text-overflow: ellipsis; white-space: nowrap; }
-				.msg { display: inline-block; overflow: hidden; height: 16px; max-width: 640px; text-overflow: ellipsis; white-space: nowrap; text-decoration: none;
-					&:hover { color: $color-title; }
-					&:visited { color: $color-desc; }
-				}
-				.disabled { color: $color-desc; }
-				strong.waring { display: block; color: $color-menu1-hover;
-					&:before { content: ''; display: block; margin: 0 auto 2px auto; @include sprite($sprite-icon-iks01); }
-				}
-			}
-
-			.cr-box {
-				label { padding-left: 0px; height: 16px; width: 14px; text-indent: -9999px; }
-			}
-
-			/* 작은 내용 */
-			&.small {
-				th, td { height: 75px; font-size: 12px; line-height: 18px; }
-			}
-			&.small-popup {
-				th, td { font-size: 12px; }
-			}
+	/* 글쓰기 */
+	.write-cs { padding: 2px 30px 0 30px; border-top: 2px solid $color-title;
+		label { display: block; margin-top: 28px; margin-bottom: 6px; font-size: 12px; color: $color-content; }
+		input[type=text] { padding-left: 20px; height: 38px; width: 570px; font-size: 14px; color: $color-content; line-height: 38px; border: 1px solid #bec3cd; border-radius: 3px; background-color: #fff; }
+		textarea { display: block; box-sizing: border-box; margin-top: 0px; padding: 30px 20px 50px 20px; height: 448px; width: 100%; font-size: 14px; color: $color-content; line-height: 22px; border: 1px solid #bec3cd; border-radius: 3px; background-color: #fff; }
+		.warning { position: relative; margin-top: 10px; padding-left: 30px; font-size: 12px; color: $color-content; line-height: 20px; text-align: left;
+			&:before { content: ''; display: block; position: absolute; top: 0; left: 0; @include sprite($sprite-icon-iks01); }
 		}
 
-		/* tooltip */
-		.tooltip { display: none; bottom: auto; color: $color-content; border: 1px solid #c3d0e1;
-			&:before { top: -$sprite-bg-arrow15-height; left: 50%; margin-left: -$sprite-bg-arrow15-width/2; @include sprite($sprite-bg-arrow15); }
-			
-			&.down {
-				&:before { top: auto; bottom: -$sprite-bg-arrow16-height; margin-left: -$sprite-bg-arrow16-width/2; @include sprite($sprite-bg-arrow16); }
-			}
-
-			/* bar */
-			.bar { color: #e7ecf3; }
-		}
-
-		/* text align */
-		.l { padding-left: 13px; text-align: left; }
-
-		/* 기준가 -> 매매가 */
-		.sale-price {
-			&:before { content: ''; display: inline-block; margin: -1px 3px 0 0; vertical-align: middle; @include sprite($sprite-bg-arrow20); }
-		}
-
-		.btn-inline-box { line-height: 24px; text-decoration: none; }
-		.btn-detail { display: inline-block; text-indent: -9999px; @include sprite($sprite-btn-view01); }
-		.btn-sell { display: inline-block; text-indent: -9999px; @include sprite($sprite-btn-sell01); }
-		.btn-set-meto { display: inline-block; text-indent: -9999px; @include sprite($sprite-btn-set01); }
+		.btns { margin-top: 6px; text-align: center; }
 	}
 
 
+
+	/* 자유게시판 댓글 목록 */
+	.list-reply-dl { font-size: 14px; color: $color-content; 
+		dt { display: block; position: relative; padding-left: 60px; line-height: 72px;
+			&:before { content: ''; display: block; position: absolute; top: 25px; left: 30px; @include sprite($sprite-icon-reply02); }
+
+			time { float: right; }
+		}
+		dd { position: relative; padding: 0px 30px 46px 60px; line-height: 22px; border-bottom: 1px solid #d4dae4;
+			.btns { position: absolute; bottom: 10px; right: 0;
+				.btn-inline-box { margin-left: 6px; color: $color-title; background-color: #f7f7f7; }
+			}
+		}
+	}
+
+	/* 자유게시판 댓글 쓰기 */
+	.write-reply { margin-top: 48px; padding: 0 63px 0 38px;
+		.user { float: right; font-size: 14px; color: $color-content; }
+		label { display: block; font-size: 14px; color: $color-title; }
+		textarea { display: block; box-sizing: border-box; margin-top: 13px; padding: 30px 20px 50px 20px; height: 205px; width: 100%; font-size: 14px; color: $color-content; line-height: 22px; border: 1px solid #bec3cd; border-radius: 3px; background-color: #fff; }
+		.message { margin-top: 7px; font-size: 12px; color: $color-content; text-align: right;
+			&:before { content: ''; display: inline-block; margin: -2px 3px 0 0; height: 2px; width: 2px; vertical-align: middle; background: $color-content; }
+		}
+		.btns { margin-top: 17px; text-align: center; }
+	}
+
 }
 
-
-
-
-/* 이용안내 - 내 계좌 */
-.contents.myzone.account {
+.contents.cs.free {
+	.write-cs { margin-top: 30px;
+		.btns { margin-top: 40px; }
+	}
 }
 
+.contents.cs.qna {
+	.write-cs { margin-top: 19px; }
+}

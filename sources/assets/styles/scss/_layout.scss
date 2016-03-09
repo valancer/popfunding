@@ -758,15 +758,22 @@ article.contents { min-width: $contents-container-width; padding: 60px 0 110px 0
 		}
 	}
 
+
 	.list-guide { overflow: hidden;
 		> li { clear: both; padding-top: 15px; font-size: 12px; color: $color-content; line-height: 18px;
 			> em { font-size: 14px; color: $color-title; }
 			> p { margin-top: 2px; }
 			> table { margin-top: 7px; width: 100%; border-top: 1px solid #d4dae4;
+				> thead {
+					th { height: 35px; font-size: 12px; font-weight: normal; color: $color-title; text-align: center; border-right: 1px solid #d4dae4; border-bottom: 1px solid #d4dae4; background-color: #fbfbfb;
+						&:first-child { border-left: 1px solid #d4dae4; }
+					}
+				}
 				> tbody {
-					th { height: 35px; width: 127px; font-size: 12px; font-weight: normal; color: $color-title; text-align: center; border-right: 1px solid #d4dae4; border-left: 1px solid #d4dae4; border-bottom: 1px solid #d4dae4; background-color: #fbfbfb; }
+					th { height: 35px; font-size: 12px; font-weight: normal; color: $color-title; text-align: center; border-right: 1px solid #d4dae4; border-left: 1px solid #d4dae4; border-bottom: 1px solid #d4dae4; background-color: #fbfbfb; }
 					td { padding: 9px 0 9px 10px; font-size: 12px; color: $color-content; line-height: 18px; border-right: 1px solid #d4dae4; border-bottom: 1px solid #d4dae4; background-color: #fff; }
 				}
+				.c { padding-right: 10px; padding-left: 10px; text-align: center; }
 			}
 
 			&.colume2 { clear: none; float: left; width: 50%; }
@@ -781,7 +788,7 @@ article.contents { min-width: $contents-container-width; padding: 60px 0 110px 0
 		+ h1.normal { margin-top: 24px; }
 	}
 
-	/* tooltip stype */
+	/* tooltip type */
 	&.type-tooltip { padding: 14px 20px 17px 20px;; border-radius: 5px;
 		&:before { top: -$sprite-bg-arrow15-height; left: 43px; @include sprite($sprite-bg-arrow15); }
 

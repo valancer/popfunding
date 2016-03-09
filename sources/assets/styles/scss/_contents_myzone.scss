@@ -662,7 +662,7 @@
 			}
 		}
 
-		.auto { clear: both; overflow: hidden;
+		.auto { clear: both;
 			> li { float: left; padding-bottom: 30px; padding-left: 10px;
 				&:first-child { padding-left: 0px; }
 
@@ -671,7 +671,7 @@
 				> label { display: block; margin-bottom: 8px; font-size: 12px; color: $color-content; }
 				input[type=text] { height: 38px; font-size: 16px; color: $color-title; line-height: 38px; text-align: center; border: 1px solid #d4d8e1; background-color: #fff; }
 
-				.inner-box { overflow: hidden; margin-top: 6px; padding-bottom: 20px; width: 800px; border: 1px solid #aac4d3;
+				.inner-box { margin-top: 6px; padding-bottom: 20px; height: 150px; width: 800px; border: 1px solid #aac4d3;
 					p { float: left; padding: 14px 0 15px 20px; width: 300px; border-bottom: 1px solid #aac4d3;
 						> label { margin-right: 10px; font-size: 12px; color: $color-content; }
 						+ p { width: 459px; border-left: 1px solid #aac4d3; }

@@ -10612,8 +10612,7 @@ body.popup-window {
           margin-top: 7px;
           text-align: center; }
     .contents.myzone.auto-invest .bidding-options .auto {
-      clear: both;
-      overflow: hidden; }
+      clear: both; }
       .contents.myzone.auto-invest .bidding-options .auto > li {
         float: left;
         padding-bottom: 30px;
@@ -10640,9 +10639,9 @@ body.popup-window {
           border: 1px solid #d4d8e1;
           background-color: #fff; }
         .contents.myzone.auto-invest .bidding-options .auto > li .inner-box {
-          overflow: hidden;
           margin-top: 6px;
           padding-bottom: 20px;
+          height: 150px;
           width: 800px;
           border: 1px solid #aac4d3; }
           .contents.myzone.auto-invest .bidding-options .auto > li .inner-box p {

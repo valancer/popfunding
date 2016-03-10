@@ -73,7 +73,7 @@
 			th { padding-top: 16px; padding-bottom: 16px; font-size: 14px; font-weight: normal; color: $color-title; line-height: 22px; border-bottom: 1px solid #d4dae4; background-color: #fbfbfb;
 				+ td { border-left: 1px solid #7c7f84; }
 			}
-			td { padding-top: 16px; padding-bottom: 16px; font-size: 14px; color: $color-content; text-align: center; line-height: 22px; border-bottom: 1px solid #d4dae4; border-left: 1px solid #d4dae4; background-color: #fff;
+			td { padding-top: 16px; padding-bottom: 16px; font-size: 14px; color: $color-content; text-align: center; line-height: 22px; border-bottom: 1px solid #d4dae4; border-left: 1px solid #d4dae4; background-color: #fff; background-clip: padding-box;
 				em { color: $color-menu1-hover; }
 				strong { color: $color-menu1-hover; text-decoration: underline; }
 			}

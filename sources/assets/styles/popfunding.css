@@ -9351,7 +9351,8 @@ body.popup-window {
       line-height: 22px;
       border-bottom: 1px solid #d4dae4;
       border-left: 1px solid #d4dae4;
-      background-color: #fff; }
+      background-color: #fff;
+      background-clip: padding-box; }
       .contents.myzone .tbl-data-h > tbody td em {
         color: #ff4776; }
       .contents.myzone .tbl-data-h > tbody td strong {
@@ -11737,40 +11738,43 @@ body.popup-window {
       background-color: #fbfbfb; }
       .contents.cs .list-type-tbl > thead th:first-child {
         border-left: 0px; }
-    .contents.cs .list-type-tbl > tbody tr.notice td {
-      color: #0e52a7; }
-      .contents.cs .list-type-tbl > tbody tr.notice td a {
+    .contents.cs .list-type-tbl > tbody {
+      position: relative; }
+      .contents.cs .list-type-tbl > tbody tr.notice td {
         color: #0e52a7; }
-    .contents.cs .list-type-tbl > tbody td {
-      position: relative;
-      height: 45px;
-      padding-right: 10px;
-      padding-left: 10px;
-      font-size: 14px;
-      color: #6b7581;
-      text-align: center;
-      border-left: 1px solid #d4dae4;
-      border-bottom: 1px solid #d4dae4;
-      background-color: #fff; }
-      .contents.cs .list-type-tbl > tbody td:first-child {
-        border-left: 0px; }
-      .contents.cs .list-type-tbl > tbody td a {
+        .contents.cs .list-type-tbl > tbody tr.notice td a {
+          color: #0e52a7; }
+      .contents.cs .list-type-tbl > tbody td {
+        position: relative;
+        height: 45px;
+        padding-right: 10px;
+        padding-left: 10px;
+        font-size: 14px;
         color: #6b7581;
-        text-decoration: none; }
-        .contents.cs .list-type-tbl > tbody td a:hover {
-          color: #252525; }
-        .contents.cs .list-type-tbl > tbody td a.nick {
-          display: inline-block;
-          overflow: hidden;
-          height: 16px;
-          max-width: 100px;
-          text-decoration: underline;
-          text-overflow: ellipsis;
-          white-space: nowrap; }
-      .contents.cs .list-type-tbl > tbody td.none {
-        height: 75px;
-        font-size: 12px;
-        color: #ff4776; }
+        text-align: center;
+        border-left: 1px solid #d4dae4;
+        border-bottom: 1px solid #d4dae4;
+        background-color: #fff;
+        background-clip: padding-box; }
+        .contents.cs .list-type-tbl > tbody td:first-child {
+          border-left: 0px; }
+        .contents.cs .list-type-tbl > tbody td a {
+          color: #6b7581;
+          text-decoration: none; }
+          .contents.cs .list-type-tbl > tbody td a:hover {
+            color: #252525; }
+          .contents.cs .list-type-tbl > tbody td a.nick {
+            display: inline-block;
+            overflow: hidden;
+            height: 16px;
+            max-width: 100px;
+            text-decoration: underline;
+            text-overflow: ellipsis;
+            white-space: nowrap; }
+        .contents.cs .list-type-tbl > tbody td.none {
+          height: 75px;
+          font-size: 12px;
+          color: #ff4776; }
     .contents.cs .list-type-tbl .l {
       padding-left: 20px;
       text-align: left; }

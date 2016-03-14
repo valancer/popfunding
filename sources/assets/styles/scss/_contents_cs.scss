@@ -49,14 +49,14 @@
 			}
 		}
 
-		> tbody {
+		> tbody { position: relative;
 			tr.notice {
 				td { color: #0e52a7;
 					a { color: #0e52a7; }
 				}
 			}
 
-			td { position: relative; height: 45px; padding-right: 10px; padding-left: 10px; font-size: 14px; color: $color-content; text-align: center; border-left: 1px solid #d4dae4; border-bottom: 1px solid #d4dae4; background-color: #fff;
+			td { position: relative; height: 45px; padding-right: 10px; padding-left: 10px; font-size: 14px; color: $color-content; text-align: center; border-left: 1px solid #d4dae4; border-bottom: 1px solid #d4dae4; background-color: #fff; background-clip: padding-box;
 				&:first-child { border-left: 0px; }
 
 				a { color: $color-content; text-decoration: none;

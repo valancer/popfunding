@@ -11448,6 +11448,7 @@ body.popup-window {
     bottom: 0;
     left: 0;
     padding: 26px 60px 60px 60px;
+    min-height: 300px;
     border: 1px solid #d4dae4;
     background-color: #fff; }
     .contents.myzone.cnm .msg-detail:before {

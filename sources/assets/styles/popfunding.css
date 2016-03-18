@@ -9413,7 +9413,7 @@ body.popup-window {
       font-size: 12px;
       line-height: 16px; }
     .contents.myzone .tbl-data-v > thead th {
-      position: relative;
+      box-sizing: border-box;
       height: 50px;
       font-size: 14px;
       font-weight: normal;
@@ -9454,8 +9454,9 @@ body.popup-window {
         color: #c4c9d1; }
       .contents.myzone .tbl-data-v > tbody th, .contents.myzone .tbl-data-v > tbody td {
         position: relative;
+        box-sizing: border-box;
         padding: 10px 5px;
-        height: 30px;
+        height: 50px;
         font-size: 14px;
         font-weight: normal;
         color: #6b7581;
@@ -9463,13 +9464,14 @@ body.popup-window {
         line-height: 18px;
         border-bottom: 1px solid #d4dae4;
         border-left: 1px solid #d4dae4;
-        background-color: #fff;
         background-clip: padding-box;
         /* form controls */
         /* new badge */
         /* contents */ }
         .contents.myzone .tbl-data-v > tbody th:first-child, .contents.myzone .tbl-data-v > tbody td:first-child {
           border-left: 0px; }
+        .ie8 .contents.myzone .tbl-data-v > tbody th.cr, .ie8 .contents.myzone .tbl-data-v > tbody td.cr {
+          top: 1px; }
         .contents.myzone .tbl-data-v > tbody th a, .contents.myzone .tbl-data-v > tbody td a {
           position: relative;
           color: #6b7581;
@@ -11755,7 +11757,6 @@ body.popup-window {
         text-align: center;
         border-left: 1px solid #d4dae4;
         border-bottom: 1px solid #d4dae4;
-        background-color: #fff;
         background-clip: padding-box; }
         .contents.cs .list-type-tbl > tbody td:first-child {
           border-left: 0px; }

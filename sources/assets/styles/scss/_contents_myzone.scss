@@ -98,8 +98,9 @@
 			tr.small {
 				th { padding-right: 5px; padding-left: 5px; font-size: 12px; line-height: 16px; }
 			}
-			th { position: relative; height: 50px; font-size: 14px; font-weight: normal; color: $color-title; line-height: 16px; text-align: center; border-bottom: 1px solid #7c7f84; border-left: 1px solid #d4dae4; background-color: #fbfbfb; background-clip: padding-box;
+			th { box-sizing: border-box; height: 50px; font-size: 14px; font-weight: normal; color: $color-title; line-height: 16px; text-align: center; border-bottom: 1px solid #7c7f84; border-left: 1px solid #d4dae4; background-color: #fbfbfb; background-clip: padding-box;
 				&:first-child { border-left: 0px; }
+
 				&.small { font-size: 12px; }
 			}
 
@@ -121,8 +122,12 @@
 			tr.disabled {
 				th, td { color: $color-desc; }
 			}
-			th, td { position: relative; padding: 10px 5px; height: 30px; font-size: 14px; font-weight: normal; color: $color-content; text-align: center; line-height: 18px; border-bottom: 1px solid #d4dae4; border-left: 1px solid #d4dae4; background-color: #fff; background-clip: padding-box;
+			th, td { position: relative; box-sizing: border-box; padding: 10px 5px; height: 50px; font-size: 14px; font-weight: normal; color: $color-content; text-align: center; line-height: 18px; border-bottom: 1px solid #d4dae4; border-left: 1px solid #d4dae4; background-clip: padding-box;
 				&:first-child { border-left: 0px; }
+				.ie8 & {
+					&.cr { top: 1px; }
+				}
+
 				a { position: relative; color: $color-content; text-decoration: underline;
 					/*  대손 상환 */
 					&.bed-debt {

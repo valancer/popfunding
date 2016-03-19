@@ -884,7 +884,14 @@ span.center {
     background-position: -221px -807px;
     width: 15px;
     height: 15px; }
-  .cr-box input[type=checkbox].checked + label:before, .cr-box input[type=checkbox]:checked + label:before {
+  .cr-box input[type=checkbox].checked + label:before {
+    content: ' ';
+    background-image: url(/assets/images/sprites.png);
+    background-position: -241px -807px;
+    width: 15px;
+    height: 15px; }
+  .cr-box input[type=checkbox]:checked + label:before {
+    content: ' ';
     background-image: url(/assets/images/sprites.png);
     background-position: -241px -807px;
     width: 15px;
@@ -901,9 +908,18 @@ span.center {
       background-position: -949px -382px;
       width: 14px;
       height: 14px; }
-  .cr-box input[type=radio].checked + label, .cr-box input[type=radio]:checked + label {
+  .cr-box input[type=radio].checked + label {
     color: #252525; }
-    .cr-box input[type=radio].checked + label:before, .cr-box input[type=radio]:checked + label:before {
+    .cr-box input[type=radio].checked + label:before {
+      content: ' ';
+      background-image: url(/assets/images/sprites.png);
+      background-position: -949px -344px;
+      width: 14px;
+      height: 14px; }
+  .cr-box input[type=radio]:checked + label {
+    color: #252525; }
+    .cr-box input[type=radio]:checked + label:before {
+      content: ' ';
       background-image: url(/assets/images/sprites.png);
       background-position: -949px -344px;
       width: 14px;
@@ -939,7 +955,14 @@ span.center {
       background-position: -260px -892px;
       width: 22px;
       height: 21px; }
-  .cr-box.big input[type=checkbox].checked + label:before, .cr-box.big input[type=checkbox]:checked + label:before {
+  .cr-box.big input[type=checkbox].checked + label:before {
+    content: ' ';
+    background-image: url(/assets/images/sprites.png);
+    background-position: -233px -892px;
+    width: 22px;
+    height: 21px; }
+  .cr-box.big input[type=checkbox]:checked + label:before {
+    content: ' ';
     background-image: url(/assets/images/sprites.png);
     background-position: -233px -892px;
     width: 22px;
@@ -959,7 +982,14 @@ span.center {
       background-position: -923px -683px;
       width: 21px;
       height: 21px; }
-  .cr-box.big input[type=radio].checked + label:before, .cr-box.big input[type=radio]:checked + label:before {
+  .cr-box.big input[type=radio].checked + label:before {
+    content: ' ';
+    background-image: url(/assets/images/sprites.png);
+    background-position: -923px -709px;
+    width: 21px;
+    height: 21px; }
+  .cr-box.big input[type=radio]:checked + label:before {
+    content: ' ';
     background-image: url(/assets/images/sprites.png);
     background-position: -923px -709px;
     width: 21px;
@@ -981,7 +1011,14 @@ span.center {
       height: 15px; }
   .cr-box.black input[type=checkbox].disabled + label {
     color: #c4c9d1; }
-  .cr-box.black input[type=checkbox].checked + label:before, .cr-box.black input[type=checkbox]:checked + label:before {
+  .cr-box.black input[type=checkbox].checked + label:before {
+    content: ' ';
+    background-image: url(/assets/images/sprites.png);
+    background-position: -261px -807px;
+    width: 15px;
+    height: 15px; }
+  .cr-box.black input[type=checkbox]:checked + label:before {
+    content: ' ';
     background-image: url(/assets/images/sprites.png);
     background-position: -261px -807px;
     width: 15px;

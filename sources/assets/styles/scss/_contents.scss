@@ -176,9 +176,11 @@ span.center { display: inline-block; margin-right: 10px; vertical-align: middle;
 			&:before { content: ''; display: block; position: absolute; top: 0; left: 0; @include sprite($sprite-icon-check05); }
 		}
 
-		&.checked + label,
+		&.checked + label {
+			&:before { content: ' '; @include sprite($sprite-icon-check05-selected); }
+		}
 		&:checked + label {
-			&:before { @include sprite($sprite-icon-check05-selected); }
+			&:before { content: ' '; @include sprite($sprite-icon-check05-selected); }
 		}
 	}
 
@@ -187,9 +189,11 @@ span.center { display: inline-block; margin-right: 10px; vertical-align: middle;
 			&:before { content: ''; display: block; position: absolute; top: 1px; left: 0; @include sprite($sprite-icon-radio01); }
 		}
 
-		&.checked + label,
+		&.checked + label { color: $color-title;
+			&:before { content: ' '; @include sprite($sprite-icon-radio01-selected); }
+		}
 		&:checked + label { color: $color-title;
-			&:before { @include sprite($sprite-icon-radio01-selected); }
+			&:before { content: ' '; @include sprite($sprite-icon-radio01-selected); }
 		}
 	}
 	label { display: inline-block; position: relative; cursor: pointer; padding-left: 22px; font-size: 12px; color: $color-content; line-height: 16px;
@@ -207,9 +211,11 @@ span.center { display: inline-block; margin-right: 10px; vertical-align: middle;
 				&:before { @include sprite($sprite-icon-check05-big); }
 			}
 
-			&.checked + label,
+			&.checked + label {
+				&:before { content: ' '; @include sprite($sprite-icon-check05-big-selected); }
+			}
 			&:checked + label {
-				&:before { @include sprite($sprite-icon-check05-big-selected); }
+				&:before { content: ' '; @include sprite($sprite-icon-check05-big-selected); }
 			}
 		}
 
@@ -218,9 +224,11 @@ span.center { display: inline-block; margin-right: 10px; vertical-align: middle;
 				&:before { content: ''; display: block; position: absolute; top: 0px; left: 0; @include sprite($sprite-icon-radio02); }
 			}
 
-			&.checked + label,
+			&.checked + label {
+				&:before { content: ' '; @include sprite($sprite-icon-radio02-selected); }
+			}
 			&:checked + label {
-				&:before { @include sprite($sprite-icon-radio02-selected); }
+				&:before { content: ' '; @include sprite($sprite-icon-radio02-selected); }
 			}
 		}
 	}
@@ -241,9 +249,11 @@ span.center { display: inline-block; margin-right: 10px; vertical-align: middle;
 
 			&.disabled + label { color: $color-desc; }
 
-			&.checked + label,
+			&.checked + label {
+				&:before { content: ' '; @include sprite($sprite-icon-check05-black-selected); }
+			}
 			&:checked + label {
-				&:before { @include sprite($sprite-icon-check05-black-selected); }
+				&:before { content: ' '; @include sprite($sprite-icon-check05-black-selected); }
 			}
 		}
 	}

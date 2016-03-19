@@ -36,6 +36,27 @@ $(document).ready(function (e) {
 	Story.init();
 	Myzone.init();
 	Popup.init();
+
+
+	/* checkbox */
+	$(".ie8 input[type='checkbox']").on('change', function() {
+		if( $(this).is(":checked") ) {
+			$(this).addClass('checked');
+		} else {
+			$(this).removeClass('checked');
+		}
+	});
+
+	/* radio */
+	$(".ie8 input[type='radio']").on('change', function() {
+		$("input:radio[name=" + $(this).attr('name') + "]").removeClass('checked');
+
+		if( $(this).is(":checked") ) {
+			$(this).addClass('checked');
+		} else {
+			$(this).removeClass('checked');
+		}
+	});
 });
 
 

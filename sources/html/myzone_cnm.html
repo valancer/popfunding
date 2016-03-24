@@ -265,7 +265,7 @@ include "head.html"
 								<tr>
 									<td>
 										<span class="cr-box">
-											<input type="checkbox" id="msg01" name="msg"><label for="msg01">항목선택</label>
+											<input type="checkbox" id="msg_355537" name="msg_idx[]" class="chk_msg"><label for="msg01">항목선택</label>
 										</span>
 									</td>
 									<td class="l">
@@ -278,7 +278,7 @@ include "head.html"
 								<tr>
 									<td>
 										<span class="cr-box">
-											<input type="checkbox" id="msg02" name="msg"><label for="msg02">항목선택</label>
+											<input type="checkbox" id="msg_355280" name="msg_idx[]" class="chk_msg"><label for="msg02">항목선택</label>
 										</span>
 									</td>
 									<td class="l">
@@ -291,24 +291,11 @@ include "head.html"
 								<tr>
 									<td>
 										<span class="cr-box">
-											<input type="checkbox" id="msg03" name="msg"><label for="msg03">항목선택</label>
+											<input type="checkbox" id="msg_354116" name="msg_idx[]" class="chk_msg"><label for="msg03">항목선택</label>
 										</span>
 									</td>
 									<td class="l">
 										<a href="#msg03" class="msg">현재 진행중인 동산담보 대출 PUMA 건에 참여중이신 회원들께 죄송한 말씀을 전합니다.</a>
-									</td>
-									<td>
-										<time datetime="2015-12-12 11:33">2015.12.12 / 11:33</time>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<span class="cr-box">
-											<input type="checkbox" id="msg04" name="msg"><label for="msg04">항목선택</label>
-										</span>
-									</td>
-									<td class="l">
-										<a href="#msg04" class="msg">현재 진행중인 동산담보 대출 PUMA 건에 참여중이신 회원들께 죄송한 말씀을 전합니다.</a>
 									</td>
 									<td>
 										<time datetime="2015-12-12 11:33">2015.12.12 / 11:33</time>
@@ -326,9 +313,19 @@ include "head.html"
 							<a href="#">6</a>
 						</div>
 
+						<script>
+						$(window.document).ready(function(){
+							$('#msg-select-all').on('click', function () {
+								console.log("click : " + $('#msg-select-all').is(':checked'));
+								$('.chk_msg').prop('checked', $('#msg-select-all').is(':checked'));
+							});
+						});
+						</script>
+
+
 
 						<!-- 메시지 상세 -->
-						<aside id="popup-msg-detail" class="popup guide-popup msg-detail">
+						<aside id="popup-msg-detail" class="popup guide-popup msg-detail" style="display: none;">
 							<button class="btn-popup-close" data-target="#popup-msg-detail">팝업닫기</button>
 							
 							<h1 class="title">

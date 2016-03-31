@@ -245,12 +245,24 @@ var Product = (function ($) {
 				var width = $(this).width();
 				var left = (-width/2 + _containerWidth/2);
 				$(this).show().css('left', left).addClass('animated fadeIn');
+				console.log("imageloaded");
 			}
 		});
 	}
 
+	function imageloadAtContainer($container) {
+		$container.imagesLoaded().done( function(instance) {
+			$(instance.images).each(function() {
+				var width = $(this.img).width();
+				var left = (-width/2 + _containerWidth/2);
+				$(this.img).show().css('left', left).addClass('animated fadeIn');
+			});
+		});
+	}
+
 	function initEvent() {
-		imageload($thumbs);
+		// imageload($thumbs);
+		imageloadAtContainer($products);
 
 		if( $pawnSlider.length > 0 ) {
 			$pawnSlider.slick({
